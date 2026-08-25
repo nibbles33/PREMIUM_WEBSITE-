@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
 import Header from "@/components/Header";
 import RevealOnScroll from "@/components/RevealOnScroll";
@@ -21,9 +22,12 @@ export type LineInsurancePageProps = {
   subhead: string;
   quoteHref: string;
   quoteLabel: string;
-  coverageIntro: string;
-  coverageAccent: string;
-  coverageTypes: CoverageCard[];
+  /** When set, replaces the default coverage-card section. */
+  middleSection?: ReactNode;
+  coverageIntro?: string;
+  coverageAccent?: string;
+  coverageTypes?: CoverageCard[];
+  brokerHeading?: string;
   brokerCopy: string;
   faqTitle: string;
   faqIntro: string;
@@ -41,9 +45,11 @@ export default function LineInsurancePage({
   subhead,
   quoteHref,
   quoteLabel,
+  middleSection,
   coverageIntro,
-  coverageAccent,
-  coverageTypes,
+  coverageAccent = "#5A8A73",
+  coverageTypes = [],
+  brokerHeading = "Why go through a broker",
   brokerCopy,
   faqTitle,
   faqIntro,
@@ -105,59 +111,61 @@ export default function LineInsurancePage({
           </div>
         </section>
 
-        <section
-          className="border-b border-border bg-white py-14 sm:py-16 lg:py-20"
-          aria-labelledby="coverage-heading"
-        >
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
-            <RevealOnScroll>
-              <div className="mx-auto max-w-2xl text-center">
-                <h2
-                  id="coverage-heading"
-                  className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
-                >
-                  What&apos;s covered
-                </h2>
-                <p className="mt-3 text-[15px] leading-relaxed text-secondary sm:text-base">
-                  {coverageIntro}
-                </p>
-              </div>
-            </RevealOnScroll>
+        {middleSection ?? (
+          <section
+            className="border-b border-border bg-white py-14 sm:py-16 lg:py-20"
+            aria-labelledby="coverage-heading"
+          >
+            <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+              <RevealOnScroll>
+                <div className="mx-auto max-w-2xl text-center">
+                  <h2
+                    id="coverage-heading"
+                    className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+                  >
+                    What&apos;s covered
+                  </h2>
+                  <p className="mt-3 text-[15px] leading-relaxed text-secondary sm:text-base">
+                    {coverageIntro}
+                  </p>
+                </div>
+              </RevealOnScroll>
 
-            <ul className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:gap-8">
-              {coverageTypes.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <li key={item.title}>
-                    <RevealOnScroll className="h-full">
-                      <div className="flex h-full flex-col border border-border bg-offwhite p-7 sm:p-8">
-                        <span
-                          className="inline-flex h-11 w-11 items-center justify-center rounded-full"
-                          style={{
-                            backgroundColor: `color-mix(in srgb, ${coverageAccent} 14%, #FAFAF8)`,
-                          }}
-                        >
-                          <Icon
-                            className="h-5 w-5"
-                            style={{ color: coverageAccent }}
-                            strokeWidth={1.5}
-                            aria-hidden
-                          />
-                        </span>
-                        <h3 className="mt-5 text-lg font-medium tracking-tight text-charcoal">
-                          {item.title}
-                        </h3>
-                        <p className="mt-2 text-[15px] leading-relaxed text-secondary">
-                          {item.description}
-                        </p>
-                      </div>
-                    </RevealOnScroll>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+              <ul className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:gap-8">
+                {coverageTypes.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <li key={item.title}>
+                      <RevealOnScroll className="h-full">
+                        <div className="flex h-full flex-col border border-border bg-offwhite p-7 sm:p-8">
+                          <span
+                            className="inline-flex h-11 w-11 items-center justify-center rounded-full"
+                            style={{
+                              backgroundColor: `color-mix(in srgb, ${coverageAccent} 14%, #FAFAF8)`,
+                            }}
+                          >
+                            <Icon
+                              className="h-5 w-5"
+                              style={{ color: coverageAccent }}
+                              strokeWidth={1.5}
+                              aria-hidden
+                            />
+                          </span>
+                          <h3 className="mt-5 text-lg font-medium tracking-tight text-charcoal">
+                            {item.title}
+                          </h3>
+                          <p className="mt-2 text-[15px] leading-relaxed text-secondary">
+                            {item.description}
+                          </p>
+                        </div>
+                      </RevealOnScroll>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </section>
+        )}
 
         <section
           className="border-b border-border bg-offwhite py-14 sm:py-16 lg:py-20"
@@ -170,7 +178,7 @@ export default function LineInsurancePage({
                   id="broker-heading"
                   className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
                 >
-                  Why go through a broker
+                  {brokerHeading}
                 </h2>
                 <p className="mt-4 text-[15px] leading-relaxed text-secondary sm:text-base">
                   {brokerCopy}

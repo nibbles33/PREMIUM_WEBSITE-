@@ -1,67 +1,52 @@
 import Link from "next/link";
-import {
-  Building2,
-  Factory,
-  Hammer,
-  LayoutGrid,
-  Route,
-  Truck,
-  UtensilsCrossed,
-  type LucideIcon,
-} from "lucide-react";
+import { LayoutGrid } from "lucide-react";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { commercialIndustryTiles } from "@/data/commercial-industries";
 
 const COMMERCIAL_HREF = "/commercial-insurance/";
 
-type IndustryTile = {
-  label: string;
-  icon: LucideIcon;
-  more?: boolean;
-};
+const spotlightTiles = commercialIndustryTiles.filter((tile) => tile.hasPage);
 
-const primaryIndustries: IndustryTile[] = [
-  { label: "Commercial Auto & Fleets", icon: Truck },
-  { label: "Trucking", icon: Route },
-  { label: "Contractors", icon: Hammer },
-  { label: "Manufacturing", icon: Factory },
-  { label: "Commercial Property", icon: Building2 },
-  { label: "Restaurants", icon: UtensilsCrossed },
-];
-
-const moreTile: IndustryTile = {
+const moreTile = {
   label: "+ 6 more industries",
+  href: COMMERCIAL_HREF,
   icon: LayoutGrid,
-  more: true,
+  more: true as const,
 };
 
-function IndustryCard({ tile }: { tile: IndustryTile }) {
+function IndustryCard({
+  tile,
+}: {
+  tile: (typeof spotlightTiles)[number] | typeof moreTile;
+}) {
   const Icon = tile.icon;
+  const more = "more" in tile && tile.more;
 
   return (
     <Link
-      href={COMMERCIAL_HREF}
+      href={tile.href}
       className={`group flex h-full min-h-[132px] flex-col items-center justify-center gap-3 rounded-[14px] px-3 py-6 text-center transition-[transform,border-color,background-color,box-shadow] duration-200 ease-out sm:min-h-[148px] sm:px-4 sm:py-7 ${
-        tile.more
+        more
           ? "border border-dashed border-white/25 bg-transparent hover:border-gold/60 hover:bg-white/[0.03]"
           : "border border-white/10 bg-[#2a3132] hover:-translate-y-1 hover:border-gold hover:shadow-[0_12px_28px_rgba(0,0,0,0.28)]"
       }`}
     >
       <span
         className={`inline-flex h-11 w-11 items-center justify-center rounded-md sm:h-12 sm:w-12 ${
-          tile.more
+          more
             ? "border border-dashed border-white/20 bg-white/[0.04]"
             : "hero-icon-tile-active border border-gold/35"
         }`}
       >
         <Icon
-          className={`h-5 w-5 ${tile.more ? "text-white/45" : "text-gold"}`}
+          className={`h-5 w-5 ${more ? "text-white/45" : "text-gold"}`}
           strokeWidth={1.5}
           aria-hidden
         />
       </span>
       <span
         className={`text-[13px] font-medium leading-snug sm:text-sm ${
-          tile.more ? "text-white/50" : "text-white"
+          more ? "text-white/50" : "text-white"
         }`}
       >
         {tile.label}
@@ -71,8 +56,8 @@ function IndustryCard({ tile }: { tile: IndustryTile }) {
 }
 
 export default function CommercialSpotlight() {
-  const topRow = primaryIndustries.slice(0, 4);
-  const bottomRow = [...primaryIndustries.slice(4), moreTile];
+  const topRow = spotlightTiles.slice(0, 4);
+  const bottomRow = [...spotlightTiles.slice(4), moreTile];
 
   return (
     <section
@@ -109,7 +94,7 @@ export default function CommercialSpotlight() {
               {bottomRow.map((tile) => (
                 <li
                   key={tile.label}
-                  className={tile.more ? "col-span-2 sm:col-span-1" : undefined}
+                  className={"more" in tile && tile.more ? "col-span-2 sm:col-span-1" : undefined}
                 >
                   <IndustryCard tile={tile} />
                 </li>
