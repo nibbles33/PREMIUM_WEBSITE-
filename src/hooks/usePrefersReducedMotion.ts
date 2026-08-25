@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-function getInitialReducedMotion(): boolean {
-  if (typeof window === "undefined") return true;
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-
+/**
+ * Defaults to false so SSR/hydration don't permanently disable motion
+ * when the effect hasn't run yet. CSS media queries still hard-stop
+ * animations under prefers-reduced-motion.
+ */
 export function usePrefersReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(getInitialReducedMotion);
+  const [reduced, setReduced] = useState(false);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");

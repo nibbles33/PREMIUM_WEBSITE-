@@ -160,18 +160,23 @@ body {
 
 /* —— Hero coverage selector —— */
 
+/*
+  Keep the static 3deg tilt + float on ONE element.
+  Nested preserve-3d/perspective + child rotate3d broke hit-testing:
+  clicks on Auto/Home/Business landed on the float wrapper instead of the tabs.
+*/
 .hero-coverage-float {
-  transform-style: preserve-3d;
-  perspective: 1200px;
+  transform: rotate3d(1, -1, 0, 3deg);
+  transform-origin: center center;
 }
 
 @keyframes hero-card-float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: rotate3d(1, -1, 0, 3deg) translateY(0);
   }
   50% {
-    transform: translateY(-7px);
+    transform: rotate3d(1, -1, 0, 3deg) translateY(-7px);
   }
 }
 
@@ -267,17 +272,31 @@ body {
 
 /* —— Gold ticker band —— */
 
-@keyframes gold-ticker-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+.gold-ticker {
+  overflow: hidden;
 }
 
-.gold-ticker-animate {
+.gold-ticker-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
   animation: gold-ticker-scroll 17s linear infinite;
+}
+
+.gold-ticker-segment {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+@keyframes gold-ticker-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -311,7 +330,11 @@ body {
   .hero-icon-enter-animate,
   .hero-chip-animate,
   .hero-coverage-float-animate,
-  .gold-ticker-animate {
+  .gold-ticker-track {
     animation: none !important;
+  }
+
+  .hero-coverage-float {
+    transform: rotate3d(1, -1, 0, 3deg);
   }
 }

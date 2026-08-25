@@ -181,8 +181,6 @@ export default function HeroCoverageCard({
           border: active.invert
             ? "1px solid #202728"
             : "1px solid rgba(229, 227, 220, 0.55)",
-          transform: "rotate3d(1, -1, 0, 3deg)",
-          transformOrigin: "center center",
           transition: reduceMotion
             ? "none"
             : `background-color 280ms ${spring}, border-color 280ms ease-out`,
