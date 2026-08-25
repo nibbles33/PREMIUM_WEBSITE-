@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import InsuranceSelector from "@/components/InsuranceSelector";
 import HowItWorks from "@/components/HowItWorks";
+import PersonalInsurance from "@/components/PersonalInsurance";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <TrustBar />
         <InsuranceSelector />
         <HowItWorks />
+        <PersonalInsurance />
       </main>
     </>
   );
