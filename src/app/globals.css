@@ -158,6 +158,26 @@ body {
   transform: translateY(0);
 }
 
+/* —— Differentiator comparison rows —— */
+
+.diff-row {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 420ms ease-out,
+    transform 420ms ease-out;
+}
+
+.diff-row-visible,
+.diff-row-instant {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.diff-row-instant {
+  transition: none;
+}
+
 /* —— Hero coverage selector —— */
 
 /*
@@ -307,7 +327,8 @@ body {
   .nav-link-animated::after,
   .card-interactive,
   .reveal-on-scroll,
-  .hero-cat-tab {
+  .hero-cat-tab,
+  .diff-row {
     transition: none !important;
   }
 
@@ -323,6 +344,11 @@ body {
   }
 
   .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+
+  .diff-row {
     opacity: 1;
     transform: none;
   }
