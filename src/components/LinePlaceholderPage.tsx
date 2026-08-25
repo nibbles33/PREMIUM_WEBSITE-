@@ -23,7 +23,7 @@ export default function LinePlaceholderPage({
           </p>
           <Link
             href={quoteHref}
-            className="group mt-8 inline-flex h-12 items-center justify-center rounded-md bg-gold px-6 text-sm font-medium text-charcoal transition-colors hover:bg-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
+            className="btn-primary group mt-8 inline-flex h-12 items-center justify-center rounded-md bg-gold px-6 text-sm font-medium text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
           >
             Get a Quote
             <span

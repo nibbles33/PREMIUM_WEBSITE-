@@ -1,219 +1,234 @@
 "use client";
 
+import Link from "next/link";
 import {
   Building2,
   Car,
-  Check,
   Home,
   Truck,
   type LucideIcon,
 } from "lucide-react";
-import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import {
+  useCallback,
+  useId,
+  useRef,
+  useState,
+  type KeyboardEvent,
+} from "react";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
-type CoverageCategory = {
+type CoverageOption = {
   id: string;
-  name: string;
+  label: string;
+  headline: string;
+  tagline: string;
+  coverage: string;
+  href: string;
+  cta: string;
   icon: LucideIcon;
-  bullets: string[];
+  badgeBg: string;
+  iconColor: string;
+  priority?: boolean;
 };
 
-const categories: CoverageCategory[] = [
+const options: CoverageOption[] = [
   {
     id: "auto",
-    name: "Auto Insurance",
+    label: "Auto",
+    headline: "Auto",
+    tagline: "Coverage that keeps you moving.",
+    coverage: "Liability · Collision · Comprehensive",
+    href: "/auto-insurance/",
+    cta: "Explore Auto Insurance",
     icon: Car,
-    bullets: [
-      "Liability coverage",
-      "Collision & comprehensive",
-      "24/7 claims support",
-    ],
+    badgeBg: "#E8EEF3",
+    iconColor: "#5B7A99",
   },
   {
     id: "home",
-    name: "Home Insurance",
+    label: "Home",
+    headline: "Home",
+    tagline: "Protect the place you call home.",
+    coverage: "Building · Contents · Liability",
+    href: "/home-insurance/",
+    cta: "Explore Home Insurance",
     icon: Home,
-    bullets: [
-      "Property & contents",
-      "Liability protection",
-      "Water & fire damage",
-    ],
+    badgeBg: "#F3EAE3",
+    iconColor: "#B37A5A",
   },
   {
     id: "business",
-    name: "Business Insurance",
+    label: "Business",
+    headline: "Business",
+    tagline: "Coverage built around how you operate.",
+    coverage: "General Liability · Property · Interruption",
+    href: "/commercial-insurance/",
+    cta: "Explore Business Insurance",
     icon: Building2,
-    bullets: [
-      "General liability",
-      "Commercial property",
-      "Business interruption",
-    ],
+    badgeBg: "#E8F0EC",
+    iconColor: "#5A8A73",
   },
   {
-    id: "commercial-auto",
-    name: "Commercial Auto",
+    id: "commercial",
+    label: "Commercial",
+    headline: "Commercial",
+    tagline: "Coverage that keeps business moving.",
+    coverage: "Fleet · Liability · Cargo",
+    href: "/commercial-insurance/",
+    cta: "Explore Commercial Insurance",
     icon: Truck,
-    bullets: [
-      "Fleet coverage",
-      "Cargo protection",
-      "Multi-vehicle discounts",
-    ],
+    badgeBg: "#202728",
+    iconColor: "#D0AD26",
+    priority: true,
   },
 ];
 
-const ROTATE_MS = 3500;
-const FADE_MS = 300;
-
-type HeroCoverageCardProps = {
-  /** When true, render optional faded photo behind the card */
-  showBackgroundImage?: boolean;
-};
-
-export default function HeroCoverageCard({
-  showBackgroundImage = false,
-}: HeroCoverageCardProps) {
+export default function HeroCoverageCard() {
+  // Default Auto — Commercial remains visually anchored via charcoal/gold badge
+  const [activeId, setActiveId] = useState("auto");
+  const [panelVisible, setPanelVisible] = useState(true);
   const reduceMotion = usePrefersReducedMotion();
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const baseId = useId();
 
-  const goTo = useCallback(
-    (index: number, animate: boolean) => {
-      if (!animate || reduceMotion) {
-        setActiveIndex(index);
-        setVisible(true);
+  const active = options.find((o) => o.id === activeId) ?? options[0];
+  const activeIndex = options.findIndex((o) => o.id === activeId);
+
+  const select = useCallback(
+    (id: string) => {
+      if (id === activeId) return;
+      if (reduceMotion) {
+        setActiveId(id);
+        setPanelVisible(true);
         return;
       }
-      setVisible(false);
+      setPanelVisible(false);
       window.setTimeout(() => {
-        setActiveIndex(index);
-        setVisible(true);
-      }, FADE_MS);
+        setActiveId(id);
+        setPanelVisible(true);
+      }, 140);
     },
-    [reduceMotion],
+    [activeId, reduceMotion],
   );
 
-  useEffect(() => {
-    if (reduceMotion) return;
-    const id = window.setInterval(() => {
-      setVisible(false);
-      window.setTimeout(() => {
-        setActiveIndex((prev) => (prev + 1) % categories.length);
-        setVisible(true);
-      }, FADE_MS);
-    }, ROTATE_MS);
-    return () => window.clearInterval(id);
-  }, [reduceMotion]);
-
-  const category = categories[activeIndex];
-  const Icon = category.icon;
+  const onTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    let next = index;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      event.preventDefault();
+      next = (index + 1) % options.length;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      event.preventDefault();
+      next = (index - 1 + options.length) % options.length;
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      next = 0;
+    } else if (event.key === "End") {
+      event.preventDefault();
+      next = options.length - 1;
+    } else {
+      return;
+    }
+    select(options[next].id);
+    tabRefs.current[next]?.focus();
+  };
 
   return (
-    <div className="relative mx-auto flex w-full max-w-[340px] items-center justify-center sm:max-w-[380px] lg:max-w-[400px]">
-      {/* Soft gold radial glow — complete design without a photo */}
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(208,173,38,0.15) 0%, transparent 68%)",
-        }}
-        aria-hidden
-      />
-
-      {/*
-        Optional: add hero-background.jpg to public/images/ — a licensed (e.g. Unsplash)
-        photo of a modern home, vehicle, or business exterior, Windsor-Essex relevant if
-        possible. Faded/subtle treatment only — the glow fallback above is a complete
-        design on its own.
-      */}
-      {showBackgroundImage ? (
-        <div
-          className="pointer-events-none absolute inset-[-12%] overflow-hidden rounded-[28px] opacity-[0.15]"
-          aria-hidden
-        >
-          <Image
-            src="/images/hero-background.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            style={{
-              maskImage:
-                "radial-gradient(ellipse at center, black 40%, transparent 75%)",
-              WebkitMaskImage:
-                "radial-gradient(ellipse at center, black 40%, transparent 75%)",
-            }}
-            sizes="400px"
-          />
-        </div>
-      ) : null}
+    <div className="w-full rounded-xl border border-border bg-white p-5 shadow-[0_8px_28px_rgba(32,39,40,0.07)] sm:p-6 lg:p-7">
+      <p className="text-sm font-medium text-charcoal">What are you protecting?</p>
 
       <div
-        className="relative w-full rotate-[3.5deg] rounded-[14px] bg-charcoal p-6 shadow-[0_16px_40px_rgba(32,39,40,0.22)] sm:p-7"
-        aria-live="polite"
-        aria-atomic="true"
+        className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4"
+        role="tablist"
+        aria-label="Coverage type"
       >
-        <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold sm:text-xs">
-          What we cover
-        </p>
-
-        <div
-          className="mt-5 transition-opacity ease-out"
-          style={{
-            opacity: visible ? 1 : 0,
-            transitionDuration: reduceMotion ? "0ms" : `${FADE_MS}ms`,
-          }}
-        >
-          <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[color-mix(in_srgb,#D0AD26_22%,transparent)]">
-            <Icon className="h-5 w-5 text-gold" strokeWidth={1.5} aria-hidden />
-          </span>
-
-          <h2 className="mt-4 text-xl font-medium tracking-tight text-white sm:text-2xl">
-            {category.name}
-          </h2>
-
-          <ul className="mt-4 space-y-2.5">
-            {category.bullets.map((bullet) => (
-              <li
-                key={bullet}
-                className="flex items-start gap-2.5 text-sm leading-snug text-white/80"
-              >
-                <Check
-                  className="mt-0.5 h-4 w-4 shrink-0 text-gold"
-                  strokeWidth={2}
-                  aria-hidden
-                />
-                <span>{bullet}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <p className="mt-6 border-t border-white/10 pt-4 text-xs text-white/55">
-          Matched with a licensed broker
-        </p>
-
-        <div
-          className="mt-4 flex items-center justify-center gap-2"
-          role="tablist"
-          aria-label="Coverage categories"
-        >
-          {categories.map((cat, index) => (
+        {options.map((option, index) => {
+          const Icon = option.icon;
+          const selected = option.id === activeId;
+          return (
             <button
-              key={cat.id}
+              key={option.id}
+              ref={(el) => {
+                tabRefs.current[index] = el;
+              }}
               type="button"
               role="tab"
-              aria-selected={index === activeIndex}
-              aria-label={cat.name}
-              className={`h-2 rounded-full transition-[width,background-color] duration-200 ${
-                index === activeIndex
-                  ? "w-5 bg-gold"
-                  : "w-2 bg-white/30 hover:bg-white/50"
+              id={`${baseId}-tab-${option.id}`}
+              aria-selected={selected}
+              aria-controls={`${baseId}-panel`}
+              tabIndex={selected ? 0 : -1}
+              className={`interactive-press flex min-h-[44px] flex-col items-center gap-2 rounded-lg border px-2 py-2.5 text-center transition-[border-color,background-color,box-shadow] duration-200 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark ${
+                selected
+                  ? "border-charcoal bg-offwhite shadow-[0_2px_8px_rgba(32,39,40,0.06)]"
+                  : "border-border bg-white hover:border-charcoal/30"
               }`}
-              onClick={() => goTo(index, !reduceMotion)}
-            />
-          ))}
+              onClick={() => select(option.id)}
+              onKeyDown={(e) => onTabKeyDown(e, index)}
+            >
+              <span
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full"
+                style={{ backgroundColor: option.badgeBg }}
+              >
+                <Icon
+                  className="h-4 w-4"
+                  style={{ color: option.iconColor }}
+                  strokeWidth={1.5}
+                  aria-hidden
+                />
+              </span>
+              <span
+                className={`text-xs font-medium ${
+                  selected ? "text-charcoal" : "text-secondary"
+                }`}
+              >
+                {option.label}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
+      <div
+        id={`${baseId}-panel`}
+        role="tabpanel"
+        aria-labelledby={`${baseId}-tab-${active.id}`}
+        aria-live="polite"
+        className="mt-5 min-h-[148px] border-t border-border pt-5"
+      >
+        <div
+          key={active.id}
+          className={`transition-[opacity,transform] ease-out ${
+            panelVisible ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"
+          }`}
+          style={{
+            transitionDuration: reduceMotion ? "0ms" : "240ms",
+          }}
+        >
+          <h2 className="text-xl font-medium tracking-tight text-charcoal">
+            {active.headline}
+          </h2>
+          <p className="mt-1.5 text-[15px] text-secondary">{active.tagline}</p>
+          <p className="mt-3 text-xs font-medium tracking-wide text-charcoal/70">
+            {active.coverage}
+          </p>
+          <Link
+            href={active.href}
+            className="group mt-5 inline-flex items-center text-sm font-medium text-gold-dark transition-colors hover:text-charcoal"
+          >
+            {active.cta}
+            <span
+              aria-hidden
+              className="ml-1.5 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px] group-active:translate-x-[3px]"
+            >
+              →
+            </span>
+          </Link>
         </div>
       </div>
+
+      {/* Keep activeIndex referenced for a11y tooling / future indicators */}
+      <span className="sr-only">
+        Showing option {activeIndex + 1} of {options.length}
+      </span>
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import RevealOnScroll from "@/components/RevealOnScroll";
+
 const steps = [
   {
     number: 1,
@@ -24,15 +26,16 @@ export default function HowItWorks() {
       aria-labelledby="how-it-works-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
-        <h2
-          id="how-it-works-heading"
-          className="text-center text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
-        >
-          How it works
-        </h2>
+        <RevealOnScroll>
+          <h2
+            id="how-it-works-heading"
+            className="text-center text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+          >
+            How it works
+          </h2>
+        </RevealOnScroll>
 
-        <div className="relative mt-10 lg:mt-12">
-          {/* Desktop connecting rule between step badges */}
+        <RevealOnScroll className="relative mt-10 lg:mt-12">
           <div
             className="pointer-events-none absolute left-[calc(16.666%+1.25rem)] right-[calc(16.666%+1.25rem)] top-5 hidden h-px bg-border lg:block"
             aria-hidden
@@ -64,7 +67,7 @@ export default function HowItWorks() {
               </li>
             ))}
           </ol>
-        </div>
+        </RevealOnScroll>
       </div>
     </section>
   );

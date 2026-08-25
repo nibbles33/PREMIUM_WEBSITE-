@@ -43,28 +43,133 @@ body {
   overflow-x: clip;
 }
 
-/* Visible keyboard focus for interactive elements */
 :focus-visible {
   outline: 2px solid var(--brand-gold-dark);
   outline-offset: 2px;
 }
 
-@keyframes premiumib-float {
-  0%,
-  100% {
-    translate: 0 0;
-  }
-  50% {
-    translate: 0 -3px;
-  }
+/* —— Sitewide interaction polish (CSS-first) —— */
+
+.interactive-press {
+  transition:
+    transform 100ms ease-out,
+    background-color 180ms ease-out,
+    border-color 180ms ease-out,
+    box-shadow 180ms ease-out,
+    color 180ms ease-out;
 }
 
-.motion-safe-float {
-  animation: premiumib-float 7s ease-in-out infinite;
+.interactive-press:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  transition:
+    transform 100ms ease-out,
+    background-color 180ms ease-out,
+    box-shadow 180ms ease-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-gold-dark);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-secondary {
+  transition:
+    transform 100ms ease-out,
+    border-color 180ms ease-out,
+    color 180ms ease-out,
+    background-color 180ms ease-out;
+}
+
+.btn-secondary:active {
+  transform: scale(0.97);
+}
+
+.nav-link-animated {
+  position: relative;
+  transition: color 180ms ease-out;
+}
+
+.nav-link-animated::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 200ms ease-out;
+}
+
+.nav-link-animated:hover::after,
+.nav-link-animated:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.card-interactive {
+  transition:
+    transform 200ms ease-out,
+    border-color 200ms ease-out,
+    box-shadow 200ms ease-out,
+    background-color 200ms ease-out;
+  will-change: transform;
+}
+
+.card-interactive:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(32, 39, 40, 0.07);
+}
+
+.card-interactive:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+.card-interactive:focus-visible {
+  outline: 2px solid var(--brand-gold-dark);
+  outline-offset: 2px;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 450ms ease-out,
+    transform 450ms ease-out;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .motion-safe-float {
-    animation: none;
+  .interactive-press,
+  .btn-primary,
+  .btn-secondary,
+  .nav-link-animated,
+  .nav-link-animated::after,
+  .card-interactive,
+  .reveal-on-scroll {
+    transition: none !important;
+  }
+
+  .interactive-press:active,
+  .btn-primary:active,
+  .btn-secondary:active,
+  .card-interactive:hover,
+  .card-interactive:active {
+    transform: none;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
   }
 }

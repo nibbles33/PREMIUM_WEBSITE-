@@ -1,28 +1,10 @@
-import { existsSync } from "node:fs";
-import { join } from "node:path";
 import Link from "next/link";
 import HeroCoverageCard from "@/components/HeroCoverageCard";
 
 const QUOTE_HREF = "/get-a-quote/";
 const BROKER_HREF = "/talk-to-a-broker/";
 
-function hasHeroBackgroundImage(): boolean {
-  // Optional: add hero-background.jpg to public/images/ — a licensed (e.g. Unsplash)
-  // photo of a modern home, vehicle, or business exterior, Windsor-Essex relevant if
-  // possible. Faded/subtle treatment only — the glow fallback above is a complete
-  // design on its own.
-  try {
-    return existsSync(
-      join(process.cwd(), "public", "images", "hero-background.jpg"),
-    );
-  } catch {
-    return false;
-  }
-}
-
 export default function Hero() {
-  const showBackgroundImage = hasHeroBackgroundImage();
-
   return (
     <section
       id="hero"
@@ -51,7 +33,7 @@ export default function Hero() {
           <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href={QUOTE_HREF}
-              className="group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md bg-gold px-8 text-[15px] font-medium text-charcoal transition-colors hover:bg-gold-dark sm:w-auto sm:px-9"
+              className="btn-primary group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md bg-gold px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:px-9"
             >
               Get a Quote
               <span
@@ -63,7 +45,7 @@ export default function Hero() {
             </Link>
             <Link
               href={BROKER_HREF}
-              className="inline-flex h-12 w-full min-w-[44px] items-center justify-center rounded-md border border-charcoal/70 bg-transparent px-6 text-sm font-medium text-charcoal transition-colors hover:border-gold-dark hover:text-gold-dark sm:w-auto"
+              className="btn-secondary inline-flex h-12 w-full min-w-[44px] items-center justify-center rounded-md border border-charcoal/70 bg-transparent px-6 text-sm font-medium text-charcoal hover:border-gold-dark hover:text-gold-dark sm:w-auto"
             >
               Talk to a Broker
             </Link>
@@ -71,7 +53,7 @@ export default function Hero() {
         </div>
 
         <div className="w-full min-w-0 py-2 lg:justify-self-end lg:py-0">
-          <HeroCoverageCard showBackgroundImage={showBackgroundImage} />
+          <HeroCoverageCard />
         </div>
       </div>
     </section>

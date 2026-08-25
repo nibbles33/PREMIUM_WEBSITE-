@@ -72,7 +72,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="shrink-0 whitespace-nowrap text-[13px] font-medium text-charcoal transition-colors hover:text-gold-dark xl:text-sm"
+                className="nav-link-animated shrink-0 whitespace-nowrap text-[13px] font-medium text-charcoal hover:text-gold-dark xl:text-sm"
               >
                 {item.label}
               </Link>
@@ -82,18 +82,18 @@ export default function Header() {
           <div className="ml-auto hidden shrink-0 items-center gap-4 lg:flex xl:gap-5">
             <Link
               href={BROKER_HREF}
-              className="whitespace-nowrap text-[13px] font-medium text-gold-dark transition-colors hover:text-charcoal xl:text-sm"
+              className="nav-link-animated whitespace-nowrap text-[13px] font-medium text-gold-dark hover:text-charcoal xl:text-sm"
             >
               Talk to a Broker
             </Link>
             <Link
               href={QUOTE_HREF}
-              className="group inline-flex h-10 items-center justify-center rounded-md bg-gold px-4 text-sm font-medium text-charcoal transition-colors hover:bg-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark xl:px-5"
+              className="btn-primary group inline-flex h-10 items-center justify-center rounded-md bg-gold px-4 text-sm font-medium text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark xl:px-5"
             >
               Get a Quote
               <span
                 aria-hidden
-                className="ml-1.5 inline-block transition-transform duration-200 ease-out group-hover:translate-x-0.5"
+                className="ml-1.5 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
               >
                 →
               </span>
@@ -103,13 +103,13 @@ export default function Header() {
           <div className="ml-auto flex shrink-0 items-center gap-2 lg:hidden">
             <Link
               href={QUOTE_HREF}
-              className="inline-flex h-9 items-center justify-center rounded-md bg-gold px-3 text-xs font-medium text-charcoal transition-colors hover:bg-gold-dark"
+              className="btn-primary inline-flex h-9 items-center justify-center rounded-md bg-gold px-3 text-xs font-medium text-charcoal"
             >
               Get a Quote →
             </Link>
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center text-charcoal"
+              className="interactive-press inline-flex h-10 w-10 items-center justify-center text-charcoal"
               aria-expanded={menuOpen}
               aria-controls="mobile-nav"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -149,14 +149,14 @@ export default function Header() {
             <div className="mt-6 flex flex-col gap-3">
               <Link
                 href={BROKER_HREF}
-                className="inline-flex h-12 items-center justify-center rounded-md border border-border text-sm font-medium text-gold-dark"
+                className="btn-secondary inline-flex h-12 items-center justify-center rounded-md border border-border text-sm font-medium text-gold-dark"
                 onClick={() => setMenuOpen(false)}
               >
                 Talk to a Broker
               </Link>
               <Link
                 href={QUOTE_HREF}
-                className="inline-flex h-12 items-center justify-center rounded-md bg-gold text-sm font-medium text-charcoal"
+                className="btn-primary inline-flex h-12 items-center justify-center rounded-md bg-gold text-sm font-medium text-charcoal"
                 onClick={() => setMenuOpen(false)}
               >
                 Get a Quote →

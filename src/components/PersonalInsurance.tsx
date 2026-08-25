@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Car, Home, type LucideIcon } from "lucide-react";
+import RevealOnScroll from "@/components/RevealOnScroll";
 
 type PersonalCard = {
   title: string;
@@ -35,18 +36,20 @@ export default function PersonalInsurance() {
       aria-labelledby="personal-insurance-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2
-            id="personal-insurance-heading"
-            className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
-          >
-            Personal insurance, covered properly
-          </h2>
-          <p className="mt-3 text-[15px] leading-relaxed text-secondary sm:text-base">
-            Auto and home coverage built around how you actually live — not a
-            one-size template.
-          </p>
-        </div>
+        <RevealOnScroll>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2
+              id="personal-insurance-heading"
+              className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+            >
+              Personal insurance, covered properly
+            </h2>
+            <p className="mt-3 text-[15px] leading-relaxed text-secondary sm:text-base">
+              Auto and home coverage built around how you actually live — not a
+              one-size template.
+            </p>
+          </div>
+        </RevealOnScroll>
 
         <ul className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:gap-6 lg:grid-cols-2 lg:gap-8">
           {cards.map((card) => {
@@ -55,7 +58,7 @@ export default function PersonalInsurance() {
               <li key={card.href}>
                 <Link
                   href={card.href}
-                  className="group flex h-full flex-col border border-border bg-white p-8 transition-[border-color,box-shadow,transform] duration-200 ease-out hover:-translate-y-1 hover:border-gold hover:shadow-[0_8px_24px_rgba(32,39,40,0.06)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark sm:p-9 lg:p-10"
+                  className="card-interactive group flex h-full flex-col border border-border bg-white p-8 hover:border-gold sm:p-9 lg:p-10"
                 >
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[color-mix(in_srgb,#D0AD26_14%,#FAFAF8)] transition-colors group-hover:bg-[color-mix(in_srgb,#D0AD26_22%,#FAFAF8)]">
                     <Icon
