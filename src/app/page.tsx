@@ -4,6 +4,7 @@ import GoldTicker from "@/components/GoldTicker";
 import TrustBar from "@/components/TrustBar";
 import HowItWorks from "@/components/HowItWorks";
 import PersonalInsurance from "@/components/PersonalInsurance";
+import CommercialSpotlight from "@/components/CommercialSpotlight";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <TrustBar />
         <HowItWorks />
         <PersonalInsurance />
+        <CommercialSpotlight />
       </main>
     </>
   );
