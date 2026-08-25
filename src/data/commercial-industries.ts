@@ -28,7 +28,7 @@ export type CommercialIndustryTile = {
   icon: LucideIcon;
 };
 
-/** First six tiles appear on the homepage Commercial Spotlight. */
+/** All 12 commercial industry tiles (hub grid + cluster spotlight). */
 export const commercialIndustryTiles: CommercialIndustryTile[] = [
   {
     label: "Commercial Auto & Fleets",
