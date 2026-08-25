@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Check, Minus, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -121,73 +120,57 @@ export default function Differentiator() {
           </div>
         </RevealOnScroll>
 
-        <div className="mt-12 grid items-center gap-10 sm:mt-14 lg:mt-16 lg:grid-cols-2 lg:gap-14 xl:gap-16">
-          <RevealOnScroll>
-            <div>
-              <div
-                ref={stripRef}
-                className="rounded-[18px] border border-border bg-white p-5 shadow-[0_16px_40px_rgba(32,39,40,0.08)] sm:p-6 lg:p-7"
-              >
-                <div className="grid grid-cols-[minmax(0,1fr)_4.5rem_4.5rem] items-end gap-2 border-b border-border pb-3 sm:grid-cols-[minmax(0,1fr)_5.5rem_5.5rem] sm:gap-3">
-                  <span className="sr-only">Feature</span>
-                  <span className="text-center text-[11px] font-medium uppercase tracking-[0.08em] text-secondary sm:text-xs">
-                    Comparison Apps
-                  </span>
-                  <span className="text-center text-[11px] font-semibold uppercase tracking-[0.08em] text-gold sm:text-xs">
-                    Premium
-                  </span>
-                </div>
+        <RevealOnScroll className="mx-auto mt-12 max-w-3xl sm:mt-14 lg:mt-16">
+          <div
+            ref={stripRef}
+            className="rounded-[18px] border border-border bg-white p-5 shadow-[0_16px_40px_rgba(32,39,40,0.08)] sm:p-7 lg:p-8"
+          >
+            <div className="grid grid-cols-[minmax(0,1fr)_4.75rem_4.75rem] items-end gap-2 border-b border-border pb-3 sm:grid-cols-[minmax(0,1fr)_6rem_6rem] sm:gap-4">
+              <span className="sr-only">Feature</span>
+              <span className="text-center text-[11px] font-medium uppercase tracking-[0.08em] text-secondary sm:text-xs">
+                Comparison Apps
+              </span>
+              <span className="text-center text-[11px] font-semibold uppercase tracking-[0.08em] text-gold sm:text-xs">
+                Premium
+              </span>
+            </div>
 
-                <ul className="mt-1">
-                  {rows.map((row, index) => (
-                    <li
-                      key={row.label}
-                      className={`diff-row grid grid-cols-[minmax(0,1fr)_4.5rem_4.5rem] items-center gap-2 border-b border-border/70 py-3.5 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_5.5rem_5.5rem] sm:gap-3 sm:py-4 ${
-                        stripVisible ? "diff-row-visible" : ""
-                      } ${reduceMotion ? "diff-row-instant" : ""}`}
-                      style={
-                        reduceMotion
-                          ? undefined
-                          : { transitionDelay: `${index * 70}ms` }
-                      }
-                    >
-                      <span className="pr-2 text-[14px] font-medium leading-snug text-charcoal sm:text-[15px]">
-                        {row.label}
-                      </span>
-                      <span className="flex justify-center">
-                        <Mark type={row.apps} />
-                      </span>
-                      <span className="flex justify-center">
-                        <Mark type={row.premium} />
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-7 sm:mt-8">
-                <Link
-                  href={BROKER_HREF}
-                  className="btn-secondary inline-flex h-12 w-full min-w-[44px] items-center justify-center rounded-md border border-charcoal/70 bg-transparent px-6 text-sm font-medium text-charcoal hover:border-gold-dark hover:text-gold-dark sm:w-auto"
+            <ul className="mt-1">
+              {rows.map((row, index) => (
+                <li
+                  key={row.label}
+                  className={`diff-row grid grid-cols-[minmax(0,1fr)_4.75rem_4.75rem] items-center gap-2 border-b border-border/70 py-3.5 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_6rem_6rem] sm:gap-4 sm:py-5 ${
+                    stripVisible ? "diff-row-visible" : ""
+                  } ${reduceMotion ? "diff-row-instant" : ""}`}
+                  style={
+                    reduceMotion
+                      ? undefined
+                      : { transitionDelay: `${index * 70}ms` }
+                  }
                 >
-                  Talk to a Broker
-                </Link>
-              </div>
-            </div>
-          </RevealOnScroll>
+                  <span className="pr-2 text-[14px] font-medium leading-snug text-charcoal sm:text-base">
+                    {row.label}
+                  </span>
+                  <span className="flex justify-center">
+                    <Mark type={row.apps} />
+                  </span>
+                  <span className="flex justify-center">
+                    <Mark type={row.premium} />
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <RevealOnScroll>
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[17px] shadow-[0_20px_44px_rgba(32,39,40,0.16)] lg:max-w-none">
-              <Image
-                src="/images/broker-photo.jpg"
-                alt="A Premium Insurance Brokers advisor meeting with clients"
-                fill
-                sizes="(max-width: 1024px) 90vw, 42vw"
-                className="object-cover object-center"
-              />
-            </div>
-          </RevealOnScroll>
-        </div>
+          <div className="mt-8 flex justify-center sm:mt-9">
+            <Link
+              href={BROKER_HREF}
+              className="btn-secondary inline-flex h-12 w-full min-w-[44px] items-center justify-center rounded-md border border-charcoal/70 bg-transparent px-6 text-sm font-medium text-charcoal hover:border-gold-dark hover:text-gold-dark sm:w-auto sm:min-w-[200px]"
+            >
+              Talk to a Broker
+            </Link>
+          </div>
+        </RevealOnScroll>
       </div>
     </section>
   );
