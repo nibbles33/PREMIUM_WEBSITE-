@@ -149,6 +149,84 @@ body {
   transform: translateY(0);
 }
 
+/* —— Hero coverage selector —— */
+
+.hero-cat-tab {
+  padding: 0.5rem 0.35rem;
+}
+
+.hero-cat-tab-idle {
+  border-color: var(--brand-border);
+  background: #fff;
+}
+
+.hero-cat-tab-idle:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--tab-accent) 45%, var(--brand-border));
+  background: color-mix(in srgb, var(--tab-accent) 8%, white);
+}
+
+.hero-cat-tab-idle:active {
+  transform: scale(0.96);
+}
+
+.hero-cat-tab-active {
+  padding: 0.7rem 0.45rem;
+  border-color: var(--brand-charcoal);
+  background: var(--brand-offwhite);
+  box-shadow: 0 2px 10px rgba(32, 39, 40, 0.08);
+}
+
+.hero-cat-tab-active:active {
+  transform: scale(0.96);
+}
+
+.hero-cat-tab-on-dark.hero-cat-tab-idle {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-cat-tab-on-dark.hero-cat-tab-idle:hover {
+  border-color: color-mix(in srgb, var(--tab-accent) 50%, transparent);
+  background: color-mix(in srgb, var(--tab-accent) 12%, transparent);
+}
+
+.hero-cat-tab-active.hero-cat-tab-active-invert {
+  border-color: var(--brand-gold);
+  background: rgba(208, 173, 38, 0.12);
+  box-shadow: none;
+}
+
+@keyframes hero-icon-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.7) rotate(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.hero-icon-enter-animate {
+  animation: hero-icon-enter 320ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes hero-chip-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-chip-animate {
+  animation: hero-chip-in 280ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .interactive-press,
   .btn-primary,
@@ -156,7 +234,8 @@ body {
   .nav-link-animated,
   .nav-link-animated::after,
   .card-interactive,
-  .reveal-on-scroll {
+  .reveal-on-scroll,
+  .hero-cat-tab {
     transition: none !important;
   }
 
@@ -164,12 +243,20 @@ body {
   .btn-primary:active,
   .btn-secondary:active,
   .card-interactive:hover,
-  .card-interactive:active {
+  .card-interactive:active,
+  .hero-cat-tab-idle:hover,
+  .hero-cat-tab-idle:active,
+  .hero-cat-tab-active:active {
     transform: none;
   }
 
   .reveal-on-scroll {
     opacity: 1;
     transform: none;
+  }
+
+  .hero-icon-enter-animate,
+  .hero-chip-animate {
+    animation: none !important;
   }
 }

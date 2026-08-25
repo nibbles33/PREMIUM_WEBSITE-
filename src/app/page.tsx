@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
-import InsuranceSelector from "@/components/InsuranceSelector";
 import HowItWorks from "@/components/HowItWorks";
 import PersonalInsurance from "@/components/PersonalInsurance";
 
@@ -12,7 +11,6 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
-        <InsuranceSelector />
         <HowItWorks />
         <PersonalInsurance />
       </main>

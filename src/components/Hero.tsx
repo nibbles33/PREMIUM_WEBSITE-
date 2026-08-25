@@ -1,10 +1,38 @@
-import Link from "next/link";
-import HeroCoverageCard from "@/components/HeroCoverageCard";
+"use client";
 
-const QUOTE_HREF = "/get-a-quote/";
+import Link from "next/link";
+import { useState } from "react";
+import HeroCoverageCard, {
+  heroCoverageOptions,
+  type HeroCategoryId,
+} from "@/components/HeroCoverageCard";
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
+
 const BROKER_HREF = "/talk-to-a-broker/";
 
 export default function Hero() {
+  const [activeId, setActiveId] = useState<HeroCategoryId>("auto");
+  const [ctaVisible, setCtaVisible] = useState(true);
+  const reduceMotion = usePrefersReducedMotion();
+
+  const active =
+    heroCoverageOptions.find((o) => o.id === activeId) ??
+    heroCoverageOptions[0];
+
+  const handleSelect = (id: HeroCategoryId) => {
+    if (id === activeId) return;
+    if (reduceMotion) {
+      setActiveId(id);
+      setCtaVisible(true);
+      return;
+    }
+    setCtaVisible(false);
+    window.setTimeout(() => {
+      setActiveId(id);
+      setCtaVisible(true);
+    }, 80);
+  };
+
   return (
     <section
       id="hero"
@@ -32,15 +60,25 @@ export default function Hero() {
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
-              href={QUOTE_HREF}
-              className="btn-primary group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md bg-gold px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:px-9"
+              href={active.quoteHref}
+              className="btn-primary group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md bg-gold px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:min-w-[220px] sm:px-9"
+              aria-live="polite"
             >
-              Get a Quote
               <span
-                aria-hidden
-                className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
+                className={`inline-flex items-center transition-opacity duration-150 ease-out ${
+                  ctaVisible ? "opacity-100" : "opacity-0"
+                }`}
+                style={{
+                  transitionDuration: reduceMotion ? "0ms" : "150ms",
+                }}
               >
-                →
+                {active.quoteLabel}
+                <span
+                  aria-hidden
+                  className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
+                >
+                  →
+                </span>
               </span>
             </Link>
             <Link
@@ -53,7 +91,7 @@ export default function Hero() {
         </div>
 
         <div className="w-full min-w-0 py-2 lg:justify-self-end lg:py-0">
-          <HeroCoverageCard />
+          <HeroCoverageCard activeId={activeId} onSelect={handleSelect} />
         </div>
       </div>
     </section>
