@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 
 export function usePrefersReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(false);
+  // Default true until we can read matchMedia — avoids a motion flash
+  const [reduced, setReduced] = useState(true);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
