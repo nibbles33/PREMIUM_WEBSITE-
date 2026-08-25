@@ -51,7 +51,67 @@ const cards: CoverageCard[] = [
   },
 ];
 
-const PARALLAX_CAP = 6;
+/** Parallax capped low — ambient depth, not a toy effect */
+const PARALLAX_CAP = 4;
+
+type LayoutSlot = {
+  x: number;
+  y: number;
+  left: string;
+  top: string;
+  rotate: number;
+  width: string;
+  shadow: string;
+  hoverShadow: string;
+  scale: number;
+};
+
+const desktopSlots: LayoutSlot[] = [
+  {
+    x: 0.45,
+    y: 0.35,
+    left: "2%",
+    top: "6%",
+    rotate: -2.5,
+    width: "44%",
+    shadow: "0 4px 18px rgba(32,39,40,0.07)",
+    hoverShadow: "0 10px 28px rgba(32,39,40,0.12)",
+    scale: 0.96,
+  },
+  {
+    x: -0.35,
+    y: 0.5,
+    left: "52%",
+    top: "2%",
+    rotate: 2,
+    width: "42%",
+    shadow: "0 3px 14px rgba(32,39,40,0.06)",
+    hoverShadow: "0 8px 24px rgba(32,39,40,0.1)",
+    scale: 0.94,
+  },
+  {
+    x: 0.4,
+    y: -0.3,
+    left: "0%",
+    top: "54%",
+    rotate: 1.25,
+    width: "43%",
+    shadow: "0 4px 16px rgba(32,39,40,0.07)",
+    hoverShadow: "0 10px 26px rgba(32,39,40,0.11)",
+    scale: 0.95,
+  },
+  {
+    x: -0.5,
+    y: -0.4,
+    left: "36%",
+    top: "40%",
+    rotate: -1,
+    width: "52%",
+    shadow: "0 10px 32px rgba(32,39,40,0.16)",
+    hoverShadow: "0 16px 40px rgba(32,39,40,0.22)",
+    scale: 1.08,
+  },
+];
 
 export default function HeroCoverageCards() {
   const reduceMotion = usePrefersReducedMotion();
@@ -83,42 +143,47 @@ export default function HeroCoverageCards() {
 
   return (
     <>
-      {/* Desktop / tablet: staggered stack with restrained parallax */}
+      {/* Desktop / tablet: layered artwork stack — not interactive navigation */}
       <div
         ref={stackRef}
-        className="relative mx-auto hidden h-[340px] w-full max-w-[420px] md:block lg:h-[380px] lg:max-w-[460px]"
+        className="relative mx-auto hidden h-[360px] w-full max-w-[440px] md:block lg:h-[400px] lg:max-w-[480px]"
         onPointerMove={onPointerMove}
         onPointerLeave={onPointerLeave}
         aria-hidden="true"
       >
+        {/* Ambient gold glow behind the stack */}
+        <div
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[70%] w-[75%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.07]"
+          style={{
+            background:
+              "radial-gradient(circle, #D0AD26 0%, transparent 70%)",
+            filter: "blur(28px)",
+          }}
+        />
+
         {cards.map((card, index) => {
           const Icon = card.icon;
-          const factors = [
-            { x: 0.55, y: 0.4, left: "0%", top: "8%", rotate: -2 },
-            { x: -0.4, y: 0.55, left: "48%", top: "0%", rotate: 1.5 },
-            { x: 0.45, y: -0.35, left: "4%", top: "52%", rotate: 1 },
-            { x: -0.55, y: -0.45, left: "38%", top: "42%", rotate: -1 },
-          ][index];
-
-          const tx = reduceMotion ? 0 : offset.x * factors.x;
-          const ty = reduceMotion ? 0 : offset.y * factors.y;
+          const slot = desktopSlots[index];
+          const tx = reduceMotion ? 0 : offset.x * slot.x;
+          const ty = reduceMotion ? 0 : offset.y * slot.y;
           const isHovered = hoveredId === card.id;
+          const liftY = !reduceMotion && isHovered ? -5 : 0;
           const floatClass =
-            !reduceMotion && card.featured
-              ? "motion-safe-float"
-              : "";
+            !reduceMotion && card.featured ? "motion-safe-float" : "";
 
           return (
             <div
               key={card.id}
-              className={`absolute w-[46%] transition-transform duration-200 ease-out ${floatClass}`}
+              className={`absolute pointer-events-auto transition-[transform,box-shadow] duration-[220ms] ease-out ${floatClass}`}
               style={{
-                left: factors.left,
-                top: factors.top,
-                zIndex: card.featured ? 4 : index + 1,
-                transform: `translate3d(${tx}px, ${ty}px, 0) rotate(${factors.rotate}deg) scale(${
-                  isHovered ? 1.03 : card.featured ? 1.06 : 1
+                left: slot.left,
+                top: slot.top,
+                width: slot.width,
+                zIndex: card.featured ? 5 : index + 1,
+                transform: `translate3d(${tx}px, ${ty + liftY}px, 0) rotate(${slot.rotate}deg) scale(${
+                  isHovered ? slot.scale * 1.02 : slot.scale
                 })`,
+                boxShadow: isHovered ? slot.hoverShadow : slot.shadow,
               }}
               onMouseEnter={() => setHoveredId(card.id)}
               onMouseLeave={() => setHoveredId(null)}
@@ -129,16 +194,20 @@ export default function HeroCoverageCards() {
         })}
       </div>
 
-      {/* Mobile: horizontal snap-scroll row */}
-      <div className="md:hidden">
-        <ul className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {/* Mobile: deliberate 2×2 composition — not a shrunken desktop stack */}
+      <div className="relative md:hidden" aria-hidden="true">
+        <div
+          className="pointer-events-none absolute inset-0 -z-10 opacity-[0.06]"
+          style={{
+            background:
+              "radial-gradient(ellipse at 50% 40%, #D0AD26 0%, transparent 65%)",
+          }}
+        />
+        <ul className="grid grid-cols-2 gap-2.5">
           {cards.map((card) => {
             const Icon = card.icon;
             return (
-              <li
-                key={card.id}
-                className="w-[72%] max-w-[260px] shrink-0 snap-center first:ml-0"
-              >
+              <li key={card.id} className={card.featured ? "col-span-1" : ""}>
                 <CardSurface card={card} Icon={Icon} mobile />
               </li>
             );
@@ -162,22 +231,36 @@ function CardSurface({
 
   return (
     <div
-      className={`flex min-h-[112px] flex-col justify-between border p-4 font-sans transition-[transform,background-color] duration-200 ease-out active:scale-[0.98] md:active:scale-100 ${
+      className={`flex flex-col font-sans ${
+        mobile ? "min-h-[124px] p-4" : "min-h-[132px] p-5 lg:min-h-[148px] lg:p-6"
+      } ${
         featured
-          ? `border-charcoal bg-charcoal text-white ${mobile ? "" : "shadow-[0_8px_24px_rgba(32,39,40,0.12)]"}`
-          : "border-border bg-white text-charcoal"
-      } ${mobile ? "min-h-[120px]" : ""}`}
+          ? "border border-charcoal bg-charcoal text-white"
+          : "border border-border bg-white text-charcoal"
+      } ${mobile && featured ? "shadow-[0_8px_24px_rgba(32,39,40,0.14)]" : ""} ${
+        mobile && !featured ? "shadow-[0_2px_10px_rgba(32,39,40,0.05)]" : ""
+      }`}
     >
-      <Icon
-        className={`h-5 w-5 ${featured ? "text-gold" : "text-gold-dark"}`}
-        strokeWidth={1.5}
-        aria-hidden
-      />
-      <div className="mt-6">
-        <p className="text-sm font-medium tracking-tight">{card.label}</p>
+      <span
+        className={`inline-flex h-9 w-9 items-center justify-center rounded-full ${
+          featured
+            ? "bg-[color-mix(in_srgb,#D0AD26_22%,transparent)]"
+            : "bg-[color-mix(in_srgb,#D0AD26_14%,#FAFAF8)]"
+        }`}
+      >
+        <Icon
+          className={`h-[18px] w-[18px] ${featured ? "text-gold" : "text-gold-dark"}`}
+          strokeWidth={1.5}
+          aria-hidden
+        />
+      </span>
+      <div className={mobile ? "mt-4" : "mt-5"}>
+        <p className="text-[15px] font-medium leading-tight tracking-tight">
+          {card.label}
+        </p>
         <p
-          className={`mt-0.5 text-xs leading-snug ${
-            featured ? "text-white/70" : "text-secondary"
+          className={`mt-1 text-[12px] leading-snug ${
+            featured ? "text-white/65" : "text-secondary"
           }`}
         >
           {card.descriptor}

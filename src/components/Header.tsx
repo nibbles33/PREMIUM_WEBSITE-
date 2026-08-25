@@ -13,7 +13,7 @@ function LogoMark({ className = "" }: { className?: string }) {
   return (
     <Link
       href="/"
-      className={`inline-flex items-baseline gap-0 text-base font-medium tracking-tight text-charcoal ${className}`}
+      className={`inline-flex items-baseline gap-0 text-[15px] font-medium tracking-tight text-charcoal sm:text-base ${className}`}
     >
       Premium<span className="text-gold">IB</span>
       <span className="sr-only"> — Home</span>
@@ -30,7 +30,7 @@ export default function Header() {
     const threshold = hero?.offsetHeight ?? 480;
 
     const onScroll = () => {
-      setScrolled(window.scrollY > threshold - 64);
+      setScrolled(window.scrollY > threshold - 56);
     };
 
     onScroll();
@@ -63,47 +63,53 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 transition-[background-color,border-color,box-shadow] duration-200 ${
+        className={`sticky top-0 z-50 transition-[background-color,border-color] duration-200 ${
           scrolled
             ? "border-b border-border bg-offwhite"
             : "border-b border-transparent bg-transparent"
         }`}
       >
-        <div className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4 sm:px-6 lg:px-8">
-          <LogoMark className="shrink-0" />
+        {/*
+          Breakpoint strategy:
+          - < lg: logo + Quote + hamburger (compact 56px)
+          - lg (1024): tighter nav gaps so logo + Quote stay dominant
+          - xl (1280+): more comfortable nav spacing
+        */}
+        <div className="mx-auto flex h-14 max-w-6xl items-center gap-3 px-4 sm:gap-4 sm:px-6 lg:h-16 lg:gap-5 lg:px-8 xl:max-w-7xl xl:gap-8">
+          <LogoMark className="relative z-10 shrink-0" />
 
           <nav
-            className="ml-6 hidden items-center gap-6 lg:flex"
+            className="ml-2 hidden min-w-0 flex-1 items-center justify-center gap-4 lg:flex xl:ml-4 xl:gap-6"
             aria-label="Primary"
           >
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-charcoal transition-colors hover:text-gold-dark"
+                className="shrink-0 whitespace-nowrap text-[13px] font-medium text-charcoal transition-colors hover:text-gold-dark xl:text-sm"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-          <div className="ml-auto hidden items-center gap-5 lg:flex">
+          <div className="ml-auto hidden shrink-0 items-center gap-4 lg:flex xl:gap-5">
             <Link
               href={BROKER_HREF}
-              className="text-sm font-medium text-gold-dark transition-colors hover:text-charcoal"
+              className="whitespace-nowrap text-[13px] font-medium text-gold-dark transition-colors hover:text-charcoal xl:text-sm"
             >
               Talk to a Broker
             </Link>
             <Link
               href={QUOTE_HREF}
-              className="inline-flex h-10 items-center justify-center bg-gold px-4 text-sm font-medium text-charcoal transition-colors hover:bg-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
+              className="inline-flex h-10 items-center justify-center bg-gold px-4 text-sm font-medium text-charcoal transition-colors hover:bg-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark xl:px-5"
             >
               Get a Quote
             </Link>
           </div>
 
-          {/* Mobile: persistent quote CTA + hamburger */}
-          <div className="ml-auto flex items-center gap-2 lg:hidden">
+          {/* Mobile / tablet (< lg): persistent quote CTA + hamburger */}
+          <div className="ml-auto flex shrink-0 items-center gap-2 lg:hidden">
             <Link
               href={QUOTE_HREF}
               className="inline-flex h-9 items-center justify-center bg-gold px-3 text-xs font-medium text-charcoal transition-colors hover:bg-gold-dark"
@@ -131,12 +137,12 @@ export default function Header() {
       {menuOpen ? (
         <div
           id="mobile-nav"
-          className="fixed inset-0 z-40 bg-offwhite lg:hidden"
+          className="fixed inset-0 z-40 overflow-y-auto bg-offwhite lg:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
         >
-          <div className="flex h-full flex-col px-4 pb-8 pt-20 sm:px-6">
+          <div className="flex min-h-full flex-col px-4 pb-8 pt-16 sm:px-6">
             <nav className="flex flex-1 flex-col gap-1" aria-label="Mobile">
               {navItems.map((item) => (
                 <Link

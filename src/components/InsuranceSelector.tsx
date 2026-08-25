@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { Building2, Car, Home, Truck, type LucideIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  Car,
+  Home,
+  Truck,
+  type LucideIcon,
+} from "lucide-react";
 
 type QuoteOption = {
   label: string;
@@ -13,19 +20,19 @@ const options: QuoteOption[] = [
     label: "My Vehicle",
     type: "vehicle",
     icon: Car,
-    description: "Personal auto coverage",
+    description: "Cars, trucks & more",
   },
   {
     label: "My Home",
     type: "home",
     icon: Home,
-    description: "Home & contents",
+    description: "House, condo & contents",
   },
   {
     label: "My Business",
     type: "business",
     icon: Building2,
-    description: "Commercial policies",
+    description: "Shops, offices & trades",
   },
   {
     label: "Commercial Vehicles",
@@ -38,46 +45,54 @@ const options: QuoteOption[] = [
 export default function InsuranceSelector() {
   return (
     <section
-      className="bg-offwhite py-16 sm:py-20 lg:py-24"
+      className="bg-offwhite py-14 sm:py-16 lg:py-20"
       aria-labelledby="selector-heading"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
+          <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-gold-dark">
+            Choose where you want to start
+          </p>
           <h2
             id="selector-heading"
-            className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+            className="mt-3 text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
           >
             What can we help you insure?
           </h2>
-          <p className="mt-3 text-base text-secondary">
+          <p className="mt-3 text-[15px] text-secondary sm:text-base">
             Answer a few quick questions — a licensed broker takes it from
             there.
           </p>
         </div>
 
-        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
+        <ul className="mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:gap-4 lg:grid-cols-4 lg:gap-5">
           {options.map((option) => {
             const Icon = option.icon;
             return (
-              <li key={option.type}>
+              <li key={option.type} className="min-w-0">
                 <Link
                   href={`/get-a-quote?type=${option.type}`}
-                  className="group flex min-h-[44px] h-full flex-col items-start gap-4 border border-border bg-white p-4 transition-[border-color,background-color,transform] duration-200 ease-out hover:border-gold hover:bg-[color-mix(in_srgb,var(--brand-gold)_8%,white)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark active:scale-[0.99] sm:p-5"
+                  className="group flex h-full min-h-[44px] flex-col border border-border bg-white p-4 transition-[border-color,background-color,box-shadow] duration-200 ease-out hover:border-gold hover:bg-[color-mix(in_srgb,var(--brand-gold)_9%,white)] hover:shadow-[0_4px_16px_rgba(32,39,40,0.06)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark focus-visible:border-gold focus-visible:bg-[color-mix(in_srgb,var(--brand-gold)_9%,white)] sm:p-5"
                 >
-                  <span className="inline-flex h-10 w-10 items-center justify-center border border-border bg-offwhite transition-colors group-hover:border-gold/40 group-hover:bg-white">
-                    <Icon
-                      className="h-5 w-5 text-gold-dark"
-                      strokeWidth={1.5}
+                  <div className="flex w-full items-start justify-between gap-2">
+                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[color-mix(in_srgb,#D0AD26_14%,#FAFAF8)] transition-colors group-hover:bg-[color-mix(in_srgb,#D0AD26_22%,#FAFAF8)] group-focus-visible:bg-[color-mix(in_srgb,#D0AD26_22%,#FAFAF8)] sm:h-12 sm:w-12">
+                      <Icon
+                        className="h-5 w-5 text-gold-dark sm:h-6 sm:w-6"
+                        strokeWidth={1.5}
+                        aria-hidden
+                      />
+                    </span>
+                    <ArrowRight
+                      className="mt-1 h-4 w-4 shrink-0 text-secondary transition-transform duration-200 ease-out group-hover:translate-x-1 group-hover:text-gold-dark group-focus-visible:translate-x-1 group-focus-visible:text-gold-dark"
+                      strokeWidth={1.75}
                       aria-hidden
                     />
+                  </div>
+                  <span className="mt-4 block text-sm font-medium leading-snug text-charcoal sm:mt-5 sm:text-base">
+                    {option.label}
                   </span>
-                  <span>
-                    <span className="block text-sm font-medium text-charcoal sm:text-base">
-                      {option.label}
-                    </span>
-                    <span className="mt-1 block text-xs text-secondary sm:text-sm">
-                      {option.description}
-                    </span>
+                  <span className="mt-1 block text-xs leading-snug text-secondary sm:text-[13px]">
+                    {option.description}
                   </span>
                 </Link>
               </li>

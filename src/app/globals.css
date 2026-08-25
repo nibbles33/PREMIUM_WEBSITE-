@@ -40,6 +40,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
   font-weight: 400;
+  overflow-x: clip;
 }
 
 /* Visible keyboard focus for interactive elements */
@@ -54,7 +55,7 @@ body {
     translate: 0 0;
   }
   50% {
-    translate: 0 -4px;
+    translate: 0 -3px;
   }
 }
 
