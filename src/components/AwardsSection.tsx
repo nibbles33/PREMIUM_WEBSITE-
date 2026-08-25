@@ -146,7 +146,7 @@ export default function AwardsSection() {
             <figure className="relative aspect-[4/3] overflow-hidden rounded-[17px] shadow-[0_16px_40px_rgba(32,39,40,0.12)] lg:aspect-auto lg:min-h-[280px] lg:h-full">
               <Image
                 src="/images/awards/event-golf-sponsorship.jpg"
-                alt="Premium Insurance Brokers at Beachgrove Golf & Country Club for a Windsor-Essex community sponsorship event"
+                alt="Premium Insurance Brokers community sponsorship banner."
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover object-center"
