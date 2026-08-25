@@ -9,6 +9,19 @@ Next.js website for PremiumIB, bootstrapped with [`create-next-app`](https://nex
 - Tailwind CSS v4
 - ESLint
 
+## Brand colors
+
+Primary palette only — do not introduce other primary colors without asking.
+
+| Token | Hex | Use |
+| --- | --- | --- |
+| `gold` | `#D0AD26` | Headlines, accents, buttons |
+| `gold-dark` | `#B8940F` | Small text / links on white |
+| `charcoal` | `#202728` | Dark backgrounds, header / footer |
+| `white` | `#FFFFFF` | Body backgrounds, text on dark |
+
+Tailwind utilities: `bg-gold`, `text-gold-dark`, `bg-charcoal`, `bg-white`, etc. Defined in `src/app/globals.css`.
+
 ## Getting started
 
 ```bash

@@ -1,29 +1,35 @@
 @import "tailwindcss";
 
+/*
+  Brand palette — do not introduce other primary colors without asking.
+  - Gold (#D0AD26): headlines, accents, buttons
+  - Gold dark (#B8940F): small text / links on white
+  - Charcoal (#202728): dark backgrounds, header / footer
+  - White (#FFFFFF): body backgrounds, text on dark
+*/
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #202728;
+  --brand-gold: #d0ad26;
+  --brand-gold-dark: #b8940f;
+  --brand-charcoal: #202728;
+  --brand-white: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-gold: #d0ad26;
-  --color-gold-dark: #b8940f;
-  --color-charcoal: #202728;
+  --color-gold: var(--brand-gold);
+  --color-gold-dark: var(--brand-gold-dark);
+  --color-charcoal: var(--brand-charcoal);
+  --color-white: var(--brand-white);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
