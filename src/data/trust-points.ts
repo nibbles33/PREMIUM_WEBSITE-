@@ -5,4 +5,6 @@ export const trustPoints = [
   "Independent advice",
   "Multiple insurance markets",
   "Windsor-Essex based",
+  "Platinum Winner, Windsor Community Vote (2021–2024)",
 ] as const;
+

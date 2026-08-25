@@ -6,6 +6,7 @@ import HowItWorks from "@/components/HowItWorks";
 import PersonalInsurance from "@/components/PersonalInsurance";
 import CommercialSpotlight from "@/components/CommercialSpotlight";
 import Differentiator from "@/components/Differentiator";
+import AwardsSection from "@/components/AwardsSection";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <PersonalInsurance />
         <CommercialSpotlight />
         <Differentiator />
+        <AwardsSection />
       </main>
     </>
   );

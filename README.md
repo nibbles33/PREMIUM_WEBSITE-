@@ -1,38 +1,22 @@
-# premiumib-website
+# PremiumIB Website
 
-Next.js website for PremiumIB, bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Marketing site for [Premium Insurance Brokers](https://premiumib.com/) (Windsor-Essex) — a division of Oracle RMS.
 
 ## Stack
 
-- Next.js 16 (App Router)
-- TypeScript
+- Next.js 16 (App Router) + TypeScript
 - Tailwind CSS v4
-- ESLint
-
-## Brand colors
-
-Primary palette only — do not introduce other primary colors without asking.
-
-| Token | Hex | Use |
-| --- | --- | --- |
-| `gold` | `#D0AD26` | Headlines, accents, buttons |
-| `gold-dark` | `#B8940F` | Small text / links on light backgrounds |
-| `charcoal` | `#202728` | Dark surfaces, primary text |
-| `offwhite` | `#FAFAF8` | Primary page background |
-| `secondary` | `#726F66` | Supporting body text |
-| `border` | `#E5E3DC` | Hairlines and card borders |
-| `white` | `#FFFFFF` | Card surfaces, text on dark |
-
-Tokens live in `src/app/globals.css` (`@theme` — Tailwind v4; no `tailwind.config`). Font: Inter 400/500.
+- Manrope
+- lucide-react
 
 ## Getting started
 
 ```bash
 npm install
-npm run dev
+npm run dev -- --port 43123
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Edit `src/app/page.tsx` to change the home page.
+Open [http://127.0.0.1:43123](http://127.0.0.1:43123).
 
 ## Scripts
 
@@ -42,3 +26,20 @@ Open [http://localhost:3000](http://localhost:3000). Edit `src/app/page.tsx` to 
 | `npm run build` | Create a production build |
 | `npm start` | Serve the production build |
 | `npm run lint` | Run ESLint |
+
+## Brand colors
+
+| Token | Hex | Use |
+| --- | --- | --- |
+| `gold` | `#D0AD26` | Accents, CTAs |
+| `gold-dark` | `#B8940F` | Links / small text on light |
+| `charcoal` | `#202728` | Dark surfaces, primary text |
+| `offwhite` | `#FAFAF8` | Page background |
+| `secondary` | `#726F66` | Supporting body text |
+| `border` | `#E5E3DC` | Hairlines |
+
+Tokens live in `src/app/globals.css` (`@theme`).
+
+## Award assets
+
+Community and industry badges live in `public/images/awards/`.
