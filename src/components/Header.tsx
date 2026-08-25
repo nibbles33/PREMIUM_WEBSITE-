@@ -22,25 +22,7 @@ function LogoMark({ className = "" }: { className?: string }) {
 }
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const hero = document.getElementById("hero");
-    const threshold = hero?.offsetHeight ?? 480;
-
-    const onScroll = () => {
-      setScrolled(window.scrollY > threshold - 56);
-    };
-
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -63,11 +45,8 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 transition-[background-color,border-color] duration-200 ${
-          scrolled
-            ? "border-b border-border bg-offwhite"
-            : "border-b border-transparent bg-transparent"
-        }`}
+        className="sticky top-0 z-50 border-b border-border"
+        style={{ backgroundColor: "#FAFAF8", borderBottomColor: "#E5E3DC" }}
       >
         {/*
           Breakpoint strategy:
