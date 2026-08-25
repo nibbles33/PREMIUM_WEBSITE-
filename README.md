@@ -16,11 +16,14 @@ Primary palette only — do not introduce other primary colors without asking.
 | Token | Hex | Use |
 | --- | --- | --- |
 | `gold` | `#D0AD26` | Headlines, accents, buttons |
-| `gold-dark` | `#B8940F` | Small text / links on white |
-| `charcoal` | `#202728` | Dark backgrounds, header / footer |
-| `white` | `#FFFFFF` | Body backgrounds, text on dark |
+| `gold-dark` | `#B8940F` | Small text / links on light backgrounds |
+| `charcoal` | `#202728` | Dark surfaces, primary text |
+| `offwhite` | `#FAFAF8` | Primary page background |
+| `secondary` | `#726F66` | Supporting body text |
+| `border` | `#E5E3DC` | Hairlines and card borders |
+| `white` | `#FFFFFF` | Card surfaces, text on dark |
 
-Tailwind utilities: `bg-gold`, `text-gold-dark`, `bg-charcoal`, `bg-white`, etc. Defined in `src/app/globals.css`.
+Tokens live in `src/app/globals.css` (`@theme` — Tailwind v4; no `tailwind.config`). Font: Inter 400/500.
 
 ## Getting started
 

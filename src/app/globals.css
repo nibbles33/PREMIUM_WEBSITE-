@@ -3,18 +3,23 @@
 /*
   Brand palette — do not introduce other primary colors without asking.
   - Gold (#D0AD26): headlines, accents, buttons
-  - Gold dark (#B8940F): small text / links on white
-  - Charcoal (#202728): dark backgrounds, header / footer
-  - White (#FFFFFF): body backgrounds, text on dark
+  - Gold dark (#B8940F): small text / links on light backgrounds
+  - Charcoal (#202728): dark surfaces, primary text
+  - Off-white (#FAFAF8): primary page background
+  - Secondary (#726F66): supporting body text
+  - Border (#E5E3DC): hairlines and card borders
 */
 
 :root {
-  --background: #ffffff;
+  --background: #fafaf8;
   --foreground: #202728;
   --brand-gold: #d0ad26;
   --brand-gold-dark: #b8940f;
   --brand-charcoal: #202728;
+  --brand-offwhite: #fafaf8;
   --brand-white: #ffffff;
+  --brand-secondary: #726f66;
+  --brand-border: #e5e3dc;
 }
 
 @theme inline {
@@ -23,13 +28,42 @@
   --color-gold: var(--brand-gold);
   --color-gold-dark: var(--brand-gold-dark);
   --color-charcoal: var(--brand-charcoal);
+  --color-offwhite: var(--brand-offwhite);
   --color-white: var(--brand-white);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-secondary: var(--brand-secondary);
+  --color-border: var(--brand-border);
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Visible keyboard focus for interactive elements */
+:focus-visible {
+  outline: 2px solid var(--brand-gold-dark);
+  outline-offset: 2px;
+}
+
+@keyframes premiumib-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -4px;
+  }
+}
+
+.motion-safe-float {
+  animation: premiumib-float 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe-float {
+    animation: none;
+  }
 }
