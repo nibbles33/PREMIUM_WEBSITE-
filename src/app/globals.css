@@ -351,6 +351,136 @@ body {
   transform: scale(0.99);
 }
 
+/* —— How It Works journey —— */
+
+.journey-stage-hidden {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.journey-stage-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 420ms ease-out,
+    transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.journey-stage-instant {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+@keyframes journey-travel-horizontal {
+  from {
+    left: 0%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  to {
+    left: 33.33%;
+    opacity: 1;
+  }
+}
+
+.journey-traveler-horizontal {
+  left: 0%;
+}
+
+.journey-traveler-run-horizontal {
+  animation: journey-travel-horizontal 900ms cubic-bezier(0.34, 1.56, 0.64, 1)
+    forwards;
+}
+
+@keyframes journey-travel-vertical {
+  from {
+    top: 0.75rem;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  to {
+    top: 22%;
+    opacity: 1;
+  }
+}
+
+.journey-traveler-vertical {
+  top: 0.75rem;
+}
+
+.journey-traveler-run-vertical {
+  animation: journey-travel-vertical 900ms cubic-bezier(0.34, 1.56, 0.64, 1)
+    forwards;
+}
+
+@keyframes journey-carrier-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.journey-carrier-enter {
+  animation: journey-carrier-in 320ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes journey-card-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.journey-card-enter {
+  animation: journey-card-in 360ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes journey-broker-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.journey-broker-enter {
+  animation: journey-broker-in 380ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes journey-check-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.journey-check-enter {
+  animation: journey-check-in 480ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
 /* —— Gold ticker band —— */
 
 .gold-ticker {
@@ -426,6 +556,22 @@ body {
   .spotlight-product-card:hover,
   .spotlight-product-card:active {
     transform: none !important;
+  }
+
+  .journey-stage-visible,
+  .journey-carrier-enter,
+  .journey-card-enter,
+  .journey-broker-enter,
+  .journey-check-enter,
+  .journey-traveler-run-horizontal,
+  .journey-traveler-run-vertical {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .journey-stage-hidden {
+    opacity: 1;
+    transform: none;
   }
 
   .reveal-on-scroll {
