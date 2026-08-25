@@ -8,6 +8,9 @@ import {
   Truck,
   type LucideIcon,
 } from "lucide-react";
+import HeroBusinessFlow, {
+  type BusinessQuoteMeta,
+} from "@/components/HeroBusinessFlow";
 import {
   useCallback,
   useId,
@@ -107,11 +110,121 @@ export const heroCoverageOptions: CoverageOption[] = [
 type HeroCoverageCardProps = {
   activeId: HeroCategoryId;
   onSelect: (id: HeroCategoryId) => void;
+  onBusinessQuoteChange?: (meta: BusinessQuoteMeta | null) => void;
 };
+
+function StaticCategoryPanel({
+  active,
+  reduceMotion,
+  panelVisible,
+  duration,
+}: {
+  active: CoverageOption;
+  reduceMotion: boolean;
+  panelVisible: boolean;
+  duration: string;
+}) {
+  const Icon = active.icon;
+  const spring = "cubic-bezier(0.34, 1.56, 0.64, 1)";
+
+  return (
+    <div
+      className={`${
+        panelVisible ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"
+      }`}
+      style={{
+        transition: reduceMotion
+          ? "none"
+          : `opacity 240ms ease-out, transform 240ms ${spring}`,
+      }}
+    >
+      <span
+        key={`icon-${active.id}`}
+        className={`hero-icon-enter inline-flex h-11 w-11 items-center justify-center rounded-md ${
+          reduceMotion ? "" : "hero-icon-enter-animate"
+        } ${active.invert ? "" : "hero-icon-tile-active"}`}
+        style={
+          active.invert
+            ? {
+                background:
+                  "linear-gradient(160deg, rgba(208,173,38,0.28), rgba(208,173,38,0.14))",
+              }
+            : undefined
+        }
+      >
+        <Icon
+          className="h-5 w-5"
+          style={{ color: active.accent }}
+          strokeWidth={1.5}
+          aria-hidden
+        />
+      </span>
+
+      <h2
+        className={`mt-3 text-xl font-medium tracking-tight ${
+          active.invert ? "text-white" : "text-charcoal"
+        }`}
+      >
+        {active.headline}
+      </h2>
+      <p
+        className={`mt-1.5 text-[15px] ${
+          active.invert ? "text-white/70" : "text-secondary"
+        }`}
+      >
+        {active.tagline}
+      </p>
+
+      <ul className="mt-4 flex flex-wrap gap-2">
+        {active.chips.map((chip, i) => (
+          <li
+            key={`${active.id}-${chip}`}
+            className={`hero-chip rounded-full border px-2.5 py-1 text-[11px] font-medium ${
+              reduceMotion ? "" : "hero-chip-animate"
+            }`}
+            style={
+              {
+                borderColor: active.invert
+                  ? "rgba(208,173,38,0.45)"
+                  : active.accent,
+                color: active.invert ? "#D0AD26" : active.accent,
+                backgroundColor: active.invert
+                  ? "rgba(208,173,38,0.1)"
+                  : "transparent",
+                animationDelay: reduceMotion ? "0ms" : `${i * 50}ms`,
+                transitionDuration: duration,
+              } as CSSProperties
+            }
+          >
+            {chip}
+          </li>
+        ))}
+      </ul>
+
+      <Link
+        href={active.href}
+        className={`group mt-5 inline-flex items-center text-sm font-medium transition-colors ${
+          active.invert
+            ? "text-gold hover:text-white"
+            : "text-gold-dark hover:text-charcoal"
+        }`}
+      >
+        {active.cta}
+        <span
+          aria-hidden
+          className="ml-1.5 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
+        >
+          →
+        </span>
+      </Link>
+    </div>
+  );
+}
 
 export default function HeroCoverageCard({
   activeId,
   onSelect,
+  onBusinessQuoteChange,
 }: HeroCoverageCardProps) {
   const [panelVisible, setPanelVisible] = useState(true);
   const reduceMotion = usePrefersReducedMotion();
@@ -121,6 +234,8 @@ export default function HeroCoverageCard({
   const active =
     heroCoverageOptions.find((o) => o.id === activeId) ??
     heroCoverageOptions[0];
+
+  const isBusiness = activeId === "business";
 
   const select = useCallback(
     (id: HeroCategoryId) => {
@@ -163,15 +278,21 @@ export default function HeroCoverageCard({
     tabRefs.current[next]?.focus();
   };
 
-  const Icon = active.icon;
   const spring = "cubic-bezier(0.34, 1.56, 0.64, 1)";
   const duration = reduceMotion ? "0ms" : "280ms";
+
+  const handleBusinessQuoteChange = useCallback(
+    (meta: BusinessQuoteMeta | null) => {
+      onBusinessQuoteChange?.(meta);
+    },
+    [onBusinessQuoteChange],
+  );
 
   return (
     <div
       className={`hero-coverage-float ${
         reduceMotion ? "" : "hero-coverage-float-animate"
-      }`}
+      } ${isBusiness ? "hero-coverage-float-business" : ""}`}
     >
       <div
         className="hero-coverage-panel w-full overflow-hidden rounded-[19px] p-5 sm:p-6 lg:p-7"
@@ -266,7 +387,9 @@ export default function HeroCoverageCard({
           role="tabpanel"
           aria-labelledby={`${baseId}-tab-${active.id}`}
           aria-live="polite"
-          className="mt-5 min-h-[168px] rounded-lg border-t pt-5"
+          className={`mt-5 rounded-lg border-t pt-5 ${
+            isBusiness ? "min-h-[300px] sm:min-h-[320px]" : "min-h-[168px]"
+          }`}
           style={{
             borderColor: active.invert ? "rgba(255,255,255,0.12)" : "#E5E3DC",
             backgroundColor: active.invert ? "transparent" : active.panelWash,
@@ -277,101 +400,34 @@ export default function HeroCoverageCard({
             paddingBottom: active.invert ? 0 : "0.75rem",
             transition: reduceMotion
               ? "none"
-              : `background-color 280ms ${spring}, border-color 280ms ease-out`,
+              : `background-color 280ms ${spring}, border-color 280ms ease-out, min-height 280ms ${spring}`,
           }}
         >
-          <div
-            className={`${
-              panelVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-1.5 opacity-0"
-            }`}
-            style={{
-              transition: reduceMotion
-                ? "none"
-                : `opacity 240ms ease-out, transform 240ms ${spring}`,
-            }}
-          >
-            <span
-              key={`icon-${active.id}`}
-              className={`hero-icon-enter inline-flex h-11 w-11 items-center justify-center rounded-md ${
-                reduceMotion ? "" : "hero-icon-enter-animate"
-              } ${active.invert ? "" : "hero-icon-tile-active"}`}
-              style={
-                active.invert
-                  ? {
-                      background:
-                        "linear-gradient(160deg, rgba(208,173,38,0.28), rgba(208,173,38,0.14))",
-                    }
-                  : undefined
-              }
+          {isBusiness ? (
+            <div
+              className={`${
+                panelVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-1.5 opacity-0"
+              }`}
+              style={{
+                transition: reduceMotion
+                  ? "none"
+                  : `opacity 240ms ease-out, transform 240ms ${spring}`,
+              }}
             >
-              <Icon
-                className="h-5 w-5"
-                style={{ color: active.accent }}
-                strokeWidth={1.5}
-                aria-hidden
+              <HeroBusinessFlow
+                onQuoteMetaChange={handleBusinessQuoteChange}
               />
-            </span>
-
-            <h2
-              className={`mt-3 text-xl font-medium tracking-tight ${
-                active.invert ? "text-white" : "text-charcoal"
-              }`}
-            >
-              {active.headline}
-            </h2>
-            <p
-              className={`mt-1.5 text-[15px] ${
-                active.invert ? "text-white/70" : "text-secondary"
-              }`}
-            >
-              {active.tagline}
-            </p>
-
-            <ul className="mt-4 flex flex-wrap gap-2">
-              {active.chips.map((chip, i) => (
-                <li
-                  key={`${active.id}-${chip}`}
-                  className={`hero-chip rounded-full border px-2.5 py-1 text-[11px] font-medium ${
-                    reduceMotion ? "" : "hero-chip-animate"
-                  }`}
-                  style={
-                    {
-                      borderColor: active.invert
-                        ? "rgba(208,173,38,0.45)"
-                        : active.accent,
-                      color: active.invert ? "#D0AD26" : active.accent,
-                      backgroundColor: active.invert
-                        ? "rgba(208,173,38,0.1)"
-                        : "transparent",
-                      animationDelay: reduceMotion ? "0ms" : `${i * 50}ms`,
-                      transitionDuration: duration,
-                    } as CSSProperties
-                  }
-                >
-                  {chip}
-                </li>
-              ))}
-            </ul>
-
-            <Link
-              href={active.href}
-              className={`group mt-5 inline-flex items-center text-sm font-medium transition-colors ${
-                active.invert
-                  ? "text-gold hover:text-white"
-                  : "text-gold-dark hover:text-charcoal"
-              }`}
-            >
-              {active.cta}
-              <span
-                aria-hidden
-                className="ml-1.5 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
-              >
-                →
-              </span>
-            </Link>
-          </div>
+            </div>
+          ) : (
+            <StaticCategoryPanel
+              active={active}
+              reduceMotion={reduceMotion}
+              panelVisible={panelVisible}
+              duration={duration}
+            />
+          )}
         </div>
       </div>
     </div>

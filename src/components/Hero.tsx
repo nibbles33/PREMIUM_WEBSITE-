@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeroCoverageCard, {
   heroCoverageOptions,
   type HeroCategoryId,
 } from "@/components/HeroCoverageCard";
+import type { BusinessQuoteMeta } from "@/components/HeroBusinessFlow";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
@@ -15,11 +16,29 @@ const BROKER_HREF = "/talk-to-a-broker/";
 export default function Hero() {
   const [activeId, setActiveId] = useState<HeroCategoryId>("auto");
   const [ctaVisible, setCtaVisible] = useState(true);
+  const [businessQuote, setBusinessQuote] = useState<BusinessQuoteMeta | null>(
+    null,
+  );
   const reduceMotion = usePrefersReducedMotion();
 
   const active =
     heroCoverageOptions.find((o) => o.id === activeId) ??
     heroCoverageOptions[0];
+
+  useEffect(() => {
+    if (activeId !== "business") {
+      setBusinessQuote(null);
+    }
+  }, [activeId]);
+
+  const quoteHref =
+    activeId === "business" && businessQuote
+      ? businessQuote.quoteHref
+      : active.quoteHref;
+  const quoteLabel =
+    activeId === "business" && businessQuote
+      ? businessQuote.quoteLabel
+      : active.quoteLabel;
 
   const handleSelect = (id: HeroCategoryId) => {
     if (id === activeId) return;
@@ -82,7 +101,7 @@ export default function Hero() {
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
-                href={active.quoteHref}
+                href={quoteHref}
                 className="btn-primary btn-primary-gradient group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:min-w-[220px] sm:px-9"
                 aria-live="polite"
               >
@@ -94,7 +113,7 @@ export default function Hero() {
                     transitionDuration: reduceMotion ? "0ms" : "150ms",
                   }}
                 >
-                  {active.quoteLabel}
+                  {quoteLabel}
                   <span
                     aria-hidden
                     className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
@@ -114,7 +133,11 @@ export default function Hero() {
         </RevealOnScroll>
 
         <RevealOnScroll className="w-full min-w-0 py-2 lg:justify-self-end lg:py-0">
-          <HeroCoverageCard activeId={activeId} onSelect={handleSelect} />
+          <HeroCoverageCard
+            activeId={activeId}
+            onSelect={handleSelect}
+            onBusinessQuoteChange={setBusinessQuote}
+          />
         </RevealOnScroll>
       </div>
     </section>

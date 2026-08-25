@@ -305,6 +305,21 @@ body {
   animation: hero-chip-in 280ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
+.hero-business-option:active {
+  transform: scale(0.96);
+}
+
+.hero-business-option {
+  transition:
+    transform 100ms ease-out,
+    border-color 200ms ease-out,
+    background-color 200ms ease-out;
+}
+
+.hero-business-back:active {
+  transform: scale(0.98);
+}
+
 /* —— Gold ticker band —— */
 
 .gold-ticker {
@@ -360,6 +375,15 @@ body {
   .hero-cat-tab-idle:active,
   .hero-cat-tab-active:active {
     transform: none;
+  }
+
+  .hero-business-option:active,
+  .hero-business-back:active {
+    transform: none;
+  }
+
+  .hero-business-option {
+    transition: none !important;
   }
 
   .reveal-on-scroll {
