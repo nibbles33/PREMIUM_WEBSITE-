@@ -169,194 +169,211 @@ export default function HeroCoverageCard({
 
   return (
     <div
-      className="hero-coverage-panel w-full overflow-hidden rounded-xl border p-5 shadow-[0_8px_28px_rgba(32,39,40,0.07)] sm:p-6 lg:p-7"
-      style={{
-        backgroundColor: active.invert ? "#202728" : "#FFFFFF",
-        borderColor: active.invert ? "#202728" : "#E5E3DC",
-        transition: reduceMotion
-          ? "none"
-          : `background-color 280ms ${spring}, border-color 280ms ease-out`,
-      }}
+      className={`hero-coverage-float ${
+        reduceMotion ? "" : "hero-coverage-float-animate"
+      }`}
     >
-      <p
-        className={`text-sm font-medium transition-colors duration-200 ${
-          active.invert ? "text-white" : "text-charcoal"
-        }`}
-      >
-        What are you protecting?
-      </p>
-
       <div
-        className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4"
-        role="tablist"
-        aria-label="Coverage type"
-      >
-        {heroCoverageOptions.map((option, index) => {
-          const TabIcon = option.icon;
-          const selected = option.id === activeId;
-          return (
-            <button
-              key={option.id}
-              ref={(el) => {
-                tabRefs.current[index] = el;
-              }}
-              type="button"
-              role="tab"
-              id={`${baseId}-tab-${option.id}`}
-              aria-selected={selected}
-              aria-controls={`${baseId}-panel`}
-              tabIndex={selected ? 0 : -1}
-              className={`hero-cat-tab group flex min-h-[44px] flex-col items-center gap-1.5 rounded-lg border text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark ${
-                selected ? "hero-cat-tab-active" : "hero-cat-tab-idle"
-              } ${active.invert && !selected ? "hero-cat-tab-on-dark" : ""} ${
-                selected && active.invert ? "hero-cat-tab-active-invert" : ""
-              }`}
-              style={
-                {
-                  "--tab-accent": option.accent,
-                  "--tab-badge-bg": option.badgeBg,
-                  transition: reduceMotion
-                    ? "none"
-                    : `padding 200ms ease-out, transform 100ms ease-out, border-color 200ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out`,
-                } as CSSProperties
-              }
-              onClick={() => select(option.id)}
-              onKeyDown={(e) => onTabKeyDown(e, index)}
-            >
-              <span
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full transition-transform duration-200 group-hover:-translate-y-0.5"
-                style={{ backgroundColor: option.badgeBg }}
-              >
-                <TabIcon
-                  className="h-4 w-4"
-                  style={{ color: option.accent }}
-                  strokeWidth={1.5}
-                  aria-hidden
-                />
-              </span>
-              <span
-                className={`text-xs font-medium ${
-                  selected
-                    ? active.invert
-                      ? "text-white"
-                      : "text-charcoal"
-                    : active.invert
-                      ? "text-white/55"
-                      : "text-secondary"
-                }`}
-              >
-                {option.label}
-              </span>
-            </button>
-          );
-        })}
-      </div>
-
-      <div
-        id={`${baseId}-panel`}
-        role="tabpanel"
-        aria-labelledby={`${baseId}-tab-${active.id}`}
-        aria-live="polite"
-        className="mt-5 min-h-[168px] rounded-lg border-t pt-5"
+        className="hero-coverage-panel w-full overflow-hidden rounded-[19px] p-5 sm:p-6 lg:p-7"
         style={{
-          borderColor: active.invert ? "rgba(255,255,255,0.12)" : "#E5E3DC",
-          backgroundColor: active.invert ? "transparent" : active.panelWash,
-          marginLeft: active.invert ? 0 : "-0.25rem",
-          marginRight: active.invert ? 0 : "-0.25rem",
-          paddingLeft: active.invert ? 0 : "0.75rem",
-          paddingRight: active.invert ? 0 : "0.75rem",
-          paddingBottom: active.invert ? 0 : "0.75rem",
+          backgroundColor: active.invert ? "#202728" : "#FFFFFF",
+          boxShadow: "0 22px 44px rgba(32, 39, 40, 0.21)",
+          border: active.invert
+            ? "1px solid #202728"
+            : "1px solid rgba(229, 227, 220, 0.55)",
+          transform: "rotate3d(1, -1, 0, 3deg)",
+          transformOrigin: "center center",
           transition: reduceMotion
             ? "none"
             : `background-color 280ms ${spring}, border-color 280ms ease-out`,
         }}
       >
-        <div
-          className={`${
-            panelVisible ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"
+        <p
+          className={`text-sm font-medium transition-colors duration-200 ${
+            active.invert ? "text-white" : "text-charcoal"
           }`}
-          style={{
-            transition: reduceMotion
-              ? "none"
-              : `opacity 240ms ease-out, transform 240ms ${spring}`,
-          }}
         >
-          <span
-            key={`icon-${active.id}`}
-            className={`hero-icon-enter inline-flex h-11 w-11 items-center justify-center rounded-full ${
-              reduceMotion ? "" : "hero-icon-enter-animate"
-            }`}
-            style={{
-              backgroundColor: active.invert
-                ? "rgba(208,173,38,0.22)"
-                : active.badgeBg,
-            }}
-          >
-            <Icon
-              className="h-5 w-5"
-              style={{ color: active.accent }}
-              strokeWidth={1.5}
-              aria-hidden
-            />
-          </span>
+          What are you protecting?
+        </p>
 
-          <h2
-            className={`mt-3 text-xl font-medium tracking-tight ${
-              active.invert ? "text-white" : "text-charcoal"
-            }`}
-          >
-            {active.headline}
-          </h2>
-          <p
-            className={`mt-1.5 text-[15px] ${
-              active.invert ? "text-white/70" : "text-secondary"
-            }`}
-          >
-            {active.tagline}
-          </p>
-
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {active.chips.map((chip, i) => (
-              <li
-                key={`${active.id}-${chip}`}
-                className={`hero-chip rounded-full border px-2.5 py-1 text-[11px] font-medium ${
-                  reduceMotion ? "" : "hero-chip-animate"
+        <div
+          className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4"
+          role="tablist"
+          aria-label="Coverage type"
+        >
+          {heroCoverageOptions.map((option, index) => {
+            const TabIcon = option.icon;
+            const selected = option.id === activeId;
+            return (
+              <button
+                key={option.id}
+                ref={(el) => {
+                  tabRefs.current[index] = el;
+                }}
+                type="button"
+                role="tab"
+                id={`${baseId}-tab-${option.id}`}
+                aria-selected={selected}
+                aria-controls={`${baseId}-panel`}
+                tabIndex={selected ? 0 : -1}
+                className={`hero-cat-tab group flex min-h-[44px] flex-col items-center gap-1.5 rounded-lg border text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark ${
+                  selected ? "hero-cat-tab-active" : "hero-cat-tab-idle"
+                } ${active.invert && !selected ? "hero-cat-tab-on-dark" : ""} ${
+                  selected && active.invert ? "hero-cat-tab-active-invert" : ""
                 }`}
                 style={
                   {
-                    borderColor: active.invert
-                      ? "rgba(208,173,38,0.45)"
-                      : active.accent,
-                    color: active.invert ? "#D0AD26" : active.accent,
-                    backgroundColor: active.invert
-                      ? "rgba(208,173,38,0.1)"
-                      : "transparent",
-                    animationDelay: reduceMotion ? "0ms" : `${i * 50}ms`,
-                    transitionDuration: duration,
+                    "--tab-accent": option.accent,
+                    "--tab-badge-bg": option.badgeBg,
+                    transition: reduceMotion
+                      ? "none"
+                      : `padding 200ms ease-out, transform 100ms ease-out, border-color 200ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out`,
                   } as CSSProperties
                 }
+                onClick={() => select(option.id)}
+                onKeyDown={(e) => onTabKeyDown(e, index)}
               >
-                {chip}
-              </li>
-            ))}
-          </ul>
+                <span
+                  className={`hero-icon-tile inline-flex h-8 w-8 items-center justify-center rounded-md transition-transform duration-200 group-hover:-translate-y-0.5 ${
+                    selected ? "hero-icon-tile-active" : "hero-icon-tile-idle"
+                  }`}
+                >
+                  <TabIcon
+                    className="h-4 w-4"
+                    style={{ color: selected ? "#D0AD26" : option.accent }}
+                    strokeWidth={1.5}
+                    aria-hidden
+                  />
+                </span>
+                <span
+                  className={`text-xs font-medium ${
+                    selected
+                      ? active.invert
+                        ? "text-white"
+                        : "text-charcoal"
+                      : active.invert
+                        ? "text-white/55"
+                        : "text-secondary"
+                  }`}
+                >
+                  {option.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
 
-          <Link
-            href={active.href}
-            className={`group mt-5 inline-flex items-center text-sm font-medium transition-colors ${
-              active.invert
-                ? "text-gold hover:text-white"
-                : "text-gold-dark hover:text-charcoal"
+        <div
+          id={`${baseId}-panel`}
+          role="tabpanel"
+          aria-labelledby={`${baseId}-tab-${active.id}`}
+          aria-live="polite"
+          className="mt-5 min-h-[168px] rounded-lg border-t pt-5"
+          style={{
+            borderColor: active.invert ? "rgba(255,255,255,0.12)" : "#E5E3DC",
+            backgroundColor: active.invert ? "transparent" : active.panelWash,
+            marginLeft: active.invert ? 0 : "-0.25rem",
+            marginRight: active.invert ? 0 : "-0.25rem",
+            paddingLeft: active.invert ? 0 : "0.75rem",
+            paddingRight: active.invert ? 0 : "0.75rem",
+            paddingBottom: active.invert ? 0 : "0.75rem",
+            transition: reduceMotion
+              ? "none"
+              : `background-color 280ms ${spring}, border-color 280ms ease-out`,
+          }}
+        >
+          <div
+            className={`${
+              panelVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-1.5 opacity-0"
             }`}
+            style={{
+              transition: reduceMotion
+                ? "none"
+                : `opacity 240ms ease-out, transform 240ms ${spring}`,
+            }}
           >
-            {active.cta}
             <span
-              aria-hidden
-              className="ml-1.5 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
+              key={`icon-${active.id}`}
+              className={`hero-icon-enter inline-flex h-11 w-11 items-center justify-center rounded-md ${
+                reduceMotion ? "" : "hero-icon-enter-animate"
+              } ${active.invert ? "" : "hero-icon-tile-active"}`}
+              style={
+                active.invert
+                  ? {
+                      background:
+                        "linear-gradient(160deg, rgba(208,173,38,0.28), rgba(208,173,38,0.14))",
+                    }
+                  : undefined
+              }
             >
-              →
+              <Icon
+                className="h-5 w-5"
+                style={{ color: active.accent }}
+                strokeWidth={1.5}
+                aria-hidden
+              />
             </span>
-          </Link>
+
+            <h2
+              className={`mt-3 text-xl font-medium tracking-tight ${
+                active.invert ? "text-white" : "text-charcoal"
+              }`}
+            >
+              {active.headline}
+            </h2>
+            <p
+              className={`mt-1.5 text-[15px] ${
+                active.invert ? "text-white/70" : "text-secondary"
+              }`}
+            >
+              {active.tagline}
+            </p>
+
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {active.chips.map((chip, i) => (
+                <li
+                  key={`${active.id}-${chip}`}
+                  className={`hero-chip rounded-full border px-2.5 py-1 text-[11px] font-medium ${
+                    reduceMotion ? "" : "hero-chip-animate"
+                  }`}
+                  style={
+                    {
+                      borderColor: active.invert
+                        ? "rgba(208,173,38,0.45)"
+                        : active.accent,
+                      color: active.invert ? "#D0AD26" : active.accent,
+                      backgroundColor: active.invert
+                        ? "rgba(208,173,38,0.1)"
+                        : "transparent",
+                      animationDelay: reduceMotion ? "0ms" : `${i * 50}ms`,
+                      transitionDuration: duration,
+                    } as CSSProperties
+                  }
+                >
+                  {chip}
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              href={active.href}
+              className={`group mt-5 inline-flex items-center text-sm font-medium transition-colors ${
+                active.invert
+                  ? "text-gold hover:text-white"
+                  : "text-gold-dark hover:text-charcoal"
+              }`}
+            >
+              {active.cta}
+              <span
+                aria-hidden
+                className="ml-1.5 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
+              >
+                →
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

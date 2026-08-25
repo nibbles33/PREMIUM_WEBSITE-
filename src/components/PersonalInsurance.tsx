@@ -32,7 +32,8 @@ const cards: PersonalCard[] = [
 export default function PersonalInsurance() {
   return (
     <section
-      className="border-t border-border bg-offwhite py-14 sm:py-16 lg:py-20"
+      className="border-t border-border py-14 sm:py-16 lg:py-20"
+      style={{ backgroundColor: "#FBF5E5" }}
       aria-labelledby="personal-insurance-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">

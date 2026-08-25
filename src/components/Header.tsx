@@ -51,10 +51,37 @@ export default function Header() {
 
   return (
     <>
-      <header
-        className="sticky top-0 z-50 border-b border-border"
-        style={{ backgroundColor: "#FAFAF8", borderBottomColor: "#E5E3DC" }}
-      >
+      <header className="sticky top-0 z-50">
+        {/* Utility bar */}
+        <div
+          className="border-b border-white/5"
+          style={{ backgroundColor: "#15191a" }}
+        >
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-1.5 sm:gap-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+            <p className="shrink-0 text-[10px] font-normal tracking-wide text-[#8a8f8e] sm:text-[11px]">
+              A Division of Oracle RMS
+            </p>
+            <div className="flex flex-wrap items-center justify-end gap-x-3 gap-y-0.5 text-[10px] font-medium text-[#D0AD26] sm:gap-x-4 sm:text-[11px]">
+              <a
+                href="tel:+12267826000"
+                className="transition-colors hover:text-[#E4C558]"
+              >
+                226-782-6000
+              </a>
+              <span className="text-[#D0AD26]/40" aria-hidden>
+                |
+              </span>
+              <span className="text-right">
+                3063 Dougall Ave, Windsor, ON N9E 1S7
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="border-b border-border"
+          style={{ backgroundColor: "#FAFAF8", borderBottomColor: "#E5E3DC" }}
+        >
         {/*
           Breakpoint strategy:
           - < lg: logo + Quote + hamburger
@@ -122,6 +149,7 @@ export default function Header() {
               )}
             </button>
           </div>
+        </div>
         </div>
       </header>
 
