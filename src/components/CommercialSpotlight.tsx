@@ -5,7 +5,7 @@ import { commercialIndustryTiles } from "@/data/commercial-industries";
 
 const COMMERCIAL_HREF = "/commercial-insurance/";
 
-const spotlightTiles = commercialIndustryTiles.filter((tile) => tile.hasPage);
+const spotlightTiles = commercialIndustryTiles.slice(0, 6);
 
 const moreTile = {
   label: "+ 6 more industries",

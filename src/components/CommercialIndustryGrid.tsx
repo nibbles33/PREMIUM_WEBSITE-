@@ -18,8 +18,8 @@ export default function CommercialIndustryGrid() {
               Industries we cover
             </h2>
             <p className="mt-3 text-[15px] leading-relaxed text-secondary sm:text-base">
-              Dedicated pages for our most common commercial risks — plus a
-              direct quote path for the rest.
+              Dedicated coverage pages for the industries that power
+              Windsor-Essex — from fleets and trades to offices and retail.
             </p>
           </div>
         </RevealOnScroll>
@@ -32,23 +32,11 @@ export default function CommercialIndustryGrid() {
                 <RevealOnScroll className="h-full">
                   <Link
                     href={tile.href}
-                    className={`group flex h-full items-center gap-4 border px-4 py-4 transition-[border-color,background-color,box-shadow] duration-200 ease-out sm:px-5 sm:py-5 ${
-                      tile.hasPage
-                        ? "border-border bg-offwhite hover:border-gold hover:bg-white hover:shadow-[0_10px_28px_rgba(32,39,40,0.08)]"
-                        : "border-dashed border-border bg-white hover:border-gold-dark/50"
-                    }`}
+                    className="group flex h-full items-center gap-4 border border-border bg-offwhite px-4 py-4 transition-[border-color,background-color,box-shadow] duration-200 ease-out hover:border-gold hover:bg-white hover:shadow-[0_10px_28px_rgba(32,39,40,0.08)] sm:px-5 sm:py-5"
                   >
-                    <span
-                      className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md ${
-                        tile.hasPage
-                          ? "bg-[color-mix(in_srgb,#5A8A73_14%,#FAFAF8)]"
-                          : "border border-dashed border-border bg-offwhite"
-                      }`}
-                    >
+                    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-[color-mix(in_srgb,#5A8A73_14%,#FAFAF8)]">
                       <Icon
-                        className={`h-5 w-5 ${
-                          tile.hasPage ? "text-[#5A8A73]" : "text-secondary"
-                        }`}
+                        className="h-5 w-5 text-[#5A8A73]"
                         strokeWidth={1.5}
                         aria-hidden
                       />
@@ -57,12 +45,8 @@ export default function CommercialIndustryGrid() {
                       <span className="block text-[15px] font-medium text-charcoal">
                         {tile.label}
                       </span>
-                      <span
-                        className={`mt-0.5 block text-[12px] font-medium ${
-                          tile.hasPage ? "text-gold-dark" : "text-secondary"
-                        }`}
-                      >
-                        {tile.hasPage ? "Learn more →" : "Get a quote →"}
+                      <span className="mt-0.5 block text-[12px] font-medium text-gold-dark">
+                        Learn more →
                       </span>
                     </span>
                   </Link>

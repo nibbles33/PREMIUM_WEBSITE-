@@ -5,7 +5,11 @@ import {
   Factory,
   Hammer,
   HardHat,
+  KeyRound,
+  Laptop,
+  Package,
   Route,
+  Shield,
   Store,
   Truck,
   UtensilsCrossed,
@@ -22,82 +26,69 @@ export type CommercialIndustryTile = {
   label: string;
   href: string;
   icon: LucideIcon;
-  /** Dedicated page exists — show Learn more. Otherwise quote-flow affordance. */
-  hasPage: boolean;
 };
 
+/** First six tiles appear on the homepage Commercial Spotlight. */
 export const commercialIndustryTiles: CommercialIndustryTile[] = [
   {
     label: "Commercial Auto & Fleets",
     href: "/commercial-auto-insurance/",
     icon: Truck,
-    hasPage: true,
   },
   {
     label: "Trucking",
     href: "/trucking-insurance/",
     icon: Route,
-    hasPage: true,
   },
   {
     label: "Contractors",
     href: "/contractors-insurance/",
     icon: Hammer,
-    hasPage: true,
   },
   {
     label: "Manufacturing",
     href: "/manufacturing-insurance/",
     icon: Factory,
-    hasPage: true,
   },
   {
     label: "Commercial Property",
     href: "/commercial-property-insurance/",
     icon: Building2,
-    hasPage: true,
   },
   {
     label: "Restaurants",
     href: "/restaurant-insurance/",
     icon: UtensilsCrossed,
-    hasPage: true,
   },
   {
     label: "Professional Offices",
-    href: QUOTE_BUSINESS,
+    href: "/professional-offices-insurance/",
     icon: Briefcase,
-    hasPage: false,
   },
   {
     label: "Real Estate",
-    href: QUOTE_BUSINESS,
-    icon: Building2,
-    hasPage: false,
+    href: "/real-estate-insurance/",
+    icon: KeyRound,
   },
   {
     label: "Builders & Developers",
-    href: QUOTE_BUSINESS,
+    href: "/builders-developers-insurance/",
     icon: HardHat,
-    hasPage: false,
   },
   {
     label: "Retail",
-    href: QUOTE_BUSINESS,
+    href: "/retail-insurance/",
     icon: Store,
-    hasPage: false,
   },
   {
     label: "Food Trucks & Trailers",
-    href: QUOTE_BUSINESS,
+    href: "/food-truck-insurance/",
     icon: UtensilsCrossed,
-    hasPage: false,
   },
   {
     label: "Dump Trucks",
-    href: QUOTE_BUSINESS,
+    href: "/dump-truck-insurance/",
     icon: Container,
-    hasPage: false,
   },
 ];
 
@@ -550,5 +541,405 @@ export const industryPages: IndustryPageContent[] = [
     ctaSubhead:
       "Tell us about your kitchen, seating, and liquor service — we'll compare options that fit.",
     serviceName: "Restaurant Insurance",
+  },
+  {
+    slug: "professional-offices-insurance",
+    metaTitle:
+      "Professional Offices Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Professional offices insurance through an independent Windsor-Essex broker — general liability, errors & omissions, commercial property, and cyber liability.",
+    headline: "Professional Offices Insurance",
+    subhead:
+      "Coverage for professional service businesses — from liability to the equipment that keeps your office running.",
+    quoteHref: QUOTE_BUSINESS,
+    quoteLabel: "Get a Professional Offices Quote",
+    coverageIntro:
+      "Coverages that address client-facing liability, advice risk, office property, and digital exposures.",
+    coverageTypes: [
+      {
+        title: "General Liability",
+        description:
+          "Helps protect against third-party injury or property damage claims at your office or in the course of business.",
+        icon: Briefcase,
+      },
+      {
+        title: "Professional Liability (Errors & Omissions)",
+        description:
+          "Addresses claims that a client suffered a financial loss because of your professional advice or services.",
+        icon: Shield,
+      },
+      {
+        title: "Commercial Property",
+        description:
+          "Covers office contents, equipment, and improvements against covered theft, fire, or other insured losses.",
+        icon: Building2,
+      },
+      {
+        title: "Cyber Liability",
+        description:
+          "Can help with costs tied to data breaches, ransomware, and certain network security incidents.",
+        icon: Laptop,
+      },
+    ],
+    faqTitle: "Professional offices FAQ",
+    faqItems: [
+      {
+        question:
+          "What's the difference between general liability and professional liability?",
+        answer:
+          "General liability typically covers bodily injury and property damage to others. Professional liability (E&O) responds when a client claims your advice, design, or service caused a financial loss. Many offices need both.",
+      },
+      {
+        question: "Do I need cyber liability coverage?",
+        answer:
+          "If you store client data, process payments online, or rely on cloud systems, cyber coverage is worth a serious look. Standard liability policies often exclude or limit cyber events.",
+      },
+      {
+        question: "Does my policy cover client data breaches?",
+        answer:
+          "Only if cyber or privacy coverage is included. A general liability or E&O policy alone may not cover notification costs, forensic investigation, or regulatory expenses after a breach.",
+      },
+      {
+        question: "What information do I need for a quote?",
+        answer:
+          "Your profession, services offered, revenue, number of staff, whether you hold client funds or sensitive data, current coverage, and any claims history. Contract insurance requirements help too.",
+      },
+    ],
+    ctaHeading: "Ready to cover your professional practice?",
+    ctaSubhead:
+      "Tell us about your services and exposures — we'll compare options that fit.",
+    serviceName: "Professional Offices Insurance",
+  },
+  {
+    slug: "real-estate-insurance",
+    metaTitle: "Real Estate Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Real estate insurance through an independent Windsor-Essex broker — errors & omissions, commercial property, general liability, and landlord coverage.",
+    headline: "Real Estate Insurance",
+    subhead:
+      "Coverage for real estate professionals and property portfolios — from brokerages to rental properties.",
+    quoteHref: QUOTE_BUSINESS,
+    quoteLabel: "Get a Real Estate Quote",
+    coverageIntro:
+      "Coverages for brokerage liability, owned property, and landlord exposures.",
+    coverageTypes: [
+      {
+        title: "Errors & Omissions (E&O)",
+        description:
+          "Helps protect agents and brokerages against claims arising from professional real estate services.",
+        icon: Shield,
+      },
+      {
+        title: "Commercial Property",
+        description:
+          "Covers office premises, contents, and improvements for brokerages and property businesses.",
+        icon: Building2,
+      },
+      {
+        title: "General Liability",
+        description:
+          "Addresses third-party injury or property damage claims tied to your premises or operations.",
+        icon: Briefcase,
+      },
+      {
+        title: "Landlord Coverage",
+        description:
+          "Protects rental property owners for building damage, liability to tenants or guests, and related risks.",
+        icon: KeyRound,
+      },
+    ],
+    faqTitle: "Real estate insurance FAQ",
+    faqItems: [
+      {
+        question: "Do real estate agents need E&O insurance?",
+        answer:
+          "Yes in practice — and many brokerages and boards require it. E&O responds when a client claims a professional error in a transaction caused them a financial loss.",
+      },
+      {
+        question: "What's covered under landlord insurance?",
+        answer:
+          "Landlord policies typically cover the rental building, landlord liability, and sometimes loss of rental income after a covered property loss. Tenant belongings are usually the tenant's responsibility.",
+      },
+      {
+        question: "Do I need separate coverage for vacant properties?",
+        answer:
+          "Often yes. Vacancy can restrict or void standard coverage after a set period. Tell your broker about vacant or under-renovation units so the policy wording matches the risk.",
+      },
+      {
+        question: "What information do I need for a quote?",
+        answer:
+          "Whether you're an agent, brokerage, or landlord; property addresses and values; occupancy; claims history; and any association or lender insurance requirements.",
+      },
+    ],
+    ctaHeading: "Ready to cover your real estate work?",
+    ctaSubhead:
+      "Tell us about your brokerage or portfolio — we'll compare options that fit.",
+    serviceName: "Real Estate Insurance",
+  },
+  {
+    slug: "builders-developers-insurance",
+    metaTitle:
+      "Builders & Developers Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Builders and developers insurance through an independent Windsor-Essex broker — builder's risk, general liability, wrap-up liability, and completed operations.",
+    headline: "Builders & Developers Insurance",
+    subhead:
+      "Project-based coverage for builders and developers — from groundbreaking to handover.",
+    quoteHref: QUOTE_BUSINESS,
+    quoteLabel: "Get a Builders Quote",
+    coverageIntro:
+      "Coverages that follow a project from construction through completed work.",
+    coverageTypes: [
+      {
+        title: "Builder's Risk",
+        description:
+          "Protects the project under construction — materials and work in progress — against covered property losses.",
+        icon: HardHat,
+      },
+      {
+        title: "General Liability",
+        description:
+          "Helps protect against third-party injury or property damage claims arising from construction operations.",
+        icon: Briefcase,
+      },
+      {
+        title: "Wrap-Up Liability",
+        description:
+          "A project-specific liability structure that can cover the owner, GC, and subcontractors under one program.",
+        icon: Building2,
+      },
+      {
+        title: "Completed Operations",
+        description:
+          "Addresses liability claims that arise after the work is finished and the project has been handed over.",
+        icon: Shield,
+      },
+    ],
+    faqTitle: "Builders & developers FAQ",
+    faqItems: [
+      {
+        question: "What is builder's risk insurance and when do I need it?",
+        answer:
+          "Builder's risk covers the structure and materials during construction or major renovation for covered perils. It's typically required from groundbreaking until the project is substantially complete or occupied.",
+      },
+      {
+        question: "What is wrap-up liability?",
+        answer:
+          "A wrap-up consolidates liability for multiple parties on a large project into one controlled program. It can reduce certificate chasing and coverage gaps between trades — usually for bigger builds.",
+      },
+      {
+        question: "Am I covered after a project is completed?",
+        answer:
+          "Completed operations coverage addresses claims that surface after handover — for example, alleged defective work that later causes injury or damage. Limits, terms, and how long coverage applies should be reviewed with your broker.",
+      },
+      {
+        question: "What information do I need for a quote?",
+        answer:
+          "Project type and value, construction methods, locations, subcontracting approach, contract insurance requirements, and claims history. For wrap-ups, the full project schedule and party list matter.",
+      },
+    ],
+    ctaHeading: "Ready to cover your next project?",
+    ctaSubhead:
+      "Tell us about your build — we'll compare project and liability options that fit.",
+    serviceName: "Builders & Developers Insurance",
+  },
+  {
+    slug: "retail-insurance",
+    metaTitle: "Retail Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Retail insurance through an independent Windsor-Essex broker — general liability, property & inventory, business interruption, and product liability.",
+    headline: "Retail Insurance",
+    subhead:
+      "Coverage for retail businesses — from the storefront to the stockroom.",
+    quoteHref: QUOTE_BUSINESS,
+    quoteLabel: "Get a Retail Quote",
+    coverageIntro:
+      "Coverages that protect your premises, stock, income, and product-related liability.",
+    coverageTypes: [
+      {
+        title: "General Liability",
+        description:
+          "Helps protect against customer injury or property damage claims in your store.",
+        icon: Briefcase,
+      },
+      {
+        title: "Property & Inventory Coverage",
+        description:
+          "Covers fixtures, equipment, and stock against covered theft, fire, or other insured losses.",
+        icon: Package,
+      },
+      {
+        title: "Business Interruption",
+        description:
+          "Can help replace lost income if a covered property loss forces a temporary closure.",
+        icon: Store,
+      },
+      {
+        title: "Product Liability",
+        description:
+          "Addresses claims that a product you sell caused injury or damage, including distributed brands in many cases.",
+        icon: Shield,
+      },
+    ],
+    faqTitle: "Retail insurance FAQ",
+    faqItems: [
+      {
+        question: "Is my inventory covered against theft?",
+        answer:
+          "Often yes under commercial property, subject to limits, deductibles, and security requirements. High-theft merchandise may need higher limits or specific endorsements — tell your broker what you stock.",
+      },
+      {
+        question: "Do I need product liability if I sell other brands' products?",
+        answer:
+          "Usually yes. Selling or distributing products can still create liability exposure even if you didn't manufacture them. Contracts and brand warranties don't always replace your own coverage.",
+      },
+      {
+        question: "Does my policy cover business interruption?",
+        answer:
+          "Only if that coverage is included or added. Property coverage repairs physical damage; business interruption addresses income loss while you rebuild or relocate after a covered loss.",
+      },
+      {
+        question: "What information do I need for a quote?",
+        answer:
+          "Store location, square footage, inventory values, product types, sales volume, security features, and current coverage. Seasonal inventory peaks should be noted so limits keep up.",
+      },
+    ],
+    ctaHeading: "Ready to cover your retail business?",
+    ctaSubhead:
+      "Tell us about your storefront and stock — we'll compare options that fit.",
+    serviceName: "Retail Insurance",
+  },
+  {
+    slug: "food-truck-insurance",
+    metaTitle:
+      "Food Truck & Trailer Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Food truck and trailer insurance through an independent Windsor-Essex broker — general liability, commercial auto, equipment coverage, and product liability.",
+    headline: "Food Truck & Trailer Insurance",
+    subhead:
+      "Mobile coverage for food trucks and trailers — on the road and at the event.",
+    quoteHref: QUOTE_COMMERCIAL_VEHICLES,
+    quoteLabel: "Get a Food Truck Quote",
+    coverageIntro:
+      "Coverages that address both the vehicle and the food business operating from it.",
+    coverageTypes: [
+      {
+        title: "General Liability",
+        description:
+          "Helps protect against customer injury or property damage claims at events, parks, and service locations.",
+        icon: Briefcase,
+      },
+      {
+        title: "Commercial Auto",
+        description:
+          "Covers the truck or trailer as a commercial vehicle — liability and physical damage while on the road.",
+        icon: Truck,
+      },
+      {
+        title: "Equipment Coverage",
+        description:
+          "Can protect cooking equipment, generators, and fitted interiors against covered damage or theft.",
+        icon: Package,
+      },
+      {
+        title: "Product Liability",
+        description:
+          "Addresses claims that food you prepared or sold caused illness or injury.",
+        icon: UtensilsCrossed,
+      },
+    ],
+    faqTitle: "Food truck & trailer FAQ",
+    faqItems: [
+      {
+        question: "Is my truck covered as a vehicle and a business?",
+        answer:
+          "You typically need both commercial auto (for the vehicle on the road) and business liability/property coverages (for food service operations). One without the other leaves gaps.",
+      },
+      {
+        question: "Do I need separate coverage for events and fairs?",
+        answer:
+          "Sometimes. Event organizers often require certificates with specific limits or additional insured wording. Your broker can issue certificates and confirm your liability extends to those locations.",
+      },
+      {
+        question: "What if my equipment breaks down?",
+        answer:
+          "Equipment breakdown or inland marine coverage may respond to sudden mechanical or electrical failure, subject to policy terms. Standard auto physical damage doesn't always cover fitted cooking equipment the same way.",
+      },
+      {
+        question: "What information do I need for a quote?",
+        answer:
+          "Vehicle details, cooking equipment list, where you operate (routes, events, commissary), food type, and current coverage. Health permits and event insurance requirements help too.",
+      },
+    ],
+    ctaHeading: "Ready to cover your food truck?",
+    ctaSubhead:
+      "Tell us about your truck, equipment, and events — we'll compare options that fit.",
+    serviceName: "Food Truck & Trailer Insurance",
+  },
+  {
+    slug: "dump-truck-insurance",
+    metaTitle: "Dump Truck Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Dump truck insurance through an independent Windsor-Essex broker — commercial auto liability, physical damage, cargo & debris coverage, and non-trucking liability.",
+    headline: "Dump Truck Insurance",
+    subhead:
+      "Commercial auto and liability coverage built for dump truck operators and small fleets.",
+    quoteHref: QUOTE_COMMERCIAL_VEHICLES,
+    quoteLabel: "Get a Dump Truck Quote",
+    coverageIntro:
+      "Coverages commonly needed for dump truck hauling — liability, the unit itself, and loads.",
+    coverageTypes: [
+      {
+        title: "Commercial Auto Liability",
+        description:
+          "Helps protect against injury or property damage claims arising from your dump truck operations.",
+        icon: Briefcase,
+      },
+      {
+        title: "Physical Damage",
+        description:
+          "Helps repair or replace your dump truck after covered collision or comprehensive losses.",
+        icon: Truck,
+      },
+      {
+        title: "Cargo & Debris Coverage",
+        description:
+          "Can address loads you haul — aggregate, soil, or debris — while in transit under your care.",
+        icon: Container,
+      },
+      {
+        title: "Non-Trucking Liability",
+        description:
+          "May apply when a leased or contracted unit is used for personal purposes outside dispatch — subject to lease terms.",
+        icon: Route,
+      },
+    ],
+    faqTitle: "Dump truck insurance FAQ",
+    faqItems: [
+      {
+        question: "Do I need cargo coverage for hauling debris or aggregate?",
+        answer:
+          "Often yes if you're responsible for the load. Liability covers damage to others; cargo addresses the material you're hauling. Contracts and job sites may specify minimum cargo limits.",
+      },
+      {
+        question: "What is non-trucking liability?",
+        answer:
+          "Non-trucking (or bobtail) liability can cover liability when a leased truck is operated for personal use and not under dispatch. Whether you need it depends on your lease and how the unit is used.",
+      },
+      {
+        question: "Can I insure a single truck, or do I need a fleet policy?",
+        answer:
+          "You can insure a single dump truck. Fleet structures become useful as you add units and drivers. Your broker will match the setup to how many trucks you run.",
+      },
+      {
+        question: "What information do I need for a quote?",
+        answer:
+          "Truck details (year, make, GVW), driver abstracts, radius and commodities hauled, owner-operator vs. fleet status, and current coverage or claims history.",
+      },
+    ],
+    ctaHeading: "Ready to cover your dump truck?",
+    ctaSubhead:
+      "Tell us about your truck and hauling work — we'll compare options that fit.",
+    serviceName: "Dump Truck Insurance",
   },
 ];
