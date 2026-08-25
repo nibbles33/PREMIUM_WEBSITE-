@@ -12,7 +12,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "PremiumIB | Windsor-Essex Insurance Brokers",
   description:
-    "Compare insurance options with help from a real local broker — not a call centre.",
+    "Compare insurance options with help from a real broker — not a call centre.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -13,16 +13,16 @@ function LogoMark({ className = "" }: { className?: string }) {
   return (
     <Link
       href="/"
-      className={`inline-flex shrink-0 items-center py-1 ${className}`}
+      className={`inline-flex shrink-0 items-center ${className}`}
       aria-label="Premium Insurance Brokers — Home"
     >
       <Image
         src="/logo/logo-for-light-bg.png"
         alt="Premium Insurance Brokers"
-        width={168}
-        height={44}
+        width={198}
+        height={52}
         priority
-        className="h-9 w-auto sm:h-10 lg:h-11"
+        className="h-[42px] w-auto sm:h-[47px] lg:h-[52px]"
       />
     </Link>
   );

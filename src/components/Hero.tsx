@@ -27,8 +27,8 @@ export default function Hero() {
             Personal advice. More choice. Better coverage.
           </p>
           <p className="mt-2.5 max-w-md text-[15px] leading-relaxed text-secondary sm:text-base">
-            Compare insurance options with help from a real local broker — not a
-            call centre.
+            Compare insurance options with help from a real broker — not a call
+            centre.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:flex-wrap sm:items-center">
             <Link

@@ -205,7 +205,7 @@ export default function HeroCoverageCards() {
               "radial-gradient(ellipse at 50% 45%, #D0AD26 0%, transparent 65%)",
           }}
         />
-        <ul className="flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-3 pt-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <ul className="flex snap-x snap-mandatory gap-2.5 overflow-x-auto pl-4 pr-3 pb-3 pt-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {cards.map((card, index) => {
             const Icon = card.icon;
             const tilt = [-2.5, 1.5, -1, 2][index];
@@ -213,7 +213,7 @@ export default function HeroCoverageCards() {
             return (
               <li
                 key={card.id}
-                className="w-[68%] max-w-[250px] shrink-0 snap-center first:ml-1 last:mr-4"
+                className="w-[41%] max-w-[165px] min-w-[150px] shrink-0 snap-start last:mr-4"
                 style={{
                   transform: `translateY(${offsetY}px) rotate(${tilt}deg)`,
                   zIndex: card.featured ? 4 : index + 1,
@@ -224,9 +224,6 @@ export default function HeroCoverageCards() {
             );
           })}
         </ul>
-        <p className="mt-1 px-4 text-center text-[11px] text-secondary/70">
-          Swipe to explore coverage
-        </p>
       </div>
     </>
   );
