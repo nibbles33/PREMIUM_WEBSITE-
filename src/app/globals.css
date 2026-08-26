@@ -609,6 +609,11 @@ body {
     transform: none !important;
   }
 
+  .personal-product-card:hover,
+  .personal-product-card:active {
+    transform: none !important;
+  }
+
   .journey-stage-visible,
   .journey-carrier-enter,
   .journey-card-enter,
