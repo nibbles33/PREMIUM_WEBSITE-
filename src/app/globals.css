@@ -43,14 +43,29 @@ body {
   overflow-x: clip;
 }
 
-/* —— Archivo weight mapping (typography test) ——
-   H1: 600 · H2: 500 · body: 400 · nav: 500 · buttons: 600 · eyebrows: 600
+/* Soft body default — lives in @layer base so Tailwind weight utilities can override */
+@layer base {
+  p,
+  li,
+  td,
+  dd,
+  figcaption {
+    font-weight: 400;
+  }
+}
+
+/* —— Archivo weight map (sitewide, permanent) ——
+   Body 400 · H1 600 · H2–H4 500 · nav 500 · buttons 600 ·
+   eyebrows/uppercase 600 · FAQ triggers 500 · card titles via h3 500
+   Only 400/500/600 are loaded — clamp heavier utilities to 600.
 */
 h1 {
   font-weight: 600 !important;
 }
 
-h2 {
+h2,
+h3,
+h4 {
   font-weight: 500 !important;
 }
 
@@ -59,7 +74,9 @@ h2 {
 }
 
 header nav a,
-footer a {
+header nav button,
+footer a,
+footer nav a {
   font-weight: 500 !important;
 }
 
@@ -73,6 +90,25 @@ a.btn-secondary {
 }
 
 .uppercase {
+  font-weight: 600 !important;
+}
+
+.faq-trigger {
+  font-weight: 500 !important;
+}
+
+th {
+  font-weight: 600 !important;
+}
+
+/* Archivo is not loaded at 700+ — keep bold utilities within loaded range */
+.font-bold,
+.font-extrabold,
+.font-black {
+  font-weight: 600 !important;
+}
+
+.font-semibold {
   font-weight: 600 !important;
 }
 

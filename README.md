@@ -6,7 +6,7 @@ Marketing site for [Premium Insurance Brokers](https://premiumib.com/) (Windsor-
 
 - Next.js 16 (App Router) + TypeScript
 - Tailwind CSS v4
-- Manrope
+- Archivo (400 / 500 / 600)
 - lucide-react
 
 ## Getting started

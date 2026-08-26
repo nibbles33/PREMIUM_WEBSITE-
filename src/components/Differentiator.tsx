@@ -228,13 +228,6 @@ export default function Differentiator() {
                             className={`text-[13px] font-medium ${
                               expanded ? "text-charcoal" : "text-[#555555]"
                             }`}
-                            style={
-                              expanded
-                                ? undefined
-                                : {
-                                    fontFamily: "Arial, Helvetica, sans-serif",
-                                  }
-                            }
                           >
                             {option.name}
                           </p>
@@ -244,13 +237,6 @@ export default function Differentiator() {
                                 ? "text-2xl text-charcoal sm:text-[1.65rem]"
                                 : "text-[26px] text-[#222222] sm:text-[28px]"
                             }`}
-                            style={
-                              expanded
-                                ? undefined
-                                : {
-                                    fontFamily: "Arial, Helvetica, sans-serif",
-                                  }
-                            }
                             aria-label={`Price tier ${option.tier.length} of 3`}
                           >
                             {option.tier}

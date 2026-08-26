@@ -33,7 +33,7 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
                 type="button"
                 aria-expanded={isOpen}
                 aria-controls={panelId}
-                className="flex w-full items-center justify-between gap-4 py-4 text-left text-[15px] font-medium leading-snug text-charcoal transition-colors hover:text-gold-dark sm:py-5 sm:text-base"
+                className="faq-trigger flex w-full items-center justify-between gap-4 py-4 text-left text-[15px] font-medium leading-snug text-charcoal transition-colors hover:text-gold-dark sm:py-5 sm:text-base"
                 onClick={() => setOpenIndex(isOpen ? null : index)}
               >
                 <span>{item.question}</span>
