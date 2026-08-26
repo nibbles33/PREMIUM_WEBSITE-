@@ -1,102 +1,77 @@
 "use client";
 
 import Link from "next/link";
-import { Check, Minus, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { AlertTriangle, Check } from "lucide-react";
+import {
+  useCallback,
+  useId,
+  useState,
+  type CSSProperties,
+} from "react";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const BROKER_HREF = "/talk-to-a-broker/";
+const SPRING = "cubic-bezier(0.34, 1.56, 0.64, 1)";
+const SWAP_MS = 280;
 
-type RowMark = "check" | "x" | "partial";
+const PROVIDERS = [
+  { name: "Provider A", price: "$1,842/yr" },
+  { name: "Provider B", price: "$1,917/yr" },
+  { name: "Provider C", price: "$2,041/yr" },
+] as const;
 
-type ComparisonRow = {
-  label: string;
-  apps: RowMark;
-  premium: RowMark;
-};
-
-const rows: ComparisonRow[] = [
-  {
-    label: "Compares multiple carriers",
-    apps: "partial",
-    premium: "check",
-  },
-  {
-    label: "Explains what's actually covered",
-    apps: "x",
-    premium: "check",
-  },
-  {
-    label: "Licensed broker in your corner",
-    apps: "x",
-    premium: "check",
-  },
-  {
-    label: "Help when you actually file a claim",
-    apps: "x",
-    premium: "check",
-  },
+const BROKER_ADDS = [
+  { label: "Sewer Backup Coverage", kind: "benefit" as const },
+  { label: "Claim Forgiveness", kind: "benefit" as const },
+  { label: "Rental Vehicle Coverage", kind: "benefit" as const },
+  { label: "Better Liability Limits", kind: "benefit" as const },
+  { label: "Higher Deductible", kind: "tradeoff" as const },
 ];
 
-function Mark({ type }: { type: RowMark }) {
-  if (type === "check") {
-    return (
-      <span
-        className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-gold text-charcoal"
-        aria-label="Yes"
-      >
-        <Check className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
-      </span>
-    );
-  }
-
-  if (type === "partial") {
-    return (
-      <span
-        className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white text-secondary ring-1 ring-border"
-        aria-label="Partial"
-      >
-        <Minus className="h-3.5 w-3.5" strokeWidth={2} aria-hidden />
-      </span>
-    );
-  }
-
+function ComplianceLabel({ className = "" }: { className?: string }) {
   return (
-    <span
-      className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white text-secondary/70 ring-1 ring-border"
-      aria-label="No"
+    <p
+      className={`text-[12px] font-medium uppercase tracking-[0.08em] text-gold-dark ${className}`}
     >
-      <X className="h-3.5 w-3.5" strokeWidth={2} aria-hidden />
-    </span>
+      Illustrative example — not an actual quote
+    </p>
   );
 }
 
 export default function Differentiator() {
   const reduceMotion = usePrefersReducedMotion();
-  const stripRef = useRef<HTMLDivElement>(null);
-  const [stripVisible, setStripVisible] = useState(reduceMotion);
+  const baseId = useId();
+  const [brokerAdded, setBrokerAdded] = useState(false);
+  const [panelVisible, setPanelVisible] = useState(true);
+  const [displayBrokerAdded, setDisplayBrokerAdded] = useState(false);
 
-  useEffect(() => {
-    if (reduceMotion) {
-      setStripVisible(true);
-      return;
-    }
-    const el = stripRef.current;
-    if (!el) return;
+  const swapTo = useCallback(
+    (next: boolean) => {
+      if (next === displayBrokerAdded && panelVisible) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setStripVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.18, rootMargin: "0px 0px -6% 0px" },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [reduceMotion]);
+      if (reduceMotion) {
+        setBrokerAdded(next);
+        setDisplayBrokerAdded(next);
+        setPanelVisible(true);
+        return;
+      }
+
+      setBrokerAdded(next);
+      setPanelVisible(false);
+      window.setTimeout(() => {
+        setDisplayBrokerAdded(next);
+        setPanelVisible(true);
+      }, SWAP_MS * 0.45);
+    },
+    [displayBrokerAdded, panelVisible, reduceMotion],
+  );
+
+  const panelTransition: CSSProperties = reduceMotion
+    ? { transition: "none" }
+    : {
+        transition: `opacity ${SWAP_MS}ms ease-out, transform ${SWAP_MS}ms ${SPRING}`,
+      };
 
   return (
     <section
@@ -114,61 +89,139 @@ export default function Differentiator() {
               <span className="text-gold">A broker finds the right one.</span>
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-secondary sm:mt-6 sm:text-base">
-              Comparison apps show you prices. We show you what those prices
-              actually cover — and speak up for you when it matters.
+              Comparison sites show you prices. Toggle a broker into the mix —
+              and see what actually changes beyond the number.
             </p>
           </div>
         </RevealOnScroll>
 
         <RevealOnScroll className="mx-auto mt-12 max-w-3xl sm:mt-14 lg:mt-16">
           <div
-            ref={stripRef}
             className="rounded-[18px] border border-border bg-white p-5 shadow-[0_16px_40px_rgba(32,39,40,0.08)] sm:p-7 lg:p-8"
           >
-            <div className="grid grid-cols-[minmax(0,1fr)_4.75rem_4.75rem] items-end gap-2 border-b border-border pb-3 sm:grid-cols-[minmax(0,1fr)_6rem_6rem] sm:gap-4">
-              <span className="sr-only">Feature</span>
-              <span className="text-center text-[11px] font-medium uppercase tracking-[0.08em] text-secondary sm:text-xs">
-                Comparison Apps
-              </span>
-              <span className="text-center text-[11px] font-semibold uppercase tracking-[0.08em] text-gold sm:text-xs">
-                Premium
-              </span>
+            <ComplianceLabel className="text-center" />
+
+            <div
+              id={`${baseId}-demo`}
+              aria-live="polite"
+              className="mt-5 sm:mt-6"
+            >
+              <div
+                className={
+                  panelVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-2 opacity-0"
+                }
+                style={panelTransition}
+              >
+                {!displayBrokerAdded ? (
+                  <div>
+                    <p className="sr-only">
+                      Comparison site results, illustrative prices only
+                    </p>
+                    <ul className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-3">
+                      {PROVIDERS.map((provider) => (
+                        <li
+                          key={provider.name}
+                          className="rounded-md border border-[#d8d8d8] bg-[#f7f7f7] px-4 py-4 text-left sm:px-3 sm:py-5 sm:text-center"
+                          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                        >
+                          <p className="text-[13px] font-normal text-[#555555]">
+                            {provider.name}
+                          </p>
+                          <p className="mt-2 text-[22px] font-bold tabular-nums tracking-tight text-[#222222] sm:text-[24px]">
+                            {provider.price}
+                          </p>
+                          <p className="mt-2 text-[11px] text-[#888888]">
+                            View details →
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <div>
+                    <p className="sr-only">
+                      What a Premium broker adds beyond price comparison
+                    </p>
+                    <ul className="mx-auto max-w-md space-y-3">
+                      {BROKER_ADDS.map((item) => (
+                        <li
+                          key={item.label}
+                          className="flex items-start gap-3 rounded-lg border border-border bg-offwhite/80 px-4 py-3"
+                        >
+                          {item.kind === "benefit" ? (
+                            <span
+                              className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold text-charcoal"
+                              aria-hidden
+                            >
+                              <Check
+                                className="h-3.5 w-3.5"
+                                strokeWidth={2.5}
+                              />
+                            </span>
+                          ) : (
+                            <span
+                              className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F3EDE3] text-[#8A6A3A] ring-1 ring-[#D4C4A8]"
+                              aria-label="Trade-off"
+                            >
+                              <AlertTriangle
+                                className="h-3.5 w-3.5"
+                                strokeWidth={2}
+                                aria-hidden
+                              />
+                            </span>
+                          )}
+                          <span
+                            className={`text-[14px] font-medium leading-snug sm:text-[15px] ${
+                              item.kind === "tradeoff"
+                                ? "text-secondary"
+                                : "text-charcoal"
+                            }`}
+                          >
+                            {item.label}
+                            {item.kind === "tradeoff" ? (
+                              <span className="sr-only"> (trade-off)</span>
+                            ) : null}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <p className="mt-6 text-center text-[15px] font-medium text-charcoal sm:mt-7 sm:text-base">
+                      The lowest price isn&apos;t always the best option.
+                    </p>
+
+                    <div className="mt-5 flex justify-center sm:mt-6">
+                      <Link
+                        href={BROKER_HREF}
+                        className="btn-secondary inline-flex h-12 w-full min-w-[44px] items-center justify-center rounded-md border border-charcoal/70 bg-transparent px-6 text-sm font-medium text-charcoal hover:border-gold-dark hover:text-gold-dark sm:w-auto sm:min-w-[200px]"
+                      >
+                        Talk to a Broker
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
-            <ul className="mt-1">
-              {rows.map((row, index) => (
-                <li
-                  key={row.label}
-                  className={`diff-row grid grid-cols-[minmax(0,1fr)_4.75rem_4.75rem] items-center gap-2 border-b border-border/70 py-3.5 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_6rem_6rem] sm:gap-4 sm:py-5 ${
-                    stripVisible ? "diff-row-visible" : ""
-                  } ${reduceMotion ? "diff-row-instant" : ""}`}
-                  style={
-                    reduceMotion
-                      ? undefined
-                      : { transitionDelay: `${index * 70}ms` }
-                  }
-                >
-                  <span className="pr-2 text-[14px] font-medium leading-snug text-charcoal sm:text-base">
-                    {row.label}
-                  </span>
-                  <span className="flex justify-center">
-                    <Mark type={row.apps} />
-                  </span>
-                  <span className="flex justify-center">
-                    <Mark type={row.premium} />
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="mt-8 flex justify-center sm:mt-9">
-            <Link
-              href={BROKER_HREF}
-              className="btn-secondary inline-flex h-12 w-full min-w-[44px] items-center justify-center rounded-md border border-charcoal/70 bg-transparent px-6 text-sm font-medium text-charcoal hover:border-gold-dark hover:text-gold-dark sm:w-auto sm:min-w-[200px]"
-            >
-              Talk to a Broker
-            </Link>
+            <div className="mt-7 flex flex-col items-center gap-3 border-t border-border/80 pt-6 sm:mt-8 sm:pt-7">
+              <button
+                type="button"
+                aria-pressed={brokerAdded}
+                aria-controls={`${baseId}-demo`}
+                onClick={() => swapTo(!brokerAdded)}
+                className={`inline-flex h-12 min-w-[44px] items-center justify-center rounded-md px-6 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal sm:min-w-[240px] ${
+                  brokerAdded
+                    ? "border border-charcoal/25 bg-transparent text-charcoal hover:border-gold-dark hover:text-gold-dark"
+                    : "btn-primary btn-primary-gradient text-charcoal"
+                }`}
+              >
+                {brokerAdded
+                  ? "Compare prices again"
+                  : "Add a Premium broker →"}
+              </button>
+            </div>
           </div>
         </RevealOnScroll>
       </div>
