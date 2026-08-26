@@ -109,11 +109,11 @@ export default function AboutPage() {
                   id="about-recognition-heading"
                   className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
                 >
-                  Recognized locally and in the industry
+                  Built here. Recognized here.
                 </h2>
                 <p className="mt-4 text-[15px] leading-relaxed text-secondary sm:text-base">
-                  Windsor Community Vote Platinum Winner from 2021 through
-                  2024, and Gold Winner in 2026. Recognized by Insurance
+                  Windsor Community Vote Platinum Winner four years running
+                  (2021–2024), and Gold Winner in 2026. Recognized by Insurance
                   Business Canada as a 5-Star Brokerage and among Fast
                   Brokerages.
                 </p>
