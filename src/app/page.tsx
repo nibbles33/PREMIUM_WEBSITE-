@@ -17,10 +17,10 @@ export default function Home() {
         <Hero />
         <GoldTicker />
         <TrustBar />
+        <CarrierStrip />
         <HowItWorks />
         <PersonalInsurance />
         <CommercialSpotlight />
-        <CarrierStrip />
         <Differentiator />
         <AwardsSection />
       </main>

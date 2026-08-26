@@ -510,6 +510,57 @@ body {
   }
 }
 
+/* —— Carrier logo marquee (ambient; slower than gold ticker) —— */
+
+.carrier-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+}
+
+.carrier-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  animation: carrier-marquee-scroll 65s linear infinite;
+}
+
+.carrier-marquee:hover .carrier-marquee-track,
+.carrier-marquee:focus-within .carrier-marquee-track {
+  animation-play-state: paused;
+}
+
+.carrier-marquee-segment {
+  flex: 0 0 auto;
+}
+
+.carrier-static-grid {
+  display: none;
+}
+
+@keyframes carrier-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .interactive-press,
   .btn-primary,
@@ -587,8 +638,17 @@ body {
   .hero-icon-enter-animate,
   .hero-chip-animate,
   .hero-coverage-float-animate,
-  .gold-ticker-track {
+  .gold-ticker-track,
+  .carrier-marquee-track {
     animation: none !important;
+  }
+
+  .carrier-marquee {
+    display: none !important;
+  }
+
+  .carrier-static-grid {
+    display: grid !important;
   }
 
   .hero-coverage-float {
