@@ -32,15 +32,48 @@
   --color-white: var(--brand-white);
   --color-secondary: var(--brand-secondary);
   --color-border: var(--brand-border);
-  --font-sans: var(--font-manrope);
+  --font-sans: var(--font-archivo);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-manrope), system-ui, sans-serif;
+  font-family: var(--font-archivo), system-ui, sans-serif;
   font-weight: 400;
   overflow-x: clip;
+}
+
+/* —— Archivo weight mapping (typography test) ——
+   H1: 600 · H2: 500 · body: 400 · nav: 500 · buttons: 600 · eyebrows: 600
+*/
+h1 {
+  font-weight: 600 !important;
+}
+
+h2 {
+  font-weight: 500 !important;
+}
+
+.nav-link-animated {
+  font-weight: 500 !important;
+}
+
+header nav a,
+footer a {
+  font-weight: 500 !important;
+}
+
+.btn-primary,
+.btn-secondary,
+button.btn-primary,
+button.btn-secondary,
+a.btn-primary,
+a.btn-secondary {
+  font-weight: 600 !important;
+}
+
+.uppercase {
+  font-weight: 600 !important;
 }
 
 :focus-visible {
