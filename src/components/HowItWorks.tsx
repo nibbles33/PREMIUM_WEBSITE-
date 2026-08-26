@@ -5,19 +5,27 @@ import {
   Building2,
   Car,
   Check,
+  ChevronLeft,
+  ChevronRight,
   Home,
   UserRound,
+  type LucideIcon,
 } from "lucide-react";
 import {
+  useCallback,
   useEffect,
+  useId,
   useRef,
   useState,
   type CSSProperties,
-  type ReactNode,
+  type KeyboardEvent,
 } from "react";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const SPRING = "cubic-bezier(0.34, 1.56, 0.64, 1)";
+const STAGE_TRANSITION_MS = 280;
+const SELECTION_ADVANCE_MS = 900;
+const STAGE_AUTO_ADVANCE_MS = 2800;
 
 const JOURNEY_NODES = [
   { id: "you", label: "YOU" },
@@ -72,268 +80,180 @@ const COMPARISON_OPTIONS = [
 
 const INTAKE_OPTIONS = [
   { label: "Auto", icon: Car, accent: "#5B7A99" },
-  { label: "Home", icon: Home, accent: "#B37A5A", selected: true },
+  { label: "Home", icon: Home, accent: "#B37A5A" },
   { label: "Business", icon: Building2, accent: "#5A8A73" },
 ] as const;
 
-const STAGE_CONTENT = [
-  {
-    nodeLabel: "YOU",
-    title: "Tell us what you need",
-    render: (props: StageRenderProps) => <StageYouContent {...props} />,
-  },
-  {
-    nodeLabel: "PREMIUM",
-    title: "We shop the market",
-    render: (props: StageRenderProps) => <StagePremiumContent {...props} />,
-  },
-  {
-    nodeLabel: "MARKETS",
-    title: "Your broker reviews the options",
-    render: (props: StageRenderProps) => <StageBrokerContent {...props} />,
-  },
-  {
-    nodeLabel: "COVERAGE",
-    title: "You're covered",
-    render: (props: StageRenderProps) => <StageCoverageContent {...props} />,
-  },
+type IntakeLabel = (typeof INTAKE_OPTIONS)[number]["label"];
+
+const STAGE_TITLES = [
+  "Tell us what you need",
+  "We shop the market",
+  "Your broker reviews the options",
+  "You're covered",
 ] as const;
 
-type StageRenderProps = {
-  visible: boolean;
-  reduceMotion: boolean;
-  stagger: (index: number) => CSSProperties | undefined;
-};
-
-function useJourneyStages(stageCount: number, reduceMotion: boolean) {
-  const stageRefs = useRef<(HTMLElement | null)[]>([]);
-  const [visibleStages, setVisibleStages] = useState<boolean[]>(() =>
-    Array.from({ length: stageCount }, () => reduceMotion),
-  );
-  const [progressIndex, setProgressIndex] = useState(
-    reduceMotion ? stageCount - 1 : 0,
-  );
-
-  useEffect(() => {
-    if (reduceMotion) {
-      setVisibleStages(Array.from({ length: stageCount }, () => true));
-      setProgressIndex(stageCount - 1);
-      return;
-    }
-
-    const observers: IntersectionObserver[] = [];
-
-    stageRefs.current.forEach((element, index) => {
-      if (!element) return;
-
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (!entry.isIntersecting) return;
-          setVisibleStages((previous) => {
-            if (previous[index]) return previous;
-            const next = [...previous];
-            next[index] = true;
-            return next;
-          });
-          setProgressIndex((previous) => Math.max(previous, index));
-        },
-        { threshold: 0.28, rootMargin: "0px 0px -6% 0px" },
-      );
-
-      observer.observe(element);
-      observers.push(observer);
-    });
-
-    return () => observers.forEach((observer) => observer.disconnect());
-  }, [reduceMotion, stageCount]);
-
-  const setStageRef = (index: number) => (element: HTMLElement | null) => {
-    stageRefs.current[index] = element;
-  };
-
-  const progressPercent =
-    stageCount <= 1 ? 0 : (progressIndex / (stageCount - 1)) * 100;
-
-  return {
-    setStageRef,
-    visibleStages,
-    progressIndex,
-    progressPercent,
-  };
-}
-
-function JourneyPathDesktop({
-  progressPercent,
-  progressIndex,
-  travelerActive,
-  reduceMotion,
-}: {
-  progressPercent: number;
-  progressIndex: number;
-  travelerActive: boolean;
-  reduceMotion: boolean;
-}) {
-  return (
-    <div className="relative mb-14 hidden lg:block" aria-hidden>
-      <div className="relative mx-8 h-1.5 rounded-full bg-border">
-        <div
-          className="absolute inset-y-0 left-0 rounded-full bg-gold transition-[width] duration-500 ease-out"
-          style={{
-            width: `${progressPercent}%`,
-            transitionTimingFunction: reduceMotion ? "linear" : SPRING,
-          }}
-        />
-        {travelerActive && !reduceMotion ? (
-          <span className="journey-traveler journey-traveler-horizontal journey-traveler-run-horizontal absolute top-1/2 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-gold/50 bg-white shadow-[0_6px_16px_rgba(32,39,40,0.12)]">
-            <Home
-              className="h-4 w-4 text-[#B37A5A]"
-              strokeWidth={1.5}
-              aria-hidden
-            />
-          </span>
-        ) : null}
-      </div>
-      <ol className="mt-5 grid grid-cols-4 gap-4">
-        {JOURNEY_NODES.map((node, index) => {
-          const active = progressIndex >= index;
-          return (
-            <li key={node.id} className="text-center">
-              <span
-                className={`mx-auto flex h-10 w-10 items-center justify-center rounded-full border text-[11px] font-semibold tracking-[0.08em] transition-colors duration-300 ${
-                  active
-                    ? "border-charcoal bg-charcoal text-gold"
-                    : "border-border bg-white text-secondary"
-                }`}
-              >
-                {index + 1}
-              </span>
-              <span
-                className={`mt-2 block text-[11px] font-semibold tracking-[0.12em] ${
-                  active ? "text-charcoal" : "text-secondary"
-                }`}
-              >
-                {node.label}
-              </span>
-            </li>
-          );
-        })}
-      </ol>
-    </div>
-  );
-}
-
-function JourneyStage({
-  index,
-  nodeLabel,
-  title,
-  visible,
-  reduceMotion,
-  setRef,
-  children,
-  showMobileRail = false,
-  isLast = false,
-  progressIndex = 0,
-}: {
-  index: number;
-  nodeLabel: string;
-  title: string;
-  visible: boolean;
-  reduceMotion: boolean;
-  setRef: (element: HTMLElement | null) => void;
-  children: ReactNode;
-  showMobileRail?: boolean;
-  isLast?: boolean;
-  progressIndex?: number;
-}) {
-  const nodeActive = progressIndex >= index;
-
-  const content = (
-    <div
-      className={`journey-stage-inner min-w-0 flex-1 ${
-        visible || reduceMotion
-          ? "journey-stage-visible"
-          : "journey-stage-hidden"
-      } ${reduceMotion ? "journey-stage-instant" : ""}`}
-    >
-      <p className="sr-only">{`Stage ${index + 1}: ${nodeLabel}`}</p>
-      {showMobileRail ? (
-        <p className="mb-2 text-[11px] font-semibold tracking-[0.12em] text-gold-dark lg:hidden">
-          {nodeLabel}
-        </p>
-      ) : null}
-      <h3
-        id={`journey-stage-${index}-heading`}
-        className="text-lg font-medium tracking-tight text-charcoal sm:text-xl"
-      >
-        {title}
-      </h3>
-      <div className="mt-5 sm:mt-6">{children}</div>
-    </div>
-  );
-
-  return (
-    <article
-      ref={setRef}
-      className={`journey-stage ${showMobileRail ? "flex gap-4 sm:gap-5 lg:block" : ""}`}
-      aria-labelledby={`journey-stage-${index}-heading`}
-    >
-      {showMobileRail ? (
-        <div className="flex w-9 shrink-0 flex-col items-center lg:hidden">
-          <span
-            className={`relative z-[1] flex h-9 w-9 items-center justify-center rounded-full border text-[10px] font-semibold tracking-[0.06em] transition-colors duration-300 ${
-              nodeActive
-                ? "border-charcoal bg-charcoal text-gold"
-                : "border-border bg-white text-secondary"
-            }`}
-            aria-hidden
-          >
-            {index + 1}
-          </span>
-          {!isLast ? (
-            <span
-              className="mt-1 w-0.5 flex-1 min-h-[3rem] rounded-full bg-border"
-              aria-hidden
-            />
-          ) : null}
-        </div>
-      ) : null}
-      {content}
-    </article>
-  );
-}
+type StageIndex = 0 | 1 | 2 | 3;
 
 export default function HowItWorks() {
   const reduceMotion = usePrefersReducedMotion();
-  const { setStageRef, visibleStages, progressIndex, progressPercent } =
-    useJourneyStages(STAGE_CONTENT.length, reduceMotion);
-  const [travelerActive, setTravelerActive] = useState(false);
+  const baseId = useId();
+  const nodeRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const advanceTimerRef = useRef<number | null>(null);
+  const autoAdvanceTimerRef = useRef<number | null>(null);
 
+  const [activeStage, setActiveStage] = useState<StageIndex>(0);
+  const [stageVisible, setStageVisible] = useState(true);
+  const [selectedIntake, setSelectedIntake] = useState<IntakeLabel | null>(
+    null,
+  );
+  const [travelerActive, setTravelerActive] = useState(false);
+  const [travelerIcon, setTravelerIcon] = useState<LucideIcon>(Home);
+  const [travelerAccent, setTravelerAccent] = useState("#B37A5A");
+  const [revealKey, setRevealKey] = useState(0);
+
+  const clearAdvanceTimer = useCallback(() => {
+    if (advanceTimerRef.current !== null) {
+      window.clearTimeout(advanceTimerRef.current);
+      advanceTimerRef.current = null;
+    }
+  }, []);
+
+  const clearAutoAdvanceTimer = useCallback(() => {
+    if (autoAdvanceTimerRef.current !== null) {
+      window.clearTimeout(autoAdvanceTimerRef.current);
+      autoAdvanceTimerRef.current = null;
+    }
+  }, []);
+
+  useEffect(
+    () => () => {
+      clearAdvanceTimer();
+      clearAutoAdvanceTimer();
+    },
+    [clearAdvanceTimer, clearAutoAdvanceTimer],
+  );
+
+  const goToStage = useCallback(
+    (next: StageIndex) => {
+      if (next === activeStage) return;
+      clearAdvanceTimer();
+      clearAutoAdvanceTimer();
+      setTravelerActive(false);
+
+      if (reduceMotion) {
+        setActiveStage(next);
+        setStageVisible(true);
+        setRevealKey((key) => key + 1);
+        return;
+      }
+
+      setStageVisible(false);
+      window.setTimeout(() => {
+        setActiveStage(next);
+        setStageVisible(true);
+        setRevealKey((key) => key + 1);
+      }, STAGE_TRANSITION_MS * 0.45);
+    },
+    [activeStage, clearAdvanceTimer, clearAutoAdvanceTimer, reduceMotion],
+  );
+
+  // Optional auto-advance after Stage 2 / 3 internal reveals
   useEffect(() => {
+    clearAutoAdvanceTimer();
+    if (reduceMotion) return;
+    if (activeStage !== 1 && activeStage !== 2) return;
+    if (!stageVisible) return;
+
+    autoAdvanceTimerRef.current = window.setTimeout(() => {
+      goToStage((activeStage + 1) as StageIndex);
+      autoAdvanceTimerRef.current = null;
+    }, STAGE_AUTO_ADVANCE_MS);
+
+    return () => clearAutoAdvanceTimer();
+  }, [
+    activeStage,
+    stageVisible,
+    reduceMotion,
+    goToStage,
+    clearAutoAdvanceTimer,
+    revealKey,
+  ]);
+
+  const handleIntakeSelect = (label: IntakeLabel) => {
+    const option = INTAKE_OPTIONS.find((item) => item.label === label);
+    if (!option) return;
+
+    setSelectedIntake(label);
+    setTravelerIcon(option.icon);
+    setTravelerAccent(option.accent);
+    clearAdvanceTimer();
+    clearAutoAdvanceTimer();
+
     if (reduceMotion) {
       setTravelerActive(false);
+      goToStage(1);
       return;
     }
-    if (visibleStages[0] && progressIndex < 1) {
-      const timer = window.setTimeout(() => setTravelerActive(true), 600);
-      return () => window.clearTimeout(timer);
+
+    setTravelerActive(true);
+    advanceTimerRef.current = window.setTimeout(() => {
+      setTravelerActive(false);
+      goToStage(1);
+      advanceTimerRef.current = null;
+    }, SELECTION_ADVANCE_MS);
+  };
+
+  const onNodeKeyDown = (
+    event: KeyboardEvent<HTMLButtonElement>,
+    index: number,
+  ) => {
+    let next = index;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      event.preventDefault();
+      next = (index + 1) % JOURNEY_NODES.length;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      event.preventDefault();
+      next = (index - 1 + JOURNEY_NODES.length) % JOURNEY_NODES.length;
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      next = 0;
+    } else if (event.key === "End") {
+      event.preventDefault();
+      next = JOURNEY_NODES.length - 1;
+    } else if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      goToStage(index as StageIndex);
+      return;
+    } else {
+      return;
     }
-    setTravelerActive(false);
-  }, [visibleStages, progressIndex, reduceMotion]);
+    nodeRefs.current[next]?.focus();
+  };
+
+  const progressPercent =
+    JOURNEY_NODES.length <= 1
+      ? 0
+      : (activeStage / (JOURNEY_NODES.length - 1)) * 100;
+
+  const stageTransition: CSSProperties = reduceMotion
+    ? { transition: "none" }
+    : {
+        transition: `opacity ${STAGE_TRANSITION_MS}ms ease-out, transform ${STAGE_TRANSITION_MS}ms ${SPRING}`,
+      };
 
   const stagger = (index: number): CSSProperties | undefined =>
     reduceMotion
       ? undefined
       : ({ animationDelay: `${index * 70}ms` } as CSSProperties);
 
-  const stageProps = (index: number): StageRenderProps => ({
-    visible: visibleStages[index],
-    reduceMotion,
-    stagger,
-  });
+  const TravelerIcon = travelerIcon;
+  const canGoBack = activeStage > 0;
+  const canGoNext = activeStage === 1 || activeStage === 2;
 
   return (
     <section
-      className="border-t border-border bg-offwhite py-16 sm:py-20 lg:py-24"
+      className="border-t border-border bg-offwhite py-12 sm:py-14 lg:py-16"
       aria-labelledby="how-it-works-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
@@ -350,81 +270,211 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="mt-12 lg:mt-16" aria-live="polite">
-          <JourneyPathDesktop
-            progressPercent={progressPercent}
-            progressIndex={progressIndex}
-            travelerActive={travelerActive}
-            reduceMotion={reduceMotion}
-          />
-
-          <div className="relative lg:hidden" aria-hidden>
-            <div className="absolute bottom-6 left-[1.125rem] top-3 w-0.5 rounded-full bg-border">
+        <div className="mt-8 sm:mt-10 lg:mt-12">
+          {/* Timeline navigation — fixed at top */}
+          <div className="relative mb-6 sm:mb-8" aria-hidden={false}>
+            <div className="relative mx-2 h-1.5 rounded-full bg-border sm:mx-6 lg:mx-10">
               <div
-                className="absolute left-0 top-0 w-full rounded-full bg-gold transition-[height] duration-500 ease-out"
+                className="absolute inset-y-0 left-0 rounded-full bg-gold transition-[width] duration-500 ease-out"
                 style={{
-                  height: `${progressPercent}%`,
+                  width: `${progressPercent}%`,
                   transitionTimingFunction: reduceMotion ? "linear" : SPRING,
                 }}
+                aria-hidden
               />
-            </div>
-            {travelerActive && !reduceMotion ? (
-              <span className="journey-traveler journey-traveler-vertical journey-traveler-run-vertical absolute left-[0.6875rem] z-[2] inline-flex h-7 w-7 items-center justify-center rounded-full border border-gold/50 bg-white shadow-[0_4px_12px_rgba(32,39,40,0.12)]">
-                <Home
-                  className="h-3.5 w-3.5 text-[#B37A5A]"
-                  strokeWidth={1.5}
+              {travelerActive && !reduceMotion ? (
+                <span
+                  className="journey-traveler journey-traveler-horizontal journey-traveler-run-horizontal absolute top-1/2 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-gold/50 bg-white shadow-[0_6px_16px_rgba(32,39,40,0.12)]"
                   aria-hidden
-                />
-              </span>
-            ) : null}
+                >
+                  <TravelerIcon
+                    className="h-4 w-4"
+                    style={{ color: travelerAccent }}
+                    strokeWidth={1.5}
+                  />
+                </span>
+              ) : null}
+            </div>
+
+            <div
+              className="mt-4 grid grid-cols-4 gap-2 sm:gap-4"
+              role="tablist"
+              aria-label="How it works stages"
+            >
+              {JOURNEY_NODES.map((node, index) => {
+                const isCurrent = activeStage === index;
+                const isComplete = activeStage > index;
+
+                return (
+                  <button
+                    key={node.id}
+                    ref={(el) => {
+                      nodeRefs.current[index] = el;
+                    }}
+                    type="button"
+                    role="tab"
+                    id={`${baseId}-node-${node.id}`}
+                    aria-selected={isCurrent}
+                    aria-controls={`${baseId}-canvas`}
+                    tabIndex={isCurrent ? 0 : -1}
+                    onClick={() => goToStage(index as StageIndex)}
+                    onKeyDown={(event) => onNodeKeyDown(event, index)}
+                    className="group flex flex-col items-center gap-1.5 rounded-md px-1 py-1 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                  >
+                    <span
+                      className={`flex h-9 w-9 items-center justify-center rounded-full border text-[11px] font-semibold tracking-[0.08em] transition-colors duration-300 sm:h-10 sm:w-10 ${
+                        isCurrent
+                          ? "border-gold bg-charcoal text-gold shadow-[0_6px_16px_rgba(32,39,40,0.14)]"
+                          : isComplete
+                            ? "border-charcoal bg-charcoal text-gold"
+                            : "border-border bg-white text-secondary group-hover:border-charcoal/40"
+                      }`}
+                    >
+                      {index + 1}
+                    </span>
+                    <span
+                      className={`block text-[10px] font-semibold tracking-[0.12em] sm:text-[11px] ${
+                        isCurrent || isComplete
+                          ? "text-charcoal"
+                          : "text-secondary"
+                      }`}
+                    >
+                      {node.label}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
-          <ol className="relative space-y-14 sm:space-y-16 lg:space-y-24">
-            {STAGE_CONTENT.map((stage, index) => (
-              <li key={stage.nodeLabel} className="list-none">
-                <JourneyStage
-                  index={index}
-                  nodeLabel={stage.nodeLabel}
-                  title={stage.title}
-                  visible={visibleStages[index]}
-                  reduceMotion={reduceMotion}
-                  setRef={setStageRef(index)}
-                  showMobileRail
-                  isLast={index === STAGE_CONTENT.length - 1}
-                  progressIndex={progressIndex}
+          {/* Single canvas */}
+          <div
+            id={`${baseId}-canvas`}
+            role="tabpanel"
+            aria-labelledby={`${baseId}-node-${JOURNEY_NODES[activeStage].id}`}
+            aria-live="polite"
+            className="flex min-h-[340px] flex-col rounded-[18px] border border-border bg-white/90 p-5 shadow-[0_12px_28px_rgba(32,39,40,0.06)] sm:min-h-[380px] sm:p-6 lg:min-h-[400px] lg:p-8"
+          >
+            <div
+              className={`flex flex-1 flex-col ${
+                stageVisible
+                  ? "translate-y-0 scale-100 opacity-100"
+                  : "translate-y-2 scale-[0.985] opacity-0"
+              }`}
+              style={stageTransition}
+              key={revealKey}
+            >
+              <p className="sr-only">
+                {`Stage ${activeStage + 1}: ${JOURNEY_NODES[activeStage].label}`}
+              </p>
+              <h3
+                id={`${baseId}-stage-heading`}
+                className="text-lg font-medium tracking-tight text-charcoal sm:text-xl"
+              >
+                {STAGE_TITLES[activeStage]}
+              </h3>
+
+              <div className="mt-5 flex flex-1 flex-col sm:mt-6">
+                {activeStage === 0 ? (
+                  <StageYouContent
+                    selectedIntake={selectedIntake}
+                    onSelect={handleIntakeSelect}
+                  />
+                ) : null}
+                {activeStage === 1 ? (
+                  <StagePremiumContent
+                    visible={stageVisible}
+                    reduceMotion={reduceMotion}
+                    stagger={stagger}
+                  />
+                ) : null}
+                {activeStage === 2 ? (
+                  <StageBrokerContent
+                    visible={stageVisible}
+                    reduceMotion={reduceMotion}
+                  />
+                ) : null}
+                {activeStage === 3 ? (
+                  <StageCoverageContent
+                    visible={stageVisible}
+                    reduceMotion={reduceMotion}
+                  />
+                ) : null}
+              </div>
+            </div>
+
+            {/* Back / Next controls */}
+            <div className="mt-6 flex items-center justify-between gap-3 border-t border-border/80 pt-4 sm:mt-7 sm:pt-5">
+              <button
+                type="button"
+                onClick={() => goToStage((activeStage - 1) as StageIndex)}
+                disabled={!canGoBack}
+                className="inline-flex h-11 min-w-[44px] items-center justify-center gap-1.5 rounded-md border border-border bg-white px-4 text-[14px] font-medium text-charcoal transition-colors hover:border-charcoal/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold disabled:pointer-events-none disabled:opacity-35"
+              >
+                <ChevronLeft className="h-4 w-4" strokeWidth={2} aria-hidden />
+                Back
+              </button>
+
+              {canGoNext ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    clearAutoAdvanceTimer();
+                    goToStage((activeStage + 1) as StageIndex);
+                  }}
+                  className="inline-flex h-11 min-w-[44px] items-center justify-center gap-1.5 rounded-md border border-charcoal bg-charcoal px-4 text-[14px] font-medium text-gold transition-colors hover:bg-[#2a3132] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
                 >
-                  {stage.render(stageProps(index))}
-                </JourneyStage>
-              </li>
-            ))}
-          </ol>
+                  Next
+                  <ChevronRight
+                    className="h-4 w-4"
+                    strokeWidth={2}
+                    aria-hidden
+                  />
+                </button>
+              ) : (
+                <span className="text-[13px] text-secondary sm:text-[14px]">
+                  {activeStage === 0
+                    ? "Pick a coverage type to continue"
+                    : "Journey complete"}
+                </span>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function StageYouContent(_props: StageRenderProps) {
+function StageYouContent({
+  selectedIntake,
+  onSelect,
+}: {
+  selectedIntake: IntakeLabel | null;
+  onSelect: (label: IntakeLabel) => void;
+}) {
   return (
-    <div className="max-w-md rounded-xl border border-border bg-white p-4 shadow-[0_10px_28px_rgba(32,39,40,0.08)] sm:p-5">
+    <div className="mx-auto w-full max-w-xl rounded-xl border border-border bg-white p-4 shadow-[0_10px_28px_rgba(32,39,40,0.08)] sm:p-5">
       <p className="text-[13px] font-medium text-charcoal sm:text-sm">
         What are you looking to insure?
       </p>
-      <ul className="mt-3 grid grid-cols-3 gap-2">
+      <ul className="mt-3 grid grid-cols-3 gap-2 sm:gap-3">
         {INTAKE_OPTIONS.map((option) => {
           const Icon = option.icon;
-          const selected = "selected" in option && option.selected;
+          const selected = selectedIntake === option.label;
           return (
             <li key={option.label}>
-              <div
-                className={`flex flex-col items-center gap-1.5 rounded-lg border px-2 py-3 text-center ${
+              <button
+                type="button"
+                onClick={() => onSelect(option.label)}
+                className={`flex w-full flex-col items-center gap-1.5 rounded-lg border px-2 py-3 text-center transition-[border-color,box-shadow,background-color] duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:py-4 ${
                   selected
                     ? "border-charcoal bg-offwhite shadow-[0_2px_8px_rgba(32,39,40,0.08)]"
-                    : "border-border bg-white"
+                    : "border-border bg-white hover:border-charcoal/25"
                 }`}
               >
                 <span
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-md"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-md sm:h-9 sm:w-9"
                   style={{
                     backgroundColor: selected
                       ? `color-mix(in srgb, ${option.accent} 18%, white)`
@@ -432,7 +482,7 @@ function StageYouContent(_props: StageRenderProps) {
                   }}
                 >
                   <Icon
-                    className="h-4 w-4"
+                    className="h-4 w-4 sm:h-[1.125rem] sm:w-[1.125rem]"
                     style={{ color: option.accent }}
                     strokeWidth={1.5}
                     aria-hidden
@@ -441,7 +491,7 @@ function StageYouContent(_props: StageRenderProps) {
                 <span className="text-[11px] font-medium text-charcoal sm:text-xs">
                   {option.label}
                 </span>
-              </div>
+              </button>
             </li>
           );
         })}
@@ -454,10 +504,14 @@ function StagePremiumContent({
   visible,
   reduceMotion,
   stagger,
-}: StageRenderProps) {
+}: {
+  visible: boolean;
+  reduceMotion: boolean;
+  stagger: (index: number) => CSSProperties | undefined;
+}) {
   return (
-    <div>
-      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:max-w-2xl lg:grid-cols-3 lg:gap-4">
+    <div className="w-full">
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6 lg:gap-4">
         {JOURNEY_CARRIERS.map((carrier, index) => (
           <li
             key={carrier.name}
@@ -476,7 +530,7 @@ function StagePremiumContent({
           </li>
         ))}
       </ul>
-      <p className="mt-4 max-w-lg text-[14px] leading-relaxed text-secondary sm:text-[15px]">
+      <p className="mt-5 max-w-3xl text-[14px] leading-relaxed text-secondary sm:mt-6 sm:text-[15px]">
         Your broker shops available markets for you — comparing options across
         independent carriers, not an automated quote engine.
       </p>
@@ -484,13 +538,19 @@ function StagePremiumContent({
   );
 }
 
-function StageBrokerContent({ visible, reduceMotion }: StageRenderProps) {
+function StageBrokerContent({
+  visible,
+  reduceMotion,
+}: {
+  visible: boolean;
+  reduceMotion: boolean;
+}) {
   return (
-    <div>
+    <div className="w-full">
       <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.08em] text-gold-dark">
         Illustrative example — not an actual quote
       </p>
-      <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:max-w-3xl">
+      <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
         {COMPARISON_OPTIONS.map((option, index) => (
           <li
             key={option.name}
@@ -525,7 +585,7 @@ function StageBrokerContent({ visible, reduceMotion }: StageRenderProps) {
         ))}
       </ul>
       <div
-        className={`mt-5 flex max-w-lg items-start gap-3 rounded-lg border border-border bg-white/80 px-4 py-4 sm:mt-6 sm:px-5 ${
+        className={`mt-5 flex max-w-2xl items-start gap-3 rounded-lg border border-border bg-white/80 px-4 py-4 sm:mt-6 sm:px-5 ${
           visible && !reduceMotion ? "journey-broker-enter" : ""
         }`}
         style={
@@ -545,9 +605,15 @@ function StageBrokerContent({ visible, reduceMotion }: StageRenderProps) {
   );
 }
 
-function StageCoverageContent({ visible, reduceMotion }: StageRenderProps) {
+function StageCoverageContent({
+  visible,
+  reduceMotion,
+}: {
+  visible: boolean;
+  reduceMotion: boolean;
+}) {
   return (
-    <div className="max-w-md rounded-xl border border-border bg-white p-5 shadow-[0_12px_32px_rgba(32,39,40,0.1)] sm:p-6">
+    <div className="mx-auto w-full max-w-xl rounded-xl border border-border bg-white p-5 shadow-[0_12px_32px_rgba(32,39,40,0.1)] sm:p-6">
       <div className="flex items-start gap-4">
         <span
           className={`inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold text-charcoal ${
