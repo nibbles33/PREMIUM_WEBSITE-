@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import RevealOnScroll from "@/components/RevealOnScroll";
 import { homepageCarriers } from "@/data/partners";
 
 function CarrierLogo({
@@ -66,25 +65,23 @@ export default function CarrierStrip() {
       aria-labelledby="carriers-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
-        <RevealOnScroll>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2
-              id="carriers-heading"
-              className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+        <div className="mx-auto max-w-2xl text-center">
+          <h2
+            id="carriers-heading"
+            className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+          >
+            One broker. Multiple markets.
+          </h2>
+          <p className="mt-3 text-[15px] leading-relaxed text-secondary sm:text-base">
+            Access multiple markets through one independent broker.{" "}
+            <Link
+              href="/partners/"
+              className="font-medium text-gold-dark underline-offset-4 transition-colors hover:text-charcoal hover:underline"
             >
-              One broker. Multiple markets.
-            </h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-secondary sm:text-base">
-              Access multiple markets through one independent broker.{" "}
-              <Link
-                href="/partners/"
-                className="font-medium text-gold-dark underline-offset-4 transition-colors hover:text-charcoal hover:underline"
-              >
-                See all partners
-              </Link>
-            </p>
-          </div>
-        </RevealOnScroll>
+              See all partners
+            </Link>
+          </p>
+        </div>
       </div>
 
       {/* Continuous marquee — hidden under prefers-reduced-motion */}
