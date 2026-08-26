@@ -95,12 +95,26 @@ const STAGE_TITLES = [
 
 type StageIndex = 0 | 1 | 2 | 3;
 
+const STAGE_COUNT = JOURNEY_NODES.length;
+
+function isStageIndex(value: number): value is StageIndex {
+  return Number.isInteger(value) && value >= 0 && value < STAGE_COUNT;
+}
+
+type GoToStageOptions = {
+  /** When true, Stages 2–3 may auto-advance after their reveal. Timeline/Back must leave this false. */
+  allowAutoAdvance?: boolean;
+};
+
 export default function HowItWorks() {
   const reduceMotion = usePrefersReducedMotion();
   const baseId = useId();
   const nodeRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const advanceTimerRef = useRef<number | null>(null);
   const autoAdvanceTimerRef = useRef<number | null>(null);
+  const transitionTimerRef = useRef<number | null>(null);
+  /** Only forward flow (intake / Next / chained auto) may auto-advance mid-stages. */
+  const allowAutoAdvanceRef = useRef(false);
 
   const [activeStage, setActiveStage] = useState<StageIndex>(0);
   const [stageVisible, setStageVisible] = useState(true);
@@ -126,19 +140,32 @@ export default function HowItWorks() {
     }
   }, []);
 
+  const clearTransitionTimer = useCallback(() => {
+    if (transitionTimerRef.current !== null) {
+      window.clearTimeout(transitionTimerRef.current);
+      transitionTimerRef.current = null;
+    }
+  }, []);
+
   useEffect(
     () => () => {
       clearAdvanceTimer();
       clearAutoAdvanceTimer();
+      clearTransitionTimer();
     },
-    [clearAdvanceTimer, clearAutoAdvanceTimer],
+    [clearAdvanceTimer, clearAutoAdvanceTimer, clearTransitionTimer],
   );
 
   const goToStage = useCallback(
-    (next: StageIndex) => {
+    (next: number, options: GoToStageOptions = {}) => {
+      if (!isStageIndex(next)) return;
       if (next === activeStage) return;
+
+      allowAutoAdvanceRef.current = options.allowAutoAdvance === true;
+
       clearAdvanceTimer();
       clearAutoAdvanceTimer();
+      clearTransitionTimer();
       setTravelerActive(false);
 
       if (reduceMotion) {
@@ -149,24 +176,34 @@ export default function HowItWorks() {
       }
 
       setStageVisible(false);
-      window.setTimeout(() => {
+      transitionTimerRef.current = window.setTimeout(() => {
         setActiveStage(next);
         setStageVisible(true);
         setRevealKey((key) => key + 1);
+        transitionTimerRef.current = null;
       }, STAGE_TRANSITION_MS * 0.45);
     },
-    [activeStage, clearAdvanceTimer, clearAutoAdvanceTimer, reduceMotion],
+    [
+      activeStage,
+      clearAdvanceTimer,
+      clearAutoAdvanceTimer,
+      clearTransitionTimer,
+      reduceMotion,
+    ],
   );
 
-  // Optional auto-advance after Stage 2 / 3 internal reveals
+  // Optional auto-advance after Stage 2 / 3 reveals — only for forward flow,
+  // never after an explicit timeline jump or Back (that was the off-by-one).
   useEffect(() => {
     clearAutoAdvanceTimer();
     if (reduceMotion) return;
+    if (!allowAutoAdvanceRef.current) return;
     if (activeStage !== 1 && activeStage !== 2) return;
     if (!stageVisible) return;
 
+    const fromStage = activeStage;
     autoAdvanceTimerRef.current = window.setTimeout(() => {
-      goToStage((activeStage + 1) as StageIndex);
+      goToStage(fromStage + 1, { allowAutoAdvance: true });
       autoAdvanceTimerRef.current = null;
     }, STAGE_AUTO_ADVANCE_MS);
 
@@ -192,16 +229,20 @@ export default function HowItWorks() {
 
     if (reduceMotion) {
       setTravelerActive(false);
-      goToStage(1);
+      goToStage(1, { allowAutoAdvance: true });
       return;
     }
 
     setTravelerActive(true);
     advanceTimerRef.current = window.setTimeout(() => {
       setTravelerActive(false);
-      goToStage(1);
+      goToStage(1, { allowAutoAdvance: true });
       advanceTimerRef.current = null;
     }, SELECTION_ADVANCE_MS);
+  };
+
+  const selectTimelineStage = (index: number) => {
+    goToStage(index, { allowAutoAdvance: false });
   };
 
   const onNodeKeyDown = (
@@ -211,19 +252,19 @@ export default function HowItWorks() {
     let next = index;
     if (event.key === "ArrowRight" || event.key === "ArrowDown") {
       event.preventDefault();
-      next = (index + 1) % JOURNEY_NODES.length;
+      next = (index + 1) % STAGE_COUNT;
     } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
       event.preventDefault();
-      next = (index - 1 + JOURNEY_NODES.length) % JOURNEY_NODES.length;
+      next = (index - 1 + STAGE_COUNT) % STAGE_COUNT;
     } else if (event.key === "Home") {
       event.preventDefault();
       next = 0;
     } else if (event.key === "End") {
       event.preventDefault();
-      next = JOURNEY_NODES.length - 1;
+      next = STAGE_COUNT - 1;
     } else if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      goToStage(index as StageIndex);
+      selectTimelineStage(index);
       return;
     } else {
       return;
@@ -317,7 +358,7 @@ export default function HowItWorks() {
                     aria-selected={isCurrent}
                     aria-controls={`${baseId}-canvas`}
                     tabIndex={isCurrent ? 0 : -1}
-                    onClick={() => goToStage(index as StageIndex)}
+                    onClick={() => selectTimelineStage(index)}
                     onKeyDown={(event) => onNodeKeyDown(event, index)}
                     className="group flex flex-col items-center gap-1.5 rounded-md px-1 py-1 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
                   >
@@ -407,7 +448,9 @@ export default function HowItWorks() {
             <div className="mt-6 flex items-center justify-between gap-3 border-t border-border/80 pt-4 sm:mt-7 sm:pt-5">
               <button
                 type="button"
-                onClick={() => goToStage((activeStage - 1) as StageIndex)}
+                onClick={() =>
+                  goToStage(activeStage - 1, { allowAutoAdvance: false })
+                }
                 disabled={!canGoBack}
                 className="inline-flex h-11 min-w-[44px] items-center justify-center gap-1.5 rounded-md border border-border bg-white px-4 text-[14px] font-medium text-charcoal transition-colors hover:border-charcoal/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold disabled:pointer-events-none disabled:opacity-35"
               >
@@ -420,7 +463,7 @@ export default function HowItWorks() {
                   type="button"
                   onClick={() => {
                     clearAutoAdvanceTimer();
-                    goToStage((activeStage + 1) as StageIndex);
+                    goToStage(activeStage + 1, { allowAutoAdvance: true });
                   }}
                   className="inline-flex h-11 min-w-[44px] items-center justify-center gap-1.5 rounded-md border border-charcoal bg-charcoal px-4 text-[14px] font-medium text-gold transition-colors hover:bg-[#2a3132] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
                 >
