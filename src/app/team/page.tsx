@@ -49,7 +49,7 @@ export default function TeamPage() {
           aria-label="Team members"
         >
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
-            <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 xl:grid-cols-4">
+            <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3">
               {teamMembers.map((member) => (
                 <li key={member.name}>
                   <RevealOnScroll>

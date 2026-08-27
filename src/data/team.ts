@@ -68,12 +68,6 @@ export const teamMembers: TeamMember[] = [
     photoAlt: "Anuraj Saini, Sales Producer",
   },
   {
-    name: "Omar Altouhan",
-    title: "Sales Producer",
-    photo: "/images/team/team-omar-altouhan.jpg",
-    photoAlt: "Omar Altouhan, Sales Producer",
-  },
-  {
     name: "Abdirizak Adan",
     title: "Sales Producer",
     photo: "/images/team/team-abdirizak-adan.jpg",
