@@ -601,11 +601,40 @@ th {
 
 .carrier-marquee-track {
   display: flex;
+  align-items: center;
   width: max-content;
   will-change: transform;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
-  animation: carrier-marquee-scroll 65s linear infinite;
+  animation: carrier-marquee-scroll 80s linear infinite;
+}
+
+.partner-logo-card img {
+  opacity: 0.94;
+  transition:
+    opacity 200ms ease-out,
+    transform 200ms ease-out;
+}
+
+.partner-logo-card:hover img,
+.partner-logo-card:focus-visible img {
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .partner-logo-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partner-logo-card:hover {
+    transform: none;
+  }
+
+  .partner-logo-card img {
+    transition: none;
+  }
 }
 
 .carrier-marquee:hover .carrier-marquee-track,

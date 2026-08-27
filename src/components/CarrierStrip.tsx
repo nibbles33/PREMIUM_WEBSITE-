@@ -1,39 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
+import PartnerLogoCard from "@/components/PartnerLogoCard";
 import { homepageCarriers } from "@/data/partners";
 
-function CarrierLogo({
-  name,
-  src,
-  alt,
-  focusable = true,
-}: {
-  name: string;
-  src: string;
-  alt: string;
-  focusable?: boolean;
-}) {
-  return (
-    <li className="flex h-14 shrink-0 items-center justify-center px-6 sm:h-16 sm:px-8 lg:px-10">
-      <Link
-        href="/partners/"
-        tabIndex={focusable ? 0 : -1}
-        className="inline-flex items-center justify-center rounded-sm outline-offset-4 transition-[filter,opacity] duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
-        aria-label={`${name} — see all partners`}
-      >
-        <Image
-          src={src}
-          alt={alt}
-          width={180}
-          height={64}
-          className="max-h-10 w-auto max-w-[140px] object-contain opacity-80 grayscale transition-[filter,opacity] duration-300 ease-out hover:opacity-100 hover:grayscale-0 sm:max-h-12 sm:max-w-[160px]"
-        />
-      </Link>
-    </li>
-  );
-}
-
-function CarrierLogoRow({
+function CarrierMarqueeRow({
   focusable,
   ariaHidden,
 }: {
@@ -42,17 +11,18 @@ function CarrierLogoRow({
 }) {
   return (
     <ul
-      className="carrier-marquee-segment flex shrink-0 list-none items-center"
+      className="carrier-marquee-segment flex shrink-0 list-none items-center gap-4 sm:gap-5"
       aria-hidden={ariaHidden || undefined}
     >
       {homepageCarriers.map((carrier) => (
-        <CarrierLogo
-          key={`${ariaHidden ? "dup" : "a"}-${carrier.name}`}
-          name={carrier.name}
-          src={carrier.src}
-          alt={carrier.alt}
-          focusable={focusable}
-        />
+        <li key={`${ariaHidden ? "dup" : "a"}-${carrier.name}`}>
+          <PartnerLogoCard
+            partner={carrier}
+            size="marquee"
+            href="/partners/"
+            tabIndex={focusable ? 0 : -1}
+          />
+        </li>
       ))}
     </ul>
   );
@@ -61,60 +31,55 @@ function CarrierLogoRow({
 export default function CarrierStrip() {
   return (
     <section
-      className="border-t border-border bg-offwhite py-14 sm:py-16 lg:py-20"
+      className="border-t border-border bg-offwhite pb-8 pt-10 sm:pb-10 sm:pt-12 lg:pb-11 lg:pt-14"
       aria-labelledby="carriers-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <h2
             id="carriers-heading"
             className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
           >
             One broker. Multiple markets.
           </h2>
-          <p className="mt-3 text-[15px] leading-relaxed text-secondary sm:text-base">
-            Access multiple markets through one independent broker.{" "}
-            <Link
-              href="/partners/"
-              className="font-medium text-gold-dark underline-offset-4 transition-colors hover:text-charcoal hover:underline"
-            >
-              See all partners
-            </Link>
+          <p className="mt-2.5 max-w-xl text-[15px] leading-relaxed text-secondary sm:text-base">
+            Access multiple markets through one independent broker — from major
+            personal lines to specialty commercial programs.
           </p>
+          <Link
+            href="/partners/"
+            className="group mt-4 inline-flex items-center gap-1.5 text-[14px] font-medium text-gold-dark underline-offset-4 transition-colors hover:text-charcoal hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-[15px]"
+          >
+            See all partners
+            <span
+              aria-hidden
+              className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
+            >
+              →
+            </span>
+          </Link>
         </div>
       </div>
 
-      {/* Continuous marquee — hidden under prefers-reduced-motion */}
       <div
-        className="carrier-marquee mt-10 sm:mt-12"
+        className="carrier-marquee mt-8 sm:mt-9"
         aria-label="Insurance carrier partners"
       >
-        <div className="carrier-marquee-track">
-          <CarrierLogoRow focusable />
-          <CarrierLogoRow focusable={false} ariaHidden />
+        <div className="carrier-marquee-track gap-4 sm:gap-5">
+          <CarrierMarqueeRow focusable />
+          <CarrierMarqueeRow focusable={false} ariaHidden />
         </div>
       </div>
 
-      {/* Static grid — shown only under prefers-reduced-motion */}
-      <ul className="carrier-static-grid mx-auto mt-10 grid max-w-6xl list-none grid-cols-2 gap-x-6 gap-y-8 px-4 sm:mt-12 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-10 sm:px-6 md:grid-cols-5 lg:gap-x-10 lg:px-8 xl:max-w-7xl">
+      <ul className="carrier-static-grid mx-auto mt-8 grid max-w-6xl list-none grid-cols-2 gap-4 px-4 sm:mt-9 sm:grid-cols-3 sm:gap-5 sm:px-6 md:grid-cols-4 lg:grid-cols-6 lg:px-8 xl:max-w-7xl">
         {homepageCarriers.map((carrier) => (
-          <li
-            key={`static-${carrier.name}`}
-            className="flex h-14 items-center justify-center sm:h-16"
-          >
-            <Link
+          <li key={`static-${carrier.name}`}>
+            <PartnerLogoCard
+              partner={carrier}
+              size="marquee"
               href="/partners/"
-              className="inline-flex items-center justify-center rounded-sm outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
-              aria-label={`${carrier.name} — see all partners`}
-            >
-              <Image
-                src={carrier.src}
-                alt={carrier.alt}
-                width={180}
-                height={64}
-                className="max-h-10 w-auto max-w-[140px] object-contain opacity-80 grayscale transition-[filter,opacity] duration-300 ease-out hover:opacity-100 hover:grayscale-0 sm:max-h-12 sm:max-w-[160px]"
-              />
-            </Link>
+              className="w-full min-w-0"
+            />
           </li>
         ))}
       </ul>

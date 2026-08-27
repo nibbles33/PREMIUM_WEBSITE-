@@ -294,7 +294,7 @@ export default function HowItWorks() {
 
   return (
     <section
-      className="border-t border-border bg-offwhite py-12 sm:py-14 lg:py-16"
+      className="border-t border-border bg-offwhite pb-10 pt-8 sm:pb-12 sm:pt-10 lg:pb-14 lg:pt-12"
       aria-labelledby="how-it-works-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">

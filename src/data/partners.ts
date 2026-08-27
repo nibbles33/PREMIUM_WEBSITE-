@@ -4,7 +4,14 @@ export type PartnerLogo = {
   alt: string;
 };
 
-/** Curated consumer-facing subset for the homepage strip. */
+export type PartnerGroup = {
+  id: string;
+  title: string;
+  description?: string;
+  partners: PartnerLogo[];
+};
+
+/** Curated core markets for the homepage marquee (12 major carriers). */
 export const homepageCarriers: PartnerLogo[] = [
   {
     name: "CAA Insurance",
@@ -37,6 +44,11 @@ export const homepageCarriers: PartnerLogo[] = [
     alt: "Aviva logo",
   },
   {
+    name: "Travelers",
+    src: "/images/partners/partner-travelers.jpg",
+    alt: "Travelers logo",
+  },
+  {
     name: "Chubb",
     src: "/images/carriers/carrier-chubb.jpg",
     alt: "Chubb logo",
@@ -50,6 +62,11 @@ export const homepageCarriers: PartnerLogo[] = [
     name: "Echelon Insurance",
     src: "/images/carriers/carrier-echelon.jpg",
     alt: "Echelon Insurance logo",
+  },
+  {
+    name: "Unica Insurance",
+    src: "/images/partners/partner-unica.png",
+    alt: "Unica Insurance logo",
   },
   {
     name: "PemBridge Insurance Company",
@@ -284,3 +301,32 @@ export const allPartners: PartnerLogo[] = [
     alt: "Unique Risk Management logo",
   },
 ];
+
+const coreMarketNames = new Set(homepageCarriers.map((p) => p.name));
+
+/**
+ * Partners page groups — derived from repo data only (no inferred insurer taxonomy).
+ * Core Markets = homepage marquee curation; everything else stays in Our Markets
+ * until owner-supplied Personal / Commercial / Specialty / MGA classifications exist.
+ */
+export function getPartnerGroups(): PartnerGroup[] {
+  const core = allPartners.filter((p) => coreMarketNames.has(p.name));
+  const additional = allPartners.filter((p) => !coreMarketNames.has(p.name));
+
+  return [
+    {
+      id: "core-markets",
+      title: "Core Markets",
+      description:
+        "Major personal and commercial insurers we regularly place business with across Ontario.",
+      partners: core,
+    },
+    {
+      id: "our-markets",
+      title: "Our Markets",
+      description:
+        "Additional insurers, specialty underwriters, and program partners in our broker network.",
+      partners: additional,
+    },
+  ];
+}
