@@ -40,6 +40,17 @@ Open [http://127.0.0.1:43123](http://127.0.0.1:43123).
 
 Tokens live in `src/app/globals.css` (`@theme`).
 
+## Quote funnel (`/get-a-quote`)
+
+Conversational lead capture. Requires environment variables in local `.env.local` and in the Vercel project:
+
+| Variable | Required | Purpose |
+| --- | --- | --- |
+| `DATABASE_URL` | **Yes** | Vercel Postgres / Neon connection string — leads are written here first |
+| `RESEND_API_KEY` | Recommended | Email notification to `info@premiumib.com` (lead still saves if unset) |
+
+Schema is created automatically on first submit (`quote_leads`, `quote_rate_limits`). SQL also lives at `src/lib/quote/schema.sql`.
+
 ## Award assets
 
 Community and industry badges live in `public/images/awards/`.
