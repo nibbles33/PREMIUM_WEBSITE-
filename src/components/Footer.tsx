@@ -1,31 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const insuranceLinks = [
+const personalLinks = [
   { label: "Auto Insurance", href: "/auto-insurance/" },
   { label: "Home Insurance", href: "/home-insurance/" },
+  { label: "Condo Insurance", href: "/get-a-quote?type=home&homeType=condo" },
+  { label: "Tenant Insurance", href: "/get-a-quote?type=home&homeType=tenant" },
   { label: "Business Insurance", href: "/commercial-insurance/" },
+] as const;
+
+const businessLinks = [
+  { label: "Commercial Insurance", href: "/commercial-insurance/" },
+  { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
+  { label: "Contractors", href: "/contractors-insurance/" },
   { label: "Farm Insurance", href: "/farm-insurance/" },
-  { label: "Bond Insurance", href: "/bonding-insurance/" },
+  { label: "Bonding", href: "/bonding-insurance/" },
+] as const;
+
+const resourceLinks = [
+  { label: "Claims", href: "/claims/" },
+  { label: "Make a Payment", href: "/payment/" },
+  { label: "Resources", href: "/resources/" },
+  { label: "Newsletter", href: "/newsletter/" },
+  { label: "Compliance", href: "/compliance/" },
+  { label: "Privacy Policy", href: "/privacy-policy/" },
 ] as const;
 
 const companyLinks = [
   { label: "About Us", href: "/about/" },
+  { label: "Careers", href: "/careers/" },
   { label: "Meet the Team", href: "/team/" },
   { label: "Partners", href: "/partners/" },
   { label: "Contact Us", href: "/contact/" },
 ] as const;
 
-const legalLinks = [
-  { label: "Make a Payment", href: "/payment/" },
-  { label: "Compliance", href: "/compliance/" },
-  { label: "Privacy Policy", href: "/privacy-policy/" },
-  {
-    label: "RIBO Fact Sheet",
-    href: "https://www.ribo.com/wp-content/uploads/2022/04/RIBO_Conduct_Sheet_040622-fact_sheet.pdf",
-    external: true,
-  },
-] as const;
+const riboLink = {
+  label: "RIBO Fact Sheet",
+  href: "https://www.ribo.com/wp-content/uploads/2022/04/RIBO_Conduct_Sheet_040622-fact_sheet.pdf",
+} as const;
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -68,11 +80,7 @@ function FooterNavColumn({
   links,
 }: {
   title: string;
-  links: readonly {
-    label: string;
-    href: string;
-    external?: boolean;
-  }[];
+  links: readonly { label: string; href: string; external?: boolean }[];
 }) {
   return (
     <div>
@@ -81,8 +89,8 @@ function FooterNavColumn({
       </h2>
       <ul className="mt-4 space-y-2.5">
         {links.map((link) => (
-          <li key={link.href}>
-            {link.external ? (
+          <li key={link.href + link.label}>
+            {"external" in link && link.external ? (
               <a
                 href={link.href}
                 target="_blank"
@@ -112,7 +120,7 @@ export default function Footer() {
   return (
     <footer className="mt-auto bg-charcoal text-white" role="contentinfo">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16 xl:max-w-7xl">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link
               href="/"
@@ -153,9 +161,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <FooterNavColumn title="Insurance" links={insuranceLinks} />
-          <FooterNavColumn title="Company" links={companyLinks} />
-          <FooterNavColumn title="Legal & Resources" links={legalLinks} />
+          <FooterNavColumn title="Personal" links={personalLinks} />
+          <FooterNavColumn title="Business" links={businessLinks} />
+          <FooterNavColumn title="Resources" links={resourceLinks} />
+          <FooterNavColumn
+            title="Company"
+            links={[...companyLinks, { ...riboLink, external: true }]}
+          />
         </div>
       </div>
 
