@@ -28,7 +28,7 @@ export const personalNavGroups: NavGroup[] = [
       },
       {
         label: "Ride / Car / Home Sharing",
-        href: "/talk-to-a-broker/",
+        href: "/home-sharing-insurance/",
         description: "Sharing-economy and platform-use coverage.",
       },
     ],
@@ -47,7 +47,7 @@ export const personalNavGroups: NavGroup[] = [
       },
       {
         label: "Mobile / Manufactured Home",
-        href: "/talk-to-a-broker/",
+        href: "/mobile-home-insurance/",
         description: "Coverage for manufactured and mobile homes.",
       },
     ],
@@ -57,18 +57,18 @@ export const personalNavGroups: NavGroup[] = [
     links: [
       {
         label: "Personal Umbrella",
-        href: "/talk-to-a-broker/",
+        href: "/personal-umbrella-insurance/",
         description: "Extra liability limits above your home and auto policies.",
       },
       {
         label: "Life Insurance",
-        href: "/talk-to-a-broker/",
-        description: "Term and permanent life options through our partners.",
+        href: "/life-insurance/",
+        description: "Life insurance inquiry coordination through licensed specialists.",
       },
       {
         label: "Group Home & Auto",
-        href: "/talk-to-a-broker/",
-        description: "Employer and association group programs.",
+        href: "/group-home-auto-insurance/",
+        description: "Employer and association group program inquiries.",
       },
     ],
   },

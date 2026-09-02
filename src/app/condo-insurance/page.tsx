@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import {
-  Building2,
   KeyRound,
   Scale,
   Shield,

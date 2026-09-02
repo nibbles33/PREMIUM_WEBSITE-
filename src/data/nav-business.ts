@@ -15,7 +15,7 @@ export const businessNavHub = {
   href: "/commercial-insurance/",
 };
 
-/** Grouped business mega-menu — existing line pages link directly; others route to quote or broker intake. */
+/** Grouped business mega-menu — dedicated product pages where available. */
 export const businessNavClusters: BusinessNavCluster[] = [
   {
     title: "Commercial Hub",
@@ -23,8 +23,8 @@ export const businessNavClusters: BusinessNavCluster[] = [
       { label: "Commercial Insurance", href: "/commercial-insurance/" },
       { label: "Commercial Property", href: "/commercial-property-insurance/" },
       { label: "Bonding Insurance", href: "/bonding-insurance/" },
-      { label: "Small Business", href: `${QUOTE_BUSINESS}` },
-      { label: "Business Interruption", href: `${QUOTE_BUSINESS}` },
+      { label: "Small Business", href: "/small-business-insurance/" },
+      { label: "Business Interruption", href: "/business-interruption-insurance/" },
     ],
   },
   {
@@ -33,8 +33,8 @@ export const businessNavClusters: BusinessNavCluster[] = [
       { label: "Commercial Auto / Fleet", href: "/commercial-auto-insurance/" },
       { label: "Trucking", href: "/trucking-insurance/" },
       { label: "Dump Truck", href: "/dump-truck-insurance/" },
-      { label: "Cargo / Freight", href: `${QUOTE_COMMERCIAL_VEHICLES}` },
-      { label: "Garage / Dealership", href: `${QUOTE_COMMERCIAL_VEHICLES}` },
+      { label: "Cargo / Freight", href: "/cargo-freight-insurance/" },
+      { label: "Garage / Dealership", href: "/garage-dealership-insurance/" },
     ],
   },
   {
@@ -42,18 +42,18 @@ export const businessNavClusters: BusinessNavCluster[] = [
     links: [
       { label: "Contractors", href: "/contractors-insurance/" },
       { label: "Builders & Developers", href: "/builders-developers-insurance/" },
-      { label: "Builders Risk", href: `${QUOTE_BUSINESS}` },
-      { label: "Warehousing", href: `${QUOTE_BUSINESS}` },
-      { label: "Property Management", href: `${QUOTE_BUSINESS}` },
-      { label: "Condominium Corporation", href: `${QUOTE_BUSINESS}` },
+      { label: "Builders Risk", href: "/builders-risk-insurance/" },
+      { label: "Warehousing", href: "/warehousing-insurance/" },
+      { label: "Property Management", href: "/property-management-insurance/" },
+      { label: "Condominium Corporation", href: "/condominium-corporation-insurance/" },
     ],
   },
   {
     title: "Manufacturing & Industry",
     links: [
       { label: "Manufacturing", href: "/manufacturing-insurance/" },
-      { label: "Pollution Liability", href: `${QUOTE_BUSINESS}` },
-      { label: "Product Recall", href: `${QUOTE_BUSINESS}` },
+      { label: "Pollution Liability", href: "/pollution-liability-insurance/" },
+      { label: "Product Recall", href: "/product-recall-insurance/" },
     ],
   },
   {
@@ -62,9 +62,9 @@ export const businessNavClusters: BusinessNavCluster[] = [
       { label: "Restaurants", href: "/restaurant-insurance/" },
       { label: "Food Truck / Trailer", href: "/food-truck-insurance/" },
       { label: "Retail", href: "/retail-insurance/" },
-      { label: "Hotel / Motel", href: `${QUOTE_BUSINESS}&businessType=restaurant` },
-      { label: "Convenience / Gas", href: `${QUOTE_BUSINESS}` },
-      { label: "Grocery / Food / Bakery", href: `${QUOTE_BUSINESS}` },
+      { label: "Hotel / Motel", href: "/hotel-motel-insurance/" },
+      { label: "Convenience / Gas", href: "/convenience-store-insurance/" },
+      { label: "Grocery / Food / Bakery", href: "/grocery-specialty-food-insurance/" },
     ],
   },
   {
@@ -72,26 +72,32 @@ export const businessNavClusters: BusinessNavCluster[] = [
     links: [
       { label: "Professional Offices", href: "/professional-offices-insurance/" },
       { label: "Real Estate", href: "/real-estate-insurance/" },
-      { label: "D&O", href: `${QUOTE_BUSINESS}&businessType=professional` },
-      { label: "Cyber", href: `${QUOTE_BUSINESS}&businessType=professional` },
-      { label: "Professional Liability / E&O", href: `${QUOTE_BUSINESS}&businessType=professional` },
-      { label: "Landscaping & Snow Removal", href: `${QUOTE_BUSINESS}&businessType=contractor` },
+      { label: "D&O", href: "/directors-officers-insurance/" },
+      { label: "Cyber", href: "/cyber-insurance/" },
+      { label: "Professional Liability / E&O", href: "/professional-liability-insurance/" },
+      { label: "Landscaping & Snow Removal", href: "/landscaping-snow-removal-insurance/" },
     ],
   },
   {
     title: "Specialty & Community",
     links: [
-      { label: "Medical / Dental", href: `${QUOTE_BUSINESS}&businessType=professional` },
-      { label: "Pharmacy", href: `${QUOTE_BUSINESS}` },
-      { label: "Fitness / Gym", href: `${QUOTE_BUSINESS}` },
-      { label: "Salon / Barber", href: `${QUOTE_BUSINESS}` },
-      { label: "Non-Profit", href: `${QUOTE_BUSINESS}` },
-      { label: "Religious Organizations", href: `${QUOTE_BUSINESS}` },
-      { label: "Daycare / School", href: `${QUOTE_BUSINESS}` },
-      { label: "Event Liability", href: `${QUOTE_BUSINESS}` },
-      { label: "Liquor Liability", href: `${QUOTE_BUSINESS}&businessType=restaurant` },
-      { label: "Crime / Fidelity", href: `${QUOTE_BUSINESS}` },
-      { label: "Employment Practices Liability", href: `${QUOTE_BUSINESS}` },
+      { label: "Medical / Dental", href: "/medical-dental-insurance/" },
+      { label: "Pharmacy", href: "/pharmacy-insurance/" },
+      { label: "Fitness / Gym", href: "/fitness-gym-insurance/" },
+      { label: "Salon / Barber", href: "/salon-barber-insurance/" },
+      { label: "Non-Profit", href: "/non-profit-insurance/" },
+      { label: "Religious Organizations", href: "/religious-organizations-insurance/" },
+      { label: "Daycare / School", href: "/daycare-private-school-insurance/" },
+      { label: "Event Liability", href: "/event-liability-insurance/" },
+      { label: "Liquor Liability", href: "/liquor-liability-insurance/" },
+      { label: "Crime / Fidelity", href: "/crime-fidelity-insurance/" },
+      { label: "Employment Practices Liability", href: "/employment-practices-liability-insurance/" },
     ],
   },
 ];
+
+/** Remaining business nav items that still use quote fallbacks (none in mega-menu after this wave). */
+export const businessQuoteFallbacks = {
+  QUOTE_BUSINESS,
+  QUOTE_COMMERCIAL_VEHICLES,
+};
