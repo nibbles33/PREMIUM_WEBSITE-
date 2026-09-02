@@ -32,7 +32,6 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       "Coverage for overnight hospitality — guest liability, property, business income, and the operational risks of running rooms and amenities.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=restaurant`,
     quoteLabel: "Get a Hospitality Quote",
-    photographySlug: "restaurant-insurance",
     coverageIntro:
       "Hotels and motels combine property, liability, and income exposures across guest rooms, common areas, and food service.",
     coverageTypes: [
@@ -108,7 +107,6 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       "Coverage for c-stores and gas bars — high-traffic retail, fuel pumps, inventory theft, and environmental exposures.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a C-Store Quote",
-    photographySlug: "retail-insurance",
     coverageIntro:
       "Convenience and gas operations combine retail theft, customer liability, and fuel-related environmental risk.",
     coverageTypes: [
@@ -184,7 +182,6 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       "Coverage for food retailers and artisan producers — spoilage, refrigeration breakdown, product liability, and customer-facing premises risk.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Food Retail Quote",
-    photographySlug: "retail-insurance",
     coverageIntro:
       "Food retail combines inventory spoilage, product liability, and equipment failure exposures unique to perishable goods.",
     coverageTypes: [
@@ -260,7 +257,6 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       "Commercial coverage for clinics and practices — premises liability, property, cyber, and coordination with professional malpractice requirements.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=professional`,
     quoteLabel: "Get a Clinic Quote",
-    photographySlug: "professional-offices-insurance",
     coverageIntro:
       "Medical and dental offices need commercial property and liability alongside profession-specific malpractice coverage.",
     coverageTypes: [
@@ -336,7 +332,6 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       "Coverage for retail pharmacies — inventory, professional liability coordination, premises liability, and patient data protection.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Pharmacy Quote",
-    photographySlug: "professional-offices-insurance",
     coverageIntro:
       "Pharmacies combine retail inventory, professional dispensing exposure, and sensitive patient data.",
     coverageTypes: [
@@ -412,7 +407,6 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       "Coverage for gyms, studios, and fitness operators — participant injury, equipment, trainer liability, and premises risk.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Fitness Quote",
-    photographySlug: "retail-insurance",
     coverageIntro:
       "Fitness businesses face participant injury claims, equipment liability, and professional exposure from trainers and instructors.",
     coverageTypes: [
@@ -488,7 +482,6 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       "Coverage for hair salons, barbershops, and spas — treatment liability, chemical services, premises injury, and equipment.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Salon Quote",
-    photographySlug: "retail-insurance",
     coverageIntro:
       "Salons combine premises liability with professional treatment exposures from chemical services and skin care.",
     coverageTypes: [
@@ -567,7 +560,6 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Coverage for charities and nonprofits — board liability, volunteer injury, events, and the property that supports your mission.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Non-Profit Quote",
-    photographySlug: "professional-offices-insurance",
     coverageIntro:
       "Nonprofits face governance, volunteer, and event exposures similar to businesses — often with tighter budgets and unique funding requirements.",
     coverageTypes: [
@@ -643,7 +635,6 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Coverage for churches, temples, and faith communities — worship premises, events, pastoral counselling liability, and property.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Church Quote",
-    photographySlug: "professional-offices-insurance",
     coverageIntro:
       "Religious organizations combine property, congregation liability, and sensitive counselling and youth program exposures.",
     coverageTypes: [
@@ -719,7 +710,6 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Coverage for childcare centres and private schools — student injury, abuse allegations, property, and regulatory compliance exposures.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a School Quote",
-    photographySlug: "professional-offices-insurance",
     coverageIntro:
       "Childcare and private education combine premises liability, professional supervision duties, and sensitive abuse exposures.",
     coverageTypes: [
@@ -795,7 +785,6 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Short-term liability coverage for events — festivals, weddings, fundraisers, and vendor markets where venues require proof of insurance.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get an Event Quote",
-    photographySlug: "restaurant-insurance",
     coverageIntro:
       "Event liability covers third-party injury and property damage claims arising from a specific event or season of events.",
     coverageTypes: [
@@ -871,7 +860,6 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Coverage for alcohol-related liability — when an patron's intoxication leads to injury, property damage, or other harm after leaving your establishment.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=restaurant`,
     quoteLabel: "Get a Liquor Liability Quote",
-    photographySlug: "restaurant-insurance",
     coverageIntro:
       "Liquor liability addresses claims arising from serving alcohol — excluded or limited in most standard general liability policies.",
     coverageTypes: [
@@ -947,7 +935,6 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Protection against internal theft, fraud, and criminal acts that commercial property and liability policies typically exclude.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Crime Quote",
-    photographySlug: "professional-offices-insurance",
     coverageIntro:
       "Crime policies address losses from employee dishonesty, forgery, theft of money and securities, and computer fraud.",
     coverageTypes: [
@@ -1023,7 +1010,6 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Coverage for claims from current, former, and prospective employees alleging wrongful workplace practices.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=professional`,
     quoteLabel: "Get an EPL Quote",
-    photographySlug: "professional-offices-insurance",
     coverageIntro:
       "EPL addresses employment-related claims that general liability and D&O may not fully cover.",
     coverageTypes: [

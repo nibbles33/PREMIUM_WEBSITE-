@@ -212,7 +212,6 @@ export const commercialProductPages: ProductPageContent[] = [
       "Coverage for digital incidents that standard liability policies often exclude — from ransomware to client data breaches.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=professional`,
     quoteLabel: "Get a Cyber Quote",
-    photographySlug: "professional-offices-insurance",
     coverageIntro:
       "Cyber policies help with costs tied to security incidents, privacy events, and business disruption from attacks on your systems.",
     coverageTypes: [
@@ -397,7 +396,6 @@ export const commercialProductPages: ProductPageContent[] = [
       "Helps replace lost income and cover ongoing expenses when a covered property loss forces your business to slow down or shut temporarily.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Business Quote",
-    photographySlug: "commercial-property-insurance",
     coverageIntro:
       "Business interruption sits alongside commercial property — it addresses the income impact, not the physical repair itself.",
     coverageTypes: [
@@ -490,7 +488,6 @@ export const commercialProductPages: ProductPageContent[] = [
       "Errors and omissions coverage when clients claim your professional advice, design, or service caused them a financial loss.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=professional`,
     quoteLabel: "Get an E&O Quote",
-    photographySlug: "professional-offices-insurance",
     coverageIntro:
       "Professional liability responds when clients allege negligent advice or services — distinct from slip-and-fall general liability.",
     coverageTypes: [

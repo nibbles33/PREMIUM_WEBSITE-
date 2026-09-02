@@ -34,7 +34,6 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       "Coverage for the freight you haul — protecting goods in transit and meeting shipper and broker contract requirements.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
     quoteLabel: "Get a Cargo Quote",
-    photographySlug: "trucking-insurance",
     coverageIntro:
       "Cargo insurance addresses the goods themselves; liability covers damage to others. Shippers often require both with specific limits.",
     coverageTypes: [
@@ -109,7 +108,6 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       "Coverage for dealers, repair shops, and service garages — from customer vehicles on your lot to test drives and completed repairs.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
     quoteLabel: "Get a Garage Quote",
-    photographySlug: "commercial-auto-insurance",
     coverageIntro:
       "Garage policies combine property, liability, and garagekeepers coverage for vehicles you do not own but have in your care.",
     coverageTypes: [
@@ -184,7 +182,6 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       "Project-specific property coverage while construction or major renovation is underway — protecting materials and work in progress.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Builder's Risk Quote",
-    photographySlug: "builders-developers-insurance",
     coverageIntro:
       "Builder's risk covers the project itself during construction — separate from the contractor's ongoing liability policy.",
     coverageTypes: [
@@ -259,7 +256,6 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       "Coverage for warehouse operators — protecting the building, stored goods, equipment, and liability to customers whose inventory you hold.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Warehouse Quote",
-    photographySlug: "commercial-property-insurance",
     coverageIntro:
       "Warehousing combines property, liability, and care-custody-control exposures for goods belonging to others.",
     coverageTypes: [
@@ -334,7 +330,6 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       "Coverage for property managers — liability for managed premises, professional errors, and the operations that keep portfolios running.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Property Management Quote",
-    photographySlug: "real-estate-insurance",
     coverageIntro:
       "Property managers face both operational liability and professional E&O exposures across multiple buildings and owners.",
     coverageTypes: [
@@ -410,7 +405,6 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       "Master policy and liability coverage for condominium corporations — protecting common elements, shared systems, and the board's exposures.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Condo Corporation Quote",
-    photographySlug: "commercial-property-insurance",
     coverageIntro:
       "Condominium corporations need property coverage for shared building elements and liability for common areas and governance.",
     coverageTypes: [
@@ -486,7 +480,6 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       "Coverage for environmental releases — sudden spills and gradual pollution conditions that standard liability policies often exclude.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Pollution Quote",
-    photographySlug: "manufacturing-insurance",
     coverageIntro:
       "Pollution liability addresses cleanup costs and third-party claims from environmental contamination tied to your operations.",
     coverageTypes: [
@@ -562,7 +555,6 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       "Coverage for the cost of pulling products from the market — notification, transport, storage, and disposal when a recall is necessary.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Recall Quote",
-    photographySlug: "manufacturing-insurance",
     coverageIntro:
       "Product recall helps with expenses to withdraw contaminated or defective products — separate from liability for injury claims.",
     coverageTypes: [
