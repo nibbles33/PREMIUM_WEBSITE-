@@ -19,18 +19,12 @@ export const personalNavGroups: NavGroup[] = [
     title: "Auto / Mobility",
     links: [
       { label: "Auto Insurance", href: "/auto-insurance/" },
-      {
-        label: "Motorcycle Insurance",
-        href: "/get-a-quote?type=vehicle&vehicleType=motorcycle",
-      },
-      {
-        label: "Boat Insurance",
-        href: "/get-a-quote?type=vehicle&vehicleType=boat",
-      },
+      { label: "Motorcycle Insurance", href: "/motorcycle-insurance/" },
+      { label: "Boat Insurance", href: "/boat-insurance/" },
       {
         label: "Travel Insurance",
-        href: "/talk-to-a-broker/",
-        description: "Speak with a broker for travel coverage options.",
+        href: "/travel-insurance/",
+        description: "Emergency medical and trip protection for travellers.",
       },
       {
         label: "Ride / Car / Home Sharing",
@@ -43,21 +37,12 @@ export const personalNavGroups: NavGroup[] = [
     title: "Property",
     links: [
       { label: "Home Insurance", href: "/home-insurance/" },
-      {
-        label: "Condo Insurance",
-        href: "/get-a-quote?type=home&homeType=condo",
-      },
-      {
-        label: "Tenant Insurance",
-        href: "/get-a-quote?type=home&homeType=tenant",
-      },
-      {
-        label: "Landlord Insurance",
-        href: "/get-a-quote?type=home&homeType=landlord",
-      },
+      { label: "Condo Insurance", href: "/condo-insurance/" },
+      { label: "Tenant Insurance", href: "/tenant-insurance/" },
+      { label: "Landlord Insurance", href: "/landlord-insurance/" },
       {
         label: "Cottage Insurance",
-        href: "/talk-to-a-broker/",
+        href: "/cottage-insurance/",
         description: "Seasonal and secondary property coverage.",
       },
       {

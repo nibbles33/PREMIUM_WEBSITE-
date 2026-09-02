@@ -4,8 +4,8 @@ import Link from "next/link";
 const personalLinks = [
   { label: "Auto Insurance", href: "/auto-insurance/" },
   { label: "Home Insurance", href: "/home-insurance/" },
-  { label: "Condo Insurance", href: "/get-a-quote?type=home&homeType=condo" },
-  { label: "Tenant Insurance", href: "/get-a-quote?type=home&homeType=tenant" },
+  { label: "Condo Insurance", href: "/condo-insurance/" },
+  { label: "Tenant Insurance", href: "/tenant-insurance/" },
   { label: "Business Insurance", href: "/commercial-insurance/" },
 ] as const;
 
