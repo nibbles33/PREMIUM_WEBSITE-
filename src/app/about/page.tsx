@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
+import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import TrustBar from "@/components/TrustBar";
 import { insuranceAgencyProvider } from "@/components/LineInsurancePage";
+import { getPageHeroPhotography } from "@/data/photography";
 
 export const metadata: Metadata = {
   title: "About Us | Premium Insurance Brokers",
@@ -27,6 +29,8 @@ const jsonLd = {
 };
 
 export default function AboutPage() {
+  const heroPhoto = getPageHeroPhotography("about");
+
   return (
     <>
       <script
@@ -41,20 +45,29 @@ export default function AboutPage() {
         >
           <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20 xl:max-w-7xl">
             <RevealOnScroll>
-              <div className="max-w-2xl">
-                <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark sm:text-xs sm:tracking-[0.14em]">
-                  About Premium
-                </p>
-                <h1
-                  id="about-hero-heading"
-                  className="mt-3 text-[2.25rem] font-medium leading-[1.08] tracking-[-0.02em] text-charcoal sm:mt-4 sm:text-5xl sm:leading-[1.06] lg:text-[3.5rem]"
-                >
-                  Where premium and quality meet
-                </h1>
-                <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:mt-5 sm:text-base lg:text-lg">
-                  Founded in July 2019, Premium Insurance Brokers — a division
-                  of Oracle RMS — has served Windsor-Essex County ever since.
-                </p>
+              <div
+                className={
+                  heroPhoto
+                    ? "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12"
+                    : undefined
+                }
+              >
+                <div className="max-w-2xl">
+                  <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark sm:text-xs sm:tracking-[0.14em]">
+                    About Premium
+                  </p>
+                  <h1
+                    id="about-hero-heading"
+                    className="mt-3 text-[2.25rem] font-medium leading-[1.08] tracking-[-0.02em] text-charcoal sm:mt-4 sm:text-5xl sm:leading-[1.06] lg:text-[3.5rem]"
+                  >
+                    Where premium and quality meet
+                  </h1>
+                  <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:mt-5 sm:text-base lg:text-lg">
+                    Founded in July 2019, Premium Insurance Brokers — a division
+                    of Oracle RMS — has served Windsor-Essex County ever since.
+                  </p>
+                </div>
+                {heroPhoto ? <PageHeroPhoto placement={heroPhoto} priority /> : null}
               </div>
             </RevealOnScroll>
           </div>

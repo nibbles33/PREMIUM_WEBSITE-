@@ -31,6 +31,7 @@ export default function CommercialIndustryPage({
       eyebrow="Commercial Insurance"
       headline={content.headline}
       subhead={content.subhead}
+      photographySlug={content.slug}
       quoteHref={content.quoteHref}
       quoteLabel={content.quoteLabel}
       coverageIntro={content.coverageIntro}

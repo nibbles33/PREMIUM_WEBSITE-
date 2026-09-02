@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import Header from "@/components/Header";
+import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { getPageHeroPhotography } from "@/data/photography";
 import { teamMembers } from "@/data/team";
 
 export const metadata: Metadata = {
@@ -18,6 +20,8 @@ const TEAM_EMAIL = "mailto:info@premiumib.com";
 const TEAM_PHONE = "tel:+12267826000";
 
 export default function TeamPage() {
+  const heroPhoto = getPageHeroPhotography("team");
+
   return (
     <>
       <Header />
@@ -28,17 +32,28 @@ export default function TeamPage() {
         >
           <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20 xl:max-w-7xl">
             <RevealOnScroll>
-              <div className="mx-auto max-w-2xl text-center">
-                <h1
-                  id="team-hero-heading"
-                  className="text-[2.25rem] font-medium leading-[1.08] tracking-[-0.02em] text-charcoal sm:text-5xl sm:leading-[1.06]"
-                >
-                  Meet the Team
-                </h1>
-                <p className="mt-4 text-[15px] leading-relaxed text-secondary sm:mt-5 sm:text-base">
-                  The licensed brokers and staff behind Premium Insurance
-                  Brokers.
-                </p>
+              <div
+                className={
+                  heroPhoto
+                    ? "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12"
+                    : undefined
+                }
+              >
+                <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
+                  <h1
+                    id="team-hero-heading"
+                    className="text-[2.25rem] font-medium leading-[1.08] tracking-[-0.02em] text-charcoal sm:text-5xl sm:leading-[1.06]"
+                  >
+                    Meet the Team
+                  </h1>
+                  <p className="mt-4 text-[15px] leading-relaxed text-secondary sm:mt-5 sm:text-base">
+                    The licensed brokers and staff behind Premium Insurance
+                    Brokers.
+                  </p>
+                </div>
+                {heroPhoto ? (
+                  <PageHeroPhoto placement={heroPhoto} priority />
+                ) : null}
               </div>
             </RevealOnScroll>
           </div>

@@ -3,7 +3,9 @@ import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
 import Header from "@/components/Header";
+import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { getPageHeroPhotography } from "@/data/photography";
 
 const BROKER_HREF = "/talk-to-a-broker/";
 const PHONE_DISPLAY = "226-782-6000";
@@ -20,6 +22,8 @@ export type LineInsurancePageProps = {
   eyebrow: string;
   headline: string;
   subhead: string;
+  /** Slug matching src/data/photography/placements.ts for hero imagery. */
+  photographySlug?: string;
   quoteHref: string;
   quoteLabel: string;
   /** When set, replaces the default coverage-card section. */
@@ -43,6 +47,7 @@ export default function LineInsurancePage({
   eyebrow,
   headline,
   subhead,
+  photographySlug,
   quoteHref,
   quoteLabel,
   middleSection,
@@ -59,6 +64,10 @@ export default function LineInsurancePage({
   ctaSubhead,
   jsonLd,
 }: LineInsurancePageProps) {
+  const heroPhoto = photographySlug
+    ? getPageHeroPhotography(photographySlug)
+    : undefined;
+
   return (
     <>
       <script
@@ -73,39 +82,50 @@ export default function LineInsurancePage({
         >
           <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20 xl:max-w-7xl">
             <RevealOnScroll>
-              <div className="max-w-2xl">
-                <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark sm:text-xs sm:tracking-[0.14em]">
-                  {eyebrow}
-                </p>
-                <h1
-                  id={heroHeadingId}
-                  className="mt-3 text-[2.25rem] font-medium leading-[1.08] tracking-[-0.02em] text-charcoal sm:mt-4 sm:text-5xl sm:leading-[1.06] lg:text-[3.5rem]"
-                >
-                  {headline}
-                </h1>
-                <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:mt-5 sm:text-base lg:text-lg">
-                  {subhead}
-                </p>
-                <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center">
-                  <Link
-                    href={quoteHref}
-                    className="btn-primary btn-primary-gradient group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:min-w-[220px]"
+              <div
+                className={
+                  heroPhoto
+                    ? "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12"
+                    : undefined
+                }
+              >
+                <div className="max-w-2xl">
+                  <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark sm:text-xs sm:tracking-[0.14em]">
+                    {eyebrow}
+                  </p>
+                  <h1
+                    id={heroHeadingId}
+                    className="mt-3 text-[2.25rem] font-medium leading-[1.08] tracking-[-0.02em] text-charcoal sm:mt-4 sm:text-5xl sm:leading-[1.06] lg:text-[3.5rem]"
                   >
-                    {quoteLabel}
-                    <span
-                      aria-hidden
-                      className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
+                    {headline}
+                  </h1>
+                  <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:mt-5 sm:text-base lg:text-lg">
+                    {subhead}
+                  </p>
+                  <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center">
+                    <Link
+                      href={quoteHref}
+                      className="btn-primary btn-primary-gradient group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:min-w-[220px]"
                     >
-                      →
-                    </span>
-                  </Link>
-                  <Link
-                    href={BROKER_HREF}
-                    className="btn-secondary inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md border border-border px-6 text-[15px] font-medium text-gold-dark hover:border-gold-dark sm:w-auto"
-                  >
-                    Talk to a Broker
-                  </Link>
+                      {quoteLabel}
+                      <span
+                        aria-hidden
+                        className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
+                      >
+                        →
+                      </span>
+                    </Link>
+                    <Link
+                      href={BROKER_HREF}
+                      className="btn-secondary inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md border border-border px-6 text-[15px] font-medium text-gold-dark hover:border-gold-dark sm:w-auto"
+                    >
+                      Talk to a Broker
+                    </Link>
+                  </div>
                 </div>
+                {heroPhoto ? (
+                  <PageHeroPhoto placement={heroPhoto} priority />
+                ) : null}
               </div>
             </RevealOnScroll>
           </div>

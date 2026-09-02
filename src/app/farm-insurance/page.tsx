@@ -88,6 +88,7 @@ export default function FarmInsurancePage() {
       eyebrow="Farm Insurance"
       headline="Farm Insurance"
       subhead="Coverage built for Essex County's working farms — from the farmhouse to the equipment in the field."
+      photographySlug="farm-insurance"
       quoteHref="/get-a-quote?type=farm"
       quoteLabel="Get a Farm Quote"
       coverageIntro="Core coverages that protect farm buildings, machinery, liability, and livestock."

@@ -1,0 +1,544 @@
+{
+  "assignments": [
+    {
+      "originalFile": "car.png",
+      "visualDescription": "Dark gray SUV on a suburban residential street",
+      "matchedPlacement": "auto-insurance",
+      "targetFilename": "auto-insurance.png",
+      "targetFolder": "personal",
+      "route": "/auto-insurance/",
+      "confidence": "HIGH",
+      "reason": "Clear personal auto hero \u2014 named source file matches placement",
+      "productionPath": "/images/photography/personal/auto-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_05 PM (61).png",
+      "visualDescription": "Family carrying groceries from SUV toward brick suburban home",
+      "matchedPlacement": "home-insurance",
+      "targetFilename": "home-insurance.png",
+      "targetFolder": "personal",
+      "route": "/home-insurance/",
+      "confidence": "HIGH",
+      "reason": "Strong home + family lifestyle hero; chosen over duplicate driveway scenes",
+      "productionPath": "/images/photography/personal/home-insurance.webp"
+    },
+    {
+      "originalFile": "apartment buidling.png",
+      "visualDescription": "Modern multi-story brick condo/apartment building",
+      "matchedPlacement": "condo",
+      "targetFilename": "condo.png",
+      "targetFolder": "personal",
+      "route": "/get-a-quote?type=home&homeType=condo",
+      "confidence": "HIGH",
+      "reason": "Named apartment building \u2014 best fit for condo quote placement",
+      "productionPath": "/images/photography/personal/condo.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_42 PM (7).png",
+      "visualDescription": "Rustic lakeside wooden cabin with dock",
+      "matchedPlacement": "cottage",
+      "targetFilename": "cottage.png",
+      "targetFolder": "personal",
+      "route": "/get-a-quote?type=home&homeType=cottage",
+      "confidence": "HIGH",
+      "reason": "Distinct cottage/recreational property scene",
+      "productionPath": "/images/photography/personal/cottage.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_43 PM (12).png",
+      "visualDescription": "Motorcyclist on rural road past fields and farmhouse",
+      "matchedPlacement": "motorcycle",
+      "targetFilename": "motorcycle.png",
+      "targetFolder": "personal",
+      "route": "/get-a-quote?type=vehicle&vehicleType=motorcycle",
+      "confidence": "HIGH",
+      "reason": "Only clear motorcycle scene in library",
+      "productionPath": "/images/photography/personal/motorcycle.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_44 PM (13).png",
+      "visualDescription": "Traveller with suitcase in airport terminal",
+      "matchedPlacement": "travel-insurance",
+      "targetFilename": "travel-insurance.png",
+      "targetFolder": "personal",
+      "route": "/get-a-quote?type=travel",
+      "confidence": "HIGH",
+      "reason": "Only airport/travel scene in library",
+      "productionPath": "/images/photography/personal/travel-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_44 PM (14).png",
+      "visualDescription": "Powerboat cruising on calm water with passengers",
+      "matchedPlacement": "boat",
+      "targetFilename": "boat.png",
+      "targetFolder": "personal",
+      "route": "/get-a-quote?type=vehicle&vehicleType=boat",
+      "confidence": "HIGH",
+      "reason": "Only watercraft scene in library",
+      "productionPath": "/images/photography/personal/boat.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_42 PM (9).png",
+      "visualDescription": "Manufactured home in residential community",
+      "matchedPlacement": "landlord",
+      "targetFilename": "landlord.png",
+      "targetFolder": "personal",
+      "route": "/get-a-quote?type=home&homeType=landlord",
+      "confidence": "MEDIUM",
+      "reason": "Rental-property feel; no dedicated landlord page \u2014 quote placement only",
+      "productionPath": "/images/photography/personal/landlord.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_02 PM (57).png",
+      "visualDescription": "Home office with built-in shelves and laptop",
+      "matchedPlacement": "tenant",
+      "targetFilename": "tenant.png",
+      "targetFolder": "personal",
+      "route": "/get-a-quote?type=home&homeType=tenant",
+      "confidence": "MEDIUM",
+      "reason": "Renter/home-office lifestyle; quote placement only",
+      "productionPath": "/images/photography/personal/tenant.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_46 PM (19).png",
+      "visualDescription": "Commercial building with fleet of white vans",
+      "matchedPlacement": "commercial-auto-insurance",
+      "targetFilename": "commercial-auto-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/commercial-auto-insurance/",
+      "confidence": "HIGH",
+      "reason": "Fleet/commercial vehicle yard \u2014 chosen over duplicate van rows",
+      "productionPath": "/images/photography/commercial/commercial-auto-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_56 PM (43).png",
+      "visualDescription": "White semi-trailer on rural highway",
+      "matchedPlacement": "trucking-insurance",
+      "targetFilename": "trucking-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/trucking-insurance/",
+      "confidence": "HIGH",
+      "reason": "Only long-haul semi scene",
+      "productionPath": "/images/photography/commercial/trucking-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_56 PM (44).png",
+      "visualDescription": "White dump truck at gravel/construction site",
+      "matchedPlacement": "dump-truck-insurance",
+      "targetFilename": "dump-truck-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/dump-truck-insurance/",
+      "confidence": "HIGH",
+      "reason": "Only dump truck scene",
+      "productionPath": "/images/photography/commercial/dump-truck-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_50 PM (29).png",
+      "visualDescription": "Construction worker framing wall studs",
+      "matchedPlacement": "contractors-insurance",
+      "targetFilename": "contractors-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/contractors-insurance/",
+      "confidence": "HIGH",
+      "reason": "Classic trades/framing hero; chosen over landscaping duplicate",
+      "productionPath": "/images/photography/commercial/contractors-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_00 PM (51).png",
+      "visualDescription": "Supervisors at multi-story concrete building construction",
+      "matchedPlacement": "builders-developers-insurance",
+      "targetFilename": "builders-developers-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/builders-developers-insurance/",
+      "confidence": "HIGH",
+      "reason": "Large-scale development \u2014 distinct from single-trade framing",
+      "productionPath": "/images/photography/commercial/builders-developers-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_50 PM (28).png",
+      "visualDescription": "Machinist inspecting parts beside CNC machine",
+      "matchedPlacement": "manufacturing-insurance",
+      "targetFilename": "manufacturing-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/manufacturing-insurance/",
+      "confidence": "HIGH",
+      "reason": "Industrial CNC floor \u2014 chosen over woodworking shop duplicate",
+      "productionPath": "/images/photography/commercial/manufacturing-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_48 PM (23).png",
+      "visualDescription": "Commercial warehouse with office front and pallets",
+      "matchedPlacement": "commercial-property-insurance",
+      "targetFilename": "commercial-property-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/commercial-property-insurance/",
+      "confidence": "HIGH",
+      "reason": "Only clear commercial property/warehouse hero",
+      "productionPath": "/images/photography/commercial/commercial-property-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_52 PM (32).png",
+      "visualDescription": "Chefs cooking in busy commercial kitchen",
+      "matchedPlacement": "restaurant-insurance",
+      "targetFilename": "restaurant-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/restaurant-insurance/",
+      "confidence": "HIGH",
+      "reason": "Full commercial kitchen \u2014 chosen over bakery counter duplicate",
+      "productionPath": "/images/photography/commercial/restaurant-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_59 PM (47).png",
+      "visualDescription": "Food truck serving customers with outdoor seating",
+      "matchedPlacement": "food-truck-insurance",
+      "targetFilename": "food-truck-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/food-truck-insurance/",
+      "confidence": "HIGH",
+      "reason": "Primary food truck scene \u2014 chosen over trailer duplicate",
+      "productionPath": "/images/photography/commercial/food-truck-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_46 PM (18).png",
+      "visualDescription": "Downtown main-street retail storefronts",
+      "matchedPlacement": "retail-insurance",
+      "targetFilename": "retail-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/retail-insurance/",
+      "confidence": "HIGH",
+      "reason": "Streetscape retail hero \u2014 chosen over interior boutique duplicates",
+      "productionPath": "/images/photography/commercial/retail-insurance.webp"
+    },
+    {
+      "originalFile": "board room meeting.png",
+      "visualDescription": "Business professionals in modern conference room",
+      "matchedPlacement": "professional-offices-insurance",
+      "targetFilename": "professional-offices-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/professional-offices-insurance/",
+      "confidence": "HIGH",
+      "reason": "Named boardroom scene \u2014 best professional offices hero",
+      "productionPath": "/images/photography/commercial/professional-offices-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_49 PM (26).png",
+      "visualDescription": "Professionals reviewing architectural blueprints",
+      "matchedPlacement": "real-estate-insurance",
+      "targetFilename": "real-estate-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/real-estate-insurance/",
+      "confidence": "MEDIUM",
+      "reason": "Blueprint/planning scene fits property professionals; no dedicated real-estate lifestyle shot",
+      "productionPath": "/images/photography/commercial/real-estate-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_59 PM (48).png",
+      "visualDescription": "Tractor cultivating field with farm buildings and silos",
+      "matchedPlacement": "farm-insurance",
+      "targetFilename": "farm-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/farm-insurance/",
+      "confidence": "HIGH",
+      "reason": "Broad farm operations hero \u2014 chosen over grain-elevator close-ups",
+      "productionPath": "/images/photography/commercial/farm-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_00 PM (50).png",
+      "visualDescription": "Commercial greenhouse with hydroponic herb rows",
+      "matchedPlacement": "greenhouse",
+      "targetFilename": "greenhouse.png",
+      "targetFolder": "commercial",
+      "route": "/get-a-quote?type=business&industry=greenhouse",
+      "confidence": "HIGH",
+      "reason": "Only greenhouse scene \u2014 quote/agriculture placement",
+      "productionPath": "/images/photography/commercial/greenhouse.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_05 PM (60).png",
+      "visualDescription": "Construction supervisors at concrete building site",
+      "matchedPlacement": "bonding-insurance",
+      "targetFilename": "bonding-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/bonding-insurance/",
+      "confidence": "MEDIUM",
+      "reason": "Construction project oversight \u2014 reasonable bonding/surety visual",
+      "productionPath": "/images/photography/commercial/bonding-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_02 PM (56).png",
+      "visualDescription": "Modern office reception and open workspace",
+      "matchedPlacement": "commercial-insurance",
+      "targetFilename": "commercial-insurance.png",
+      "targetFolder": "commercial",
+      "route": "/commercial-insurance/",
+      "confidence": "MEDIUM",
+      "reason": "Generic commercial workplace for hub page",
+      "productionPath": "/images/photography/commercial/commercial-insurance.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_01 PM (53).png",
+      "visualDescription": "Broker meeting with client at round table",
+      "matchedPlacement": "about",
+      "targetFilename": "about.png",
+      "targetFolder": "special",
+      "route": "/about/",
+      "confidence": "HIGH",
+      "reason": "Client-advisory scene fits About page; temporary AI image",
+      "isTemporary": true,
+      "productionPath": "/images/photography/special/about.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_50 PM (27).png",
+      "visualDescription": "Team meeting around conference table",
+      "matchedPlacement": "team",
+      "targetFilename": "team.png",
+      "targetFolder": "special",
+      "route": "/team/",
+      "confidence": "HIGH",
+      "reason": "Collaborative team scene; temporary AI image",
+      "isTemporary": true,
+      "productionPath": "/images/photography/special/team.webp"
+    },
+    {
+      "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_06 PM (62).png",
+      "visualDescription": "Professional consultation at office table",
+      "matchedPlacement": "contact",
+      "targetFilename": "contact.png",
+      "targetFolder": "special",
+      "route": "/contact/",
+      "confidence": "HIGH",
+      "reason": "Consultation/contact scene",
+      "productionPath": "/images/photography/special/contact.webp"
+    }
+  ],
+  "completeness": {
+    "matched": [
+      "auto-insurance",
+      "home-insurance",
+      "condo",
+      "cottage",
+      "motorcycle",
+      "travel-insurance",
+      "boat",
+      "landlord",
+      "tenant",
+      "commercial-auto-insurance",
+      "trucking-insurance",
+      "dump-truck-insurance",
+      "contractors-insurance",
+      "builders-developers-insurance",
+      "manufacturing-insurance",
+      "commercial-property-insurance",
+      "restaurant-insurance",
+      "food-truck-insurance",
+      "retail-insurance",
+      "professional-offices-insurance",
+      "real-estate-insurance",
+      "farm-insurance",
+      "greenhouse",
+      "bonding-insurance",
+      "commercial-insurance",
+      "about",
+      "team",
+      "contact"
+    ],
+    "missing": [],
+    "extra": [
+      "ChatGPT Image Sep 1, 2026, 09_43_42 PM (10).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_42 PM (8).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_43 PM (11).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_45 PM (15).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_45 PM (16).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_45 PM (17).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_47 PM (20).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_47 PM (21).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_47 PM (22).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_49 PM (24).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_49 PM (25).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_51 PM (30).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_51 PM (31).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_52 PM (33).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_52 PM (34).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_53 PM (35).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_53 PM (36).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_53 PM (37).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_54 PM (38).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_55 PM (39).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_55 PM (40).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_56 PM (41).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_56 PM (42).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_57 PM (45).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_58 PM (46).png",
+      "ChatGPT Image Sep 1, 2026, 09_43_59 PM (49).png",
+      "ChatGPT Image Sep 1, 2026, 09_44_01 PM (52).png",
+      "ChatGPT Image Sep 1, 2026, 09_44_01 PM (54).png",
+      "ChatGPT Image Sep 1, 2026, 09_44_01 PM (55).png",
+      "ChatGPT Image Sep 1, 2026, 09_44_04 PM (58).png",
+      "ChatGPT Image Sep 1, 2026, 09_44_04 PM (59).png",
+      "ChatGPT Image Sep 1, 2026, 09_44_06 PM (63).png"
+    ],
+    "duplicatePlacements": [],
+    "ambiguous": [
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_42 PM (10).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_42 PM (8).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_43 PM (11).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_45 PM (15).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_45 PM (16).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_45 PM (17).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_47 PM (20).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_47 PM (21).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_47 PM (22).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_49 PM (24).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_49 PM (25).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_51 PM (30).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_51 PM (31).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_52 PM (33).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_52 PM (34).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_53 PM (35).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_53 PM (36).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_53 PM (37).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_54 PM (38).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_55 PM (39).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_55 PM (40).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_56 PM (41).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_56 PM (42).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_57 PM (45).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_58 PM (46).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_43_59 PM (49).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_01 PM (52).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_01 PM (54).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_01 PM (55).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_04 PM (58).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_04 PM (59).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      },
+      {
+        "originalFile": "ChatGPT Image Sep 1, 2026, 09_44_06 PM (63).png",
+        "confidence": "LOW",
+        "reason": "Not assigned after global one-to-one resolution \u2014 likely duplicate or alternate angle"
+      }
+    ]
+  }
+}

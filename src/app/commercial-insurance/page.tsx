@@ -36,6 +36,7 @@ export default function CommercialInsurancePage() {
       eyebrow="Commercial Insurance"
       headline="Commercial insurance, built for your industry"
       subhead="Windsor-Essex runs on manufacturing, trucking, and trades. We build coverage around the risks specific to your industry — not a generic business policy."
+      photographySlug="commercial-insurance"
       quoteHref={QUOTE_BUSINESS}
       quoteLabel="Get a Commercial Quote"
       middleSection={<CommercialIndustryGrid />}

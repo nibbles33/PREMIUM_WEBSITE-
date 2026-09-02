@@ -93,6 +93,7 @@ export default function HomeInsurancePage() {
       eyebrow="Personal Insurance"
       headline="Home Insurance"
       subhead="Protection for your property, belongings, and liability — whether you own, rent, or somewhere in between."
+      photographySlug="home-insurance"
       quoteHref="/get-a-quote?type=home"
       quoteLabel="Get a Home Quote"
       coverageIntro="Standard home insurance building blocks, explained without the jargon."

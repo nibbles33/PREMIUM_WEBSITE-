@@ -3,7 +3,9 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Header from "@/components/Header";
+import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { getPageHeroPhotography } from "@/data/photography";
 
 export const metadata: Metadata = {
   title: "Contact Us | Premium Insurance Brokers",
@@ -15,6 +17,8 @@ const QUOTE_HREF = "/get-a-quote/";
 const BROKER_HREF = "/talk-to-a-broker/";
 
 export default function ContactPage() {
+  const heroPhoto = getPageHeroPhotography("contact");
+
   return (
     <>
       <Header />
@@ -25,17 +29,26 @@ export default function ContactPage() {
         >
           <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20 xl:max-w-7xl">
             <RevealOnScroll>
-              <div className="max-w-2xl">
-                <h1
-                  id="contact-hero-heading"
-                  className="text-[2.25rem] font-medium leading-[1.08] tracking-[-0.02em] text-charcoal sm:text-5xl sm:leading-[1.06]"
-                >
-                  Contact Us
-                </h1>
-                <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:mt-5 sm:text-base">
-                  Reach a real broker in Windsor-Essex — by phone, email, or the
-                  form below.
-                </p>
+              <div
+                className={
+                  heroPhoto
+                    ? "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12"
+                    : undefined
+                }
+              >
+                <div className="max-w-2xl">
+                  <h1
+                    id="contact-hero-heading"
+                    className="text-[2.25rem] font-medium leading-[1.08] tracking-[-0.02em] text-charcoal sm:text-5xl sm:leading-[1.06]"
+                  >
+                    Contact Us
+                  </h1>
+                  <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:mt-5 sm:text-base">
+                    Reach a real broker in Windsor-Essex — by phone, email, or the
+                    form below.
+                  </p>
+                </div>
+                {heroPhoto ? <PageHeroPhoto placement={heroPhoto} priority /> : null}
               </div>
             </RevealOnScroll>
           </div>

@@ -93,6 +93,7 @@ export default function AutoInsurancePage() {
       eyebrow="Personal Insurance"
       headline="Auto Insurance"
       subhead="Coverage that keeps you moving — liability, collision, and comprehensive protection built around how you actually drive."
+      photographySlug="auto-insurance"
       quoteHref="/get-a-quote?type=vehicle"
       quoteLabel="Get an Auto Quote"
       coverageIntro="Standard Ontario auto insurance building blocks, explained without the jargon."

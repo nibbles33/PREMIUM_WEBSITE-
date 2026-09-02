@@ -87,6 +87,7 @@ export default function BondingInsurancePage() {
       eyebrow="Bond Insurance"
       headline="Bond Insurance"
       subhead="Surety bonds for contractors and businesses that need to meet contract, licensing, or bidding requirements."
+      photographySlug="bonding-insurance"
       quoteHref="/get-a-quote?type=business"
       quoteLabel="Get a Bond Quote"
       coverageIntro="Common surety bonds that help you bid, contract, license, and protect against employee dishonesty."

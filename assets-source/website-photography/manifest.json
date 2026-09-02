@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "description": "Website photography manifest \u2014 expected placements and routes",
+  "placements": [
+    {
+      "slug": "auto-insurance",
+      "category": "personal",
+      "route": "/auto-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "home-insurance",
+      "category": "personal",
+      "route": "/home-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "condo",
+      "category": "personal",
+      "route": "/get-a-quote?type=home&homeType=condo",
+      "hasPage": false
+    },
+    {
+      "slug": "tenant",
+      "category": "personal",
+      "route": "/get-a-quote?type=home&homeType=tenant",
+      "hasPage": false
+    },
+    {
+      "slug": "landlord",
+      "category": "personal",
+      "route": "/get-a-quote?type=home&homeType=landlord",
+      "hasPage": false
+    },
+    {
+      "slug": "cottage",
+      "category": "personal",
+      "route": "/get-a-quote?type=home&homeType=cottage",
+      "hasPage": false
+    },
+    {
+      "slug": "motorcycle",
+      "category": "personal",
+      "route": "/get-a-quote?type=vehicle&vehicleType=motorcycle",
+      "hasPage": false
+    },
+    {
+      "slug": "boat",
+      "category": "personal",
+      "route": "/get-a-quote?type=vehicle&vehicleType=boat",
+      "hasPage": false
+    },
+    {
+      "slug": "travel-insurance",
+      "category": "personal",
+      "route": "/get-a-quote?type=travel",
+      "hasPage": false
+    },
+    {
+      "slug": "commercial-insurance",
+      "category": "commercial",
+      "route": "/commercial-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "commercial-auto-insurance",
+      "category": "commercial",
+      "route": "/commercial-auto-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "trucking-insurance",
+      "category": "commercial",
+      "route": "/trucking-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "contractors-insurance",
+      "category": "commercial",
+      "route": "/contractors-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "builders-developers-insurance",
+      "category": "commercial",
+      "route": "/builders-developers-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "manufacturing-insurance",
+      "category": "commercial",
+      "route": "/manufacturing-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "commercial-property-insurance",
+      "category": "commercial",
+      "route": "/commercial-property-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "restaurant-insurance",
+      "category": "commercial",
+      "route": "/restaurant-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "food-truck-insurance",
+      "category": "commercial",
+      "route": "/food-truck-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "retail-insurance",
+      "category": "commercial",
+      "route": "/retail-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "professional-offices-insurance",
+      "category": "commercial",
+      "route": "/professional-offices-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "real-estate-insurance",
+      "category": "commercial",
+      "route": "/real-estate-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "farm-insurance",
+      "category": "commercial",
+      "route": "/farm-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "dump-truck-insurance",
+      "category": "commercial",
+      "route": "/dump-truck-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "bonding-insurance",
+      "category": "commercial",
+      "route": "/bonding-insurance/",
+      "hasPage": true
+    },
+    {
+      "slug": "greenhouse",
+      "category": "commercial",
+      "route": "/get-a-quote?type=business&industry=greenhouse",
+      "hasPage": false
+    },
+    {
+      "slug": "about",
+      "category": "special",
+      "route": "/about/",
+      "hasPage": true,
+      "temporary": true
+    },
+    {
+      "slug": "team",
+      "category": "special",
+      "route": "/team/",
+      "hasPage": true,
+      "temporary": true
+    },
+    {
+      "slug": "contact",
+      "category": "special",
+      "route": "/contact/",
+      "hasPage": true
+    }
+  ]
+}
