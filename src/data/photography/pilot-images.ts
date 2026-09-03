@@ -29,3 +29,13 @@ export const PILOT_COMMERCIAL_PANEL_IMAGE = {
   quality: 85,
   sizes: "(max-width: 1024px) 100vw, 720px",
 } as const;
+
+export const PILOT_AUTO_HERO_IMAGE = {
+  quality: 90,
+  sizes: "(max-width: 1024px) 100vw, 640px",
+} as const;
+
+export const PILOT_AUTO_RELATED_IMAGE = {
+  quality: 85,
+  sizes: "(max-width: 767px) 140px, 200px",
+} as const;

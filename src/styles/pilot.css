@@ -830,6 +830,394 @@
   box-shadow: 0 12px 28px rgba(32, 39, 40, 0.1);
 }
 
+/* —— Premium Gold CTA (product pages) —— */
+
+.pilot-gold-cta {
+  --cta-glow-x: 50%;
+  --cta-glow-y: 50%;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-height: 54px;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--pilot-charcoal);
+  background: linear-gradient(
+    155deg,
+    var(--pilot-gold-light) 0%,
+    var(--pilot-gold) 42%,
+    var(--pilot-gold-dark) 100%
+  );
+  border: 1px solid rgba(184, 148, 15, 0.42);
+  box-shadow:
+    0 10px 24px rgba(184, 148, 15, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  overflow: hidden;
+  transition:
+    transform 120ms ease-out,
+    box-shadow 220ms ease-out;
+}
+
+.pilot-gold-cta-shine {
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+    circle at var(--cta-glow-x) var(--cta-glow-y),
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(255, 255, 255, 0.08) 28%,
+    transparent 58%
+  );
+  pointer-events: none;
+  transition: opacity 200ms ease-out;
+}
+
+.pilot-gold-cta-surface {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(208, 173, 38, 0.12) 45%,
+    rgba(184, 148, 15, 0.35) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.pilot-gold-cta-label,
+.pilot-gold-cta-arrow {
+  position: relative;
+  z-index: 1;
+}
+
+.pilot-gold-cta-arrow {
+  transition: transform 200ms var(--pilot-ease-out);
+}
+
+.pilot-gold-cta:hover {
+  box-shadow:
+    0 14px 32px rgba(184, 148, 15, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.pilot-gold-cta:hover .pilot-gold-cta-arrow,
+.pilot-gold-cta:focus-visible .pilot-gold-cta-arrow {
+  transform: translateX(4px);
+}
+
+.pilot-gold-cta:active {
+  transform: scale(0.98);
+}
+
+.pilot-gold-cta:focus-visible {
+  outline: 2px solid var(--pilot-gold);
+  outline-offset: 3px;
+}
+
+/* —— Auto product page —— */
+
+.pilot-auto-hero-visual {
+  position: relative;
+}
+
+.pilot-auto-hero-photo {
+  will-change: transform;
+  transition: transform 120ms ease-out;
+}
+
+.pilot-auto-hero-arc {
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  opacity: 0.85;
+}
+
+.pilot-auto-car-slot {
+  position: absolute;
+  bottom: -0.75rem;
+  left: -0.5rem;
+  width: 56px;
+  opacity: 0.55;
+  color: var(--pilot-charcoal);
+  filter: drop-shadow(0 6px 12px rgba(32, 39, 40, 0.12));
+}
+
+.pilot-auto-car-silhouette {
+  width: 100%;
+  height: auto;
+}
+
+.pilot-auto-explorer-stage {
+  transition: box-shadow 280ms ease-out;
+}
+
+.pilot-auto-explorer-arc {
+  transform: scale(0.85);
+  opacity: 0.9;
+}
+
+.pilot-auto-schematic svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.pilot-auto-zone {
+  fill: rgba(91, 122, 153, 0.08);
+  opacity: 0;
+  transition:
+    opacity 260ms ease-out,
+    fill 260ms ease-out;
+}
+
+.pilot-auto-zone.is-active {
+  opacity: 1;
+  fill: url(#autoSchematicGold);
+}
+
+.pilot-auto-zone-outline {
+  pointer-events: none;
+}
+
+.pilot-auto-coverage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.pilot-auto-coverage-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 0.875rem;
+  border-radius: 0.875rem;
+  border: 1px solid var(--pilot-border);
+  background: #fff;
+  padding: 0.875rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 200ms ease-out,
+    box-shadow 220ms ease-out,
+    transform 200ms var(--pilot-ease-out);
+}
+
+.pilot-auto-coverage-card:hover {
+  border-color: color-mix(in srgb, var(--pilot-gold) 35%, var(--pilot-border));
+  box-shadow: 0 8px 22px rgba(32, 39, 40, 0.06);
+}
+
+.pilot-auto-coverage-card.is-active {
+  border-color: color-mix(in srgb, var(--pilot-gold) 55%, var(--pilot-border));
+  box-shadow: 0 10px 28px rgba(208, 173, 38, 0.12);
+}
+
+.pilot-auto-coverage-card-icon {
+  display: inline-flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  transition: background-color 200ms ease-out;
+}
+
+.pilot-auto-coverage-card-ring {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  pointer-events: none;
+  transition: border-color 220ms ease-out;
+}
+
+.pilot-auto-coverage-card.is-active .pilot-auto-coverage-card-ring {
+  border-color: rgba(208, 173, 38, 0.45);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pilot-auto-coverage-card:hover {
+    transform: translateX(3px);
+  }
+}
+
+.pilot-auto-broker-flow {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pilot-auto-broker-step {
+  padding: 1.25rem 1rem 1.5rem;
+  border-radius: 1rem;
+  background: #fafaf8;
+  border: 1px solid var(--pilot-border);
+  min-height: 100%;
+}
+
+.pilot-auto-broker-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--pilot-charcoal);
+  background: linear-gradient(
+    160deg,
+    var(--pilot-gold-light),
+    var(--pilot-gold)
+  );
+  box-shadow: 0 4px 12px rgba(208, 173, 38, 0.22);
+}
+
+.pilot-auto-broker-connector {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .pilot-auto-broker-step {
+    margin-right: 0.75rem;
+  }
+
+  .pilot-auto-broker-connector {
+    display: block;
+    position: absolute;
+    top: 1.65rem;
+    right: -0.4rem;
+    width: 0.75rem;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      var(--pilot-gold-dark),
+      rgba(208, 173, 38, 0.15)
+    );
+  }
+}
+
+.pilot-auto-related-rail {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+}
+
+.pilot-auto-related-track {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.25rem 0.125rem 0.75rem;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pilot-auto-related-track > li {
+  scroll-snap-align: start;
+}
+
+.pilot-auto-faq-item {
+  border-radius: 0.875rem;
+  border: 1px solid var(--pilot-border);
+  background: #fff;
+  overflow: hidden;
+  transition:
+    border-color 200ms ease-out,
+    box-shadow 220ms ease-out;
+}
+
+.pilot-auto-faq-item.is-open {
+  border-color: color-mix(in srgb, var(--pilot-gold) 45%, var(--pilot-border));
+  box-shadow: 0 8px 24px rgba(208, 173, 38, 0.08);
+}
+
+.pilot-auto-faq-trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.125rem;
+  text-align: left;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--pilot-charcoal);
+  transition: color 180ms ease-out;
+}
+
+.pilot-auto-faq-trigger:hover,
+.pilot-auto-faq-item.is-open .pilot-auto-faq-trigger {
+  color: var(--pilot-gold-dark);
+}
+
+.pilot-auto-faq-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  background: rgba(208, 173, 38, 0.12);
+  color: var(--pilot-gold-dark);
+  flex-shrink: 0;
+}
+
+.pilot-auto-faq-panel {
+  padding: 0 1.125rem 1rem;
+}
+
+.pilot-auto-faq-panel p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--pilot-secondary);
+}
+
+@keyframes pilot-auto-faq-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pilot-auto-faq-panel-enter {
+  animation: pilot-auto-faq-enter 240ms var(--pilot-ease-out);
+}
+
 /* —— Reduced motion —— */
 
 @media (prefers-reduced-motion: reduce) {
@@ -886,6 +1274,23 @@
   .pilot-btn-primary:active,
   .pilot-btn-secondary:active,
   .pilot-btn-discover:active {
+    transform: none;
+  }
+
+  .pilot-auto-hero-photo {
+    transform: none !important;
+    transition: none;
+  }
+
+  .pilot-gold-cta:active {
+    transform: none;
+  }
+
+  .pilot-auto-coverage-card:hover {
+    transform: none;
+  }
+
+  .pilot-auto-related-card:hover {
     transform: none;
   }
 }
