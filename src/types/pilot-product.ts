@@ -34,8 +34,11 @@ export type ProductMiniatureAsset = {
   sizes?: string;
 };
 
+export type PilotProductPageLayout = "standard" | "commercial-hub";
+
 export type PilotProductPageConfig = {
   slug: string;
+  layout?: PilotProductPageLayout;
   metaTitle: string;
   metaDescription: string;
   eyebrow: string;

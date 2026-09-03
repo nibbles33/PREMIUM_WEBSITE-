@@ -1,0 +1,132 @@
+"use client";
+
+import {
+  Banknote,
+  FileCheck,
+  Gavel,
+  ScrollText,
+  ShieldCheck,
+} from "lucide-react";
+import {
+  COMMERCIAL_ACCENT,
+  QUOTE_BUSINESS,
+  commercialBrokerCopy,
+  commercialHubFaqs,
+} from "@/data/commercial-industries";
+import { buildPilotProductConfig } from "@/lib/buildPilotProductConfig";
+import { commercialBrokerSteps } from "@/data/pilot-product-shared";
+import type { PilotProductPageConfig } from "@/types/pilot-product";
+
+export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig> = {
+  "commercial-insurance": buildPilotProductConfig({
+    layout: "commercial-hub",
+    slug: "commercial-insurance",
+    metaTitle: "Commercial Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Commercial insurance for Windsor-Essex manufacturers, trucking fleets, contractors, restaurants, and more — industry-specific coverage through an independent broker.",
+    eyebrow: "Commercial Insurance",
+    headline: "Commercial insurance, built for your industry",
+    heroLead:
+      "Windsor-Essex runs on manufacturing, trucking, and trades. We build coverage around the risks specific to your industry — not a generic business policy.",
+    photographySlug: "commercial-insurance",
+    accentColor: COMMERCIAL_ACCENT,
+    quoteHref: QUOTE_BUSINESS,
+    quoteLabel: "Get a Commercial Quote",
+    trustStatement: commercialBrokerCopy,
+    coverageIntro: "",
+    coverageItems: [],
+    brokerSteps: commercialBrokerSteps,
+    relatedProducts: [],
+    faqTitle: "Commercial insurance FAQ",
+    faqIntro: "Straight answers to common commercial insurance questions.",
+    faqItems: commercialHubFaqs,
+    ctaHeading: "Ready to protect your business?",
+    ctaSubhead:
+      "Tell us about your operations — we'll compare commercial markets and explain what fits.",
+    serviceName: "Commercial Insurance",
+  }),
+  "bonding-insurance": buildPilotProductConfig({
+    slug: "bonding-insurance",
+    metaTitle: "Bond Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Surety bonds through an independent Windsor-Essex broker — contract & performance bonds, bid bonds, license & permit bonds, and fidelity bonds.",
+    eyebrow: "Bond Insurance",
+    headline: "Bond Insurance",
+    heroLead:
+      "Surety bonds for contractors and businesses that need to meet contract, licensing, or bidding requirements.",
+    photographySlug: "bonding-insurance",
+    accentColor: "#5B6B7A",
+    quoteHref: "/get-a-quote?type=business",
+    quoteLabel: "Get a Bond Quote",
+    trustStatement:
+      "Surety bonds through an independent Windsor-Essex broker — contract, performance, bid, license, and fidelity bonds arranged with plain-language guidance.",
+    coverageIntro:
+      "Common surety bonds for bidding, project performance, subcontractor payment, licensing, and employee dishonesty.",
+    coverageItems: [
+      {
+        title: "Bid Bonds",
+        description:
+          "Required when submitting a bid on certain contracts — guarantees you will honour your bid and enter the contract if selected.",
+        icon: Gavel,
+      },
+      {
+        title: "Performance Bonds",
+        description:
+          "Guarantees completion of the contracted work according to project terms if the principal defaults.",
+        icon: FileCheck,
+      },
+      {
+        title: "Labour & Material Payment Bonds",
+        description:
+          "Ensures subcontractors and suppliers are paid for work and materials on a project, protecting the project owner from liens.",
+        icon: Banknote,
+      },
+      {
+        title: "Licence & Permit Bonds",
+        description:
+          "Meets bonding requirements for certain licences and permits — common for contractors and regulated trades.",
+        icon: ScrollText,
+      },
+      {
+        title: "Fidelity Bonds",
+        description:
+          "Protects a business against losses caused by employee dishonesty.",
+        icon: ShieldCheck,
+      },
+    ],
+    brokerSteps: commercialBrokerSteps,
+    relatedProducts: [],
+    faqTitle: "Bond insurance FAQ",
+    faqIntro: "Straight answers to common surety bond questions.",
+    faqItems: [
+      {
+        question: "What's the difference between insurance and a surety bond?",
+        answer:
+          "Insurance protects you against covered losses. A surety bond is a three-party guarantee — you (the principal), the obligee who requires the bond, and the surety. If you fail to meet the bonded obligation, the surety may pay the obligee and then seek recovery from you.",
+      },
+      {
+        question: "Do I need a bond to bid on a contract?",
+        answer:
+          "Many public and private tenders require a bid bond with your submission, and a performance or payment bond if you win. Requirements vary by owner and project — check the tender documents, and your broker can help arrange the right bonds on the timeline you need.",
+      },
+      {
+        question: "How is bond pricing determined?",
+        answer:
+          "Sureties look at the bond type and amount, your financial strength, experience, credit, and the project or license involved. Rates are typically a percentage of the bond amount and differ between bid, performance, and license bonds.",
+      },
+      {
+        question: "What information do I need to apply for a bond?",
+        answer:
+          "Expect requests for business financials, personal financial statements for owners, project or license details, prior bonding history, and company experience. Larger bonds usually need more documentation than small license bonds.",
+      },
+      {
+        question: "What is a labour and material payment bond?",
+        answer:
+          "It protects the project owner by ensuring subcontractors and suppliers get paid. If the contractor fails to pay, the surety may step in — then seek recovery from the contractor.",
+      },
+    ],
+    ctaHeading: "Ready to get bonded?",
+    ctaSubhead: "Tell us about the contract or license — we'll help you arrange the right bond.",
+    serviceName: "Surety Bonds",
+  }),
+};

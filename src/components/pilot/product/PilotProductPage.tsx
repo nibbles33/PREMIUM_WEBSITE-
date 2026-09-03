@@ -1,5 +1,6 @@
 "use client";
 
+import CommercialIndustryGrid from "@/components/CommercialIndustryGrid";
 import Header from "@/components/Header";
 import ProductBrokerStory from "@/components/pilot/product/ProductBrokerStory";
 import ProductConsiderations from "@/components/pilot/product/ProductConsiderations";
@@ -16,6 +17,9 @@ type PilotProductPageProps = {
 };
 
 export default function PilotProductPage({ config }: PilotProductPageProps) {
+  const isCommercialHub = config.layout === "commercial-hub";
+  const hasCoverage = config.coverageItems.length > 0;
+
   return (
     <>
       <script
@@ -36,16 +40,21 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
           </div>
         </section>
 
-        <ProductCoverageExplorer config={config} />
+        {isCommercialHub ? <CommercialIndustryGrid /> : null}
+        {!isCommercialHub && hasCoverage ? (
+          <ProductCoverageExplorer config={config} />
+        ) : null}
         {config.considerations && config.considerations.length > 0 ? (
           <ProductConsiderations items={config.considerations} />
         ) : null}
         <ProductBrokerStory steps={config.brokerSteps} />
-        <ProductRelatedProducts
-          heading={config.relatedHeading}
-          intro={config.relatedIntro}
-          products={config.relatedProducts}
-        />
+        {config.relatedProducts.length > 0 ? (
+          <ProductRelatedProducts
+            heading={config.relatedHeading}
+            intro={config.relatedIntro}
+            products={config.relatedProducts}
+          />
+        ) : null}
         <PremiumProductFAQ
           title={config.faqTitle}
           intro={config.faqIntro}

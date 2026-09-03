@@ -1,6 +1,5 @@
-import { createProductPageExports } from "@/lib/createProductPage";
+import { createPilotCommercialPageExports } from "@/lib/createPilotCommercialPage";
 
-const page = createProductPageExports("directors-officers-insurance");
-
+const page = createPilotCommercialPageExports("directors-officers-insurance");
 export const metadata = page.metadata;
 export default page.default;

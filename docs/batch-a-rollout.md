@@ -1,65 +1,64 @@
-# Batch A — Personal Lines Rollout
+# Batch A — Personal Lines Rollout (Review Pack)
 
 **Branch:** `cursor/personal-batch-a-7402`  
-**Reference:** `/auto-insurance/` (frozen — not modified)  
-**Status:** Complete — **STOP for owner review** before Batch B
+**PR:** https://github.com/nibbles33/PREMIUM_WEBSITE-/pull/5  
+**Status:** Ready for re-review — **STOP before Batch B**
 
-## Summary
+## Fixes in this revision
 
-Rolled the approved Auto visual system across **13 personal product routes** using shared pilot product architecture (`.pilot-product-*` CSS/classes). Auto page, homepage, and global nav were not modified.
+1. **Viewable QA screenshots** committed under `docs/qa-screenshots/batch-a/` (26 PNGs — desktop 1440px + mobile 390px per route)
+2. **Hero photography wired** for all 13 personal routes (including previously missing 5 specialty routes)
+3. **Related products rail desktop scroll** fixed on Auto + all Batch A pages via shared `RelatedProductsScrollRail` (prev/next arrows, wheel scroll, drag)
 
-### Shared architecture
+---
 
-| Component | Path |
-|---|---|
-| Page shell | `src/components/pilot/product/PilotProductPage.tsx` |
-| Client loader | `src/components/pilot/product/PilotPersonalPage.tsx` |
-| Config registry | `src/data/pilot-personal-registry.ts` |
-| Inline configs | `src/data/pilot-personal-inline.ts` |
-| Specialty adapter | `adaptProductPageContent()` in `src/lib/buildPilotProductConfig.ts` |
-| Styles | `src/styles/pilot.css` (`.pilot-product-*` section) |
+## Hero photography — previously missing 5 routes
 
-### Miniature assets
+| Route | Placement slug | Image used | Source |
+|---|---|---|---|
+| `/mobile-home-insurance/` | `mobile-home-insurance` | `/images/photography/personal/landlord.webp` | Manufactured home scene (original audit asset for `landlord` placement) |
+| `/personal-umbrella-insurance/` | `personal-umbrella-insurance` | `/images/photography/personal/home-insurance.webp` | Family/home asset protection context (same library asset used on Auto related card) |
+| `/home-sharing-insurance/` | `home-sharing-insurance` | `/images/photography/personal/home-sharing-insurance.webp` | **New WebP** from inbox `ChatGPT Image Sep 1, 2026, 09_43_42 PM (10).png` (townhouse + ride-share arrival) |
+| `/life-insurance/` | `life-insurance` | `/images/photography/special/contact.webp` | Professional consultation / inquiry coordination |
+| `/group-home-auto-insurance/` | `group-home-auto-insurance` | `/images/photography/special/team.webp` | Team/group meeting scene |
 
-Only **`premium-miniature-car.png`** exists (Auto only). All Batch A pages use **icon-based Coverage Explorer stages** — no fabricated miniature paths.
-
-Missing miniatures (aspirational, not in repo): home, condo, tenant, motorcycle, boat, cottage, travel, etc.
+All 13 personal routes now resolve hero photography via `placements.ts` + `photographySlug` in page config.
 
 ---
 
 ## Route matrix
 
-| Route | Old template | New template | Hero photo | Miniature | Explorer type | FAQ | Desktop | Mobile |
-|---|---|---|---|---|---|---|---|---|
-| `/home-insurance/` | LineInsurancePage | PilotProductPage | home-insurance.webp | None (icon stage) | Interactive | Preserved (6) | PASS | PASS |
-| `/condo-insurance/` | LineInsurancePage | PilotProductPage | condo.webp | None | Interactive | Preserved (4) | PASS | PASS |
-| `/tenant-insurance/` | LineInsurancePage | PilotProductPage | tenant.webp | None | Interactive | Preserved (4) | PASS | PASS |
-| `/landlord-insurance/` | LineInsurancePage | PilotProductPage | landlord.webp | None | Interactive | Preserved (4) | PASS | PASS |
-| `/motorcycle-insurance/` | LineInsurancePage | PilotProductPage | motorcycle.webp | None | Interactive | Preserved (4) | PASS | PASS |
-| `/boat-insurance/` | LineInsurancePage | PilotProductPage | boat.webp | None | Interactive | Preserved (4) | PASS | PASS |
-| `/cottage-insurance/` | LineInsurancePage | PilotProductPage | cottage.webp | None | Interactive | Preserved (4) | PASS | PASS |
-| `/travel-insurance/` | LineInsurancePage | PilotProductPage | travel-insurance.webp | None | Interactive | Preserved (4) | PASS | PASS |
-| `/mobile-home-insurance/` | ProductLinePage | PilotProductPage | **None assigned** | None | Interactive | Preserved (4) | PASS | PASS |
-| `/personal-umbrella-insurance/` | ProductLinePage | PilotProductPage | **None assigned** | None | Interactive | Preserved (4) | PASS | PASS |
-| `/home-sharing-insurance/` | ProductLinePage | PilotProductPage | **None assigned** | None | Interactive | Preserved (4) | PASS | PASS |
-| `/life-insurance/` | ProductLinePage | PilotProductPage | **None assigned** | None | Interactive | Preserved (4) | PASS | PASS |
-| `/group-home-auto-insurance/` | ProductLinePage | PilotProductPage | **None assigned** | None | Interactive | Preserved (4) | PASS | PASS |
+| Route | Hero photo | Miniature | Explorer | Desktop | Mobile |
+|---|---|---|---|---|---|
+| `/home-insurance/` | home-insurance.webp | None | Interactive | PASS | PASS |
+| `/condo-insurance/` | condo.webp | None | Interactive | PASS | PASS |
+| `/tenant-insurance/` | tenant.webp | None | Interactive | PASS | PASS |
+| `/landlord-insurance/` | landlord.webp | None | Interactive | PASS | PASS |
+| `/motorcycle-insurance/` | motorcycle.webp | None | Interactive | PASS | PASS |
+| `/boat-insurance/` | boat.webp | None | Interactive | PASS | PASS |
+| `/cottage-insurance/` | cottage.webp | None | Interactive | PASS | PASS |
+| `/travel-insurance/` | travel-insurance.webp | None | Interactive | PASS | PASS |
+| `/mobile-home-insurance/` | landlord.webp | None | Interactive | PASS | PASS |
+| `/personal-umbrella-insurance/` | home-insurance.webp | None | Interactive | PASS | PASS |
+| `/home-sharing-insurance/` | home-sharing-insurance.webp | None | Interactive | PASS | PASS |
+| `/life-insurance/` | contact.webp | None | Interactive | PASS | PASS |
+| `/group-home-auto-insurance/` | team.webp | None | Interactive | PASS | PASS |
 
-**Not modified:** `/auto-insurance/`, `/` (homepage)
+**Not modified:** `/auto-insurance/` (functional scroll fix only), `/` homepage
 
-### Related products (preserved from existing content)
+---
 
-See each page config in `src/data/pilot-personal-inline.ts` and `src/data/product-pages/personal-specialty.ts`.
+## Related products rail fix
 
-### Special CTA cases preserved
+**Root cause:** Desktop users had no discoverable way to reach overflow cards — scrollbar hidden (`.pilot-scroll-hide`), no arrow controls, and vertical mouse wheel does not scroll horizontal overflow by default. Wider cards from the polish pass (340px) increased overflow but did not cause the bug — it only made more cards unreachable.
 
-- **Travel:** Primary → `/talk-to-a-broker/`; secondary → Contact Us
-- **Life / Group:** Primary → `/contact/?inquiry=...`; secondary → Talk to a Broker
-- **Umbrella / Home-sharing:** Broker-first primary CTAs preserved
+**Fix:** Shared `RelatedProductsScrollRail` used by both `AutoRelatedProducts` and `ProductRelatedProducts`:
+- Desktop prev/next gold-outline arrow buttons when overflow exists
+- Vertical wheel → horizontal scroll while hovering the rail
+- Click-and-drag on the track
+- Mobile touch/swipe unchanged (scroll-snap + overflow-x preserved)
 
-### Final CTA broker button
-
-All 13 routes: `.pilot-product-final-broker-btn` visible in default state (no hover required). Validated via Puppeteer.
+**Auto related products (7 cards):** Home, Condo, Tenant, Motorcycle, Boat, Cottage, Personal Umbrella — all reachable after fix (validated: maxScroll 1424px, next button advances scrollLeft).
 
 ---
 
@@ -68,18 +67,17 @@ All 13 routes: `.pilot-product-final-broker-btn` visible in default state (no ho
 | Check | Result |
 |---|---|
 | `npm run build` | PASS |
-| `npm run lint` | Pre-existing errors only (21 errors in unrelated files); no new errors in pilot product files |
 | All 13 personal routes HTTP 200 | PASS |
-| Regression: `/`, `/auto-insurance/`, `/trucking-insurance/`, `/claims/`, `/get-a-quote/` | PASS (200) |
-| Horizontal overflow (390px) | PASS (none detected) |
-| Broker CTA default visibility | PASS (all 13) |
+| All 13 personal routes hero photo present | PASS |
+| Auto related rail desktop scroll | PASS (7 cards, next button) |
+| Home related rail (3 cards, no overflow) | PASS |
+| Regression routes | PASS |
+| Broker CTA default visibility | PASS |
 
-Screenshots: `/opt/cursor/artifacts/screenshots/batch-a/{slug}/desktop_1440.png` and `mobile_390.png` for each route.
+Screenshots: `docs/qa-screenshots/batch-a/{slug}/desktop_1440.png` and `mobile_390.png`
 
 ---
 
 ## Checkpoint
 
-**Batch A complete. Awaiting owner approval before Batch B (Core Commercial).**
-
-Do not merge to `main` or deploy production until approved.
+**Awaiting owner re-review.** Do not proceed to Batch B until approved.

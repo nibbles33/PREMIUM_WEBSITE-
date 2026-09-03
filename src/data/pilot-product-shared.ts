@@ -53,3 +53,9 @@ export const DEFAULT_RELATED_HEADING =
 
 export const DEFAULT_RELATED_INTRO =
   "One policy is rarely the whole picture. Explore other personal coverage from Premium.";
+
+export const DEFAULT_COMMERCIAL_TRUST =
+  "Ontario commercial insurance through an independent Windsor-Essex broker — explained in plain language, compared across multiple markets.";
+
+export const DEFAULT_COMMERCIAL_RELATED_INTRO =
+  "One policy is rarely the whole picture. Explore other commercial coverage from Premium.";

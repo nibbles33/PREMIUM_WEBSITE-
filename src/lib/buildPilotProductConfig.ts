@@ -6,10 +6,16 @@ import type {
 import type { FaqItem } from "@/components/FaqAccordion";
 import { insuranceAgencyProvider } from "@/components/LineInsurancePage";
 import type { ProductPageContent } from "@/data/product-pages/types";
+import type { IndustryPageContent } from "@/data/commercial-industries";
+import { COMMERCIAL_ACCENT } from "@/data/commercial-industries";
+import { getPageHeroPhotography } from "@/data/photography";
 import {
+  DEFAULT_COMMERCIAL_RELATED_INTRO,
+  DEFAULT_COMMERCIAL_TRUST,
   DEFAULT_RELATED_HEADING,
   DEFAULT_RELATED_INTRO,
   PILOT_BROKER_HREF,
+  commercialBrokerSteps,
   personalBrokerSteps,
 } from "@/data/pilot-product-shared";
 import type {
@@ -84,7 +90,7 @@ function toCoverageItems(items: CoverageInput[]): ProductCoverageItem[] {
   });
 }
 
-/** Infer hero photography slug from common personal route hrefs. */
+/** Infer hero photography slug from common route hrefs. */
 export function photoSlugFromHref(href: string): string {
   const map: Record<string, string> = {
     "/home-insurance/": "home-insurance",
@@ -101,8 +107,31 @@ export function photoSlugFromHref(href: string): string {
     "/home-sharing-insurance/": "home-sharing-insurance",
     "/life-insurance/": "life-insurance",
     "/group-home-auto-insurance/": "group-home-auto-insurance",
+    "/commercial-insurance/": "commercial-insurance",
+    "/commercial-property-insurance/": "commercial-property-insurance",
+    "/contractors-insurance/": "contractors-insurance",
+    "/restaurant-insurance/": "restaurant-insurance",
+    "/retail-insurance/": "retail-insurance",
+    "/manufacturing-insurance/": "manufacturing-insurance",
+    "/professional-offices-insurance/": "professional-offices-insurance",
+    "/real-estate-insurance/": "real-estate-insurance",
+    "/builders-developers-insurance/": "builders-developers-insurance",
+    "/bonding-insurance/": "bonding-insurance",
+    "/small-business-insurance/": "commercial-insurance",
+    "/professional-liability-insurance/": "professional-offices-insurance",
+    "/business-interruption-insurance/": "commercial-property-insurance",
+    "/builders-risk-insurance/": "builders-developers-insurance",
+    "/cyber-insurance/": "professional-offices-insurance",
+    "/directors-officers-insurance/": "professional-offices-insurance",
+    "/landscaping-snow-removal-insurance/": "contractors-insurance",
   };
-  return map[href] ?? "home-insurance";
+  return map[href] ?? "commercial-insurance";
+}
+
+/** Resolve wired hero photography for commercial routes. */
+export function resolveCommercialPhotographySlug(slug: string): string {
+  if (getPageHeroPhotography(slug)) return slug;
+  return "commercial-insurance";
 }
 
 export function relatedLinksToProducts(links: RelatedLink[]): ProductRelatedItem[] {
@@ -114,10 +143,14 @@ export function relatedLinksToProducts(links: RelatedLink[]): ProductRelatedItem
 }
 
 export function buildPilotProductConfig(
-  input: BuildPilotProductConfigInput,
+  input: BuildPilotProductConfigInput & {
+    layout?: PilotProductPageConfig["layout"];
+    relatedIntro?: string;
+  },
 ): PilotProductPageConfig {
   return {
     slug: input.slug,
+    layout: input.layout,
     metaTitle: input.metaTitle,
     metaDescription: input.metaDescription,
     eyebrow: input.eyebrow ?? "Personal Insurance",
@@ -163,6 +196,125 @@ export function buildPilotProductConfig(
       serviceType: input.serviceName,
     },
   };
+}
+
+export function adaptCommercialProductContent(
+  content: ProductPageContent,
+): PilotProductPageConfig {
+  const related = content.relatedLinks
+    ? relatedLinksToProducts(content.relatedLinks)
+    : [];
+
+  return buildPilotProductConfig({
+    slug: content.slug,
+    metaTitle: content.metaTitle,
+    metaDescription: content.metaDescription,
+    eyebrow: content.eyebrow ?? "Commercial Insurance",
+    headline: content.headline,
+    heroLead: content.subhead,
+    photographySlug: resolveCommercialPhotographySlug(
+      content.photographySlug ?? content.slug,
+    ),
+    accentColor: content.coverageAccent ?? COMMERCIAL_ACCENT,
+    quoteHref: content.quoteHref,
+    quoteLabel: content.quoteLabel,
+    secondaryCta: content.secondaryCta,
+    trustStatement: content.whoItIsFor ?? DEFAULT_COMMERCIAL_TRUST,
+    coverageHeading: "What's covered",
+    coverageIntro: content.coverageIntro,
+    coverageItems: content.coverageTypes,
+    considerations: content.considerations,
+    brokerSteps: commercialBrokerSteps,
+    relatedProducts: related,
+    relatedIntro: DEFAULT_COMMERCIAL_RELATED_INTRO,
+    faqTitle: content.faqTitle,
+    faqIntro: content.faqIntro ?? "Straight answers to common questions.",
+    faqItems: content.faqItems,
+    ctaHeading: content.ctaHeading,
+    ctaSubhead: content.ctaSubhead,
+    ctaQuoteLabel: content.ctaButtonLabel ?? content.quoteLabel,
+    serviceName: content.serviceName,
+  });
+}
+
+const industryRelatedLinks: Record<string, RelatedLink[]> = {
+  "contractors-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Bond Insurance", href: "/bonding-insurance/" },
+    { label: "Builder's Risk", href: "/builders-risk-insurance/" },
+  ],
+  "manufacturing-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Commercial Property", href: "/commercial-property-insurance/" },
+    { label: "Product Recall", href: "/product-recall-insurance/" },
+  ],
+  "commercial-property-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Business Interruption", href: "/business-interruption-insurance/" },
+    { label: "Small Business", href: "/small-business-insurance/" },
+  ],
+  "restaurant-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Liquor Liability", href: "/liquor-liability-insurance/" },
+    { label: "Business Interruption", href: "/business-interruption-insurance/" },
+  ],
+  "professional-offices-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Professional Liability", href: "/professional-liability-insurance/" },
+    { label: "Cyber Insurance", href: "/cyber-insurance/" },
+  ],
+  "real-estate-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Property Management", href: "/property-management-insurance/" },
+    { label: "Condominium Corporation", href: "/condominium-corporation-insurance/" },
+  ],
+  "builders-developers-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Contractors Insurance", href: "/contractors-insurance/" },
+    { label: "Builder's Risk", href: "/builders-risk-insurance/" },
+  ],
+  "retail-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Commercial Property", href: "/commercial-property-insurance/" },
+    { label: "Crime & Fidelity", href: "/crime-fidelity-insurance/" },
+  ],
+};
+
+export function adaptCommercialIndustryContent(
+  content: IndustryPageContent,
+): PilotProductPageConfig {
+  const related = relatedLinksToProducts(
+    industryRelatedLinks[content.slug] ?? [
+      { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+      { label: "Small Business", href: "/small-business-insurance/" },
+    ],
+  );
+
+  return buildPilotProductConfig({
+    slug: content.slug,
+    metaTitle: content.metaTitle,
+    metaDescription: content.metaDescription,
+    eyebrow: "Commercial Insurance",
+    headline: content.headline,
+    heroLead: content.subhead,
+    photographySlug: resolveCommercialPhotographySlug(content.slug),
+    accentColor: COMMERCIAL_ACCENT,
+    quoteHref: content.quoteHref,
+    quoteLabel: content.quoteLabel,
+    trustStatement: content.subhead,
+    coverageHeading: "What's covered",
+    coverageIntro: content.coverageIntro,
+    coverageItems: content.coverageTypes,
+    brokerSteps: commercialBrokerSteps,
+    relatedProducts: related,
+    relatedIntro: DEFAULT_COMMERCIAL_RELATED_INTRO,
+    faqTitle: content.faqTitle,
+    faqIntro: "Straight answers to common questions for this industry.",
+    faqItems: content.faqItems,
+    ctaHeading: content.ctaHeading,
+    ctaSubhead: content.ctaSubhead,
+    serviceName: content.serviceName,
+  });
 }
 
 export function adaptProductPageContent(content: ProductPageContent): PilotProductPageConfig {
