@@ -1795,6 +1795,406 @@
   animation: pilot-auto-faq-enter 240ms var(--pilot-ease-out);
 }
 
+/* —— Product page system (Batch A+; Auto remains frozen reference) —— */
+
+.pilot-product-hero-visual,
+.pilot-product-hero-photo,
+.pilot-product-hero-arc {
+  position: relative;
+}
+
+.pilot-product-hero-photo {
+  will-change: transform;
+  transition: transform 120ms ease-out;
+}
+
+.pilot-product-explorer-stage {
+  transition: box-shadow 280ms ease-out;
+}
+
+.pilot-product-coverage-stage-eyebrow {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pilot-gold-dark);
+}
+
+.pilot-product-coverage-stage-frame {
+  position: relative;
+  min-height: 20rem;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #fafaf8 0%, #f3f0e8 100%);
+  border: 1px solid var(--pilot-border);
+  overflow: hidden;
+}
+
+.pilot-product-icon-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pilot-product-icon-stage-ring {
+  position: absolute;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 9999px;
+  border: 2px solid;
+  opacity: 0.45;
+}
+
+.pilot-product-icon-stage-icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 14px 28px rgba(32, 39, 40, 0.1);
+}
+
+.pilot-product-miniature-hero {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 3% 1.5%;
+}
+
+.pilot-product-miniature-platform {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  width: 48%;
+  height: 1.5rem;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  background: radial-gradient(
+    ellipse,
+    rgba(32, 39, 40, 0.14) 0%,
+    transparent 72%
+  );
+}
+
+.pilot-product-miniature-image {
+  position: relative;
+  z-index: 1;
+  width: 70%;
+  max-width: 17.5rem;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 28px rgba(32, 39, 40, 0.12));
+}
+
+.pilot-product-coverage-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.pilot-product-scene-ambient {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+}
+
+.pilot-product-coverage-stage-caption {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--pilot-border);
+}
+
+.pilot-product-coverage-stage-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+}
+
+.pilot-product-coverage-stage-title {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--pilot-charcoal);
+}
+
+.pilot-product-coverage-stage-sub {
+  margin: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--pilot-secondary);
+}
+
+.pilot-product-coverage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.pilot-product-coverage-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 0.875rem;
+  border-radius: 0.875rem;
+  border: 1px solid var(--pilot-border);
+  background: #fff;
+  padding: 0.875rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 200ms ease-out,
+    box-shadow 220ms ease-out,
+    transform 200ms var(--pilot-ease-out);
+}
+
+.pilot-product-coverage-card:hover {
+  border-color: color-mix(in srgb, var(--pilot-gold) 35%, var(--pilot-border));
+  box-shadow: 0 8px 22px rgba(32, 39, 40, 0.06);
+}
+
+.pilot-product-coverage-card.is-active {
+  border-color: color-mix(in srgb, var(--pilot-gold) 55%, var(--pilot-border));
+  box-shadow: 0 10px 28px rgba(208, 173, 38, 0.12);
+}
+
+.pilot-product-coverage-card-icon {
+  display: inline-flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  transition: background-color 200ms ease-out;
+}
+
+.pilot-product-coverage-card-ring {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  pointer-events: none;
+  transition: border-color 220ms ease-out;
+}
+
+.pilot-product-coverage-card.is-active .pilot-product-coverage-card-ring {
+  border-color: rgba(208, 173, 38, 0.45);
+}
+
+.pilot-product-final-broker-btn.pilot-btn-secondary {
+  color: #fff;
+  border-color: rgba(208, 173, 38, 0.65);
+}
+
+.pilot-product-final-broker-btn.pilot-btn-secondary:hover,
+.pilot-product-final-broker-btn.pilot-btn-secondary:focus-visible {
+  color: var(--pilot-gold);
+  border-color: var(--pilot-gold);
+  background: rgba(208, 173, 38, 0.08);
+  outline: 2px solid var(--pilot-gold);
+  outline-offset: 3px;
+}
+
+.pilot-product-broker-section {
+  position: relative;
+}
+
+.pilot-product-broker-flow {
+  position: relative;
+}
+
+.pilot-product-broker-path {
+  display: none;
+}
+
+.pilot-product-broker-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.pilot-product-broker-step {
+  position: relative;
+  padding: 1.5rem 1.25rem 1.75rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(32, 39, 40, 0.08);
+  box-shadow: 0 10px 28px rgba(32, 39, 40, 0.06);
+}
+
+.pilot-product-broker-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--pilot-charcoal);
+  background: rgba(208, 173, 38, 0.16);
+  border: 1px solid rgba(208, 173, 38, 0.35);
+}
+
+.pilot-product-broker-step-title {
+  margin: 1rem 0 0.375rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--pilot-charcoal);
+}
+
+.pilot-product-broker-step-detail {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--pilot-secondary);
+}
+
+.pilot-product-related-rail {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+}
+
+.pilot-product-related-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.375rem 0.25rem 1rem;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pilot-product-related-track > li {
+  scroll-snap-align: start;
+}
+
+@media (min-width: 1024px) {
+  .pilot-product-broker-path {
+    display: block;
+    position: absolute;
+    top: 2.75rem;
+    left: 0;
+    right: 0;
+    height: 24px;
+    z-index: 0;
+  }
+
+  .pilot-product-broker-steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .pilot-product-broker-step {
+    z-index: 1;
+  }
+
+  .pilot-product-coverage-stage-frame {
+    min-height: 23.5rem;
+  }
+
+  .pilot-product-miniature-image {
+    width: 82%;
+    max-width: 20.5rem;
+  }
+
+  .pilot-product-icon-stage-ring {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .pilot-product-icon-stage-icon {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .pilot-product-coverage-list {
+    gap: 0.75rem;
+  }
+
+  .pilot-product-coverage-card {
+    gap: 1rem;
+    padding: 1rem 1.125rem;
+  }
+
+  .pilot-product-coverage-card-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .pilot-product-explorer-cta {
+    padding-top: 0.25rem;
+  }
+
+  .pilot-product-related-track {
+    gap: 1.625rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pilot-product-coverage-stage-frame {
+    min-height: 17.5rem;
+  }
+
+  .pilot-product-miniature-image {
+    width: 72%;
+    max-width: 16rem;
+  }
+
+  .pilot-product-icon-stage-ring {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .pilot-product-icon-stage-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .pilot-product-coverage-card {
+    font-size: 0.625rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pilot-product-coverage-card:hover {
+    transform: translateX(3px);
+  }
+}
+
 /* —— Reduced motion —— */
 
 @media (prefers-reduced-motion: reduce) {

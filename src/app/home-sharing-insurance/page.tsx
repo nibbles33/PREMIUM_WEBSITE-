@@ -1,6 +1,13 @@
-import { createProductPageExports } from "@/lib/createProductPage";
+import type { Metadata } from "next";
+import PilotPersonalPage from "@/components/pilot/product/PilotPersonalPage";
 
-const page = createProductPageExports("home-sharing-insurance");
+export const metadata: Metadata = {
+  title: "Home & Ride Sharing Insurance in Windsor-Essex | Premium Insurance Brokers",
+  description:
+    "Home, car, and ride-sharing insurance guidance for Windsor-Essex — how personal policies interact with Airbnb, Turo, and platform use, explained by a broker.",
+  alternates: { canonical: "/home-sharing-insurance/" },
+};
 
-export const metadata = page.metadata;
-export default page.default;
+export default function HomeSharingInsurancePage() {
+  return <PilotPersonalPage slug="home-sharing-insurance" />;
+}
