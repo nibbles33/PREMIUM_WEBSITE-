@@ -31,7 +31,7 @@ export default function AutoRelatedProducts() {
           </div>
         </RevealOnScroll>
 
-        <div className="pilot-auto-related-rail mt-8 sm:mt-10">
+        <div className="pilot-auto-related-rail mt-8 sm:mt-10 lg:mt-12">
           <ul className="pilot-auto-related-track pilot-scroll-hide">
             {autoRelatedProducts.map((item) => {
               const photo = getPageHeroPhotography(item.photoSlug);
@@ -39,9 +39,9 @@ export default function AutoRelatedProducts() {
                 <li key={item.href} className="shrink-0">
                   <Link
                     href={item.href}
-                    className="pilot-auto-related-card group block w-[220px] overflow-hidden rounded-2xl border border-border/80 bg-white shadow-[0_10px_28px_rgba(32,39,40,0.08)] transition-[border-color,box-shadow,transform] duration-200 hover:border-gold/45 hover:shadow-[0_16px_36px_rgba(208,173,38,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:w-[260px] lg:w-[300px]"
+                    className="pilot-auto-related-card group block w-[220px] overflow-hidden rounded-2xl border border-border/80 bg-white shadow-[0_10px_28px_rgba(32,39,40,0.08)] transition-[border-color,box-shadow,transform] duration-200 hover:border-gold/45 hover:shadow-[0_16px_36px_rgba(208,173,38,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:w-[260px] lg:w-[340px]"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden lg:aspect-[5/4]">
                       {photo ? (
                         <Image
                           src={photo.src}

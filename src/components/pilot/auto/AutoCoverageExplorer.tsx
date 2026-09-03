@@ -21,7 +21,7 @@ export default function AutoCoverageExplorer() {
 
   return (
     <section
-      className="border-b border-border bg-offwhite py-14 sm:py-16 lg:py-20"
+      className="border-b border-border bg-offwhite py-14 sm:py-16 lg:py-24"
       aria-labelledby={`${baseId}-heading`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
@@ -39,16 +39,16 @@ export default function AutoCoverageExplorer() {
           </div>
         </RevealOnScroll>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-12 lg:items-start">
+        <div className="mt-10 grid gap-8 lg:mt-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-14 lg:items-start">
           <RevealOnScroll>
             <div
               id={`${baseId}-panel`}
               role="tabpanel"
               aria-labelledby={`${baseId}-tab-${activeId}`}
-              className="pilot-auto-explorer-stage relative mx-auto w-full max-w-lg rounded-2xl border border-border/80 bg-white p-6 shadow-[0_16px_40px_rgba(32,39,40,0.07)] sm:p-8"
+              className="pilot-auto-explorer-stage relative mx-auto w-full max-w-lg rounded-2xl border border-border/80 bg-white p-6 shadow-[0_16px_40px_rgba(32,39,40,0.07)] sm:p-8 lg:max-w-xl lg:p-9 lg:shadow-[0_20px_48px_rgba(32,39,40,0.09)]"
             >
               <AutoCoverageVisualStage active={active} />
-              <div className="mt-6 rounded-xl border border-gold/25 bg-[#FBF5E5]/70 px-4 py-4">
+              <div className="mt-6 rounded-xl border border-gold/25 bg-[#FBF5E5]/70 px-4 py-4 lg:mt-7 lg:px-5 lg:py-4.5">
                 <div className="flex items-start gap-3">
                   <span
                     className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
@@ -132,7 +132,7 @@ export default function AutoCoverageExplorer() {
           </div>
         </div>
 
-        <RevealOnScroll className="mt-10 text-center">
+        <RevealOnScroll className="pilot-auto-explorer-cta mt-10 text-center lg:mt-6">
           <PremiumGoldCTA href={AUTO_QUOTE_HREF}>
             Get an Auto Quote
           </PremiumGoldCTA>

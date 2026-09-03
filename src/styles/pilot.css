@@ -1507,6 +1507,60 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .pilot-auto-coverage-stage-frame {
+    min-height: 23.5rem;
+  }
+
+  .pilot-auto-car-hero-image {
+    width: 82%;
+    max-width: 20.5rem;
+  }
+
+  .pilot-auto-coverage-stage-eyebrow {
+    margin-bottom: 1.125rem;
+    font-size: 0.71875rem;
+  }
+
+  .pilot-auto-coverage-stage-caption {
+    gap: 0.875rem;
+    margin-top: 1.375rem;
+    padding-top: 1.125rem;
+  }
+
+  .pilot-auto-coverage-stage-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .pilot-auto-coverage-stage-title {
+    font-size: 1rem;
+  }
+
+  .pilot-auto-coverage-stage-sub {
+    font-size: 0.875rem;
+  }
+
+  .pilot-auto-coverage-list {
+    gap: 0.75rem;
+  }
+
+  .pilot-auto-coverage-card {
+    gap: 1rem;
+    padding: 1rem 1.125rem;
+    border-radius: 0.9375rem;
+  }
+
+  .pilot-auto-coverage-card-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .pilot-auto-explorer-cta {
+    padding-top: 0.25rem;
+  }
+}
+
 @media (max-width: 767px) {
   .pilot-auto-coverage-stage-frame {
     min-height: 17.5rem;
@@ -1659,7 +1713,8 @@
 
 @media (min-width: 1024px) {
   .pilot-auto-related-track {
-    gap: 1.25rem;
+    gap: 1.625rem;
+    padding-bottom: 1.25rem;
   }
 }
 

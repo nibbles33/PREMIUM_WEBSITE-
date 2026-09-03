@@ -37,7 +37,7 @@ export const PILOT_AUTO_HERO_IMAGE = {
 
 export const PILOT_AUTO_RELATED_IMAGE = {
   quality: 85,
-  sizes: "(max-width: 767px) 240px, 360px",
+  sizes: "(max-width: 767px) 240px, 400px",
 } as const;
 
 export const PILOT_AUTO_COVERAGE_CAR = {
@@ -45,6 +45,6 @@ export const PILOT_AUTO_COVERAGE_CAR = {
   width: 1254,
   height: 1254,
   quality: 92,
-  /** Stage ~480px desktop; cap at native 1254px for crisp 2x. */
-  sizes: "(max-width: 767px) min(100vw, 360px), 480px",
+  /** Stage ~560px desktop; cap at native 1254px for crisp 2x. */
+  sizes: "(max-width: 767px) min(100vw, 360px), 560px",
 } as const;
