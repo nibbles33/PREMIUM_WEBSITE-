@@ -1,0 +1,239 @@
+{
+  "timestamp": "2026-09-03T23:49:53.935Z",
+  "base": "http://localhost:3016",
+  "hrefAuditCount": 17,
+  "hrefAudit": [
+    {
+      "href": "/auto-insurance/",
+      "source": "personalFilmstrip",
+      "label": "Auto",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/home-insurance/",
+      "source": "personalFilmstrip",
+      "label": "Home",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/condo-insurance/",
+      "source": "personalFilmstrip",
+      "label": "Condo",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/tenant-insurance/",
+      "source": "personalFilmstrip",
+      "label": "Tenant",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/motorcycle-insurance/",
+      "source": "personalFilmstrip",
+      "label": "Motorcycle",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/boat-insurance/",
+      "source": "personalFilmstrip",
+      "label": "Boat",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/cottage-insurance/",
+      "source": "personalFilmstrip",
+      "label": "Cottage",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/travel-insurance/",
+      "source": "personalFilmstrip",
+      "label": "Travel",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/commercial-insurance/",
+      "source": "relatedExample",
+      "label": "Commercial Insurance Hub",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/business-interruption-insurance/",
+      "source": "relatedExample",
+      "label": "Business Interruption",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/small-business-insurance/",
+      "source": "relatedExample",
+      "label": "Small Business",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/trucking-insurance/",
+      "source": "yepCarousel",
+      "label": "Trucking",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/farm-insurance/",
+      "source": "yepCarousel",
+      "label": "Farm",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/greenhouse-agribusiness-insurance/",
+      "source": "yepCarousel",
+      "label": "Greenhouse",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/retail-insurance/",
+      "source": "yepCarousel",
+      "label": "Retail",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/commercial-auto-insurance/",
+      "source": "commercialDiscovery",
+      "label": "Commercial Auto",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/contractors-insurance/",
+      "source": "commercialDiscovery",
+      "label": "Contractors",
+      "status": 200,
+      "ok": true
+    }
+  ],
+  "brokenHrefs": [],
+  "personalClickTests": [
+    {
+      "label": "Auto",
+      "expected": "/auto-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/auto-insurance",
+      "ok": true
+    },
+    {
+      "label": "Home",
+      "expected": "/home-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/home-insurance",
+      "ok": true
+    },
+    {
+      "label": "Condo",
+      "expected": "/condo-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/condo-insurance",
+      "ok": true
+    },
+    {
+      "label": "Tenant",
+      "expected": "/tenant-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/tenant-insurance",
+      "ok": true
+    },
+    {
+      "label": "Motorcycle",
+      "expected": "/motorcycle-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/motorcycle-insurance",
+      "ok": true
+    },
+    {
+      "label": "Boat",
+      "expected": "/boat-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/boat-insurance",
+      "ok": true
+    },
+    {
+      "label": "Cottage",
+      "expected": "/cottage-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/cottage-insurance",
+      "ok": true
+    },
+    {
+      "label": "Travel",
+      "expected": "/travel-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/travel-insurance",
+      "ok": true
+    }
+  ],
+  "relatedClickTests": [
+    {
+      "from": "/commercial-property-insurance/",
+      "label": "Commercial Insurance Hub",
+      "expected": "/commercial-insurance",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/commercial-insurance",
+      "ok": true
+    },
+    {
+      "from": "/commercial-property-insurance/",
+      "label": "Business Interruption",
+      "expected": "/business-interruption-insurance",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/business-interruption-insurance",
+      "ok": true
+    },
+    {
+      "from": "/commercial-property-insurance/",
+      "label": "Small Business",
+      "expected": "/small-business-insurance",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3016/small-business-insurance",
+      "ok": true
+    }
+  ],
+  "dragTests": [
+    {
+      "surface": "homepage-personal-filmstrip",
+      "action": "drag-left-120px",
+      "finalUrl": "http://localhost:3016/",
+      "ok": true
+    },
+    {
+      "surface": "product-related-rail",
+      "action": "drag-left-150px",
+      "finalUrl": "http://localhost:3016/commercial-property-insurance",
+      "ok": true
+    }
+  ],
+  "allPersonalOk": true,
+  "allRelatedOk": true,
+  "allDragOk": true
+}

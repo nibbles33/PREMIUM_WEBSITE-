@@ -2,6 +2,13 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
+  activatePointerDragIfNeeded,
+  createPointerDragSession,
+  idlePointerDragSession,
+  suppressClickAfterDrag,
+  type PointerDragSession,
+} from "@/lib/pointerDragGuard";
+import {
   useCallback,
   useEffect,
   useRef,
@@ -27,13 +34,13 @@ export default function RelatedProductsScrollRail({
   className,
 }: RelatedProductsScrollRailProps) {
   const trackRef = useRef<HTMLUListElement>(null);
-  const dragState = useRef<{ active: boolean; startX: number; scrollLeft: number }>({
-    active: false,
-    startX: 0,
+  const dragState = useRef<PointerDragSession & { scrollLeft: number }>({
+    ...idlePointerDragSession(),
     scrollLeft: 0,
   });
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
 
   const updateScrollState = useCallback(() => {
     const track = trackRef.current;
@@ -88,30 +95,47 @@ export default function RelatedProductsScrollRail({
     if (!track || event.button !== 0) return;
 
     dragState.current = {
-      active: true,
-      startX: event.clientX,
+      ...createPointerDragSession(event.pointerId, event.clientX, event.clientY),
       scrollLeft: track.scrollLeft,
     };
-    track.setPointerCapture(event.pointerId);
   }, []);
 
   const onPointerMove = useCallback((event: PointerEvent<HTMLUListElement>) => {
     const track = trackRef.current;
-    if (!track || !dragState.current.active) return;
+    const session = dragState.current;
+    if (!track || (!session.pending && !session.active)) return;
 
-    const delta = event.clientX - dragState.current.startX;
-    track.scrollLeft = dragState.current.scrollLeft - delta;
+    if (
+      activatePointerDragIfNeeded(session, event.clientX, event.clientY) &&
+      !track.hasPointerCapture(event.pointerId)
+    ) {
+      setIsDragging(true);
+      track.setPointerCapture(event.pointerId);
+    }
+
+    if (!session.active) return;
+
+    const delta = event.clientX - session.startX;
+    track.scrollLeft = session.scrollLeft - delta;
   }, []);
 
   const endDrag = useCallback((event: PointerEvent<HTMLUListElement>) => {
     const track = trackRef.current;
-    if (!track || !dragState.current.active) return;
+    const session = dragState.current;
+    if (!track || (!session.pending && !session.active)) return;
 
-    dragState.current.active = false;
-    if (track.hasPointerCapture(event.pointerId)) {
+    if (session.active && track.hasPointerCapture(event.pointerId)) {
       track.releasePointerCapture(event.pointerId);
     }
-  }, []);
+
+    if (session.suppressClick) {
+      suppressClickAfterDrag(track);
+    }
+
+    dragState.current = { ...idlePointerDragSession(), scrollLeft: 0 };
+    setIsDragging(false);
+    updateScrollState();
+  }, [updateScrollState]);
 
   const showControls = canScrollPrev || canScrollNext;
 
@@ -132,7 +156,7 @@ export default function RelatedProductsScrollRail({
       <div className={railClass(variant, "rail")}>
         <ul
           ref={trackRef}
-          className={`${railClass(variant, "track")} pilot-scroll-hide pilot-related-rail-track`}
+          className={`${railClass(variant, "track")} pilot-scroll-hide pilot-related-rail-track${isDragging ? " is-dragging" : ""}`}
           onScroll={updateScrollState}
           onWheel={onWheel}
           onPointerDown={onPointerDown}

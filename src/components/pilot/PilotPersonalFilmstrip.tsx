@@ -14,6 +14,13 @@ import {
 import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import {
+  activatePointerDragIfNeeded,
+  createPointerDragSession,
+  idlePointerDragSession,
+  suppressClickAfterDrag,
+  type PointerDragSession,
+} from "@/lib/pointerDragGuard";
+import {
   getFilmstripPhoto,
   personalFilmstripItems,
 } from "@/data/pilot-home";
@@ -64,7 +71,10 @@ export default function PilotPersonalFilmstrip() {
   const isPausedRef = useRef(false);
   const isDraggingRef = useRef(false);
   const userControlRef = useRef(false);
-  const dragStart = useRef({ x: 0, offset: 0 });
+  const dragSession = useRef<PointerDragSession & { offset: number }>({
+    ...idlePointerDragSession(),
+    offset: 0,
+  });
   const resumeTimerRef = useRef<number | null>(null);
   const offsetInitializedRef = useRef(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -196,19 +206,34 @@ export default function PilotPersonalFilmstrip() {
   };
 
   const onPointerDown = (event: React.PointerEvent) => {
-    if (!ensureMeasured()) return;
+    if (!ensureMeasured() || event.button !== 0) return;
     pauseAuto();
-    isDraggingRef.current = true;
-    setIsDragging(true);
-    dragStart.current = { x: event.clientX, offset: offsetRef.current };
-    viewportRef.current?.setPointerCapture(event.pointerId);
+    dragSession.current = {
+      ...createPointerDragSession(event.pointerId, event.clientX, event.clientY),
+      offset: offsetRef.current,
+    };
   };
 
   const onPointerMove = (event: React.PointerEvent) => {
-    if (!isDraggingRef.current) return;
-    const delta = event.clientX - dragStart.current.x;
+    const session = dragSession.current;
+    if (!session.pending && !session.active) return;
+
+    const viewport = viewportRef.current;
+    if (
+      activatePointerDragIfNeeded(session, event.clientX, event.clientY) &&
+      viewport &&
+      !viewport.hasPointerCapture(event.pointerId)
+    ) {
+      isDraggingRef.current = true;
+      setIsDragging(true);
+      viewport.setPointerCapture(event.pointerId);
+    }
+
+    if (!session.active) return;
+
+    const delta = event.clientX - session.startX;
     offsetRef.current = normalizeOffsetLtr(
-      dragStart.current.offset + delta,
+      session.offset + delta,
       setWidthRef.current,
     );
     applyTransform(offsetRef.current);
@@ -216,9 +241,21 @@ export default function PilotPersonalFilmstrip() {
   };
 
   const endDrag = (event: React.PointerEvent) => {
+    const session = dragSession.current;
+    const viewport = viewportRef.current;
+    if (!session.pending && !session.active) return;
+
+    if (session.active && viewport?.hasPointerCapture(event.pointerId)) {
+      viewport.releasePointerCapture(event.pointerId);
+    }
+
+    if (session.suppressClick) {
+      suppressClickAfterDrag(viewport);
+    }
+
     isDraggingRef.current = false;
     setIsDragging(false);
-    viewportRef.current?.releasePointerCapture(event.pointerId);
+    dragSession.current = { ...idlePointerDragSession(), offset: 0 };
     pauseAuto();
   };
 

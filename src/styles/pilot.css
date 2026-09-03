@@ -664,7 +664,8 @@
   scroll-behavior: smooth;
 }
 
-.pilot-related-rail-track:active {
+.pilot-related-rail-track:active,
+.pilot-related-rail-track.is-dragging {
   cursor: grabbing;
 }
 
