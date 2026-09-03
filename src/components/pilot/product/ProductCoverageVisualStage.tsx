@@ -21,7 +21,9 @@ export default function ProductCoverageVisualStage({
     <div className="pilot-product-coverage-stage" aria-live="polite" aria-atomic="true">
       <p className="pilot-product-coverage-stage-eyebrow">{active.visualEyebrow}</p>
 
-      <div className="pilot-product-coverage-stage-frame">
+      <div
+        className={`pilot-product-coverage-stage-frame${miniature ? "" : " pilot-product-coverage-stage-frame--icon-only"}`}
+      >
         {miniature ? (
           <div className="pilot-product-miniature-hero" aria-hidden>
             <div className="pilot-product-miniature-platform" />
@@ -63,25 +65,27 @@ export default function ProductCoverageVisualStage({
         </div>
       </div>
 
-      <div className="pilot-product-coverage-stage-caption">
-        <span
-          className="pilot-product-coverage-stage-icon"
-          style={{
-            color: accentColor,
-            backgroundColor: `color-mix(in srgb, ${accentColor} 12%, #fff)`,
-          }}
-          aria-hidden
-        >
-          <ActiveIcon className="h-5 w-5" strokeWidth={1.5} />
-        </span>
-        <div>
-          <p className="pilot-product-coverage-stage-title">{active.visualCaption}</p>
-          <p className="pilot-product-coverage-stage-sub">{active.visualSubcaption}</p>
+      {miniature ? (
+        <div className="pilot-product-coverage-stage-caption">
+          <span
+            className="pilot-product-coverage-stage-icon"
+            style={{
+              color: accentColor,
+              backgroundColor: `color-mix(in srgb, ${accentColor} 12%, #fff)`,
+            }}
+            aria-hidden
+          >
+            <ActiveIcon className="h-5 w-5" strokeWidth={1.5} />
+          </span>
+          <div>
+            <p className="pilot-product-coverage-stage-title">{active.visualCaption}</p>
+            <p className="pilot-product-coverage-stage-sub">{active.visualSubcaption}</p>
+          </div>
         </div>
-      </div>
+      ) : null}
 
       <p className="sr-only">
-        {active.title}: {active.visualCaption}
+        {active.title}: {active.detail}
       </p>
     </div>
   );

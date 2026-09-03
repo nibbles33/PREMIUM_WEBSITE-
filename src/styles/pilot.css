@@ -1906,6 +1906,33 @@
   overflow: hidden;
 }
 
+.pilot-product-coverage-stage-frame--icon-only {
+  min-height: 11.5rem;
+  background:
+    radial-gradient(
+      ellipse 80% 70% at 50% 42%,
+      color-mix(in srgb, var(--pilot-gold) 8%, #fafaf8) 0%,
+      transparent 68%
+    ),
+    linear-gradient(180deg, #fafaf8 0%, #f0ece3 100%);
+}
+
+.pilot-product-coverage-stage-frame--icon-only .pilot-product-icon-stage-ring {
+  width: 9rem;
+  height: 9rem;
+  opacity: 0.55;
+}
+
+.pilot-product-coverage-stage-frame--icon-only .pilot-product-icon-stage-icon {
+  width: 5.25rem;
+  height: 5.25rem;
+}
+
+.pilot-product-coverage-stage-frame--icon-only .pilot-product-icon-stage-icon svg {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
 .pilot-product-icon-stage {
   position: absolute;
   inset: 0;
@@ -2200,6 +2227,20 @@
     min-height: 23.5rem;
   }
 
+  .pilot-product-coverage-stage-frame--icon-only {
+    min-height: 13rem;
+  }
+
+  .pilot-product-coverage-stage-frame--icon-only .pilot-product-icon-stage-ring {
+    width: 10.5rem;
+    height: 10.5rem;
+  }
+
+  .pilot-product-coverage-stage-frame--icon-only .pilot-product-icon-stage-icon {
+    width: 5.75rem;
+    height: 5.75rem;
+  }
+
   .pilot-product-miniature-image {
     width: 82%;
     max-width: 20.5rem;
@@ -2242,6 +2283,20 @@
 @media (max-width: 767px) {
   .pilot-product-coverage-stage-frame {
     min-height: 17.5rem;
+  }
+
+  .pilot-product-coverage-stage-frame--icon-only {
+    min-height: 10rem;
+  }
+
+  .pilot-product-coverage-stage-frame--icon-only .pilot-product-icon-stage-ring {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .pilot-product-coverage-stage-frame--icon-only .pilot-product-icon-stage-icon {
+    width: 4.75rem;
+    height: 4.75rem;
   }
 
   .pilot-product-miniature-image {
