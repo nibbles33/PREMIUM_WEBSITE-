@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Greenhouse route recovery validation + screenshots
+ * Greenhouse route validation + screenshots
  */
 const puppeteer = require("puppeteer");
 const fs = require("fs");
@@ -17,6 +17,41 @@ async function waitForPage(page) {
   await new Promise((r) => setTimeout(r, 600));
 }
 
+async function verifyCoverageNoDuplication(page) {
+  await waitForPage(page);
+  await page.waitForSelector(".pilot-product-coverage-card", { timeout: 30000 });
+
+  const tabs = await page.$$(".pilot-product-coverage-card");
+  const results = [];
+
+  for (let i = 0; i < tabs.length; i++) {
+    await tabs[i].click();
+    await new Promise((r) => setTimeout(r, 200));
+
+    const state = await page.evaluate(() => {
+      const panel = document.querySelector(".pilot-product-explorer-stage");
+      if (!panel) return { ok: false, reason: "missing-panel" };
+
+      const stageCaptions = panel.querySelectorAll(".pilot-product-coverage-stage-caption");
+      const detailBlocks = panel.querySelectorAll(
+        ".rounded-xl.border.border-gold\\/25 h3",
+      );
+      const detailTexts = Array.from(detailBlocks).map((el) => el.textContent?.trim());
+
+      return {
+        ok: stageCaptions.length === 0 && detailTexts.length === 1,
+        stageCaptions: stageCaptions.length,
+        detailBlocks: detailTexts.length,
+      };
+    });
+
+    results.push({ index: i, ...state });
+  }
+
+  const failed = results.filter((r) => !r.ok);
+  return { ok: failed.length === 0, states: results.length, failed };
+}
+
 async function main() {
   fs.mkdirSync(path.join(ARTIFACTS, SLUG), { recursive: true });
   const browser = await puppeteer.launch({
@@ -31,11 +66,25 @@ async function main() {
     const brokerBtn = document.querySelector(".pilot-product-final-broker-btn");
     const brokerStyle = brokerBtn ? window.getComputedStyle(brokerBtn) : null;
     const brokerRect = brokerBtn?.getBoundingClientRect();
+    const quoteLink = [...document.querySelectorAll("a")].find((a) =>
+      a.textContent?.includes("Get a Greenhouse Quote"),
+    );
+    const quoteHref = quoteLink?.getAttribute("href") ?? null;
     return {
       overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 1,
       hasHero: Boolean(document.querySelector(".pilot-product-hero")),
       hasHeroPhoto: Boolean(heroPhoto?.getAttribute("src")?.includes("greenhouse")),
       hasExplorer: Boolean(document.querySelector(".pilot-product-explorer-stage")),
+      coverageCards: document.querySelectorAll(".pilot-product-coverage-card").length,
+      considerations: document.querySelectorAll("#pilot-product-considerations-heading").length,
+      considerationItems: document.querySelectorAll(
+        "#pilot-product-considerations-heading",
+      ).length
+        ? document.querySelectorAll(
+            '[aria-labelledby="pilot-product-considerations-heading"] li, section[aria-labelledby="pilot-product-considerations-heading"] li',
+          ).length
+        : 0,
+      faqItems: document.querySelectorAll(".pilot-auto-faq-item").length,
       brokerVisible:
         brokerBtn &&
         brokerStyle?.display !== "none" &&
@@ -44,8 +93,20 @@ async function main() {
         brokerRect.width > 0 &&
         brokerRect.height > 0,
       relatedRail: Boolean(document.querySelector(".pilot-related-rail-track")),
+      quoteHref,
     };
   });
+
+  // Re-count considerations with simpler selector after page load
+  const considerationCount = await page.evaluate(() => {
+    const section = document.querySelector("#pilot-product-considerations-heading");
+    if (!section) return 0;
+    return section.closest("section")?.querySelectorAll("li").length ?? 0;
+  });
+
+  checks.considerationItems = considerationCount;
+
+  const coverageTest = await verifyCoverageNoDuplication(page);
 
   for (const vp of [
     { name: "desktop", width: 1440, height: 900 },
@@ -58,19 +119,18 @@ async function main() {
     console.log(`SHOT ${file}`);
   }
 
-  // Nav destination verified from source (dropdown requires interaction not reliable headless)
   const navSource = fs.readFileSync(
     path.join(__dirname, "../src/data/nav-agriculture.ts"),
     "utf8",
   );
   const navSourceOk = navSource.includes('href: "/greenhouse-agribusiness-insurance/"');
 
-  // Farm intact
   await page.goto(`${BASE}/farm-insurance/`, { waitUntil: "networkidle2", timeout: 60000 });
   await page.waitForSelector(".pilot-product-hero", { timeout: 30000 });
   const farmOk = await page.evaluate(() => ({
     headline: document.querySelector("h1")?.textContent?.trim(),
     hasExplorer: Boolean(document.querySelector(".pilot-product-explorer-stage")),
+    coverageCards: document.querySelectorAll(".pilot-product-coverage-card").length,
   }));
 
   await browser.close();
@@ -80,6 +140,7 @@ async function main() {
     timestamp: new Date().toISOString(),
     route: ROUTE,
     checks,
+    coverageTest,
     navSourceOk,
     farmRegression: farmOk,
     status: 200,
@@ -92,7 +153,14 @@ async function main() {
   if (!checks.brokerVisible) failures.push("broker-not-visible");
   if (checks.overflow) failures.push("horizontal-overflow");
   if (!navSourceOk) failures.push("nav-source-not-updated");
-  if (farmOk.headline !== "Farm Insurance" || !farmOk.hasExplorer) failures.push("farm-regression");
+  if (checks.coverageCards !== 6) failures.push(`coverage-cards-${checks.coverageCards}`);
+  if (checks.considerationItems !== 6) failures.push(`considerations-${checks.considerationItems}`);
+  if (checks.faqItems !== 5) failures.push(`faq-items-${checks.faqItems}`);
+  if (checks.quoteHref !== "/get-a-quote?type=business&industry=greenhouse")
+    failures.push(`quote-href-${checks.quoteHref}`);
+  if (!coverageTest.ok) failures.push("coverage-duplication");
+  if (farmOk.headline !== "Farm Insurance" || farmOk.coverageCards !== 4)
+    failures.push("farm-regression");
 
   if (failures.length) {
     console.error("Failures:", failures);

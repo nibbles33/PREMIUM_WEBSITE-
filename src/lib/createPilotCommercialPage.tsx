@@ -28,7 +28,7 @@ const greenhouseMetadata: Metadata = {
   title:
     "Greenhouse & Agribusiness Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
-    "Greenhouse, crop, and agribusiness operations in Windsor-Essex — through an independent broker.",
+    "Greenhouse and agribusiness operations in Leamington, Essex County, and Windsor-Essex — reviewed through an independent broker.",
   alternates: { canonical: "/greenhouse-agribusiness-insurance/" },
 };
 

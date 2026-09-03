@@ -1,19 +1,30 @@
 {
   "base": "http://localhost:3010",
-  "timestamp": "2026-09-03T20:51:27.282Z",
+  "timestamp": "2026-09-03T20:55:11.195Z",
   "route": "/greenhouse-agribusiness-insurance/",
   "checks": {
     "overflow": false,
     "hasHero": true,
     "hasHeroPhoto": true,
-    "hasExplorer": false,
+    "hasExplorer": true,
+    "coverageCards": 6,
+    "considerations": 1,
+    "considerationItems": 6,
+    "faqItems": 5,
     "brokerVisible": true,
-    "relatedRail": true
+    "relatedRail": true,
+    "quoteHref": "/get-a-quote?type=business&industry=greenhouse"
+  },
+  "coverageTest": {
+    "ok": true,
+    "states": 6,
+    "failed": []
   },
   "navSourceOk": true,
   "farmRegression": {
     "headline": "Farm Insurance",
-    "hasExplorer": true
+    "hasExplorer": true,
+    "coverageCards": 4
   },
   "status": 200
 }

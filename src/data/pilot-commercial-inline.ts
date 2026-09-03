@@ -3,13 +3,18 @@
 import {
   Banknote,
   Beef,
+  Briefcase,
+  Building2,
   FileCheck,
   Gavel,
+  Package,
   ScrollText,
   Shield,
   ShieldCheck,
   Tractor,
   Warehouse,
+  Wrench,
+  Zap,
 } from "lucide-react";
 import {
   COMMERCIAL_ACCENT,
@@ -220,19 +225,89 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     metaTitle:
       "Greenhouse & Agribusiness Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Greenhouse, crop, and agribusiness operations in Windsor-Essex — through an independent broker.",
+      "Greenhouse and agribusiness operations in Leamington, Essex County, and Windsor-Essex — reviewed through an independent broker.",
     eyebrow: "Greenhouse & Agribusiness",
     headline: "Greenhouse & Agribusiness Insurance",
     heroLead:
-      "Greenhouse, crop, and agribusiness operations in Windsor-Essex.",
+      "Greenhouse and agribusiness operations in Leamington, Essex County, and Windsor-Essex.",
     photographySlug: "greenhouse",
     accentColor: "#6B8F71",
     quoteHref: "/get-a-quote?type=business&industry=greenhouse",
     quoteLabel: "Get a Greenhouse Quote",
     trustStatement:
-      "Greenhouse, crop, and agribusiness operations in Windsor-Essex — explained through an independent broker.",
-    coverageIntro: "",
-    coverageItems: [],
+      "Greenhouse and agribusiness operations in Leamington, Essex County, and Windsor-Essex — reviewed through an independent broker.",
+    coverageIntro:
+      "Coverage areas commonly reviewed for greenhouse and agribusiness operations — what applies depends on your policy, insurer, and operation.",
+    coverageItems: [
+      {
+        title: "Greenhouse Buildings & Structures",
+        description:
+          "Greenhouse structures and other insured buildings/property can represent a significant part of the operation's exposure. Coverage depends on the property insured, policy terms and selected coverages.",
+        icon: Building2,
+      },
+      {
+        title: "Equipment & Machinery",
+        description:
+          "Greenhouse operations may rely on heating, ventilation, irrigation and other specialized operational equipment. Coverage for equipment and machinery depends on the policy and coverages purchased.",
+        icon: Wrench,
+      },
+      {
+        title: "Business Property & Stock",
+        description:
+          "Consider business contents, supplies and eligible stock or property used in the operation. How particular property is insured varies by policy and insurer.",
+        icon: Package,
+      },
+      {
+        title: "Business Interruption",
+        description:
+          "A covered property loss can also interrupt operations and affect business income. Business interruption coverage may respond to covered loss of income following an insured loss, subject to the policy terms, limits and coverage purchased.",
+        icon: Briefcase,
+      },
+      {
+        title: "Commercial Liability",
+        description:
+          "Greenhouse and agribusiness operations can have liability exposures arising from their premises and business activities. The appropriate liability protection depends on the nature and scale of the operation.",
+        icon: Shield,
+      },
+      {
+        title: "Equipment Breakdown",
+        description:
+          "Heating, electrical, ventilation, irrigation and other critical systems can create significant equipment-breakdown exposure. Equipment breakdown coverage may be available where purchased and remains subject to policy terms and exclusions.",
+        icon: Zap,
+      },
+    ],
+    considerations: [
+      {
+        title: "Greenhouse construction and total property values",
+        description:
+          "Building types, construction, and total property values should be reviewed with your broker so limits and descriptions reflect the operation accurately.",
+      },
+      {
+        title: "Heating, ventilation, and irrigation systems",
+        description:
+          "Heating, ventilation, and irrigation systems are often central to greenhouse operations — your broker should review how these are described and insured.",
+      },
+      {
+        title: "Dependence on utilities and critical equipment",
+        description:
+          "Operations that depend heavily on utilities and critical equipment may need careful review of how downtime and equipment failure are treated under the policy.",
+      },
+      {
+        title: "Business interruption exposure",
+        description:
+          "The financial impact of a shutdown can vary by season and operation — business interruption limits and terms warrant a focused broker review.",
+      },
+      {
+        title: "Treatment of plants, crops, and growing stock",
+        description:
+          "How plants, crops, and growing stock are treated can vary significantly by policy and insurer — this should be reviewed rather than assumed.",
+      },
+      {
+        title: "Seasonal changes in values or operations",
+        description:
+          "Seasonal shifts in inventory, revenue, or operations may affect what should be reported and when limits need updating.",
+      },
+    ],
     brokerSteps: commercialBrokerSteps,
     relatedProducts: relatedLinksToProducts([
       { label: "Farm Insurance", href: "/farm-insurance/" },
@@ -242,7 +317,33 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
       "One policy is rarely the whole picture. Explore other coverage from Premium.",
     faqTitle: "Greenhouse & agribusiness FAQ",
     faqIntro: "Straight answers to common questions.",
-    faqItems: [],
+    faqItems: [
+      {
+        question: "What insurance does a greenhouse business need?",
+        answer:
+          "It depends on the operation. A greenhouse may have exposures involving buildings, specialized equipment, business property, liability, business interruption and other risks. Premium can review the operation and help identify the coverages that should be considered.",
+      },
+      {
+        question: "Does greenhouse insurance cover plants or crops?",
+        answer:
+          "Coverage for plants, crops and growing stock can vary significantly by policy and insurer. It should not be assumed to be included automatically. We can review how your inventory is treated and identify available coverage options.",
+      },
+      {
+        question: "What happens if heating or other critical equipment breaks down?",
+        answer:
+          "Greenhouses can depend heavily on heating, ventilation, irrigation and other systems. Equipment breakdown and resulting losses require careful review because coverage depends on the policy, cause of loss and endorsements purchased.",
+      },
+      {
+        question: "Can business interruption coverage protect a greenhouse?",
+        answer:
+          "Business interruption coverage may help with covered loss of income following an insured loss, subject to the policy's terms, limits, waiting periods and coverage purchased. The appropriate limits should reflect the operation's actual financial exposure.",
+      },
+      {
+        question: "Do you insure greenhouse operations in Leamington and Essex County?",
+        answer:
+          "Premium Insurance Brokers serves businesses throughout Windsor-Essex and can assist greenhouse and agribusiness operations with reviewing their commercial insurance needs.",
+      },
+    ],
     ctaHeading: "Ready to discuss your greenhouse operation?",
     ctaSubhead:
       "Tell us about your operation — a broker will compare options and explain what fits.",
