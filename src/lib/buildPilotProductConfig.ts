@@ -96,6 +96,11 @@ export function photoSlugFromHref(href: string): string {
     "/boat-insurance/": "boat",
     "/travel-insurance/": "travel-insurance",
     "/auto-insurance/": "auto-insurance",
+    "/mobile-home-insurance/": "mobile-home-insurance",
+    "/personal-umbrella-insurance/": "personal-umbrella-insurance",
+    "/home-sharing-insurance/": "home-sharing-insurance",
+    "/life-insurance/": "life-insurance",
+    "/group-home-auto-insurance/": "group-home-auto-insurance",
   };
   return map[href] ?? "home-insurance";
 }

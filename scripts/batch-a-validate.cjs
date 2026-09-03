@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 
 const BASE = process.env.BASE_URL || "http://localhost:3000";
-const ARTIFACTS = "/opt/cursor/artifacts/screenshots/batch-a";
+const ARTIFACTS = path.join(__dirname, "../docs/qa-screenshots/batch-a");
 
 const PERSONAL_ROUTES = [
   "/home-insurance/",
@@ -69,14 +69,30 @@ async function checkRoute(page, route) {
     );
   });
 
-  const hasHero = await page.evaluate(() =>
-    Boolean(document.querySelector(".pilot-product-hero")),
-  );
+  const heroPresent = await page.evaluate(() => {
+    const heroSection = document.querySelector(".pilot-product-hero, .pilot-auto-hero");
+    const heroPhoto = document.querySelector(
+      ".pilot-product-hero-photo img, .pilot-auto-hero-photo img",
+    );
+    return {
+      hasHero: Boolean(heroSection),
+      hasHeroPhoto: Boolean(heroPhoto && heroPhoto.getAttribute("src")),
+    };
+  });
   const hasExplorer = await page.evaluate(() =>
     Boolean(document.querySelector(".pilot-product-explorer-stage")),
   );
 
-  return { route, status, overflow, brokerBtnVisible, hasHero, hasExplorer, url };
+  return {
+    route,
+    status,
+    overflow,
+    brokerBtnVisible,
+    hasHero: heroPresent.hasHero,
+    hasHeroPhoto: heroPresent.hasHeroPhoto,
+    hasExplorer,
+    url,
+  };
 }
 
 async function fullPageShot(page, route, viewport) {
@@ -92,6 +108,46 @@ async function fullPageShot(page, route, viewport) {
   await new Promise((r) => setTimeout(r, 800));
   await page.screenshot({ path: file, fullPage: true });
   return file;
+}
+
+async function testRelatedRailScroll(page, route) {
+  await page.setViewport({ width: 1440, height: 900 });
+  await page.goto(`${BASE}${route.startsWith("/") ? route : `/${route}`}`, {
+    waitUntil: "networkidle2",
+    timeout: 60000,
+  });
+
+  return page.evaluate(async () => {
+    const track = document.querySelector(".pilot-related-rail-track");
+    const nextBtn = document.querySelector(".pilot-related-rail-nav-next");
+    if (!track) return { ok: false, reason: "missing-track" };
+
+    const cardCount = track.querySelectorAll("li").length;
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const start = track.scrollLeft;
+
+    if (maxScroll <= 8) {
+      return { ok: true, cardCount, maxScroll, note: "no-overflow-needed" };
+    }
+
+    if (nextBtn && !nextBtn.disabled) {
+      nextBtn.click();
+      await new Promise((r) => setTimeout(r, 450));
+    } else {
+      track.scrollBy({ left: 360, behavior: "auto" });
+      await new Promise((r) => setTimeout(r, 100));
+    }
+
+    const after = track.scrollLeft;
+    return {
+      ok: after > start,
+      cardCount,
+      maxScroll,
+      start,
+      after,
+      hasNextButton: Boolean(nextBtn),
+    };
+  });
 }
 
 async function main() {
@@ -125,12 +181,24 @@ async function main() {
     }
   }
 
+  const railTests = [];
+  for (const route of ["/auto-insurance/", "/home-insurance/"]) {
+    try {
+      const rail = await testRelatedRailScroll(page, route);
+      railTests.push({ route, ...rail });
+      console.log(`RAIL ${route} ok=${rail.ok} cards=${rail.cardCount}`);
+    } catch (err) {
+      railTests.push({ route, ok: false, error: String(err) });
+    }
+  }
+
   await browser.close();
 
   const report = {
     base: BASE,
     timestamp: new Date().toISOString(),
     results,
+    railTests,
     personalRoutes: PERSONAL_ROUTES.length,
     screenshotsDir: ARTIFACTS,
   };
@@ -141,6 +209,19 @@ async function main() {
   console.log(JSON.stringify(report, null, 2));
 
   const failures = results.filter((r) => r.status !== 200);
+  const missingHeroPhotos = results
+    .filter((r) => PERSONAL_ROUTES.includes(r.route) && !r.hasHeroPhoto)
+    .map((r) => r.route);
+  const railFailures = railTests.filter((r) => !r.ok);
+
+  if (missingHeroPhotos.length) {
+    console.error("Missing hero photos:", missingHeroPhotos.join(", "));
+    process.exit(1);
+  }
+  if (railFailures.length) {
+    console.error("Related rail scroll failures:", railFailures);
+    process.exit(1);
+  }
   if (failures.length) process.exit(1);
 }
 

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import RelatedProductsScrollRail from "@/components/pilot/RelatedProductsScrollRail";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import {
   getPageHeroPhotography,
@@ -40,8 +41,7 @@ export default function ProductRelatedProducts({
           </div>
         </RevealOnScroll>
 
-        <div className="pilot-product-related-rail mt-8 sm:mt-10 lg:mt-12">
-          <ul className="pilot-product-related-track pilot-scroll-hide">
+        <RelatedProductsScrollRail variant="product" className="mt-8 sm:mt-10 lg:mt-12">
             {products.map((item) => {
               const photo = getPageHeroPhotography(item.photoSlug);
               return (
@@ -82,8 +82,7 @@ export default function ProductRelatedProducts({
                 </li>
               );
             })}
-          </ul>
-        </div>
+        </RelatedProductsScrollRail>
       </div>
     </section>
   );

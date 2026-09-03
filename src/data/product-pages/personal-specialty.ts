@@ -22,6 +22,7 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     headline: "Mobile & Manufactured Home Insurance",
     subhead:
       "Coverage tailored to manufactured and mobile homes — from the structure and skirting to liability and personal belongings.",
+    photographySlug: "mobile-home-insurance",
     quoteHref: "/get-a-quote?type=home",
     quoteLabel: "Get a Home Quote",
     coverageIntro:
@@ -120,6 +121,7 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     headline: "Personal Umbrella Insurance",
     subhead:
       "An extra layer of liability protection above your home and auto policies — for when a serious claim exceeds your underlying limits.",
+    photographySlug: "personal-umbrella-insurance",
     quoteHref: "/talk-to-a-broker/",
     quoteLabel: "Talk to a Broker About Umbrella Coverage",
     coverageIntro:
@@ -220,6 +222,7 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     headline: "Home & Ride Sharing Insurance",
     subhead:
       "Using your home or vehicle on a sharing platform creates coverage questions personal policies were not always designed to answer.",
+    photographySlug: "home-sharing-insurance",
     quoteHref: "/talk-to-a-broker/",
     quoteLabel: "Talk to a Broker About Sharing Coverage",
     secondaryCta: { label: "Contact Us", href: CONTACT },
@@ -322,6 +325,7 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     headline: "Life Insurance",
     subhead:
       "Premium coordinates your life-insurance inquiry and connects you with a licensed life-insurance professional through our Oracle/head office — separate from our property and casualty quote process.",
+    photographySlug: "life-insurance",
     quoteHref: `${CONTACT}?inquiry=life`,
     quoteLabel: "Start a Life Inquiry",
     secondaryCta: { label: "Talk to a Broker", href: "/talk-to-a-broker/" },
@@ -426,6 +430,7 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     headline: "Group Home & Auto Insurance",
     subhead:
       "Premium coordinates group program inquiries and specialist access through Oracle/head office — for employers, associations, and member organizations exploring group home and auto options.",
+    photographySlug: "group-home-auto-insurance",
     quoteHref: `${CONTACT}?inquiry=group`,
     quoteLabel: "Start a Group Inquiry",
     secondaryCta: { label: "Talk to a Broker", href: "/talk-to-a-broker/" },
