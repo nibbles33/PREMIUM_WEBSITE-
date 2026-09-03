@@ -10,7 +10,6 @@ import {
   type CoverageStreamItem,
 } from "@/data/pilot-home";
 import { PILOT_YEP_TILE_IMAGE } from "@/data/photography";
-import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 function YepMediaTile({ item }: { item: CoverageStreamItem }) {
   const photo = getFilmstripPhoto(item.photoSlug);
@@ -78,7 +77,7 @@ function ManualLane({
 }) {
   return (
     <div
-      className="pilot-yep-lane-static overflow-x-auto px-4 pb-1 scrollbar-none md:px-6"
+      className="pilot-yep-lane-static pilot-scroll-hide overflow-x-auto px-4 pb-1 md:px-6"
       role="list"
       aria-label={ariaLabel}
     >
@@ -94,8 +93,6 @@ function ManualLane({
 }
 
 export default function PilotBreadthUniverse() {
-  const reduceMotion = usePrefersReducedMotion();
-
   return (
     <section
       className="pilot-section-yep relative overflow-hidden border-t border-charcoal bg-charcoal py-10 sm:py-12 lg:py-14"
@@ -130,34 +127,16 @@ export default function PilotBreadthUniverse() {
       </div>
 
       <RevealOnScroll className="mt-8 space-y-3 sm:space-y-4">
-        {reduceMotion ? (
-          <>
-            <ManualLane
-              items={yepLanePersonal}
-              ariaLabel="Personal and lifestyle insurance coverage"
-            />
-            <ManualLane
-              items={yepLaneCommercial}
-              ariaLabel="Business and commercial insurance coverage"
-            />
-          </>
-        ) : (
-          <>
-            {/* Lane 1 — personal/lifestyle: moderate continuous motion */}
-            <AnimatedLane
-              items={yepLanePersonal}
-              direction="right"
-              speedSeconds={88}
-              ariaLabel="Personal and lifestyle insurance coverage"
-            />
-
-            {/* Lane 2 — business/commercial: manual scroll (calmer) */}
-            <ManualLane
-              items={yepLaneCommercial}
-              ariaLabel="Business and commercial insurance coverage"
-            />
-          </>
-        )}
+        <AnimatedLane
+          items={yepLanePersonal}
+          direction="right"
+          speedSeconds={88}
+          ariaLabel="Personal and lifestyle insurance coverage"
+        />
+        <ManualLane
+          items={yepLaneCommercial}
+          ariaLabel="Business and commercial insurance coverage"
+        />
       </RevealOnScroll>
 
       <RevealOnScroll className="relative mt-8 text-center">

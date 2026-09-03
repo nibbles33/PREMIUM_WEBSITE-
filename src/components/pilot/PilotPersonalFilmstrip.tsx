@@ -18,7 +18,6 @@ import {
   personalFilmstripItems,
 } from "@/data/pilot-home";
 import { PILOT_FILMSTRIP_IMAGE } from "@/data/photography";
-import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 /** ~39px/s at 60fps — primary continuous motion zone */
 const AUTO_SCROLL_SPEED = 0.65;
@@ -33,21 +32,30 @@ function normalizeOffset(offset: number, setWidth: number) {
   return next;
 }
 
+function prefersReducedMotionNow() {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function isMobileViewportNow() {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(max-width: 767px)").matches;
+}
+
 export default function PilotPersonalFilmstrip() {
-  const reduceMotion = usePrefersReducedMotion();
   const baseId = useId();
   const viewportRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
   const setWidthRef = useRef(0);
   const frameStepRef = useRef(0);
   const offsetRef = useRef(0);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const isPausedRef = useRef(false);
+  const isDraggingRef = useRef(false);
+  const userControlRef = useRef(false);
   const dragStart = useRef({ x: 0, offset: 0 });
   const resumeTimerRef = useRef<number | null>(null);
-  const userControlRef = useRef(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
 
   const loopItems = Array.from({ length: LOOP_COPIES }, () =>
     personalFilmstripItems,
@@ -60,59 +68,77 @@ export default function PilotPersonalFilmstrip() {
     inner.style.transform = `translate3d(-${aligned}px, 0, 0)`;
   }, []);
 
-  const measure = useCallback(() => {
-    const inner = innerRef.current;
-    if (!inner) return;
-    const total = inner.scrollWidth;
-    setWidthRef.current = total / LOOP_COPIES;
-    frameStepRef.current = setWidthRef.current / ITEM_COUNT;
-    offsetRef.current = normalizeOffset(offsetRef.current, setWidthRef.current);
-    applyTransform(offsetRef.current);
-  }, [applyTransform]);
-
   const updateActiveIndex = useCallback(() => {
     const step = frameStepRef.current;
     if (step <= 0) return;
-    const index =
-      Math.round(offsetRef.current / step) % ITEM_COUNT;
+    const index = Math.round(offsetRef.current / step) % ITEM_COUNT;
     setActiveIndex((index + ITEM_COUNT) % ITEM_COUNT);
   }, []);
 
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    const update = () => setIsMobile(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
+  const measure = useCallback(() => {
+    const inner = innerRef.current;
+    if (!inner) return false;
+    const total = inner.scrollWidth;
+    if (total <= 0) return false;
+    const setWidth = total / LOOP_COPIES;
+    setWidthRef.current = setWidth;
+    frameStepRef.current = setWidth / ITEM_COUNT;
+    offsetRef.current = normalizeOffset(offsetRef.current, setWidth);
+    applyTransform(offsetRef.current);
+    updateActiveIndex();
+    return true;
+  }, [applyTransform, updateActiveIndex]);
+
+  const ensureMeasured = useCallback(() => {
+    if (frameStepRef.current > 0) return true;
+    if (measure()) return true;
+    void innerRef.current?.offsetHeight;
+    return measure();
+  }, [measure]);
 
   useEffect(() => {
+    const inner = innerRef.current;
+    if (!inner) return;
+
     measure();
+
+    const ro = new ResizeObserver(() => {
+      measure();
+    });
+    ro.observe(inner);
+
     window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
+    window.addEventListener("load", measure);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+      window.removeEventListener("load", measure);
+    };
   }, [measure]);
 
   const pauseAuto = useCallback(() => {
     userControlRef.current = true;
-    setIsPaused(true);
+    isPausedRef.current = true;
     if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current);
     resumeTimerRef.current = window.setTimeout(() => {
       userControlRef.current = false;
-      setIsPaused(false);
+      isPausedRef.current = false;
     }, INACTIVITY_RESUME_MS);
   }, []);
 
-  /* Desktop: transform-based seamless loop */
+  /* Desktop: transform-based seamless loop — stable rAF, refs for pause state */
   useEffect(() => {
-    if (reduceMotion || isMobile) return;
     let raf = 0;
 
     const tick = () => {
       const setWidth = setWidthRef.current;
       if (
         setWidth > 0 &&
-        !isPaused &&
-        !isDragging &&
+        !prefersReducedMotionNow() &&
+        !isMobileViewportNow() &&
+        !isPausedRef.current &&
+        !isDraggingRef.current &&
         !userControlRef.current
       ) {
         offsetRef.current += AUTO_SCROLL_SPEED;
@@ -127,46 +153,25 @@ export default function PilotPersonalFilmstrip() {
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [
-    reduceMotion,
-    isMobile,
-    isPaused,
-    isDragging,
-    applyTransform,
-    updateActiveIndex,
-  ]);
+  }, [applyTransform, updateActiveIndex]);
 
-  const nudge = (direction: -1 | 1) => {
-    pauseAuto();
-    const step = frameStepRef.current;
-    if (step <= 0) return;
-    offsetRef.current = normalizeOffset(
-      offsetRef.current + direction * step,
-      setWidthRef.current,
-    );
-    applyTransform(offsetRef.current);
-    updateActiveIndex();
-  };
-
-  const scrollToIndex = (index: number) => {
-    pauseAuto();
-    const step = frameStepRef.current;
-    if (step <= 0) return;
-    const current = Math.round(offsetRef.current / step) % ITEM_COUNT;
-    let delta = index - current;
-    if (delta > ITEM_COUNT / 2) delta -= ITEM_COUNT;
-    if (delta < -ITEM_COUNT / 2) delta += ITEM_COUNT;
-    offsetRef.current = normalizeOffset(
-      offsetRef.current + delta * step,
-      setWidthRef.current,
-    );
-    applyTransform(offsetRef.current);
-    setActiveIndex(index);
-  };
+  const nudge = useCallback(
+    (direction: -1 | 1) => {
+      if (!ensureMeasured()) return;
+      pauseAuto();
+      const step = frameStepRef.current;
+      offsetRef.current = normalizeOffset(
+        offsetRef.current + direction * step,
+        setWidthRef.current,
+      );
+      applyTransform(offsetRef.current);
+      updateActiveIndex();
+    },
+    [applyTransform, ensureMeasured, pauseAuto, updateActiveIndex],
+  );
 
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
-    if (isMobile) return;
-    pauseAuto();
+    if (isMobileViewportNow()) return;
     if (event.key === "ArrowLeft") {
       event.preventDefault();
       nudge(-1);
@@ -177,15 +182,17 @@ export default function PilotPersonalFilmstrip() {
   };
 
   const onPointerDown = (event: React.PointerEvent) => {
-    if (isMobile) return;
+    if (isMobileViewportNow()) return;
+    if (!ensureMeasured()) return;
     pauseAuto();
+    isDraggingRef.current = true;
     setIsDragging(true);
     dragStart.current = { x: event.clientX, offset: offsetRef.current };
     viewportRef.current?.setPointerCapture(event.pointerId);
   };
 
   const onPointerMove = (event: React.PointerEvent) => {
-    if (!isDragging || isMobile) return;
+    if (!isDraggingRef.current || isMobileViewportNow()) return;
     const delta = event.clientX - dragStart.current.x;
     offsetRef.current = normalizeOffset(
       dragStart.current.offset - delta,
@@ -195,8 +202,9 @@ export default function PilotPersonalFilmstrip() {
     updateActiveIndex();
   };
 
-  const onPointerUp = (event: React.PointerEvent) => {
-    if (isMobile) return;
+  const endDrag = (event: React.PointerEvent) => {
+    if (isMobileViewportNow()) return;
+    isDraggingRef.current = false;
     setIsDragging(false);
     viewportRef.current?.releasePointerCapture(event.pointerId);
     pauseAuto();
@@ -252,10 +260,6 @@ export default function PilotPersonalFilmstrip() {
     <section
       className="pilot-section-personal relative overflow-hidden border-t border-border bg-[#F3EBD4] py-10 sm:py-12 lg:py-14"
       aria-labelledby={`${baseId}-heading`}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => {
-        if (!userControlRef.current) setIsPaused(false);
-      }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
@@ -288,11 +292,7 @@ export default function PilotPersonalFilmstrip() {
           <div className="mx-auto mb-2 flex max-w-6xl justify-end gap-2 px-4 sm:px-6 lg:px-8">
             <button
               type="button"
-              onClick={() =>
-                scrollToIndex(
-                  (activeIndex - 1 + ITEM_COUNT) % ITEM_COUNT,
-                )
-              }
+              onClick={() => nudge(-1)}
               className="pilot-btn-discover"
               aria-label="Previous personal insurance product"
             >
@@ -300,7 +300,7 @@ export default function PilotPersonalFilmstrip() {
             </button>
             <button
               type="button"
-              onClick={() => scrollToIndex((activeIndex + 1) % ITEM_COUNT)}
+              onClick={() => nudge(1)}
               className="pilot-btn-discover"
               aria-label="Next personal insurance product"
             >
@@ -308,7 +308,6 @@ export default function PilotPersonalFilmstrip() {
             </button>
           </div>
 
-          {/* Desktop: transform loop */}
           <div
             ref={viewportRef}
             className={`pilot-filmstrip-viewport ${isDragging ? "is-dragging" : ""}`}
@@ -319,8 +318,16 @@ export default function PilotPersonalFilmstrip() {
             onKeyDown={onKeyDown}
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
-            onPointerUp={onPointerUp}
-            onPointerCancel={onPointerUp}
+            onPointerUp={endDrag}
+            onPointerCancel={endDrag}
+            onMouseEnter={() => {
+              isPausedRef.current = true;
+            }}
+            onMouseLeave={() => {
+              if (!userControlRef.current) {
+                isPausedRef.current = false;
+              }
+            }}
           >
             <div
               ref={innerRef}
@@ -332,7 +339,6 @@ export default function PilotPersonalFilmstrip() {
             </div>
           </div>
 
-          {/* Mobile: native swipe, single set, no autoplay */}
           <div
             className="pilot-filmstrip-track pilot-filmstrip-track-dense pilot-filmstrip-track-mobile"
             role="region"

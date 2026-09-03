@@ -590,6 +590,17 @@
   pointer-events: none;
 }
 
+/* —— Scrollbar hide utility —— */
+
+.pilot-scroll-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.pilot-scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* —— Carrier marquee pilot —— */
 
 .pilot-carrier-marquee {
@@ -631,6 +642,15 @@
   to {
     transform: translate3d(-50%, 0, 0);
   }
+}
+
+.pilot-carrier-static-fallback {
+  /* !important beats Tailwind `grid` on the same element in normal motion */
+  display: none !important;
+}
+
+.pilot-awards-static-fallback {
+  display: none !important;
 }
 
 /* —— Filmstrip —— */
@@ -865,8 +885,12 @@
     display: none !important;
   }
 
-  .pilot-awards-static {
-    display: block;
+  .pilot-carrier-static-fallback {
+    display: grid !important;
+  }
+
+  .pilot-awards-static-fallback {
+    display: block !important;
   }
 
   .pilot-hero-bg-layer,

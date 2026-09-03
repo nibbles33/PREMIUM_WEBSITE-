@@ -3,7 +3,6 @@
 import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { pilotAwardBadges, type AwardBadge } from "@/data/pilot-home";
-import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 function AwardCard({ badge }: { badge: AwardBadge }) {
   return (
@@ -35,7 +34,6 @@ function AwardCard({ badge }: { badge: AwardBadge }) {
 }
 
 export default function PilotLocalProof() {
-  const reduceMotion = usePrefersReducedMotion();
   const doubled = [...pilotAwardBadges, ...pilotAwardBadges];
 
   return (
@@ -60,31 +58,31 @@ export default function PilotLocalProof() {
         </RevealOnScroll>
       </div>
 
-      {reduceMotion ? (
-        <div
-          className="pilot-awards-static mt-7 overflow-x-auto px-4 pb-2 sm:mt-8"
-          aria-label="Awards and recognition"
-        >
-          <div className="mx-auto flex w-max gap-4 sm:gap-5">
-            {pilotAwardBadges.map((badge) => (
-              <AwardCard key={badge.src} badge={badge} />
+      {/* Normal motion: single animated rail */}
+      <div
+        className="pilot-awards-marquee mt-7 sm:mt-8"
+        aria-label="Awards and recognition"
+      >
+        <div className="pilot-awards-lane overflow-hidden">
+          <div className="pilot-awards-track pilot-awards-track-slow gap-4 sm:gap-5">
+            {doubled.map((badge, i) => (
+              <AwardCard key={`${badge.src}-${i}`} badge={badge} />
             ))}
           </div>
         </div>
-      ) : (
-        <div
-          className="pilot-awards-marquee mt-7 sm:mt-8"
-          aria-label="Awards and recognition"
-        >
-          <div className="pilot-awards-lane overflow-hidden">
-            <div className="pilot-awards-track pilot-awards-track-slow gap-4 sm:gap-5">
-              {doubled.map((badge, i) => (
-                <AwardCard key={`${badge.src}-${i}`} badge={badge} />
-              ))}
-            </div>
-          </div>
+      </div>
+
+      {/* Reduced motion: manual scroll, scrollbar hidden */}
+      <div
+        className="pilot-awards-static-fallback pilot-scroll-hide mt-7 overflow-x-auto px-4 pb-2 sm:mt-8"
+        aria-label="Awards and recognition"
+      >
+        <div className="mx-auto flex w-max gap-4 sm:gap-5">
+          {pilotAwardBadges.map((badge) => (
+            <AwardCard key={badge.src} badge={badge} />
+          ))}
         </div>
-      )}
+      </div>
 
       <p className="mx-auto mt-6 max-w-xl px-4 text-center text-[13px] leading-relaxed text-secondary">
         Platinum Winner four years running (2021–2024) · Gold Winner 2026
