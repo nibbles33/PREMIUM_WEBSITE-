@@ -61,13 +61,16 @@ export default function PilotLocalProof() {
       </div>
 
       {reduceMotion ? (
-        <ul className="mx-auto mt-6 grid max-w-4xl list-none grid-cols-1 gap-4 px-4 sm:grid-cols-2">
-          {pilotAwardBadges.map((badge) => (
-            <li key={badge.src}>
-              <AwardCard badge={badge} />
-            </li>
-          ))}
-        </ul>
+        <div
+          className="pilot-awards-static mt-7 overflow-x-auto px-4 pb-2 sm:mt-8"
+          aria-label="Awards and recognition"
+        >
+          <div className="mx-auto flex w-max gap-4 sm:gap-5">
+            {pilotAwardBadges.map((badge) => (
+              <AwardCard key={badge.src} badge={badge} />
+            ))}
+          </div>
+        </div>
       ) : (
         <div
           className="pilot-awards-marquee mt-7 sm:mt-8"

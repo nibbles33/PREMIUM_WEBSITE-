@@ -19,6 +19,12 @@ export const PILOT_CHIP_IMAGE = {
   sizes: "88px",
 } as const;
 
+export const PILOT_YEP_TILE_IMAGE = {
+  quality: 85,
+  /** ~96px photo at 2x DPR inside premium media tiles. */
+  sizes: "192px",
+} as const;
+
 export const PILOT_COMMERCIAL_PANEL_IMAGE = {
   quality: 85,
   sizes: "(max-width: 1024px) 100vw, 720px",

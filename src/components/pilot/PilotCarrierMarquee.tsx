@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import PartnerLogoCard from "@/components/PartnerLogoCard";
 import { homepageCarriers } from "@/data/partners";
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 function MarqueeSegment({
   focusable,
@@ -29,6 +32,8 @@ function MarqueeSegment({
 }
 
 export default function PilotCarrierMarquee() {
+  const reduceMotion = usePrefersReducedMotion();
+
   return (
     <section
       className="border-y border-border bg-[#F0EBE0] py-6 sm:py-8"
@@ -61,28 +66,33 @@ export default function PilotCarrierMarquee() {
         </div>
       </div>
 
-      <div
-        className="pilot-carrier-marquee mt-7 sm:mt-8"
-        aria-label="Insurance carrier partners"
-      >
-        <div className="pilot-carrier-marquee-track gap-5 sm:gap-6">
-          <MarqueeSegment focusable />
-          <MarqueeSegment focusable={false} ariaHidden />
+      {reduceMotion ? (
+        <ul
+          className="pilot-carrier-static mx-auto mt-7 grid max-w-6xl list-none grid-cols-2 gap-4 px-4 sm:mt-8 sm:grid-cols-3 sm:gap-5 sm:px-6 md:grid-cols-4 lg:grid-cols-6 lg:px-8 xl:max-w-7xl"
+          aria-label="Insurance carrier partners"
+        >
+          {homepageCarriers.map((carrier) => (
+            <li key={`static-${carrier.name}`}>
+              <PartnerLogoCard
+                partner={carrier}
+                size="marquee"
+                href="/partners/"
+                className="w-full min-w-0"
+              />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div
+          className="pilot-carrier-marquee mt-7 sm:mt-8"
+          aria-label="Insurance carrier partners"
+        >
+          <div className="pilot-carrier-marquee-track gap-5 sm:gap-6">
+            <MarqueeSegment focusable />
+            <MarqueeSegment focusable={false} ariaHidden />
+          </div>
         </div>
-      </div>
-
-      <ul className="pilot-carrier-static mx-auto mt-7 grid max-w-6xl list-none grid-cols-2 gap-4 px-4 sm:grid-cols-3 sm:gap-5 sm:px-6 md:grid-cols-4 lg:grid-cols-6 lg:px-8 xl:max-w-7xl">
-        {homepageCarriers.map((carrier) => (
-          <li key={`static-${carrier.name}`}>
-            <PartnerLogoCard
-              partner={carrier}
-              size="marquee"
-              href="/partners/"
-              className="w-full min-w-0"
-            />
-          </li>
-        ))}
-      </ul>
+      )}
     </section>
   );
 }

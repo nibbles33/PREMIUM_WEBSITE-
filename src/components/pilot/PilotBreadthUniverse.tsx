@@ -9,30 +9,30 @@ import {
   yepLanePersonal,
   type CoverageStreamItem,
 } from "@/data/pilot-home";
-import { PILOT_CHIP_IMAGE } from "@/data/photography";
+import { PILOT_YEP_TILE_IMAGE } from "@/data/photography";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
-function StreamChip({ item }: { item: CoverageStreamItem }) {
+function YepMediaTile({ item }: { item: CoverageStreamItem }) {
   const photo = getFilmstripPhoto(item.photoSlug);
   return (
     <Link
       href={item.href}
-      className="pilot-yep-chip group flex shrink-0 items-center gap-3 rounded-xl border border-white/15 bg-charcoal/80 py-2 pl-2 pr-4 backdrop-blur-sm transition-[border-color,box-shadow] duration-200 hover:border-gold/45 hover:shadow-[0_8px_24px_rgba(208,173,38,0.15)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+      className="pilot-yep-tile group flex shrink-0 items-center gap-3.5 rounded-xl border border-white/15 bg-charcoal/85 py-2.5 pl-2.5 pr-5 backdrop-blur-sm transition-[border-color,box-shadow,transform] duration-200 hover:border-gold/50 hover:shadow-[0_10px_28px_rgba(208,173,38,0.18)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:gap-4 sm:py-3 sm:pl-3 sm:pr-6"
     >
-      <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg">
+      <span className="relative h-16 w-[5.5rem] shrink-0 overflow-hidden rounded-lg sm:h-[4.75rem] sm:w-24">
         {photo ? (
           <Image
             src={photo.src}
             alt=""
             fill
-            sizes={PILOT_CHIP_IMAGE.sizes}
-            quality={PILOT_CHIP_IMAGE.quality}
+            sizes={PILOT_YEP_TILE_IMAGE.sizes}
+            quality={PILOT_YEP_TILE_IMAGE.quality}
             loading="lazy"
-            className="object-cover"
+            className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.04]"
           />
         ) : null}
       </span>
-      <span className="whitespace-nowrap text-[13px] font-medium text-white/90 group-hover:text-gold">
+      <span className="whitespace-nowrap text-[14px] font-medium tracking-tight text-white/92 group-hover:text-gold sm:text-[15px]">
         {item.label}
       </span>
     </Link>
@@ -50,7 +50,6 @@ function AnimatedLane({
   speedSeconds: number;
   ariaLabel: string;
 }) {
-  const reduceMotion = usePrefersReducedMotion();
   const doubled = [...items, ...items];
 
   return (
@@ -60,10 +59,34 @@ function AnimatedLane({
       style={{ "--pilot-lane-speed": `${speedSeconds}s` } as React.CSSProperties}
     >
       <div
-        className={`pilot-yep-lane-track pilot-yep-lane-moderate ${direction === "left" ? "is-left" : "is-right"} ${reduceMotion ? "is-static" : ""}`}
+        className={`pilot-yep-lane-track pilot-yep-lane-moderate ${direction === "left" ? "is-left" : "is-right"}`}
       >
         {doubled.map((item, i) => (
-          <StreamChip key={`${item.label}-${i}`} item={item} />
+          <YepMediaTile key={`${item.label}-${i}`} item={item} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ManualLane({
+  items,
+  ariaLabel,
+}: {
+  items: CoverageStreamItem[];
+  ariaLabel: string;
+}) {
+  return (
+    <div
+      className="pilot-yep-lane-static overflow-x-auto px-4 pb-1 scrollbar-none md:px-6"
+      role="list"
+      aria-label={ariaLabel}
+    >
+      <div className="flex w-max gap-3 sm:gap-3.5">
+        {items.map((item) => (
+          <div key={item.label} role="listitem">
+            <YepMediaTile item={item} />
+          </div>
         ))}
       </div>
     </div>
@@ -106,42 +129,36 @@ export default function PilotBreadthUniverse() {
         </RevealOnScroll>
       </div>
 
-      {reduceMotion ? (
-        <RevealOnScroll className="mt-8">
-          <ul className="mx-auto flex max-w-4xl flex-wrap justify-center gap-3 px-4">
-            {[...yepLanePersonal, ...yepLaneCommercial].map((item) => (
-              <li key={`static-${item.label}`}>
-                <StreamChip item={item} />
-              </li>
-            ))}
-          </ul>
-        </RevealOnScroll>
-      ) : (
-        <RevealOnScroll className="mt-8 space-y-3">
-          {/* Lane 1 — personal/lifestyle: moderate continuous motion */}
-          <AnimatedLane
-            items={yepLanePersonal}
-            direction="right"
-            speedSeconds={88}
-            ariaLabel="Personal and lifestyle insurance coverage"
-          />
+      <RevealOnScroll className="mt-8 space-y-3 sm:space-y-4">
+        {reduceMotion ? (
+          <>
+            <ManualLane
+              items={yepLanePersonal}
+              ariaLabel="Personal and lifestyle insurance coverage"
+            />
+            <ManualLane
+              items={yepLaneCommercial}
+              ariaLabel="Business and commercial insurance coverage"
+            />
+          </>
+        ) : (
+          <>
+            {/* Lane 1 — personal/lifestyle: moderate continuous motion */}
+            <AnimatedLane
+              items={yepLanePersonal}
+              direction="right"
+              speedSeconds={88}
+              ariaLabel="Personal and lifestyle insurance coverage"
+            />
 
-          {/* Lane 2 — business/commercial: static scroll (no continuous motion) */}
-          <div
-            className="pilot-yep-lane-static overflow-x-auto px-4 pb-1 scrollbar-none md:px-6"
-            role="list"
-            aria-label="Business and commercial insurance coverage"
-          >
-            <div className="flex w-max gap-3">
-              {yepLaneCommercial.map((item) => (
-                <div key={item.label} role="listitem">
-                  <StreamChip item={item} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </RevealOnScroll>
-      )}
+            {/* Lane 2 — business/commercial: manual scroll (calmer) */}
+            <ManualLane
+              items={yepLaneCommercial}
+              ariaLabel="Business and commercial insurance coverage"
+            />
+          </>
+        )}
+      </RevealOnScroll>
 
       <RevealOnScroll className="relative mt-8 text-center">
         <Link

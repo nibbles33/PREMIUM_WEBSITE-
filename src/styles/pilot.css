@@ -470,8 +470,13 @@
   }
 }
 
-.pilot-yep-chip {
+.pilot-yep-chip,
+.pilot-yep-tile {
   min-height: 44px;
+}
+
+.pilot-yep-tile {
+  min-width: clamp(196px, 22vw, 248px);
 }
 
 /* —— Moving awards —— */
@@ -610,7 +615,6 @@
   align-items: center;
   width: max-content;
   will-change: transform;
-  backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   animation: pilot-carrier-scroll 110s linear infinite;
 }
@@ -627,10 +631,6 @@
   to {
     transform: translate3d(-50%, 0, 0);
   }
-}
-
-.pilot-carrier-static {
-  display: none;
 }
 
 /* —— Filmstrip —— */
@@ -865,8 +865,8 @@
     display: none !important;
   }
 
-  .pilot-carrier-static {
-    display: grid !important;
+  .pilot-awards-static {
+    display: block;
   }
 
   .pilot-hero-bg-layer,
