@@ -13,7 +13,9 @@ import {
   Timer,
   UserRound,
 } from "lucide-react";
+import Image from "next/image";
 import type { AutoCoverageItem } from "@/data/pilot-auto";
+import { PILOT_AUTO_COVERAGE_CAR } from "@/data/photography/pilot-images";
 
 type AutoCoverageVisualStageProps = {
   active: AutoCoverageItem;
@@ -44,29 +46,31 @@ export default function AutoCoverageVisualStage({
       </p>
 
       <div className="pilot-auto-coverage-stage-frame">
-        {/* Asset slot — awaiting commissioned miniature car illustration */}
-        <div className="pilot-auto-car-asset-slot" aria-hidden>
-          <div className="pilot-auto-car-asset-platform" />
-          <div className="pilot-auto-car-asset-placeholder">
-            <Car className="h-8 w-8 text-charcoal/20" strokeWidth={1.25} />
-            <span className="pilot-auto-car-asset-label">
-              Premium miniature car
-              <span className="block text-[11px] font-normal text-secondary/80">
-                Illustration pending
-              </span>
-            </span>
-          </div>
+        <div className="pilot-auto-car-hero" aria-hidden>
+          <div className="pilot-auto-car-hero-platform" />
+          <Image
+            src={PILOT_AUTO_COVERAGE_CAR.src}
+            alt=""
+            width={PILOT_AUTO_COVERAGE_CAR.width}
+            height={PILOT_AUTO_COVERAGE_CAR.height}
+            quality={PILOT_AUTO_COVERAGE_CAR.quality}
+            sizes={PILOT_AUTO_COVERAGE_CAR.sizes}
+            priority
+            className="pilot-auto-car-hero-image"
+          />
         </div>
 
-        {/* Coverage-specific protection layers */}
         <div
           className={`pilot-auto-coverage-scene pilot-auto-coverage-scene--${active.visualScene}`}
           aria-hidden
         >
+          <span className="pilot-auto-scene-ambient" />
+
           {active.visualScene === "liability" ? (
             <>
               <span className="pilot-auto-scene-ring pilot-auto-scene-ring--outer" />
               <span className="pilot-auto-scene-ring pilot-auto-scene-ring--inner" />
+              <span className="pilot-auto-scene-zone pilot-auto-scene-zone--perimeter" />
               <span className="pilot-auto-scene-badge pilot-auto-scene-badge--left">
                 <Shield className="h-5 w-5" strokeWidth={1.5} />
                 <span>Others protected</span>
@@ -77,6 +81,7 @@ export default function AutoCoverageVisualStage({
           {active.visualScene === "collision" ? (
             <>
               <span className="pilot-auto-scene-impact" />
+              <span className="pilot-auto-scene-zone pilot-auto-scene-zone--front" />
               <span className="pilot-auto-scene-badge pilot-auto-scene-badge--front">
                 <Car className="h-5 w-5" strokeWidth={1.5} />
                 <span>Your vehicle</span>
@@ -86,6 +91,7 @@ export default function AutoCoverageVisualStage({
 
           {active.visualScene === "comprehensive" ? (
             <>
+              <span className="pilot-auto-scene-zone pilot-auto-scene-zone--sky" />
               <span className="pilot-auto-scene-weather pilot-auto-scene-weather--cloud">
                 <CloudRain className="h-5 w-5" strokeWidth={1.5} />
               </span>
@@ -103,6 +109,7 @@ export default function AutoCoverageVisualStage({
 
           {active.visualScene === "accident-benefits" ? (
             <>
+              <span className="pilot-auto-scene-zone pilot-auto-scene-zone--cabin" />
               <span className="pilot-auto-scene-occupant pilot-auto-scene-occupant--driver">
                 <UserRound className="h-4 w-4" strokeWidth={1.5} />
               </span>
@@ -122,6 +129,7 @@ export default function AutoCoverageVisualStage({
               <span className="pilot-auto-scene-shield-between">
                 <ShieldAlert className="h-6 w-6" strokeWidth={1.5} />
               </span>
+              <span className="pilot-auto-scene-zone pilot-auto-scene-zone--barrier" />
               <span className="pilot-auto-scene-badge pilot-auto-scene-badge--side">
                 <span>Uninsured driver</span>
               </span>
@@ -136,6 +144,7 @@ export default function AutoCoverageVisualStage({
               <span className="pilot-auto-scene-keys">
                 <KeyRound className="h-5 w-5" strokeWidth={1.5} />
               </span>
+              <span className="pilot-auto-scene-path" />
               <span className="pilot-auto-scene-arrow" aria-hidden>
                 →
               </span>

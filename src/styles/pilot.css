@@ -981,68 +981,200 @@
 
 .pilot-auto-coverage-stage-frame {
   position: relative;
-  min-height: 17.5rem;
+  min-height: 20rem;
   border-radius: 1rem;
   background: linear-gradient(180deg, #fafaf8 0%, #f3f0e8 100%);
   border: 1px solid var(--pilot-border);
   overflow: hidden;
 }
 
-.pilot-auto-car-asset-slot {
+.pilot-auto-car-hero {
   position: absolute;
   inset: 0;
+  z-index: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  padding: 0 3% 1.5%;
 }
 
-.pilot-auto-car-asset-platform {
+.pilot-auto-car-hero-platform {
   position: absolute;
-  bottom: 18%;
+  bottom: 7%;
   left: 50%;
-  width: 62%;
-  height: 1.25rem;
+  width: 56%;
+  height: 1.5rem;
   transform: translateX(-50%);
   border-radius: 9999px;
   background: radial-gradient(
     ellipse,
-    rgba(32, 39, 40, 0.12) 0%,
+    rgba(32, 39, 40, 0.14) 0%,
     transparent 72%
   );
 }
 
-.pilot-auto-car-asset-placeholder {
+.pilot-auto-car-hero-image {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1.5rem 2rem;
-  border-radius: 1rem;
-  border: 2px dashed color-mix(in srgb, var(--pilot-gold) 35%, var(--pilot-border));
-  background: rgba(255, 255, 255, 0.72);
-  text-align: center;
-}
-
-.pilot-auto-car-asset-label {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  line-height: 1.35;
-  color: var(--pilot-charcoal);
+  width: min(94%, 23rem);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 28px rgba(32, 39, 40, 0.12));
 }
 
 .pilot-auto-coverage-scene {
   position: absolute;
   inset: 0;
+  z-index: 2;
   pointer-events: none;
   transition: opacity 280ms ease-out;
+}
+
+.pilot-auto-scene-ambient {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 280ms ease-out;
+}
+
+.pilot-auto-coverage-scene--liability .pilot-auto-scene-ambient {
+  opacity: 1;
+  background: radial-gradient(
+    ellipse 72% 58% at 50% 54%,
+    rgba(208, 173, 38, 0.1) 0%,
+    transparent 72%
+  );
+}
+
+.pilot-auto-coverage-scene--collision .pilot-auto-scene-ambient {
+  opacity: 1;
+  background: radial-gradient(
+    circle at 32% 58%,
+    rgba(208, 173, 38, 0.2) 0%,
+    transparent 48%
+  );
+}
+
+.pilot-auto-coverage-scene--comprehensive .pilot-auto-scene-ambient {
+  opacity: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(91, 122, 153, 0.14) 0%,
+    transparent 46%
+  );
+}
+
+.pilot-auto-coverage-scene--accident-benefits .pilot-auto-scene-ambient {
+  opacity: 1;
+  background: radial-gradient(
+    ellipse 42% 28% at 50% 40%,
+    rgba(251, 245, 229, 0.85) 0%,
+    transparent 100%
+  );
+}
+
+.pilot-auto-coverage-scene--uninsured .pilot-auto-scene-ambient {
+  opacity: 1;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(208, 173, 38, 0.08) 58%,
+    rgba(32, 39, 40, 0.06) 100%
+  );
+}
+
+.pilot-auto-coverage-scene--loss-of-use .pilot-auto-scene-ambient {
+  opacity: 1;
+  background: radial-gradient(
+    circle at 78% 68%,
+    rgba(91, 122, 153, 0.12) 0%,
+    transparent 52%
+  );
+}
+
+.pilot-auto-scene-zone {
+  position: absolute;
+  pointer-events: none;
+  transition: opacity 280ms ease-out;
+}
+
+.pilot-auto-scene-zone--perimeter {
+  left: 50%;
+  top: 52%;
+  width: 15rem;
+  height: 9.5rem;
+  transform: translate(-50%, -50%);
+  border: 1.5px dashed rgba(208, 173, 38, 0.38);
+  border-radius: 50%;
+}
+
+.pilot-auto-scene-zone--front {
+  left: 24%;
+  top: 46%;
+  width: 5.25rem;
+  height: 4rem;
+  transform: rotate(-16deg);
+  border: 2px solid rgba(208, 173, 38, 0.62);
+  border-radius: 0.75rem;
+  box-shadow:
+    0 0 0 6px rgba(208, 173, 38, 0.1),
+    inset 0 0 12px rgba(208, 173, 38, 0.08);
+}
+
+.pilot-auto-scene-zone--sky {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 44%;
+  border-radius: 1rem 1rem 45% 45%;
+  background: linear-gradient(
+    180deg,
+    rgba(91, 122, 153, 0.1) 0%,
+    transparent 100%
+  );
+}
+
+.pilot-auto-scene-zone--cabin {
+  left: 50%;
+  top: 37%;
+  width: 6rem;
+  height: 3.25rem;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+  border: 1.5px solid rgba(208, 173, 38, 0.45);
+  box-shadow: 0 0 18px rgba(208, 173, 38, 0.16);
+}
+
+.pilot-auto-scene-zone--barrier {
+  right: 17%;
+  top: 36%;
+  width: 3px;
+  height: 5.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(208, 173, 38, 0.65) 35%,
+    rgba(208, 173, 38, 0.65) 65%,
+    transparent 100%
+  );
+  box-shadow: 0 0 14px rgba(208, 173, 38, 0.2);
+}
+
+.pilot-auto-scene-path {
+  position: absolute;
+  left: 20%;
+  bottom: 31%;
+  width: 44%;
+  height: 0;
+  border-top: 2px dashed rgba(208, 173, 38, 0.42);
+  transform: rotate(-6deg);
 }
 
 .pilot-auto-scene-ring {
   position: absolute;
   left: 50%;
-  top: 46%;
+  top: 52%;
   transform: translate(-50%, -50%);
   border-radius: 9999px;
   border: 2px solid rgba(208, 173, 38, 0.55);
@@ -1050,13 +1182,13 @@
 }
 
 .pilot-auto-scene-ring--outer {
-  width: 14rem;
-  height: 14rem;
+  width: 16rem;
+  height: 10.5rem;
 }
 
 .pilot-auto-scene-ring--inner {
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 8rem;
   animation-delay: 0.4s;
 }
 
@@ -1077,13 +1209,13 @@
 }
 
 .pilot-auto-scene-badge--left {
-  left: 6%;
-  top: 28%;
+  left: 3%;
+  top: 20%;
 }
 
 .pilot-auto-scene-badge--front {
-  right: 8%;
-  top: 32%;
+  right: 5%;
+  top: 22%;
 }
 
 .pilot-auto-scene-badge--top {
@@ -1111,14 +1243,15 @@
 
 .pilot-auto-scene-impact {
   position: absolute;
-  right: 14%;
-  top: 38%;
-  width: 4.5rem;
-  height: 4.5rem;
-  border-radius: 9999px;
-  border: 2px solid rgba(208, 173, 38, 0.65);
+  left: 26%;
+  top: 48%;
+  width: 5rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  transform: rotate(-16deg);
+  border: 2px solid rgba(208, 173, 38, 0.7);
   box-shadow:
-    0 0 0 8px rgba(208, 173, 38, 0.12),
+    0 0 0 8px rgba(208, 173, 38, 0.14),
     0 0 0 16px rgba(208, 173, 38, 0.06);
 }
 
@@ -1137,18 +1270,18 @@
 }
 
 .pilot-auto-scene-weather--cloud {
-  left: 10%;
-  top: 18%;
+  left: 8%;
+  top: 12%;
 }
 
 .pilot-auto-scene-weather--bolt {
-  right: 12%;
-  top: 14%;
+  right: 10%;
+  top: 10%;
 }
 
 .pilot-auto-scene-weather--snow {
-  left: 14%;
-  bottom: 20%;
+  left: 12%;
+  top: 22%;
 }
 
 .pilot-auto-scene-occupant {
@@ -1165,30 +1298,31 @@
 }
 
 .pilot-auto-scene-occupant--driver {
-  left: 38%;
-  bottom: 28%;
+  left: 39%;
+  bottom: 44%;
 }
 
 .pilot-auto-scene-occupant--passenger {
-  right: 38%;
-  bottom: 28%;
+  right: 33%;
+  bottom: 44%;
 }
 
 .pilot-auto-scene-other-car {
   position: absolute;
-  right: 8%;
-  top: 42%;
-  width: 3.5rem;
-  height: 1.75rem;
+  right: 5%;
+  top: 43%;
+  width: 3.25rem;
+  height: 1.6rem;
   border-radius: 0.375rem;
-  background: rgba(32, 39, 40, 0.12);
-  border: 1px solid rgba(32, 39, 40, 0.18);
+  background: rgba(32, 39, 40, 0.14);
+  border: 1px solid rgba(32, 39, 40, 0.22);
+  box-shadow: 0 4px 10px rgba(32, 39, 40, 0.08);
 }
 
 .pilot-auto-scene-shield-between {
   position: absolute;
-  right: 22%;
-  top: 36%;
+  right: 19%;
+  top: 38%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1203,8 +1337,8 @@
 
 .pilot-auto-scene-replacement-car {
   position: absolute;
-  right: 10%;
-  bottom: 24%;
+  right: 7%;
+  bottom: 26%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1218,8 +1352,8 @@
 
 .pilot-auto-scene-keys {
   position: absolute;
-  left: 12%;
-  bottom: 26%;
+  left: 8%;
+  bottom: 28%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1233,8 +1367,8 @@
 
 .pilot-auto-scene-arrow {
   position: absolute;
-  left: 50%;
-  bottom: 30%;
+  left: 52%;
+  bottom: 32%;
   transform: translateX(-50%);
   font-size: 1.5rem;
   font-weight: 500;
@@ -1349,6 +1483,36 @@
 @media (hover: hover) and (pointer: fine) {
   .pilot-auto-coverage-card:hover {
     transform: translateX(3px);
+  }
+}
+
+@media (max-width: 767px) {
+  .pilot-auto-coverage-stage-frame {
+    min-height: 17.5rem;
+  }
+
+  .pilot-auto-car-hero-image {
+    width: min(98%, 20rem);
+  }
+
+  .pilot-auto-scene-ring--outer {
+    width: 13.5rem;
+    height: 9rem;
+  }
+
+  .pilot-auto-scene-ring--inner {
+    width: 10rem;
+    height: 6.75rem;
+  }
+
+  .pilot-auto-scene-zone--perimeter {
+    width: 12.5rem;
+    height: 8rem;
+  }
+
+  .pilot-auto-scene-badge {
+    font-size: 0.625rem;
+    padding: 0.3rem 0.5rem;
   }
 }
 

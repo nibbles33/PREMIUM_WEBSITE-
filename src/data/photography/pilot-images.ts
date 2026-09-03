@@ -39,3 +39,12 @@ export const PILOT_AUTO_RELATED_IMAGE = {
   quality: 85,
   sizes: "(max-width: 767px) 240px, 360px",
 } as const;
+
+export const PILOT_AUTO_COVERAGE_CAR = {
+  src: "/images/miniatures/premium-miniature-car.png",
+  width: 1254,
+  height: 1254,
+  quality: 92,
+  /** Stage ~480px desktop; cap at native 1254px for crisp 2x. */
+  sizes: "(max-width: 767px) min(100vw, 360px), 480px",
+} as const;
