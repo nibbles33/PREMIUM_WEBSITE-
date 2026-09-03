@@ -9,6 +9,7 @@ import {
   yepLanePersonal,
   type CoverageStreamItem,
 } from "@/data/pilot-home";
+import { PILOT_CHIP_IMAGE } from "@/data/photography";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 function StreamChip({ item }: { item: CoverageStreamItem }) {
@@ -24,7 +25,8 @@ function StreamChip({ item }: { item: CoverageStreamItem }) {
             src={photo.src}
             alt=""
             fill
-            sizes="44px"
+            sizes={PILOT_CHIP_IMAGE.sizes}
+            quality={PILOT_CHIP_IMAGE.quality}
             loading="lazy"
             className="object-cover"
           />

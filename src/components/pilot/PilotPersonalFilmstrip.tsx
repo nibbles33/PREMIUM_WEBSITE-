@@ -17,6 +17,7 @@ import {
   getFilmstripPhoto,
   personalFilmstripItems,
 } from "@/data/pilot-home";
+import { PILOT_FILMSTRIP_IMAGE } from "@/data/photography";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 /** ~39px/s at 60fps — primary continuous motion zone */
@@ -55,7 +56,8 @@ export default function PilotPersonalFilmstrip() {
   const applyTransform = useCallback((offset: number) => {
     const inner = innerRef.current;
     if (!inner) return;
-    inner.style.transform = `translate3d(-${offset}px, 0, 0)`;
+    const aligned = Math.round(offset * 2) / 2;
+    inner.style.transform = `translate3d(-${aligned}px, 0, 0)`;
   }, []);
 
   const measure = useCallback(() => {
@@ -231,7 +233,8 @@ export default function PilotPersonalFilmstrip() {
               src={photo.src}
               alt=""
               fill
-              sizes="220px"
+              sizes={PILOT_FILMSTRIP_IMAGE.sizes}
+              quality={PILOT_FILMSTRIP_IMAGE.quality}
               loading={logicalIndex < 4 ? "eager" : "lazy"}
               className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.05]"
             />

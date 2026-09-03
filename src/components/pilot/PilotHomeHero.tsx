@@ -4,6 +4,10 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 import ProtectionArc from "@/components/pilot/ProtectionArc";
+import {
+  getHomepageHeroPhotography,
+  PILOT_HERO_IMAGE,
+} from "@/data/photography";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const QUOTE_HREF = "/get-a-quote/";
@@ -37,6 +41,7 @@ function CarAssetSlot({ parked }: { parked: boolean }) {
 }
 
 export default function PilotHomeHero() {
+  const heroPhoto = getHomepageHeroPhotography();
   const reduceMotion = usePrefersReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
   const [carPhase, setCarPhase] = useState<CarPhase>(
@@ -118,12 +123,14 @@ export default function PilotHomeHero() {
         style={{ transform: `translate3d(${bgShift}px, 0, 0)` }}
       >
         <Image
-          src="/images/photography/personal/home-insurance.webp"
+          src={heroPhoto.src}
           alt=""
           fill
           priority
           fetchPriority="high"
-          sizes="100vw"
+          sizes={PILOT_HERO_IMAGE.sizes}
+          quality={PILOT_HERO_IMAGE.quality}
+          unoptimized={PILOT_HERO_IMAGE.unoptimized}
           className="object-cover object-[center_35%]"
         />
         <div

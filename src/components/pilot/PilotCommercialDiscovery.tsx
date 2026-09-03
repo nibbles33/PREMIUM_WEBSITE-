@@ -13,7 +13,10 @@ import {
 import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { commercialCategories } from "@/data/pilot-home";
-import { getPageHeroPhotography } from "@/data/photography";
+import {
+  getPageHeroPhotography,
+  PILOT_COMMERCIAL_PANEL_IMAGE,
+} from "@/data/photography";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 export default function PilotCommercialDiscovery() {
@@ -153,7 +156,8 @@ export default function PilotCommercialDiscovery() {
                     src={photo.src}
                     alt=""
                     fill
-                    sizes="(max-width: 1024px) 100vw, 540px"
+                    sizes={PILOT_COMMERCIAL_PANEL_IMAGE.sizes}
+                    quality={PILOT_COMMERCIAL_PANEL_IMAGE.quality}
                     className="object-cover"
                   />
                 ) : null}

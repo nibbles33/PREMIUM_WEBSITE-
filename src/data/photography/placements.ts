@@ -18,6 +18,14 @@ const TEMPORARY_NOTE =
 /** Production photography wired from visual audit (HIGH + reviewed MEDIUM). */
 export const photographyPlacements: PhotographyPlacement[] = [
   {
+    slug: "homepage-hero",
+    category: "special",
+    route: "/",
+    src: "/images/photography/special/homepage-hero.webp",
+    alt: "Family walking from their car toward their suburban home with groceries",
+    confidence: "HIGH",
+  },
+  {
     slug: "auto-insurance",
     category: "personal",
     route: "/auto-insurance/",
@@ -262,4 +270,9 @@ export function getPageHeroPhotography(
     return undefined;
   }
   return placement;
+}
+
+/** Dedicated homepage hero — not the Home Insurance product placement. */
+export function getHomepageHeroPhotography(): PhotographyPlacement {
+  return getPhotographyBySlug("homepage-hero")!;
 }

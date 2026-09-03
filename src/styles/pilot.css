@@ -384,7 +384,6 @@
   gap: 0.625rem;
   width: max-content;
   will-change: transform;
-  backface-visibility: hidden;
 }
 
 /* —— Yep coverage streams —— */
