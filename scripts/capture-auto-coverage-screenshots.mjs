@@ -14,6 +14,8 @@ const coverageStates = [
   { id: "collision", label: "Collision" },
   { id: "comprehensive", label: "Comprehensive" },
   { id: "accident-benefits", label: "Accident Benefits" },
+  { id: "uninsured", label: "Uninsured Auto" },
+  { id: "loss-of-use", label: "Loss of Use" },
 ];
 
 async function selectCoverage(page, id) {

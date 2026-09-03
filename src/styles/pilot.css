@@ -1002,7 +1002,7 @@
   position: absolute;
   bottom: 7%;
   left: 50%;
-  width: 56%;
+  width: 48%;
   height: 1.5rem;
   transform: translateX(-50%);
   border-radius: 9999px;
@@ -1016,7 +1016,8 @@
 .pilot-auto-car-hero-image {
   position: relative;
   z-index: 1;
-  width: min(94%, 23rem);
+  width: 70%;
+  max-width: 17.5rem;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 14px 28px rgba(32, 39, 40, 0.12));
@@ -1492,7 +1493,8 @@
   }
 
   .pilot-auto-car-hero-image {
-    width: min(98%, 20rem);
+    width: 72%;
+    max-width: 16rem;
   }
 
   .pilot-auto-scene-ring--outer {
