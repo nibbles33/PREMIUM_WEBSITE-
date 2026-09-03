@@ -37,5 +37,5 @@ export const PILOT_AUTO_HERO_IMAGE = {
 
 export const PILOT_AUTO_RELATED_IMAGE = {
   quality: 85,
-  sizes: "(max-width: 767px) 140px, 200px",
+  sizes: "(max-width: 767px) 240px, 360px",
 } as const;

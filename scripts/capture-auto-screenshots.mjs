@@ -12,8 +12,9 @@ const URL = `${BASE}/auto-insurance/`;
 const shots = [
   { name: "auto_full_desktop", width: 1440, height: 900, fullPage: true },
   { name: "auto_hero_desktop", width: 1440, height: 900, y: 0, heightClip: 900 },
-  { name: "auto_coverage_desktop", width: 1440, height: 900, selector: ".pilot-auto-explorer-stage" },
-  { name: "auto_broker_desktop", width: 1440, height: 900, selector: ".pilot-auto-broker-flow" },
+  { name: "auto_coverage_desktop", width: 1440, height: 900, selector: ".pilot-auto-coverage-stage" },
+  { name: "auto_broker_desktop", width: 1440, height: 900, selector: ".pilot-auto-broker-section" },
+  { name: "auto_broker_before_desktop", width: 1440, height: 900, selector: ".pilot-auto-broker-flow" },
   { name: "auto_related_desktop", width: 1440, height: 900, selector: ".pilot-auto-related-rail" },
   { name: "auto_final_cta_desktop", width: 1440, height: 900, selector: "#pilot-auto-final-heading" },
   { name: "auto_full_mobile", width: 390, height: 844, fullPage: true },

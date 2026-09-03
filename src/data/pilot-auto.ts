@@ -19,8 +19,16 @@ export type AutoCoverageItem = {
   description: string;
   detail: string;
   icon: LucideIcon;
-  /** SVG highlight zone on schematic vehicle */
-  zone: "front" | "body" | "full" | "cabin" | "sides" | "wheels";
+  visualScene:
+    | "liability"
+    | "collision"
+    | "comprehensive"
+    | "accident-benefits"
+    | "uninsured"
+    | "loss-of-use";
+  visualEyebrow: string;
+  visualCaption: string;
+  visualSubcaption: string;
 };
 
 export const autoCoverageItems: AutoCoverageItem[] = [
@@ -33,7 +41,11 @@ export const autoCoverageItems: AutoCoverageItem[] = [
     detail:
       "Third-party liability is mandatory in Ontario. It responds when you're legally responsible for injuring someone or damaging their property in an accident.",
     icon: Shield,
-    zone: "front",
+    visualScene: "liability",
+    visualEyebrow: "Protecting others",
+    visualCaption: "Coverage extends beyond your vehicle",
+    visualSubcaption:
+      "Liability responds when someone else is injured or their property is damaged.",
   },
   {
     id: "collision",
@@ -44,7 +56,11 @@ export const autoCoverageItems: AutoCoverageItem[] = [
     detail:
       "Collision covers damage to your own vehicle from a crash with another car or object — useful when fault isn't clear or you're at fault.",
     icon: Car,
-    zone: "body",
+    visualScene: "collision",
+    visualEyebrow: "Your vehicle",
+    visualCaption: "Damage from a crash — covered",
+    visualSubcaption:
+      "Front-end impacts and body damage from collisions with cars or objects.",
   },
   {
     id: "comprehensive",
@@ -55,7 +71,11 @@ export const autoCoverageItems: AutoCoverageItem[] = [
     detail:
       "Comprehensive protects against events outside your control — hail, fire, theft, vandalism, or hitting an animal.",
     icon: CloudLightning,
-    zone: "full",
+    visualScene: "comprehensive",
+    visualEyebrow: "Outside your control",
+    visualCaption: "Weather, theft & the unexpected",
+    visualSubcaption:
+      "Hail, fire, vandalism, and animal strikes — not caused by a collision.",
   },
   {
     id: "accident-benefits",
@@ -66,7 +86,11 @@ export const autoCoverageItems: AutoCoverageItem[] = [
     detail:
       "Accident benefits help cover medical care, rehabilitation, caregiver costs, and income replacement for you and your passengers after an injury.",
     icon: HeartPulse,
-    zone: "cabin",
+    visualScene: "accident-benefits",
+    visualEyebrow: "People first",
+    visualCaption: "Support for you & your passengers",
+    visualSubcaption:
+      "Medical care, rehabilitation, and income help after an injury — not body damage.",
   },
   {
     id: "uninsured",
@@ -77,7 +101,11 @@ export const autoCoverageItems: AutoCoverageItem[] = [
     detail:
       "If the other driver has no insurance or can't be identified, this coverage helps protect you and your passengers from being left without support.",
     icon: ShieldAlert,
-    zone: "sides",
+    visualScene: "uninsured",
+    visualEyebrow: "When they can't pay",
+    visualCaption: "Protection from uninsured drivers",
+    visualSubcaption:
+      "Coverage when the other driver has no insurance or can't be identified.",
   },
   {
     id: "loss-of-use",
@@ -88,7 +116,11 @@ export const autoCoverageItems: AutoCoverageItem[] = [
     detail:
       "Also called transportation replacement — helps cover rental or alternate transport costs so you're not stranded while your car is in the shop.",
     icon: Timer,
-    zone: "wheels",
+    visualScene: "loss-of-use",
+    visualEyebrow: "Keep moving",
+    visualCaption: "Replacement while yours is in the shop",
+    visualSubcaption:
+      "Rental or alternate transport during covered repairs.",
   },
 ];
 
