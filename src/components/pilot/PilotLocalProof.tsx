@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import PilotInfiniteRail from "@/components/pilot/PilotInfiniteRail";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { PILOT_RAIL_DURATIONS } from "@/data/pilot-rail-durations";
 import { pilotAwardBadges, type AwardBadge } from "@/data/pilot-home";
 
 function AwardCard({ badge }: { badge: AwardBadge }) {
@@ -35,6 +37,7 @@ function AwardCard({ badge }: { badge: AwardBadge }) {
 
 export default function PilotLocalProof() {
   const doubled = [...pilotAwardBadges, ...pilotAwardBadges];
+  const { normal, reduced } = PILOT_RAIL_DURATIONS.awards;
 
   return (
     <section
@@ -58,30 +61,17 @@ export default function PilotLocalProof() {
         </RevealOnScroll>
       </div>
 
-      {/* Normal motion: single animated rail */}
-      <div
-        className="pilot-awards-marquee mt-7 sm:mt-8"
-        aria-label="Awards and recognition"
-      >
-        <div className="pilot-awards-lane overflow-hidden">
-          <div className="pilot-awards-track pilot-awards-track-slow gap-4 sm:gap-5">
-            {doubled.map((badge, i) => (
-              <AwardCard key={`${badge.src}-${i}`} badge={badge} />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Reduced motion: manual scroll, scrollbar hidden */}
-      <div
-        className="pilot-awards-static-fallback pilot-scroll-hide mt-7 overflow-x-auto px-4 pb-2 sm:mt-8"
-        aria-label="Awards and recognition"
-      >
-        <div className="mx-auto flex w-max gap-4 sm:gap-5">
-          {pilotAwardBadges.map((badge) => (
-            <AwardCard key={badge.src} badge={badge} />
+      <div className="pilot-awards-rail mt-7 sm:mt-8">
+        <PilotInfiniteRail
+          durationSeconds={normal}
+          reducedDurationSeconds={reduced}
+          ariaLabel="Awards and recognition"
+          trackClassName="gap-4 sm:gap-5"
+        >
+          {doubled.map((badge, i) => (
+            <AwardCard key={`${badge.src}-${i}`} badge={badge} />
           ))}
-        </div>
+        </PilotInfiniteRail>
       </div>
 
       <p className="mx-auto mt-6 max-w-xl px-4 text-center text-[13px] leading-relaxed text-secondary">

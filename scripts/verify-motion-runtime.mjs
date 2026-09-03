@@ -1,34 +1,212 @@
 /**
  * Runtime motion verification — samples computed transforms at T=0, T=2s, T=5s
+ * for all four homepage rails (normal + reduced motion).
  */
 import puppeteer from "puppeteer";
 
 const BASE = process.env.BASE_URL || "http://127.0.0.1:3000";
-const VIEWPORT = { width: 1440, height: 900 };
+const DESKTOP = { width: 1440, height: 900 };
+const MOBILE = { width: 390, height: 844 };
 
-async function sample(page, selector, prop = "transform") {
-  return page.evaluate(
-    (sel, property) => {
-      const el = document.querySelector(sel);
-      if (!el) return { found: false };
-      const cs = getComputedStyle(el);
-      return {
-        found: true,
-        transform: cs.transform,
-        animationName: cs.animationName,
-        animationDuration: cs.animationDuration,
-        animationPlayState: cs.animationPlayState,
-        display: cs.display,
-        overflowX: cs.overflowX,
-      };
-    },
-    selector,
-    prop,
-  );
+const RAIL_SELECTORS = {
+  carrier: ".pilot-carrier-rail .pilot-infinite-rail-track",
+  awards: ".pilot-awards-rail .pilot-infinite-rail-track",
+  yep: ".pilot-yep-rail .pilot-infinite-rail-track",
+  personal: ".pilot-filmstrip-inner",
+};
+
+async function sample(page, selector) {
+  return page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    if (!el) return { found: false, selector: sel };
+    const cs = getComputedStyle(el);
+    return {
+      found: true,
+      selector: sel,
+      transform: cs.transform,
+      animationName: cs.animationName,
+      animationDuration: cs.animationDuration,
+      animationPlayState: cs.animationPlayState,
+      display: cs.display,
+      overflowX: cs.overflowX,
+    };
+  }, selector);
 }
 
 async function wait(ms) {
   return new Promise((r) => setTimeout(r, ms));
+}
+
+async function scrollPage(page) {
+  await page.waitForSelector(".pilot-carrier-rail .pilot-infinite-rail-track", {
+    timeout: 30000,
+  });
+  await page.evaluate(async () => {
+    const step = window.innerHeight * 0.75;
+    for (let y = 0; y < document.body.scrollHeight; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => setTimeout(r, 200));
+    }
+    window.scrollTo(0, 0);
+    await new Promise((r) => setTimeout(r, 200));
+    const carrier = document.querySelector(".pilot-carrier-rail");
+    carrier?.scrollIntoView({ block: "center" });
+  });
+  await wait(800);
+}
+
+async function sampleAll(page) {
+  const out = {};
+  for (const [name, sel] of Object.entries(RAIL_SELECTORS)) {
+    out[name] = await sample(page, sel);
+  }
+  return out;
+}
+
+function changed(a, b) {
+  return (
+    a?.found &&
+    b?.found &&
+    a.transform !== b.transform &&
+    a.transform !== "none"
+  );
+}
+
+async function testMotionMode(page, reduced) {
+  await page.emulateMediaFeatures([
+    { name: "prefers-reduced-motion", value: reduced ? "reduce" : "no-preference" },
+  ]);
+  await page.goto(BASE, { waitUntil: "networkidle0", timeout: 60000 });
+  await scrollPage(page);
+
+  const t0 = await sampleAll(page);
+  await wait(2000);
+  const t2 = await sampleAll(page);
+  await wait(3000);
+  const t5 = await sampleAll(page);
+
+  const motionChanged = {};
+  for (const name of Object.keys(RAIL_SELECTORS)) {
+    motionChanged[name] = changed(t0[name], t5[name]);
+  }
+
+  const staticFallbacks = await page.evaluate(() => ({
+    carrierGrid: document.querySelector(".pilot-carrier-static-fallback"),
+    awardsStatic: document.querySelector(".pilot-awards-static-fallback"),
+    yepStatic: document.querySelector(".pilot-yep-lane-static"),
+    mobileTrack: document.querySelector(".pilot-filmstrip-track-mobile"),
+  }));
+
+  return {
+    reducedMotion: reduced,
+    samples: { t0, t2, t5 },
+    motionChanged,
+    staticFallbacks: {
+      carrierGrid: !!staticFallbacks.carrierGrid,
+      awardsStatic: !!staticFallbacks.awardsStatic,
+      yepStatic: !!staticFallbacks.yepStatic,
+      mobileTrack: !!staticFallbacks.mobileTrack,
+    },
+    durations: {
+      carrier: t5.carrier?.animationDuration,
+      awards: t5.awards?.animationDuration,
+      yep: t5.yep?.animationDuration,
+    },
+  };
+}
+
+async function testPersonalArrows(page) {
+  await page.emulateMediaFeatures([
+    { name: "prefers-reduced-motion", value: "no-preference" },
+  ]);
+  await page.setViewport(DESKTOP);
+  await page.goto(BASE, { waitUntil: "networkidle0", timeout: 60000 });
+  await scrollPage(page);
+
+  const getActive = () =>
+    page.evaluate(() => {
+      const labels = [
+        "Auto",
+        "Home",
+        "Condo",
+        "Tenant",
+        "Motorcycle",
+        "Boat",
+        "Cottage",
+        "Travel",
+      ];
+      const active = document.querySelector(
+        ".pilot-filmstrip-frame-dense.is-active p",
+      );
+      const text = active?.textContent?.trim() ?? null;
+      return { label: text, index: text ? labels.indexOf(text) : -1 };
+    });
+
+  const positions = [];
+  positions.push({ step: "start", ...(await getActive()) });
+
+  for (let i = 1; i <= 5; i++) {
+    await page.click('button[aria-label="Next personal insurance product"]');
+    await wait(350);
+    positions.push({ step: `next-${i}`, ...(await getActive()) });
+  }
+
+  for (let i = 1; i <= 5; i++) {
+    await page.click('button[aria-label="Previous personal insurance product"]');
+    await wait(350);
+    positions.push({ step: `prev-${i}`, ...(await getActive()) });
+  }
+
+  const nextSteps = positions.filter((p) => p.step.startsWith("next"));
+  const prevSteps = positions.filter((p) => p.step.startsWith("prev"));
+
+  const everyNextChanged = nextSteps.every((step, i) => {
+    if (i === 0) return true;
+    return step.index !== nextSteps[i - 1].index;
+  });
+
+  const everyPrevChanged = prevSteps.every((step, i) => {
+    if (i === 0) return true;
+    return step.index !== prevSteps[i - 1].index;
+  });
+
+  const beforeResume = await sample(page, RAIL_SELECTORS.personal);
+  await wait(4000);
+  const afterResume = await sample(page, RAIL_SELECTORS.personal);
+  const autoplayResumed = changed(beforeResume, afterResume);
+
+  return {
+    positions,
+    everyNextChanged,
+    everyPrevChanged,
+    autoplayResumed,
+  };
+}
+
+async function testMobile(page) {
+  await page.setViewport(MOBILE);
+  await page.emulateMediaFeatures([
+    { name: "prefers-reduced-motion", value: "no-preference" },
+  ]);
+  await page.goto(BASE, { waitUntil: "networkidle0", timeout: 60000 });
+  await scrollPage(page);
+
+  const t0 = await sampleAll(page);
+  await wait(3000);
+  const t3 = await sampleAll(page);
+
+  const overflow = await page.evaluate(() => ({
+    docScrollWidth: document.documentElement.scrollWidth,
+    viewportWidth: window.innerWidth,
+    hasHorizontalOverflow: document.documentElement.scrollWidth > window.innerWidth + 1,
+  }));
+
+  const motionChanged = {};
+  for (const name of Object.keys(RAIL_SELECTORS)) {
+    motionChanged[name] = changed(t0[name], t3[name]);
+  }
+
+  return { motionChanged, overflow, samples: { t0, t3 } };
 }
 
 async function main() {
@@ -37,117 +215,44 @@ async function main() {
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
-  await page.setViewport(VIEWPORT);
+  await page.setViewport(DESKTOP);
 
-  await page.emulateMediaFeatures([
-    { name: "prefers-reduced-motion", value: "no-preference" },
-  ]);
-
-  await page.goto(BASE, { waitUntil: "networkidle0", timeout: 60000 });
-
-  // Scroll through page to trigger RevealOnScroll
-  await page.evaluate(async () => {
-    const step = window.innerHeight * 0.8;
-    for (let y = 0; y < document.body.scrollHeight; y += step) {
-      window.scrollTo(0, y);
-      await new Promise((r) => setTimeout(r, 120));
-    }
-    window.scrollTo(0, 0);
-  });
-  await wait(500);
-
-  const reducedMotion = await page.evaluate(() =>
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-  );
-
-  const carrierVisible = await page.evaluate(() => {
-    const marquee = document.querySelector(".pilot-carrier-marquee");
-    const fallback = document.querySelector(".pilot-carrier-static-fallback");
-    if (!marquee || !fallback) return null;
-    return {
-      marqueeDisplay: getComputedStyle(marquee).display,
-      fallbackDisplay: getComputedStyle(fallback).display,
-    };
-  });
-
-  const selectors = {
-    carriers: ".pilot-carrier-marquee-track",
-    personal: ".pilot-filmstrip-inner",
-    awards: ".pilot-awards-track",
-    yep: ".pilot-yep-lane-track.is-right",
-  };
-
-  const t0 = {};
-  for (const [name, sel] of Object.entries(selectors)) {
-    t0[name] = await sample(page, sel);
+  let report;
+  try {
+    const normal = await testMotionMode(page, false);
+    const reduced = await testMotionMode(page, true);
+    const arrows = await testPersonalArrows(page);
+    const mobile = await testMobile(page);
+    report = { normal, reduced, arrows, mobile };
+  } finally {
+    await browser.close();
   }
-
-  await wait(2000);
-  const t2 = {};
-  for (const [name, sel] of Object.entries(selectors)) {
-    t2[name] = await sample(page, sel);
-  }
-
-  await wait(3000);
-  const t5 = {};
-  for (const [name, sel] of Object.entries(selectors)) {
-    t5[name] = await sample(page, sel);
-  }
-
-  // Personal arrow test
-  const personalBefore = t5.personal?.transform ?? "none";
-  await page.click('button[aria-label="Next personal insurance product"]');
-  await wait(300);
-  const personalAfterArrow = await sample(page, selectors.personal);
-
-  // Awards scrollbar check
-  const awardsScrollbar = await page.evaluate(() => {
-    const marquee = document.querySelector(".pilot-awards-marquee");
-    const fallback = document.querySelector(".pilot-awards-static-fallback");
-    const section = document.querySelector(".pilot-section-awards");
-    return {
-      marqueeDisplay: marquee ? getComputedStyle(marquee).display : null,
-      fallbackDisplay: fallback ? getComputedStyle(fallback).display : null,
-      fallbackOverflow: fallback ? getComputedStyle(fallback).overflowX : null,
-      sectionOverflow: section ? getComputedStyle(section).overflow : null,
-      fallbackScrollbarWidth: fallback
-        ? getComputedStyle(fallback).scrollbarWidth
-        : null,
-    };
-  });
-
-  function changed(a, b) {
-    return a?.transform !== b?.transform;
-  }
-
-  const report = {
-    prefersReducedMotion: reducedMotion,
-    carrierVisibility: carrierVisible,
-    awardsScrollbar,
-    samples: { t0, t2, t5 },
-    motionChanged: {
-      carriers: changed(t0.carriers, t5.carriers),
-      personal: changed(t0.personal, t5.personal),
-      awards: changed(t0.awards, t5.awards),
-      yep: changed(t0.yep, t5.yep),
-    },
-    personalArrowChanged: personalBefore !== personalAfterArrow?.transform,
-    personalAfterArrow,
-  };
 
   console.log(JSON.stringify(report, null, 2));
-  await browser.close();
 
-  const allMoving =
-    report.motionChanged.carriers &&
-    report.motionChanged.personal &&
-    report.motionChanged.awards &&
-    report.motionChanged.yep &&
-    report.personalArrowChanged &&
-    carrierVisible?.marqueeDisplay !== "none" &&
-    carrierVisible?.fallbackDisplay === "none";
+  const allNormalMoving = Object.values(report.normal.motionChanged).every(Boolean);
+  const allReducedMoving = Object.values(report.reduced.motionChanged).every(Boolean);
+  const noStaticFallbacks =
+    !report.normal.staticFallbacks.carrierGrid &&
+    !report.normal.staticFallbacks.awardsStatic &&
+    !report.normal.staticFallbacks.yepStatic &&
+    !report.normal.staticFallbacks.mobileTrack;
+  const arrowsOk =
+    report.arrows.everyNextChanged &&
+    report.arrows.everyPrevChanged &&
+    report.arrows.autoplayResumed;
+  const mobileOk =
+    Object.values(report.mobile.motionChanged).every(Boolean) &&
+    !report.mobile.overflow.hasHorizontalOverflow;
 
-  process.exit(allMoving ? 0 : 1);
+  const pass =
+    allNormalMoving &&
+    allReducedMoving &&
+    noStaticFallbacks &&
+    arrowsOk &&
+    mobileOk;
+
+  process.exit(pass ? 0 : 1);
 }
 
 main().catch((err) => {

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import PartnerLogoCard from "@/components/PartnerLogoCard";
+import PilotInfiniteRail from "@/components/pilot/PilotInfiniteRail";
 import { homepageCarriers } from "@/data/partners";
+import { PILOT_RAIL_DURATIONS } from "@/data/pilot-rail-durations";
 
 function MarqueeSegment({
   focusable,
@@ -29,27 +31,13 @@ function MarqueeSegment({
 }
 
 export default function PilotCarrierMarquee() {
+  const { normal, reduced } = PILOT_RAIL_DURATIONS.carrier;
+
   return (
-    <>
-      {/* In-document critical CSS: visibility cannot depend on a lazy CSS chunk */}
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-@media (prefers-reduced-motion: no-preference) {
-  .pilot-carrier-marquee { display: block !important; }
-  .pilot-carrier-static-fallback { display: none !important; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .pilot-carrier-marquee { display: none !important; }
-  .pilot-carrier-static-fallback { display: grid !important; }
-}
-`,
-        }}
-      />
-      <section
-        className="border-y border-border bg-[#F0EBE0] py-6 sm:py-8"
-        aria-labelledby="pilot-carriers-heading"
-      >
+    <section
+      className="border-y border-border bg-[#F0EBE0] py-6 sm:py-8"
+      aria-labelledby="pilot-carriers-heading"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
           <h2
@@ -77,34 +65,17 @@ export default function PilotCarrierMarquee() {
         </div>
       </div>
 
-      {/* Normal motion: CSS-animated marquee */}
-      <div
-        className="pilot-carrier-marquee mt-7 motion-reduce:hidden sm:mt-8"
-        aria-label="Insurance carrier partners"
-      >
-        <div className="pilot-carrier-marquee-track gap-5 sm:gap-6">
+      <div className="pilot-carrier-rail mt-7 sm:mt-8">
+        <PilotInfiniteRail
+          durationSeconds={normal}
+          reducedDurationSeconds={reduced}
+          ariaLabel="Insurance carrier partners"
+          trackClassName="gap-5 sm:gap-6"
+        >
           <MarqueeSegment focusable />
           <MarqueeSegment focusable={false} ariaHidden />
-        </div>
+        </PilotInfiniteRail>
       </div>
-
-      {/* Reduced motion: static grid — hidden unless prefers-reduced-motion */}
-      <ul
-        className="pilot-carrier-static-fallback mx-auto mt-7 hidden max-w-6xl list-none grid-cols-2 gap-4 px-4 motion-reduce:grid sm:mt-8 sm:grid-cols-3 sm:gap-5 sm:px-6 md:grid-cols-4 lg:grid-cols-6 lg:px-8 xl:max-w-7xl"
-        aria-label="Insurance carrier partners"
-      >
-        {homepageCarriers.map((carrier) => (
-          <li key={`static-${carrier.name}`}>
-            <PartnerLogoCard
-              partner={carrier}
-              size="marquee"
-              href="/partners/"
-              className="w-full min-w-0"
-            />
-          </li>
-        ))}
-      </ul>
     </section>
-    </>
   );
 }

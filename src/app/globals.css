@@ -659,59 +659,64 @@ th {
   }
 }
 
-/* —— Pilot homepage carrier marquee (main bundle — must not depend on code-split CSS) —— */
+/* —— Pilot shared infinite rail (main bundle — must not depend on lazy CSS chunks) —— */
 
-@media (prefers-reduced-motion: no-preference) {
-  .pilot-carrier-marquee {
-    display: block;
-    overflow: hidden;
-    mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      #000 8%,
-      #000 92%,
-      transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      #000 8%,
-      #000 92%,
-      transparent 100%
-    );
+.pilot-infinite-rail {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.pilot-infinite-rail-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(-50%, 0, 0);
+  animation: pilot-rail-scroll-ltr var(--pilot-rail-duration, 110s) linear infinite;
+}
+
+.pilot-infinite-rail:hover .pilot-infinite-rail-track,
+.pilot-infinite-rail:focus-within .pilot-infinite-rail-track {
+  animation-play-state: paused;
+}
+
+@keyframes pilot-rail-scroll-ltr {
+  from {
+    transform: translate3d(-50%, 0, 0);
   }
-
-  .pilot-carrier-marquee-track {
-    display: flex;
-    align-items: center;
-    width: max-content;
-    will-change: transform;
+  to {
     transform: translate3d(0, 0, 0);
-    animation: pilot-carrier-scroll 110s linear infinite;
-  }
-
-  .pilot-carrier-marquee:hover .pilot-carrier-marquee-track,
-  .pilot-carrier-marquee:focus-within .pilot-carrier-marquee-track {
-    animation-play-state: paused;
-  }
-
-  .pilot-carrier-static-fallback {
-    display: none !important;
   }
 }
 
-@keyframes pilot-carrier-scroll {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
+@media (prefers-reduced-motion: reduce) {
+  .pilot-infinite-rail-track {
+    animation-duration: var(--pilot-rail-duration-reduced, 275s);
   }
 }
 
 @media (max-width: 767px) {
-  .pilot-carrier-marquee-track {
-    animation-duration: 90s;
+  .pilot-infinite-rail-track {
+    animation-duration: calc(var(--pilot-rail-duration, 110s) * 1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 767px) {
+  .pilot-infinite-rail-track {
+    animation-duration: var(--pilot-rail-duration-reduced, 275s);
   }
 }
 

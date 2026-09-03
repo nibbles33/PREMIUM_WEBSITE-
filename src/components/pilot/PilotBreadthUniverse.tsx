@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import PilotInfiniteRail from "@/components/pilot/PilotInfiniteRail";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { PILOT_RAIL_DURATIONS } from "@/data/pilot-rail-durations";
 import {
   getFilmstripPhoto,
-  yepLaneCommercial,
-  yepLanePersonal,
+  yepCarouselItems,
   type CoverageStreamItem,
 } from "@/data/pilot-home";
 import { PILOT_YEP_TILE_IMAGE } from "@/data/photography";
@@ -38,61 +39,10 @@ function YepMediaTile({ item }: { item: CoverageStreamItem }) {
   );
 }
 
-function AnimatedLane({
-  items,
-  direction,
-  speedSeconds,
-  ariaLabel,
-}: {
-  items: CoverageStreamItem[];
-  direction: "left" | "right";
-  speedSeconds: number;
-  ariaLabel: string;
-}) {
-  const doubled = [...items, ...items];
-
-  return (
-    <div
-      className="pilot-yep-lane overflow-hidden"
-      aria-label={ariaLabel}
-      style={{ "--pilot-lane-speed": `${speedSeconds}s` } as React.CSSProperties}
-    >
-      <div
-        className={`pilot-yep-lane-track pilot-yep-lane-moderate ${direction === "left" ? "is-left" : "is-right"}`}
-      >
-        {doubled.map((item, i) => (
-          <YepMediaTile key={`${item.label}-${i}`} item={item} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function ManualLane({
-  items,
-  ariaLabel,
-}: {
-  items: CoverageStreamItem[];
-  ariaLabel: string;
-}) {
-  return (
-    <div
-      className="pilot-yep-lane-static pilot-scroll-hide overflow-x-auto px-4 pb-1 md:px-6"
-      role="list"
-      aria-label={ariaLabel}
-    >
-      <div className="flex w-max gap-3 sm:gap-3.5">
-        {items.map((item) => (
-          <div key={item.label} role="listitem">
-            <YepMediaTile item={item} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function PilotBreadthUniverse() {
+  const doubled = [...yepCarouselItems, ...yepCarouselItems];
+  const { normal, reduced } = PILOT_RAIL_DURATIONS.yep;
+
   return (
     <section
       className="pilot-section-yep relative overflow-hidden border-t border-charcoal bg-charcoal py-10 sm:py-12 lg:py-14"
@@ -126,17 +76,17 @@ export default function PilotBreadthUniverse() {
         </RevealOnScroll>
       </div>
 
-      <RevealOnScroll className="mt-8 space-y-3 sm:space-y-4">
-        <AnimatedLane
-          items={yepLanePersonal}
-          direction="right"
-          speedSeconds={88}
-          ariaLabel="Personal and lifestyle insurance coverage"
-        />
-        <ManualLane
-          items={yepLaneCommercial}
-          ariaLabel="Business and commercial insurance coverage"
-        />
+      <RevealOnScroll className="pilot-yep-rail mt-8">
+        <PilotInfiniteRail
+          durationSeconds={normal}
+          reducedDurationSeconds={reduced}
+          ariaLabel="Insurance products and industries we cover"
+          trackClassName="gap-3 sm:gap-3.5"
+        >
+          {doubled.map((item, i) => (
+            <YepMediaTile key={`${item.label}-${i}`} item={item} />
+          ))}
+        </PilotInfiniteRail>
       </RevealOnScroll>
 
       <RevealOnScroll className="relative mt-8 text-center">

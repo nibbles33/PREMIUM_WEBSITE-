@@ -17,18 +17,19 @@ import {
   getFilmstripPhoto,
   personalFilmstripItems,
 } from "@/data/pilot-home";
+import { PILOT_PERSONAL_RAIL_SPEED } from "@/data/pilot-rail-durations";
 import { PILOT_FILMSTRIP_IMAGE } from "@/data/photography";
 
-/** ~39px/s at 60fps — primary continuous motion zone */
-const AUTO_SCROLL_SPEED = 0.65;
 const INACTIVITY_RESUME_MS = 3500;
 const LOOP_COPIES = 2;
 const ITEM_COUNT = personalFilmstripItems.length;
 
-function normalizeOffset(offset: number, setWidth: number) {
+function normalizeOffsetLtr(offset: number, setWidth: number) {
   if (setWidth <= 0) return 0;
-  let next = offset % setWidth;
-  if (next < 0) next += setWidth;
+  let next = offset;
+  while (next >= 0) next -= setWidth;
+  while (next < -setWidth) next += setWidth;
+  if (next === 0) next = -setWidth;
   return next;
 }
 
@@ -40,6 +41,17 @@ function prefersReducedMotionNow() {
 function isMobileViewportNow() {
   if (typeof window === "undefined") return false;
   return window.matchMedia("(max-width: 767px)").matches;
+}
+
+function currentScrollSpeed() {
+  const reduced = prefersReducedMotionNow();
+  const mobile = isMobileViewportNow();
+  if (reduced) {
+    return mobile
+      ? PILOT_PERSONAL_RAIL_SPEED.mobileReduced
+      : PILOT_PERSONAL_RAIL_SPEED.reduced;
+  }
+  return mobile ? PILOT_PERSONAL_RAIL_SPEED.mobile : PILOT_PERSONAL_RAIL_SPEED.normal;
 }
 
 export default function PilotPersonalFilmstrip() {
@@ -54,6 +66,7 @@ export default function PilotPersonalFilmstrip() {
   const userControlRef = useRef(false);
   const dragStart = useRef({ x: 0, offset: 0 });
   const resumeTimerRef = useRef<number | null>(null);
+  const offsetInitializedRef = useRef(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -65,13 +78,15 @@ export default function PilotPersonalFilmstrip() {
     const inner = innerRef.current;
     if (!inner) return;
     const aligned = Math.round(offset * 2) / 2;
-    inner.style.transform = `translate3d(-${aligned}px, 0, 0)`;
+    inner.style.transform = `translate3d(${aligned}px, 0, 0)`;
   }, []);
 
   const updateActiveIndex = useCallback(() => {
     const step = frameStepRef.current;
-    if (step <= 0) return;
-    const index = Math.round(offsetRef.current / step) % ITEM_COUNT;
+    const setWidth = setWidthRef.current;
+    if (step <= 0 || setWidth <= 0) return;
+    const progress = offsetRef.current + setWidth;
+    const index = Math.round(progress / step) % ITEM_COUNT;
     setActiveIndex((index + ITEM_COUNT) % ITEM_COUNT);
   }, []);
 
@@ -83,7 +98,11 @@ export default function PilotPersonalFilmstrip() {
     const setWidth = total / LOOP_COPIES;
     setWidthRef.current = setWidth;
     frameStepRef.current = setWidth / ITEM_COUNT;
-    offsetRef.current = normalizeOffset(offsetRef.current, setWidth);
+    if (!offsetInitializedRef.current) {
+      offsetRef.current = -setWidth;
+      offsetInitializedRef.current = true;
+    }
+    offsetRef.current = normalizeOffsetLtr(offsetRef.current, setWidth);
     applyTransform(offsetRef.current);
     updateActiveIndex();
     return true;
@@ -127,7 +146,7 @@ export default function PilotPersonalFilmstrip() {
     }, INACTIVITY_RESUME_MS);
   }, []);
 
-  /* Desktop: transform-based seamless loop — stable rAF, refs for pause state */
+  /* LTR autoplay — same transform offset for all breakpoints */
   useEffect(() => {
     let raf = 0;
 
@@ -135,16 +154,12 @@ export default function PilotPersonalFilmstrip() {
       const setWidth = setWidthRef.current;
       if (
         setWidth > 0 &&
-        !prefersReducedMotionNow() &&
-        !isMobileViewportNow() &&
         !isPausedRef.current &&
         !isDraggingRef.current &&
         !userControlRef.current
       ) {
-        offsetRef.current += AUTO_SCROLL_SPEED;
-        if (offsetRef.current >= setWidth) {
-          offsetRef.current -= setWidth;
-        }
+        offsetRef.current += currentScrollSpeed();
+        offsetRef.current = normalizeOffsetLtr(offsetRef.current, setWidth);
         applyTransform(offsetRef.current);
         updateActiveIndex();
       }
@@ -160,7 +175,7 @@ export default function PilotPersonalFilmstrip() {
       if (!ensureMeasured()) return;
       pauseAuto();
       const step = frameStepRef.current;
-      offsetRef.current = normalizeOffset(
+      offsetRef.current = normalizeOffsetLtr(
         offsetRef.current + direction * step,
         setWidthRef.current,
       );
@@ -171,7 +186,6 @@ export default function PilotPersonalFilmstrip() {
   );
 
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
-    if (isMobileViewportNow()) return;
     if (event.key === "ArrowLeft") {
       event.preventDefault();
       nudge(-1);
@@ -182,7 +196,6 @@ export default function PilotPersonalFilmstrip() {
   };
 
   const onPointerDown = (event: React.PointerEvent) => {
-    if (isMobileViewportNow()) return;
     if (!ensureMeasured()) return;
     pauseAuto();
     isDraggingRef.current = true;
@@ -192,10 +205,10 @@ export default function PilotPersonalFilmstrip() {
   };
 
   const onPointerMove = (event: React.PointerEvent) => {
-    if (!isDraggingRef.current || isMobileViewportNow()) return;
+    if (!isDraggingRef.current) return;
     const delta = event.clientX - dragStart.current.x;
-    offsetRef.current = normalizeOffset(
-      dragStart.current.offset - delta,
+    offsetRef.current = normalizeOffsetLtr(
+      dragStart.current.offset + delta,
       setWidthRef.current,
     );
     applyTransform(offsetRef.current);
@@ -203,7 +216,6 @@ export default function PilotPersonalFilmstrip() {
   };
 
   const endDrag = (event: React.PointerEvent) => {
-    if (isMobileViewportNow()) return;
     isDraggingRef.current = false;
     setIsDragging(false);
     viewportRef.current?.releasePointerCapture(event.pointerId);
@@ -337,17 +349,6 @@ export default function PilotPersonalFilmstrip() {
                 renderFrame(item, index, true),
               )}
             </div>
-          </div>
-
-          <div
-            className="pilot-filmstrip-track pilot-filmstrip-track-dense pilot-filmstrip-track-mobile"
-            role="region"
-            aria-roledescription="carousel"
-            aria-label="Personal insurance products"
-          >
-            {personalFilmstripItems.map((item, index) =>
-              renderFrame(item, index, true),
-            )}
           </div>
 
           <div
