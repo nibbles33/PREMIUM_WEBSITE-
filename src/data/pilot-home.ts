@@ -192,3 +192,105 @@ export const breadthItems: BreadthItem[] = [
 ];
 
 export const breadthMobileItems = breadthItems.slice(0, 8);
+
+export type CoverageStreamItem = {
+  label: string;
+  href: string;
+  photoSlug: string;
+};
+
+/** Multi-lane Yep section — photography-based breadth streams */
+export const breadthLanePersonal: CoverageStreamItem[] = [
+  { label: "Auto", href: "/auto-insurance/", photoSlug: "auto-insurance" },
+  { label: "Home", href: "/home-insurance/", photoSlug: "home-insurance" },
+  { label: "Condo", href: "/condo-insurance/", photoSlug: "condo" },
+  { label: "Boat", href: "/boat-insurance/", photoSlug: "boat" },
+  { label: "Motorcycle", href: "/motorcycle-insurance/", photoSlug: "motorcycle" },
+  { label: "Cottage", href: "/cottage-insurance/", photoSlug: "cottage" },
+  { label: "Tenant", href: "/tenant-insurance/", photoSlug: "tenant" },
+  { label: "Travel", href: "/travel-insurance/", photoSlug: "travel-insurance" },
+];
+
+export const breadthLaneCommercial: CoverageStreamItem[] = [
+  { label: "Trucking", href: "/trucking-insurance/", photoSlug: "trucking-insurance" },
+  { label: "Contractors", href: "/contractors-insurance/", photoSlug: "contractors-insurance" },
+  { label: "Restaurant", href: "/restaurant-insurance/", photoSlug: "restaurant-insurance" },
+  { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
+  { label: "Commercial Property", href: "/commercial-property-insurance/", photoSlug: "commercial-property-insurance" },
+  { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },
+  { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
+  { label: "Food Trucks", href: "/food-truck-insurance/", photoSlug: "food-truck-insurance" },
+];
+
+export const breadthLaneSpecialty: CoverageStreamItem[] = [
+  { label: "Events", href: "/event-liability-insurance/", photoSlug: "commercial-insurance" },
+  { label: "Personal Umbrella", href: "/personal-umbrella-insurance/", photoSlug: "home-insurance" },
+  { label: "Landlord", href: "/landlord-insurance/", photoSlug: "landlord" },
+  { label: "Bonding", href: "/bonding-insurance/", photoSlug: "bonding-insurance" },
+  { label: "Dump Trucks", href: "/dump-truck-insurance/", photoSlug: "dump-truck-insurance" },
+  { label: "Greenhouse", href: "/farm-insurance/", photoSlug: "greenhouse" },
+  { label: "Real Estate", href: "/real-estate-insurance/", photoSlug: "real-estate-insurance" },
+  { label: "Builders", href: "/builders-developers-insurance/", photoSlug: "builders-developers-insurance" },
+];
+
+export type AwardBadge = {
+  src: string;
+  alt: string;
+  label: string;
+  year: string;
+  source?: string;
+};
+
+export const pilotAwardBadges: AwardBadge[] = [
+  {
+    src: "/images/awards/award-windsor-platinum-2024.png",
+    alt: "Windsor Community Vote Platinum Winner 2024",
+    label: "Platinum Winner",
+    year: "2024",
+  },
+  {
+    src: "/images/awards/award-windsor-gold-2026.png",
+    alt: "Windsor Community Vote Gold Winner 2026",
+    label: "Gold Winner",
+    year: "2026",
+  },
+  {
+    src: "/images/awards/award-windsor-platinum-2023.png",
+    alt: "Windsor Community Vote Platinum Winner 2023",
+    label: "Platinum Winner",
+    year: "2023",
+  },
+  {
+    src: "/images/awards/award-windsor-platinum-2022.png",
+    alt: "Windsor Community Vote Platinum Winner 2022",
+    label: "Platinum Winner",
+    year: "2022",
+  },
+  {
+    src: "/images/awards/award-windsor-platinum-2021.png",
+    alt: "Windsor Community Vote Platinum Winner 2021",
+    label: "Platinum Winner",
+    year: "2021",
+  },
+  {
+    src: "/images/awards/award-5star-brokerage-ontario-2022.png",
+    alt: "Insurance Business Canada 5-Star Brokerage Ontario 2022",
+    label: "5-Star Brokerage, Ontario",
+    year: "2022",
+    source: "Insurance Business Canada",
+  },
+  {
+    src: "/images/awards/award-5star-brokerage-2021.png",
+    alt: "Insurance Business Canada 5-Star Brokerage 2021",
+    label: "5-Star Brokerage",
+    year: "2021",
+    source: "Insurance Business Canada",
+  },
+  {
+    src: "/images/awards/award-fast-brokerages-2024.png",
+    alt: "Insurance Business Canada Fast Brokerages 2024",
+    label: "Fast Brokerages",
+    year: "2024",
+    source: "Insurance Business Canada",
+  },
+];

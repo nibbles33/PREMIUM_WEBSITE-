@@ -31,7 +31,7 @@ function MarqueeSegment({
 export default function PilotCarrierMarquee() {
   return (
     <section
-      className="border-y border-border bg-offwhite py-8 sm:py-10"
+      className="border-y border-border bg-[#F0EBE0] py-6 sm:py-8"
       aria-labelledby="pilot-carriers-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">

@@ -172,75 +172,321 @@
   }
 }
 
-/* —— Hero car animation —— */
+/* —— Hero immersive (correction pass) —— */
 
-.pilot-hero-car {
+.pilot-hero-immersive {
+  background-color: var(--pilot-charcoal);
+}
+
+.pilot-hero-road-immersive {
   position: absolute;
-  z-index: 20;
-  width: clamp(72px, 12vw, 120px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 22%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(208, 173, 38, 0.06) 40%,
+    rgba(32, 39, 40, 0.5) 100%
+  );
+  pointer-events: none;
+}
+
+.pilot-hero-car-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.pilot-hero-car-wrap.is-entering {
+  animation: pilot-car-journey 2.2s cubic-bezier(0.25, 0.85, 0.35, 1) forwards;
+}
+
+.pilot-hero-car-wrap.is-entering-mobile {
+  animation: pilot-car-journey-mobile 1.4s cubic-bezier(0.25, 0.85, 0.35, 1) forwards;
+}
+
+.pilot-hero-car-wrap.is-settling {
+  animation: pilot-car-journey-settle 350ms var(--pilot-ease-spring) forwards;
+}
+
+.pilot-hero-car-wrap.is-parked {
+  transform: translate3d(68vw, 62vh, 0) scale(0.9);
+}
+
+@keyframes pilot-car-journey {
+  0% {
+    opacity: 0;
+    transform: translate3d(-8vw, 78vh, 0) scale(0.45) rotate(-14deg);
+  }
+  25% {
+    opacity: 1;
+    transform: translate3d(18vw, 68vh, 0) scale(0.65) rotate(-8deg);
+  }
+  55% {
+    transform: translate3d(42vw, 58vh, 0) scale(0.8) rotate(-3deg);
+  }
+  80% {
+    transform: translate3d(62vw, 60vh, 0) scale(0.88) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(68vw, 62vh, 0) scale(0.9) rotate(0deg);
+  }
+}
+
+@keyframes pilot-car-journey-mobile {
+  0% {
+    opacity: 0;
+    transform: translate3d(-5vw, 72vh, 0) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(58vw, 68vh, 0) scale(0.75);
+  }
+}
+
+@keyframes pilot-car-journey-settle {
+  0% {
+    transform: translate3d(68vw, calc(62vh - 6px), 0) scale(0.9);
+  }
+  55% {
+    transform: translate3d(68vw, calc(62vh + 3px), 0) scale(0.9);
+  }
+  100% {
+    transform: translate3d(68vw, 62vh, 0) scale(0.9);
+  }
+}
+
+.pilot-car-asset-slot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 56px;
+  transform: translate(-50%, -50%);
+  opacity: 0.55;
+  transition: opacity 400ms ease-out;
+}
+
+.pilot-car-asset-slot.is-parked {
+  opacity: 0.7;
+}
+
+.pilot-car-asset-glow {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(208, 173, 38, 0.25) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+}
+
+.pilot-car-asset-slot.is-parked .pilot-car-asset-glow {
+  opacity: 1;
+}
+
+.pilot-car-asset-silhouette {
+  width: 100%;
   height: auto;
-  transform-origin: center bottom;
-  will-change: transform, opacity;
+  color: var(--pilot-gold);
 }
 
-.pilot-hero-car.is-entering {
-  animation: pilot-car-travel 1.4s var(--pilot-ease-out) forwards;
+.pilot-hero-protection {
+  position: absolute;
+  left: 50%;
+  top: -40%;
+  transform: translate(-50%, 0) scale(0.85);
 }
 
-.pilot-hero-car.is-parked {
-  transform: translate3d(var(--car-x, 0), var(--car-y, 0), 0)
-    scale(var(--car-scale, 1));
+/* —— Dense filmstrip —— */
+
+.pilot-filmstrip-dense {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
 }
 
-.pilot-hero-car.is-settling {
-  animation: pilot-car-settle 400ms var(--pilot-ease-spring) forwards;
+.pilot-filmstrip-track-dense {
+  gap: 0.625rem;
+  padding: 0.375rem 0.5rem 0.875rem;
 }
 
-@keyframes pilot-car-travel {
-  0% {
-    opacity: 0;
-    transform: translate3d(-120%, 40%, 0) scale(0.6) rotate(-8deg);
+.pilot-filmstrip-frame-dense {
+  flex: 0 0 clamp(170px, 14vw, 220px);
+  scroll-snap-align: start;
+}
+
+.pilot-filmstrip-frame-dense.is-active {
+  transform: scale(1.03);
+  box-shadow: 0 10px 28px rgba(208, 173, 38, 0.15);
+}
+
+/* —— Yep coverage streams —— */
+
+.pilot-yep-lane {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+}
+
+.pilot-yep-lane-track {
+  display: flex;
+  width: max-content;
+  gap: 0.75rem;
+  padding: 0.25rem 0;
+  will-change: transform;
+}
+
+.pilot-yep-lane-track.is-right {
+  animation: pilot-yep-scroll-right var(--pilot-lane-speed, 40s) linear infinite;
+}
+
+.pilot-yep-lane-track.is-left {
+  animation: pilot-yep-scroll-left var(--pilot-lane-speed, 44s) linear infinite;
+}
+
+.pilot-yep-lane:hover .pilot-yep-lane-track {
+  animation-play-state: paused;
+}
+
+.pilot-yep-lane-track.is-static {
+  animation: none !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@keyframes pilot-yep-scroll-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
   }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(var(--car-x, 0), var(--car-y, 0), 0)
-      scale(var(--car-scale, 1)) rotate(0deg);
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
 
-@keyframes pilot-car-settle {
-  0% {
-    transform: translate3d(var(--car-x, 0), calc(var(--car-y, 0) - 4px), 0)
-      scale(var(--car-scale, 1));
+@keyframes pilot-yep-scroll-left {
+  from {
+    transform: translate3d(0, 0, 0);
   }
-  50% {
-    transform: translate3d(var(--car-x, 0), calc(var(--car-y, 0) + 2px), 0)
-      scale(var(--car-scale, 1));
-  }
-  100% {
-    transform: translate3d(var(--car-x, 0), var(--car-y, 0), 0)
-      scale(var(--car-scale, 1));
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
-.pilot-hero-mobile-car.is-entering {
-  animation: pilot-car-travel-mobile 0.9s var(--pilot-ease-out) forwards;
+.pilot-yep-chip {
+  min-height: 44px;
 }
 
-@keyframes pilot-car-travel-mobile {
-  0% {
-    opacity: 0;
-    transform: translate3d(-40%, 20%, 0) scale(0.75);
+/* —— Moving awards —— */
+
+.pilot-awards-lane {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+}
+
+.pilot-awards-track {
+  display: flex;
+  width: max-content;
+  animation: pilot-awards-scroll 55s linear infinite;
+}
+
+.pilot-awards-track.is-reverse {
+  animation: pilot-awards-scroll-reverse 60s linear infinite;
+}
+
+.pilot-awards-track.is-static {
+  animation: none !important;
+}
+
+@keyframes pilot-awards-scroll {
+  from {
+    transform: translate3d(-50%, 0, 0);
   }
-  100% {
-    opacity: 1;
-    transform: translate3d(var(--car-x, 0), var(--car-y, 0), 0)
-      scale(var(--car-scale, 0.85));
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
+
+@keyframes pilot-awards-scroll-reverse {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.pilot-award-card {
+  min-width: 260px;
+}
+
+@media (max-width: 767px) {
+  .pilot-hero-car-wrap.is-parked,
+  .pilot-hero-car-wrap.is-settling {
+    transform: translate3d(58vw, 68vh, 0) scale(0.75);
+  }
+
+  .pilot-car-asset-slot {
+    width: 44px;
+  }
+
+  .pilot-hero-protection {
+    top: -35%;
+  }
+
+  .pilot-filmstrip-frame-dense {
+    flex: 0 0 clamp(150px, 42vw, 180px);
+  }
+
+  .pilot-award-card {
+    min-width: 220px;
+  }
+}
+
 
 /* —— Hero depth layers —— */
 
@@ -499,16 +745,25 @@
 /* —— Reduced motion —— */
 
 @media (prefers-reduced-motion: reduce) {
-  .pilot-hero-car,
-  .pilot-hero-mobile-car {
+  .pilot-hero-car-wrap,
+  .pilot-hero-car-wrap.is-entering,
+  .pilot-hero-car-wrap.is-entering-mobile {
+    animation: none !important;
+    transform: translate3d(68vw, 62vh, 0) scale(0.9);
+  }
+
+  .pilot-yep-lane-track,
+  .pilot-awards-track {
     animation: none !important;
   }
 
-  .pilot-hero-car.is-parked,
-  .pilot-hero-mobile-car.is-parked {
-    opacity: 1;
-    transform: translate3d(var(--car-x, 0), var(--car-y, 0), 0)
-      scale(var(--car-scale, 1));
+  .pilot-awards-marquee {
+    display: none !important;
+  }
+
+  .pilot-filmstrip-frame-dense.is-active {
+    transform: none;
+    box-shadow: none;
   }
 
   .pilot-protection-arc {

@@ -4,7 +4,7 @@ import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 export default function PilotFinalCta() {
   return (
     <section
-      className="border-t border-border bg-charcoal py-14 sm:py-16 lg:py-20"
+      className="border-t border-border bg-charcoal py-10 sm:py-12"
       aria-labelledby="pilot-final-cta-heading"
     >
       <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8 xl:max-w-7xl">

@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Differentiator from "@/components/Differentiator";
 import PilotBreadthUniverse from "@/components/pilot/PilotBreadthUniverse";
 import PilotCarrierMarquee from "@/components/pilot/PilotCarrierMarquee";
 import PilotCommercialDiscovery from "@/components/pilot/PilotCommercialDiscovery";
@@ -21,7 +20,6 @@ export default function PilotHomePage() {
         <PilotPersonalFilmstrip />
         <PilotCommercialDiscovery />
         <PilotBreadthUniverse />
-        <Differentiator />
         <PilotLocalProof />
         <PilotFinalCta />
       </main>
