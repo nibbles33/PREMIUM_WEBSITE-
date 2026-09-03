@@ -1,0 +1,19 @@
+{
+  "base": "http://localhost:3010",
+  "timestamp": "2026-09-03T20:51:27.282Z",
+  "route": "/greenhouse-agribusiness-insurance/",
+  "checks": {
+    "overflow": false,
+    "hasHero": true,
+    "hasHeroPhoto": true,
+    "hasExplorer": false,
+    "brokerVisible": true,
+    "relatedRail": true
+  },
+  "navSourceOk": true,
+  "farmRegression": {
+    "headline": "Farm Insurance",
+    "hasExplorer": true
+  },
+  "status": 200
+}

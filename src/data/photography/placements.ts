@@ -262,7 +262,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
   {
     slug: "greenhouse",
     category: "commercial",
-    route: "/get-a-quote?type=business&industry=greenhouse",
+    route: "/greenhouse-agribusiness-insurance/",
     src: "/images/photography/commercial/greenhouse.webp",
     alt: "Commercial greenhouse with hydroponic herb rows",
     confidence: "HIGH",

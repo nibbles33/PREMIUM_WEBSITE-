@@ -24,10 +24,19 @@ const farmMetadata: Metadata = {
   alternates: { canonical: "/farm-insurance/" },
 };
 
+const greenhouseMetadata: Metadata = {
+  title:
+    "Greenhouse & Agribusiness Insurance in Windsor-Essex | Premium Insurance Brokers",
+  description:
+    "Greenhouse, crop, and agribusiness operations in Windsor-Essex — through an independent broker.",
+  alternates: { canonical: "/greenhouse-agribusiness-insurance/" },
+};
+
 function metadataForSlug(slug: string): Metadata {
   if (slug === "commercial-insurance") return hubMetadata;
   if (slug === "bonding-insurance") return bondingMetadata;
   if (slug === "farm-insurance") return farmMetadata;
+  if (slug === "greenhouse-agribusiness-insurance") return greenhouseMetadata;
 
   const industry = industryPages.find((page) => page.slug === slug);
   if (industry) {

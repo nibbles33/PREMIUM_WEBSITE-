@@ -130,6 +130,7 @@ export function photoSlugFromHref(href: string): string {
     "/commercial-auto-insurance/": "commercial-auto-insurance",
     "/dump-truck-insurance/": "dump-truck-insurance",
     "/cargo-freight-insurance/": "trucking-insurance",
+    "/greenhouse-agribusiness-insurance/": "greenhouse",
   };
   return map[href] ?? "commercial-insurance";
 }

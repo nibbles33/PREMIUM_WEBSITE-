@@ -13,7 +13,7 @@ export const agricultureNavLinks: NavLink[] = [
   { label: "Farm Insurance", href: "/farm-insurance/" },
   {
     label: "Greenhouse / Agribusiness",
-    href: "/get-a-quote?type=farm",
+    href: "/greenhouse-agribusiness-insurance/",
     description: "Greenhouse, crop, and agribusiness operations.",
   },
 ];

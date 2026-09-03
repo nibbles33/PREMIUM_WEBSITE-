@@ -186,7 +186,7 @@ export const breadthItems: BreadthItem[] = [
   { slot: "semi-truck", label: "Trucking", href: "/trucking-insurance/", x: 12, y: 78, width: 95, layer: 3 },
   { slot: "restaurant", label: "Restaurant", href: "/restaurant-insurance/", x: 48, y: 78, width: 82, layer: 2 },
   { slot: "warehouse", label: "Warehouse", href: "/warehousing-insurance/", x: 72, y: 72, width: 88, layer: 1 },
-  { slot: "greenhouse", label: "Greenhouse", href: "/farm-insurance/", x: 88, y: 48, width: 68, layer: 2 },
+  { slot: "greenhouse", label: "Greenhouse", href: "/greenhouse-agribusiness-insurance/", x: 88, y: 48, width: 68, layer: 2 },
   { slot: "contractor", label: "Contractors", href: "/contractors-insurance/", x: 30, y: 82, width: 78, layer: 1 },
   { slot: "retail", label: "Retail", href: "/retail-insurance/", x: 58, y: 18, width: 74, layer: 1 },
 ];
@@ -217,7 +217,7 @@ export const breadthLaneSpecialty: CoverageStreamItem[] = [
   { label: "Landlord", href: "/landlord-insurance/", photoSlug: "landlord" },
   { label: "Bonding", href: "/bonding-insurance/", photoSlug: "bonding-insurance" },
   { label: "Dump Trucks", href: "/dump-truck-insurance/", photoSlug: "dump-truck-insurance" },
-  { label: "Greenhouse", href: "/farm-insurance/", photoSlug: "greenhouse" },
+  { label: "Greenhouse", href: "/greenhouse-agribusiness-insurance/", photoSlug: "greenhouse" },
   { label: "Real Estate", href: "/real-estate-insurance/", photoSlug: "real-estate-insurance" },
   { label: "Builders", href: "/builders-developers-insurance/", photoSlug: "builders-developers-insurance" },
 ];
@@ -241,7 +241,7 @@ export const yepLaneCommercial: CoverageStreamItem[] = [
   { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
   { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "commercial-property-insurance" },
   { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
-  { label: "Greenhouse", href: "/farm-insurance/", photoSlug: "greenhouse" },
+  { label: "Greenhouse", href: "/greenhouse-agribusiness-insurance/", photoSlug: "greenhouse" },
   { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },
 ];
 
@@ -261,7 +261,7 @@ export const yepCarouselItems: CoverageStreamItem[] = [
   { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
   { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "commercial-property-insurance" },
   { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
-  { label: "Greenhouse", href: "/farm-insurance/", photoSlug: "greenhouse" },
+  { label: "Greenhouse", href: "/greenhouse-agribusiness-insurance/", photoSlug: "greenhouse" },
   { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },
 ];
 

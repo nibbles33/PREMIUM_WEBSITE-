@@ -22,6 +22,7 @@ const staticRoutes = [
   "/life-insurance/",
   "/group-home-auto-insurance/",
   "/farm-insurance/",
+  "/greenhouse-agribusiness-insurance/",
   "/bonding-insurance/",
   "/commercial-insurance/",
   "/commercial-auto-insurance/",

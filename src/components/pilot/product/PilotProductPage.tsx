@@ -55,11 +55,13 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
             products={config.relatedProducts}
           />
         ) : null}
-        <PremiumProductFAQ
-          title={config.faqTitle}
-          intro={config.faqIntro}
-          items={config.faqItems}
-        />
+        {config.faqItems.length > 0 ? (
+          <PremiumProductFAQ
+            title={config.faqTitle}
+            intro={config.faqIntro}
+            items={config.faqItems}
+          />
+        ) : null}
         <ProductFinalCta
           slug={config.slug}
           eyebrow={config.ctaEyebrow}

@@ -181,8 +181,8 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ],
     brokerSteps: commercialBrokerSteps,
     relatedProducts: relatedLinksToProducts([
+      { label: "Greenhouse & Agribusiness", href: "/greenhouse-agribusiness-insurance/" },
       { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
-      { label: "Food Truck & Trailer", href: "/food-truck-insurance/" },
     ]),
     relatedIntro:
       "One policy is rarely the whole picture. Explore other coverage from Premium.",
@@ -214,5 +214,38 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ctaHeading: "Ready to cover your farm?",
     ctaSubhead: "Tell us about your operation — we'll compare options and explain what fits.",
     serviceName: "Farm Insurance",
+  }),
+  "greenhouse-agribusiness-insurance": buildPilotProductConfig({
+    slug: "greenhouse-agribusiness-insurance",
+    metaTitle:
+      "Greenhouse & Agribusiness Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Greenhouse, crop, and agribusiness operations in Windsor-Essex — through an independent broker.",
+    eyebrow: "Greenhouse & Agribusiness",
+    headline: "Greenhouse & Agribusiness Insurance",
+    heroLead:
+      "Greenhouse, crop, and agribusiness operations in Windsor-Essex.",
+    photographySlug: "greenhouse",
+    accentColor: "#6B8F71",
+    quoteHref: "/get-a-quote?type=business&industry=greenhouse",
+    quoteLabel: "Get a Greenhouse Quote",
+    trustStatement:
+      "Greenhouse, crop, and agribusiness operations in Windsor-Essex — explained through an independent broker.",
+    coverageIntro: "",
+    coverageItems: [],
+    brokerSteps: commercialBrokerSteps,
+    relatedProducts: relatedLinksToProducts([
+      { label: "Farm Insurance", href: "/farm-insurance/" },
+      { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    ]),
+    relatedIntro:
+      "One policy is rarely the whole picture. Explore other coverage from Premium.",
+    faqTitle: "Greenhouse & agribusiness FAQ",
+    faqIntro: "Straight answers to common questions.",
+    faqItems: [],
+    ctaHeading: "Ready to discuss your greenhouse operation?",
+    ctaSubhead:
+      "Tell us about your operation — a broker will compare options and explain what fits.",
+    serviceName: "Greenhouse & Agribusiness Insurance",
   }),
 };
