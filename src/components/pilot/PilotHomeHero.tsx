@@ -11,7 +11,6 @@ const BROKER_HREF = "/talk-to-a-broker/";
 
 type CarPhase = "idle" | "entering" | "settling" | "parked";
 
-/** De-emphasized miniature slot — final AI asset drops in here */
 function CarAssetSlot({ parked }: { parked: boolean }) {
   return (
     <div
@@ -93,8 +92,7 @@ export default function PilotHomeHero() {
     [reduceMotion, isMobile],
   );
 
-  const bgShift = reduceMotion || isMobile ? 0 : pointer.x * 12;
-  const midShift = reduceMotion || isMobile ? 0 : pointer.x * 20;
+  const bgShift = reduceMotion || isMobile ? 0 : pointer.x * 8;
 
   const carClass =
     carPhase === "entering"
@@ -113,11 +111,11 @@ export default function PilotHomeHero() {
       aria-labelledby="pilot-hero-heading"
       onPointerMove={onPointerMove}
     >
-      {/* Primary photography — LCP element */}
+      {/* Single primary photograph — LCP */}
       <div
         className="pilot-hero-bg-layer pointer-events-none absolute inset-0"
         aria-hidden
-        style={{ transform: `translate3d(${bgShift}px, ${pointer.y * 4}px, 0)` }}
+        style={{ transform: `translate3d(${bgShift}px, 0, 0)` }}
       >
         <Image
           src="/images/photography/personal/home-insurance.webp"
@@ -128,42 +126,27 @@ export default function PilotHomeHero() {
           sizes="100vw"
           className="object-cover object-[center_35%]"
         />
-        {/* Localized copy scrim — left side only */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(105deg, rgba(32,39,40,0.88) 0%, rgba(32,39,40,0.72) 32%, rgba(32,39,40,0.25) 58%, rgba(32,39,40,0.08) 100%)",
+              "linear-gradient(105deg, rgba(32,39,40,0.90) 0%, rgba(32,39,40,0.78) 34%, rgba(32,39,40,0.35) 62%, rgba(32,39,40,0.12) 100%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(32,39,40,0.15) 0%, transparent 40%, rgba(32,39,40,0.35) 100%)",
+              "linear-gradient(180deg, rgba(32,39,40,0.2) 0%, transparent 45%, rgba(32,39,40,0.4) 100%)",
           }}
         />
       </div>
 
-      {/* Secondary depth layer */}
-      <div
-        className="pilot-hero-mid-layer pointer-events-none absolute inset-0 hidden sm:block"
-        aria-hidden
-        style={{ transform: `translate3d(${midShift}px, 0, 0)` }}
-      >
-        <Image
-          src="/images/photography/personal/auto-insurance.webp"
-          alt=""
-          fill
-          sizes="50vw"
-          loading="lazy"
-          className="object-cover object-right opacity-[0.35] mix-blend-luminosity"
-        />
-      </div>
+      {/* Abstract texture only — no second photograph */}
+      <div className="pilot-hero-texture pointer-events-none absolute inset-0" aria-hidden />
 
       <div className="pilot-hero-road-immersive" aria-hidden />
 
-      {/* Copy + CTAs */}
       <div className="relative z-10 mx-auto flex min-h-[min(82vh,720px)] max-w-6xl flex-col justify-center px-4 pb-12 pt-20 sm:px-6 lg:px-8 xl:max-w-7xl">
         <div className="max-w-xl">
           <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold sm:text-xs">
@@ -179,7 +162,7 @@ export default function PilotHomeHero() {
             <br />
             <span className="text-gold">Surprisingly easy.</span>
           </h1>
-          <p className="mt-4 max-w-md text-base leading-relaxed text-white/75 sm:text-lg">
+          <p className="mt-4 max-w-md text-base leading-relaxed text-white/80 sm:text-lg">
             Personal, commercial, and specialty coverage through real Windsor-Essex
             brokers — not a call centre.
           </p>
@@ -197,12 +180,11 @@ export default function PilotHomeHero() {
         </div>
       </div>
 
-      {/* Car travel path + protection arc at parking destination */}
       <div className={`${carClass} pointer-events-none`} aria-hidden>
         <ProtectionArc
           active={protectionActive}
           className="pilot-hero-protection"
-          breathe={!reduceMotion}
+          breathe={false}
         />
         <CarAssetSlot parked={carPhase === "parked" || carPhase === "settling"} />
       </div>

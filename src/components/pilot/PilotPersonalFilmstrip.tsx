@@ -19,23 +19,62 @@ import {
 } from "@/data/pilot-home";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
-const AUTO_SCROLL_SPEED = 0.55;
+/** ~39px/s at 60fps — primary continuous motion zone */
+const AUTO_SCROLL_SPEED = 0.65;
 const INACTIVITY_RESUME_MS = 3500;
+const LOOP_COPIES = 2;
+const ITEM_COUNT = personalFilmstripItems.length;
+
+function normalizeOffset(offset: number, setWidth: number) {
+  if (setWidth <= 0) return 0;
+  let next = offset % setWidth;
+  if (next < 0) next += setWidth;
+  return next;
+}
 
 export default function PilotPersonalFilmstrip() {
   const reduceMotion = usePrefersReducedMotion();
   const baseId = useId();
-  const trackRef = useRef<HTMLDivElement>(null);
-  const loopWidthRef = useRef(0);
+  const viewportRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
+  const setWidthRef = useRef(0);
+  const frameStepRef = useRef(0);
+  const offsetRef = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const dragStart = useRef({ x: 0, scrollLeft: 0 });
+  const dragStart = useRef({ x: 0, offset: 0 });
   const resumeTimerRef = useRef<number | null>(null);
   const userControlRef = useRef(false);
 
-  const items = [...personalFilmstripItems, ...personalFilmstripItems];
+  const loopItems = Array.from({ length: LOOP_COPIES }, () =>
+    personalFilmstripItems,
+  ).flat();
+
+  const applyTransform = useCallback((offset: number) => {
+    const inner = innerRef.current;
+    if (!inner) return;
+    inner.style.transform = `translate3d(-${offset}px, 0, 0)`;
+  }, []);
+
+  const measure = useCallback(() => {
+    const inner = innerRef.current;
+    if (!inner) return;
+    const total = inner.scrollWidth;
+    setWidthRef.current = total / LOOP_COPIES;
+    frameStepRef.current = setWidthRef.current / ITEM_COUNT;
+    offsetRef.current = normalizeOffset(offsetRef.current, setWidthRef.current);
+    applyTransform(offsetRef.current);
+  }, [applyTransform]);
+
+  const updateActiveIndex = useCallback(() => {
+    const step = frameStepRef.current;
+    if (step <= 0) return;
+    const index =
+      Math.round(offsetRef.current / step) % ITEM_COUNT;
+    setActiveIndex((index + ITEM_COUNT) % ITEM_COUNT);
+  }, []);
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 767px)");
@@ -44,6 +83,12 @@ export default function PilotPersonalFilmstrip() {
     mq.addEventListener("change", update);
     return () => mq.removeEventListener("change", update);
   }, []);
+
+  useEffect(() => {
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [measure]);
 
   const pauseAuto = useCallback(() => {
     userControlRef.current = true;
@@ -55,119 +100,150 @@ export default function PilotPersonalFilmstrip() {
     }, INACTIVITY_RESUME_MS);
   }, []);
 
-  const updateActiveFromScroll = useCallback(() => {
-    const track = trackRef.current;
-    if (!track) return;
-    const frames = track.querySelectorAll<HTMLElement>("[data-frame]");
-    const trackCenter = track.scrollLeft + track.clientWidth / 2;
-    let closest = 0;
-    let minDist = Infinity;
-    frames.forEach((frame, i) => {
-      const center = frame.offsetLeft + frame.offsetWidth / 2;
-      const dist = Math.abs(center - trackCenter);
-      if (dist < minDist) {
-        minDist = dist;
-        closest = i % personalFilmstripItems.length;
-      }
-    });
-    setActiveIndex(closest);
-  }, []);
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const measure = () => {
-      loopWidthRef.current = track.scrollWidth / 2;
-    };
-    measure();
-    window.addEventListener("resize", measure);
-    track.addEventListener("scroll", updateActiveFromScroll, { passive: true });
-    return () => {
-      window.removeEventListener("resize", measure);
-      track.removeEventListener("scroll", updateActiveFromScroll);
-    };
-  }, [updateActiveFromScroll]);
-
-  /* Desktop auto-drift */
+  /* Desktop: transform-based seamless loop */
   useEffect(() => {
     if (reduceMotion || isMobile) return;
     let raf = 0;
 
     const tick = () => {
-      const track = trackRef.current;
+      const setWidth = setWidthRef.current;
       if (
-        track &&
+        setWidth > 0 &&
         !isPaused &&
         !isDragging &&
-        !userControlRef.current &&
-        loopWidthRef.current > 0
+        !userControlRef.current
       ) {
-        track.scrollLeft += AUTO_SCROLL_SPEED;
-        if (track.scrollLeft >= loopWidthRef.current) {
-          track.scrollLeft -= loopWidthRef.current;
+        offsetRef.current += AUTO_SCROLL_SPEED;
+        if (offsetRef.current >= setWidth) {
+          offsetRef.current -= setWidth;
         }
+        applyTransform(offsetRef.current);
+        updateActiveIndex();
       }
       raf = requestAnimationFrame(tick);
     };
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [reduceMotion, isMobile, isPaused, isDragging]);
+  }, [
+    reduceMotion,
+    isMobile,
+    isPaused,
+    isDragging,
+    applyTransform,
+    updateActiveIndex,
+  ]);
+
+  const nudge = (direction: -1 | 1) => {
+    pauseAuto();
+    const step = frameStepRef.current;
+    if (step <= 0) return;
+    offsetRef.current = normalizeOffset(
+      offsetRef.current + direction * step,
+      setWidthRef.current,
+    );
+    applyTransform(offsetRef.current);
+    updateActiveIndex();
+  };
 
   const scrollToIndex = (index: number) => {
-    const track = trackRef.current;
-    if (!track) return;
     pauseAuto();
-    const frames = track.querySelectorAll<HTMLElement>("[data-frame]");
-    const frame = frames[index];
-    if (!frame) return;
-    const target =
-      frame.offsetLeft - (track.clientWidth - frame.offsetWidth) / 2;
-    track.scrollTo({ left: target, behavior: reduceMotion ? "auto" : "smooth" });
-    setActiveIndex(index % personalFilmstripItems.length);
+    const step = frameStepRef.current;
+    if (step <= 0) return;
+    const current = Math.round(offsetRef.current / step) % ITEM_COUNT;
+    let delta = index - current;
+    if (delta > ITEM_COUNT / 2) delta -= ITEM_COUNT;
+    if (delta < -ITEM_COUNT / 2) delta += ITEM_COUNT;
+    offsetRef.current = normalizeOffset(
+      offsetRef.current + delta * step,
+      setWidthRef.current,
+    );
+    applyTransform(offsetRef.current);
+    setActiveIndex(index);
   };
 
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (isMobile) return;
     pauseAuto();
     if (event.key === "ArrowLeft") {
       event.preventDefault();
-      scrollToIndex(
-        (activeIndex - 1 + personalFilmstripItems.length) %
-          personalFilmstripItems.length,
-      );
+      nudge(-1);
     } else if (event.key === "ArrowRight") {
       event.preventDefault();
-      scrollToIndex((activeIndex + 1) % personalFilmstripItems.length);
+      nudge(1);
     }
   };
 
   const onPointerDown = (event: React.PointerEvent) => {
-    const track = trackRef.current;
-    if (!track) return;
+    if (isMobile) return;
     pauseAuto();
     setIsDragging(true);
-    dragStart.current = { x: event.clientX, scrollLeft: track.scrollLeft };
-    track.setPointerCapture(event.pointerId);
+    dragStart.current = { x: event.clientX, offset: offsetRef.current };
+    viewportRef.current?.setPointerCapture(event.pointerId);
   };
 
   const onPointerMove = (event: React.PointerEvent) => {
-    if (!isDragging) return;
-    const track = trackRef.current;
-    if (!track) return;
-    track.scrollLeft =
-      dragStart.current.scrollLeft - (event.clientX - dragStart.current.x);
+    if (!isDragging || isMobile) return;
+    const delta = event.clientX - dragStart.current.x;
+    offsetRef.current = normalizeOffset(
+      dragStart.current.offset - delta,
+      setWidthRef.current,
+    );
+    applyTransform(offsetRef.current);
+    updateActiveIndex();
   };
 
   const onPointerUp = (event: React.PointerEvent) => {
+    if (isMobile) return;
     setIsDragging(false);
-    trackRef.current?.releasePointerCapture(event.pointerId);
-    updateActiveFromScroll();
+    viewportRef.current?.releasePointerCapture(event.pointerId);
     pauseAuto();
   };
 
-  const progress =
-    ((activeIndex + 1) / personalFilmstripItems.length) * 100;
+  const progress = ((activeIndex + 1) / ITEM_COUNT) * 100;
+
+  const renderFrame = (
+    item: (typeof personalFilmstripItems)[number],
+    index: number,
+    interactive: boolean,
+  ) => {
+    const photo = getFilmstripPhoto(item.slug);
+    const logicalIndex = index % ITEM_COUNT;
+    const isActive = logicalIndex === activeIndex;
+    const isClone = index >= ITEM_COUNT;
+
+    return (
+      <Link
+        key={`${item.slug}-${index}`}
+        href={item.href}
+        data-frame
+        tabIndex={interactive && !isClone ? 0 : -1}
+        aria-hidden={isClone || undefined}
+        className={`pilot-filmstrip-frame pilot-filmstrip-frame-dense group block overflow-hidden rounded-xl border border-border/80 bg-white shadow-[0_6px_20px_rgba(32,39,40,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+          isActive ? "is-active" : ""
+        }`}
+        aria-label={isClone ? undefined : `${item.label} insurance`}
+        onFocus={interactive ? pauseAuto : undefined}
+      >
+        <div className="relative aspect-[5/4] w-full overflow-hidden">
+          {photo ? (
+            <Image
+              src={photo.src}
+              alt=""
+              fill
+              sizes="220px"
+              loading={logicalIndex < 4 ? "eager" : "lazy"}
+              className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.05]"
+            />
+          ) : null}
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-charcoal/5 to-transparent" />
+          <p className="absolute bottom-2.5 left-3 text-lg font-medium tracking-tight text-white">
+            {item.label}
+          </p>
+        </div>
+      </Link>
+    );
+  };
 
   return (
     <section
@@ -175,10 +251,6 @@ export default function PilotPersonalFilmstrip() {
       aria-labelledby={`${baseId}-heading`}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => {
-        if (!userControlRef.current) setIsPaused(false);
-      }}
-      onFocus={() => setIsPaused(true)}
-      onBlur={() => {
         if (!userControlRef.current) setIsPaused(false);
       }}
     >
@@ -215,8 +287,7 @@ export default function PilotPersonalFilmstrip() {
               type="button"
               onClick={() =>
                 scrollToIndex(
-                  (activeIndex - 1 + personalFilmstripItems.length) %
-                    personalFilmstripItems.length,
+                  (activeIndex - 1 + ITEM_COUNT) % ITEM_COUNT,
                 )
               }
               className="pilot-btn-discover"
@@ -226,9 +297,7 @@ export default function PilotPersonalFilmstrip() {
             </button>
             <button
               type="button"
-              onClick={() =>
-                scrollToIndex((activeIndex + 1) % personalFilmstripItems.length)
-              }
+              onClick={() => scrollToIndex((activeIndex + 1) % ITEM_COUNT)}
               className="pilot-btn-discover"
               aria-label="Next personal insurance product"
             >
@@ -236,9 +305,10 @@ export default function PilotPersonalFilmstrip() {
             </button>
           </div>
 
+          {/* Desktop: transform loop */}
           <div
-            ref={trackRef}
-            className={`pilot-filmstrip-track pilot-filmstrip-track-dense ${isDragging ? "is-dragging" : ""}`}
+            ref={viewportRef}
+            className={`pilot-filmstrip-viewport ${isDragging ? "is-dragging" : ""}`}
             role="region"
             aria-roledescription="carousel"
             aria-label="Personal insurance products"
@@ -249,40 +319,26 @@ export default function PilotPersonalFilmstrip() {
             onPointerUp={onPointerUp}
             onPointerCancel={onPointerUp}
           >
-            {items.map((item, index) => {
-              const photo = getFilmstripPhoto(item.slug);
-              const logicalIndex = index % personalFilmstripItems.length;
-              const isActive = logicalIndex === activeIndex;
-              return (
-                <Link
-                  key={`${item.slug}-${index}`}
-                  href={item.href}
-                  data-frame
-                  className={`pilot-filmstrip-frame pilot-filmstrip-frame-dense group block overflow-hidden rounded-xl border border-border/80 bg-white shadow-[0_6px_20px_rgba(32,39,40,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
-                    isActive ? "is-active" : ""
-                  }`}
-                  aria-label={`${item.label} insurance`}
-                  onFocus={pauseAuto}
-                >
-                  <div className="relative aspect-[5/4] w-full overflow-hidden">
-                    {photo ? (
-                      <Image
-                        src={photo.src}
-                        alt=""
-                        fill
-                        sizes="220px"
-                        loading={index < 6 ? "eager" : "lazy"}
-                        className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.05]"
-                      />
-                    ) : null}
-                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-charcoal/5 to-transparent" />
-                    <p className="absolute bottom-2.5 left-3 text-lg font-medium tracking-tight text-white">
-                      {item.label}
-                    </p>
-                  </div>
-                </Link>
-              );
-            })}
+            <div
+              ref={innerRef}
+              className="pilot-filmstrip-inner pilot-filmstrip-track-dense"
+            >
+              {loopItems.map((item, index) =>
+                renderFrame(item, index, true),
+              )}
+            </div>
+          </div>
+
+          {/* Mobile: native swipe, single set, no autoplay */}
+          <div
+            className="pilot-filmstrip-track pilot-filmstrip-track-dense pilot-filmstrip-track-mobile"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Personal insurance products"
+          >
+            {personalFilmstripItems.map((item, index) =>
+              renderFrame(item, index, true),
+            )}
           </div>
 
           <div
@@ -290,7 +346,7 @@ export default function PilotPersonalFilmstrip() {
             role="progressbar"
             aria-valuenow={activeIndex + 1}
             aria-valuemin={1}
-            aria-valuemax={personalFilmstripItems.length}
+            aria-valuemax={ITEM_COUNT}
             aria-label="Filmstrip progress"
           >
             <div

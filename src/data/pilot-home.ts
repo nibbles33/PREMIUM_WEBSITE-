@@ -211,17 +211,6 @@ export const breadthLanePersonal: CoverageStreamItem[] = [
   { label: "Travel", href: "/travel-insurance/", photoSlug: "travel-insurance" },
 ];
 
-export const breadthLaneCommercial: CoverageStreamItem[] = [
-  { label: "Trucking", href: "/trucking-insurance/", photoSlug: "trucking-insurance" },
-  { label: "Contractors", href: "/contractors-insurance/", photoSlug: "contractors-insurance" },
-  { label: "Restaurant", href: "/restaurant-insurance/", photoSlug: "restaurant-insurance" },
-  { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
-  { label: "Commercial Property", href: "/commercial-property-insurance/", photoSlug: "commercial-property-insurance" },
-  { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },
-  { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
-  { label: "Food Trucks", href: "/food-truck-insurance/", photoSlug: "food-truck-insurance" },
-];
-
 export const breadthLaneSpecialty: CoverageStreamItem[] = [
   { label: "Events", href: "/event-liability-insurance/", photoSlug: "commercial-insurance" },
   { label: "Personal Umbrella", href: "/personal-umbrella-insurance/", photoSlug: "home-insurance" },
@@ -231,6 +220,29 @@ export const breadthLaneSpecialty: CoverageStreamItem[] = [
   { label: "Greenhouse", href: "/farm-insurance/", photoSlug: "greenhouse" },
   { label: "Real Estate", href: "/real-estate-insurance/", photoSlug: "real-estate-insurance" },
   { label: "Builders", href: "/builders-developers-insurance/", photoSlug: "builders-developers-insurance" },
+];
+
+/** Yep pass #2 — two-lane breadth streams */
+export const yepLanePersonal: CoverageStreamItem[] = [
+  { label: "Auto", href: "/auto-insurance/", photoSlug: "auto-insurance" },
+  { label: "Home", href: "/home-insurance/", photoSlug: "home-insurance" },
+  { label: "Boat", href: "/boat-insurance/", photoSlug: "boat" },
+  { label: "Motorcycle", href: "/motorcycle-insurance/", photoSlug: "motorcycle" },
+  { label: "Cottage", href: "/cottage-insurance/", photoSlug: "cottage" },
+  { label: "Tenant", href: "/tenant-insurance/", photoSlug: "tenant" },
+  { label: "Wedding / Event", href: "/event-liability-insurance/", photoSlug: "commercial-insurance" },
+  { label: "Personal Umbrella", href: "/personal-umbrella-insurance/", photoSlug: "home-insurance" },
+];
+
+export const yepLaneCommercial: CoverageStreamItem[] = [
+  { label: "Trucking", href: "/trucking-insurance/", photoSlug: "trucking-insurance" },
+  { label: "Contractors", href: "/contractors-insurance/", photoSlug: "contractors-insurance" },
+  { label: "Restaurant", href: "/restaurant-insurance/", photoSlug: "restaurant-insurance" },
+  { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
+  { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "commercial-property-insurance" },
+  { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
+  { label: "Greenhouse", href: "/farm-insurance/", photoSlug: "greenhouse" },
+  { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },
 ];
 
 export type AwardBadge = {

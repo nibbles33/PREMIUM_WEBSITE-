@@ -7,7 +7,7 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 function AwardCard({ badge }: { badge: AwardBadge }) {
   return (
-    <div className="pilot-award-card group flex shrink-0 items-center gap-4 rounded-2xl border border-border/80 bg-white px-5 py-4 shadow-[0_8px_24px_rgba(32,39,40,0.06)] transition-[border-color,box-shadow,transform] duration-200 hover:border-gold/40 hover:shadow-[0_12px_32px_rgba(208,173,38,0.12)]">
+    <div className="pilot-award-card group flex shrink-0 items-center gap-4 rounded-2xl border border-border/80 bg-white px-5 py-4 shadow-[0_8px_24px_rgba(32,39,40,0.06)] transition-[border-color,box-shadow] duration-200 hover:border-gold/40 hover:shadow-[0_12px_32px_rgba(208,173,38,0.12)]">
       <span className="relative flex h-[88px] w-[88px] shrink-0 items-center justify-center sm:h-[100px] sm:w-[100px]">
         <Image
           src={badge.src}
@@ -34,30 +34,9 @@ function AwardCard({ badge }: { badge: AwardBadge }) {
   );
 }
 
-function AwardsTrack({ badges, reverse }: { badges: AwardBadge[]; reverse?: boolean }) {
-  const reduceMotion = usePrefersReducedMotion();
-  const doubled = [...badges, ...badges];
-
-  return (
-    <div
-      className="pilot-awards-lane overflow-hidden"
-      aria-hidden={reduceMotion ? undefined : true}
-    >
-      <div
-        className={`pilot-awards-track gap-4 sm:gap-5 ${reverse ? "is-reverse" : ""} ${reduceMotion ? "is-static" : ""}`}
-      >
-        {doubled.map((badge, i) => (
-          <AwardCard key={`${badge.src}-${i}`} badge={badge} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function PilotLocalProof() {
   const reduceMotion = usePrefersReducedMotion();
-  const row1 = pilotAwardBadges.slice(0, 4);
-  const row2 = pilotAwardBadges.slice(4);
+  const doubled = [...pilotAwardBadges, ...pilotAwardBadges];
 
   return (
     <section
@@ -91,21 +70,16 @@ export default function PilotLocalProof() {
         </ul>
       ) : (
         <div
-          className="pilot-awards-marquee mt-7 space-y-4 sm:mt-8"
+          className="pilot-awards-marquee mt-7 sm:mt-8"
           aria-label="Awards and recognition"
-          onMouseEnter={(e) => {
-            e.currentTarget.querySelectorAll(".pilot-awards-track").forEach((el) => {
-              (el as HTMLElement).style.animationPlayState = "paused";
-            });
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.querySelectorAll(".pilot-awards-track").forEach((el) => {
-              (el as HTMLElement).style.animationPlayState = "running";
-            });
-          }}
         >
-          <AwardsTrack badges={row1} />
-          <AwardsTrack badges={row2.length ? row2 : row1} reverse />
+          <div className="pilot-awards-lane overflow-hidden">
+            <div className="pilot-awards-track pilot-awards-track-slow gap-4 sm:gap-5">
+              {doubled.map((badge, i) => (
+                <AwardCard key={`${badge.src}-${i}`} badge={badge} />
+              ))}
+            </div>
+          </div>
         </div>
       )}
 
