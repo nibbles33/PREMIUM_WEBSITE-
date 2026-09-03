@@ -601,54 +601,6 @@
   display: none;
 }
 
-/* —— Carrier marquee pilot —— */
-
-.pilot-carrier-marquee {
-  overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    #000 8%,
-    #000 92%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    #000 8%,
-    #000 92%,
-    transparent 100%
-  );
-}
-
-.pilot-carrier-marquee-track {
-  display: flex;
-  align-items: center;
-  width: max-content;
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
-  animation: pilot-carrier-scroll 110s linear infinite;
-}
-
-.pilot-carrier-marquee:hover .pilot-carrier-marquee-track,
-.pilot-carrier-marquee:focus-within .pilot-carrier-marquee-track {
-  animation-play-state: paused;
-}
-
-@keyframes pilot-carrier-scroll {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-.pilot-carrier-static-fallback {
-  /* !important beats Tailwind `grid` on the same element in normal motion */
-  display: none !important;
-}
-
 .pilot-awards-static-fallback {
   display: none !important;
 }
@@ -877,18 +829,6 @@
     animation: none;
   }
 
-  .pilot-carrier-marquee-track {
-    animation: none !important;
-  }
-
-  .pilot-carrier-marquee {
-    display: none !important;
-  }
-
-  .pilot-carrier-static-fallback {
-    display: grid !important;
-  }
-
   .pilot-awards-static-fallback {
     display: block !important;
   }
@@ -918,11 +858,5 @@
   .pilot-btn-secondary:active,
   .pilot-btn-discover:active {
     transform: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .pilot-carrier-marquee-track {
-    animation-duration: 90s;
   }
 }

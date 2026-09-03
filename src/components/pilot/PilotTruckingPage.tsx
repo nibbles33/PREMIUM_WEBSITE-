@@ -13,7 +13,6 @@ import {
   industryPages,
 } from "@/data/commercial-industries";
 import { getPageHeroPhotography } from "@/data/photography";
-import "@/styles/pilot.css";
 
 const BROKER_HREF = "/talk-to-a-broker/";
 const TRUCKING_ACCENT = "#5A8A73";

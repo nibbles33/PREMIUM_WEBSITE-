@@ -72,9 +72,9 @@ export default function PilotCarrierMarquee() {
         </div>
       </div>
 
-      {/* Reduced motion: CSS-only static fallback */}
+      {/* Reduced motion: CSS-only static fallback (no Tailwind display/grid utilities) */}
       <ul
-        className="pilot-carrier-static-fallback mx-auto mt-7 grid max-w-6xl list-none grid-cols-2 gap-4 px-4 sm:mt-8 sm:grid-cols-3 sm:gap-5 sm:px-6 md:grid-cols-4 lg:grid-cols-6 lg:px-8 xl:max-w-7xl"
+        className="pilot-carrier-static-fallback mx-auto mt-7 max-w-6xl list-none px-4 sm:mt-8 sm:px-6 lg:px-8 xl:max-w-7xl"
         aria-label="Insurance carrier partners"
       >
         {homepageCarriers.map((carrier) => (

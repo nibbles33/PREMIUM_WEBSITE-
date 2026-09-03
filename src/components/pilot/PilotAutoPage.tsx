@@ -19,7 +19,6 @@ import {
 } from "@/components/LineInsurancePage";
 import { getPageHeroPhotography } from "@/data/photography";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-import "@/styles/pilot.css";
 
 const BROKER_HREF = "/talk-to-a-broker/";
 const AUTO_ACCENT = "#5B7A99";
