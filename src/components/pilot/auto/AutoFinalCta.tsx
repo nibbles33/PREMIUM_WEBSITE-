@@ -46,7 +46,7 @@ export default function AutoFinalCta() {
               href={AUTO_BROKER_HREF}
               variant="secondary"
               showArrow={false}
-              className="border-white/40 text-white hover:border-gold hover:text-gold"
+              className="pilot-auto-final-broker-btn"
             >
               Talk to a Broker
             </PremiumPilotButton>

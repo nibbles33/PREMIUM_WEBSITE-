@@ -928,6 +928,26 @@
   outline-offset: 3px;
 }
 
+/* Auto final CTA — secondary broker button on charcoal (base visibility) */
+.pilot-auto-final-broker-btn.pilot-btn-secondary {
+  color: #fff;
+  border-color: rgba(208, 173, 38, 0.65);
+}
+
+.pilot-auto-final-broker-btn.pilot-btn-secondary:hover {
+  color: var(--pilot-gold);
+  border-color: var(--pilot-gold);
+  background: rgba(208, 173, 38, 0.08);
+}
+
+.pilot-auto-final-broker-btn.pilot-btn-secondary:focus-visible {
+  color: var(--pilot-gold);
+  border-color: var(--pilot-gold);
+  background: rgba(208, 173, 38, 0.08);
+  outline: 2px solid var(--pilot-gold);
+  outline-offset: 3px;
+}
+
 /* —— Auto product page —— */
 
 .pilot-auto-hero-visual {
