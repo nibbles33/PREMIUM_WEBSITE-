@@ -2,10 +2,14 @@
 
 import {
   Banknote,
+  Beef,
   FileCheck,
   Gavel,
   ScrollText,
+  Shield,
   ShieldCheck,
+  Tractor,
+  Warehouse,
 } from "lucide-react";
 import {
   COMMERCIAL_ACCENT,
@@ -13,7 +17,10 @@ import {
   commercialBrokerCopy,
   commercialHubFaqs,
 } from "@/data/commercial-industries";
-import { buildPilotProductConfig } from "@/lib/buildPilotProductConfig";
+import {
+  buildPilotProductConfig,
+  relatedLinksToProducts,
+} from "@/lib/buildPilotProductConfig";
 import { commercialBrokerSteps } from "@/data/pilot-product-shared";
 import type { PilotProductPageConfig } from "@/types/pilot-product";
 
@@ -128,5 +135,84 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ctaHeading: "Ready to get bonded?",
     ctaSubhead: "Tell us about the contract or license — we'll help you arrange the right bond.",
     serviceName: "Surety Bonds",
+  }),
+  "farm-insurance": buildPilotProductConfig({
+    slug: "farm-insurance",
+    metaTitle: "Farm Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Farm insurance through an independent Windsor-Essex broker — farm property, equipment & machinery, farm liability, and livestock coverage for Essex County farms.",
+    eyebrow: "Farm Insurance",
+    headline: "Farm Insurance",
+    heroLead:
+      "Coverage built for Essex County's working farms — from the farmhouse to the equipment in the field.",
+    photographySlug: "farm-insurance",
+    accentColor: "#7A8B5C",
+    quoteHref: "/get-a-quote?type=farm",
+    quoteLabel: "Get a Farm Quote",
+    trustStatement:
+      "Farm insurance through an independent Windsor-Essex broker — farm property, equipment, liability, and livestock coverage for Essex County farms.",
+    coverageIntro:
+      "Core coverages that protect farm buildings, machinery, liability, and livestock.",
+    coverageItems: [
+      {
+        title: "Farm Property Coverage",
+        description:
+          "Protects farmhouses, barns, and other structures on your property.",
+        icon: Warehouse,
+      },
+      {
+        title: "Equipment & Machinery",
+        description:
+          "Covers tractors, implements, and other farm equipment against damage or loss.",
+        icon: Tractor,
+      },
+      {
+        title: "Farm Liability",
+        description:
+          "Protects you if someone is injured on your property or by your farm operations.",
+        icon: Shield,
+      },
+      {
+        title: "Livestock Coverage",
+        description:
+          "Coverage for livestock against specified perils, where applicable.",
+        icon: Beef,
+      },
+    ],
+    brokerSteps: commercialBrokerSteps,
+    relatedProducts: relatedLinksToProducts([
+      { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+      { label: "Food Truck & Trailer", href: "/food-truck-insurance/" },
+    ]),
+    relatedIntro:
+      "One policy is rarely the whole picture. Explore other coverage from Premium.",
+    faqTitle: "Farm insurance FAQ",
+    faqIntro: "Straight answers to common farm insurance questions.",
+    faqItems: [
+      {
+        question: "Is farm insurance different from regular home insurance?",
+        answer:
+          "Yes. A standard home policy is built for residential risk. Farm insurance is designed for working agricultural property — barns, outbuildings, equipment, livestock, and liability tied to farming operations that personal home policies often exclude or limit.",
+      },
+      {
+        question: "Does my policy cover farm equipment away from the property?",
+        answer:
+          "It depends on the wording. Some farm policies extend equipment coverage while machinery is in transit or working off-site; others limit coverage to the scheduled location. Tell your broker how and where equipment is used so limits and endorsements match.",
+      },
+      {
+        question:
+          "Do I need separate liability coverage for agritourism or farm-stand sales?",
+        answer:
+          "Often yes, or at least a specific endorsement. Activities that bring the public onto the farm — pick-your-own, farm stands, tours, or events — can fall outside a basic farm liability form. Flag those operations so coverage keeps up with how you earn income.",
+      },
+      {
+        question: "What information do I need for a farm quote?",
+        answer:
+          "Expect questions about acreage, buildings and construction, equipment lists and values, livestock, farming activities, any public-facing sales or events, and your current coverage or claims history. That helps carriers price the risk accurately.",
+      },
+    ],
+    ctaHeading: "Ready to cover your farm?",
+    ctaSubhead: "Tell us about your operation — we'll compare options and explain what fits.",
+    serviceName: "Farm Insurance",
   }),
 };

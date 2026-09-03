@@ -124,6 +124,12 @@ export function photoSlugFromHref(href: string): string {
     "/cyber-insurance/": "professional-offices-insurance",
     "/directors-officers-insurance/": "professional-offices-insurance",
     "/landscaping-snow-removal-insurance/": "contractors-insurance",
+    "/farm-insurance/": "farm-insurance",
+    "/food-truck-insurance/": "food-truck-insurance",
+    "/trucking-insurance/": "trucking-insurance",
+    "/commercial-auto-insurance/": "commercial-auto-insurance",
+    "/dump-truck-insurance/": "dump-truck-insurance",
+    "/cargo-freight-insurance/": "trucking-insurance",
   };
   return map[href] ?? "commercial-insurance";
 }
@@ -277,6 +283,26 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     { label: "Commercial Property", href: "/commercial-property-insurance/" },
     { label: "Crime & Fidelity", href: "/crime-fidelity-insurance/" },
+  ],
+  "food-truck-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Restaurant Insurance", href: "/restaurant-insurance/" },
+    { label: "Liquor Liability", href: "/liquor-liability-insurance/" },
+  ],
+  "trucking-insurance": [
+    { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
+    { label: "Dump Trucks", href: "/dump-truck-insurance/" },
+    { label: "Cargo & Freight", href: "/cargo-freight-insurance/" },
+  ],
+  "commercial-auto-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Trucking", href: "/trucking-insurance/" },
+    { label: "Dump Trucks", href: "/dump-truck-insurance/" },
+  ],
+  "dump-truck-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Trucking", href: "/trucking-insurance/" },
+    { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
   ],
 };
 

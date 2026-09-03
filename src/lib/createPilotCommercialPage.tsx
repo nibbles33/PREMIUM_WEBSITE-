@@ -17,9 +17,17 @@ const bondingMetadata: Metadata = {
   alternates: { canonical: "/bonding-insurance/" },
 };
 
+const farmMetadata: Metadata = {
+  title: "Farm Insurance in Windsor-Essex | Premium Insurance Brokers",
+  description:
+    "Farm insurance through an independent Windsor-Essex broker — farm property, equipment & machinery, farm liability, and livestock coverage for Essex County farms.",
+  alternates: { canonical: "/farm-insurance/" },
+};
+
 function metadataForSlug(slug: string): Metadata {
   if (slug === "commercial-insurance") return hubMetadata;
   if (slug === "bonding-insurance") return bondingMetadata;
+  if (slug === "farm-insurance") return farmMetadata;
 
   const industry = industryPages.find((page) => page.slug === slug);
   if (industry) {

@@ -9,19 +9,6 @@ import {
 import type { PilotProductPageConfig } from "@/types/pilot-product";
 import { pilotCommercialInlineConfigs } from "@/data/pilot-commercial-inline";
 
-/** Batch C — farm, food truck */
-const BATCH_C_INDUSTRY_SLUGS = new Set([
-  "farm-insurance",
-  "food-truck-insurance",
-]);
-
-/** Batch D — trucking, commercial auto, dump truck */
-const BATCH_D_INDUSTRY_SLUGS = new Set([
-  "trucking-insurance",
-  "commercial-auto-insurance",
-  "dump-truck-insurance",
-]);
-
 export const BATCH_B_INDUSTRY_SLUGS = [
   "contractors-insurance",
   "manufacturing-insurance",
@@ -64,12 +51,28 @@ export const BATCH_B_PRODUCT_SLUGS = [
   "employment-practices-liability-insurance",
 ] as const;
 
+/** Batch C — specialty / agriculture */
+export const BATCH_C_INDUSTRY_SLUGS = ["food-truck-insurance"] as const;
+
+/** Batch D — transportation */
+export const BATCH_D_INDUSTRY_SLUGS = [
+  "trucking-insurance",
+  "commercial-auto-insurance",
+  "dump-truck-insurance",
+] as const;
+
 function buildRegistry(): Map<string, PilotProductPageConfig> {
   const map = new Map<string, PilotProductPageConfig>(
     Object.entries(pilotCommercialInlineConfigs),
   );
 
-  for (const slug of BATCH_B_INDUSTRY_SLUGS) {
+  const industrySlugs = [
+    ...BATCH_B_INDUSTRY_SLUGS,
+    ...BATCH_C_INDUSTRY_SLUGS,
+    ...BATCH_D_INDUSTRY_SLUGS,
+  ];
+
+  for (const slug of industrySlugs) {
     const content = industryPages.find((page) => page.slug === slug);
     if (content) {
       map.set(slug, adaptCommercialIndustryContent(content));
@@ -100,10 +103,6 @@ export function getPilotCommercialSlugs(): string[] {
   return Array.from(registry.keys());
 }
 
-export function isBatchBIndustrySlug(slug: string): boolean {
-  return (BATCH_B_INDUSTRY_SLUGS as readonly string[]).includes(slug);
-}
-
-export function isReservedCommercialSlug(slug: string): boolean {
-  return BATCH_C_INDUSTRY_SLUGS.has(slug) || BATCH_D_INDUSTRY_SLUGS.has(slug);
+export function getBatchCDSlugs(): string[] {
+  return ["farm-insurance", ...BATCH_C_INDUSTRY_SLUGS, ...BATCH_D_INDUSTRY_SLUGS];
 }
