@@ -212,8 +212,8 @@ export const breadthLanePersonal: CoverageStreamItem[] = [
 ];
 
 export const breadthLaneSpecialty: CoverageStreamItem[] = [
-  { label: "Events", href: "/event-liability-insurance/", photoSlug: "commercial-insurance" },
-  { label: "Personal Umbrella", href: "/personal-umbrella-insurance/", photoSlug: "home-insurance" },
+  { label: "Events", href: "/event-liability-insurance/", photoSlug: "event-liability-insurance" },
+  { label: "Personal Umbrella", href: "/personal-umbrella-insurance/", photoSlug: "personal-umbrella-insurance" },
   { label: "Landlord", href: "/landlord-insurance/", photoSlug: "landlord" },
   { label: "Bonding", href: "/bonding-insurance/", photoSlug: "bonding-insurance" },
   { label: "Dump Trucks", href: "/dump-truck-insurance/", photoSlug: "dump-truck-insurance" },
@@ -230,8 +230,8 @@ export const yepLanePersonal: CoverageStreamItem[] = [
   { label: "Motorcycle", href: "/motorcycle-insurance/", photoSlug: "motorcycle" },
   { label: "Cottage", href: "/cottage-insurance/", photoSlug: "cottage" },
   { label: "Tenant", href: "/tenant-insurance/", photoSlug: "tenant" },
-  { label: "Wedding / Event", href: "/event-liability-insurance/", photoSlug: "commercial-insurance" },
-  { label: "Personal Umbrella", href: "/personal-umbrella-insurance/", photoSlug: "home-insurance" },
+  { label: "Wedding / Event", href: "/event-liability-insurance/", photoSlug: "event-liability-insurance" },
+  { label: "Personal Umbrella", href: "/personal-umbrella-insurance/", photoSlug: "personal-umbrella-insurance" },
 ];
 
 export const yepLaneCommercial: CoverageStreamItem[] = [
@@ -239,7 +239,7 @@ export const yepLaneCommercial: CoverageStreamItem[] = [
   { label: "Contractors", href: "/contractors-insurance/", photoSlug: "contractors-insurance" },
   { label: "Restaurant", href: "/restaurant-insurance/", photoSlug: "restaurant-insurance" },
   { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
-  { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "commercial-property-insurance" },
+  { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "warehousing-insurance" },
   { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
   { label: "Greenhouse", href: "/greenhouse-agribusiness-insurance/", photoSlug: "greenhouse" },
   { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },
@@ -253,13 +253,13 @@ export const yepCarouselItems: CoverageStreamItem[] = [
   { label: "Motorcycle", href: "/motorcycle-insurance/", photoSlug: "motorcycle" },
   { label: "Cottage", href: "/cottage-insurance/", photoSlug: "cottage" },
   { label: "Tenant", href: "/tenant-insurance/", photoSlug: "tenant" },
-  { label: "Wedding / Event", href: "/event-liability-insurance/", photoSlug: "commercial-insurance" },
-  { label: "Personal Umbrella", href: "/personal-umbrella-insurance/", photoSlug: "home-insurance" },
+  { label: "Wedding / Event", href: "/event-liability-insurance/", photoSlug: "event-liability-insurance" },
+  { label: "Personal Umbrella", href: "/personal-umbrella-insurance/", photoSlug: "personal-umbrella-insurance" },
   { label: "Trucking", href: "/trucking-insurance/", photoSlug: "trucking-insurance" },
   { label: "Contractors", href: "/contractors-insurance/", photoSlug: "contractors-insurance" },
   { label: "Restaurant", href: "/restaurant-insurance/", photoSlug: "restaurant-insurance" },
   { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
-  { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "commercial-property-insurance" },
+  { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "warehousing-insurance" },
   { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
   { label: "Greenhouse", href: "/greenhouse-agribusiness-insurance/", photoSlug: "greenhouse" },
   { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },

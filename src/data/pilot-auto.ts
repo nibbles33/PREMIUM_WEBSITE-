@@ -186,7 +186,7 @@ export const autoRelatedProducts = [
   {
     label: "Personal Umbrella",
     href: "/personal-umbrella-insurance/",
-    photoSlug: "home-insurance",
+    photoSlug: "personal-umbrella-insurance",
   },
 ];
 

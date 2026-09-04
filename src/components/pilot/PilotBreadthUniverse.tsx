@@ -10,10 +10,13 @@ import {
   yepCarouselItems,
   type CoverageStreamItem,
 } from "@/data/pilot-home";
-import { PILOT_YEP_TILE_IMAGE } from "@/data/photography";
+import {
+  getPhotographySlugFromHref,
+  PILOT_YEP_TILE_IMAGE,
+} from "@/data/photography";
 
 function YepMediaTile({ item }: { item: CoverageStreamItem }) {
-  const photo = getFilmstripPhoto(item.photoSlug);
+  const photo = getFilmstripPhoto(getPhotographySlugFromHref(item.href));
   return (
     <Link
       href={item.href}

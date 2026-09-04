@@ -8,7 +8,10 @@ import { insuranceAgencyProvider } from "@/components/LineInsurancePage";
 import type { ProductPageContent } from "@/data/product-pages/types";
 import type { IndustryPageContent } from "@/data/commercial-industries";
 import { COMMERCIAL_ACCENT } from "@/data/commercial-industries";
-import { getPageHeroPhotography } from "@/data/photography";
+import {
+  getPageHeroPhotography,
+  getPhotographySlugFromHref,
+} from "@/data/photography";
 import {
   DEFAULT_COMMERCIAL_RELATED_INTRO,
   DEFAULT_COMMERCIAL_TRUST,
@@ -90,49 +93,9 @@ function toCoverageItems(items: CoverageInput[]): ProductCoverageItem[] {
   });
 }
 
-/** Infer hero photography slug from common route hrefs. */
+/** Resolve card/related photography slug from destination href via placements registry. */
 export function photoSlugFromHref(href: string): string {
-  const map: Record<string, string> = {
-    "/home-insurance/": "home-insurance",
-    "/condo-insurance/": "condo",
-    "/tenant-insurance/": "tenant",
-    "/landlord-insurance/": "landlord",
-    "/cottage-insurance/": "cottage",
-    "/motorcycle-insurance/": "motorcycle",
-    "/boat-insurance/": "boat",
-    "/travel-insurance/": "travel-insurance",
-    "/auto-insurance/": "auto-insurance",
-    "/mobile-home-insurance/": "mobile-home-insurance",
-    "/personal-umbrella-insurance/": "personal-umbrella-insurance",
-    "/home-sharing-insurance/": "home-sharing-insurance",
-    "/life-insurance/": "life-insurance",
-    "/group-home-auto-insurance/": "group-home-auto-insurance",
-    "/commercial-insurance/": "commercial-insurance",
-    "/commercial-property-insurance/": "commercial-property-insurance",
-    "/contractors-insurance/": "contractors-insurance",
-    "/restaurant-insurance/": "restaurant-insurance",
-    "/retail-insurance/": "retail-insurance",
-    "/manufacturing-insurance/": "manufacturing-insurance",
-    "/professional-offices-insurance/": "professional-offices-insurance",
-    "/real-estate-insurance/": "real-estate-insurance",
-    "/builders-developers-insurance/": "builders-developers-insurance",
-    "/bonding-insurance/": "bonding-insurance",
-    "/small-business-insurance/": "commercial-insurance",
-    "/professional-liability-insurance/": "professional-offices-insurance",
-    "/business-interruption-insurance/": "commercial-property-insurance",
-    "/builders-risk-insurance/": "builders-developers-insurance",
-    "/cyber-insurance/": "professional-offices-insurance",
-    "/directors-officers-insurance/": "professional-offices-insurance",
-    "/landscaping-snow-removal-insurance/": "contractors-insurance",
-    "/farm-insurance/": "farm-insurance",
-    "/food-truck-insurance/": "food-truck-insurance",
-    "/trucking-insurance/": "trucking-insurance",
-    "/commercial-auto-insurance/": "commercial-auto-insurance",
-    "/dump-truck-insurance/": "dump-truck-insurance",
-    "/cargo-freight-insurance/": "trucking-insurance",
-    "/greenhouse-agribusiness-insurance/": "greenhouse",
-  };
-  return map[href] ?? "commercial-insurance";
+  return getPhotographySlugFromHref(href);
 }
 
 /** Resolve wired hero photography for commercial routes. */

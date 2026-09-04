@@ -519,6 +519,21 @@ export const photographyPlacements: PhotographyPlacement[] = [
   },
 ];
 
+function normalizePhotographyRoute(href: string): string {
+  const withSlash = href.startsWith("/") ? href : `/${href}`;
+  return withSlash.endsWith("/") ? withSlash : `${withSlash}/`;
+}
+
+/** Resolve hero photography slug from a destination href via the registry. */
+export function getPhotographySlugFromHref(href: string): string {
+  const route = normalizePhotographyRoute(href);
+  const placement = photographyPlacements.find(
+    (p) => p.route === route && p.confidence !== "LOW",
+  );
+  if (placement) return placement.slug;
+  return "commercial-insurance";
+}
+
 export function getPhotographyBySlug(
   slug: string,
 ): PhotographyPlacement | undefined {

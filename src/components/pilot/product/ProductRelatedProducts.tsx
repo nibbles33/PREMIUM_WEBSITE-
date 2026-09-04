@@ -6,6 +6,7 @@ import RelatedProductsScrollRail from "@/components/pilot/RelatedProductsScrollR
 import RevealOnScroll from "@/components/RevealOnScroll";
 import {
   getPageHeroPhotography,
+  getPhotographySlugFromHref,
   PILOT_AUTO_RELATED_IMAGE,
 } from "@/data/photography";
 import type { ProductRelatedItem } from "@/types/pilot-product";
@@ -43,7 +44,9 @@ export default function ProductRelatedProducts({
 
         <RelatedProductsScrollRail variant="product" className="mt-8 sm:mt-10 lg:mt-12">
             {products.map((item) => {
-              const photo = getPageHeroPhotography(item.photoSlug);
+              const photo = getPageHeroPhotography(
+                getPhotographySlugFromHref(item.href),
+              );
               return (
                 <li key={item.href} className="shrink-0">
                   <Link

@@ -2,6 +2,7 @@ export {
   getHomepageHeroPhotography,
   getPageHeroPhotography,
   getPhotographyBySlug,
+  getPhotographySlugFromHref,
   photographyPlacements,
   type PhotographyConfidence,
   type PhotographyPlacement,

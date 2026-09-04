@@ -7,6 +7,7 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import { autoRelatedProducts } from "@/data/pilot-auto";
 import {
   getPageHeroPhotography,
+  getPhotographySlugFromHref,
   PILOT_AUTO_RELATED_IMAGE,
 } from "@/data/photography";
 
@@ -34,7 +35,9 @@ export default function AutoRelatedProducts() {
 
         <RelatedProductsScrollRail variant="auto" className="mt-8 sm:mt-10 lg:mt-12">
             {autoRelatedProducts.map((item) => {
-              const photo = getPageHeroPhotography(item.photoSlug);
+              const photo = getPageHeroPhotography(
+                getPhotographySlugFromHref(item.href),
+              );
               return (
                 <li key={item.href} className="shrink-0">
                   <Link
