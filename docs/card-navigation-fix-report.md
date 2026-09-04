@@ -18,7 +18,6 @@ That capture steals the pointer from child `<Link>` elements, so the browser nev
 **Not affected (already used plain `Link`, no capture):**
 - “Yep. We insure that too.” tiles (`PilotBreadthUniverse` / `YepMediaTile`)
 - Commercial discovery product rows (`PilotCommercialDiscovery`)
-- Commercial category pills (buttons — tab switch only, by design)
 
 ---
 
@@ -42,8 +41,9 @@ Card markup (`Link` wrapping entire card) was already correct — the drag layer
 | `src/components/pilot/RelatedProductsScrollRail.tsx` | Defer pointer capture until drag threshold crossed |
 | `src/components/pilot/PilotPersonalFilmstrip.tsx` | Same threshold pattern for transform-based carousel |
 | `src/styles/pilot.css` | `.is-dragging` cursor on related rail track |
-| `scripts/card-navigation-validate.cjs` | Automated href + click/drag validation |
-| `docs/qa-screenshots/card-navigation-fix/validation-report.json` | Runtime proof |
+| `scripts/card-navigation-hrefs.cjs` | **New** — extracts all 56 configured hrefs from source data |
+| `scripts/card-navigation-validate.cjs` | Full click-test + family + mobile touch validation |
+| `docs/qa-screenshots/card-navigation-fix/validation-report.json` | Runtime proof (full href-by-href results) |
 
 ---
 
@@ -51,87 +51,74 @@ Card markup (`Link` wrapping entire card) was already correct — the drag layer
 
 **Yes.** Immediate `setPointerCapture` on pointerdown was the bug.
 
-**Fix:** Pointer capture activates only after **8px** of movement (`POINTER_DRAG_THRESHOLD_PX`). A tap/click without meaningful movement leaves the link’s native click intact. After a completed drag, a one-shot capture-phase listener suppresses the synthetic click that would otherwise fire.
+**Fix:** Pointer capture activates only after **8px** of movement (`POINTER_DRAG_THRESHOLD_PX`). Tap/click without meaningful movement leaves the link’s native click intact. After a completed drag, a one-shot capture-phase listener suppresses the synthetic click.
 
 ---
 
-## 5. Homepage Personal carousel — tested destinations
+## 5. Full validation coverage (not a sample)
 
-| Card | Destination | Result |
-|---|---|---|
-| Auto | `/auto-insurance/` | PASS |
-| Home | `/home-insurance/` | PASS |
-| Condo | `/condo-insurance/` | PASS |
-| Tenant | `/tenant-insurance/` | PASS |
-| Motorcycle | `/motorcycle-insurance/` | PASS |
-| Boat | `/boat-insurance/` | PASS |
-| Cottage | `/cottage-insurance/` | PASS |
-| Travel | `/travel-insurance/` | PASS |
+Automated run against `next start` — **`scripts/card-navigation-validate.cjs`**
 
----
-
-## 6. Product related-card examples — tested destinations
-
-From `/commercial-property-insurance/` (owner screenshot context):
-
-| Card | Configured route | Result |
-|---|---|---|
-| Commercial Insurance Hub | `/commercial-insurance/` | PASS |
-| Business Interruption | `/business-interruption-insurance/` | PASS |
-| Small Business | `/small-business-insurance/` | PASS |
-
-Entire card surface + “Explore coverage →” footer share the same `Link` destination.
-
----
-
-## 7. Yep / commercial discovery status
-
-| Surface | Navigation | Status |
-|---|---|---|
-| Yep. We insure that too. | `Link` per tile | Already working — no code change needed |
-| Commercial discovery product rows | `Link` per product | Already working — no code change needed |
-| Commercial category pills | `button` tab switch | By design — not product navigation |
-
-Sample Yep/commercial hrefs audited (HTTP 200): Trucking, Farm, Greenhouse, Retail, Commercial Auto, Contractors.
-
----
-
-## 8. Configured product links audited
-
-**~60 unique hrefs** across discovery + related-product configs (personal filmstrip, Yep carousel, commercial categories, auto related, all 57 product-page related rails).
-
-Validation script audited **17 representative discovery hrefs** + **8 personal click tests** + **3 related click tests** — all PASS.
-
-Full unique href inventory available via product registries in `pilot-home.ts`, `pilot-auto.ts`, `pilot-*-registry.ts`.
-
----
-
-## 9. Broken/dead hrefs discovered
-
-**None** in audited discovery/related href set (all HTTP 200).
-
----
-
-## 10. Desktop click/drag test result
-
-| Test | Result |
+| Metric | Result |
 |---|---|
-| Simple click on related card | Navigates PASS |
-| Click title / image / Explore coverage | Same Link — PASS |
-| Drag left 120–150px on filmstrip | Does NOT navigate PASS |
-| Drag left 150px on related rail | Does NOT navigate PASS |
-| Arrow buttons (filmstrip) | Unchanged — PASS |
+| Unique configured hrefs | **56** |
+| Click targets extracted from source | **235** (same href may appear on multiple surfaces) |
+| Click tests run | **235 / 235 PASS** |
+| Href aggregated results | **56 / 56 PASS** |
+| HTTP fetch audit | **56 / 56 HTTP 200** |
+| Related-rail visual family pages | **16 families, 51 card clicks PASS** |
+| Desktop drag tests (120–150px) | **3 / 3 PASS** (no navigation) |
+| Mobile touch tests (390px viewport) | **6 / 6 PASS** (3 tap + 3 swipe) |
+
+**Surfaces click-tested:**
+- `personalFilmstrip` (8 cards)
+- `yepCarousel` (16 tiles)
+- `commercialDiscoveryProduct` (31 product rows)
+- `commercialDiscoveryCategory` (10 category CTAs)
+- `commercialDiscoveryHub` (All Commercial CTA)
+- `autoRelatedRail` (7 cards on `/auto-insurance/`)
+- `productRelatedRail` (all configured related cards across 55 product pages)
+
+**Related-rail visual families exercised:**
+
+personal-inline, personal-specialty, auto-related, commercial-property, commercial-transportation, commercial-agriculture, commercial-greenhouse, commercial-construction, commercial-hospitality, commercial-food-truck, commercial-professional, commercial-retail, commercial-manufacturing, commercial-real-estate, commercial-product-batch-b, commercial-cyber
+
+Full per-href pass/fail list: `docs/qa-screenshots/card-navigation-fix/validation-report.json` → `hrefResults[]`
 
 ---
 
-## 11. Mobile tap/swipe test result
+## 6. Mobile verification (real touch simulation)
 
-Automated drag simulation confirms swipe gestures do not trigger navigation. Tap navigation uses the same threshold logic as desktop click (pointer events unified).
+Viewport: **390×844**, mobile UA, Puppeteer `touchscreen.tap()` / `touchStart→touchMove→touchEnd`
+
+| Page | Test | Distance | Result |
+|---|---|---|---|
+| `/` (personal filmstrip) | tap visible card | — | PASS → navigated |
+| `/` (personal filmstrip) | swipe | 150px | PASS → stayed on `/` |
+| `/commercial-property-insurance/` (related rail) | tap | — | PASS → navigated |
+| `/commercial-property-insurance/` (related rail) | swipe | 150px | PASS → stayed on page |
+| `/auto-insurance/` (auto related rail) | tap | — | PASS → navigated |
+| `/auto-insurance/` (auto related rail) | swipe | 150px | PASS → stayed on page |
 
 ---
 
-## 12. Build result
+## 7. Broken/dead hrefs discovered
+
+**None.** All 56 configured discovery/related hrefs return HTTP 200 and click-navigate successfully.
+
+---
+
+## 8. Build result
 
 `npm run build` — **PASS**
 
-Report: `docs/qa-screenshots/card-navigation-fix/validation-report.json`
+---
+
+## Re-run validation
+
+```bash
+npm run build
+npx next start -p 3016 &
+node scripts/card-navigation-hrefs.cjs      # inventory only
+node scripts/card-navigation-validate.cjs # full suite (~4 min)
+```
