@@ -27,7 +27,7 @@ export default function PilotFinalCta() {
               href="/talk-to-a-broker/"
               variant="secondary"
               showArrow={false}
-              className="border-white/40 text-white hover:border-gold hover:text-gold"
+              className="pilot-charcoal-secondary-btn"
             >
               Talk to a Broker
             </PremiumPilotButton>

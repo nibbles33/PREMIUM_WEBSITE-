@@ -58,7 +58,7 @@ export default function ProductFinalCta({
               href={secondaryCta?.href ?? brokerHref}
               variant="secondary"
               showArrow={false}
-              className="pilot-product-final-broker-btn"
+              className="pilot-charcoal-secondary-btn"
             >
               {secondaryCta?.label ?? "Talk to a Broker"}
             </PremiumPilotButton>

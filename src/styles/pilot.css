@@ -1004,19 +1004,25 @@
   outline-offset: 3px;
 }
 
-/* Auto final CTA — secondary broker button on charcoal (base visibility) */
-.pilot-auto-final-broker-btn.pilot-btn-secondary {
+/* Secondary outline button on charcoal / dark backgrounds — resting visibility */
+.pilot-charcoal-secondary-btn.pilot-btn-secondary,
+.pilot-auto-final-broker-btn.pilot-btn-secondary,
+.pilot-product-final-broker-btn.pilot-btn-secondary {
   color: #fff;
   border-color: rgba(208, 173, 38, 0.65);
 }
 
-.pilot-auto-final-broker-btn.pilot-btn-secondary:hover {
+.pilot-charcoal-secondary-btn.pilot-btn-secondary:hover,
+.pilot-auto-final-broker-btn.pilot-btn-secondary:hover,
+.pilot-product-final-broker-btn.pilot-btn-secondary:hover {
   color: var(--pilot-gold);
   border-color: var(--pilot-gold);
   background: rgba(208, 173, 38, 0.08);
 }
 
-.pilot-auto-final-broker-btn.pilot-btn-secondary:focus-visible {
+.pilot-charcoal-secondary-btn.pilot-btn-secondary:focus-visible,
+.pilot-auto-final-broker-btn.pilot-btn-secondary:focus-visible,
+.pilot-product-final-broker-btn.pilot-btn-secondary:focus-visible {
   color: var(--pilot-gold);
   border-color: var(--pilot-gold);
   background: rgba(208, 173, 38, 0.08);
@@ -2100,20 +2106,6 @@
 
 .pilot-product-coverage-card.is-active .pilot-product-coverage-card-ring {
   border-color: rgba(208, 173, 38, 0.45);
-}
-
-.pilot-product-final-broker-btn.pilot-btn-secondary {
-  color: #fff;
-  border-color: rgba(208, 173, 38, 0.65);
-}
-
-.pilot-product-final-broker-btn.pilot-btn-secondary:hover,
-.pilot-product-final-broker-btn.pilot-btn-secondary:focus-visible {
-  color: var(--pilot-gold);
-  border-color: var(--pilot-gold);
-  background: rgba(208, 173, 38, 0.08);
-  outline: 2px solid var(--pilot-gold);
-  outline-offset: 3px;
 }
 
 .pilot-product-broker-section {

@@ -98,7 +98,7 @@ export default function PilotTruckingPage() {
                       href={BROKER_HREF}
                       variant="secondary"
                       showArrow={false}
-                      className="border-white/40 text-white hover:border-gold hover:text-gold"
+                      className="pilot-charcoal-secondary-btn"
                     >
                       Talk to a Broker
                     </PremiumPilotButton>
@@ -278,7 +278,7 @@ export default function PilotTruckingPage() {
                   href={BROKER_HREF}
                   variant="secondary"
                   showArrow={false}
-                  className="border-white/40 text-white hover:border-gold hover:text-gold"
+                  className="pilot-charcoal-secondary-btn"
                 >
                   Talk to a Broker
                 </PremiumPilotButton>

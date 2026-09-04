@@ -46,7 +46,7 @@ export default function AutoFinalCta() {
               href={AUTO_BROKER_HREF}
               variant="secondary"
               showArrow={false}
-              className="pilot-auto-final-broker-btn"
+              className="pilot-charcoal-secondary-btn"
             >
               Talk to a Broker
             </PremiumPilotButton>

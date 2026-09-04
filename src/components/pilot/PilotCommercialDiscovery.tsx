@@ -202,7 +202,7 @@ export default function PilotCommercialDiscovery() {
                     href="/commercial-insurance/"
                     variant="secondary"
                     showArrow={false}
-                    className="w-full border-white/30 text-white hover:border-gold hover:text-gold sm:w-auto"
+                    className="pilot-charcoal-secondary-btn w-full sm:w-auto"
                   >
                     All Commercial
                   </PremiumPilotButton>

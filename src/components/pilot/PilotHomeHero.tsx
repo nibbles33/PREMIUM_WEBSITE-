@@ -179,7 +179,7 @@ export default function PilotHomeHero() {
               href={BROKER_HREF}
               variant="secondary"
               showArrow={false}
-              className="border-white/50 text-white hover:border-gold hover:text-gold"
+              className="pilot-charcoal-secondary-btn"
             >
               Talk to a Broker
             </PremiumPilotButton>

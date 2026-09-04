@@ -1,0 +1,181 @@
+{
+  "timestamp": "2026-09-04T00:35:57.670Z",
+  "base": "http://localhost:3017",
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0
+  },
+  "results": [
+    {
+      "page": "homepage-final-cta",
+      "url": "/",
+      "viewport": "1440px",
+      "resting": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visible": true
+      },
+      "restingOk": true,
+      "hover": {
+        "found": true,
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)"
+      },
+      "hoverOk": true,
+      "focus": {
+        "found": true,
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "outlineWidth": "2px"
+      },
+      "focusOk": true,
+      "href": "/talk-to-a-broker",
+      "navigated": true,
+      "clickOk": true,
+      "ok": true
+    },
+    {
+      "page": "homepage-final-cta",
+      "url": "/",
+      "viewport": "390px",
+      "resting": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visible": true
+      },
+      "restingOk": true,
+      "hover": {
+        "found": true,
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)"
+      },
+      "hoverOk": true,
+      "focus": {
+        "found": true,
+        "color": "rgb(248, 243, 223)",
+        "borderColor": "rgba(208, 173, 38, 0.7)",
+        "outlineWidth": "2px"
+      },
+      "focusOk": true,
+      "href": "/talk-to-a-broker",
+      "navigated": true,
+      "clickOk": true,
+      "ok": true
+    },
+    {
+      "page": "auto-final-cta",
+      "url": "/auto-insurance/",
+      "viewport": "1440px",
+      "resting": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visible": true
+      },
+      "restingOk": true,
+      "hover": {
+        "found": true,
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)"
+      },
+      "hoverOk": true,
+      "focus": {
+        "found": true,
+        "color": "rgb(248, 243, 223)",
+        "borderColor": "rgba(208, 173, 38, 0.7)",
+        "outlineWidth": "2px"
+      },
+      "focusOk": true,
+      "href": "/talk-to-a-broker",
+      "navigated": true,
+      "clickOk": true,
+      "ok": true
+    },
+    {
+      "page": "home-product-final-cta",
+      "url": "/home-insurance/",
+      "viewport": "1440px",
+      "resting": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visible": true
+      },
+      "restingOk": true,
+      "hover": {
+        "found": true,
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)"
+      },
+      "hoverOk": true,
+      "focus": {
+        "found": true,
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "outlineWidth": "2px"
+      },
+      "focusOk": true,
+      "href": "/talk-to-a-broker",
+      "navigated": true,
+      "clickOk": true,
+      "ok": true
+    },
+    {
+      "page": "commercial-property-final-cta",
+      "url": "/commercial-property-insurance/",
+      "viewport": "1440px",
+      "resting": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "opacity": "1",
+        "visible": true
+      },
+      "restingOk": true,
+      "hover": {
+        "found": true,
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)"
+      },
+      "hoverOk": true,
+      "focus": {
+        "found": true,
+        "color": "rgb(248, 243, 223)",
+        "borderColor": "rgba(208, 173, 38, 0.7)",
+        "outlineWidth": "2px"
+      },
+      "focusOk": true,
+      "href": "/talk-to-a-broker",
+      "navigated": true,
+      "clickOk": true,
+      "ok": true
+    }
+  ]
+}
