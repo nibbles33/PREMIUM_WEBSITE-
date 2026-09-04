@@ -21,6 +21,7 @@ import {
   commercialBrokerSteps,
   personalBrokerSteps,
 } from "@/data/pilot-product-shared";
+import { getCoverageExplorerConfig } from "@/data/coverage-explorer/registry";
 import type {
   PilotProductPageConfig,
   ProductCoverageItem,
@@ -53,6 +54,7 @@ type BuildPilotProductConfigInput = {
   coverageItems: CoverageInput[];
   coverageExplorerLabel?: string;
   miniature?: PilotProductPageConfig["miniature"];
+  coverageExplorer?: PilotProductPageConfig["coverageExplorer"];
   brokerSteps?: PilotProductPageConfig["brokerSteps"];
   relatedProducts: ProductRelatedItem[];
   relatedHeading?: string;
@@ -142,6 +144,8 @@ export function buildPilotProductConfig(
     coverageItems: toCoverageItems(input.coverageItems),
     coverageExplorerLabel: input.coverageExplorerLabel ?? "Coverage types",
     miniature: input.miniature ?? null,
+    coverageExplorer:
+      input.coverageExplorer ?? getCoverageExplorerConfig(input.slug),
     brokerSteps: input.brokerSteps ?? personalBrokerSteps,
     relatedHeading: input.relatedHeading ?? DEFAULT_RELATED_HEADING,
     relatedIntro: input.relatedIntro ?? DEFAULT_RELATED_INTRO,

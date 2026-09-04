@@ -18,6 +18,7 @@ type ProductCoverageExplorerProps = {
     | "quoteHref"
     | "quoteLabel"
     | "miniature"
+    | "coverageExplorer"
   >;
 };
 
@@ -61,7 +62,7 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
               <ProductCoverageVisualStage
                 active={active}
                 accentColor={config.accentColor}
-                miniature={config.miniature}
+                explorer={config.coverageExplorer}
               />
               <div className="mt-6 rounded-xl border border-gold/25 bg-[#FBF5E5]/70 px-4 py-4 lg:mt-7 lg:px-5 lg:py-[1.125rem]">
                 <div className="flex items-start gap-3">

@@ -48,16 +48,18 @@ export default function AutoCoverageVisualStage({
       <div className="pilot-auto-coverage-stage-frame">
         <div className="pilot-auto-car-hero" aria-hidden>
           <div className="pilot-auto-car-hero-platform" />
-          <Image
-            src={PILOT_AUTO_COVERAGE_CAR.src}
-            alt=""
-            width={PILOT_AUTO_COVERAGE_CAR.width}
-            height={PILOT_AUTO_COVERAGE_CAR.height}
-            quality={PILOT_AUTO_COVERAGE_CAR.quality}
-            sizes={PILOT_AUTO_COVERAGE_CAR.sizes}
-            priority
-            className="pilot-auto-car-hero-image"
-          />
+          <div className="pilot-auto-car-hero-image-wrap">
+            <Image
+              src={PILOT_AUTO_COVERAGE_CAR.src}
+              alt=""
+              width={PILOT_AUTO_COVERAGE_CAR.width}
+              height={PILOT_AUTO_COVERAGE_CAR.height}
+              quality={PILOT_AUTO_COVERAGE_CAR.quality}
+              sizes={PILOT_AUTO_COVERAGE_CAR.sizes}
+              priority
+              className="pilot-auto-car-hero-image"
+            />
+          </div>
         </div>
 
         <div
