@@ -1,105 +1,96 @@
 import type { CoverageExplorerVisualConfig } from "@/types/coverage-explorer";
+import {
+  MINIATURE_IMAGE_SIZES,
+  PREMIUM_MINIATURES,
+} from "@/data/coverage-explorer/miniature-assets";
 
-/**
- * Restaurant / hospitality cutaway scene — CSS isometric placeholder.
- * RESTAURANT INTERACTIVE SCENE ASSET REQUIRED for layered photo artwork.
- */
+/** Zones aligned to premium-restaurant.png isometric cutaway. */
 export const restaurantHospitalityExplorer: CoverageExplorerVisualConfig = {
   visualFamily: "restaurant-hospitality",
-  sceneMode: "css-cutaway",
+  sceneMode: "cutaway-miniature",
+  sceneSrc: PREMIUM_MINIATURES.restaurant.src,
+  sceneDimensions: {
+    width: PREMIUM_MINIATURES.restaurant.width,
+    height: PREMIUM_MINIATURES.restaurant.height,
+  },
   cssSceneClass: "restaurant",
   zones: [
     {
-      id: "dining-floor",
-      shape: "dining-floor",
-      style: "glow",
-      position: { left: "8%", bottom: "18%", width: "52%", height: "38%" },
-      label: "Dining & guest area",
-    },
-    {
-      id: "entrance-path",
-      shape: "entrance-path",
-      style: "pulse",
-      position: { left: "4%", bottom: "12%", width: "22%", height: "18%" },
-      label: "Entrance",
-    },
-    {
-      id: "building-shell",
-      shape: "building-shell",
-      style: "outline",
-      position: { left: "4%", top: "6%", width: "92%", height: "88%" },
-      label: "Premises",
-    },
-    {
-      id: "interior-fixtures",
-      shape: "interior-fixtures",
-      style: "fill",
-      position: { left: "14%", top: "22%", width: "72%", height: "58%" },
-      label: "Fixtures & improvements",
-    },
-    {
-      id: "bar-area",
-      shape: "bar-area",
-      style: "glow",
-      position: { right: "8%", top: "28%", width: "28%", height: "32%" },
-      label: "Bar & liquor service",
-    },
-    {
-      id: "bottle-display",
-      shape: "bottle-display",
-      style: "pulse",
-      position: { right: "12%", top: "22%", width: "18%", height: "14%" },
-      label: "Bottle display",
-    },
-    {
       id: "kitchen-zone",
-      shape: "kitchen-zone",
       style: "outline",
-      position: { left: "8%", top: "18%", width: "38%", height: "42%" },
+      position: { left: "5%", top: "16%", width: "40%", height: "44%" },
       label: "Kitchen",
     },
     {
       id: "cooking-equipment",
-      shape: "cooking-equipment",
       style: "pulse",
-      position: { left: "14%", top: "24%", width: "22%", height: "20%" },
-      label: "Range & oven",
+      position: { left: "10%", top: "20%", width: "26%", height: "24%" },
+      label: "Range, hood & ovens",
     },
     {
       id: "refrigeration",
-      shape: "refrigeration",
       style: "glow",
-      position: { left: "38%", top: "26%", width: "14%", height: "24%" },
+      position: { left: "30%", top: "22%", width: "14%", height: "22%" },
       label: "Refrigeration",
+    },
+    {
+      id: "bar-area",
+      style: "glow",
+      position: { right: "4%", top: "26%", width: "34%", height: "40%" },
+      label: "Bar & prep counter",
+    },
+    {
+      id: "bar-stools",
+      style: "pulse",
+      position: { right: "8%", top: "48%", width: "26%", height: "14%" },
+      label: "Bar seating",
+    },
+    {
+      id: "dining-floor",
+      style: "glow",
+      position: { left: "20%", bottom: "12%", width: "44%", height: "38%" },
+      label: "Dining area",
+    },
+    {
+      id: "entrance-shell",
+      style: "outline",
+      position: { left: "1%", top: "28%", width: "20%", height: "52%" },
+      label: "Entrance & facade",
+    },
+    {
+      id: "building-shell",
+      style: "fill",
+      position: { left: "2%", top: "8%", width: "96%", height: "84%" },
+      label: "Premises & shell",
     },
   ],
   coverageStates: [
     {
       coverageId: "general-liability",
-      activeZoneIds: ["dining-floor", "entrance-path"],
+      activeZoneIds: ["dining-floor", "entrance-shell", "bar-stools"],
       sceneModifier: "general-liability",
       ambient: {
         background:
-          "radial-gradient(ellipse 68% 52% at 42% 62%, rgba(208, 173, 38, 0.14) 0%, transparent 72%)",
+          "radial-gradient(ellipse 62% 48% at 38% 68%, rgba(208, 173, 38, 0.16) 0%, transparent 72%)",
       },
     },
     {
       coverageId: "property-coverage",
-      activeZoneIds: ["building-shell", "interior-fixtures"],
+      activeZoneIds: ["building-shell", "kitchen-zone", "bar-area"],
       sceneModifier: "property-coverage",
       ambient: {
         background:
-          "radial-gradient(ellipse 80% 70% at 50% 45%, rgba(179, 122, 90, 0.12) 0%, transparent 75%)",
+          "radial-gradient(ellipse 78% 68% at 50% 42%, rgba(179, 122, 90, 0.12) 0%, transparent 75%)",
       },
     },
     {
       coverageId: "liquor-liability",
-      activeZoneIds: ["bar-area", "bottle-display"],
+      activeZoneIds: ["bar-area", "bar-stools"],
       sceneModifier: "liquor-liability",
       ambient: {
         background:
-          "radial-gradient(circle at 78% 38%, rgba(208, 173, 38, 0.18) 0%, transparent 52%)",
-        dimOpacity: 0.15,
+          "radial-gradient(circle at 76% 42%, rgba(208, 173, 38, 0.2) 0%, transparent 52%)",
+        dimOpacity: 0.12,
       },
     },
     {
@@ -108,7 +99,7 @@ export const restaurantHospitalityExplorer: CoverageExplorerVisualConfig = {
       sceneModifier: "equipment-breakdown-spoilage",
       ambient: {
         background:
-          "radial-gradient(circle at 28% 38%, rgba(91, 122, 153, 0.14) 0%, transparent 55%)",
+          "radial-gradient(circle at 24% 36%, rgba(91, 122, 153, 0.16) 0%, transparent 55%)",
       },
     },
   ],

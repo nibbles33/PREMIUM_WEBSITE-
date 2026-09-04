@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { MINIATURE_IMAGE_SIZES } from "@/data/coverage-explorer/miniature-assets";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import type {
   CoverageExplorerVisualConfig,
@@ -75,7 +76,21 @@ export default function CoverageVisualStage({
         className={`pilot-ce-stage-frame pilot-ce-stage-frame--${sceneClass}`}
         data-scene={sceneModifier}
       >
-        {explorer.sceneSrc ? (
+        {explorer.sceneSrc && explorer.sceneMode === "cutaway-miniature" ? (
+          <div className="pilot-ce-scene-cutaway" aria-hidden>
+            <Image
+              src={explorer.sceneSrc}
+              alt=""
+              width={explorer.sceneDimensions?.width ?? 1400}
+              height={explorer.sceneDimensions?.height ?? 1200}
+              sizes={MINIATURE_IMAGE_SIZES}
+              quality={92}
+              className="pilot-ce-scene-cutaway-image"
+            />
+          </div>
+        ) : null}
+
+        {explorer.sceneSrc && explorer.sceneMode === "photo-scene" ? (
           <div className="pilot-ce-scene-photo" aria-hidden>
             <Image
               src={explorer.sceneSrc}
@@ -89,7 +104,7 @@ export default function CoverageVisualStage({
           </div>
         ) : null}
 
-        {explorer.sceneMode === "css-cutaway" ? (
+        {explorer.sceneMode === "css-cutaway" && !explorer.sceneSrc ? (
           <div
             className={`pilot-ce-css-scene pilot-ce-css-scene--${sceneClass}`}
             aria-hidden

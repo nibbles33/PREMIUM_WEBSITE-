@@ -1,9 +1,15 @@
 import type { CoverageVisualFamily, CoverageExplorerVisualConfig } from "@/types/coverage-explorer";
 import { boatExplorer } from "@/data/coverage-explorer/families/boat";
+import { commercialBuildingExplorer } from "@/data/coverage-explorer/families/commercial-building";
+import { constructionExplorer } from "@/data/coverage-explorer/families/construction";
+import { factoryIndustrialExplorer } from "@/data/coverage-explorer/families/factory-industrial";
+import { farmExplorer } from "@/data/coverage-explorer/families/farm";
+import { fleetCommercialVehicleExplorer } from "@/data/coverage-explorer/families/fleet-commercial-vehicle";
 import { garageDealershipExplorer } from "@/data/coverage-explorer/families/garage-dealership";
 import { greenhouseExplorer } from "@/data/coverage-explorer/families/greenhouse";
 import { houseExplorer } from "@/data/coverage-explorer/families/house";
 import { restaurantHospitalityExplorer } from "@/data/coverage-explorer/families/restaurant-hospitality";
+import { retailExplorer } from "@/data/coverage-explorer/families/retail";
 import { transportTruckExplorer } from "@/data/coverage-explorer/families/transport-truck";
 
 /** Product slug → visual family (many slugs share one scene architecture). */
@@ -41,18 +47,25 @@ export const SLUG_TO_VISUAL_FAMILY: Record<string, CoverageVisualFamily> = {
   "manufacturing-insurance": "factory-industrial",
   "product-recall-insurance": "factory-industrial",
   "warehousing-insurance": "factory-industrial",
+  "retail-insurance": "retail",
 };
 
 const FAMILY_EXPLORERS: Partial<Record<CoverageVisualFamily, CoverageExplorerVisualConfig>> = {
   house: houseExplorer,
   boat: boatExplorer,
   "restaurant-hospitality": restaurantHospitalityExplorer,
+  "commercial-building": commercialBuildingExplorer,
+  construction: constructionExplorer,
+  "factory-industrial": factoryIndustrialExplorer,
+  farm: farmExplorer,
+  "fleet-commercial-vehicle": fleetCommercialVehicleExplorer,
   "garage-dealership": garageDealershipExplorer,
   greenhouse: greenhouseExplorer,
+  retail: retailExplorer,
   "transport-truck": transportTruckExplorer,
 };
 
-/** Families with explorer config implemented in this task. */
+/** Families with explorer config implemented. */
 export const IMPLEMENTED_VISUAL_FAMILIES = Object.keys(
   FAMILY_EXPLORERS,
 ) as CoverageVisualFamily[];
@@ -79,14 +92,5 @@ export function getSlugFamilyAudit(): Record<CoverageVisualFamily, string[]> {
   return audit;
 }
 
-/** Families awaiting dedicated scene artwork. */
-export const ASSET_GAP_FAMILIES: CoverageVisualFamily[] = [
-  "condo",
-  "commercial-building",
-  "construction",
-  "factory-industrial",
-  "fleet-commercial-vehicle",
-  "farm",
-];
-
-export const RESTAURANT_SCENE_ASSET_REQUIRED = true;
+/** Families still awaiting dedicated scene artwork. */
+export const ASSET_GAP_FAMILIES: CoverageVisualFamily[] = ["condo"];

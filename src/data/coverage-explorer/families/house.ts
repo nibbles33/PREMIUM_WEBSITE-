@@ -1,68 +1,80 @@
 import type { CoverageExplorerVisualConfig } from "@/types/coverage-explorer";
+import { PREMIUM_MINIATURES } from "@/data/coverage-explorer/miniature-assets";
 
+/** Zones aligned to premium-house.png isometric cutaway. */
 export const houseExplorer: CoverageExplorerVisualConfig = {
   visualFamily: "house",
-  sceneMode: "css-cutaway",
+  sceneMode: "cutaway-miniature",
+  sceneSrc: PREMIUM_MINIATURES.house.src,
+  sceneDimensions: {
+    width: PREMIUM_MINIATURES.house.width,
+    height: PREMIUM_MINIATURES.house.height,
+  },
   cssSceneClass: "house",
   zones: [
     {
-      id: "dwelling-structure",
-      shape: "dwelling-structure",
+      id: "roof-walls",
       style: "outline",
-      position: { left: "18%", top: "18%", width: "64%", height: "52%" },
-      label: "Dwelling structure",
+      position: { left: "14%", top: "8%", width: "72%", height: "30%" },
+      label: "Roof & structure",
     },
     {
-      id: "roof-walls",
-      shape: "roof-walls",
+      id: "dwelling-structure",
       style: "glow",
-      position: { left: "16%", top: "12%", width: "68%", height: "28%" },
-      label: "Roof & walls",
+      position: { left: "16%", top: "18%", width: "68%", height: "58%" },
+      label: "Dwelling",
     },
     {
       id: "interior-contents",
-      shape: "interior-contents",
       style: "fill",
-      position: { left: "24%", top: "38%", width: "52%", height: "32%" },
-      label: "Contents",
+      position: { left: "26%", top: "34%", width: "48%", height: "32%" },
+      label: "Interior & contents",
     },
     {
-      id: "exterior-liability",
-      shape: "exterior-liability",
-      style: "pulse",
-      position: { left: "6%", bottom: "10%", width: "88%", height: "22%" },
-      label: "Exterior & visitors",
+      id: "garage-zone",
+      style: "glow",
+      position: { left: "8%", top: "38%", width: "22%", height: "28%" },
+      label: "Garage",
     },
     {
       id: "driveway-zone",
-      shape: "driveway-zone",
-      style: "glow",
-      position: { left: "8%", bottom: "8%", width: "38%", height: "14%" },
+      style: "pulse",
+      position: { left: "6%", bottom: "10%", width: "32%", height: "16%" },
       label: "Driveway",
     },
     {
-      id: "ale-indicator",
-      shape: "ale-indicator",
+      id: "walkway-porch",
       style: "pulse",
-      position: { right: "10%", bottom: "16%", width: "28%", height: "24%" },
-      label: "Temporary accommodation",
+      position: { left: "38%", bottom: "8%", width: "24%", height: "18%" },
+      label: "Walkway & porch",
+    },
+    {
+      id: "exterior-liability",
+      style: "outline",
+      position: { left: "4%", bottom: "6%", width: "92%", height: "24%" },
+      label: "Exterior & visitors",
     },
     {
       id: "high-value-callout",
-      shape: "high-value-callout",
       style: "glow",
-      position: { left: "32%", top: "42%", width: "36%", height: "18%" },
-      label: "High-value items",
+      position: { left: "34%", top: "40%", width: "32%", height: "20%" },
+      label: "High-value finishes",
+    },
+    {
+      id: "ale-indicator",
+      style: "pulse",
+      position: { right: "6%", bottom: "12%", width: "30%", height: "28%" },
+      label: "Temporary accommodation",
     },
   ],
   coverageStates: [
     {
       coverageId: "dwelling-coverage",
-      activeZoneIds: ["dwelling-structure", "roof-walls"],
+      activeZoneIds: ["dwelling-structure", "roof-walls", "garage-zone"],
       sceneModifier: "dwelling-coverage",
       ambient: {
         background:
-          "radial-gradient(ellipse 70% 55% at 50% 38%, rgba(179, 122, 90, 0.14) 0%, transparent 72%)",
+          "radial-gradient(ellipse 70% 55% at 50% 36%, rgba(179, 122, 90, 0.14) 0%, transparent 72%)",
       },
     },
     {
@@ -71,16 +83,16 @@ export const houseExplorer: CoverageExplorerVisualConfig = {
       sceneModifier: "contents-coverage",
       ambient: {
         background:
-          "radial-gradient(ellipse 50% 40% at 50% 52%, rgba(208, 173, 38, 0.12) 0%, transparent 70%)",
+          "radial-gradient(ellipse 48% 38% at 50% 48%, rgba(208, 173, 38, 0.14) 0%, transparent 70%)",
       },
     },
     {
       coverageId: "liability-protection",
-      activeZoneIds: ["exterior-liability", "driveway-zone"],
+      activeZoneIds: ["exterior-liability", "driveway-zone", "walkway-porch"],
       sceneModifier: "liability-protection",
       ambient: {
         background:
-          "radial-gradient(ellipse 85% 35% at 50% 88%, rgba(208, 173, 38, 0.1) 0%, transparent 70%)",
+          "radial-gradient(ellipse 85% 32% at 50% 88%, rgba(208, 173, 38, 0.1) 0%, transparent 70%)",
       },
     },
     {
@@ -89,8 +101,8 @@ export const houseExplorer: CoverageExplorerVisualConfig = {
       sceneModifier: "additional-living-expenses",
       ambient: {
         background:
-          "radial-gradient(circle at 78% 72%, rgba(91, 122, 153, 0.12) 0%, transparent 55%)",
-        dimOpacity: 0.2,
+          "radial-gradient(circle at 78% 72%, rgba(91, 122, 153, 0.14) 0%, transparent 55%)",
+        dimOpacity: 0.18,
       },
     },
     {
@@ -99,7 +111,7 @@ export const houseExplorer: CoverageExplorerVisualConfig = {
       sceneModifier: "high-value-home-considerations",
       ambient: {
         background:
-          "radial-gradient(circle at 50% 48%, rgba(208, 173, 38, 0.16) 0%, transparent 58%)",
+          "radial-gradient(circle at 50% 46%, rgba(208, 173, 38, 0.16) 0%, transparent 58%)",
       },
     },
   ],

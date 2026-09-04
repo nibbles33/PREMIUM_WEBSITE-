@@ -2510,6 +2510,76 @@
   border-radius: 0.375rem;
 }
 
+.pilot-ce-scene-cutaway {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem 0.5rem;
+  pointer-events: none;
+}
+
+.pilot-ce-scene-cutaway-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  filter: drop-shadow(0 10px 24px rgba(32, 39, 40, 0.08));
+}
+
+.pilot-ce-stage-frame--cutaway-miniature,
+.pilot-ce-stage-frame--restaurant,
+.pilot-ce-stage-frame--house,
+.pilot-ce-stage-frame--commercial-building,
+.pilot-ce-stage-frame--construction,
+.pilot-ce-stage-frame--factory,
+.pilot-ce-stage-frame--farm,
+.pilot-ce-stage-frame--retail {
+  background: linear-gradient(180deg, #fafaf8 0%, #f3f0e8 100%);
+}
+
+.pilot-ce-stage-frame--fleet {
+  background: linear-gradient(180deg, #fafaf8 0%, #f3f0e8 100%);
+}
+
+.pilot-ce-stage-frame--fleet .pilot-ce-object-hero {
+  align-items: flex-end;
+  padding-bottom: 0.25rem;
+}
+
+.pilot-ce-stage-frame--fleet .pilot-ce-object-wrap {
+  width: 94%;
+  max-width: 26rem;
+  -webkit-mask-image: radial-gradient(
+    ellipse 88% 78% at 50% 62%,
+    #000 52%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 88% 78% at 50% 62%,
+    #000 52%,
+    transparent 100%
+  );
+}
+
+.pilot-ce-stage-frame--fleet .pilot-ce-object-image {
+  width: 100%;
+  max-width: none;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 18px 32px rgba(32, 39, 40, 0.14));
+}
+
+.pilot-ce-zone.is-active {
+  border-radius: 0.375rem;
+}
+
+.pilot-ce-scene-layers {
+  z-index: 3;
+}
+
+/* Cutaway miniature zone highlights */
 .pilot-ce-zone.is-active.pilot-ce-zone--glow {
   box-shadow:
     0 0 0 2px rgba(208, 173, 38, 0.45),

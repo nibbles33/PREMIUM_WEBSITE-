@@ -14,7 +14,8 @@ export type CoverageVisualFamily =
   | "transport-truck"
   | "fleet-commercial-vehicle"
   | "farm"
-  | "greenhouse";
+  | "greenhouse"
+  | "retail";
 
 export type CoverageHighlightStyle = "glow" | "pulse" | "outline" | "fill";
 
@@ -85,6 +86,7 @@ export type CoverageExplorerVisualConfig = {
   visualFamily: CoverageVisualFamily;
   /** Hero/scene photography when available */
   sceneSrc?: string;
+  sceneDimensions?: { width: number; height: number };
   sceneAlt?: string;
   /** Optional foreground object (car, boat silhouette asset, etc.) */
   object?: CoverageObjectAsset;
@@ -94,7 +96,7 @@ export type CoverageExplorerVisualConfig = {
   /** Per-coverage visual state */
   coverageStates: CoverageStateConfig[];
   /** Scene render mode */
-  sceneMode: "css-cutaway" | "photo-scene" | "object-only";
+  sceneMode: "css-cutaway" | "photo-scene" | "cutaway-miniature" | "object-only";
   /** Whether family uses built-in CSS scene geometry */
   cssSceneClass?: string;
 };
