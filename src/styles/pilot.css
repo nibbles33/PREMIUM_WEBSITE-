@@ -359,6 +359,7 @@
   overflow: hidden;
   cursor: grab;
   padding: 0.375rem 0.5rem 0.875rem;
+  touch-action: none;
 }
 
 .pilot-filmstrip-viewport.is-dragging {
@@ -587,6 +588,42 @@
 
 .pilot-award-card {
   min-width: 260px;
+}
+
+/* Interactive awards rail (transform loop + drag) */
+.pilot-awards-rail-interactive {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.pilot-awards-viewport {
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  padding: 0.25rem 0;
+}
+
+.pilot-awards-viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.pilot-awards-inner {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
 }
 
 @media (max-width: 767px) {

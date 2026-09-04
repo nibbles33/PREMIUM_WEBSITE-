@@ -13,3 +13,11 @@ export const PILOT_PERSONAL_RAIL_SPEED = {
   mobile: 0.45,
   mobileReduced: 0.18,
 } as const;
+
+/** Awards interactive rail — ~16px/s normal (130s loop equivalent) */
+export const PILOT_AWARDS_RAIL_SPEED = {
+  normal: 0.35,
+  reduced: 0.14,
+  mobile: 0.3,
+  mobileReduced: 0.12,
+} as const;

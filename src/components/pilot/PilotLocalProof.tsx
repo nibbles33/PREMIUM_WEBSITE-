@@ -1,14 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import PilotInfiniteRail from "@/components/pilot/PilotInfiniteRail";
+import { useEffect, useState } from "react";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import { PILOT_RAIL_DURATIONS } from "@/data/pilot-rail-durations";
+import { useTransformInfiniteRail } from "@/hooks/useTransformInfiniteRail";
 import { pilotAwardBadges, type AwardBadge } from "@/data/pilot-home";
+import { PILOT_AWARDS_RAIL_SPEED } from "@/data/pilot-rail-durations";
 
 function AwardCard({ badge }: { badge: AwardBadge }) {
   return (
-    <div className="pilot-award-card group flex shrink-0 items-center gap-4 rounded-2xl border border-border/80 bg-white px-5 py-4 shadow-[0_8px_24px_rgba(32,39,40,0.06)] transition-[border-color,box-shadow] duration-200 hover:border-gold/40 hover:shadow-[0_12px_32px_rgba(208,173,38,0.12)]">
+    <div
+      className="pilot-award-card group flex shrink-0 items-center gap-4 rounded-2xl border border-border/80 bg-white px-5 py-4 shadow-[0_8px_24px_rgba(32,39,40,0.06)] transition-[border-color,box-shadow] duration-200 hover:border-gold/40 hover:shadow-[0_12px_32px_rgba(208,173,38,0.12)]"
+      aria-hidden={false}
+    >
       <span className="relative flex h-[88px] w-[88px] shrink-0 items-center justify-center sm:h-[100px] sm:w-[100px]">
         <Image
           src={badge.src}
@@ -16,6 +20,7 @@ function AwardCard({ badge }: { badge: AwardBadge }) {
           width={100}
           height={100}
           className="h-full w-full object-contain opacity-95 transition-[filter,transform] duration-300 group-hover:scale-105 group-hover:grayscale-0 grayscale-[20%]"
+          draggable={false}
         />
       </span>
       <div className="min-w-0 pr-2">
@@ -36,8 +41,28 @@ function AwardCard({ badge }: { badge: AwardBadge }) {
 }
 
 export default function PilotLocalProof() {
-  const doubled = [...pilotAwardBadges, ...pilotAwardBadges];
-  const { normal, reduced } = PILOT_RAIL_DURATIONS.awards;
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReduceMotion(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
+  const { viewportRef, innerRef, isDragging, loopCopies, viewportHandlers } =
+    useTransformInfiniteRail({
+      itemCount: pilotAwardBadges.length,
+      speed: PILOT_AWARDS_RAIL_SPEED,
+      enableMomentum: !reduceMotion,
+      disableAutoplay: reduceMotion,
+      inactivityResumeMs: 4000,
+    });
+
+  const loopItems = Array.from({ length: loopCopies }, () =>
+    pilotAwardBadges,
+  ).flat();
 
   return (
     <section
@@ -61,17 +86,22 @@ export default function PilotLocalProof() {
         </RevealOnScroll>
       </div>
 
-      <div className="pilot-awards-rail mt-7 sm:mt-8">
-        <PilotInfiniteRail
-          durationSeconds={normal}
-          reducedDurationSeconds={reduced}
-          ariaLabel="Awards and recognition"
-          trackClassName="gap-4 sm:gap-5"
+      <div className="pilot-awards-rail pilot-awards-rail-interactive mt-7 sm:mt-8">
+        <div
+          ref={viewportRef}
+          className={`pilot-awards-viewport ${isDragging ? "is-dragging" : ""}`}
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Awards and recognition — swipe or drag to browse"
+          tabIndex={0}
+          {...viewportHandlers}
         >
-          {doubled.map((badge, i) => (
-            <AwardCard key={`${badge.src}-${i}`} badge={badge} />
-          ))}
-        </PilotInfiniteRail>
+          <div ref={innerRef} className="pilot-awards-inner gap-4 sm:gap-5">
+            {loopItems.map((badge, i) => (
+              <AwardCard key={`${badge.src}-${i}`} badge={badge} />
+            ))}
+          </div>
+        </div>
       </div>
 
       <p className="mx-auto mt-6 max-w-xl px-4 text-center text-[13px] leading-relaxed text-secondary">

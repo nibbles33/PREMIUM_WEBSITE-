@@ -301,8 +301,8 @@ export const photographyPlacements: PhotographyPlacement[] = [
     slug: "property-management-insurance",
     category: "commercial",
     route: "/property-management-insurance/",
-    src: "/images/photography/commercial/condo-property-management.webp",
-    alt: "Modern condominium building with residents at the entrance",
+    src: "/images/photography/commercial/real-estate-insurance.webp",
+    alt: "Property professional reviewing plans and portfolio documentation",
     confidence: "HIGH",
   },
   {
@@ -445,8 +445,8 @@ export const photographyPlacements: PhotographyPlacement[] = [
     slug: "liquor-liability-insurance",
     category: "commercial",
     route: "/liquor-liability-insurance/",
-    src: "/images/photography/commercial/event-venue.webp",
-    alt: "Outdoor event venue with food service and guests",
+    src: "/images/photography/commercial/restaurant-insurance.webp",
+    alt: "Chefs preparing food in a busy commercial kitchen",
     confidence: "HIGH",
   },
   {

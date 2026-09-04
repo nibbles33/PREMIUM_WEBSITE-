@@ -13,22 +13,30 @@ function DropdownPanel({
   labelledBy,
   children,
   wide = false,
+  scrollable = false,
 }: {
   id: string;
   labelledBy: string;
   children: React.ReactNode;
   wide?: boolean;
+  scrollable?: boolean;
 }) {
   return (
     <div
       id={id}
       role="region"
       aria-labelledby={labelledBy}
-      className={`absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 rounded-xl border border-border bg-white p-4 shadow-[0_16px_40px_rgba(32,39,40,0.12)] ${
+      className={`absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 rounded-xl border border-border bg-white shadow-[0_16px_40px_rgba(32,39,40,0.12)] ${
         wide ? "w-[min(92vw,720px)]" : "w-[min(92vw,420px)]"
-      }`}
+      } ${scrollable ? "nav-dropdown-panel-scrollable flex max-h-[min(calc(100dvh-5.5rem),calc(100vh-5.5rem))] flex-col overflow-hidden p-0" : "p-4"}`}
     >
-      {children}
+      {scrollable ? (
+        <div className="nav-dropdown-panel-scroll overflow-y-auto overscroll-contain p-4">
+          {children}
+        </div>
+      ) : (
+        children
+      )}
     </div>
   );
 }
@@ -173,7 +181,7 @@ export function BusinessNavDropdown({ onNavigate }: { onNavigate?: () => void })
         />
       </button>
       {open ? (
-        <DropdownPanel id={panelId} labelledBy={buttonId} wide>
+        <DropdownPanel id={panelId} labelledBy={buttonId} wide scrollable>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {businessNavClusters.map((cluster: BusinessNavCluster) => (
               <div key={cluster.title}>
