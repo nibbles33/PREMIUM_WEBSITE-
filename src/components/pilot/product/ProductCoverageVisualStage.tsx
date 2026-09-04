@@ -1,59 +1,62 @@
 "use client";
 
 import type { LucideIcon } from "lucide-react";
-import Image from "next/image";
-import type { ProductCoverageItem, ProductMiniatureAsset } from "@/types/pilot-product";
+import CoverageVisualStage from "@/components/pilot/coverage-explorer/CoverageVisualStage";
+import type { ProductCoverageItem } from "@/types/pilot-product";
+import type { CoverageExplorerVisualConfig } from "@/types/coverage-explorer";
 
 type ProductCoverageVisualStageProps = {
   active: ProductCoverageItem;
   accentColor: string;
-  miniature?: ProductMiniatureAsset | null;
+  explorer?: CoverageExplorerVisualConfig | null;
 };
 
 export default function ProductCoverageVisualStage({
   active,
   accentColor,
-  miniature,
+  explorer,
 }: ProductCoverageVisualStageProps) {
+  if (explorer) {
+    return (
+      <CoverageVisualStage
+        activeCoverageId={active.id}
+        accentColor={accentColor}
+        visualEyebrow={active.visualEyebrow}
+        visualCaption={active.visualCaption}
+        visualSubcaption={active.visualSubcaption}
+        explorer={explorer}
+        srDetail={`${active.title}: ${active.detail}`}
+        showCaption={false}
+      />
+    );
+  }
+
   const ActiveIcon = active.icon as LucideIcon;
 
   return (
-    <div className="pilot-product-coverage-stage" aria-live="polite" aria-atomic="true">
+    <div
+      className="pilot-product-coverage-stage pilot-product-coverage-stage--icon-only"
+      aria-live="polite"
+      aria-atomic="true"
+    >
       <p className="pilot-product-coverage-stage-eyebrow">{active.visualEyebrow}</p>
 
-      <div
-        className={`pilot-product-coverage-stage-frame${miniature ? "" : " pilot-product-coverage-stage-frame--icon-only"}`}
-      >
-        {miniature ? (
-          <div className="pilot-product-miniature-hero" aria-hidden>
-            <div className="pilot-product-miniature-platform" />
-            <Image
-              src={miniature.src}
-              alt=""
-              width={miniature.width}
-              height={miniature.height}
-              quality={miniature.quality ?? 92}
-              sizes={miniature.sizes ?? "(max-width: 767px) min(100vw, 360px), 560px"}
-              className="pilot-product-miniature-image"
-            />
-          </div>
-        ) : (
-          <div className="pilot-product-icon-stage" aria-hidden>
-            <span
-              className="pilot-product-icon-stage-ring"
-              style={{ borderColor: `${accentColor}55` }}
-            />
-            <span
-              className="pilot-product-icon-stage-icon"
-              style={{
-                color: accentColor,
-                backgroundColor: `color-mix(in srgb, ${accentColor} 12%, #FAFAF8)`,
-              }}
-            >
-              <ActiveIcon className="h-12 w-12" strokeWidth={1.25} />
-            </span>
-          </div>
-        )}
+      <div className="pilot-product-coverage-stage-frame pilot-product-coverage-stage-frame--icon-only">
+        <div className="pilot-product-icon-stage" aria-hidden>
+          <span
+            className="pilot-product-icon-stage-ring"
+            style={{ borderColor: `${accentColor}55` }}
+          />
+          <span
+            className="pilot-product-icon-stage-icon"
+            style={{
+              color: accentColor,
+              backgroundColor: `color-mix(in srgb, ${accentColor} 12%, #FAFAF8)`,
+            }}
+          >
+            <ActiveIcon className="h-12 w-12" strokeWidth={1.25} />
+          </span>
+        </div>
 
         <div className="pilot-product-coverage-scene" aria-hidden>
           <span
@@ -64,25 +67,6 @@ export default function ProductCoverageVisualStage({
           />
         </div>
       </div>
-
-      {miniature ? (
-        <div className="pilot-product-coverage-stage-caption">
-          <span
-            className="pilot-product-coverage-stage-icon"
-            style={{
-              color: accentColor,
-              backgroundColor: `color-mix(in srgb, ${accentColor} 12%, #fff)`,
-            }}
-            aria-hidden
-          >
-            <ActiveIcon className="h-5 w-5" strokeWidth={1.5} />
-          </span>
-          <div>
-            <p className="pilot-product-coverage-stage-title">{active.visualCaption}</p>
-            <p className="pilot-product-coverage-stage-sub">{active.visualSubcaption}</p>
-          </div>
-        </div>
-      ) : null}
 
       <p className="sr-only">
         {active.title}: {active.detail}

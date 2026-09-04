@@ -1134,32 +1134,58 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 0 3% 1.5%;
+  padding: 0 2% 0.5%;
 }
 
 .pilot-auto-car-hero-platform {
   position: absolute;
-  bottom: 7%;
+  bottom: 5%;
   left: 50%;
-  width: 48%;
-  height: 1.5rem;
+  width: 62%;
+  height: 2rem;
   transform: translateX(-50%);
   border-radius: 9999px;
   background: radial-gradient(
     ellipse,
-    rgba(32, 39, 40, 0.14) 0%,
+    rgba(32, 39, 40, 0.18) 0%,
+    rgba(32, 39, 40, 0.06) 45%,
     transparent 72%
+  );
+  filter: blur(1px);
+}
+
+.pilot-auto-car-hero-image-wrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 92%;
+  max-width: 26rem;
+  /* Fade rectangular PNG edges into champagne stage */
+  -webkit-mask-image: radial-gradient(
+    ellipse 88% 78% at 50% 62%,
+    #000 52%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 88% 78% at 50% 62%,
+    #000 52%,
+    transparent 100%
   );
 }
 
 .pilot-auto-car-hero-image {
   position: relative;
   z-index: 1;
-  width: 70%;
-  max-width: 17.5rem;
+  width: 100%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 14px 28px rgba(32, 39, 40, 0.12));
+  object-position: center bottom;
+  /* Blend baked-in ivory background with stage gradient */
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 18px 32px rgba(32, 39, 40, 0.14))
+    drop-shadow(0 4px 12px rgba(32, 39, 40, 0.08));
 }
 
 .pilot-auto-coverage-scene {
@@ -1631,9 +1657,9 @@
     min-height: 23.5rem;
   }
 
-  .pilot-auto-car-hero-image {
-    width: 82%;
-    max-width: 20.5rem;
+  .pilot-auto-car-hero-image-wrap {
+    width: 96%;
+    max-width: 28rem;
   }
 
   .pilot-auto-coverage-stage-eyebrow {
@@ -1685,9 +1711,9 @@
     min-height: 17.5rem;
   }
 
-  .pilot-auto-car-hero-image {
-    width: 72%;
-    max-width: 16rem;
+  .pilot-auto-car-hero-image-wrap {
+    width: 88%;
+    max-width: 22rem;
   }
 
   .pilot-auto-scene-ring--outer {
@@ -2355,6 +2381,409 @@
   }
 }
 
+/* —— Shared Coverage Explorer visual system (pilot-ce-*) —— */
+
+.pilot-ce-stage-eyebrow {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pilot-gold-dark);
+}
+
+.pilot-ce-stage-frame {
+  position: relative;
+  min-height: 20rem;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #fafaf8 0%, #f3f0e8 100%);
+  border: 1px solid var(--pilot-border);
+  overflow: hidden;
+}
+
+.pilot-ce-scene-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.pilot-ce-scene-photo-image {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.pilot-ce-scene-photo-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(250, 250, 248, 0.08) 0%,
+    rgba(243, 240, 232, 0.42) 55%,
+    rgba(243, 240, 232, 0.72) 100%
+  );
+  pointer-events: none;
+}
+
+.pilot-ce-css-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pilot-ce-object-hero {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.pilot-ce-object-platform {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  width: 58%;
+  height: 1.75rem;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  background: radial-gradient(
+    ellipse,
+    rgba(32, 39, 40, 0.16) 0%,
+    transparent 72%
+  );
+}
+
+.pilot-ce-object-wrap--blend {
+  -webkit-mask-image: radial-gradient(
+    ellipse 88% 78% at 50% 62%,
+    #000 52%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 88% 78% at 50% 62%,
+    #000 52%,
+    transparent 100%
+  );
+}
+
+.pilot-ce-object-wrap--blend .pilot-ce-object-image {
+  mix-blend-mode: multiply;
+}
+
+.pilot-ce-object-image {
+  position: relative;
+  z-index: 1;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 28px rgba(32, 39, 40, 0.12));
+}
+
+.pilot-ce-scene-layers {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.pilot-ce-scene-dim {
+  position: absolute;
+  inset: 0;
+  background: rgba(32, 39, 40, 0.55);
+  transition: opacity 380ms ease-out;
+  pointer-events: none;
+}
+
+.pilot-ce-scene-ambient {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  transition: background 380ms ease-out, opacity 320ms ease-out;
+}
+
+.pilot-ce-zone {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 0.375rem;
+}
+
+.pilot-ce-scene-cutaway {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem 0.5rem;
+  pointer-events: none;
+}
+
+.pilot-ce-scene-cutaway-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  filter: drop-shadow(0 10px 24px rgba(32, 39, 40, 0.08));
+}
+
+.pilot-ce-stage-frame--cutaway-miniature,
+.pilot-ce-stage-frame--restaurant,
+.pilot-ce-stage-frame--house,
+.pilot-ce-stage-frame--commercial-building,
+.pilot-ce-stage-frame--construction,
+.pilot-ce-stage-frame--factory,
+.pilot-ce-stage-frame--farm,
+.pilot-ce-stage-frame--retail {
+  background: linear-gradient(180deg, #fafaf8 0%, #f3f0e8 100%);
+}
+
+.pilot-ce-stage-frame--fleet {
+  background: linear-gradient(180deg, #fafaf8 0%, #f3f0e8 100%);
+}
+
+.pilot-ce-stage-frame--fleet .pilot-ce-object-hero {
+  align-items: flex-end;
+  padding-bottom: 0.25rem;
+}
+
+.pilot-ce-stage-frame--fleet .pilot-ce-object-wrap {
+  width: 94%;
+  max-width: 26rem;
+  -webkit-mask-image: radial-gradient(
+    ellipse 88% 78% at 50% 62%,
+    #000 52%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 88% 78% at 50% 62%,
+    #000 52%,
+    transparent 100%
+  );
+}
+
+.pilot-ce-stage-frame--fleet .pilot-ce-object-image {
+  width: 100%;
+  max-width: none;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 18px 32px rgba(32, 39, 40, 0.14));
+}
+
+.pilot-ce-zone.is-active {
+  border-radius: 0.375rem;
+}
+
+.pilot-ce-scene-layers {
+  z-index: 3;
+}
+
+/* Cutaway miniature zone highlights */
+.pilot-ce-zone.is-active.pilot-ce-zone--glow {
+  box-shadow:
+    0 0 0 2px rgba(208, 173, 38, 0.45),
+    0 0 24px rgba(208, 173, 38, 0.22),
+    inset 0 0 16px rgba(208, 173, 38, 0.08);
+  background: rgba(208, 173, 38, 0.08);
+}
+
+.pilot-ce-zone.is-active.pilot-ce-zone--pulse {
+  border: 1.5px solid rgba(208, 173, 38, 0.55);
+  animation: pilot-ce-zone-pulse 2.6s ease-in-out infinite;
+}
+
+.pilot-ce-zone.is-active.pilot-ce-zone--outline {
+  border: 2px dashed rgba(208, 173, 38, 0.5);
+  background: rgba(208, 173, 38, 0.04);
+}
+
+.pilot-ce-zone.is-active.pilot-ce-zone--fill {
+  background: rgba(208, 173, 38, 0.12);
+  border: 1px solid rgba(208, 173, 38, 0.35);
+}
+
+.pilot-ce-callout {
+  position: absolute;
+  display: inline-flex;
+  padding: 0.3rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--pilot-charcoal);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(208, 173, 38, 0.35);
+  box-shadow: 0 6px 16px rgba(32, 39, 40, 0.08);
+}
+
+.pilot-ce-stage-caption {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--pilot-border);
+}
+
+.pilot-ce-stage-title {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--pilot-charcoal);
+}
+
+.pilot-ce-stage-sub {
+  margin: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--pilot-secondary);
+}
+
+@keyframes pilot-ce-zone-pulse {
+  0%,
+  100% {
+    opacity: 0.75;
+    box-shadow: 0 0 0 0 rgba(208, 173, 38, 0.2);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 18px rgba(208, 173, 38, 0.28);
+  }
+}
+
+/* Restaurant CSS cutaway — isometric placeholder scene */
+.pilot-ce-css-scene--restaurant {
+  background:
+    linear-gradient(135deg, transparent 48%, rgba(32, 39, 40, 0.04) 48%, rgba(32, 39, 40, 0.04) 52%, transparent 52%),
+    linear-gradient(180deg, #f8f5ef 0%, #ebe6dc 100%);
+}
+
+.pilot-ce-css-scene--restaurant::before {
+  content: "";
+  position: absolute;
+  left: 6%;
+  bottom: 14%;
+  width: 88%;
+  height: 72%;
+  border: 2px solid rgba(32, 39, 40, 0.12);
+  border-radius: 0.5rem;
+  background: linear-gradient(165deg, #faf8f4 0%, #f0ebe2 100%);
+  transform: perspective(400px) rotateX(8deg);
+  box-shadow: 0 12px 32px rgba(32, 39, 40, 0.06);
+}
+
+.pilot-ce-css-scene--restaurant::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 36%;
+  height: 38%;
+  border-radius: 0.375rem;
+  background: linear-gradient(180deg, #e8e2d8 0%, #ddd6ca 100%);
+  border: 1px solid rgba(32, 39, 40, 0.1);
+  box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+.pilot-ce-stage-frame--restaurant .pilot-ce-zone--bar-area.is-active,
+.pilot-ce-stage-frame--restaurant[data-scene="liquor-liability"] .pilot-ce-css-scene--restaurant::after {
+  /* bar glow hint via zone */
+}
+
+.pilot-ce-scene-layers--restaurant--liquor-liability .pilot-ce-zone--bottle-display.is-active {
+  background: rgba(208, 173, 38, 0.18);
+  box-shadow: 0 0 20px rgba(208, 173, 38, 0.35);
+}
+
+/* House CSS cutaway */
+.pilot-ce-css-scene--house {
+  background: linear-gradient(180deg, #e8eef2 0%, #f3f0e8 42%, #ebe6dc 100%);
+}
+
+.pilot-ce-css-scene--house::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  width: 58%;
+  height: 48%;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #f5f0e8 0%, #e8e0d4 100%);
+  border: 1.5px solid rgba(32, 39, 40, 0.12);
+  border-radius: 0.25rem;
+  clip-path: polygon(0% 100%, 0% 18%, 50% 0%, 100% 18%, 100% 100%);
+  box-shadow: 0 10px 28px rgba(32, 39, 40, 0.08);
+}
+
+.pilot-ce-css-scene--house::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  bottom: 8%;
+  width: 38%;
+  height: 10%;
+  background: rgba(32, 39, 40, 0.08);
+  border-radius: 0.25rem;
+}
+
+/* Dim inactive photo scenes when zones active */
+.pilot-ce-stage-frame--boat .pilot-ce-scene-photo-image,
+.pilot-ce-stage-frame--garage .pilot-ce-scene-photo-image,
+.pilot-ce-stage-frame--greenhouse .pilot-ce-scene-photo-image,
+.pilot-ce-stage-frame--transport-truck .pilot-ce-scene-photo-image {
+  transition: filter 380ms ease-out;
+}
+
+.pilot-ce-stage-frame[data-scene*="business-interruption"] .pilot-ce-scene-photo-image {
+  filter: saturate(0.65) brightness(0.88);
+}
+
+@media (min-width: 1024px) {
+  .pilot-ce-stage-frame {
+    min-height: 23.5rem;
+  }
+
+  .pilot-ce-stage-eyebrow {
+    margin-bottom: 1.125rem;
+    font-size: 0.71875rem;
+  }
+
+  .pilot-ce-stage-caption {
+    gap: 0.875rem;
+    margin-top: 1.375rem;
+    padding-top: 1.125rem;
+  }
+
+  .pilot-ce-stage-title {
+    font-size: 1rem;
+  }
+
+  .pilot-ce-stage-sub {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pilot-ce-stage-frame {
+    min-height: 17.5rem;
+  }
+
+  .pilot-product-coverage-list {
+    overflow-x: visible;
+  }
+}
+
+@media (max-width: 390px) {
+  .pilot-ce-stage-frame {
+    min-height: 16rem;
+  }
+
+  .pilot-product-explorer-stage {
+    padding: 1.25rem;
+  }
+}
+
 /* —— Reduced motion —— */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2425,6 +2854,14 @@
 
   .pilot-auto-coverage-card:hover {
     transform: none;
+  }
+
+  .pilot-ce-zone.is-active.pilot-ce-zone--pulse {
+    animation: none;
+  }
+
+  .pilot-auto-scene-ring {
+    animation: none;
   }
 
   .pilot-auto-related-card:hover {

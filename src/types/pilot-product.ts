@@ -1,6 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import type { ConsiderationItem } from "@/components/LineInsurancePage";
 import type { FaqItem } from "@/components/FaqAccordion";
+import type { CoverageExplorerVisualConfig } from "@/types/coverage-explorer";
 
 export type ProductCoverageItem = {
   id: string;
@@ -58,6 +59,7 @@ export type PilotProductPageConfig = {
   coverageItems: ProductCoverageItem[];
   coverageExplorerLabel: string;
   miniature?: ProductMiniatureAsset | null;
+  coverageExplorer?: CoverageExplorerVisualConfig | null;
   brokerSteps: ProductBrokerStep[];
   relatedHeading: string;
   relatedIntro: string;
