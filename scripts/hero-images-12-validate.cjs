@@ -104,8 +104,8 @@ async function main() {
   const touchedResults = [];
   for (const { route, expected } of TOUCHED_ROUTES) {
     const page = await browser.newPage();
-    const res = await page.goto(`${BASE}${route}`, { waitUntil: "networkidle0", timeout: 60000 });
-    await page.waitForSelector(".pilot-product-hero", { timeout: 15000 }).catch(() => {});
+    const res = await page.goto(`${BASE}${route}`, { waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.waitForSelector(".pilot-product-hero-photo img", { timeout: 20000 }).catch(() => {});
 
     const heroSrc = await getHeroSrc(page);
     const usesFallback = heroSrc?.includes("/commercial-insurance.webp") || false;
@@ -126,8 +126,8 @@ async function main() {
         ["mobile_390", 390, 844],
       ]) {
         await page.setViewport({ width, height });
-        await page.goto(`${BASE}${route}`, { waitUntil: "networkidle0", timeout: 60000 });
-        await page.waitForSelector(".pilot-product-hero", { timeout: 15000 });
+        await page.goto(`${BASE}${route}`, { waitUntil: "domcontentloaded", timeout: 60000 });
+        await page.waitForSelector(".pilot-product-hero-photo img", { timeout: 20000 }).catch(() => {});
         const dir = path.join(OUT_DIR, route.replace(/^\/|\/$/g, ""));
         fs.mkdirSync(dir, { recursive: true });
         await page.screenshot({ path: path.join(dir, `${label}.png`), fullPage: false });
@@ -140,8 +140,8 @@ async function main() {
   const commercialAudit = [];
   for (const route of ALL_COMMERCIAL_ROUTES) {
     const page = await browser.newPage();
-    const res = await page.goto(`${BASE}${route}`, { waitUntil: "networkidle0", timeout: 60000 });
-    await page.waitForSelector(".pilot-product-hero, .pilot-commercial-hub-hero", { timeout: 15000 }).catch(() => {});
+    const res = await page.goto(`${BASE}${route}`, { waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.waitForSelector(".pilot-product-hero-photo img, .pilot-commercial-hub-hero img", { timeout: 20000 }).catch(() => {});
 
     const heroSrc = await getHeroSrc(page);
     const usesCommercialFallback = heroSrc?.includes("/commercial-insurance.webp") || false;
@@ -163,7 +163,7 @@ async function main() {
   const regression = [];
   for (const route of ["/", "/auto-insurance/"]) {
     const page = await browser.newPage();
-    const res = await page.goto(`${BASE}${route}`, { waitUntil: "networkidle0", timeout: 60000 });
+    const res = await page.goto(`${BASE}${route}`, { waitUntil: "domcontentloaded", timeout: 60000 });
     regression.push({ route, status: res?.status() ?? 0, ok: res?.status() === 200 });
     await page.close();
   }
