@@ -2605,6 +2605,83 @@
   mix-blend-mode: soft-light;
 }
 
+/* Masked illumination prototype (Restaurant) */
+.pilot-ce-masked-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.pilot-ce-masked-base-image,
+.pilot-ce-masked-lit-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.pilot-ce-masked-base-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.pilot-ce-masked-composite {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.pilot-ce-masked-lit-wrap {
+  display: none;
+}
+
+.pilot-ce-masked-dim-rect {
+  fill: rgba(32, 39, 40, 1);
+}
+
+.pilot-ce-masked-edge {
+  fill: none;
+}
+
+.pilot-ce-masked-pulse-edge {
+  animation: pilot-ce-masked-pulse 2.8s ease-in-out infinite;
+}
+
+.pilot-ce-masked-path-trace {
+  animation: pilot-ce-masked-path-trace 3.2s linear infinite;
+}
+
+.pilot-ce-masked-path-trace--static {
+  animation: none;
+}
+
+.pilot-ce-svg-overlay--dim-only {
+  z-index: 2;
+}
+
+@keyframes pilot-ce-masked-pulse {
+  0%,
+  100% {
+    stroke-opacity: 0.18;
+  }
+  50% {
+    stroke-opacity: 0.42;
+  }
+}
+
+@keyframes pilot-ce-masked-path-trace {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -14;
+  }
+}
+
 @keyframes pilot-ce-svg-zone-pulse {
   0%,
   100% {
@@ -2952,6 +3029,15 @@
     animation: none;
     fill: rgba(208, 173, 38, 0.28);
     stroke: rgba(184, 148, 15, 0.82);
+  }
+
+  .pilot-ce-masked-pulse-edge {
+    animation: none;
+    stroke-opacity: 0.32;
+  }
+
+  .pilot-ce-masked-path-trace {
+    animation: none;
   }
 
   .pilot-auto-scene-ring {

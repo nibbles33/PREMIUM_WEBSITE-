@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import MaskedIlluminationStage from "@/components/pilot/coverage-explorer/MaskedIlluminationStage";
 import { MINIATURE_IMAGE_SIZES } from "@/data/coverage-explorer/miniature-assets";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import type {
   CoverageExplorerVisualConfig,
   CoverageStateConfig,
-  CoverageSvgZoneConfig,
   CoverageZoneConfig,
 } from "@/types/coverage-explorer";
 
@@ -40,51 +40,31 @@ function interactiveMasterSizes(width: number): string {
   return "(max-width: 767px) min(100vw, 360px), 560px";
 }
 
-function SvgZonePaths({
-  zones,
-  activeZoneIds,
+function SubtleDimOverlay({
   dimOpacity,
   reduceMotion,
 }: {
-  zones: CoverageSvgZoneConfig[];
-  activeZoneIds: Set<string>;
   dimOpacity: number;
   reduceMotion: boolean;
 }) {
-  const transition = reduceMotion ? "none" : "fill 320ms ease-out, stroke 380ms ease-out, opacity 320ms ease-out";
+  if (dimOpacity <= 0) return null;
 
   return (
     <svg
-      className="pilot-ce-svg-overlay"
+      className="pilot-ce-svg-overlay pilot-ce-svg-overlay--dim-only"
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
       aria-hidden
     >
-      {dimOpacity > 0 ? (
-        <rect
-          className="pilot-ce-svg-dim"
-          width="100"
-          height="100"
-          style={{
-            opacity: dimOpacity,
-            transition: reduceMotion ? "none" : "opacity 380ms ease-out",
-          }}
-        />
-      ) : null}
-
-      {zones.map((zone) => {
-        const isActive = activeZoneIds.has(zone.id);
-        const styleClass = zone.style ?? "glow";
-        return (
-          <path
-            key={zone.id}
-            d={zone.path}
-            className={`pilot-ce-svg-zone pilot-ce-svg-zone--${styleClass}${isActive ? " is-active" : ""}`}
-            style={{ transition }}
-            data-label={zone.label}
-          />
-        );
-      })}
+      <rect
+        width="100"
+        height="100"
+        className="pilot-ce-svg-dim"
+        style={{
+          opacity: dimOpacity,
+          transition: reduceMotion ? "none" : "opacity 380ms ease-out",
+        }}
+      />
     </svg>
   );
 }
@@ -125,6 +105,10 @@ export default function CoverageVisualStage({
   const sceneModifier = activeState?.sceneModifier ?? activeCoverageId;
   const dimOpacity = activeState?.ambient?.dimOpacity ?? 0;
   const isInteractiveMaster = explorer.sceneMode === "interactive-master";
+  const useMaskedIllumination =
+    isInteractiveMaster && explorer.highlightRenderer === "masked-illumination";
+  const useDimOnly =
+    isInteractiveMaster && explorer.highlightRenderer !== "masked-illumination";
   const sceneWidth = explorer.sceneDimensions?.width ?? 1672;
   const sceneHeight = explorer.sceneDimensions?.height ?? 941;
   const aspectRatio = sceneWidth / sceneHeight;
@@ -144,23 +128,35 @@ export default function CoverageVisualStage({
       >
         {explorer.sceneSrc && isInteractiveMaster ? (
           <div className="pilot-ce-scene-interactive-master" aria-hidden>
-            <Image
-              src={explorer.sceneSrc}
-              alt=""
-              width={sceneWidth}
-              height={sceneHeight}
-              sizes={interactiveMasterSizes(sceneWidth)}
-              quality={90}
-              className="pilot-ce-scene-interactive-master-image"
-            />
-            {explorer.svgZones && explorer.svgZones.length > 0 ? (
-              <SvgZonePaths
-                zones={explorer.svgZones}
-                activeZoneIds={activeZoneIds}
-                dimOpacity={dimOpacity}
+            {useMaskedIllumination && explorer.svgZones ? (
+              <MaskedIlluminationStage
+                sceneSrc={explorer.sceneSrc}
+                sceneWidth={sceneWidth}
+                sceneHeight={sceneHeight}
+                sizes={interactiveMasterSizes(sceneWidth)}
+                activeCoverageId={activeCoverageId}
+                svgZones={explorer.svgZones}
                 reduceMotion={reduceMotion}
               />
-            ) : null}
+            ) : (
+              <>
+                <Image
+                  src={explorer.sceneSrc}
+                  alt=""
+                  width={sceneWidth}
+                  height={sceneHeight}
+                  sizes={interactiveMasterSizes(sceneWidth)}
+                  quality={90}
+                  className="pilot-ce-scene-interactive-master-image"
+                />
+                {useDimOnly ? (
+                  <SubtleDimOverlay
+                    dimOpacity={dimOpacity}
+                    reduceMotion={reduceMotion}
+                  />
+                ) : null}
+              </>
+            )}
           </div>
         ) : null}
 

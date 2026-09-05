@@ -199,9 +199,9 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
   "restaurant-insurance": {
     archetype: "restaurant-cutaway",
     coverageZones: {
-      "general-liability": ["dining-floor", "entrance-facade", "bar-seating"],
-      "property-coverage": ["building-shell", "kitchen-prep", "bar-zone"],
-      "liquor-liability": ["bar-zone", "bar-seating", "dining-floor"],
+      "general-liability": ["dining-floor", "entrance-facade"],
+      "property-coverage": ["kitchen-prep", "cooking-equipment", "cold-storage", "bar-zone"],
+      "liquor-liability": ["bar-zone", "bar-seating", "cold-storage"],
       "equipment-breakdown-spoilage": ["kitchen-prep", "cooking-equipment", "cold-storage"],
     },
   },

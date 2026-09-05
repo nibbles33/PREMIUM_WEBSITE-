@@ -11,6 +11,7 @@ import type {
   CoverageVisualFamily,
 } from "@/types/coverage-explorer";
 import { getVisualFamilyForSlug } from "@/data/coverage-explorer/registry";
+import { RESTAURANT_HIGHLIGHT_EFFECTS } from "@/data/coverage-explorer/restaurant-highlight-effects";
 
 const COMPACT_MASTER_FILES = new Set([
   "auto-insurance-interactive-master.png",
@@ -73,14 +74,28 @@ export function buildRouteExplorerConfig(
   const family: CoverageVisualFamily =
     getVisualFamilyForSlug(slug) ?? "commercial-building";
 
+  const isRestaurantPrototype = slug === "restaurant-insurance";
+
   return {
     visualFamily: family,
     sceneMode: "interactive-master",
+    highlightRenderer: isRestaurantPrototype ? "masked-illumination" : "dim-only",
     sceneSrc,
     sceneDimensions: dims,
     cssSceneClass: slug,
     zones: [],
     svgZones,
-    coverageStates,
+    coverageStates: isRestaurantPrototype
+      ? coverageStates.map((state) => ({
+          ...state,
+          activeZoneIds:
+            RESTAURANT_HIGHLIGHT_EFFECTS[state.coverageId]?.maskZoneIds ??
+            state.activeZoneIds,
+          ambient: { dimOpacity: 0 },
+        }))
+      : coverageStates.map((state) => ({
+          ...state,
+          ambient: { dimOpacity: 0.12 },
+        })),
   };
 }

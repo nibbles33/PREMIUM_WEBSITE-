@@ -113,6 +113,8 @@ export type CoverageExplorerVisualConfig = {
     | "cutaway-miniature"
     | "object-only"
     | "interactive-master";
+  /** Highlight rendering strategy — defaults to dim-only for interactive-master */
+  highlightRenderer?: "dim-only" | "masked-illumination";
   /** Whether family uses built-in CSS scene geometry */
   cssSceneClass?: string;
 };
