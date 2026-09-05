@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  Banknote,
   FileCheck,
   Gavel,
   ScrollText,
@@ -18,21 +19,27 @@ export const metadata: Metadata = {
 
 const coverageTypes = [
   {
-    title: "Contract & Performance Bonds",
-    description:
-      "Guarantees a contracted project will be completed as agreed.",
-    icon: FileCheck,
-  },
-  {
     title: "Bid Bonds",
     description:
-      "Required when submitting a bid on certain contracts, guaranteeing you'll honor your bid.",
+      "Required when submitting a bid on certain contracts — guarantees you will honour your bid and enter the contract if selected.",
     icon: Gavel,
   },
   {
-    title: "License & Permit Bonds",
+    title: "Performance Bonds",
     description:
-      "Meets bonding requirements for certain licenses and permits.",
+      "Guarantees completion of the contracted work according to project terms if the principal defaults.",
+    icon: FileCheck,
+  },
+  {
+    title: "Labour & Material Payment Bonds",
+    description:
+      "Ensures subcontractors and suppliers are paid for work and materials on a project, protecting the project owner from liens.",
+    icon: Banknote,
+  },
+  {
+    title: "Licence & Permit Bonds",
+    description:
+      "Meets bonding requirements for certain licences and permits — common for contractors and regulated trades.",
     icon: ScrollText,
   },
   {
@@ -64,6 +71,11 @@ const faqItems = [
     answer:
       "Expect requests for business financials, personal financial statements for owners, project or license details, prior bonding history, and company experience. Larger bonds usually need more documentation than small license bonds.",
   },
+  {
+    question: "What is a labour and material payment bond?",
+    answer:
+      "It protects the project owner by ensuring subcontractors and suppliers get paid. If the contractor fails to pay, the surety may step in — then seek recovery from the contractor.",
+  },
 ];
 
 const jsonLd = {
@@ -90,7 +102,7 @@ export default function BondingInsurancePage() {
       photographySlug="bonding-insurance"
       quoteHref="/get-a-quote?type=business"
       quoteLabel="Get a Bond Quote"
-      coverageIntro="Common surety bonds that help you bid, contract, license, and protect against employee dishonesty."
+      coverageIntro="Common surety bonds for bidding, project performance, subcontractor payment, licensing, and employee dishonesty."
       coverageAccent="#5B6B7A"
       coverageTypes={coverageTypes}
       brokerCopy={sharedBrokerCopy}

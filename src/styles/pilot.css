@@ -1,0 +1,891 @@
+/* Premium Visual Pilot — scoped styles only (.pilot-* / --pilot-*) */
+
+:root {
+  --pilot-gold: #d0ad26;
+  --pilot-gold-dark: #b8940f;
+  --pilot-gold-light: #e4c558;
+  --pilot-charcoal: #202728;
+  --pilot-offwhite: #fafaf8;
+  --pilot-secondary: #726f66;
+  --pilot-border: #e5e3dc;
+  --pilot-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --pilot-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* —— Pilot buttons —— */
+
+.pilot-btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 52px;
+  padding: 0 2rem;
+  border-radius: 0.375rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--pilot-charcoal);
+  background: linear-gradient(
+    160deg,
+    var(--pilot-gold-light) 0%,
+    var(--pilot-gold) 45%,
+    var(--pilot-gold-dark) 100%
+  );
+  box-shadow:
+    0 8px 20px rgba(184, 148, 15, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(184, 148, 15, 0.35);
+  overflow: hidden;
+  transition:
+    transform 100ms ease-out,
+    box-shadow 200ms ease-out;
+}
+
+.pilot-btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(208, 173, 38, 0.15) 40%,
+    rgba(184, 148, 15, 0.4) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.pilot-btn-primary:hover {
+  box-shadow:
+    0 10px 28px rgba(184, 148, 15, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.pilot-btn-primary:active {
+  transform: scale(0.97);
+}
+
+.pilot-btn-primary .pilot-btn-arrow {
+  transition: transform 200ms ease-out;
+}
+
+.pilot-btn-primary:hover .pilot-btn-arrow,
+.pilot-btn-primary:focus-visible .pilot-btn-arrow {
+  transform: translateX(3px);
+}
+
+.pilot-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 1.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--pilot-charcoal);
+  background: transparent;
+  border: 1px solid rgba(32, 39, 40, 0.7);
+  transition:
+    transform 100ms ease-out,
+    border-color 180ms ease-out,
+    color 180ms ease-out;
+}
+
+.pilot-btn-secondary:hover {
+  border-color: var(--pilot-gold-dark);
+  color: var(--pilot-gold-dark);
+}
+
+.pilot-btn-secondary:active {
+  transform: scale(0.97);
+}
+
+.pilot-btn-discover {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  background: var(--pilot-charcoal);
+  color: var(--pilot-gold);
+  border: 1px solid rgba(208, 173, 38, 0.35);
+  box-shadow: 0 4px 14px rgba(32, 39, 40, 0.2);
+  transition:
+    transform 150ms ease-out,
+    box-shadow 200ms ease-out,
+    background-color 200ms ease-out;
+}
+
+.pilot-btn-discover:hover {
+  background: #2a3132;
+  box-shadow: 0 6px 18px rgba(32, 39, 40, 0.28);
+}
+
+.pilot-btn-discover:active {
+  transform: scale(0.94);
+}
+
+/* —— Protection arc —— */
+
+.pilot-protection-arc {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 800ms var(--pilot-ease-out),
+    transform 900ms var(--pilot-ease-spring);
+}
+
+.pilot-protection-arc.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.pilot-protection-arc svg {
+  overflow: visible;
+}
+
+.pilot-protection-breathe {
+  animation: pilot-protection-breathe 4s ease-in-out infinite;
+}
+
+@keyframes pilot-protection-breathe {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* —— Hero immersive (correction pass) —— */
+
+.pilot-hero-immersive {
+  background-color: var(--pilot-charcoal);
+}
+
+.pilot-hero-road-immersive {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 22%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(208, 173, 38, 0.06) 40%,
+    rgba(32, 39, 40, 0.5) 100%
+  );
+  pointer-events: none;
+}
+
+.pilot-hero-texture {
+  background:
+    radial-gradient(
+      ellipse 70% 55% at 82% 38%,
+      rgba(208, 173, 38, 0.07) 0%,
+      transparent 62%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(32, 39, 40, 0.18) 100%
+    );
+  pointer-events: none;
+}
+
+.pilot-hero-car-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.pilot-hero-car-wrap.is-entering {
+  animation: pilot-car-journey 2.2s cubic-bezier(0.25, 0.85, 0.35, 1) forwards;
+}
+
+.pilot-hero-car-wrap.is-entering-mobile {
+  animation: pilot-car-journey-mobile 1.4s cubic-bezier(0.25, 0.85, 0.35, 1) forwards;
+}
+
+.pilot-hero-car-wrap.is-settling {
+  animation: pilot-car-journey-settle 350ms var(--pilot-ease-spring) forwards;
+}
+
+.pilot-hero-car-wrap.is-parked {
+  transform: translate3d(68vw, 62vh, 0) scale(0.9);
+}
+
+@keyframes pilot-car-journey {
+  0% {
+    opacity: 0;
+    transform: translate3d(-8vw, 78vh, 0) scale(0.45) rotate(-14deg);
+  }
+  25% {
+    opacity: 1;
+    transform: translate3d(18vw, 68vh, 0) scale(0.65) rotate(-8deg);
+  }
+  55% {
+    transform: translate3d(42vw, 58vh, 0) scale(0.8) rotate(-3deg);
+  }
+  80% {
+    transform: translate3d(62vw, 60vh, 0) scale(0.88) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(68vw, 62vh, 0) scale(0.9) rotate(0deg);
+  }
+}
+
+@keyframes pilot-car-journey-mobile {
+  0% {
+    opacity: 0;
+    transform: translate3d(-5vw, 72vh, 0) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(58vw, 68vh, 0) scale(0.75);
+  }
+}
+
+@keyframes pilot-car-journey-settle {
+  0% {
+    transform: translate3d(68vw, calc(62vh - 6px), 0) scale(0.9);
+  }
+  55% {
+    transform: translate3d(68vw, calc(62vh + 3px), 0) scale(0.9);
+  }
+  100% {
+    transform: translate3d(68vw, 62vh, 0) scale(0.9);
+  }
+}
+
+.pilot-car-asset-slot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 56px;
+  transform: translate(-50%, -50%);
+  opacity: 0.55;
+  transition: opacity 400ms ease-out;
+}
+
+.pilot-car-asset-slot.is-parked {
+  opacity: 0.7;
+}
+
+.pilot-car-asset-glow {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(208, 173, 38, 0.25) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+}
+
+.pilot-car-asset-slot.is-parked .pilot-car-asset-glow {
+  opacity: 1;
+}
+
+.pilot-car-asset-silhouette {
+  width: 100%;
+  height: auto;
+  color: var(--pilot-gold);
+}
+
+.pilot-hero-protection {
+  position: absolute;
+  left: 50%;
+  top: -40%;
+  transform: translate(-50%, 0) scale(0.85);
+}
+
+/* —— Dense filmstrip —— */
+
+.pilot-filmstrip-dense {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.pilot-filmstrip-track-dense {
+  gap: 0.625rem;
+  padding: 0.375rem 0.5rem 0.875rem;
+}
+
+.pilot-filmstrip-frame-dense {
+  flex: 0 0 clamp(170px, 14vw, 220px);
+  scroll-snap-align: start;
+}
+
+.pilot-filmstrip-frame-dense.is-active {
+  transform: scale(1.03);
+  box-shadow: 0 10px 28px rgba(208, 173, 38, 0.15);
+}
+
+/* Transform-based seamless loop viewport — all breakpoints */
+.pilot-filmstrip-viewport {
+  display: block;
+  overflow: hidden;
+  cursor: grab;
+  padding: 0.375rem 0.5rem 0.875rem;
+}
+
+.pilot-filmstrip-viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.pilot-filmstrip-inner {
+  display: flex;
+  gap: 0.625rem;
+  width: max-content;
+  will-change: transform;
+}
+
+/* —— Shared infinite horizontal rail (Carrier, Awards, Yep) —— */
+
+.pilot-infinite-rail {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.pilot-infinite-rail-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(-50%, 0, 0);
+  animation: pilot-rail-scroll-ltr var(--pilot-rail-duration, 110s) linear infinite;
+}
+
+.pilot-infinite-rail:hover .pilot-infinite-rail-track,
+.pilot-infinite-rail:focus-within .pilot-infinite-rail-track {
+  animation-play-state: paused;
+}
+
+@keyframes pilot-rail-scroll-ltr {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pilot-infinite-rail-track {
+    animation-duration: var(--pilot-rail-duration-reduced, 275s);
+  }
+}
+
+@media (max-width: 767px) {
+  .pilot-infinite-rail-track {
+    animation-duration: calc(var(--pilot-rail-duration, 110s) * 1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 767px) {
+  .pilot-infinite-rail-track {
+    animation-duration: var(--pilot-rail-duration-reduced, 275s);
+  }
+}
+
+/* —— Yep coverage streams —— */
+
+.pilot-yep-lane {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+}
+
+.pilot-yep-lane-track {
+  display: flex;
+  width: max-content;
+  gap: 0.75rem;
+  padding: 0.25rem 0;
+  will-change: transform;
+}
+
+.pilot-yep-lane-track.is-right {
+  animation: pilot-yep-scroll-right var(--pilot-lane-speed, 88s) linear infinite;
+}
+
+.pilot-yep-lane-track.is-left {
+  animation: pilot-yep-scroll-left var(--pilot-lane-speed, 88s) linear infinite;
+}
+
+.pilot-yep-lane-static {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+}
+
+.pilot-yep-lane:hover .pilot-yep-lane-track {
+  animation-play-state: paused;
+}
+
+.pilot-yep-lane-track.is-static {
+  animation: none !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@keyframes pilot-yep-scroll-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pilot-yep-scroll-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.pilot-yep-chip,
+.pilot-yep-tile {
+  min-height: 44px;
+}
+
+.pilot-yep-tile {
+  min-width: clamp(196px, 22vw, 248px);
+}
+
+/* —— Moving awards —— */
+
+.pilot-awards-lane {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+}
+
+.pilot-awards-track {
+  display: flex;
+  width: max-content;
+  animation: pilot-awards-scroll 55s linear infinite;
+}
+
+.pilot-awards-track.pilot-awards-track-slow {
+  animation: pilot-awards-scroll 130s linear infinite;
+}
+
+.pilot-awards-marquee:hover .pilot-awards-track {
+  animation-play-state: paused;
+}
+
+.pilot-awards-track.is-reverse {
+  animation: pilot-awards-scroll-reverse 60s linear infinite;
+}
+
+.pilot-awards-track.is-static {
+  animation: none !important;
+}
+
+@keyframes pilot-awards-scroll {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pilot-awards-scroll-reverse {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.pilot-award-card {
+  min-width: 260px;
+}
+
+@media (max-width: 767px) {
+  .pilot-hero-car-wrap.is-parked,
+  .pilot-hero-car-wrap.is-settling {
+    transform: translate3d(58vw, 68vh, 0) scale(0.75);
+  }
+
+  .pilot-car-asset-slot {
+    width: 44px;
+  }
+
+  .pilot-hero-protection {
+    top: -35%;
+  }
+
+  .pilot-filmstrip-frame-dense {
+    flex: 0 0 clamp(150px, 42vw, 180px);
+  }
+
+  .pilot-award-card {
+    min-width: 220px;
+  }
+}
+
+
+/* —— Hero depth layers —— */
+
+.pilot-hero-bg-layer,
+.pilot-hero-mid-layer,
+.pilot-hero-fg-layer {
+  transition: transform 120ms ease-out;
+  will-change: transform;
+}
+
+.pilot-hero-road {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(32, 39, 40, 0.04) 30%,
+    rgba(32, 39, 40, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+/* —— Scrollbar hide utility —— */
+
+.pilot-scroll-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.pilot-scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* —— Filmstrip —— */
+
+.pilot-filmstrip {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+}
+
+.pilot-filmstrip-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0.5rem 1rem 1.25rem;
+  cursor: grab;
+}
+
+.pilot-filmstrip-track.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.pilot-filmstrip-track::-webkit-scrollbar {
+  display: none;
+}
+
+.pilot-filmstrip-frame {
+  flex: 0 0 clamp(260px, 72vw, 340px);
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  transition:
+    transform 250ms var(--pilot-ease-out),
+    box-shadow 250ms ease-out;
+}
+
+.pilot-filmstrip-frame.is-active {
+  transform: scale(1.02);
+}
+
+.pilot-filmstrip-progress {
+  height: 2px;
+  background: var(--pilot-border);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.pilot-filmstrip-progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--pilot-gold-dark),
+    var(--pilot-gold-light)
+  );
+  border-radius: inherit;
+  transition: width 300ms var(--pilot-ease-out);
+}
+
+/* —— Commercial discovery —— */
+
+.pilot-commercial-panel {
+  transition:
+    opacity 350ms var(--pilot-ease-out),
+    transform 350ms var(--pilot-ease-out);
+}
+
+.pilot-commercial-cat {
+  transition:
+    border-color 200ms ease-out,
+    background-color 200ms ease-out,
+    box-shadow 200ms ease-out,
+    transform 150ms ease-out;
+}
+
+.pilot-commercial-cat.is-active {
+  border-color: var(--pilot-gold);
+  box-shadow: 0 8px 24px rgba(208, 173, 38, 0.18);
+}
+
+/* —— Yep universe —— */
+
+.pilot-yep-object {
+  position: absolute;
+  transition:
+    transform 200ms var(--pilot-ease-out),
+    opacity 300ms ease-out;
+  will-change: transform;
+}
+
+.pilot-yep-object:hover,
+.pilot-yep-object:focus-within {
+  transform: translateY(-4px) scale(1.04);
+  z-index: 10;
+}
+
+.pilot-yep-label {
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 200ms ease-out,
+    transform 200ms ease-out;
+}
+
+.pilot-yep-object:hover .pilot-yep-label,
+.pilot-yep-object:focus-within .pilot-yep-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* —— Miniature placeholder —— */
+
+.pilot-miniature-slot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 8px 16px rgba(32, 39, 40, 0.18));
+}
+
+.pilot-miniature-slot svg,
+.pilot-miniature-slot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* —— Product page hero accents —— */
+
+.pilot-page-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.pilot-page-hero-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.pilot-road-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--pilot-gold) 20%,
+    var(--pilot-gold-light) 50%,
+    var(--pilot-gold) 80%,
+    transparent
+  );
+  opacity: 0.7;
+}
+
+.pilot-coverage-card {
+  transition:
+    transform 200ms ease-out,
+    border-color 200ms ease-out,
+    box-shadow 200ms ease-out;
+}
+
+.pilot-coverage-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(32, 39, 40, 0.1);
+}
+
+/* —— Reduced motion —— */
+
+@media (prefers-reduced-motion: reduce) {
+  .pilot-hero-car-wrap,
+  .pilot-hero-car-wrap.is-entering,
+  .pilot-hero-car-wrap.is-entering-mobile {
+    animation: none !important;
+    transform: translate3d(68vw, 62vh, 0) scale(0.9);
+  }
+
+  .pilot-protection-arc {
+    opacity: 1;
+    transform: scale(1);
+    transition: none;
+  }
+
+  .pilot-protection-breathe {
+    animation: none;
+  }
+
+  .pilot-hero-bg-layer,
+  .pilot-hero-mid-layer,
+  .pilot-hero-fg-layer {
+    transition: none;
+  }
+
+  .pilot-filmstrip-frame.is-active {
+    transform: none;
+  }
+
+  .pilot-filmstrip-frame-dense.is-active {
+    transform: none;
+  }
+
+  .pilot-yep-object:hover,
+  .pilot-yep-object:focus-within {
+    transform: none;
+  }
+
+  .pilot-yep-tile:hover {
+    transform: none;
+  }
+
+  .pilot-award-card:hover {
+    transform: none;
+  }
+
+  .pilot-btn-primary,
+  .pilot-btn-secondary,
+  .pilot-btn-discover {
+    transition: none;
+  }
+
+  .pilot-btn-primary:active,
+  .pilot-btn-secondary:active,
+  .pilot-btn-discover:active {
+    transform: none;
+  }
+}
