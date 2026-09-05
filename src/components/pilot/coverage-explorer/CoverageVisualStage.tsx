@@ -42,6 +42,13 @@ function interactiveMasterSizes(width: number): string {
   return "(max-width: 767px) min(100vw, 360px), 560px";
 }
 
+function stateImageSizes(sceneClass: string | undefined, width: number): string {
+  if (sceneClass === "contractors-insurance") {
+    return "(max-width: 767px) 100vw, (max-width: 1280px) 672px, 768px";
+  }
+  return interactiveMasterSizes(width);
+}
+
 function SubtleDimOverlay({
   dimOpacity,
   reduceMotion,
@@ -135,9 +142,10 @@ export default function CoverageVisualStage({
             stateImagesByCoverageId={explorer.stateImagesByCoverageId}
             sceneWidth={sceneWidth}
             sceneHeight={sceneHeight}
-            sizes={interactiveMasterSizes(sceneWidth)}
+            sizes={stateImageSizes(explorer.cssSceneClass, sceneWidth)}
             hasInteracted={hasInteracted}
             fallbackSrc={explorer.baseSceneSrc}
+            sceneClass={explorer.cssSceneClass}
             enableMagnifier={explorer.cssSceneClass === "restaurant-insurance"}
             motionRecipes={explorer.motionRecipesByCoverageId}
           />

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import CoverageMotionOverlay from "@/components/pilot/coverage-explorer/CoverageMotionOverlay";
 import ImageMagnifierLens from "@/components/pilot/coverage-explorer/ImageMagnifierLens";
+import { useContainedImageInsets } from "@/hooks/useContainedImageInsets";
 import { useCoverageMotionPlayback } from "@/hooks/useCoverageMotionPlayback";
 import { useFinePointerDevice } from "@/hooks/useFinePointerDevice";
 import {
@@ -22,6 +23,8 @@ type CoverageStateImageStageProps = {
   sizes: string;
   hasInteracted: boolean;
   fallbackSrc: string;
+  /** Route scene class e.g. contractors-insurance */
+  sceneClass?: string;
   /** Restaurant prototype: desktop hover magnifier */
   enableMagnifier?: boolean;
   /** Optional per-coverage motion recipes (Contractors prototype) */
@@ -48,6 +51,7 @@ export default function CoverageStateImageStage({
   sizes,
   hasInteracted,
   fallbackSrc,
+  sceneClass,
   enableMagnifier = false,
   motionRecipes,
 }: CoverageStateImageStageProps) {
@@ -66,6 +70,13 @@ export default function CoverageStateImageStage({
   const [hintDismissed, setHintDismissed] = useState(false);
   const transitionGen = useRef(0);
   const visibleSrcRef = useRef(baseSrc);
+
+  const imageInsets = useContainedImageInsets(
+    stackRef,
+    sceneWidth,
+    sceneHeight,
+    [activeCoverageId, currentSrc, hasInteracted],
+  );
 
   const isCrossfading = Boolean(nextSrc);
   const magnifierSrc = showNext && nextSrc ? nextSrc : currentSrc;
@@ -153,6 +164,10 @@ export default function CoverageStateImageStage({
   };
 
   const transition = `opacity ${transitionMs}ms ease-in-out`;
+  const containImageStyle = {
+    objectFit: "contain" as const,
+    objectPosition: "center center",
+  };
   const visibleImageClass = [
     "pilot-ce-state-image",
     "pilot-ce-state-image--current",
@@ -163,7 +178,7 @@ export default function CoverageStateImageStage({
 
   return (
     <div
-      className="pilot-ce-state-image-stage"
+      className={`pilot-ce-state-image-stage${sceneClass ? ` pilot-ce-state-image-stage--${sceneClass}` : ""}`}
       data-coverage={activeCoverageId}
       data-interacted={hasInteracted ? "true" : "false"}
       data-magnifier={showMagnifier ? "enabled" : "disabled"}
@@ -182,6 +197,7 @@ export default function CoverageStateImageStage({
           priority
           className={visibleImageClass}
           style={{
+            ...containImageStyle,
             opacity: showNext ? 0 : 1,
             transition,
           }}
@@ -197,6 +213,7 @@ export default function CoverageStateImageStage({
             quality={90}
             className="pilot-ce-state-image pilot-ce-state-image--next"
             style={{
+              ...containImageStyle,
               opacity: showNext ? 1 : 0,
               transition,
             }}
@@ -208,6 +225,7 @@ export default function CoverageStateImageStage({
             recipe={recipe}
             motionKey={motionKey}
             active={motionActive}
+            imageInsets={imageInsets}
           />
         ) : null}
         {showMagnifier ? (

@@ -107,7 +107,11 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
               id={`${baseId}-panel`}
               role="tabpanel"
               aria-labelledby={`${baseId}-tab-${activeId}`}
-              className="pilot-product-explorer-stage relative mx-auto w-full max-w-full overflow-hidden rounded-2xl border border-border/80 bg-white p-6 shadow-[0_16px_40px_rgba(32,39,40,0.07)] sm:max-w-lg sm:p-8 lg:max-w-xl lg:p-9 lg:shadow-[0_20px_48px_rgba(32,39,40,0.09)]"
+              className={`pilot-product-explorer-stage relative mx-auto w-full overflow-hidden rounded-2xl border border-border/80 bg-white p-6 shadow-[0_16px_40px_rgba(32,39,40,0.07)] sm:p-8 lg:p-9 lg:shadow-[0_20px_48px_rgba(32,39,40,0.09)] ${
+                config.slug === "contractors-insurance"
+                  ? "pilot-product-explorer-stage--contractors max-w-full"
+                  : "max-w-full sm:max-w-lg lg:max-w-xl"
+              }`}
             >
               <ProductCoverageVisualStage
                 active={active}
