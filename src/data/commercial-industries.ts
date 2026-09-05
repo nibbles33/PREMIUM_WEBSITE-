@@ -335,6 +335,11 @@ export const industryPages: IndustryPageContent[] = [
         answer:
           "Many owners, GCs, and municipalities require certificates before you start. Your broker can issue certificates and add additional insured wording when contracts require it.",
       },
+      {
+        question: "What is OCIP and when does it apply to contractors?",
+        answer:
+          "On large projects with an Owner Controlled Insurance Program, enrolled trades may rely on the project wrap-up for onsite liability instead of their own GL for that job. Subcontractors should confirm enrollment requirements, exclusions, and what off-site work still needs their own policy.",
+      },
     ],
     ctaHeading: "Ready to cover your contracting work?",
     ctaSubhead:
@@ -346,10 +351,10 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Manufacturing Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Manufacturing insurance for Windsor-Essex — product liability, commercial property, business interruption, and equipment breakdown through an independent broker.",
+      "Manufacturing insurance for Windsor-Essex — product liability, commercial property, business interruption, equipment breakdown, and machine shop coverage through an independent broker.",
     headline: "Manufacturing Insurance",
     subhead:
-      "Property, product liability, and business interruption coverage for Windsor-Essex manufacturers.",
+      "Property, product liability, and business interruption coverage for Windsor-Essex manufacturers — including machine shops and tool and die operations.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Manufacturing Quote",
     coverageIntro:
@@ -376,8 +381,14 @@ export const industryPages: IndustryPageContent[] = [
       {
         title: "Equipment Breakdown",
         description:
-          "Addresses sudden mechanical or electrical breakdown of critical production equipment.",
+          "Addresses sudden mechanical or electrical breakdown of critical production equipment — CNC machines, presses, and compressors.",
         icon: Hammer,
+      },
+      {
+        title: "Machine Shop & Tool & Die",
+        description:
+          "Tailored considerations for precision machining, custom tooling, and job-shop operations where work-in-progress and specialized equipment drive exposure.",
+        icon: Factory,
       },
     ],
     faqTitle: "Manufacturing insurance FAQ",
@@ -401,6 +412,11 @@ export const industryPages: IndustryPageContent[] = [
         question: "Do I need separate coverage for inventory?",
         answer:
           "Inventory is often included under commercial property, but limits, valuation (cost vs. selling price), and locations matter. Seasonal stock spikes should be flagged so limits keep up.",
+      },
+      {
+        question: "Is machine shop and tool and die work insured differently?",
+        answer:
+          "Job shops and tool and die operations often carry higher equipment values, custom work-in-progress, and product liability tied to precision parts. Disclose your processes, materials, and whether you work to customer specifications so limits reflect the exposure.",
       },
     ],
     ctaHeading: "Ready to cover your manufacturing operation?",
@@ -435,16 +451,16 @@ export const industryPages: IndustryPageContent[] = [
         icon: Store,
       },
       {
-        title: "Business Interruption",
+        title: "Equipment Breakdown",
         description:
-          "Can help replace lost income if a covered property loss forces a temporary closure.",
-        icon: Briefcase,
+          "Covers sudden mechanical or electrical failure of boilers, HVAC, and production equipment not addressed by standard property forms.",
+        icon: Hammer,
       },
       {
-        title: "Additional Operating Expenses",
+        title: "Commercial Landlord / Property Owner",
         description:
-          "Helps cover extra costs to keep operating — temporary space or equipment — after a covered loss.",
-        icon: HardHat,
+          "Protects rental property owners for building damage, landlord liability, and loss of rental income after a covered property loss.",
+        icon: KeyRound,
       },
     ],
     faqTitle: "Commercial property FAQ",
@@ -468,6 +484,16 @@ export const industryPages: IndustryPageContent[] = [
         question: "What information do I need for a property quote?",
         answer:
           "Address, construction details, year built, square footage, occupancy, values for building and contents, alarm/sprinkler info, and current coverage. Photos or a statement of values help on larger risks.",
+      },
+      {
+        question: "Does commercial property cover equipment breakdown?",
+        answer:
+          "Standard property forms often exclude mechanical and electrical breakdown. Equipment breakdown coverage is typically added for HVAC, boilers, and production machinery.",
+      },
+      {
+        question: "What is commercial landlord coverage?",
+        answer:
+          "Landlord policies protect property owners who rent out commercial or residential units — covering the building, landlord liability, and sometimes rental income loss after a covered property claim.",
       },
     ],
     ctaHeading: "Ready to protect your commercial property?",
@@ -726,6 +752,11 @@ export const industryPages: IndustryPageContent[] = [
         question: "What is wrap-up liability?",
         answer:
           "A wrap-up consolidates liability for multiple parties on a large project into one controlled program. It can reduce certificate chasing and coverage gaps between trades — usually for bigger builds.",
+      },
+      {
+        question: "What is OCIP and how does it relate to wrap-up coverage?",
+        answer:
+          "An Owner Controlled Insurance Program (OCIP) is a type of wrap-up where the project owner sponsors a single liability program for the job site — often covering the owner, general contractor, and enrolled subcontractors. A Contractor Controlled Insurance Program (CCIP) is the GC-led equivalent. Your broker can explain which structure fits a project and what enrollment means for subs.",
       },
       {
         question: "Am I covered after a project is completed?",
