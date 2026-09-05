@@ -1,0 +1,84 @@
+{
+  "base": "http://localhost:3002",
+  "timestamp": "2026-09-03T20:45:00.436Z",
+  "results": [
+    {
+      "route": "/farm-insurance/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/food-truck-insurance/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/trucking-insurance/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/commercial-auto-insurance/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/dump-truck-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3002/dump-truck-insurance/"
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "url": "http://localhost:3002/"
+    },
+    {
+      "route": "/auto-insurance/",
+      "status": 200,
+      "url": "http://localhost:3002/auto-insurance/"
+    },
+    {
+      "route": "/commercial-insurance/",
+      "status": 200,
+      "url": "http://localhost:3002/commercial-insurance/"
+    },
+    {
+      "route": "/contractors-insurance/",
+      "status": 200,
+      "url": "http://localhost:3002/contractors-insurance/"
+    },
+    {
+      "route": "/claims/",
+      "status": 200,
+      "url": "http://localhost:3002/claims/"
+    },
+    {
+      "route": "/get-a-quote/",
+      "status": 200,
+      "url": "http://localhost:3002/get-a-quote/"
+    }
+  ],
+  "coverageTests": [
+    {
+      "route": "/farm-insurance/",
+      "ok": false,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/food-truck-insurance/",
+      "ok": false,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/trucking-insurance/",
+      "ok": false,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    }
+  ],
+  "batchCDRoutes": 5,
+  "screenshotsDir": "/workspace/docs/qa-screenshots/batch-cd"
+}

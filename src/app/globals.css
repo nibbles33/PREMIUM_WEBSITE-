@@ -659,6 +659,67 @@ th {
   }
 }
 
+/* —— Pilot shared infinite rail (main bundle — must not depend on lazy CSS chunks) —— */
+
+.pilot-infinite-rail {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.pilot-infinite-rail-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(-50%, 0, 0);
+  animation: pilot-rail-scroll-ltr var(--pilot-rail-duration, 110s) linear infinite;
+}
+
+.pilot-infinite-rail:hover .pilot-infinite-rail-track,
+.pilot-infinite-rail:focus-within .pilot-infinite-rail-track {
+  animation-play-state: paused;
+}
+
+@keyframes pilot-rail-scroll-ltr {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pilot-infinite-rail-track {
+    animation-duration: var(--pilot-rail-duration-reduced, 275s);
+  }
+}
+
+@media (max-width: 767px) {
+  .pilot-infinite-rail-track {
+    animation-duration: calc(var(--pilot-rail-duration, 110s) * 1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 767px) {
+  .pilot-infinite-rail-track {
+    animation-duration: var(--pilot-rail-duration-reduced, 275s);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .interactive-press,
   .btn-primary,

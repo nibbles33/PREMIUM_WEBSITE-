@@ -1,0 +1,507 @@
+{
+  "timestamp": "2026-09-04T01:01:41.786Z",
+  "base": "http://localhost:3018",
+  "buildNote": "Run npm run build separately; see full-verification-report.md",
+  "surfaces": [
+    {
+      "surface": "homepage-final-cta",
+      "label": "Homepage final CTA (PilotFinalCta)",
+      "viewport": "1440×900",
+      "expectedHref": "/talk-to-a-broker/",
+      "expectedLabel": "Talk to a Broker",
+      "resting": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(255, 255, 255)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "white text (rgb(255, 255, 255))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.65))",
+        "ok": true
+      },
+      "hover": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(210, 177, 48)",
+        "borderColor": "rgba(208, 173, 38, 0.984)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(210, 177, 48)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "gold text (rgb(210, 177, 48))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.984))",
+        "ok": true
+      },
+      "focus": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(208, 173, 38)",
+        "borderColor": "rgb(208, 173, 38)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(208, 173, 38)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "gold text (rgb(208, 173, 38))",
+        "borderDesc": "gold/champagne border (rgb(208, 173, 38))",
+        "outline": "2px rgb(208, 173, 38)",
+        "ok": true
+      },
+      "click": {
+        "hrefAttribute": "/talk-to-a-broker",
+        "finalUrl": "http://localhost:3018/talk-to-a-broker",
+        "ok": true
+      },
+      "screenshots": {
+        "resting": "homepage-final-cta/desktop_1440/01_resting.png",
+        "hover": "homepage-final-cta/desktop_1440/02_hover.png",
+        "focus": "homepage-final-cta/desktop_1440/03_focus.png"
+      },
+      "ok": true
+    },
+    {
+      "surface": "homepage-final-cta",
+      "label": "Homepage final CTA (PilotFinalCta)",
+      "viewport": "390×844",
+      "expectedHref": "/talk-to-a-broker/",
+      "expectedLabel": "Talk to a Broker",
+      "resting": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(255, 255, 255)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "white text (rgb(255, 255, 255))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.65))",
+        "ok": true
+      },
+      "hover": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(210, 177, 48)",
+        "borderColor": "rgba(208, 173, 38, 0.984)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(210, 177, 48)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "gold text (rgb(210, 177, 48))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.984))",
+        "ok": true
+      },
+      "focus": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(208, 173, 38)",
+        "borderColor": "rgb(208, 173, 38)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(208, 173, 38)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "gold text (rgb(208, 173, 38))",
+        "borderDesc": "gold/champagne border (rgb(208, 173, 38))",
+        "outline": "2px rgb(208, 173, 38)",
+        "ok": true
+      },
+      "click": {
+        "hrefAttribute": "/talk-to-a-broker",
+        "finalUrl": "http://localhost:3018/talk-to-a-broker",
+        "ok": true
+      },
+      "screenshots": {
+        "resting": "homepage-final-cta/mobile_390/01_resting.png",
+        "hover": "homepage-final-cta/mobile_390/02_hover.png",
+        "focus": "homepage-final-cta/mobile_390/03_focus.png"
+      },
+      "ok": true
+    },
+    {
+      "surface": "homepage-hero-broker",
+      "label": "Homepage hero broker CTA (PilotHomeHero)",
+      "viewport": "1440×900",
+      "expectedHref": "/talk-to-a-broker/",
+      "expectedLabel": "Talk to a Broker",
+      "resting": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(255, 255, 255)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "white text (rgb(255, 255, 255))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.65))",
+        "ok": true
+      },
+      "hover": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(210, 177, 48)",
+        "borderColor": "rgba(208, 173, 38, 0.984)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(210, 177, 48)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "gold text (rgb(210, 177, 48))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.984))",
+        "ok": true
+      },
+      "focus": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(208, 173, 38)",
+        "borderColor": "rgb(208, 173, 38)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(208, 173, 38)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "gold text (rgb(208, 173, 38))",
+        "borderDesc": "gold/champagne border (rgb(208, 173, 38))",
+        "outline": "2px rgb(208, 173, 38)",
+        "ok": true
+      },
+      "click": {
+        "hrefAttribute": "/talk-to-a-broker",
+        "finalUrl": "http://localhost:3018/talk-to-a-broker",
+        "ok": true
+      },
+      "screenshots": {
+        "resting": "homepage-hero-broker/desktop_1440/01_resting.png",
+        "hover": "homepage-hero-broker/desktop_1440/02_hover.png",
+        "focus": "homepage-hero-broker/desktop_1440/03_focus.png"
+      },
+      "ok": true
+    },
+    {
+      "surface": "homepage-hero-broker",
+      "label": "Homepage hero broker CTA (PilotHomeHero)",
+      "viewport": "390×844",
+      "expectedHref": "/talk-to-a-broker/",
+      "expectedLabel": "Talk to a Broker",
+      "resting": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(255, 255, 255)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 358,
+          "height": 48
+        },
+        "textColorDesc": "white text (rgb(255, 255, 255))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.65))",
+        "ok": true
+      },
+      "hover": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(210, 177, 48)",
+        "borderColor": "rgba(208, 173, 38, 0.984)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(210, 177, 48)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 358,
+          "height": 48
+        },
+        "textColorDesc": "gold text (rgb(210, 177, 48))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.984))",
+        "ok": true
+      },
+      "focus": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(208, 173, 38)",
+        "borderColor": "rgb(208, 173, 38)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(208, 173, 38)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 358,
+          "height": 48
+        },
+        "textColorDesc": "gold text (rgb(208, 173, 38))",
+        "borderDesc": "gold/champagne border (rgb(208, 173, 38))",
+        "outline": "2px rgb(208, 173, 38)",
+        "ok": true
+      },
+      "click": {
+        "hrefAttribute": "/talk-to-a-broker",
+        "finalUrl": "http://localhost:3018/talk-to-a-broker",
+        "ok": true
+      },
+      "screenshots": {
+        "resting": "homepage-hero-broker/mobile_390/01_resting.png",
+        "hover": "homepage-hero-broker/mobile_390/02_hover.png",
+        "focus": "homepage-hero-broker/mobile_390/03_focus.png"
+      },
+      "ok": true
+    },
+    {
+      "surface": "commercial-discovery-all-commercial",
+      "label": "Commercial Discovery All Commercial (PilotCommercialDiscovery)",
+      "viewport": "1440×900",
+      "expectedHref": "/commercial-insurance/",
+      "expectedLabel": "All Commercial",
+      "resting": {
+        "found": true,
+        "href": "/commercial-insurance",
+        "text": "All Commercial",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(255, 255, 255)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 147.640625,
+          "height": 52
+        },
+        "textColorDesc": "white text (rgb(255, 255, 255))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.65))",
+        "ok": true
+      },
+      "hover": {
+        "found": true,
+        "href": "/commercial-insurance",
+        "text": "All Commercial",
+        "color": "rgb(210, 177, 48)",
+        "borderColor": "rgba(208, 173, 38, 0.984)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(210, 177, 48)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 147.640625,
+          "height": 52
+        },
+        "textColorDesc": "gold text (rgb(210, 177, 48))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.984))",
+        "ok": true
+      },
+      "focus": {
+        "found": true,
+        "href": "/commercial-insurance",
+        "text": "All Commercial",
+        "color": "rgb(208, 173, 38)",
+        "borderColor": "rgb(208, 173, 38)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(208, 173, 38)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 147.640625,
+          "height": 52
+        },
+        "textColorDesc": "gold text (rgb(208, 173, 38))",
+        "borderDesc": "gold/champagne border (rgb(208, 173, 38))",
+        "outline": "2px rgb(208, 173, 38)",
+        "ok": true
+      },
+      "click": null,
+      "screenshots": {
+        "resting": "commercial-discovery-all-commercial/desktop_1440/01_resting.png",
+        "hover": "commercial-discovery-all-commercial/desktop_1440/02_hover.png",
+        "focus": "commercial-discovery-all-commercial/desktop_1440/03_focus.png"
+      },
+      "ok": true
+    },
+    {
+      "surface": "trucking-product-final-cta",
+      "label": "Trucking final broker CTA (ProductFinalCta — live /trucking-insurance/)",
+      "viewport": "1440×900",
+      "expectedHref": "/talk-to-a-broker/",
+      "expectedLabel": "Talk to a Broker",
+      "resting": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(255, 255, 255)",
+        "borderColor": "rgba(208, 173, 38, 0.65)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(255, 255, 255)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "white text (rgb(255, 255, 255))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.65))",
+        "ok": true
+      },
+      "hover": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(210, 177, 48)",
+        "borderColor": "rgba(208, 173, 38, 0.984)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(210, 177, 48)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "gold text (rgb(210, 177, 48))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.984))",
+        "ok": true
+      },
+      "focus": {
+        "found": true,
+        "href": "/talk-to-a-broker",
+        "text": "Talk to a Broker",
+        "color": "rgb(208, 173, 38)",
+        "borderColor": "rgb(208, 173, 38)",
+        "backgroundColor": "rgba(208, 173, 38, 0.08)",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(208, 173, 38)",
+        "boxShadow": "none",
+        "visible": true,
+        "rect": {
+          "width": 148.21875,
+          "height": 48
+        },
+        "textColorDesc": "gold text (rgb(208, 173, 38))",
+        "borderDesc": "gold/champagne border (rgb(208, 173, 38))",
+        "outline": "2px rgb(208, 173, 38)",
+        "ok": true
+      },
+      "click": {
+        "hrefAttribute": "/talk-to-a-broker",
+        "finalUrl": "http://localhost:3018/talk-to-a-broker",
+        "ok": true
+      },
+      "screenshots": {
+        "resting": "trucking-product-final-cta/desktop_1440/01_resting.png",
+        "hover": "trucking-product-final-cta/desktop_1440/02_hover.png",
+        "focus": "trucking-product-final-cta/desktop_1440/03_focus.png"
+      },
+      "ok": true
+    }
+  ],
+  "regression": [
+    {
+      "id": "auto-final-cta-regression",
+      "label": "Auto final CTA regression (AutoFinalCta)",
+      "url": "/auto-insurance/",
+      "expectedHref": "/talk-to-a-broker/",
+      "resting": {
+        "textColorDesc": "white text (rgb(255, 255, 255))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.65))",
+        "ok": true
+      },
+      "hover": {
+        "textColorDesc": "white text (rgb(255, 255, 255))",
+        "ok": true
+      },
+      "unchangedFromExpected": true,
+      "screenshots": {
+        "resting": "auto-final-cta-regression/resting_regression.png",
+        "hover": "auto-final-cta-regression/hover_regression.png"
+      }
+    },
+    {
+      "id": "product-final-cta-regression",
+      "label": "Product final CTA regression (ProductFinalCta — home insurance)",
+      "url": "/home-insurance/",
+      "expectedHref": "/talk-to-a-broker/",
+      "resting": {
+        "textColorDesc": "white text (rgb(255, 255, 255))",
+        "borderDesc": "gold/champagne border (rgba(208, 173, 38, 0.65))",
+        "ok": true
+      },
+      "hover": {
+        "textColorDesc": "white text (rgb(255, 255, 255))",
+        "ok": true
+      },
+      "unchangedFromExpected": true,
+      "screenshots": {
+        "resting": "product-final-cta-regression/resting_regression.png",
+        "hover": "product-final-cta-regression/hover_regression.png"
+      }
+    }
+  ],
+  "summary": {
+    "surfacesPassed": 6,
+    "surfacesTotal": 4,
+    "allSurfacesOk": true,
+    "regressionOk": true
+  }
+}

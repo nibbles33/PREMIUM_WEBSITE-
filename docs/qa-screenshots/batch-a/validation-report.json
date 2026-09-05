@@ -1,0 +1,206 @@
+{
+  "base": "http://localhost:3000",
+  "timestamp": "2026-09-03T17:25:09.481Z",
+  "results": [
+    {
+      "route": "/home-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/home-insurance/"
+    },
+    {
+      "route": "/condo-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/condo-insurance/"
+    },
+    {
+      "route": "/tenant-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/tenant-insurance/"
+    },
+    {
+      "route": "/landlord-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/landlord-insurance/"
+    },
+    {
+      "route": "/motorcycle-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/motorcycle-insurance/"
+    },
+    {
+      "route": "/boat-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/boat-insurance/"
+    },
+    {
+      "route": "/cottage-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/cottage-insurance/"
+    },
+    {
+      "route": "/travel-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/travel-insurance/"
+    },
+    {
+      "route": "/mobile-home-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/mobile-home-insurance/"
+    },
+    {
+      "route": "/personal-umbrella-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/personal-umbrella-insurance/"
+    },
+    {
+      "route": "/home-sharing-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/home-sharing-insurance/"
+    },
+    {
+      "route": "/life-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/life-insurance/"
+    },
+    {
+      "route": "/group-home-auto-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": true,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3000/group-home-auto-insurance/"
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": null,
+      "hasHero": false,
+      "hasHeroPhoto": false,
+      "hasExplorer": false,
+      "url": "http://localhost:3000/"
+    },
+    {
+      "route": "/auto-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": null,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": false,
+      "url": "http://localhost:3000/auto-insurance/"
+    },
+    {
+      "route": "/trucking-insurance/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": null,
+      "hasHero": false,
+      "hasHeroPhoto": false,
+      "hasExplorer": false,
+      "url": "http://localhost:3000/trucking-insurance/"
+    },
+    {
+      "route": "/claims/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": null,
+      "hasHero": false,
+      "hasHeroPhoto": false,
+      "hasExplorer": false,
+      "url": "http://localhost:3000/claims/"
+    },
+    {
+      "route": "/get-a-quote/",
+      "status": 200,
+      "overflow": false,
+      "brokerBtnVisible": null,
+      "hasHero": false,
+      "hasHeroPhoto": false,
+      "hasExplorer": false,
+      "url": "http://localhost:3000/get-a-quote/"
+    }
+  ],
+  "railTests": [
+    {
+      "route": "/auto-insurance/",
+      "ok": true,
+      "cardCount": 7,
+      "maxScroll": 1424,
+      "start": 4,
+      "after": 370,
+      "hasNextButton": true
+    },
+    {
+      "route": "/home-insurance/",
+      "ok": true,
+      "cardCount": 3,
+      "maxScroll": 0,
+      "note": "no-overflow-needed"
+    }
+  ],
+  "personalRoutes": 13,
+  "screenshotsDir": "/workspace/docs/qa-screenshots/batch-a"
+}
