@@ -1,0 +1,5 @@
+route_slug,coverage_key,coverage_title,filename,generation_status,notes
+restaurant-insurance,general-liability,General Liability,restaurant-insurance/restaurant-insurance-state-general-liability.png,complete,"Localized entrance/customer-area liability scenario; base camera, crop, architecture, and core scene preserved."
+restaurant-insurance,property,Property,restaurant-insurance/restaurant-insurance-state-property.png,complete,"Building and fixed-property exposure emphasized with restrained warm illumination; no new scene or structural changes."
+restaurant-insurance,liquor-liability,Liquor Liability,restaurant-insurance/restaurant-insurance-state-liquor-liability.png,complete,"Adult bartender and patrons localized to existing bar zone; base geometry and bottle display preserved."
+restaurant-insurance,equipment-breakdown,Equipment Breakdown,restaurant-insurance/restaurant-insurance-state-equipment-breakdown.png,complete,"Kitchen and refrigeration equipment localized with subtle operational indicators; base composition preserved."
