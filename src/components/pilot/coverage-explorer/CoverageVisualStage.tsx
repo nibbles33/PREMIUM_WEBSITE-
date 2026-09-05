@@ -138,7 +138,8 @@ export default function CoverageVisualStage({
             sizes={interactiveMasterSizes(sceneWidth)}
             hasInteracted={hasInteracted}
             fallbackSrc={explorer.baseSceneSrc}
-            enableMagnifier
+            enableMagnifier={explorer.cssSceneClass === "restaurant-insurance"}
+            motionRecipes={explorer.motionRecipesByCoverageId}
           />
         ) : null}
 

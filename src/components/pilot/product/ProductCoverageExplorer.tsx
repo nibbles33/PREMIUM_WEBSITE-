@@ -4,6 +4,7 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 import ProductCoverageVisualStage from "@/components/pilot/product/ProductCoverageVisualStage";
 import PremiumGoldCTA from "@/components/pilot/PremiumGoldCTA";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { getContractorsStateImagePreloadUrls } from "@/data/coverage-explorer/contractors-coverage-state-images";
 import { getRestaurantStateImagePreloadUrls } from "@/data/coverage-explorer/restaurant-coverage-state-images";
 import { usePreloadCoverageStateImages } from "@/hooks/usePreloadCoverageStateImages";
 import { useCoverageTabKeyboard } from "@/hooks/useCoverageTabKeyboard";
@@ -32,17 +33,23 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
   const reduceMotion = usePrefersReducedMotion();
   const [activeId, setActiveId] = useState(config.coverageItems[0]?.id ?? "");
   const [hasImageInteracted, setHasImageInteracted] = useState(false);
-  const isRestaurantStateImages =
+  const isStateImageExplorer =
     config.coverageExplorer?.sceneMode === "coverage-state-images";
+  const usesInteractionGate =
+    config.slug === "restaurant-insurance" || config.slug === "contractors-insurance";
   const [preloadEnabled, setPreloadEnabled] = useState(false);
 
-  usePreloadCoverageStateImages(
-    isRestaurantStateImages ? getRestaurantStateImagePreloadUrls() : [],
-    preloadEnabled,
-  );
+  const stateImagePreloadUrls =
+    config.slug === "restaurant-insurance"
+      ? getRestaurantStateImagePreloadUrls()
+      : config.slug === "contractors-insurance"
+        ? getContractorsStateImagePreloadUrls()
+        : [];
+
+  usePreloadCoverageStateImages(stateImagePreloadUrls, preloadEnabled);
 
   useEffect(() => {
-    if (!isRestaurantStateImages || !sectionRef.current) return;
+    if (!isStateImageExplorer || !sectionRef.current) return;
     const node = sectionRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -52,14 +59,14 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
     );
     observer.observe(node);
     return () => observer.disconnect();
-  }, [isRestaurantStateImages]);
+  }, [isStateImageExplorer]);
 
   const selectCoverage = useCallback(
     (id: string) => {
       setActiveId(id);
-      if (isRestaurantStateImages) setHasImageInteracted(true);
+      if (usesInteractionGate) setHasImageInteracted(true);
     },
-    [isRestaurantStateImages],
+    [usesInteractionGate],
   );
 
   const active =
