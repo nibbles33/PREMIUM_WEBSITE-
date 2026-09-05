@@ -18,6 +18,14 @@ const TEMPORARY_NOTE =
 /** Production photography wired from visual audit (HIGH + reviewed MEDIUM). */
 export const photographyPlacements: PhotographyPlacement[] = [
   {
+    slug: "homepage-hero",
+    category: "special",
+    route: "/",
+    src: "/images/photography/special/homepage-hero.webp",
+    alt: "Family walking from their car toward their suburban home with groceries",
+    confidence: "HIGH",
+  },
+  {
     slug: "auto-insurance",
     category: "personal",
     route: "/auto-insurance/",
@@ -36,7 +44,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
   {
     slug: "condo",
     category: "personal",
-    route: "/get-a-quote?type=home&homeType=condo",
+    route: "/condo-insurance/",
     src: "/images/photography/personal/condo.webp",
     alt: "Modern multi-story condominium building with balconies",
     confidence: "HIGH",
@@ -44,7 +52,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
   {
     slug: "tenant",
     category: "personal",
-    route: "/get-a-quote?type=home&homeType=tenant",
+    route: "/tenant-insurance/",
     src: "/images/photography/personal/tenant.webp",
     alt: "Home office with built-in shelving and natural light",
     confidence: "MEDIUM",
@@ -52,7 +60,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
   {
     slug: "landlord",
     category: "personal",
-    route: "/get-a-quote?type=home&homeType=landlord",
+    route: "/landlord-insurance/",
     src: "/images/photography/personal/landlord.webp",
     alt: "Well-maintained residential property in a quiet community",
     confidence: "MEDIUM",
@@ -60,7 +68,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
   {
     slug: "cottage",
     category: "personal",
-    route: "/get-a-quote?type=home&homeType=cottage",
+    route: "/cottage-insurance/",
     src: "/images/photography/personal/cottage.webp",
     alt: "Rustic lakeside cottage with dock and forest backdrop",
     confidence: "HIGH",
@@ -68,7 +76,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
   {
     slug: "motorcycle",
     category: "personal",
-    route: "/get-a-quote?type=vehicle&vehicleType=motorcycle",
+    route: "/motorcycle-insurance/",
     src: "/images/photography/personal/motorcycle.webp",
     alt: "Motorcyclist riding on a rural road past farmland",
     confidence: "HIGH",
@@ -76,7 +84,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
   {
     slug: "boat",
     category: "personal",
-    route: "/get-a-quote?type=vehicle&vehicleType=boat",
+    route: "/boat-insurance/",
     src: "/images/photography/personal/boat.webp",
     alt: "Powerboat cruising on calm Ontario water",
     confidence: "HIGH",
@@ -84,7 +92,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
   {
     slug: "travel-insurance",
     category: "personal",
-    route: "/get-a-quote?type=travel",
+    route: "/travel-insurance/",
     src: "/images/photography/personal/travel-insurance.webp",
     alt: "Traveller with luggage in a bright airport terminal",
     confidence: "HIGH",
@@ -262,4 +270,9 @@ export function getPageHeroPhotography(
     return undefined;
   }
   return placement;
+}
+
+/** Dedicated homepage hero — not the Home Insurance product placement. */
+export function getHomepageHeroPhotography(): PhotographyPlacement {
+  return getPhotographyBySlug("homepage-hero")!;
 }
