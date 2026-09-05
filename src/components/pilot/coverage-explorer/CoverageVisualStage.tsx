@@ -138,6 +138,7 @@ export default function CoverageVisualStage({
             sizes={interactiveMasterSizes(sceneWidth)}
             hasInteracted={hasInteracted}
             fallbackSrc={explorer.baseSceneSrc}
+            enableMagnifier
           />
         ) : null}
 

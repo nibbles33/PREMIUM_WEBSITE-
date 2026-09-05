@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import ImageMagnifierLens from "@/components/pilot/coverage-explorer/ImageMagnifierLens";
+import { useFinePointerDevice } from "@/hooks/useFinePointerDevice";
 import {
   preloadCoverageStateImage,
   usePreloadCoverageStateImages,
@@ -17,6 +19,8 @@ type CoverageStateImageStageProps = {
   sizes: string;
   hasInteracted: boolean;
   fallbackSrc: string;
+  /** Restaurant prototype: desktop hover magnifier */
+  enableMagnifier?: boolean;
 };
 
 function resolveTargetSrc(
@@ -39,18 +43,30 @@ export default function CoverageStateImageStage({
   sizes,
   hasInteracted,
   fallbackSrc,
+  enableMagnifier = false,
 }: CoverageStateImageStageProps) {
   const reduceMotion = usePrefersReducedMotion();
+  const finePointer = useFinePointerDevice();
+  const showMagnifier = enableMagnifier && finePointer;
   const transitionMs = reduceMotion ? 80 : 400;
   const aspectRatio = sceneWidth / sceneHeight;
+  const stackRef = useRef<HTMLDivElement>(null);
 
   usePreloadCoverageStateImages(Object.values(stateImagesByCoverageId), true);
 
   const [currentSrc, setCurrentSrc] = useState(baseSrc);
   const [nextSrc, setNextSrc] = useState<string | null>(null);
   const [showNext, setShowNext] = useState(false);
+  const [hintDismissed, setHintDismissed] = useState(false);
   const transitionGen = useRef(0);
   const visibleSrcRef = useRef(baseSrc);
+
+  const magnifierSrc = showNext && nextSrc ? nextSrc : currentSrc;
+  const isMagnifierTransitioning = Boolean(nextSrc);
+
+  const dismissHint = useCallback(() => {
+    setHintDismissed(true);
+  }, []);
 
   useEffect(() => {
     const targetSrc = resolveTargetSrc(
@@ -127,10 +143,11 @@ export default function CoverageStateImageStage({
       className="pilot-ce-state-image-stage"
       data-coverage={activeCoverageId}
       data-interacted={hasInteracted ? "true" : "false"}
+      data-magnifier={showMagnifier ? "enabled" : "disabled"}
       style={{ ["--ce-aspect" as string]: String(aspectRatio) }}
       aria-hidden
     >
-      <div className="pilot-ce-state-image-stack">
+      <div ref={stackRef} className="pilot-ce-state-image-stack">
         <Image
           src={currentSrc}
           alt=""
@@ -162,7 +179,25 @@ export default function CoverageStateImageStage({
             onError={() => handleError(nextSrc)}
           />
         ) : null}
+        {showMagnifier ? (
+          <ImageMagnifierLens
+            containerRef={stackRef}
+            imageSrc={magnifierSrc}
+            sourceWidth={sceneWidth}
+            sourceHeight={sceneHeight}
+            isTransitioning={isMagnifierTransitioning}
+            onFirstActivate={dismissHint}
+          />
+        ) : null}
       </div>
+      {showMagnifier ? (
+        <p
+          className={`pilot-ce-magnifier-hint${hintDismissed ? " is-dismissed" : ""}`}
+          aria-hidden
+        >
+          Hover to explore details
+        </p>
+      ) : null}
     </div>
   );
 }
