@@ -1,0 +1,1389 @@
+{
+  "timestamp": "2026-09-04T03:13:20.910Z",
+  "totalAssets": 140,
+  "byCategory": {
+    "awards": 9,
+    "other": 17,
+    "partners": 56,
+    "miniatures": 2,
+    "commercial": 38,
+    "personal": 14,
+    "special": 4
+  },
+  "unusedPhotography": [],
+  "duplicateHeroUsage": [],
+  "items": [
+    {
+      "path": "/images/awards/award-5star-brokerage-2021.png",
+      "category": "awards",
+      "format": "png",
+      "bytes": 518132,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/awards/award-5star-brokerage-ontario-2022.png",
+      "category": "awards",
+      "format": "png",
+      "bytes": 1108934,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/awards/award-fast-brokerages-2024.png",
+      "category": "awards",
+      "format": "png",
+      "bytes": 1072814,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/awards/award-windsor-gold-2026.png",
+      "category": "awards",
+      "format": "png",
+      "bytes": 78267,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/awards/award-windsor-platinum-2021.png",
+      "category": "awards",
+      "format": "png",
+      "bytes": 80801,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/awards/award-windsor-platinum-2022.png",
+      "category": "awards",
+      "format": "png",
+      "bytes": 79227,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/awards/award-windsor-platinum-2023.png",
+      "category": "awards",
+      "format": "png",
+      "bytes": 82239,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/awards/award-windsor-platinum-2024.png",
+      "category": "awards",
+      "format": "png",
+      "bytes": 81179,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/awards/event-golf-sponsorship.jpg",
+      "category": "awards",
+      "format": "jpg",
+      "bytes": 4961484,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/broker-photo.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 53716,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-aviva.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 18675,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-caa.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 41387,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-chubb.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 5096,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-echelon.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 23204,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-gore.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 8217,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-intact.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 22498,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-northbridge.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 7499,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-pafco.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 123541,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-pembridge.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 6410,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-sgi.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 16151,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-unica.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 13933,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/carriers/carrier-wawanesa.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 14038,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/miniatures/car-placeholder.svg",
+      "category": "miniatures",
+      "format": "svg",
+      "bytes": 1331,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/miniatures/premium-miniature-car.png",
+      "category": "miniatures",
+      "format": "png",
+      "bytes": 1689508,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/office-1.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 53716,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/office-2.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 68710,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-abex.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 27607,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-aig.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 13519,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-am-fredericks.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 9609,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-apollo.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 6073,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-april.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 5490,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-aviva.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 18675,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-beazley.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 36079,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-burns-wilcox.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 30127,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-caa.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 41387,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-cansure.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 13966,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-ches-special-risk.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 6422,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-chubb.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 5096,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-coachman.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 24357,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-coast-underwriters.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 17884,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-definity.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 5906,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-ecclesiastical.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 15114,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-echelon.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 23204,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-facility-association.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 36343,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-forward.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 8487,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-gore.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 8217,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-groupone.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 7317,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-intact.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 22498,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-jevco.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 62374,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-lions-gate.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 2960,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-milnco.jpeg",
+      "category": "partners",
+      "format": "jpeg",
+      "bytes": 16199,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-northbridge.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 7499,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-optimum.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 7373,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-pafco.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 123541,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-pal.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 47856,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-pembridge.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 6410,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-premier.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 3728,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-sgi.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 16151,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-sovereign.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 177864,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-special-risk.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 23064,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-sum.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 215459,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-swg.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 149251,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-the-guarantee.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 10925,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-totten-group.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 4956,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-travelers.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 30768,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-trinity-underwriting.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 134997,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-unica.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 13933,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-unique-risk.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 299280,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-victor.png",
+      "category": "partners",
+      "format": "png",
+      "bytes": 16551,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/partners/partner-wawanesa.jpg",
+      "category": "partners",
+      "format": "jpg",
+      "bytes": 14038,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/photography/commercial/bonding-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 149492,
+      "usedInPlacements": true,
+      "routes": [
+        "/bonding-insurance/"
+      ],
+      "slug": "bonding-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/builders-developers-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 152088,
+      "usedInPlacements": true,
+      "routes": [
+        "/builders-developers-insurance/"
+      ],
+      "slug": "builders-developers-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/builders-risk-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 243644,
+      "usedInPlacements": true,
+      "routes": [
+        "/builders-risk-insurance/"
+      ],
+      "slug": "builders-risk-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/business-interruption-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 174684,
+      "usedInPlacements": true,
+      "routes": [
+        "/business-interruption-insurance/"
+      ],
+      "slug": "business-interruption-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/cargo-freight-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 134462,
+      "usedInPlacements": true,
+      "routes": [
+        "/cargo-freight-insurance/"
+      ],
+      "slug": "cargo-freight-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/commercial-auto-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 265894,
+      "usedInPlacements": true,
+      "routes": [
+        "/commercial-auto-insurance/"
+      ],
+      "slug": "commercial-auto-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/commercial-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 142678,
+      "usedInPlacements": true,
+      "routes": [
+        "/commercial-insurance/"
+      ],
+      "slug": "commercial-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/commercial-property-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 245744,
+      "usedInPlacements": true,
+      "routes": [
+        "/commercial-property-insurance/"
+      ],
+      "slug": "commercial-property-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/condo-property-management.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 244844,
+      "usedInPlacements": true,
+      "routes": [
+        "/condominium-corporation-insurance/"
+      ],
+      "slug": "condominium-corporation-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/contractors-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 157158,
+      "usedInPlacements": true,
+      "routes": [
+        "/contractors-insurance/"
+      ],
+      "slug": "contractors-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/convenience-store-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 193748,
+      "usedInPlacements": true,
+      "routes": [
+        "/convenience-store-insurance/"
+      ],
+      "slug": "convenience-store-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/crime-fidelity-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 87522,
+      "usedInPlacements": true,
+      "routes": [
+        "/crime-fidelity-insurance/"
+      ],
+      "slug": "crime-fidelity-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/cyber-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 86558,
+      "usedInPlacements": true,
+      "routes": [
+        "/cyber-insurance/"
+      ],
+      "slug": "cyber-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/daycare-private-school-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 119738,
+      "usedInPlacements": true,
+      "routes": [
+        "/daycare-private-school-insurance/"
+      ],
+      "slug": "daycare-private-school-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/dump-truck-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 281562,
+      "usedInPlacements": true,
+      "routes": [
+        "/dump-truck-insurance/"
+      ],
+      "slug": "dump-truck-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/event-venue.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 231464,
+      "usedInPlacements": true,
+      "routes": [
+        "/event-liability-insurance/"
+      ],
+      "slug": "event-liability-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/executive-leadership.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 86466,
+      "usedInPlacements": true,
+      "routes": [
+        "/employment-practices-liability-insurance/"
+      ],
+      "slug": "employment-practices-liability-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/farm-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 263446,
+      "usedInPlacements": true,
+      "routes": [
+        "/farm-insurance/"
+      ],
+      "slug": "farm-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/fitness-gym-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 113190,
+      "usedInPlacements": true,
+      "routes": [
+        "/fitness-gym-insurance/"
+      ],
+      "slug": "fitness-gym-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/food-truck-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 169356,
+      "usedInPlacements": true,
+      "routes": [
+        "/food-truck-insurance/"
+      ],
+      "slug": "food-truck-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/garage-dealership-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 109036,
+      "usedInPlacements": true,
+      "routes": [
+        "/garage-dealership-insurance/"
+      ],
+      "slug": "garage-dealership-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/greenhouse.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 349992,
+      "usedInPlacements": true,
+      "routes": [
+        "/greenhouse-agribusiness-insurance/"
+      ],
+      "slug": "greenhouse"
+    },
+    {
+      "path": "/images/photography/commercial/grocery-specialty-food-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 224052,
+      "usedInPlacements": true,
+      "routes": [
+        "/grocery-specialty-food-insurance/"
+      ],
+      "slug": "grocery-specialty-food-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/hotel-motel-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 237356,
+      "usedInPlacements": true,
+      "routes": [
+        "/hotel-motel-insurance/"
+      ],
+      "slug": "hotel-motel-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/landscaping-snow-removal-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 222500,
+      "usedInPlacements": true,
+      "routes": [
+        "/landscaping-snow-removal-insurance/"
+      ],
+      "slug": "landscaping-snow-removal-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/manufacturing-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 170400,
+      "usedInPlacements": true,
+      "routes": [
+        "/product-recall-insurance/"
+      ],
+      "slug": "product-recall-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/medical-dental-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 122488,
+      "usedInPlacements": true,
+      "routes": [
+        "/medical-dental-insurance/"
+      ],
+      "slug": "medical-dental-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/non-profit-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 112050,
+      "usedInPlacements": true,
+      "routes": [
+        "/non-profit-insurance/"
+      ],
+      "slug": "non-profit-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/pharmacy-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 96036,
+      "usedInPlacements": true,
+      "routes": [
+        "/pharmacy-insurance/"
+      ],
+      "slug": "pharmacy-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/professional-offices-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 126790,
+      "usedInPlacements": true,
+      "routes": [
+        "/professional-liability-insurance/"
+      ],
+      "slug": "professional-liability-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/real-estate-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 98748,
+      "usedInPlacements": true,
+      "routes": [
+        "/property-management-insurance/"
+      ],
+      "slug": "property-management-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/religious-organizations-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 230646,
+      "usedInPlacements": true,
+      "routes": [
+        "/religious-organizations-insurance/"
+      ],
+      "slug": "religious-organizations-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/restaurant-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 179078,
+      "usedInPlacements": true,
+      "routes": [
+        "/liquor-liability-insurance/"
+      ],
+      "slug": "liquor-liability-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/retail-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 420072,
+      "usedInPlacements": true,
+      "routes": [
+        "/retail-insurance/"
+      ],
+      "slug": "retail-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/salon-barber-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 116758,
+      "usedInPlacements": true,
+      "routes": [
+        "/salon-barber-insurance/"
+      ],
+      "slug": "salon-barber-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/small-business-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 83954,
+      "usedInPlacements": true,
+      "routes": [
+        "/small-business-insurance/"
+      ],
+      "slug": "small-business-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/trucking-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 109338,
+      "usedInPlacements": true,
+      "routes": [
+        "/trucking-insurance/"
+      ],
+      "slug": "trucking-insurance"
+    },
+    {
+      "path": "/images/photography/commercial/warehousing-insurance.webp",
+      "category": "commercial",
+      "format": "webp",
+      "bytes": 155950,
+      "usedInPlacements": true,
+      "routes": [
+        "/warehousing-insurance/"
+      ],
+      "slug": "warehousing-insurance"
+    },
+    {
+      "path": "/images/photography/personal/auto-insurance.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 228396,
+      "usedInPlacements": true,
+      "routes": [
+        "/auto-insurance/"
+      ],
+      "slug": "auto-insurance"
+    },
+    {
+      "path": "/images/photography/personal/boat.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 135602,
+      "usedInPlacements": true,
+      "routes": [
+        "/boat-insurance/"
+      ],
+      "slug": "boat"
+    },
+    {
+      "path": "/images/photography/personal/condo.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 350258,
+      "usedInPlacements": true,
+      "routes": [
+        "/condo-insurance/"
+      ],
+      "slug": "condo"
+    },
+    {
+      "path": "/images/photography/personal/cottage.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 462660,
+      "usedInPlacements": true,
+      "routes": [
+        "/cottage-insurance/"
+      ],
+      "slug": "cottage"
+    },
+    {
+      "path": "/images/photography/personal/group-home-auto-insurance.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 324226,
+      "usedInPlacements": true,
+      "routes": [
+        "/group-home-auto-insurance/"
+      ],
+      "slug": "group-home-auto-insurance"
+    },
+    {
+      "path": "/images/photography/personal/home-insurance.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 346194,
+      "usedInPlacements": true,
+      "routes": [
+        "/home-insurance/"
+      ],
+      "slug": "home-insurance"
+    },
+    {
+      "path": "/images/photography/personal/home-sharing-insurance.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 168762,
+      "usedInPlacements": true,
+      "routes": [
+        "/home-sharing-insurance/"
+      ],
+      "slug": "home-sharing-insurance"
+    },
+    {
+      "path": "/images/photography/personal/landlord.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 403446,
+      "usedInPlacements": true,
+      "routes": [
+        "/landlord-insurance/"
+      ],
+      "slug": "landlord"
+    },
+    {
+      "path": "/images/photography/personal/life-insurance.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 90642,
+      "usedInPlacements": true,
+      "routes": [
+        "/life-insurance/"
+      ],
+      "slug": "life-insurance"
+    },
+    {
+      "path": "/images/photography/personal/mobile-home-insurance.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 242870,
+      "usedInPlacements": true,
+      "routes": [
+        "/mobile-home-insurance/"
+      ],
+      "slug": "mobile-home-insurance"
+    },
+    {
+      "path": "/images/photography/personal/motorcycle.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 285916,
+      "usedInPlacements": true,
+      "routes": [
+        "/motorcycle-insurance/"
+      ],
+      "slug": "motorcycle"
+    },
+    {
+      "path": "/images/photography/personal/personal-umbrella-insurance.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 268680,
+      "usedInPlacements": true,
+      "routes": [
+        "/personal-umbrella-insurance/"
+      ],
+      "slug": "personal-umbrella-insurance"
+    },
+    {
+      "path": "/images/photography/personal/tenant.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 95634,
+      "usedInPlacements": true,
+      "routes": [
+        "/tenant-insurance/"
+      ],
+      "slug": "tenant"
+    },
+    {
+      "path": "/images/photography/personal/travel-insurance.webp",
+      "category": "personal",
+      "format": "webp",
+      "bytes": 131296,
+      "usedInPlacements": true,
+      "routes": [
+        "/travel-insurance/"
+      ],
+      "slug": "travel-insurance"
+    },
+    {
+      "path": "/images/photography/special/about.webp",
+      "category": "special",
+      "format": "webp",
+      "bytes": 74858,
+      "usedInPlacements": true,
+      "routes": [
+        "/about/"
+      ],
+      "slug": "about"
+    },
+    {
+      "path": "/images/photography/special/contact.webp",
+      "category": "special",
+      "format": "webp",
+      "bytes": 84134,
+      "usedInPlacements": true,
+      "routes": [
+        "/contact/"
+      ],
+      "slug": "contact"
+    },
+    {
+      "path": "/images/photography/special/homepage-hero.webp",
+      "category": "special",
+      "format": "webp",
+      "bytes": 445872,
+      "usedInPlacements": true,
+      "routes": [
+        "/"
+      ],
+      "slug": "homepage-hero"
+    },
+    {
+      "path": "/images/photography/special/team.webp",
+      "category": "special",
+      "format": "webp",
+      "bytes": 102984,
+      "usedInPlacements": true,
+      "routes": [
+        "/team/"
+      ],
+      "slug": "team"
+    },
+    {
+      "path": "/images/team/team-abdirizak-adan.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 64183,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-anuraj-saini.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 55368,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-danny-tesfamariam.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 111852,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-judy-gu.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 152210,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-konrad-jarecki.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 45082,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-lyndsey-becze.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 119317,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-nabil-ghamraoui.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 51151,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-olayiwola-ogunmokun.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 175168,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-omar-altouhan.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 66537,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-omar-chafchak.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 122710,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-soraya-hoso.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 123254,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team/team-yousef-abouzeeni.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 61295,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team-1.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 16851,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    },
+    {
+      "path": "/images/team-2.jpg",
+      "category": "other",
+      "format": "jpg",
+      "bytes": 33960,
+      "usedInPlacements": false,
+      "routes": [],
+      "slug": null
+    }
+  ]
+}
