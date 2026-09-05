@@ -1,9 +1,11 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import ProductCoverageVisualStage from "@/components/pilot/product/ProductCoverageVisualStage";
 import PremiumGoldCTA from "@/components/pilot/PremiumGoldCTA";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { getRestaurantStateImagePreloadUrls } from "@/data/coverage-explorer/restaurant-coverage-state-images";
+import { usePreloadCoverageStateImages } from "@/hooks/usePreloadCoverageStateImages";
 import { useCoverageTabKeyboard } from "@/hooks/useCoverageTabKeyboard";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import type { PilotProductPageConfig } from "@/types/pilot-product";
@@ -11,6 +13,7 @@ import type { PilotProductPageConfig } from "@/types/pilot-product";
 type ProductCoverageExplorerProps = {
   config: Pick<
     PilotProductPageConfig,
+    | "slug"
     | "coverageHeading"
     | "coverageIntro"
     | "coverageItems"
@@ -25,8 +28,40 @@ type ProductCoverageExplorerProps = {
 
 export default function ProductCoverageExplorer({ config }: ProductCoverageExplorerProps) {
   const baseId = useId();
+  const sectionRef = useRef<HTMLElement>(null);
   const reduceMotion = usePrefersReducedMotion();
   const [activeId, setActiveId] = useState(config.coverageItems[0]?.id ?? "");
+  const [hasImageInteracted, setHasImageInteracted] = useState(false);
+  const isRestaurantStateImages =
+    config.coverageExplorer?.sceneMode === "coverage-state-images";
+  const [preloadEnabled, setPreloadEnabled] = useState(false);
+
+  usePreloadCoverageStateImages(
+    isRestaurantStateImages ? getRestaurantStateImagePreloadUrls() : [],
+    preloadEnabled,
+  );
+
+  useEffect(() => {
+    if (!isRestaurantStateImages || !sectionRef.current) return;
+    const node = sectionRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) setPreloadEnabled(true);
+      },
+      { rootMargin: "240px 0px", threshold: 0.05 },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [isRestaurantStateImages]);
+
+  const selectCoverage = useCallback(
+    (id: string) => {
+      setActiveId(id);
+      if (isRestaurantStateImages) setHasImageInteracted(true);
+    },
+    [isRestaurantStateImages],
+  );
+
   const active =
     config.coverageItems.find((item) => item.id === activeId) ??
     config.coverageItems[0];
@@ -34,12 +69,13 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
   const handleTabKeyDown = useCoverageTabKeyboard(
     config.coverageItems,
     activeId,
-    setActiveId,
+    selectCoverage,
     baseId,
   );
 
   return (
     <section
+      ref={sectionRef}
       className="border-b border-border bg-offwhite py-14 sm:py-16 lg:py-24"
       aria-labelledby={`${baseId}-heading`}
     >
@@ -59,17 +95,18 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
         </RevealOnScroll>
 
         <div className="mt-10 grid gap-8 lg:mt-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-14 lg:items-start">
-          <RevealOnScroll>
+          <RevealOnScroll className="min-w-0 w-full">
             <div
               id={`${baseId}-panel`}
               role="tabpanel"
               aria-labelledby={`${baseId}-tab-${activeId}`}
-              className="pilot-product-explorer-stage relative mx-auto w-full max-w-lg rounded-2xl border border-border/80 bg-white p-6 shadow-[0_16px_40px_rgba(32,39,40,0.07)] sm:p-8 lg:max-w-xl lg:p-9 lg:shadow-[0_20px_48px_rgba(32,39,40,0.09)]"
+              className="pilot-product-explorer-stage relative mx-auto w-full max-w-full overflow-hidden rounded-2xl border border-border/80 bg-white p-6 shadow-[0_16px_40px_rgba(32,39,40,0.07)] sm:max-w-lg sm:p-8 lg:max-w-xl lg:p-9 lg:shadow-[0_20px_48px_rgba(32,39,40,0.09)]"
             >
               <ProductCoverageVisualStage
                 active={active}
                 accentColor={config.accentColor}
                 explorer={config.coverageExplorer}
+                hasImageInteracted={hasImageInteracted}
               />
               <div className="mt-6 rounded-xl border border-gold/25 bg-[#FBF5E5]/70 px-4 py-4 lg:mt-7 lg:px-5 lg:py-[1.125rem]">
                 <div className="flex items-start gap-3">
@@ -119,7 +156,7 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
                     style={{
                       transitionDelay: reduceMotion ? undefined : `${index * 40}ms`,
                     }}
-                    onClick={() => setActiveId(item.id)}
+                    onClick={() => selectCoverage(item.id)}
                     onKeyDown={(event) => handleTabKeyDown(event, index)}
                   >
                     <span

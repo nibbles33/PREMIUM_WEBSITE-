@@ -61,6 +61,12 @@ export type CoverageAmbientConfig = {
   dimOpacity?: number;
 };
 
+/** Per-coverage pre-rendered state image (multi-image crossfade system). */
+export type CoverageStateImageConfig = {
+  coverageId: string;
+  src: string;
+};
+
 export type CoverageStateConfig = {
   /** Matches slugified coverage item id */
   coverageId: string;
@@ -69,6 +75,8 @@ export type CoverageStateConfig = {
   callouts?: CoverageCalloutConfig[];
   /** Optional scene-specific modifier class */
   sceneModifier?: string;
+  /** Pre-rendered state image for coverage-state-images mode */
+  stateImageSrc?: string;
 };
 
 export type CoverageObjectAsset = {
@@ -112,7 +120,12 @@ export type CoverageExplorerVisualConfig = {
     | "photo-scene"
     | "cutaway-miniature"
     | "object-only"
-    | "interactive-master";
+    | "interactive-master"
+    | "coverage-state-images";
+  /** Base master for coverage-state-images mode (default / pre-interaction) */
+  baseSceneSrc?: string;
+  /** coverageId → state image src for coverage-state-images mode */
+  stateImagesByCoverageId?: Record<string, string>;
   /** Highlight rendering strategy — defaults to dim-only for interactive-master */
   highlightRenderer?: "dim-only" | "masked-illumination";
   /** Whether family uses built-in CSS scene geometry */

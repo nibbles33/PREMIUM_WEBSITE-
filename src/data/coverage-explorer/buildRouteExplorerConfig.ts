@@ -4,6 +4,11 @@ import {
 } from "@/data/coverage-explorer/interactive-master-assets";
 import { ARCHETYPES } from "@/data/coverage-explorer/interaction-manifest/archetypes";
 import { ROUTE_MANIFEST } from "@/data/coverage-explorer/interaction-manifest/routes";
+import {
+  getRestaurantStateImageSrc,
+  RESTAURANT_BASE_MASTER_SRC,
+  RESTAURANT_STATE_IMAGE_DIMENSIONS,
+} from "@/data/coverage-explorer/restaurant-coverage-state-images";
 import type {
   CoverageExplorerVisualConfig,
   CoverageStateConfig,
@@ -11,7 +16,6 @@ import type {
   CoverageVisualFamily,
 } from "@/types/coverage-explorer";
 import { getVisualFamilyForSlug } from "@/data/coverage-explorer/registry";
-import { RESTAURANT_HIGHLIGHT_EFFECTS } from "@/data/coverage-explorer/restaurant-highlight-effects";
 
 const COMPACT_MASTER_FILES = new Set([
   "auto-insurance-interactive-master.png",
@@ -28,11 +32,47 @@ function resolveDimensions(filename: string) {
     : INTERACTIVE_MASTER_DIMENSIONS.standard;
 }
 
+/** Build Restaurant multi-image state explorer config. */
+function buildRestaurantStateImageConfig(
+  coverageIds: string[],
+): CoverageExplorerVisualConfig {
+  const stateImagesByCoverageId: Record<string, string> = {};
+  const coverageStates: CoverageStateConfig[] = coverageIds.map((coverageId) => {
+    const stateImageSrc = getRestaurantStateImageSrc(coverageId);
+    if (stateImageSrc) {
+      stateImagesByCoverageId[coverageId] = stateImageSrc;
+    }
+    return {
+      coverageId,
+      activeZoneIds: [],
+      sceneModifier: coverageId,
+      stateImageSrc: stateImageSrc ?? undefined,
+    };
+  });
+
+  return {
+    visualFamily: "restaurant-hospitality",
+    sceneMode: "coverage-state-images",
+    baseSceneSrc: RESTAURANT_BASE_MASTER_SRC,
+    sceneSrc: RESTAURANT_BASE_MASTER_SRC,
+    sceneDimensions: RESTAURANT_STATE_IMAGE_DIMENSIONS,
+    cssSceneClass: "restaurant-insurance",
+    zones: [],
+    svgZones: [],
+    coverageStates,
+    stateImagesByCoverageId,
+  };
+}
+
 /** Build per-route interactive master explorer config from manifest + live coverage ids. */
 export function buildRouteExplorerConfig(
   slug: string,
   coverageIds: string[],
 ): CoverageExplorerVisualConfig | null {
+  if (slug === "restaurant-insurance") {
+    return buildRestaurantStateImageConfig(coverageIds);
+  }
+
   const manifest = ROUTE_MANIFEST[slug];
   const sceneSrc = getInteractiveMasterSrc(slug);
   if (!manifest || !sceneSrc) return null;
@@ -74,28 +114,18 @@ export function buildRouteExplorerConfig(
   const family: CoverageVisualFamily =
     getVisualFamilyForSlug(slug) ?? "commercial-building";
 
-  const isRestaurantPrototype = slug === "restaurant-insurance";
-
   return {
     visualFamily: family,
     sceneMode: "interactive-master",
-    highlightRenderer: isRestaurantPrototype ? "masked-illumination" : "dim-only",
+    highlightRenderer: "dim-only",
     sceneSrc,
     sceneDimensions: dims,
     cssSceneClass: slug,
     zones: [],
     svgZones,
-    coverageStates: isRestaurantPrototype
-      ? coverageStates.map((state) => ({
-          ...state,
-          activeZoneIds:
-            RESTAURANT_HIGHLIGHT_EFFECTS[state.coverageId]?.maskZoneIds ??
-            state.activeZoneIds,
-          ambient: { dimOpacity: 0 },
-        }))
-      : coverageStates.map((state) => ({
-          ...state,
-          ambient: { dimOpacity: 0.12 },
-        })),
+    coverageStates: coverageStates.map((state) => ({
+      ...state,
+      ambient: { dimOpacity: 0.12 },
+    })),
   };
 }

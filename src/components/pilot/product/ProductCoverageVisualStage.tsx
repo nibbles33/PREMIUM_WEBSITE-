@@ -9,12 +9,14 @@ type ProductCoverageVisualStageProps = {
   active: ProductCoverageItem;
   accentColor: string;
   explorer?: CoverageExplorerVisualConfig | null;
+  hasImageInteracted?: boolean;
 };
 
 export default function ProductCoverageVisualStage({
   active,
   accentColor,
   explorer,
+  hasImageInteracted = true,
 }: ProductCoverageVisualStageProps) {
   if (explorer) {
     return (
@@ -27,6 +29,7 @@ export default function ProductCoverageVisualStage({
         explorer={explorer}
         srDetail={`${active.title}: ${active.detail}`}
         showCaption={false}
+        hasInteracted={hasImageInteracted}
       />
     );
   }

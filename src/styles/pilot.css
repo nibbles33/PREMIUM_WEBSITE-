@@ -2605,7 +2605,58 @@
   mix-blend-mode: soft-light;
 }
 
-/* Masked illumination prototype (Restaurant) */
+/* Multi-image coverage state crossfade (Restaurant prototype) */
+.pilot-ce-stage-frame--state-images {
+  background: linear-gradient(180deg, #f7f5f0 0%, #ebe6dc 100%);
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-height: 0;
+  height: auto;
+}
+
+.pilot-ce-stage-frame--state-images.pilot-ce-stage-frame--interactive-master {
+  min-height: 0;
+}
+
+.pilot-ce-state-image-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.pilot-ce-state-image-stack {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #f7f5f0 0%, #ebe6dc 100%);
+}
+
+.pilot-ce-state-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-width: 0;
+  object-fit: contain;
+  object-position: center center;
+  will-change: opacity;
+}
+
+.pilot-ce-state-image--current {
+  z-index: 1;
+}
+
+.pilot-ce-state-image--next {
+  z-index: 2;
+}
+
+.pilot-ce-scene-layers--state-images {
+  display: none;
+}
+
+/* Masked illumination prototype (Restaurant — superseded, kept for reference) */
 .pilot-ce-masked-scene {
   position: absolute;
   inset: 0;

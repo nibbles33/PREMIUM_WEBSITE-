@@ -42,7 +42,20 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
 
         {isCommercialHub ? <CommercialIndustryGrid /> : null}
         {!isCommercialHub && hasCoverage ? (
-          <ProductCoverageExplorer config={config} />
+          <ProductCoverageExplorer
+            config={{
+              slug: config.slug,
+              coverageHeading: config.coverageHeading,
+              coverageIntro: config.coverageIntro,
+              coverageItems: config.coverageItems,
+              coverageExplorerLabel: config.coverageExplorerLabel,
+              accentColor: config.accentColor,
+              quoteHref: config.quoteHref,
+              quoteLabel: config.quoteLabel,
+              miniature: config.miniature,
+              coverageExplorer: config.coverageExplorer,
+            }}
+          />
         ) : null}
         {config.considerations && config.considerations.length > 0 ? (
           <ProductConsiderations items={config.considerations} />

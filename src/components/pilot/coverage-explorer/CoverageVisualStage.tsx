@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import MaskedIlluminationStage from "@/components/pilot/coverage-explorer/MaskedIlluminationStage";
+import CoverageStateImageStage from "@/components/pilot/coverage-explorer/CoverageStateImageStage";
 import { MINIATURE_IMAGE_SIZES } from "@/data/coverage-explorer/miniature-assets";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import type {
@@ -21,6 +21,8 @@ type CoverageVisualStageProps = {
   srDetail: string;
   /** Show caption row below stage */
   showCaption?: boolean;
+  /** Restaurant multi-image: show base master until user interacts */
+  hasInteracted?: boolean;
 };
 
 function getActiveState(
@@ -97,6 +99,7 @@ export default function CoverageVisualStage({
   explorer,
   srDetail,
   showCaption = true,
+  hasInteracted = true,
 }: CoverageVisualStageProps) {
   const reduceMotion = usePrefersReducedMotion();
   const activeState = getActiveState(explorer, activeCoverageId);
@@ -104,9 +107,8 @@ export default function CoverageVisualStage({
   const sceneClass = explorer.cssSceneClass ?? explorer.visualFamily;
   const sceneModifier = activeState?.sceneModifier ?? activeCoverageId;
   const dimOpacity = activeState?.ambient?.dimOpacity ?? 0;
+  const isStateImages = explorer.sceneMode === "coverage-state-images";
   const isInteractiveMaster = explorer.sceneMode === "interactive-master";
-  const useMaskedIllumination =
-    isInteractiveMaster && explorer.highlightRenderer === "masked-illumination";
   const useDimOnly =
     isInteractiveMaster && explorer.highlightRenderer !== "masked-illumination";
   const sceneWidth = explorer.sceneDimensions?.width ?? 1672;
@@ -118,45 +120,46 @@ export default function CoverageVisualStage({
       <p className="pilot-ce-stage-eyebrow">{visualEyebrow}</p>
 
       <div
-        className={`pilot-ce-stage-frame pilot-ce-stage-frame--${sceneClass}${isInteractiveMaster ? " pilot-ce-stage-frame--interactive-master" : ""}`}
+        className={`pilot-ce-stage-frame pilot-ce-stage-frame--${sceneClass}${isStateImages || isInteractiveMaster ? " pilot-ce-stage-frame--interactive-master" : ""}${isStateImages ? " pilot-ce-stage-frame--state-images" : ""}`}
         data-scene={sceneModifier}
         style={
-          isInteractiveMaster
+          isStateImages || isInteractiveMaster
             ? ({ ["--ce-aspect" as string]: String(aspectRatio) } as React.CSSProperties)
             : undefined
         }
       >
+        {isStateImages && explorer.baseSceneSrc && explorer.stateImagesByCoverageId ? (
+          <CoverageStateImageStage
+            baseSrc={explorer.baseSceneSrc}
+            activeCoverageId={activeCoverageId}
+            stateImagesByCoverageId={explorer.stateImagesByCoverageId}
+            sceneWidth={sceneWidth}
+            sceneHeight={sceneHeight}
+            sizes={interactiveMasterSizes(sceneWidth)}
+            hasInteracted={hasInteracted}
+            fallbackSrc={explorer.baseSceneSrc}
+          />
+        ) : null}
+
         {explorer.sceneSrc && isInteractiveMaster ? (
           <div className="pilot-ce-scene-interactive-master" aria-hidden>
-            {useMaskedIllumination && explorer.svgZones ? (
-              <MaskedIlluminationStage
-                sceneSrc={explorer.sceneSrc}
-                sceneWidth={sceneWidth}
-                sceneHeight={sceneHeight}
+            <>
+              <Image
+                src={explorer.sceneSrc}
+                alt=""
+                width={sceneWidth}
+                height={sceneHeight}
                 sizes={interactiveMasterSizes(sceneWidth)}
-                activeCoverageId={activeCoverageId}
-                svgZones={explorer.svgZones}
-                reduceMotion={reduceMotion}
+                quality={90}
+                className="pilot-ce-scene-interactive-master-image"
               />
-            ) : (
-              <>
-                <Image
-                  src={explorer.sceneSrc}
-                  alt=""
-                  width={sceneWidth}
-                  height={sceneHeight}
-                  sizes={interactiveMasterSizes(sceneWidth)}
-                  quality={90}
-                  className="pilot-ce-scene-interactive-master-image"
+              {useDimOnly ? (
+                <SubtleDimOverlay
+                  dimOpacity={dimOpacity}
+                  reduceMotion={reduceMotion}
                 />
-                {useDimOnly ? (
-                  <SubtleDimOverlay
-                    dimOpacity={dimOpacity}
-                    reduceMotion={reduceMotion}
-                  />
-                ) : null}
-              </>
-            )}
+              ) : null}
+            </>
           </div>
         ) : null}
 
@@ -222,57 +225,59 @@ export default function CoverageVisualStage({
           </div>
         ) : null}
 
-        <div
-          className={`pilot-ce-scene-layers pilot-ce-scene-layers--${sceneClass} pilot-ce-scene-layers--${sceneModifier}${isInteractiveMaster ? " pilot-ce-scene-layers--interactive-master" : ""}`}
-          aria-hidden
-        >
-          {!isInteractiveMaster && dimOpacity > 0 ? (
-            <span
-              className="pilot-ce-scene-dim"
-              style={{ opacity: dimOpacity }}
-            />
-          ) : null}
-
-          <span
-            className="pilot-ce-scene-ambient"
-            style={{
-              background:
-                activeState?.ambient?.background ??
-                `radial-gradient(ellipse 72% 58% at 50% 54%, color-mix(in srgb, ${accentColor} 14%, transparent) 0%, transparent 72%)`,
-              transition: reduceMotion ? "none" : "background 380ms ease-out, opacity 320ms ease-out",
-            }}
-          />
-
-          {explorer.zones.map((zone) => {
-            const isActive = activeZoneIds.has(zone.id);
-            const styleClass = zone.style ?? "glow";
-            const shapeClass = zone.shape ?? zone.id;
-            return (
+        {!isStateImages ? (
+          <div
+            className={`pilot-ce-scene-layers pilot-ce-scene-layers--${sceneClass} pilot-ce-scene-layers--${sceneModifier}${isInteractiveMaster ? " pilot-ce-scene-layers--interactive-master" : ""}`}
+            aria-hidden
+          >
+            {!isInteractiveMaster && dimOpacity > 0 ? (
               <span
-                key={zone.id}
-                className={`pilot-ce-zone pilot-ce-zone--${styleClass} pilot-ce-zone--${shapeClass}${isActive ? " is-active" : ""}`}
-                style={zoneStyle(zone, isActive, reduceMotion)}
-                data-label={zone.label}
+                className="pilot-ce-scene-dim"
+                style={{ opacity: dimOpacity }}
               />
-            );
-          })}
+            ) : null}
 
-          {activeState?.callouts?.map((callout) => (
             <span
-              key={callout.id}
-              className="pilot-ce-callout is-active"
+              className="pilot-ce-scene-ambient"
               style={{
-                top: callout.position.top,
-                left: callout.position.left,
-                right: callout.position.right,
-                bottom: callout.position.bottom,
-                transform: callout.position.transform,
+                background:
+                  activeState?.ambient?.background ??
+                  `radial-gradient(ellipse 72% 58% at 50% 54%, color-mix(in srgb, ${accentColor} 14%, transparent) 0%, transparent 72%)`,
+                transition: reduceMotion ? "none" : "background 380ms ease-out, opacity 320ms ease-out",
               }}
-            >
-              {callout.text}
-            </span>
-          ))}
-        </div>
+            />
+
+            {explorer.zones.map((zone) => {
+              const isActive = activeZoneIds.has(zone.id);
+              const styleClass = zone.style ?? "glow";
+              const shapeClass = zone.shape ?? zone.id;
+              return (
+                <span
+                  key={zone.id}
+                  className={`pilot-ce-zone pilot-ce-zone--${styleClass} pilot-ce-zone--${shapeClass}${isActive ? " is-active" : ""}`}
+                  style={zoneStyle(zone, isActive, reduceMotion)}
+                  data-label={zone.label}
+                />
+              );
+            })}
+
+            {activeState?.callouts?.map((callout) => (
+              <span
+                key={callout.id}
+                className="pilot-ce-callout is-active"
+                style={{
+                  top: callout.position.top,
+                  left: callout.position.left,
+                  right: callout.position.right,
+                  bottom: callout.position.bottom,
+                  transform: callout.position.transform,
+                }}
+              >
+                {callout.text}
+              </span>
+            ))}
+          </div>
+        ) : null}
       </div>
 
       {showCaption ? (
