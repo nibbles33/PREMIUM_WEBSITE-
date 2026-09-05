@@ -17,6 +17,16 @@ export type CoverageCard = {
   icon: LucideIcon;
 };
 
+export type ConsiderationItem = {
+  title: string;
+  description: string;
+};
+
+export type RelatedLink = {
+  label: string;
+  href: string;
+};
+
 export type LineInsurancePageProps = {
   heroHeadingId: string;
   eyebrow: string;
@@ -26,11 +36,16 @@ export type LineInsurancePageProps = {
   photographySlug?: string;
   quoteHref: string;
   quoteLabel: string;
+  /** Overrides the default Talk to a Broker secondary hero CTA. */
+  secondaryCta?: { label: string; href: string };
   /** When set, replaces the default coverage-card section. */
   middleSection?: ReactNode;
   coverageIntro?: string;
   coverageAccent?: string;
   coverageTypes?: CoverageCard[];
+  whoItIsFor?: string;
+  considerations?: ConsiderationItem[];
+  relatedLinks?: RelatedLink[];
   brokerHeading?: string;
   brokerCopy: string;
   faqTitle: string;
@@ -39,6 +54,7 @@ export type LineInsurancePageProps = {
   ctaHeadingId: string;
   ctaHeading: string;
   ctaSubhead: string;
+  ctaButtonLabel?: string;
   jsonLd: Record<string, unknown>;
 };
 
@@ -50,10 +66,14 @@ export default function LineInsurancePage({
   photographySlug,
   quoteHref,
   quoteLabel,
+  secondaryCta,
   middleSection,
   coverageIntro,
   coverageAccent = "#5A8A73",
   coverageTypes = [],
+  whoItIsFor,
+  considerations = [],
+  relatedLinks = [],
   brokerHeading = "Why go through a broker",
   brokerCopy,
   faqTitle,
@@ -62,6 +82,7 @@ export default function LineInsurancePage({
   ctaHeadingId,
   ctaHeading,
   ctaSubhead,
+  ctaButtonLabel = "Get a Quote",
   jsonLd,
 }: LineInsurancePageProps) {
   const heroPhoto = photographySlug
@@ -116,10 +137,10 @@ export default function LineInsurancePage({
                       </span>
                     </Link>
                     <Link
-                      href={BROKER_HREF}
+                      href={secondaryCta?.href ?? BROKER_HREF}
                       className="btn-secondary inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md border border-border px-6 text-[15px] font-medium text-gold-dark hover:border-gold-dark sm:w-auto"
                     >
-                      Talk to a Broker
+                      {secondaryCta?.label ?? "Talk to a Broker"}
                     </Link>
                   </div>
                 </div>
@@ -186,6 +207,93 @@ export default function LineInsurancePage({
             </div>
           </section>
         )}
+
+        {whoItIsFor ? (
+          <section
+            className="border-b border-border bg-offwhite py-14 sm:py-16 lg:py-20"
+            aria-labelledby="who-heading"
+          >
+            <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+              <RevealOnScroll>
+                <h2
+                  id="who-heading"
+                  className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+                >
+                  Who this is for
+                </h2>
+                <p className="mt-4 text-[15px] leading-relaxed text-secondary sm:text-base">
+                  {whoItIsFor}
+                </p>
+              </RevealOnScroll>
+            </div>
+          </section>
+        ) : null}
+
+        {considerations.length > 0 ? (
+          <section
+            className="border-b border-border bg-white py-14 sm:py-16 lg:py-20"
+            aria-labelledby="considerations-heading"
+          >
+            <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+              <RevealOnScroll>
+                <div className="mx-auto max-w-2xl text-center">
+                  <h2
+                    id="considerations-heading"
+                    className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+                  >
+                    Practical considerations
+                  </h2>
+                </div>
+              </RevealOnScroll>
+              <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
+                {considerations.map((item) => (
+                  <li key={item.title}>
+                    <RevealOnScroll className="h-full">
+                      <div className="h-full border border-border bg-offwhite p-6 sm:p-7">
+                        <h3 className="text-lg font-medium text-charcoal">
+                          {item.title}
+                        </h3>
+                        <p className="mt-2 text-[15px] leading-relaxed text-secondary">
+                          {item.description}
+                        </p>
+                      </div>
+                    </RevealOnScroll>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        ) : null}
+
+        {relatedLinks.length > 0 ? (
+          <section
+            className="border-b border-border bg-offwhite py-10 sm:py-12"
+            aria-labelledby="related-heading"
+          >
+            <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+              <RevealOnScroll>
+                <h2
+                  id="related-heading"
+                  className="text-lg font-medium text-charcoal"
+                >
+                  Related coverage
+                </h2>
+                <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+                  {relatedLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-[15px] font-medium text-gold-dark underline-offset-4 hover:underline"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </RevealOnScroll>
+            </div>
+          </section>
+        ) : null}
 
         <section
           className="border-b border-border bg-offwhite py-14 sm:py-16 lg:py-20"
@@ -259,7 +367,7 @@ export default function LineInsurancePage({
                     href={quoteHref}
                     className="btn-primary btn-primary-gradient group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:min-w-[220px]"
                   >
-                    Get a Quote
+                    {ctaButtonLabel}
                     <span
                       aria-hidden
                       className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
