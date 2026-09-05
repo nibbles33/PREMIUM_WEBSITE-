@@ -1,0 +1,458 @@
+{
+  "base": "http://localhost:3001",
+  "timestamp": "2026-09-03T20:01:45.640Z",
+  "results": [
+    {
+      "route": "/commercial-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": false,
+      "hasIndustryGrid": true,
+      "url": "http://localhost:3001/commercial-insurance/"
+    },
+    {
+      "route": "/contractors-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/contractors-insurance/"
+    },
+    {
+      "route": "/manufacturing-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/manufacturing-insurance/"
+    },
+    {
+      "route": "/commercial-property-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/commercial-property-insurance/"
+    },
+    {
+      "route": "/restaurant-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/restaurant-insurance/"
+    },
+    {
+      "route": "/professional-offices-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/professional-offices-insurance/"
+    },
+    {
+      "route": "/real-estate-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/real-estate-insurance/"
+    },
+    {
+      "route": "/builders-developers-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/builders-developers-insurance/"
+    },
+    {
+      "route": "/retail-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/retail-insurance/"
+    },
+    {
+      "route": "/bonding-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/bonding-insurance/"
+    },
+    {
+      "route": "/small-business-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/small-business-insurance/"
+    },
+    {
+      "route": "/landscaping-snow-removal-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/landscaping-snow-removal-insurance/"
+    },
+    {
+      "route": "/cyber-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/cyber-insurance/"
+    },
+    {
+      "route": "/directors-officers-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/directors-officers-insurance/"
+    },
+    {
+      "route": "/business-interruption-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/business-interruption-insurance/"
+    },
+    {
+      "route": "/professional-liability-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/professional-liability-insurance/"
+    },
+    {
+      "route": "/cargo-freight-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/cargo-freight-insurance/"
+    },
+    {
+      "route": "/garage-dealership-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/garage-dealership-insurance/"
+    },
+    {
+      "route": "/builders-risk-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/builders-risk-insurance/"
+    },
+    {
+      "route": "/warehousing-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/warehousing-insurance/"
+    },
+    {
+      "route": "/property-management-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/property-management-insurance/"
+    },
+    {
+      "route": "/condominium-corporation-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/condominium-corporation-insurance/"
+    },
+    {
+      "route": "/pollution-liability-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/pollution-liability-insurance/"
+    },
+    {
+      "route": "/product-recall-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/product-recall-insurance/"
+    },
+    {
+      "route": "/hotel-motel-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/hotel-motel-insurance/"
+    },
+    {
+      "route": "/convenience-store-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/convenience-store-insurance/"
+    },
+    {
+      "route": "/grocery-specialty-food-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/grocery-specialty-food-insurance/"
+    },
+    {
+      "route": "/medical-dental-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/medical-dental-insurance/"
+    },
+    {
+      "route": "/pharmacy-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/pharmacy-insurance/"
+    },
+    {
+      "route": "/fitness-gym-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/fitness-gym-insurance/"
+    },
+    {
+      "route": "/salon-barber-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/salon-barber-insurance/"
+    },
+    {
+      "route": "/non-profit-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/non-profit-insurance/"
+    },
+    {
+      "route": "/religious-organizations-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/religious-organizations-insurance/"
+    },
+    {
+      "route": "/daycare-private-school-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/daycare-private-school-insurance/"
+    },
+    {
+      "route": "/event-liability-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/event-liability-insurance/"
+    },
+    {
+      "route": "/liquor-liability-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/liquor-liability-insurance/"
+    },
+    {
+      "route": "/crime-fidelity-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/crime-fidelity-insurance/"
+    },
+    {
+      "route": "/employment-practices-liability-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/employment-practices-liability-insurance/"
+    },
+    {
+      "route": "/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/auto-insurance/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/home-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "hasIndustryGrid": false,
+      "url": "http://localhost:3001/home-insurance/"
+    },
+    {
+      "route": "/trucking-insurance/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/farm-insurance/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/food-truck-insurance/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/commercial-auto-insurance/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/claims/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    },
+    {
+      "route": "/get-a-quote/",
+      "status": 0,
+      "error": "TimeoutError: Waiting for selector `.pilot-product-hero, .pilot-product-explorer-stage` failed"
+    }
+  ],
+  "coverageTests": [
+    {
+      "route": "/contractors-insurance/",
+      "ok": true,
+      "states": 4,
+      "failed": []
+    },
+    {
+      "route": "/restaurant-insurance/",
+      "ok": true,
+      "states": 4,
+      "failed": []
+    },
+    {
+      "route": "/commercial-property-insurance/",
+      "ok": true,
+      "states": 4,
+      "failed": []
+    }
+  ],
+  "commercialRoutes": 38,
+  "screenshotsDir": "/workspace/docs/qa-screenshots/batch-b"
+}
