@@ -2656,6 +2656,60 @@
   display: none;
 }
 
+/* Desktop hover magnifier (Restaurant prototype) */
+@media (hover: hover) and (pointer: fine) {
+  .pilot-ce-state-image-stack {
+    cursor: crosshair;
+  }
+
+  .pilot-ce-magnifier-lens {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-radius: 50%;
+    border: 1px solid rgba(208, 173, 38, 0.52);
+    box-shadow:
+      0 6px 20px rgba(32, 39, 40, 0.14),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+    background-repeat: no-repeat;
+    background-color: rgba(247, 245, 240, 0.92);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 140ms ease-out;
+    will-change: transform, opacity;
+  }
+
+  .pilot-ce-magnifier-hint {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    z-index: 5;
+    margin: 0;
+    transform: translateX(-50%);
+    font-size: 0.6875rem;
+    letter-spacing: 0.02em;
+    color: rgba(114, 111, 102, 0.88);
+    pointer-events: none;
+    transition: opacity 240ms ease-out;
+  }
+
+  .pilot-ce-magnifier-hint.is-dismissed {
+    opacity: 0.38;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: reduce) {
+  .pilot-ce-magnifier-lens {
+    transition: none;
+  }
+
+  .pilot-ce-magnifier-hint {
+    transition: none;
+  }
+}
+
 /* Masked illumination prototype (Restaurant — superseded, kept for reference) */
 .pilot-ce-masked-scene {
   position: absolute;
