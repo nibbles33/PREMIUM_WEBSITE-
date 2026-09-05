@@ -1,14 +1,16 @@
 "use client";
 
-import { useId, useState } from "react";
-import AutoCoverageVisualStage from "@/components/pilot/auto/AutoCoverageVisualStage";
+import { useId, useMemo, useState } from "react";
+import CoverageVisualStage from "@/components/pilot/coverage-explorer/CoverageVisualStage";
 import PremiumGoldCTA from "@/components/pilot/PremiumGoldCTA";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { buildRouteExplorerConfig } from "@/data/coverage-explorer/buildRouteExplorerConfig";
 import {
   AUTO_ACCENT,
   AUTO_QUOTE_HREF,
   autoCoverageItems,
 } from "@/data/pilot-auto";
+import { useCoverageTabKeyboard } from "@/hooks/useCoverageTabKeyboard";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 export default function AutoCoverageExplorer() {
@@ -18,6 +20,20 @@ export default function AutoCoverageExplorer() {
   const active =
     autoCoverageItems.find((item) => item.id === activeId) ?? autoCoverageItems[0];
   const ActiveIcon = active.icon;
+  const explorer = useMemo(
+    () =>
+      buildRouteExplorerConfig(
+        "auto-insurance",
+        autoCoverageItems.map((item) => item.id),
+      ),
+    [],
+  );
+  const handleTabKeyDown = useCoverageTabKeyboard(
+    autoCoverageItems,
+    activeId,
+    setActiveId,
+    baseId,
+  );
 
   return (
     <section
@@ -47,7 +63,16 @@ export default function AutoCoverageExplorer() {
               aria-labelledby={`${baseId}-tab-${activeId}`}
               className="pilot-auto-explorer-stage relative mx-auto w-full max-w-lg rounded-2xl border border-border/80 bg-white p-6 shadow-[0_16px_40px_rgba(32,39,40,0.07)] sm:p-8 lg:max-w-xl lg:p-9 lg:shadow-[0_20px_48px_rgba(32,39,40,0.09)]"
             >
-              <AutoCoverageVisualStage active={active} />
+              <CoverageVisualStage
+                activeCoverageId={activeId}
+                accentColor={AUTO_ACCENT}
+                visualEyebrow={active.visualEyebrow}
+                visualCaption={active.visualCaption}
+                visualSubcaption={active.visualSubcaption}
+                explorer={explorer!}
+                srDetail={`${active.title}: ${active.detail}`}
+                showCaption={false}
+              />
               <div className="mt-6 rounded-xl border border-gold/25 bg-[#FBF5E5]/70 px-4 py-4 lg:mt-7 lg:px-5 lg:py-4.5">
                 <div className="flex items-start gap-3">
                   <span
@@ -97,6 +122,7 @@ export default function AutoCoverageExplorer() {
                       transitionDelay: reduceMotion ? undefined : `${index * 40}ms`,
                     }}
                     onClick={() => setActiveId(item.id)}
+                    onKeyDown={(event) => handleTabKeyDown(event, index)}
                   >
                     <span
                       className="pilot-auto-coverage-card-icon"

@@ -38,6 +38,15 @@ export type CoverageZoneConfig = {
   label?: string;
 };
 
+/** Irregular SVG path zone — viewBox 0 0 100 100 (percentage space). */
+export type CoverageSvgZoneConfig = {
+  id: string;
+  /** SVG path `d` attribute (polygon/path in 0–100 coordinate space) */
+  path: string;
+  style?: CoverageHighlightStyle;
+  label?: string;
+};
+
 export type CoverageCalloutConfig = {
   id: string;
   text: string;
@@ -91,12 +100,19 @@ export type CoverageExplorerVisualConfig = {
   /** Optional foreground object (car, boat silhouette asset, etc.) */
   object?: CoverageObjectAsset;
   objectLayout?: CoverageObjectLayout;
-  /** All highlight zones for this family scene */
+  /** Rectangular fallback zones (legacy family configs) */
   zones: CoverageZoneConfig[];
+  /** SVG path zones aligned to interactive master artwork */
+  svgZones?: CoverageSvgZoneConfig[];
   /** Per-coverage visual state */
   coverageStates: CoverageStateConfig[];
   /** Scene render mode */
-  sceneMode: "css-cutaway" | "photo-scene" | "cutaway-miniature" | "object-only";
+  sceneMode:
+    | "css-cutaway"
+    | "photo-scene"
+    | "cutaway-miniature"
+    | "object-only"
+    | "interactive-master";
   /** Whether family uses built-in CSS scene geometry */
   cssSceneClass?: string;
 };

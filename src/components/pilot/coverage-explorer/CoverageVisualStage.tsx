@@ -6,6 +6,7 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import type {
   CoverageExplorerVisualConfig,
   CoverageStateConfig,
+  CoverageSvgZoneConfig,
   CoverageZoneConfig,
 } from "@/types/coverage-explorer";
 
@@ -29,6 +30,62 @@ function getActiveState(
   return (
     explorer.coverageStates.find((s) => s.coverageId === coverageId) ??
     explorer.coverageStates[0]
+  );
+}
+
+function interactiveMasterSizes(width: number): string {
+  if (width <= 1400) {
+    return "(max-width: 767px) min(100vw, 360px), 480px";
+  }
+  return "(max-width: 767px) min(100vw, 360px), 560px";
+}
+
+function SvgZonePaths({
+  zones,
+  activeZoneIds,
+  dimOpacity,
+  reduceMotion,
+}: {
+  zones: CoverageSvgZoneConfig[];
+  activeZoneIds: Set<string>;
+  dimOpacity: number;
+  reduceMotion: boolean;
+}) {
+  const transition = reduceMotion ? "none" : "fill 320ms ease-out, stroke 380ms ease-out, opacity 320ms ease-out";
+
+  return (
+    <svg
+      className="pilot-ce-svg-overlay"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+      aria-hidden
+    >
+      {dimOpacity > 0 ? (
+        <rect
+          className="pilot-ce-svg-dim"
+          width="100"
+          height="100"
+          style={{
+            opacity: dimOpacity,
+            transition: reduceMotion ? "none" : "opacity 380ms ease-out",
+          }}
+        />
+      ) : null}
+
+      {zones.map((zone) => {
+        const isActive = activeZoneIds.has(zone.id);
+        const styleClass = zone.style ?? "glow";
+        return (
+          <path
+            key={zone.id}
+            d={zone.path}
+            className={`pilot-ce-svg-zone pilot-ce-svg-zone--${styleClass}${isActive ? " is-active" : ""}`}
+            style={{ transition }}
+            data-label={zone.label}
+          />
+        );
+      })}
+    </svg>
   );
 }
 
@@ -67,15 +124,46 @@ export default function CoverageVisualStage({
   const sceneClass = explorer.cssSceneClass ?? explorer.visualFamily;
   const sceneModifier = activeState?.sceneModifier ?? activeCoverageId;
   const dimOpacity = activeState?.ambient?.dimOpacity ?? 0;
+  const isInteractiveMaster = explorer.sceneMode === "interactive-master";
+  const sceneWidth = explorer.sceneDimensions?.width ?? 1672;
+  const sceneHeight = explorer.sceneDimensions?.height ?? 941;
+  const aspectRatio = sceneWidth / sceneHeight;
 
   return (
     <div className="pilot-ce-stage" aria-live="polite" aria-atomic="true">
       <p className="pilot-ce-stage-eyebrow">{visualEyebrow}</p>
 
       <div
-        className={`pilot-ce-stage-frame pilot-ce-stage-frame--${sceneClass}`}
+        className={`pilot-ce-stage-frame pilot-ce-stage-frame--${sceneClass}${isInteractiveMaster ? " pilot-ce-stage-frame--interactive-master" : ""}`}
         data-scene={sceneModifier}
+        style={
+          isInteractiveMaster
+            ? ({ ["--ce-aspect" as string]: String(aspectRatio) } as React.CSSProperties)
+            : undefined
+        }
       >
+        {explorer.sceneSrc && isInteractiveMaster ? (
+          <div className="pilot-ce-scene-interactive-master" aria-hidden>
+            <Image
+              src={explorer.sceneSrc}
+              alt=""
+              width={sceneWidth}
+              height={sceneHeight}
+              sizes={interactiveMasterSizes(sceneWidth)}
+              quality={90}
+              className="pilot-ce-scene-interactive-master-image"
+            />
+            {explorer.svgZones && explorer.svgZones.length > 0 ? (
+              <SvgZonePaths
+                zones={explorer.svgZones}
+                activeZoneIds={activeZoneIds}
+                dimOpacity={dimOpacity}
+                reduceMotion={reduceMotion}
+              />
+            ) : null}
+          </div>
+        ) : null}
+
         {explorer.sceneSrc && explorer.sceneMode === "cutaway-miniature" ? (
           <div className="pilot-ce-scene-cutaway" aria-hidden>
             <Image
@@ -139,10 +227,10 @@ export default function CoverageVisualStage({
         ) : null}
 
         <div
-          className={`pilot-ce-scene-layers pilot-ce-scene-layers--${sceneClass} pilot-ce-scene-layers--${sceneModifier}`}
+          className={`pilot-ce-scene-layers pilot-ce-scene-layers--${sceneClass} pilot-ce-scene-layers--${sceneModifier}${isInteractiveMaster ? " pilot-ce-scene-layers--interactive-master" : ""}`}
           aria-hidden
         >
-          {dimOpacity > 0 ? (
+          {!isInteractiveMaster && dimOpacity > 0 ? (
             <span
               className="pilot-ce-scene-dim"
               style={{ opacity: dimOpacity }}

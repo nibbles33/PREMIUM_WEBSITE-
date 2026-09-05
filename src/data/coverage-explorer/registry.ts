@@ -1,3 +1,5 @@
+import { buildRouteExplorerConfig } from "@/data/coverage-explorer/buildRouteExplorerConfig";
+import { ROUTE_TO_INTERACTIVE_MASTER_FILE } from "@/data/coverage-explorer/interactive-master-assets";
 import type { CoverageVisualFamily, CoverageExplorerVisualConfig } from "@/types/coverage-explorer";
 import { boatExplorer } from "@/data/coverage-explorer/families/boat";
 import { commercialBuildingExplorer } from "@/data/coverage-explorer/families/commercial-building";
@@ -76,11 +78,16 @@ export function getVisualFamilyForSlug(slug: string): CoverageVisualFamily | nul
 
 export function getCoverageExplorerConfig(
   slug: string,
+  coverageIds: string[] = [],
 ): CoverageExplorerVisualConfig | null {
-  const family = getVisualFamilyForSlug(slug);
-  if (!family) return null;
-  return FAMILY_EXPLORERS[family] ?? null;
+  if (!ROUTE_TO_INTERACTIVE_MASTER_FILE[slug]) return null;
+  return buildRouteExplorerConfig(slug, coverageIds);
 }
+
+/** All 58 live routes with interactive master assets. */
+export const INTERACTIVE_MASTER_ROUTE_SLUGS = Object.keys(
+  ROUTE_TO_INTERACTIVE_MASTER_FILE,
+);
 
 /** All slugs mapped to each family — for audit/reporting. */
 export function getSlugFamilyAudit(): Record<CoverageVisualFamily, string[]> {

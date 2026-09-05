@@ -120,6 +120,8 @@ export function buildPilotProductConfig(
     relatedIntro?: string;
   },
 ): PilotProductPageConfig {
+  const coverageItems = toCoverageItems(input.coverageItems);
+
   return {
     slug: input.slug,
     layout: input.layout,
@@ -141,11 +143,15 @@ export function buildPilotProductConfig(
     considerations: input.considerations,
     coverageHeading: input.coverageHeading ?? "What's covered",
     coverageIntro: input.coverageIntro,
-    coverageItems: toCoverageItems(input.coverageItems),
+    coverageItems,
     coverageExplorerLabel: input.coverageExplorerLabel ?? "Coverage types",
     miniature: input.miniature ?? null,
     coverageExplorer:
-      input.coverageExplorer ?? getCoverageExplorerConfig(input.slug),
+      input.coverageExplorer ??
+      getCoverageExplorerConfig(
+        input.slug,
+        coverageItems.map((item) => item.id),
+      ),
     brokerSteps: input.brokerSteps ?? personalBrokerSteps,
     relatedHeading: input.relatedHeading ?? DEFAULT_RELATED_HEADING,
     relatedIntro: input.relatedIntro ?? DEFAULT_RELATED_INTRO,

@@ -4,6 +4,7 @@ import { useId, useState } from "react";
 import ProductCoverageVisualStage from "@/components/pilot/product/ProductCoverageVisualStage";
 import PremiumGoldCTA from "@/components/pilot/PremiumGoldCTA";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { useCoverageTabKeyboard } from "@/hooks/useCoverageTabKeyboard";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import type { PilotProductPageConfig } from "@/types/pilot-product";
 
@@ -30,6 +31,12 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
     config.coverageItems.find((item) => item.id === activeId) ??
     config.coverageItems[0];
   const ActiveIcon = active.icon;
+  const handleTabKeyDown = useCoverageTabKeyboard(
+    config.coverageItems,
+    activeId,
+    setActiveId,
+    baseId,
+  );
 
   return (
     <section
@@ -113,6 +120,7 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
                       transitionDelay: reduceMotion ? undefined : `${index * 40}ms`,
                     }}
                     onClick={() => setActiveId(item.id)}
+                    onKeyDown={(event) => handleTabKeyDown(event, index)}
                   >
                     <span
                       className="pilot-product-coverage-card-icon"

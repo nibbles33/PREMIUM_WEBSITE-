@@ -11,9 +11,9 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
     archetype: "auto-street",
     coverageZones: {
       "liability": ["road-perimeter", "traffic-lane", "vehicle-body"],
-      "collision": ["vehicle-body", "vehicle-cabin", "street-surface"],
-      "comprehensive": ["vehicle-body", "parking-apron", "vehicle-cabin"],
-      "accident-benefits": ["vehicle-cabin", "vehicle-body"],
+      "collision": ["vehicle-body", "cabin-interior", "street-surface"],
+      "comprehensive": ["vehicle-body", "parking-apron", "cabin-interior"],
+      "accident-benefits": ["cabin-interior", "vehicle-body"],
       "uninsured": ["road-perimeter", "traffic-lane"],
       "loss-of-use": ["parking-apron", "street-surface", "vehicle-body"],
     },
