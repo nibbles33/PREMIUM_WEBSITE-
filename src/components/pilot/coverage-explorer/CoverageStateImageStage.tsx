@@ -2,13 +2,17 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import CoverageMotionOverlay from "@/components/pilot/coverage-explorer/CoverageMotionOverlay";
 import ImageMagnifierLens from "@/components/pilot/coverage-explorer/ImageMagnifierLens";
+import { useContainedImageInsets } from "@/hooks/useContainedImageInsets";
+import { useCoverageMotionPlayback } from "@/hooks/useCoverageMotionPlayback";
 import { useFinePointerDevice } from "@/hooks/useFinePointerDevice";
 import {
   preloadCoverageStateImage,
   usePreloadCoverageStateImages,
 } from "@/hooks/usePreloadCoverageStateImages";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
+import type { CoverageMotionRecipesByCoverageId } from "@/types/coverage-motion";
 
 type CoverageStateImageStageProps = {
   baseSrc: string;
@@ -19,8 +23,12 @@ type CoverageStateImageStageProps = {
   sizes: string;
   hasInteracted: boolean;
   fallbackSrc: string;
+  /** Route scene class e.g. contractors-insurance */
+  sceneClass?: string;
   /** Restaurant prototype: desktop hover magnifier */
   enableMagnifier?: boolean;
+  /** Optional per-coverage motion recipes (Contractors prototype) */
+  motionRecipes?: CoverageMotionRecipesByCoverageId;
 };
 
 function resolveTargetSrc(
@@ -43,7 +51,9 @@ export default function CoverageStateImageStage({
   sizes,
   hasInteracted,
   fallbackSrc,
+  sceneClass,
   enableMagnifier = false,
+  motionRecipes,
 }: CoverageStateImageStageProps) {
   const reduceMotion = usePrefersReducedMotion();
   const finePointer = useFinePointerDevice();
@@ -61,8 +71,25 @@ export default function CoverageStateImageStage({
   const transitionGen = useRef(0);
   const visibleSrcRef = useRef(baseSrc);
 
+  const imageInsets = useContainedImageInsets(
+    stackRef,
+    sceneWidth,
+    sceneHeight,
+    [activeCoverageId, currentSrc, hasInteracted],
+  );
+
+  const isCrossfading = Boolean(nextSrc);
   const magnifierSrc = showNext && nextSrc ? nextSrc : currentSrc;
-  const isMagnifierTransitioning = Boolean(nextSrc);
+  const isMagnifierTransitioning = isCrossfading;
+
+  const { motionActive, motionKey, recipe, imageMotionClass } =
+    useCoverageMotionPlayback({
+      activeCoverageId,
+      motionRecipes,
+      isCrossfading,
+      hasInteracted,
+      reduceMotion,
+    });
 
   const dismissHint = useCallback(() => {
     setHintDismissed(true);
@@ -137,13 +164,25 @@ export default function CoverageStateImageStage({
   };
 
   const transition = `opacity ${transitionMs}ms ease-in-out`;
+  const containImageStyle = {
+    objectFit: "contain" as const,
+    objectPosition: "center center",
+  };
+  const visibleImageClass = [
+    "pilot-ce-state-image",
+    "pilot-ce-state-image--current",
+    !showNext && imageMotionClass ? imageMotionClass : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <div
-      className="pilot-ce-state-image-stage"
+      className={`pilot-ce-state-image-stage${sceneClass ? ` pilot-ce-state-image-stage--${sceneClass}` : ""}`}
       data-coverage={activeCoverageId}
       data-interacted={hasInteracted ? "true" : "false"}
       data-magnifier={showMagnifier ? "enabled" : "disabled"}
+      data-motion={motionActive ? "playing" : "idle"}
       style={{ ["--ce-aspect" as string]: String(aspectRatio) }}
       aria-hidden
     >
@@ -156,8 +195,9 @@ export default function CoverageStateImageStage({
           sizes={sizes}
           quality={90}
           priority
-          className="pilot-ce-state-image pilot-ce-state-image--current"
+          className={visibleImageClass}
           style={{
+            ...containImageStyle,
             opacity: showNext ? 0 : 1,
             transition,
           }}
@@ -173,10 +213,19 @@ export default function CoverageStateImageStage({
             quality={90}
             className="pilot-ce-state-image pilot-ce-state-image--next"
             style={{
+              ...containImageStyle,
               opacity: showNext ? 1 : 0,
               transition,
             }}
             onError={() => handleError(nextSrc)}
+          />
+        ) : null}
+        {recipe && motionRecipes ? (
+          <CoverageMotionOverlay
+            recipe={recipe}
+            motionKey={motionKey}
+            active={motionActive}
+            imageInsets={imageInsets}
           />
         ) : null}
         {showMagnifier ? (
