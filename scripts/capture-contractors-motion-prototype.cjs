@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Capture Contractors handoff choreography QA screenshots. */
+/** Capture Contractors handoff sequence with real transparent assets. */
 const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
@@ -28,6 +28,21 @@ async function shotStage(page, file) {
   }
 }
 
+async function captureSequence(page, tabIndex, prefix, choreographyMs, handoffMs, settledMs) {
+  await clickTab(page, tabIndex);
+  await new Promise((r) => setTimeout(r, 450));
+  await shotStage(page, `${prefix}-01-clean-bg`);
+
+  await new Promise((r) => setTimeout(r, choreographyMs));
+  await shotStage(page, `${prefix}-02-mid-choreography`);
+
+  await new Promise((r) => setTimeout(r, handoffMs));
+  await shotStage(page, `${prefix}-03-handoff`);
+
+  await new Promise((r) => setTimeout(r, settledMs));
+  await shotStage(page, `${prefix}-04-settled`);
+}
+
 async function main() {
   fs.mkdirSync(OUT, { recursive: true });
   const browser = await puppeteer.launch({
@@ -38,42 +53,30 @@ async function main() {
   await page.setViewport({ width: 1440, height: 900 });
 
   await goto(page);
-  await shotStage(page, "01-general-load");
+  await shotStage(page, "00-general-load");
 
-  // Property handoff sequence
-  await clickTab(page, 2);
-  await new Promise((r) => setTimeout(r, 480));
-  await shotStage(page, "02-property-choreography");
+  // Builder's Risk — full sequence with mid-animation frame
+  await captureSequence(page, 2, "builders", 420, 380, 500);
 
-  await new Promise((r) => setTimeout(r, 900));
-  await shotStage(page, "03-property-handoff");
-
-  await new Promise((r) => setTimeout(r, 600));
-  await shotStage(page, "04-property-settled");
-
-  // Tools handoff sequence
-  await clickTab(page, 1);
-  await new Promise((r) => setTimeout(r, 480));
-  await shotStage(page, "05-tools-choreography");
-
-  await new Promise((r) => setTimeout(r, 800));
-  await shotStage(page, "06-tools-settled");
+  // Tools & Equipment — full sequence with mid-animation frame
+  await captureSequence(page, 1, "tools", 380, 360, 500);
 
   await clickTab(page, 0);
   await new Promise((r) => setTimeout(r, 550));
-  await shotStage(page, "07-liability");
+  await shotStage(page, "liability-settled");
 
   await clickTab(page, 3);
   await new Promise((r) => setTimeout(r, 550));
-  await shotStage(page, "08-wrap-up");
+  await shotStage(page, "wrap-up-settled");
 
+  // Mobile Builder's Risk mid-choreography
   await page.setViewport({ width: 390, height: 844 });
   await goto(page);
   await clickTab(page, 2);
   await new Promise((r) => setTimeout(r, 520));
-  await shotStage(page, "09-mobile-property-choreography");
+  await shotStage(page, "mobile-builders-mid-choreography");
   await new Promise((r) => setTimeout(r, 1200));
-  await shotStage(page, "10-mobile-property-settled");
+  await shotStage(page, "mobile-builders-settled");
 
   await browser.close();
 }

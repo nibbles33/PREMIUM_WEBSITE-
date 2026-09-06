@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import CoverageMotionOverlay from "@/components/pilot/coverage-explorer/CoverageMotionOverlay";
 import ImageMagnifierLens from "@/components/pilot/coverage-explorer/ImageMagnifierLens";
 import { useContainedImageInsets } from "@/hooks/useContainedImageInsets";
@@ -65,6 +65,19 @@ export default function CoverageStateImageStage({
   const stackRef = useRef<HTMLDivElement>(null);
 
   usePreloadCoverageStateImages(Object.values(stateImagesByCoverageId), true);
+
+  const motionPreloadUrls = useMemo(() => {
+    if (!motionRecipes) return [];
+    const urls = new Set<string>();
+    for (const recipe of Object.values(motionRecipes)) {
+      if (recipe.cleanBgSrc) urls.add(recipe.cleanBgSrc);
+      for (const layer of recipe.objectLayers ?? []) {
+        if (layer.src) urls.add(layer.src);
+      }
+    }
+    return [...urls];
+  }, [motionRecipes]);
+  usePreloadCoverageStateImages(motionPreloadUrls, motionPreloadUrls.length > 0);
 
   const initialSrc = resolveTargetSrc(
     baseSrc,

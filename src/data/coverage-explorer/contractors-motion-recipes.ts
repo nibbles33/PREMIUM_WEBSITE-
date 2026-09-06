@@ -1,107 +1,109 @@
 import type { CoverageMotionRecipesByCoverageId } from "@/types/coverage-motion";
+import { CONTRACTORS_ANIMATION_ASSETS } from "@/data/coverage-explorer/contractors-animation-assets";
 import { CONTRACTORS_STATE_FILES } from "@/data/coverage-explorer/contractors-coverage-state-images";
 
-/**
- * PLACEHOLDER clean background — stand-in until dedicated clean-scene PNGs are supplied.
- * Using General Liability state image as interim clean base for choreography review.
- * Replace `CLEAN_BG_PLACEHOLDER_SRC` per coverage when real clean assets land in
- * public/images/ (e.g. from owner "contractos 2" bundle).
- */
-const CLEAN_BG_PLACEHOLDER_SRC = CONTRACTORS_STATE_FILES.liability;
+const { tools, builders } = CONTRACTORS_ANIMATION_ASSETS;
 
 /**
- * Contractors motion prototype — Property + Tools & Equipment handoff sequences.
+ * Contractors motion — Property + Tools & Equipment handoff sequences.
  *
- * Sequence: clean bg → staggered placeholder objects → crossfade to approved final state.
- * PLACEHOLDER objects render as labeled silhouettes until transparent PNG assets are wired via `src`.
+ * Sequence: dedicated clean bg → staggered full-canvas transparent objects →
+ * crossfade to approved final state image.
+ *
+ * Each object PNG is 1672×941 with the object pre-positioned; layers composite
+ * at (0,0) without manual placement coordinates.
  */
 export const CONTRACTORS_MOTION_RECIPES: CoverageMotionRecipesByCoverageId = {
   "builder-s-risk": {
     type: "vertical-reveal-settle",
-    durationMs: 1320,
-    cleanBgSrc: CLEAN_BG_PLACEHOLDER_SRC,
-    handoffAtMs: 860,
+    durationMs: 1480,
+    cleanBgSrc: builders.cleanBackground,
+    handoffAtMs: 980,
     handoffDurationMs: 420,
-    // FLAG: dedicated clean-property PNG not yet supplied — handoff alignment unverified
+    // Stacked assets match composite-proof (builders exact, tools mean≈0.007);
+    // approved final state PNGs differ substantially — invisible handoff flagged low
     handoffAlignmentConfidence: "low",
     objectLayers: [
       {
-        id: "material-stack-a",
-        placeholder: true,
-        placeholderLabel: "Material A",
+        id: "lumber-stack-1",
+        src: builders.objects.lumberStack1,
+        fullCanvas: true,
         delayMs: 120,
         durationMs: 720,
-        left: "18%",
-        top: "32%",
-        width: "14%",
-        height: "10%",
       },
       {
-        id: "material-stack-b",
-        placeholder: true,
-        placeholderLabel: "Material B",
+        id: "lumber-stack-2",
+        src: builders.objects.lumberStack2,
+        fullCanvas: true,
         delayMs: 260,
         durationMs: 760,
-        left: "34%",
-        top: "28%",
-        width: "12%",
-        height: "9%",
       },
       {
-        id: "material-crate",
-        placeholder: true,
-        placeholderLabel: "Crate",
-        delayMs: 380,
+        id: "material-stack",
+        src: builders.objects.materialStack,
+        fullCanvas: true,
+        delayMs: 400,
         durationMs: 800,
-        left: "52%",
-        top: "36%",
-        width: "11%",
-        height: "8%",
+      },
+      {
+        id: "wrapped-materials",
+        src: builders.objects.wrappedMaterials,
+        fullCanvas: true,
+        delayMs: 520,
+        durationMs: 840,
       },
     ],
   },
   "tools-equipment-coverage": {
     type: "equipment-activate",
-    durationMs: 1180,
-    cleanBgSrc: CLEAN_BG_PLACEHOLDER_SRC,
-    handoffAtMs: 700,
+    durationMs: 1380,
+    cleanBgSrc: tools.cleanBackground,
+    handoffAtMs: 860,
     handoffDurationMs: 400,
     handoffAlignmentConfidence: "low",
     emphasisCenter: { x: "62%", y: "54%" },
     objectLayers: [
       {
-        id: "equipment-zone-primary",
-        placeholder: true,
-        placeholderLabel: "Equip A",
+        id: "worklight",
+        src: tools.objects.worklight,
+        fullCanvas: true,
         delayMs: 80,
         durationMs: 620,
-        left: "56%",
-        top: "46%",
-        width: "14%",
-        height: "11%",
       },
       {
-        id: "equipment-zone-secondary",
-        placeholder: true,
-        placeholderLabel: "Equip B",
-        delayMs: 220,
+        id: "toolbox",
+        src: tools.objects.toolbox,
+        fullCanvas: true,
+        delayMs: 200,
         durationMs: 680,
-        left: "64%",
-        top: "52%",
-        width: "12%",
-        height: "9%",
       },
       {
-        id: "equipment-zone-tertiary",
-        placeholder: true,
-        placeholderLabel: "Equip C",
-        delayMs: 340,
+        id: "power-tools",
+        src: tools.objects.powerTools,
+        fullCanvas: true,
+        delayMs: 320,
         durationMs: 720,
-        left: "48%",
-        top: "54%",
-        width: "10%",
-        height: "8%",
+      },
+      {
+        id: "saw",
+        src: tools.objects.saw,
+        fullCanvas: true,
+        delayMs: 440,
+        durationMs: 760,
+      },
+      {
+        id: "generator",
+        src: tools.objects.generator,
+        fullCanvas: true,
+        delayMs: 560,
+        durationMs: 800,
       },
     ],
   },
 };
+
+/** Final state PNG targets for handoff crossfade (unchanged approved assets). */
+export const CONTRACTORS_HANDOFF_FINAL_SRC = {
+  "builder-s-risk": CONTRACTORS_STATE_FILES.property,
+  "tools-equipment-coverage": CONTRACTORS_STATE_FILES["tools-equipment"],
+} as const;

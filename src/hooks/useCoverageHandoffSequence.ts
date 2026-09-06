@@ -58,9 +58,10 @@ export function useCoverageHandoffSequence({
     }
 
     const gen = ++sequenceGenRef.current;
-    const cleanBgSrc = recipe.cleanBgSrc;
-    const handoffAtMs = recipe.handoffAtMs ?? 0;
-    const handoffDurationMs = recipe.handoffDurationMs ?? transitionMs;
+    const activeRecipe = recipe;
+    const cleanBgSrc = activeRecipe.cleanBgSrc as string;
+    const handoffAtMs = activeRecipe.handoffAtMs ?? 0;
+    const handoffDurationMs = activeRecipe.handoffDurationMs ?? transitionMs;
 
     const wait = (ms: number) =>
       new Promise<void>((resolve) => {
@@ -68,9 +69,14 @@ export function useCoverageHandoffSequence({
       });
 
     async function runSequence() {
+      const objectSrcs =
+        activeRecipe.objectLayers
+          ?.map((layer) => layer.src)
+          .filter((src): src is string => Boolean(src)) ?? [];
+
       try {
         await onPreload(cleanBgSrc);
-        await onPreload(finalSrc);
+        await Promise.all([...objectSrcs.map(onPreload), onPreload(finalSrc)]);
       } catch {
         /* proceed with crossfade attempt */
       }
@@ -120,12 +126,16 @@ export function useCoverageHandoffSequence({
     usesHandoff,
   ]);
 
+  const hasPlaceholderLayers = Boolean(
+    recipe?.objectLayers?.some((layer) => layer.placeholder),
+  );
+
   return {
     phase,
     choreographyActive,
     motionKey,
     usesHandoff,
     alignmentConfidence: recipe?.handoffAlignmentConfidence ?? "low",
-    assetMode: usesHandoff ? ("placeholder" as const) : ("final" as const),
+    assetMode: usesHandoff && hasPlaceholderLayers ? ("placeholder" as const) : ("final" as const),
   };
 }

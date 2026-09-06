@@ -16,7 +16,7 @@ export type HandoffAlignmentConfidence = "low" | "medium" | "high";
  */
 export type CoverageMotionObjectLayer = {
   id: string;
-  /** Final transparent PNG — omit until asset is ready */
+  /** Transparent PNG — full-canvas (1672×941) or partial overlay */
   src?: string;
   /** PLACEHOLDER: when true, render labeled stand-in shape instead of src */
   placeholder?: boolean;
@@ -24,10 +24,15 @@ export type CoverageMotionObjectLayer = {
   placeholderLabel?: string;
   delayMs: number;
   durationMs: number;
-  /** Percentage position within rendered image area */
-  left: string;
-  top: string;
-  width: string;
+  /**
+   * Full diorama canvas asset — composites at (0,0) over clean background.
+   * Omits left/top/width/height; object is pre-positioned inside the PNG.
+   */
+  fullCanvas?: boolean;
+  /** Percentage position within rendered image area (partial overlays only) */
+  left?: string;
+  top?: string;
+  width?: string;
   height?: string;
 };
 

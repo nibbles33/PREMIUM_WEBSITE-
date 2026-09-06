@@ -2727,6 +2727,29 @@
   animation-fill-mode: forwards;
 }
 
+/* Full 1672×941 transparent object canvas — composite at (0,0) */
+.pilot-ce-motion-object-layer--full-canvas {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, -24px, 0);
+}
+
+.pilot-ce-motion-object-layer--full-canvas.pilot-ce-motion-object-layer--hold {
+  animation-name: ce-motion-object-descend-hold-full;
+}
+
+.pilot-ce-motion-object-layer--full-canvas.is-handoff-dissolve {
+  animation: ce-motion-object-handoff-dissolve-full 420ms ease-out forwards !important;
+}
+
+.pilot-ce-motion-object-image--full-canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
 /* Choreography: objects settle and hold until handoff crossfade */
 .pilot-ce-motion-object-layer--hold {
   animation-name: ce-motion-object-descend-hold;
@@ -2826,6 +2849,31 @@
   100% {
     opacity: 0;
     transform: translate(-50%, -50%) scale(1.02);
+  }
+}
+
+@keyframes ce-motion-object-descend-hold-full {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -24px, 0);
+  }
+  28% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes ce-motion-object-handoff-dissolve-full {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
   }
 }
 

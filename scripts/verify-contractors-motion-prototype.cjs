@@ -1,6 +1,8 @@
 #!/usr/bin/env node
-/** Contractors motion handoff choreography — runtime verification. */
+/** Contractors motion handoff — runtime verification with real transparent assets. */
 const puppeteer = require("puppeteer");
+const fs = require("fs");
+const path = require("path");
 
 const BASE = process.env.BASE_URL || "http://localhost:3012";
 const ROUTE = "/contractors-insurance/";
@@ -16,13 +18,17 @@ const STATES = [
     id: "tools-equipment-coverage",
     tabIndex: 1,
     expectPath: "state-tools-equipment",
+    expectCleanBg: "contractors-tools-clean-background",
     handoff: true,
+    objectCount: 5,
   },
   {
     id: "builder-s-risk",
     tabIndex: 2,
     expectPath: "state-property",
+    expectCleanBg: "contractors-builders-clean-background",
     handoff: true,
+    objectCount: 4,
   },
   {
     id: "wrap-up-liability",
@@ -52,6 +58,10 @@ async function getStageAttrs(page) {
       placeholderCount: document.querySelectorAll(
         ".pilot-ce-motion-object-placeholder",
       ).length,
+      fullCanvasObjectCount: document.querySelectorAll(
+        '.pilot-ce-motion-object-layer[data-full-canvas="true"]',
+      ).length,
+      objectImageCount: document.querySelectorAll(".pilot-ce-motion-object-image").length,
     };
   });
 }
@@ -82,23 +92,30 @@ async function verifyHandoffState(page, state) {
   const errors = [];
 
   if (state.handoff) {
-    await new Promise((r) => setTimeout(r, 550));
+    await new Promise((r) => setTimeout(r, 500));
     const mid = await getStageAttrs(page);
     if (mid.handoffPhase !== "choreography" && mid.handoffPhase !== "handoff") {
-      /* may have passed quickly — check placeholders were visible or motion playing */
-      if (mid.motion !== "playing" && mid.placeholderCount === 0) {
+      if (mid.motion !== "playing" && mid.fullCanvasObjectCount === 0) {
         errors.push(`no-choreography:${mid.handoffPhase}`);
       }
     }
-    if (mid.assetMode !== "placeholder") {
-      errors.push(`expected-placeholder-mode:${mid.assetMode}`);
+    if (mid.assetMode !== "final") {
+      errors.push(`expected-final-asset-mode:${mid.assetMode}`);
+    }
+    if (mid.placeholderCount > 0) {
+      errors.push(`placeholders-still-present:${mid.placeholderCount}`);
+    }
+    if (mid.fullCanvasObjectCount < state.objectCount) {
+      errors.push(
+        `missing-objects:${mid.fullCanvasObjectCount}/${state.objectCount}`,
+      );
     }
     if (mid.handoffConfidence !== "low") {
       errors.push(`confidence-not-flagged:${mid.handoffConfidence}`);
     }
   }
 
-  await new Promise((r) => setTimeout(r, 1600));
+  await new Promise((r) => setTimeout(r, 1800));
   const settled = await getStageAttrs(page);
   if (!settled.src.includes(state.expectPath)) errors.push(`wrong-image:${settled.src}`);
   if (settled.handoffPhase !== "settled" && settled.handoffPhase !== "idle") {
@@ -150,7 +167,7 @@ async function verifyMobile(page) {
   await page.emulateMediaFeatures([{ name: "prefers-reduced-motion", value: "no-preference" }]);
   await page.goto(`${BASE}${ROUTE}`, { waitUntil: "networkidle2", timeout: 60000 });
   await clickTab(page, 2);
-  await new Promise((r) => setTimeout(r, 1400));
+  await new Promise((r) => setTimeout(r, 2400));
   const attrs = await getStageAttrs(page);
   const scrollW = await page.evaluate(() => document.documentElement.scrollWidth);
   const viewport = await page.evaluate(() => document.documentElement.clientWidth);
@@ -177,7 +194,7 @@ async function main() {
   const baseErrors = await verifyBase(page);
   console.log(baseErrors.length ? "FAIL" : "OK", baseErrors);
 
-  console.log("\n=== Handoff states ===");
+  console.log("\n=== Handoff states (real transparent assets) ===");
   for (const state of STATES) {
     const errors = await verifyHandoffState(page, state);
     console.log(errors.length ? "FAIL" : "OK", state.id, errors);
@@ -204,10 +221,24 @@ async function main() {
     allOk = false;
   }
 
+  const metricsPath = path.join(
+    __dirname,
+    "../docs/qa-screenshots/contractors-motion-prototype/alignment-metrics.json",
+  );
+  let alignmentNote = "alignment-metrics.json not found — run validate-contractors-animation-alignment.py";
+  if (fs.existsSync(metricsPath)) {
+    const metrics = JSON.parse(fs.readFileSync(metricsPath, "utf8"));
+    alignmentNote = [
+      `tools stacked→final: ${metrics.tools.stackedVsFinalState.confidence} (mean ${metrics.tools.stackedVsFinalState.mean})`,
+      `builders stacked→final: ${metrics.builders.stackedVsFinalState.confidence} (mean ${metrics.builders.stackedVsFinalState.mean})`,
+    ].join("; ");
+  }
+
   console.log("\n=== Asset status ===");
-  console.log("PLACEHOLDER CHOREOGRAPHY — object layers use labeled stand-ins, not final transparent PNGs");
-  console.log("CLEAN BG — stand-in: state-liability.png until dedicated clean-scene assets supplied");
-  console.log("HANDOFF ALIGNMENT CONFIDENCE — flagged LOW (invisible handoff not verified with final art)");
+  console.log("REAL TRANSPARENT ASSETS — full 1672×941 canvas PNGs from premium-contractors-animation-assets");
+  console.log("CLEAN BG — dedicated contractors-tools/builders-clean-background.png");
+  console.log("HANDOFF ALIGNMENT —", alignmentNote);
+  console.log("FIRST VISUAL REVIEW — see docs/qa-screenshots/contractors-motion-prototype/");
 
   await browser.close();
   process.exit(allOk ? 0 : 1);
