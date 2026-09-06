@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Capture Contractors motion prototype QA screenshots. */
+/** Capture Contractors handoff choreography QA screenshots. */
 const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
@@ -10,6 +10,9 @@ const ROUTE = "/contractors-insurance/";
 
 async function goto(page) {
   await page.goto(`${BASE}${ROUTE}`, { waitUntil: "networkidle2", timeout: 60000 });
+  await page.evaluate(() =>
+    document.querySelector(".pilot-product-explorer-stage")?.scrollIntoView({ block: "center" }),
+  );
 }
 
 async function clickTab(page, index) {
@@ -18,7 +21,7 @@ async function clickTab(page, index) {
 }
 
 async function shotStage(page, file) {
-  const stage = await page.$(".pilot-product-explorer-stage");
+  const stage = await page.$(".pilot-ce-stage-frame--contractors-insurance");
   if (stage) {
     await stage.screenshot({ path: path.join(OUT, `${file}.png`) });
     console.log(`saved ${file}.png`);
@@ -35,35 +38,42 @@ async function main() {
   await page.setViewport({ width: 1440, height: 900 });
 
   await goto(page);
-  await shotStage(page, "01-property-before");
+  await shotStage(page, "01-general-load");
 
+  // Property handoff sequence
   await clickTab(page, 2);
-  await new Promise((r) => setTimeout(r, 520));
-  await shotStage(page, "02-property-motion");
-
-  await new Promise((r) => setTimeout(r, 1000));
-  await shotStage(page, "03-property-settled");
-
-  await clickTab(page, 1);
-  await new Promise((r) => setTimeout(r, 520));
-  await shotStage(page, "04-tools-motion");
+  await new Promise((r) => setTimeout(r, 480));
+  await shotStage(page, "02-property-choreography");
 
   await new Promise((r) => setTimeout(r, 900));
-  await shotStage(page, "05-tools-settled");
+  await shotStage(page, "03-property-handoff");
+
+  await new Promise((r) => setTimeout(r, 600));
+  await shotStage(page, "04-property-settled");
+
+  // Tools handoff sequence
+  await clickTab(page, 1);
+  await new Promise((r) => setTimeout(r, 480));
+  await shotStage(page, "05-tools-choreography");
+
+  await new Promise((r) => setTimeout(r, 800));
+  await shotStage(page, "06-tools-settled");
 
   await clickTab(page, 0);
   await new Promise((r) => setTimeout(r, 550));
-  await shotStage(page, "06-liability");
+  await shotStage(page, "07-liability");
 
   await clickTab(page, 3);
   await new Promise((r) => setTimeout(r, 550));
-  await shotStage(page, "07-installation");
+  await shotStage(page, "08-wrap-up");
 
   await page.setViewport({ width: 390, height: 844 });
   await goto(page);
   await clickTab(page, 2);
+  await new Promise((r) => setTimeout(r, 520));
+  await shotStage(page, "09-mobile-property-choreography");
   await new Promise((r) => setTimeout(r, 1200));
-  await shotStage(page, "08-mobile-390");
+  await shotStage(page, "10-mobile-property-settled");
 
   await browser.close();
 }

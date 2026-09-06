@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Contractors motion Coverage Explorer — runtime verification. */
+/** Contractors motion handoff choreography — runtime verification. */
 const puppeteer = require("puppeteer");
 
 const BASE = process.env.BASE_URL || "http://localhost:3012";
@@ -10,40 +10,49 @@ const STATES = [
     id: "general-liability",
     tabIndex: 0,
     expectPath: "state-liability",
-    title: "General Liability",
+    handoff: false,
   },
   {
     id: "tools-equipment-coverage",
     tabIndex: 1,
     expectPath: "state-tools-equipment",
-    title: "Tools & Equipment",
-    motion: "equipment-activate",
+    handoff: true,
   },
   {
     id: "builder-s-risk",
     tabIndex: 2,
     expectPath: "state-property",
-    title: "Builder's Risk",
-    motion: "vertical-reveal-settle",
+    handoff: true,
   },
   {
     id: "wrap-up-liability",
     tabIndex: 3,
     expectPath: "state-installation-work",
-    title: "Wrap-Up Liability",
+    handoff: false,
   },
 ];
 
-async function getVisibleImageSrc(page) {
+async function getStageAttrs(page) {
   return page.evaluate(() => {
+    const stage = document.querySelector(".pilot-ce-state-image-stage");
     const current = document.querySelector(".pilot-ce-state-image--current");
     const next = document.querySelector(".pilot-ce-state-image--next");
     const currentOpacity = current ? parseFloat(getComputedStyle(current).opacity) : 0;
     const nextOpacity = next ? parseFloat(getComputedStyle(next).opacity) : 0;
-    if (next && nextOpacity > currentOpacity) {
-      return next.getAttribute("src") || "";
-    }
-    return current?.getAttribute("src") || "";
+    const visible =
+      next && nextOpacity > currentOpacity
+        ? next.currentSrc || next.src
+        : current?.currentSrc || current?.src || "";
+    return {
+      src: visible,
+      motion: stage?.getAttribute("data-motion"),
+      handoffPhase: stage?.getAttribute("data-handoff-phase"),
+      assetMode: stage?.getAttribute("data-asset-mode"),
+      handoffConfidence: stage?.getAttribute("data-handoff-confidence"),
+      placeholderCount: document.querySelectorAll(
+        ".pilot-ce-motion-object-placeholder",
+      ).length,
+    };
   });
 }
 
@@ -51,47 +60,52 @@ async function clickTab(page, index) {
   const tabs = await page.$$(".pilot-product-coverage-card");
   if (tabs[index]) {
     await tabs[index].click();
-    await new Promise((r) => setTimeout(r, 550));
+    await new Promise((r) => setTimeout(r, 200));
   }
 }
 
 async function verifyBase(page) {
   await page.goto(`${BASE}${ROUTE}`, { waitUntil: "networkidle2", timeout: 60000 });
-  const hasStateStage = await page.$(".pilot-ce-state-image-stage");
-  const hasInteractive = await page.$(".pilot-ce-scene-interactive-master");
-  const interacted = await page.$eval(".pilot-ce-state-image-stage", (el) =>
-    el.getAttribute("data-interacted"),
+  await page.evaluate(() =>
+    document.querySelector(".pilot-product-explorer-stage")?.scrollIntoView({ block: "center" }),
   );
-  const src = await getVisibleImageSrc(page);
+  const attrs = await getStageAttrs(page);
   const errors = [];
-  if (!hasStateStage) errors.push("missing-state-image-stage");
-  if (hasInteractive) errors.push("still-interactive-master");
-  if (interacted !== "false") errors.push("should-not-be-interacted-on-load");
-  if (!src.includes("contractors-insurance-interactive-master")) {
-    errors.push(`base-not-shown:${src}`);
-  }
+  if (!attrs.src.includes("state-liability")) errors.push(`load-not-liability:${attrs.src}`);
+  if (attrs.assetMode !== "final") errors.push(`load-asset-mode:${attrs.assetMode}`);
   return errors;
 }
 
-async function verifyState(page, state) {
+async function verifyHandoffState(page, state) {
   await clickTab(page, state.tabIndex);
-  const src = await getVisibleImageSrc(page);
+
   const errors = [];
-  if (!src.includes(state.expectPath)) errors.push(`wrong-image:${src}`);
-  if (state.motion) {
-    await new Promise((r) => setTimeout(r, 200));
-    const motion = await page.$eval(".pilot-ce-state-image-stage", (el) =>
-      el.getAttribute("data-motion"),
-    );
-    if (motion !== "playing" && motion !== "idle") {
-      errors.push(`unexpected-motion:${motion}`);
+
+  if (state.handoff) {
+    await new Promise((r) => setTimeout(r, 550));
+    const mid = await getStageAttrs(page);
+    if (mid.handoffPhase !== "choreography" && mid.handoffPhase !== "handoff") {
+      /* may have passed quickly — check placeholders were visible or motion playing */
+      if (mid.motion !== "playing" && mid.placeholderCount === 0) {
+        errors.push(`no-choreography:${mid.handoffPhase}`);
+      }
+    }
+    if (mid.assetMode !== "placeholder") {
+      errors.push(`expected-placeholder-mode:${mid.assetMode}`);
+    }
+    if (mid.handoffConfidence !== "low") {
+      errors.push(`confidence-not-flagged:${mid.handoffConfidence}`);
     }
   }
-  await new Promise((r) => setTimeout(r, 1400));
-  const settledMotion = await page.$eval(".pilot-ce-state-image-stage", (el) =>
-    el.getAttribute("data-motion"),
-  );
-  if (settledMotion !== "idle") errors.push(`motion-not-settled:${settledMotion}`);
+
+  await new Promise((r) => setTimeout(r, 1600));
+  const settled = await getStageAttrs(page);
+  if (!settled.src.includes(state.expectPath)) errors.push(`wrong-image:${settled.src}`);
+  if (settled.handoffPhase !== "settled" && settled.handoffPhase !== "idle") {
+    errors.push(`not-settled:${settled.handoffPhase}`);
+  }
+  if (settled.motion !== "idle") errors.push(`motion-not-idle:${settled.motion}`);
+
   return errors;
 }
 
@@ -102,18 +116,13 @@ async function verifyRapidSwitch(page) {
     await clickTab(page, idx);
     await new Promise((r) => setTimeout(r, 180));
   }
-  await new Promise((r) => setTimeout(r, 1600));
-  const src = await getVisibleImageSrc(page);
-  const overlayCount = await page.$$eval(".pilot-ce-motion-overlay", (els) =>
-    els.filter((el) => getComputedStyle(el).display !== "none").length,
-  );
-  const motion = await page.$eval(".pilot-ce-state-image-stage", (el) =>
-    el.getAttribute("data-motion"),
-  );
+  await new Promise((r) => setTimeout(r, 1800));
+  const attrs = await getStageAttrs(page);
+  const overlayCount = await page.$$eval(".pilot-ce-motion-overlay", (els) => els.length);
   const errors = [];
-  if (!src.includes("state-tools-equipment")) errors.push(`rapid-stale:${src}`);
+  if (!attrs.src.includes("state-tools-equipment")) errors.push(`rapid-stale:${attrs.src}`);
   if (overlayCount > 1) errors.push(`ghost-overlays:${overlayCount}`);
-  if (motion === "playing") errors.push("motion-still-playing");
+  if (attrs.motion === "playing") errors.push("motion-still-playing");
   return errors;
 }
 
@@ -121,15 +130,18 @@ async function verifyReducedMotion(page) {
   await page.emulateMediaFeatures([{ name: "prefers-reduced-motion", value: "reduce" }]);
   await page.goto(`${BASE}${ROUTE}`, { waitUntil: "networkidle2", timeout: 60000 });
   await clickTab(page, 2);
-  await new Promise((r) => setTimeout(r, 300));
+  await new Promise((r) => setTimeout(r, 400));
+  const attrs = await getStageAttrs(page);
   const anim = await page.evaluate(() => {
-    const img = document.querySelector(".pilot-ce-state-image--current");
-    return img ? getComputedStyle(img).animationName : "";
+    const layer = document.querySelector(".pilot-ce-motion-object-layer");
+    return layer ? getComputedStyle(layer).animationName : "none";
   });
-  const src = await getVisibleImageSrc(page);
   const errors = [];
   if (anim && anim !== "none") errors.push(`reduced-motion-animation:${anim}`);
-  if (!src.includes("state-property")) errors.push(`reduced-motion-image:${src}`);
+  if (!attrs.src.includes("state-property")) errors.push(`reduced-motion-image:${attrs.src}`);
+  if (attrs.handoffPhase !== "settled" && attrs.handoffPhase !== "idle") {
+    errors.push(`reduced-not-settled:${attrs.handoffPhase}`);
+  }
   return errors;
 }
 
@@ -138,12 +150,12 @@ async function verifyMobile(page) {
   await page.emulateMediaFeatures([{ name: "prefers-reduced-motion", value: "no-preference" }]);
   await page.goto(`${BASE}${ROUTE}`, { waitUntil: "networkidle2", timeout: 60000 });
   await clickTab(page, 2);
-  await new Promise((r) => setTimeout(r, 1200));
-  const src = await getVisibleImageSrc(page);
+  await new Promise((r) => setTimeout(r, 1400));
+  const attrs = await getStageAttrs(page);
   const scrollW = await page.evaluate(() => document.documentElement.scrollWidth);
   const viewport = await page.evaluate(() => document.documentElement.clientWidth);
   const errors = [];
-  if (!src.includes("state-property")) errors.push(`mobile-image:${src}`);
+  if (!attrs.src.includes("state-property")) errors.push(`mobile-image:${attrs.src}`);
   if (scrollW > viewport + 1) errors.push(`mobile-overflow:${scrollW}>${viewport}`);
   return errors;
 }
@@ -161,13 +173,13 @@ async function main() {
 
   let allOk = true;
 
-  console.log("=== Base ===");
+  console.log("=== Base (General liability on load) ===");
   const baseErrors = await verifyBase(page);
   console.log(baseErrors.length ? "FAIL" : "OK", baseErrors);
 
-  console.log("\n=== States ===");
+  console.log("\n=== Handoff states ===");
   for (const state of STATES) {
-    const errors = await verifyState(page, state);
+    const errors = await verifyHandoffState(page, state);
     console.log(errors.length ? "FAIL" : "OK", state.id, errors);
     if (errors.length) allOk = false;
   }
@@ -177,7 +189,7 @@ async function main() {
   console.log(rapidErrors.length ? "FAIL" : "OK", rapidErrors);
   if (rapidErrors.length) allOk = false;
 
-  console.log("\n=== Reduced motion ===");
+  console.log("\n=== Reduced motion (skip choreography) ===");
   const rmErrors = await verifyReducedMotion(page);
   console.log(rmErrors.length ? "FAIL" : "OK", rmErrors);
   if (rmErrors.length) allOk = false;
@@ -191,6 +203,11 @@ async function main() {
     console.log("\nConsole errors:", consoleErrors.slice(0, 5));
     allOk = false;
   }
+
+  console.log("\n=== Asset status ===");
+  console.log("PLACEHOLDER CHOREOGRAPHY — object layers use labeled stand-ins, not final transparent PNGs");
+  console.log("CLEAN BG — stand-in: state-liability.png until dedicated clean-scene assets supplied");
+  console.log("HANDOFF ALIGNMENT CONFIDENCE — flagged LOW (invisible handoff not verified with final art)");
 
   await browser.close();
   process.exit(allOk ? 0 : 1);

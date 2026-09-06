@@ -2723,9 +2723,45 @@
   position: absolute;
   opacity: 0;
   transform: translate3d(0, -18px, 0) scale(0.96);
-  animation-name: ce-motion-object-descend;
   animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   animation-fill-mode: forwards;
+}
+
+/* Choreography: objects settle and hold until handoff crossfade */
+.pilot-ce-motion-object-layer--hold {
+  animation-name: ce-motion-object-descend-hold;
+}
+
+/* PLACEHOLDER stand-in shapes (choreography preview — not final art) */
+.pilot-ce-motion-object-layer--placeholder .pilot-ce-motion-object-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 1.5rem;
+  border: 1.5px dashed rgba(184, 148, 15, 0.55);
+  border-radius: 0.25rem;
+  background: rgba(208, 173, 38, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pilot-ce-motion-object-placeholder-label {
+  font-size: 0.5625rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(114, 111, 102, 0.82);
+  pointer-events: none;
+  user-select: none;
+}
+
+.pilot-ce-motion-object-layer.is-handoff-dissolve {
+  animation: ce-motion-object-handoff-dissolve 420ms ease-out forwards !important;
+}
+
+.pilot-ce-motion-overlay.is-handoff-active .pilot-ce-motion-equipment-glow,
+.pilot-ce-motion-overlay.is-handoff-active .pilot-ce-motion-property-reveal-shimmer {
+  animation: ce-motion-overlay-handoff-fade 420ms ease-out forwards !important;
 }
 
 .pilot-ce-motion-object-image {
@@ -2793,6 +2829,44 @@
   }
 }
 
+@keyframes ce-motion-object-descend-hold {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0) scale(0.94);
+  }
+  28% {
+    opacity: 0.85;
+  }
+  72% {
+    opacity: 0.72;
+    transform: translate3d(0, 2px, 0) scale(1);
+  }
+  100% {
+    opacity: 0.72;
+    transform: translate3d(0, 2px, 0) scale(1);
+  }
+}
+
+@keyframes ce-motion-object-handoff-dissolve {
+  0% {
+    opacity: 0.72;
+    transform: translate3d(0, 2px, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 2px, 0) scale(0.98);
+  }
+}
+
+@keyframes ce-motion-overlay-handoff-fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes ce-motion-object-descend {
   0% {
     opacity: 0;
@@ -2814,7 +2888,8 @@
 @media (prefers-reduced-motion: reduce) {
   .pilot-ce-motion-equipment-glow,
   .pilot-ce-motion-object-layer,
-  .pilot-ce-motion-property-reveal-shimmer {
+  .pilot-ce-motion-property-reveal-shimmer,
+  .pilot-ce-motion-object-layer.is-handoff-dissolve {
     animation: none !important;
   }
 }
