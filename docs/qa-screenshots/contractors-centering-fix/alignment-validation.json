@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "key": "tools-equipment",
+      "file": "contractors-insurance-state-tools-equipment.png",
+      "canvasShiftX": -48,
+      "canvasShiftY": 0,
+      "sceneOffsetX": 48,
+      "tolerancePx": 6,
+      "ok": false,
+      "mse": 5794.424038769317
+    },
+    {
+      "key": "builder-s-risk",
+      "file": "contractors-insurance-state-property.png",
+      "canvasShiftX": -80,
+      "canvasShiftY": -48,
+      "sceneOffsetX": 80,
+      "tolerancePx": 6,
+      "ok": false,
+      "mse": 5447.323679814011
+    },
+    {
+      "key": "wrap-up",
+      "file": "contractors-insurance-state-installation-work.png",
+      "canvasShiftX": 0,
+      "canvasShiftY": 0,
+      "sceneOffsetX": 0,
+      "tolerancePx": 6,
+      "ok": true,
+      "mse": 6202.34768189191
+    }
+  ]
+}
