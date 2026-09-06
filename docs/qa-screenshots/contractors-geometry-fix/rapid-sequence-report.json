@@ -1,0 +1,362 @@
+[
+  {
+    "viewport": "desktop-1440",
+    "drift": false,
+    "rects": [
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=828&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=828&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-property.png&w=828&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-installation-work.png&w=828&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=828&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=828&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=828&q=90",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "viewport": "desktop-1280",
+    "drift": false,
+    "rects": [
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-property.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-installation-work.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 506,
+          "h": 284.765625
+        },
+        "img": {
+          "w": 504,
+          "h": 282.765625
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=750&q=90",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "viewport": "desktop-1024",
+    "drift": false,
+    "rects": [
+      {
+        "frame": {
+          "w": 378,
+          "h": 212.734375
+        },
+        "img": {
+          "w": 376,
+          "h": 210.734375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 378,
+          "h": 212.734375
+        },
+        "img": {
+          "w": 376,
+          "h": 210.734375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 378,
+          "h": 212.734375
+        },
+        "img": {
+          "w": 376,
+          "h": 210.734375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-property.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 378,
+          "h": 212.734375
+        },
+        "img": {
+          "w": 376,
+          "h": 210.734375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-installation-work.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 378,
+          "h": 212.734375
+        },
+        "img": {
+          "w": 376,
+          "h": 210.734375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 378,
+          "h": 212.734375
+        },
+        "img": {
+          "w": 376,
+          "h": 210.734375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=750&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 378,
+          "h": 212.734375
+        },
+        "img": {
+          "w": 376,
+          "h": 210.734375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=750&q=90",
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "viewport": "mobile-390",
+    "drift": false,
+    "rects": [
+      {
+        "frame": {
+          "w": 316,
+          "h": 177.84375
+        },
+        "img": {
+          "w": 314,
+          "h": 175.84375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=640&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 316,
+          "h": 177.84375
+        },
+        "img": {
+          "w": 314,
+          "h": 175.84375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=640&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 316,
+          "h": 177.84375
+        },
+        "img": {
+          "w": 314,
+          "h": 175.84375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-property.png&w=640&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 316,
+          "h": 177.84375
+        },
+        "img": {
+          "w": 314,
+          "h": 175.84375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-installation-work.png&w=640&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 316,
+          "h": 177.84375
+        },
+        "img": {
+          "w": 314,
+          "h": 175.84375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=640&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 316,
+          "h": 177.84375
+        },
+        "img": {
+          "w": 314,
+          "h": 175.84375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=640&q=90",
+        "transform": "none"
+      },
+      {
+        "frame": {
+          "w": 316,
+          "h": 177.84375
+        },
+        "img": {
+          "w": 314,
+          "h": 175.84375
+        },
+        "src": "image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=640&q=90",
+        "transform": "none"
+      }
+    ]
+  }
+]

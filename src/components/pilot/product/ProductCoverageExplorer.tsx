@@ -35,8 +35,7 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
   const [hasImageInteracted, setHasImageInteracted] = useState(false);
   const isStateImageExplorer =
     config.coverageExplorer?.sceneMode === "coverage-state-images";
-  const usesInteractionGate =
-    config.slug === "restaurant-insurance" || config.slug === "contractors-insurance";
+  const usesInteractionGate = config.slug === "restaurant-insurance";
   const [preloadEnabled, setPreloadEnabled] = useState(false);
 
   const stateImagePreloadUrls =

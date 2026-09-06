@@ -2710,7 +2710,7 @@
   }
 }
 
-/* Coverage motion prototype (Contractors) */
+/* Coverage motion prototype (Contractors) — overlay-only; main image stays fixed */
 .pilot-ce-motion-overlay {
   position: absolute;
   inset: 0;
@@ -2732,16 +2732,6 @@
   width: 100%;
   height: auto;
   object-fit: contain;
-}
-
-.pilot-ce-state-image--motion-vertical-reveal {
-  animation: ce-motion-property-settle 1300ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  will-change: transform, opacity;
-}
-
-.pilot-ce-state-image--motion-equipment-settle {
-  animation: ce-motion-equipment-settle 1000ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  will-change: transform;
 }
 
 .pilot-ce-motion-property-reveal-shimmer {
@@ -2777,21 +2767,6 @@
   mix-blend-mode: soft-light;
 }
 
-@keyframes ce-motion-property-settle {
-  0% {
-    transform: translate3d(0, -10px, 0) scale(1.006);
-    opacity: 0.94;
-  }
-  45% {
-    transform: translate3d(0, 2px, 0) scale(1.002);
-    opacity: 1;
-  }
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-    opacity: 1;
-  }
-}
-
 @keyframes ce-motion-property-reveal-shimmer {
   0% {
     transform: translate3d(0, -100%, 0);
@@ -2800,18 +2775,6 @@
   100% {
     transform: translate3d(0, 100%, 0);
     opacity: 0;
-  }
-}
-
-@keyframes ce-motion-equipment-settle {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  40% {
-    transform: translate3d(0, -2px, 0) scale(1.003);
-  }
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
   }
 }
 
@@ -2849,8 +2812,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pilot-ce-state-image--motion-vertical-reveal,
-  .pilot-ce-state-image--motion-equipment-settle,
   .pilot-ce-motion-equipment-glow,
   .pilot-ce-motion-object-layer,
   .pilot-ce-motion-property-reveal-shimmer {
@@ -2859,11 +2820,6 @@
 }
 
 @media (max-width: 767px) {
-  .pilot-ce-state-image--motion-vertical-reveal {
-    animation-duration: 900ms;
-  }
-
-  .pilot-ce-state-image--motion-equipment-settle,
   .pilot-ce-motion-equipment-glow {
     animation-duration: 750ms;
   }

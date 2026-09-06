@@ -29,6 +29,8 @@ type CoverageStateImageStageProps = {
   enableMagnifier?: boolean;
   /** Optional per-coverage motion recipes (Contractors prototype) */
   motionRecipes?: CoverageMotionRecipesByCoverageId;
+  /** Always render the active coverage state image (Contractors — no master pre-interaction) */
+  alwaysUseStateImages?: boolean;
 };
 
 function resolveTargetSrc(
@@ -37,9 +39,12 @@ function resolveTargetSrc(
   stateImagesByCoverageId: Record<string, string>,
   hasInteracted: boolean,
   fallbackSrc: string,
+  alwaysUseStateImages: boolean,
 ): string {
-  if (!hasInteracted) return baseSrc;
-  return stateImagesByCoverageId[activeCoverageId] ?? fallbackSrc;
+  if (alwaysUseStateImages || hasInteracted) {
+    return stateImagesByCoverageId[activeCoverageId] ?? fallbackSrc;
+  }
+  return baseSrc;
 }
 
 export default function CoverageStateImageStage({
@@ -54,6 +59,7 @@ export default function CoverageStateImageStage({
   sceneClass,
   enableMagnifier = false,
   motionRecipes,
+  alwaysUseStateImages = false,
 }: CoverageStateImageStageProps) {
   const reduceMotion = usePrefersReducedMotion();
   const finePointer = useFinePointerDevice();
@@ -64,12 +70,21 @@ export default function CoverageStateImageStage({
 
   usePreloadCoverageStateImages(Object.values(stateImagesByCoverageId), true);
 
-  const [currentSrc, setCurrentSrc] = useState(baseSrc);
+  const initialSrc = resolveTargetSrc(
+    baseSrc,
+    activeCoverageId,
+    stateImagesByCoverageId,
+    hasInteracted,
+    fallbackSrc,
+    alwaysUseStateImages,
+  );
+
+  const [currentSrc, setCurrentSrc] = useState(initialSrc);
   const [nextSrc, setNextSrc] = useState<string | null>(null);
   const [showNext, setShowNext] = useState(false);
   const [hintDismissed, setHintDismissed] = useState(false);
   const transitionGen = useRef(0);
-  const visibleSrcRef = useRef(baseSrc);
+  const visibleSrcRef = useRef(initialSrc);
 
   const imageInsets = useContainedImageInsets(
     stackRef,
@@ -82,14 +97,13 @@ export default function CoverageStateImageStage({
   const magnifierSrc = showNext && nextSrc ? nextSrc : currentSrc;
   const isMagnifierTransitioning = isCrossfading;
 
-  const { motionActive, motionKey, recipe, imageMotionClass } =
-    useCoverageMotionPlayback({
-      activeCoverageId,
-      motionRecipes,
-      isCrossfading,
-      hasInteracted,
-      reduceMotion,
-    });
+  const { motionActive, motionKey, recipe } = useCoverageMotionPlayback({
+    activeCoverageId,
+    motionRecipes,
+    isCrossfading,
+    hasInteracted: alwaysUseStateImages || hasInteracted,
+    reduceMotion,
+  });
 
   const dismissHint = useCallback(() => {
     setHintDismissed(true);
@@ -102,6 +116,7 @@ export default function CoverageStateImageStage({
       stateImagesByCoverageId,
       hasInteracted,
       fallbackSrc,
+      alwaysUseStateImages,
     );
 
     if (targetSrc === visibleSrcRef.current) return;
@@ -148,6 +163,7 @@ export default function CoverageStateImageStage({
     fallbackSrc,
     hasInteracted,
     stateImagesByCoverageId,
+    alwaysUseStateImages,
     transitionMs,
   ]);
 
@@ -168,13 +184,7 @@ export default function CoverageStateImageStage({
     objectFit: "contain" as const,
     objectPosition: "center center",
   };
-  const visibleImageClass = [
-    "pilot-ce-state-image",
-    "pilot-ce-state-image--current",
-    !showNext && imageMotionClass ? imageMotionClass : "",
-  ]
-    .filter(Boolean)
-    .join(" ");
+  const visibleImageClass = "pilot-ce-state-image pilot-ce-state-image--current";
 
   return (
     <div

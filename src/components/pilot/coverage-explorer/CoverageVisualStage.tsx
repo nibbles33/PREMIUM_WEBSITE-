@@ -148,6 +148,7 @@ export default function CoverageVisualStage({
             sceneClass={explorer.cssSceneClass}
             enableMagnifier={explorer.cssSceneClass === "restaurant-insurance"}
             motionRecipes={explorer.motionRecipesByCoverageId}
+            alwaysUseStateImages={explorer.cssSceneClass === "contractors-insurance"}
           />
         ) : null}
 

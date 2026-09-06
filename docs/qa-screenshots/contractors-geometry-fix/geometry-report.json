@@ -1,0 +1,946 @@
+{
+  "capturedAt": "2026-09-06T00:45:48.193Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "sequence": [
+    {
+      "step": "A-fresh-general",
+      "label": "Fresh load — General",
+      "dataInteracted": "false",
+      "dataCoverage": "general-liability",
+      "dataMotion": "idle",
+      "imgSrc": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=828&q=90",
+      "nextImgSrc": null,
+      "component": "CoverageStateImageStage",
+      "frame": {
+        "x": 149,
+        "y": 238.4375,
+        "width": 506,
+        "height": 284.765625,
+        "top": 238.4375,
+        "left": 149,
+        "right": 655,
+        "bottom": 523.203125
+      },
+      "stage": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "stack": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "imgElement": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "paintedContainRect": {
+        "width": 506,
+        "height": 284.625,
+        "offsetX": 0,
+        "offsetY": 0.0703125,
+        "left": 149,
+        "top": 238.5078125,
+        "right": 655,
+        "bottom": 523.1328125
+      },
+      "imgStyles": {
+        "objectFit": "contain",
+        "objectPosition": "50% 50%",
+        "position": "absolute",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "252px 141.383px",
+        "overflow": "clip",
+        "aspectRatio": "auto 1672 / 941",
+        "maxWidth": "100%",
+        "maxHeight": "none",
+        "width": "504px",
+        "height": "282.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "stackStyles": {
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "position": "absolute",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "252px 141.383px",
+        "overflow": "visible",
+        "aspectRatio": "1672 / 941",
+        "maxWidth": "none",
+        "maxHeight": "none",
+        "width": "504px",
+        "height": "282.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "frameStyles": {
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "position": "relative",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "253px 142.383px",
+        "overflow": "hidden",
+        "aspectRatio": "1672 / 941",
+        "maxWidth": "100%",
+        "maxHeight": "none",
+        "width": "506px",
+        "height": "284.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "overflowAncestors": [
+        {
+          "tag": "img",
+          "class": "pilot-ce-state-image pilot-ce-state-image--current",
+          "overflow": "clip",
+          "overflowX": "clip",
+          "overflowY": "clip"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-ce-state-image-stage pilot-ce-state-image-stage--contractors-insurance",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-ce-stage-frame pilot-ce-stage-frame--contractors-insurance pilot-ce-stage-",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-product-explorer-stage relative mx-auto w-full overflow-hidden rounded-2xl",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "activeTabId": "GeneralHelps protect against third-party injury or property damage claims tied to your contracting work."
+    },
+    {
+      "step": "B-tools",
+      "label": "Click Tools",
+      "dataInteracted": "false",
+      "dataCoverage": "tools-equipment-coverage",
+      "dataMotion": "idle",
+      "imgSrc": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=828&q=90",
+      "nextImgSrc": null,
+      "component": "CoverageStateImageStage",
+      "frame": {
+        "x": 149,
+        "y": 238.4375,
+        "width": 506,
+        "height": 284.765625,
+        "top": 238.4375,
+        "left": 149,
+        "right": 655,
+        "bottom": 523.203125
+      },
+      "stage": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "stack": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "imgElement": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "paintedContainRect": {
+        "width": 506,
+        "height": 284.625,
+        "offsetX": 0,
+        "offsetY": 0.0703125,
+        "left": 149,
+        "top": 238.5078125,
+        "right": 655,
+        "bottom": 523.1328125
+      },
+      "imgStyles": {
+        "objectFit": "contain",
+        "objectPosition": "50% 50%",
+        "position": "absolute",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "252px 141.383px",
+        "overflow": "clip",
+        "aspectRatio": "auto 1672 / 941",
+        "maxWidth": "100%",
+        "maxHeight": "none",
+        "width": "504px",
+        "height": "282.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "stackStyles": {
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "position": "absolute",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "252px 141.383px",
+        "overflow": "visible",
+        "aspectRatio": "1672 / 941",
+        "maxWidth": "none",
+        "maxHeight": "none",
+        "width": "504px",
+        "height": "282.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "frameStyles": {
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "position": "relative",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "253px 142.383px",
+        "overflow": "hidden",
+        "aspectRatio": "1672 / 941",
+        "maxWidth": "100%",
+        "maxHeight": "none",
+        "width": "506px",
+        "height": "284.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "overflowAncestors": [
+        {
+          "tag": "img",
+          "class": "pilot-ce-state-image pilot-ce-state-image--current",
+          "overflow": "clip",
+          "overflowX": "clip",
+          "overflowY": "clip"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-ce-state-image-stage pilot-ce-state-image-stage--contractors-insurance",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-ce-stage-frame pilot-ce-stage-frame--contractors-insurance pilot-ce-stage-",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-product-explorer-stage relative mx-auto w-full overflow-hidden rounded-2xl",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "activeTabId": "ToolsCan cover owned tools and mobile equipment against theft or damage, subject to policy terms."
+    },
+    {
+      "step": "C-builders",
+      "label": "Click Builder's",
+      "dataInteracted": "false",
+      "dataCoverage": "builder-s-risk",
+      "dataMotion": "idle",
+      "imgSrc": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-property.png&w=828&q=90",
+      "nextImgSrc": null,
+      "component": "CoverageStateImageStage",
+      "frame": {
+        "x": 149,
+        "y": 238.4375,
+        "width": 506,
+        "height": 284.765625,
+        "top": 238.4375,
+        "left": 149,
+        "right": 655,
+        "bottom": 523.203125
+      },
+      "stage": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "stack": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "imgElement": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "paintedContainRect": {
+        "width": 506,
+        "height": 284.625,
+        "offsetX": 0,
+        "offsetY": 0.0703125,
+        "left": 149,
+        "top": 238.5078125,
+        "right": 655,
+        "bottom": 523.1328125
+      },
+      "imgStyles": {
+        "objectFit": "contain",
+        "objectPosition": "50% 50%",
+        "position": "absolute",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "252px 141.383px",
+        "overflow": "clip",
+        "aspectRatio": "auto 1672 / 941",
+        "maxWidth": "100%",
+        "maxHeight": "none",
+        "width": "504px",
+        "height": "282.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "stackStyles": {
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "position": "absolute",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "252px 141.383px",
+        "overflow": "visible",
+        "aspectRatio": "1672 / 941",
+        "maxWidth": "none",
+        "maxHeight": "none",
+        "width": "504px",
+        "height": "282.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "frameStyles": {
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "position": "relative",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "253px 142.383px",
+        "overflow": "hidden",
+        "aspectRatio": "1672 / 941",
+        "maxWidth": "100%",
+        "maxHeight": "none",
+        "width": "506px",
+        "height": "284.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "overflowAncestors": [
+        {
+          "tag": "img",
+          "class": "pilot-ce-state-image pilot-ce-state-image--current",
+          "overflow": "clip",
+          "overflowX": "clip",
+          "overflowY": "clip"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-ce-state-image-stage pilot-ce-state-image-stage--contractors-insurance",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-ce-stage-frame pilot-ce-stage-frame--contractors-insurance pilot-ce-stage-",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-product-explorer-stage relative mx-auto w-full overflow-hidden rounded-2xl",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "activeTabId": "Builder'sProtects a project under construction — materials and work in progress — against covered losses."
+    },
+    {
+      "step": "D-wrap-up",
+      "label": "Click Wrap-Up",
+      "dataInteracted": "false",
+      "dataCoverage": "wrap-up-liability",
+      "dataMotion": "idle",
+      "imgSrc": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-installation-work.png&w=828&q=90",
+      "nextImgSrc": null,
+      "component": "CoverageStateImageStage",
+      "frame": {
+        "x": 149,
+        "y": 238.4375,
+        "width": 506,
+        "height": 284.765625,
+        "top": 238.4375,
+        "left": 149,
+        "right": 655,
+        "bottom": 523.203125
+      },
+      "stage": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "stack": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "imgElement": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "paintedContainRect": {
+        "width": 506,
+        "height": 284.625,
+        "offsetX": 0,
+        "offsetY": 0.0703125,
+        "left": 149,
+        "top": 238.5078125,
+        "right": 655,
+        "bottom": 523.1328125
+      },
+      "imgStyles": {
+        "objectFit": "contain",
+        "objectPosition": "50% 50%",
+        "position": "absolute",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "252px 141.383px",
+        "overflow": "clip",
+        "aspectRatio": "auto 1672 / 941",
+        "maxWidth": "100%",
+        "maxHeight": "none",
+        "width": "504px",
+        "height": "282.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "stackStyles": {
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "position": "absolute",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "252px 141.383px",
+        "overflow": "visible",
+        "aspectRatio": "1672 / 941",
+        "maxWidth": "none",
+        "maxHeight": "none",
+        "width": "504px",
+        "height": "282.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "frameStyles": {
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "position": "relative",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "253px 142.383px",
+        "overflow": "hidden",
+        "aspectRatio": "1672 / 941",
+        "maxWidth": "100%",
+        "maxHeight": "none",
+        "width": "506px",
+        "height": "284.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "overflowAncestors": [
+        {
+          "tag": "img",
+          "class": "pilot-ce-state-image pilot-ce-state-image--current",
+          "overflow": "clip",
+          "overflowX": "clip",
+          "overflowY": "clip"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-ce-state-image-stage pilot-ce-state-image-stage--contractors-insurance",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-ce-stage-frame pilot-ce-stage-frame--contractors-insurance pilot-ce-stage-",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-product-explorer-stage relative mx-auto w-full overflow-hidden rounded-2xl",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "activeTabId": "Wrap-UpProject-specific liability structures for larger builds where one policy covers multiple parties."
+    },
+    {
+      "step": "E-general-again",
+      "label": "Click General again",
+      "dataInteracted": "false",
+      "dataCoverage": "general-liability",
+      "dataMotion": "idle",
+      "imgSrc": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=828&q=90",
+      "nextImgSrc": null,
+      "component": "CoverageStateImageStage",
+      "frame": {
+        "x": 149,
+        "y": 238.4375,
+        "width": 506,
+        "height": 284.765625,
+        "top": 238.4375,
+        "left": 149,
+        "right": 655,
+        "bottom": 523.203125
+      },
+      "stage": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "stack": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "imgElement": {
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      "paintedContainRect": {
+        "width": 506,
+        "height": 284.625,
+        "offsetX": 0,
+        "offsetY": 0.0703125,
+        "left": 149,
+        "top": 238.5078125,
+        "right": 655,
+        "bottom": 523.1328125
+      },
+      "imgStyles": {
+        "objectFit": "contain",
+        "objectPosition": "50% 50%",
+        "position": "absolute",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "252px 141.383px",
+        "overflow": "clip",
+        "aspectRatio": "auto 1672 / 941",
+        "maxWidth": "100%",
+        "maxHeight": "none",
+        "width": "504px",
+        "height": "282.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "stackStyles": {
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "position": "absolute",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "252px 141.383px",
+        "overflow": "visible",
+        "aspectRatio": "1672 / 941",
+        "maxWidth": "none",
+        "maxHeight": "none",
+        "width": "504px",
+        "height": "282.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "frameStyles": {
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "position": "relative",
+        "inset": "0px 0px 0px 0px",
+        "transform": "none",
+        "transformOrigin": "253px 142.383px",
+        "overflow": "hidden",
+        "aspectRatio": "1672 / 941",
+        "maxWidth": "100%",
+        "maxHeight": "none",
+        "width": "506px",
+        "height": "284.766px",
+        "minHeight": "0px",
+        "clipPath": "none",
+        "animationName": "none"
+      },
+      "overflowAncestors": [
+        {
+          "tag": "img",
+          "class": "pilot-ce-state-image pilot-ce-state-image--current",
+          "overflow": "clip",
+          "overflowX": "clip",
+          "overflowY": "clip"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-ce-state-image-stage pilot-ce-state-image-stage--contractors-insurance",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-ce-stage-frame pilot-ce-stage-frame--contractors-insurance pilot-ce-stage-",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "tag": "div",
+          "class": "pilot-product-explorer-stage relative mx-auto w-full overflow-hidden rounded-2xl",
+          "overflow": "hidden",
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "activeTabId": "GeneralHelps protect against third-party injury or property damage claims tied to your contracting work."
+    }
+  ],
+  "geometryComparison": {
+    "frameRects": [
+      {
+        "step": "A-fresh-general",
+        "x": 149,
+        "y": 238.4375,
+        "width": 506,
+        "height": 284.765625,
+        "top": 238.4375,
+        "left": 149,
+        "right": 655,
+        "bottom": 523.203125
+      },
+      {
+        "step": "B-tools",
+        "x": 149,
+        "y": 238.4375,
+        "width": 506,
+        "height": 284.765625,
+        "top": 238.4375,
+        "left": 149,
+        "right": 655,
+        "bottom": 523.203125
+      },
+      {
+        "step": "C-builders",
+        "x": 149,
+        "y": 238.4375,
+        "width": 506,
+        "height": 284.765625,
+        "top": 238.4375,
+        "left": 149,
+        "right": 655,
+        "bottom": 523.203125
+      },
+      {
+        "step": "D-wrap-up",
+        "x": 149,
+        "y": 238.4375,
+        "width": 506,
+        "height": 284.765625,
+        "top": 238.4375,
+        "left": 149,
+        "right": 655,
+        "bottom": 523.203125
+      },
+      {
+        "step": "E-general-again",
+        "x": 149,
+        "y": 238.4375,
+        "width": 506,
+        "height": 284.765625,
+        "top": 238.4375,
+        "left": 149,
+        "right": 655,
+        "bottom": 523.203125
+      }
+    ],
+    "imgRects": [
+      {
+        "step": "A-fresh-general",
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      {
+        "step": "B-tools",
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      {
+        "step": "C-builders",
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      {
+        "step": "D-wrap-up",
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      },
+      {
+        "step": "E-general-again",
+        "x": 150,
+        "y": 239.4375,
+        "width": 504,
+        "height": 282.765625,
+        "top": 239.4375,
+        "left": 150,
+        "right": 654,
+        "bottom": 522.203125
+      }
+    ],
+    "paintedRects": [
+      {
+        "step": "A-fresh-general",
+        "width": 506,
+        "height": 284.625,
+        "offsetX": 0,
+        "offsetY": 0.0703125,
+        "left": 149,
+        "top": 238.5078125,
+        "right": 655,
+        "bottom": 523.1328125
+      },
+      {
+        "step": "B-tools",
+        "width": 506,
+        "height": 284.625,
+        "offsetX": 0,
+        "offsetY": 0.0703125,
+        "left": 149,
+        "top": 238.5078125,
+        "right": 655,
+        "bottom": 523.1328125
+      },
+      {
+        "step": "C-builders",
+        "width": 506,
+        "height": 284.625,
+        "offsetX": 0,
+        "offsetY": 0.0703125,
+        "left": 149,
+        "top": 238.5078125,
+        "right": 655,
+        "bottom": 523.1328125
+      },
+      {
+        "step": "D-wrap-up",
+        "width": 506,
+        "height": 284.625,
+        "offsetX": 0,
+        "offsetY": 0.0703125,
+        "left": 149,
+        "top": 238.5078125,
+        "right": 655,
+        "bottom": 523.1328125
+      },
+      {
+        "step": "E-general-again",
+        "width": 506,
+        "height": 284.625,
+        "offsetX": 0,
+        "offsetY": 0.0703125,
+        "left": 149,
+        "top": 238.5078125,
+        "right": 655,
+        "bottom": 523.1328125
+      }
+    ],
+    "sources": [
+      {
+        "step": "A-fresh-general",
+        "src": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=828&q=90",
+        "interacted": "false"
+      },
+      {
+        "step": "B-tools",
+        "src": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=828&q=90",
+        "interacted": "false"
+      },
+      {
+        "step": "C-builders",
+        "src": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-property.png&w=828&q=90",
+        "interacted": "false"
+      },
+      {
+        "step": "D-wrap-up",
+        "src": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-installation-work.png&w=828&q=90",
+        "interacted": "false"
+      },
+      {
+        "step": "E-general-again",
+        "src": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=828&q=90",
+        "interacted": "false"
+      }
+    ],
+    "transforms": [
+      {
+        "step": "A-fresh-general",
+        "transform": "none",
+        "animation": "none"
+      },
+      {
+        "step": "B-tools",
+        "transform": "none",
+        "animation": "none"
+      },
+      {
+        "step": "C-builders",
+        "transform": "none",
+        "animation": "none"
+      },
+      {
+        "step": "D-wrap-up",
+        "transform": "none",
+        "animation": "none"
+      },
+      {
+        "step": "E-general-again",
+        "transform": "none",
+        "animation": "none"
+      }
+    ]
+  }
+}

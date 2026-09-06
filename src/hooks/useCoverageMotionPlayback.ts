@@ -66,17 +66,9 @@ export function useCoverageMotionPlayback({
     reduceMotion,
   ]);
 
-  const imageMotionClass =
-    motionActive && recipe?.type === "vertical-reveal-settle"
-      ? "pilot-ce-state-image--motion-vertical-reveal"
-      : motionActive && recipe?.type === "equipment-activate"
-        ? "pilot-ce-state-image--motion-equipment-settle"
-        : "";
-
   return {
     motionActive,
     motionKey,
     recipe,
-    imageMotionClass,
   };
 }
