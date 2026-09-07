@@ -9,7 +9,6 @@ import {
   CONTRACTORS_BASE_MASTER_SRC,
   CONTRACTORS_STATE_IMAGE_DIMENSIONS,
 } from "@/data/coverage-explorer/contractors-coverage-state-images";
-import { CONTRACTORS_MOTION_RECIPES } from "@/data/coverage-explorer/contractors-motion-recipes";
 import {
   getRestaurantStateImageSrc,
   RESTAURANT_BASE_MASTER_SRC,
@@ -38,7 +37,7 @@ function resolveDimensions(filename: string) {
     : INTERACTIVE_MASTER_DIMENSIONS.standard;
 }
 
-/** Build Contractors multi-image state explorer config (motion prototype). */
+/** Build Contractors multi-image state explorer config (static state images). */
 function buildContractorsStateImageConfig(
   coverageIds: string[],
 ): CoverageExplorerVisualConfig {
@@ -67,7 +66,6 @@ function buildContractorsStateImageConfig(
     svgZones: [],
     coverageStates,
     stateImagesByCoverageId,
-    motionRecipesByCoverageId: CONTRACTORS_MOTION_RECIPES,
   };
 }
 
