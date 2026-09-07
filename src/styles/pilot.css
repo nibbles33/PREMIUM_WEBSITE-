@@ -2722,7 +2722,7 @@
 .pilot-ce-motion-object-layer {
   position: absolute;
   opacity: 0;
-  transform: translate3d(0, -18px, 0) scale(0.96);
+  transform: translate3d(0, -48px, 0) scale(0.92);
   animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   animation-fill-mode: forwards;
 }
@@ -2732,7 +2732,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  transform: translate3d(0, -24px, 0);
+  transform: translate3d(0, -56px, 0) scale(0.94);
 }
 
 .pilot-ce-motion-object-layer--full-canvas.pilot-ce-motion-object-layer--hold {
@@ -2855,14 +2855,17 @@
 @keyframes ce-motion-object-descend-hold-full {
   0% {
     opacity: 0;
-    transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -56px, 0) scale(0.94);
   }
-  28% {
+  22% {
+    opacity: 0.15;
+  }
+  42% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }
 

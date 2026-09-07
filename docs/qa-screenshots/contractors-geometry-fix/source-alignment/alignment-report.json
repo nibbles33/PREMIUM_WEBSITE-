@@ -1,0 +1,57 @@
+{
+  "analyzedAt": "2026-09-06T01:00:25.870Z",
+  "results": {
+    "general-liability": {
+      "file": "contractors-insurance-state-liability.png",
+      "alignment": {
+        "sampleShiftX": 0,
+        "sampleShiftY": 0,
+        "canvasShiftX": 0,
+        "canvasShiftY": 0,
+        "mse": 0,
+        "alignedAtZero": true
+      },
+      "mseAtZero": 0,
+      "mseRatio": null
+    },
+    "tools-equipment": {
+      "file": "contractors-insurance-state-tools-equipment.png",
+      "alignment": {
+        "sampleShiftX": 7,
+        "sampleShiftY": 2,
+        "canvasShiftX": 28,
+        "canvasShiftY": 8.008510638297873,
+        "mse": 1463.9705523009932,
+        "alignedAtZero": false
+      },
+      "mseAtZero": 2811.6296650717704,
+      "mseRatio": null
+    },
+    "builder-s-risk": {
+      "file": "contractors-insurance-state-property.png",
+      "alignment": {
+        "sampleShiftX": 9,
+        "sampleShiftY": 6,
+        "canvasShiftX": 36,
+        "canvasShiftY": 24.02553191489362,
+        "mse": 4101.344070637725,
+        "alignedAtZero": false
+      },
+      "mseAtZero": 5403.853781940344,
+      "mseRatio": null
+    },
+    "wrap-up": {
+      "file": "contractors-insurance-state-installation-work.png",
+      "alignment": {
+        "sampleShiftX": -11,
+        "sampleShiftY": 37,
+        "canvasShiftX": -44,
+        "canvasShiftY": 148.15744680851066,
+        "mse": 4103.786551013824,
+        "alignedAtZero": false
+      },
+      "mseAtZero": 8275.089667107808,
+      "mseRatio": null
+    }
+  }
+}
