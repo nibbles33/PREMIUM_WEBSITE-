@@ -120,7 +120,6 @@ export default function CoverageVisualStage({
     isInteractiveMaster && explorer.highlightRenderer !== "masked-illumination";
   const sceneWidth = explorer.sceneDimensions?.width ?? 1672;
   const sceneHeight = explorer.sceneDimensions?.height ?? 941;
-  const aspectRatio = sceneWidth / sceneHeight;
 
   return (
     <div className="pilot-ce-stage" aria-live="polite" aria-atomic="true">
@@ -131,7 +130,9 @@ export default function CoverageVisualStage({
         data-scene={sceneModifier}
         style={
           isStateImages || isInteractiveMaster
-            ? ({ ["--ce-aspect" as string]: String(aspectRatio) } as React.CSSProperties)
+            ? ({
+                ["--ce-aspect" as string]: `${sceneWidth} / ${sceneHeight}`,
+              } as React.CSSProperties)
             : undefined
         }
       >

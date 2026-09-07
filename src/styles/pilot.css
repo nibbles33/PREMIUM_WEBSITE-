@@ -2530,9 +2530,18 @@
 }
 
 /* Interactive master diorama (58-route Coverage Explorer) */
+.pilot-ce-stage {
+  width: 100%;
+  min-width: 0;
+}
+
 .pilot-ce-stage-frame--interactive-master {
-  aspect-ratio: var(--ce-aspect, 1.777);
-  min-height: 18rem;
+  aspect-ratio: var(--ce-aspect, 1672 / 941);
+  /* min-height from .pilot-ce-stage-frame + breakpoints fights aspect-ratio and
+     expands frame width past the explorer column; clip is via overflow-hidden on stage. */
+  min-height: 0 !important;
+  width: 100%;
+  max-width: 100%;
   background: linear-gradient(180deg, #f7f5f0 0%, #ebe6dc 100%);
 }
 
@@ -2545,9 +2554,19 @@
   justify-content: center;
 }
 
+/* Next/Image width+height mode wraps img in a span that defaults to intrinsic width */
+.pilot-ce-scene-interactive-master > span {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+}
+
 .pilot-ce-scene-interactive-master-image {
+  display: block;
   width: 100%;
   height: 100%;
+  max-width: 100%;
   object-fit: contain;
   object-position: center center;
 }
@@ -3307,6 +3326,11 @@
     min-height: 23.5rem;
   }
 
+  .pilot-ce-stage-frame--interactive-master,
+  .pilot-ce-stage-frame--state-images {
+    min-height: 0 !important;
+  }
+
   .pilot-ce-stage-eyebrow {
     margin-bottom: 1.125rem;
     font-size: 0.71875rem;
@@ -3332,6 +3356,11 @@
     min-height: 17.5rem;
   }
 
+  .pilot-ce-stage-frame--interactive-master,
+  .pilot-ce-stage-frame--state-images {
+    min-height: 0 !important;
+  }
+
   .pilot-product-coverage-list {
     overflow-x: visible;
   }
@@ -3340,6 +3369,11 @@
 @media (max-width: 390px) {
   .pilot-ce-stage-frame {
     min-height: 16rem;
+  }
+
+  .pilot-ce-stage-frame--interactive-master,
+  .pilot-ce-stage-frame--state-images {
+    min-height: 0 !important;
   }
 
   .pilot-product-explorer-stage {
