@@ -1,0 +1,163 @@
+{
+  "desktop": {
+    "General": {
+      "coverage": "general-liability",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-liability.png",
+      "transform": "none"
+    },
+    "Tools": {
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-tools-equipment.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    },
+    "Builder": {
+      "coverage": "builder-s-risk",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-property.png",
+      "transform": "none"
+    },
+    "Wrap": {
+      "coverage": "wrap-up-liability",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-installation-work.png",
+      "transform": "none"
+    }
+  },
+  "mobile": {
+    "General": {
+      "coverage": "general-liability",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-liability.png",
+      "transform": "none"
+    },
+    "Tools": {
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-tools-equipment.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 2.21383, 0)"
+    },
+    "Builder": {
+      "coverage": "builder-s-risk",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-property.png",
+      "transform": "none"
+    },
+    "Wrap": {
+      "coverage": "wrap-up-liability",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-installation-work.png",
+      "transform": "none"
+    }
+  },
+  "consoleErrors": [],
+  "toolsClickTrace": [
+    {
+      "t": 0,
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-liability.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    },
+    {
+      "t": 50,
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-liability.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    },
+    {
+      "t": 100,
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-liability.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    },
+    {
+      "t": 150,
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-liability.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    },
+    {
+      "t": 200,
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-liability.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    },
+    {
+      "t": 250,
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-liability.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    },
+    {
+      "t": 300,
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-liability.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    },
+    {
+      "t": 350,
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-liability.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    },
+    {
+      "t": 400,
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-tools-equipment.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    },
+    {
+      "t": 450,
+      "coverage": "tools-equipment-coverage",
+      "motion": "idle",
+      "phase": "idle",
+      "overlay": false,
+      "src": "contractors-insurance-state-tools-equipment.png",
+      "transform": "matrix(0.8813, 0, 0, 0.8813, 3.5534, 0)"
+    }
+  ]
+}

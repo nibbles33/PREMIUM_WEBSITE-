@@ -2976,6 +2976,15 @@
   object-position: center center !important;
 }
 
+/*
+ * Tools state PNG uses a tighter in-canvas crop than General/Builder's/Wrap-Up.
+ * Scale to match fence geometry (765/868) without regenerating source assets.
+ */
+.pilot-ce-state-image-stage--contractors-insurance[data-coverage="tools-equipment-coverage"] .pilot-ce-state-image {
+  transform: scale(0.8813) translateX(0.8%);
+  transform-origin: center center;
+}
+
 @media (min-width: 1024px) {
   .pilot-ce-stage-frame--contractors-insurance.pilot-ce-stage-frame--state-images {
     min-height: 0 !important;
