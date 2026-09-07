@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-07  
 **Integration branch:** `cursor/site-integration-final-7402`  
-**Integration HEAD:** `8c5227b22403ff8386be3f8503aaae58088853ed`  
+**Integration HEAD:** `0caa364` (audit report + artifacts; code tip `8c5227b`)  
 **Report path:** `docs/site-integration-consolidation-report-2026-09-07.md`
 
 ---
