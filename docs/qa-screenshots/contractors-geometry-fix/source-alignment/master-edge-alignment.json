@@ -1,0 +1,42 @@
+{
+  "general-liability": {
+    "file": "contractors-insurance-state-liability.png",
+    "sampleShiftX": -1,
+    "sampleShiftY": 0,
+    "canvasShiftX": -4,
+    "canvasShiftY": 0,
+    "mseAtBest": 7667.627134037451,
+    "mseAtZero": 7702.832016695511,
+    "improvement": 35.20488265806034
+  },
+  "tools-equipment": {
+    "file": "contractors-insurance-state-tools-equipment.png",
+    "sampleShiftX": 0,
+    "sampleShiftY": 0,
+    "canvasShiftX": 0,
+    "canvasShiftY": 0,
+    "mseAtBest": 7600.932322101191,
+    "mseAtZero": 7600.932322101191,
+    "improvement": 0
+  },
+  "builder-s-risk": {
+    "file": "contractors-insurance-state-property.png",
+    "sampleShiftX": 4,
+    "sampleShiftY": 0,
+    "canvasShiftX": 16,
+    "canvasShiftY": 0,
+    "mseAtBest": 7636.1575804296435,
+    "mseAtZero": 7670.890450982388,
+    "improvement": 34.732870552744316
+  },
+  "wrap-up": {
+    "file": "contractors-insurance-state-installation-work.png",
+    "sampleShiftX": -2,
+    "sampleShiftY": 0,
+    "canvasShiftX": -8,
+    "canvasShiftY": 0,
+    "mseAtBest": 8382.733019639934,
+    "mseAtZero": 8475.040588414944,
+    "improvement": 92.30756877500971
+  }
+}

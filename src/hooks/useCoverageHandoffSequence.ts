@@ -37,18 +37,17 @@ export function useCoverageHandoffSequence({
   const [choreographyActive, setChoreographyActive] = useState(false);
   const [motionKey, setMotionKey] = useState(0);
   const sequenceGenRef = useRef(0);
+  const reduceMotionRef = useRef(reduceMotion);
+  const transitionMsRef = useRef(transitionMs);
+
+  reduceMotionRef.current = reduceMotion;
+  transitionMsRef.current = transitionMs;
 
   const usesHandoff =
     enabled &&
     Boolean(recipe?.cleanBgSrc) &&
     recipe?.handoffAtMs != null &&
     recipe.handoffAtMs >= 0;
-
-  useEffect(() => {
-    sequenceGenRef.current += 1;
-    setPhase("idle");
-    setChoreographyActive(false);
-  }, [activeCoverageId]);
 
   useEffect(() => {
     if (!usesHandoff || !recipe?.cleanBgSrc) {
@@ -61,7 +60,7 @@ export function useCoverageHandoffSequence({
     const activeRecipe = recipe;
     const cleanBgSrc = activeRecipe.cleanBgSrc as string;
     const handoffAtMs = activeRecipe.handoffAtMs ?? 0;
-    const handoffDurationMs = activeRecipe.handoffDurationMs ?? transitionMs;
+    const handoffDurationMs = activeRecipe.handoffDurationMs ?? transitionMsRef.current;
 
     const wait = (ms: number) =>
       new Promise<void>((resolve) => {
@@ -74,6 +73,9 @@ export function useCoverageHandoffSequence({
           ?.map((layer) => layer.src)
           .filter((src): src is string => Boolean(src)) ?? [];
 
+      setPhase("idle");
+      setChoreographyActive(false);
+
       try {
         await onPreload(cleanBgSrc);
         await Promise.all([...objectSrcs.map(onPreload), onPreload(finalSrc)]);
@@ -83,8 +85,11 @@ export function useCoverageHandoffSequence({
 
       if (gen !== sequenceGenRef.current) return;
 
-      if (reduceMotion) {
-        await crossfadeTo(finalSrc, transitionMs);
+      const prefersReducedMotion = reduceMotionRef.current;
+      const crossfadeMs = transitionMsRef.current;
+
+      if (prefersReducedMotion) {
+        await crossfadeTo(finalSrc, crossfadeMs);
         if (gen !== sequenceGenRef.current) return;
         setPhase("settled");
         setChoreographyActive(false);
@@ -93,7 +98,11 @@ export function useCoverageHandoffSequence({
 
       setPhase("clean-transition");
       setChoreographyActive(false);
-      await crossfadeTo(cleanBgSrc, transitionMs);
+      await crossfadeTo(cleanBgSrc, crossfadeMs);
+      if (gen !== sequenceGenRef.current) return;
+
+      // Brief hold on clean background so the scene change reads before objects enter.
+      await wait(180);
       if (gen !== sequenceGenRef.current) return;
 
       setPhase("choreography");
@@ -115,26 +124,23 @@ export function useCoverageHandoffSequence({
     return () => {
       sequenceGenRef.current += 1;
     };
-  }, [
-    activeCoverageId,
-    crossfadeTo,
-    finalSrc,
-    onPreload,
-    recipe,
-    reduceMotion,
-    transitionMs,
-    usesHandoff,
-  ]);
+  }, [activeCoverageId, crossfadeTo, finalSrc, onPreload, recipe, usesHandoff]);
 
   const hasPlaceholderLayers = Boolean(
     recipe?.objectLayers?.some((layer) => layer.placeholder),
   );
+
+  const isHandoffBusy =
+    usesHandoff &&
+    phase !== "idle" &&
+    phase !== "settled";
 
   return {
     phase,
     choreographyActive,
     motionKey,
     usesHandoff,
+    isHandoffBusy,
     alignmentConfidence: recipe?.handoffAlignmentConfidence ?? "low",
     assetMode: usesHandoff && hasPlaceholderLayers ? ("placeholder" as const) : ("final" as const),
   };

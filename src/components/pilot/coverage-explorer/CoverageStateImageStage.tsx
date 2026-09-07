@@ -170,7 +170,9 @@ export default function CoverageStateImageStage({
   }, []);
 
   useEffect(() => {
-    if (handoff.usesHandoff) return;
+    // Never bypass choreography when a handoff recipe exists or a sequence is running.
+    if (handoff.usesHandoff || handoff.isHandoffBusy) return;
+    if (motionRecipes?.[activeCoverageId]?.cleanBgSrc) return;
 
     const targetSrc = finalSrc;
     if (targetSrc === visibleSrcRef.current) return;
@@ -211,7 +213,15 @@ export default function CoverageStateImageStage({
     }
 
     void loadAndTransition();
-  }, [activeCoverageId, fallbackSrc, finalSrc, handoff.usesHandoff, transitionMs]);
+  }, [
+    activeCoverageId,
+    fallbackSrc,
+    finalSrc,
+    handoff.isHandoffBusy,
+    handoff.usesHandoff,
+    motionRecipes,
+    transitionMs,
+  ]);
 
   const handleError = (failedSrc: string) => {
     if (failedSrc === fallbackSrc) return;
@@ -234,7 +244,8 @@ export default function CoverageStateImageStage({
   const motionPlaying =
     handoff.choreographyActive ||
     handoff.phase === "handoff" ||
-    handoff.phase === "choreography";
+    handoff.phase === "choreography" ||
+    handoff.phase === "clean-transition";
 
   return (
     <div
