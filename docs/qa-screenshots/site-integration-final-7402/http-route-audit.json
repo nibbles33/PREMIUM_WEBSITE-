@@ -1,0 +1,620 @@
+{
+  "baseUrl": "http://localhost:3018",
+  "routeCounts": {
+    "appRouteCount": 74,
+    "productInsurancePages": 58,
+    "interactiveMasterRegistry": 58,
+    "excludedExtraAssets": 6,
+    "uniqueAssetFiles": 58
+  },
+  "interactiveMasterAliases": [
+    [
+      "greenhouse-agribusiness-insurance",
+      "greenhouse-insurance-interactive-master.png"
+    ]
+  ],
+  "httpResults": [
+    {
+      "route": "home",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "PremiumIB | Windsor-Essex Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "about",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "About Us | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "auto-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Auto Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "boat-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Boat Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "bonding-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Bond Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "builders-developers-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Builders & Developers Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "builders-risk-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Builder's Risk Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "business-interruption-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Business Interruption Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "careers",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Careers | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "careers/[slug]",
+      "status": 404,
+      "hasMain": false,
+      "hasExplorer": false,
+      "title": "404: This page could not be found.",
+      "ok": false
+    },
+    {
+      "route": "careers/general-application",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "General Application | Careers | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "cargo-freight-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Cargo & Freight Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "claims",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Claims Guidance | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "commercial-auto-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Commercial Auto & Fleet Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "commercial-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Commercial Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "commercial-property-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Commercial Property Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "compliance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Compliance | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "condo-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Condo Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "condominium-corporation-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Condominium Corporation Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "contact",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Contact Us | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "contractors-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Contractors Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "convenience-store-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Convenience Store & Gas Station Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "cottage-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Cottage Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "crime-fidelity-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Crime & Fidelity Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "cyber-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Cyber Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "daycare-private-school-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Daycare & Private School Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "directors-officers-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Directors & Officers (D&O) Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "dump-truck-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Dump Truck Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "employment-practices-liability-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Employment Practices Liability (EPL) in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "event-liability-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Event Liability Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "farm-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Farm Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "fitness-gym-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Fitness & Gym Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "food-truck-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Food Truck & Trailer Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "garage-dealership-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Garage & Dealership Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "get-a-quote",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Get a Quote | PremiumIB",
+      "ok": true
+    },
+    {
+      "route": "greenhouse-agribusiness-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Greenhouse & Agribusiness Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "grocery-specialty-food-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Grocery, Specialty Food & Bakery Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "group-home-auto-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Group Home & Auto Insurance Programs | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "home-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Home Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "home-sharing-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Home & Ride Sharing Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "hotel-motel-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Hotel & Motel Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "landlord-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Landlord Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "landscaping-snow-removal-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Landscaping & Snow Removal Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "life-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Life Insurance Guidance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "liquor-liability-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Liquor Liability Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "manufacturing-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Manufacturing Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "medical-dental-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Medical & Dental Office Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "mobile-home-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Mobile & Manufactured Home Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "motorcycle-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Motorcycle Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "newsletter",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Newsletter | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "non-profit-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Non-Profit Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "partners",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Our Partners | PremiumIB",
+      "ok": true
+    },
+    {
+      "route": "payment",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Make a Payment | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "personal-umbrella-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Personal Umbrella Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "pharmacy-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Pharmacy Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "pollution-liability-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Pollution Liability Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "privacy-policy",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Privacy Policy | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "product-recall-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Product Recall Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "professional-liability-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Professional Liability (E&O) Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "professional-offices-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Professional Offices Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "property-management-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Property Management Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "real-estate-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Real Estate Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "religious-organizations-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Religious Organization Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "resources",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Resources | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "restaurant-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Restaurant Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "retail-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Retail Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "salon-barber-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Salon & Barber Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "small-business-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Small Business Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "talk-to-a-broker",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Talk to a Broker | PremiumIB",
+      "ok": true
+    },
+    {
+      "route": "team",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": false,
+      "title": "Meet the Team | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "tenant-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Tenant Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "travel-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Travel Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "trucking-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Trucking Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    },
+    {
+      "route": "warehousing-insurance",
+      "status": 200,
+      "hasMain": true,
+      "hasExplorer": true,
+      "title": "Warehousing & Logistics Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "ok": true
+    }
+  ],
+  "summary": {
+    "total": 74,
+    "ok": 73,
+    "fail": 1,
+    "withExplorer": 57,
+    "uniqueConsoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": []
+  }
+}
