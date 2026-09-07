@@ -7,16 +7,16 @@
       "confidence": "low"
     },
     "stackedVsFinalState": {
-      "mean": 67.651,
-      "max": 255.0,
+      "mean": 0.007,
+      "max": 178.333,
       "pixels": 1573352,
       "confidence": "low"
     },
     "compositeProofVsFinalState": {
-      "mean": 67.653,
-      "max": 255.0,
+      "mean": 0.0,
+      "max": 0.0,
       "pixels": 1573352,
-      "confidence": "low"
+      "confidence": "high"
     }
   },
   "builders": {
@@ -27,16 +27,16 @@
       "confidence": "high"
     },
     "stackedVsFinalState": {
-      "mean": 92.97,
-      "max": 255.0,
+      "mean": 0.0,
+      "max": 0.0,
       "pixels": 1573352,
-      "confidence": "low"
+      "confidence": "high"
     },
     "compositeProofVsFinalState": {
-      "mean": 92.97,
-      "max": 255.0,
+      "mean": 0.0,
+      "max": 0.0,
       "pixels": 1573352,
-      "confidence": "low"
+      "confidence": "high"
     }
   }
 }

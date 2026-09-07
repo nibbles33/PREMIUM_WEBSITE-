@@ -110,8 +110,8 @@ async function verifyHandoffState(page, state) {
         `missing-objects:${mid.fullCanvasObjectCount}/${state.objectCount}`,
       );
     }
-    if (mid.handoffConfidence !== "low") {
-      errors.push(`confidence-not-flagged:${mid.handoffConfidence}`);
+    if (mid.handoffConfidence !== "high") {
+      errors.push(`confidence-not-high:${mid.handoffConfidence}`);
     }
   }
 
@@ -177,6 +177,25 @@ async function verifyMobile(page) {
   return errors;
 }
 
+async function verifyUnchangedStates(page) {
+  const errors = [];
+  await page.emulateMediaFeatures([{ name: "prefers-reduced-motion", value: "reduce" }]);
+  await page.goto(`${BASE}${ROUTE}`, { waitUntil: "networkidle2", timeout: 60000 });
+
+  await clickTab(page, 0);
+  await new Promise((r) => setTimeout(r, 400));
+  let attrs = await getStageAttrs(page);
+  if (!attrs.src.includes("state-liability")) errors.push(`liability-changed:${attrs.src}`);
+
+  await clickTab(page, 3);
+  await new Promise((r) => setTimeout(r, 400));
+  attrs = await getStageAttrs(page);
+  if (!attrs.src.includes("state-installation-work")) {
+    errors.push(`wrap-up-changed:${attrs.src}`);
+  }
+  return errors;
+}
+
 async function main() {
   const browser = await puppeteer.launch({
     headless: "new",
@@ -216,6 +235,11 @@ async function main() {
   console.log(mobileErrors.length ? "FAIL" : "OK", mobileErrors);
   if (mobileErrors.length) allOk = false;
 
+  console.log("\n=== Unchanged states (GL + Wrap-Up) ===");
+  const unchangedErrors = await verifyUnchangedStates(page);
+  console.log(unchangedErrors.length ? "FAIL" : "OK", unchangedErrors);
+  if (unchangedErrors.length) allOk = false;
+
   if (consoleErrors.length) {
     console.log("\nConsole errors:", consoleErrors.slice(0, 5));
     allOk = false;
@@ -238,7 +262,8 @@ async function main() {
   console.log("REAL TRANSPARENT ASSETS — full 1672×941 canvas PNGs from premium-contractors-animation-assets");
   console.log("CLEAN BG — dedicated contractors-tools/builders-clean-background.png");
   console.log("HANDOFF ALIGNMENT —", alignmentNote);
-  console.log("FIRST VISUAL REVIEW — see docs/qa-screenshots/contractors-motion-prototype/");
+  console.log("STATE IMAGES — Tools/Builders derived from composite-proof renders");
+  console.log("FIRST VISUAL REVIEW — see docs/qa-screenshots/contractors-handoff-seamless/");
 
   await browser.close();
   process.exit(allOk ? 0 : 1);

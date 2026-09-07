@@ -20,9 +20,8 @@ export const CONTRACTORS_MOTION_RECIPES: CoverageMotionRecipesByCoverageId = {
     cleanBgSrc: builders.cleanBackground,
     handoffAtMs: 980,
     handoffDurationMs: 420,
-    // Stacked assets match composite-proof (builders exact, tools mean≈0.007);
-    // approved final state PNGs differ substantially — invisible handoff flagged low
-    handoffAlignmentConfidence: "low",
+    // Approved state PNGs are composite-proof renders — handoff seamless by construction
+    handoffAlignmentConfidence: "high",
     objectLayers: [
       {
         id: "lumber-stack-1",
@@ -60,7 +59,7 @@ export const CONTRACTORS_MOTION_RECIPES: CoverageMotionRecipesByCoverageId = {
     cleanBgSrc: tools.cleanBackground,
     handoffAtMs: 860,
     handoffDurationMs: 400,
-    handoffAlignmentConfidence: "low",
+    handoffAlignmentConfidence: "high",
     emphasisCenter: { x: "62%", y: "54%" },
     objectLayers: [
       {
@@ -102,7 +101,7 @@ export const CONTRACTORS_MOTION_RECIPES: CoverageMotionRecipesByCoverageId = {
   },
 };
 
-/** Final state PNG targets for handoff crossfade (unchanged approved assets). */
+/** Final state PNG targets — derived from composite-proof renders for seamless handoff. */
 export const CONTRACTORS_HANDOFF_FINAL_SRC = {
   "builder-s-risk": CONTRACTORS_STATE_FILES.property,
   "tools-equipment-coverage": CONTRACTORS_STATE_FILES["tools-equipment"],
