@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import type { CoverageMotionRecipesByCoverageId } from "@/types/coverage-motion";
 
 /** Reusable visual families — one scene architecture per family, many product slugs. */
 export type CoverageVisualFamily =
@@ -126,6 +127,8 @@ export type CoverageExplorerVisualConfig = {
   baseSceneSrc?: string;
   /** coverageId → state image src for coverage-state-images mode */
   stateImagesByCoverageId?: Record<string, string>;
+  /** Optional per-coverage motion recipes (prototype routes) */
+  motionRecipesByCoverageId?: CoverageMotionRecipesByCoverageId;
   /** Highlight rendering strategy — defaults to dim-only for interactive-master */
   highlightRenderer?: "dim-only" | "masked-illumination";
   /** Whether family uses built-in CSS scene geometry */

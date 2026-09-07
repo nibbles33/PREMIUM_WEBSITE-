@@ -1,0 +1,90 @@
+{
+  "master": {
+    "excavator": {
+      "dx": 40,
+      "dy": 44,
+      "mse": 240.8
+    },
+    "house_center": {
+      "dx": 50,
+      "dy": 41,
+      "mse": 7075.3
+    },
+    "porta_potty": {
+      "dx": 16,
+      "dy": 15,
+      "mse": 1181.4
+    },
+    "roof_peak": {
+      "dx": 12,
+      "dy": 17,
+      "mse": 3636.1
+    }
+  },
+  "tools": {
+    "excavator": {
+      "dx": 17,
+      "dy": 9,
+      "mse": 84.6
+    },
+    "house_center": {
+      "dx": 26,
+      "dy": 7,
+      "mse": 886.2
+    },
+    "porta_potty": {
+      "dx": 16,
+      "dy": 11,
+      "mse": 657.5
+    },
+    "roof_peak": {
+      "dx": 31,
+      "dy": -5,
+      "mse": 1974.1
+    }
+  },
+  "builders": {
+    "excavator": {
+      "dx": -45,
+      "dy": 50,
+      "mse": 1733.2
+    },
+    "house_center": {
+      "dx": 27,
+      "dy": 19,
+      "mse": 696.2
+    },
+    "porta_potty": {
+      "dx": 32,
+      "dy": 30,
+      "mse": 785.9
+    },
+    "roof_peak": {
+      "dx": 25,
+      "dy": -1,
+      "mse": 1597.5
+    }
+  },
+  "wrapup": {
+    "excavator": {
+      "dx": -35,
+      "dy": -50,
+      "mse": 10073.3
+    },
+    "house_center": {
+      "dx": -36,
+      "dy": 50,
+      "mse": 4998.3
+    },
+    "porta_potty": {
+      "dx": -50,
+      "dy": -27,
+      "mse": 5087.4
+    },
+    "roof_peak": {
+      "dx": -23,
+      "dy": -41,
+      "mse": 3773.8
+    }
+  }
+}

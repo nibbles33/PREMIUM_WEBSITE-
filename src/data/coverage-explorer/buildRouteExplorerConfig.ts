@@ -5,6 +5,12 @@ import {
 import { ARCHETYPES } from "@/data/coverage-explorer/interaction-manifest/archetypes";
 import { ROUTE_MANIFEST } from "@/data/coverage-explorer/interaction-manifest/routes";
 import {
+  getContractorsStateImageSrc,
+  CONTRACTORS_BASE_MASTER_SRC,
+  CONTRACTORS_STATE_IMAGE_DIMENSIONS,
+} from "@/data/coverage-explorer/contractors-coverage-state-images";
+import { CONTRACTORS_MOTION_RECIPES } from "@/data/coverage-explorer/contractors-motion-recipes";
+import {
   getRestaurantStateImageSrc,
   RESTAURANT_BASE_MASTER_SRC,
   RESTAURANT_STATE_IMAGE_DIMENSIONS,
@@ -30,6 +36,39 @@ function resolveDimensions(filename: string) {
   return COMPACT_MASTER_FILES.has(filename)
     ? INTERACTIVE_MASTER_DIMENSIONS.compact
     : INTERACTIVE_MASTER_DIMENSIONS.standard;
+}
+
+/** Build Contractors multi-image state explorer config (motion prototype). */
+function buildContractorsStateImageConfig(
+  coverageIds: string[],
+): CoverageExplorerVisualConfig {
+  const stateImagesByCoverageId: Record<string, string> = {};
+  const coverageStates: CoverageStateConfig[] = coverageIds.map((coverageId) => {
+    const stateImageSrc = getContractorsStateImageSrc(coverageId);
+    if (stateImageSrc) {
+      stateImagesByCoverageId[coverageId] = stateImageSrc;
+    }
+    return {
+      coverageId,
+      activeZoneIds: [],
+      sceneModifier: coverageId,
+      stateImageSrc: stateImageSrc ?? undefined,
+    };
+  });
+
+  return {
+    visualFamily: "construction",
+    sceneMode: "coverage-state-images",
+    baseSceneSrc: CONTRACTORS_BASE_MASTER_SRC,
+    sceneSrc: CONTRACTORS_BASE_MASTER_SRC,
+    sceneDimensions: CONTRACTORS_STATE_IMAGE_DIMENSIONS,
+    cssSceneClass: "contractors-insurance",
+    zones: [],
+    svgZones: [],
+    coverageStates,
+    stateImagesByCoverageId,
+    motionRecipesByCoverageId: CONTRACTORS_MOTION_RECIPES,
+  };
 }
 
 /** Build Restaurant multi-image state explorer config. */
@@ -71,6 +110,10 @@ export function buildRouteExplorerConfig(
 ): CoverageExplorerVisualConfig | null {
   if (slug === "restaurant-insurance") {
     return buildRestaurantStateImageConfig(coverageIds);
+  }
+
+  if (slug === "contractors-insurance") {
+    return buildContractorsStateImageConfig(coverageIds);
   }
 
   const manifest = ROUTE_MANIFEST[slug];

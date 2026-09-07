@@ -1,0 +1,154 @@
+[
+  {
+    "step": "01-general",
+    "src": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=828&q=90",
+    "natural": {
+      "w": 768,
+      "h": 432
+    },
+    "frame": {
+      "w": 506,
+      "h": 284.765625,
+      "x": 149,
+      "y": 238.4375
+    },
+    "imgBox": {
+      "w": 504,
+      "h": 282.765625,
+      "x": 150,
+      "y": 239.4375
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%",
+    "transform": "none",
+    "width": "504px",
+    "height": "282.766px",
+    "renderedContent": {
+      "minX": 0,
+      "maxX": 503,
+      "minY": 0,
+      "maxY": 273,
+      "width": 504,
+      "height": 274,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "offsetFromCenter": 0,
+      "absLeft": 150,
+      "absTop": 239.4375
+    }
+  },
+  {
+    "step": "02-tools",
+    "src": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=828&q=90",
+    "natural": {
+      "w": 768,
+      "h": 432
+    },
+    "frame": {
+      "w": 506,
+      "h": 284.765625,
+      "x": 149,
+      "y": 238.4375
+    },
+    "imgBox": {
+      "w": 504,
+      "h": 282.765625,
+      "x": 150,
+      "y": 239.4375
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%",
+    "transform": "none",
+    "width": "504px",
+    "height": "282.766px",
+    "renderedContent": {
+      "minX": 0,
+      "maxX": 503,
+      "minY": 0,
+      "maxY": 272,
+      "width": 504,
+      "height": 273,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "offsetFromCenter": 0,
+      "absLeft": 150,
+      "absTop": 239.4375
+    }
+  },
+  {
+    "step": "03-builders",
+    "src": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-property.png&w=828&q=90",
+    "natural": {
+      "w": 768,
+      "h": 432
+    },
+    "frame": {
+      "w": 506,
+      "h": 284.765625,
+      "x": 149,
+      "y": 238.4375
+    },
+    "imgBox": {
+      "w": 504,
+      "h": 282.765625,
+      "x": 150,
+      "y": 239.4375
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%",
+    "transform": "none",
+    "width": "504px",
+    "height": "282.766px",
+    "renderedContent": {
+      "minX": 0,
+      "maxX": 503,
+      "minY": 0,
+      "maxY": 282,
+      "width": 504,
+      "height": 283,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "offsetFromCenter": 0,
+      "absLeft": 150,
+      "absTop": 239.4375
+    }
+  },
+  {
+    "step": "04-wrap-up",
+    "src": "http://localhost:3012/_next/image?url=%2Fimages%2Fcontractors-insurance-state-installation-work.png&w=828&q=90",
+    "natural": {
+      "w": 768,
+      "h": 432
+    },
+    "frame": {
+      "w": 506,
+      "h": 284.765625,
+      "x": 149,
+      "y": 238.4375
+    },
+    "imgBox": {
+      "w": 504,
+      "h": 282.765625,
+      "x": 150,
+      "y": 239.4375
+    },
+    "objectFit": "contain",
+    "objectPosition": "50% 50%",
+    "transform": "none",
+    "width": "504px",
+    "height": "282.766px",
+    "renderedContent": {
+      "minX": 0,
+      "maxX": 503,
+      "minY": 0,
+      "maxY": 282,
+      "width": 504,
+      "height": 283,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "offsetFromCenter": 0,
+      "absLeft": 150,
+      "absTop": 239.4375
+    }
+  }
+]
