@@ -40,7 +40,7 @@ export const commercialProductPages: ProductPageContent[] = [
       {
         title: "Commercial Property",
         description:
-          "Covers your equipment, inventory, and leasehold improvements against covered theft, fire, or other insured losses.",
+          "Intended to insure your equipment, inventory, and leasehold improvements for theft, fire, and other insured perils — subject to causes of loss, limits, deductibles, and policy terms.",
         icon: Store,
       },
       {

@@ -161,7 +161,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
       {
         title: "Unit Contents & Improvements",
         description:
-          "Covers your belongings and upgrades you have made inside the unit — finishes, fixtures, and betterments beyond what the corporation's policy includes.",
+          "Intended to insure your belongings and upgrades inside the unit — finishes, fixtures, and betterments beyond what the corporation's master policy includes — subject to your policy limits, definitions, and exclusions.",
         icon: Sofa,
       },
       {
@@ -445,7 +445,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
       {
         title: "Third-Party Liability",
         description:
-          "Mandatory in Ontario — covers injury or damage you cause to others while operating your motorcycle on public roads.",
+          "Required in Ontario when riding on public roads (not when the motorcycle is used on private property only). FSRA specifies minimum third-party liability coverage of at least $200,000. This coverage is intended to respond when you are legally liable for injury or property damage to others — subject to your policy limits, exclusions, and terms.",
         icon: Shield,
       },
       {
@@ -654,7 +654,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
       {
         title: "Liability Protection",
         description:
-          "Covers injury or property damage claims arising from your ownership or use of the cottage property, including guest and recreational activity exposure.",
+          "Personal liability coverage is intended to respond to certain injury or property-damage claims arising from your ownership or use of the cottage property, including some guest and recreational exposures — subject to policy limits, definitions, and exclusions.",
         icon: Droplets,
       },
       {
@@ -755,7 +755,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
       {
         title: "Baggage & Personal Effects",
         description:
-          "Covers loss, theft, or damage to luggage and personal belongings during your trip, within stated limits and deductibles.",
+          "Can pay toward loss, theft, or damage to luggage and personal belongings during your trip, within stated limits, deductibles, and policy exclusions.",
         icon: Luggage,
       },
       {

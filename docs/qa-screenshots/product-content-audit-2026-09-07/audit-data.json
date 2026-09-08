@@ -8,13 +8,13 @@
       "heroSpecific": true,
       "coverageCount": 6,
       "coverageCardQuality": "specific (good)",
-      "avgCardWords": 32.7,
+      "avgCardWords": 41,
       "thinCardCount": 0,
       "considerationsPresent": false,
       "considerationsWords": 0,
       "considerationsQuality": "absent",
       "faqCount": 5,
-      "totalSubstantiveWords": 461,
+      "totalSubstantiveWords": 564,
       "safetyFlags": [
         {
           "page": "/auto-insurance/",
@@ -33,16 +33,23 @@
         {
           "page": "/auto-insurance/",
           "field": "coverage:Accident Benefits",
-          "quote": "Accident benefits help cover medical care, rehabilitation, caregiver costs, and income replacement for you and your passengers after an injury.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
+          "quote": "For policies entered into on or after July 1, 2026, statutory accident benefits include mandatory medical, rehabilitation, and attendant care benefits.",
+          "issue": "Mandatory coverage stated — verify regulatory basis",
+          "severity": "low"
+        },
+        {
+          "page": "/auto-insurance/",
+          "field": "faq",
+          "quote": "A standard policy includes minimum third-party liability coverage of $200,000, uninsured automobile coverage, and direct compensation–property damage coverage (with limited opt-out rights), along with statutory accident benefits.",
+          "issue": "Specific dollar amount — unverified limit/deductible",
           "severity": "high"
         },
         {
           "page": "/auto-insurance/",
           "field": "faq",
-          "quote": "All Ontario drivers are legally required to carry auto insurance.",
-          "issue": "Legal/regulatory requirement stated without verifiable Ontario basis",
-          "severity": "medium"
+          "quote": "For policies entered into on or after July 1, 2026, only medical, rehabilitation, and attendant care benefits are mandatory within accident benefits — other accident benefits such as income replacement are optional.",
+          "issue": "Mandatory coverage stated — verify regulatory basis",
+          "severity": "low"
         },
         {
           "page": "/auto-insurance/",
@@ -57,7 +64,7 @@
       "geoTargeting": "Ontario-wide",
       "geoNotes": "Ontario without Windsor-Essex in body",
       "classification": "D",
-      "classificationReason": "5 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classificationReason": "4 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat coverage guarantee — states or implies automatic coverage without hedging"
     },
     {
       "route": "/boat-insurance/",
@@ -341,21 +348,14 @@
       "heroSpecific": false,
       "coverageCount": 4,
       "coverageCardQuality": "specific/hedged (strong)",
-      "avgCardWords": 42,
+      "avgCardWords": 46.5,
       "thinCardCount": 0,
       "considerationsPresent": true,
       "considerationsWords": 83,
       "considerationsQuality": "moderate",
       "faqCount": 4,
-      "totalSubstantiveWords": 547,
+      "totalSubstantiveWords": 565,
       "safetyFlags": [
-        {
-          "page": "/condo-insurance/",
-          "field": "coverage:Unit Contents & Improvements",
-          "quote": "Covers your belongings and upgrades you have made inside the unit — finishes, fixtures, and betterments beyond what the corporation's policy includes.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        },
         {
           "page": "/condo-insurance/",
           "field": "considerations",
@@ -369,7 +369,7 @@
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
       "classification": "D",
-      "classificationReason": "2 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat inclusion statement — may overstate standard policy"
+      "classificationReason": "1 content-safety flag(s): Flat inclusion statement — may overstate standard policy"
     },
     {
       "route": "/condominium-corporation-insurance/",
@@ -463,29 +463,21 @@
       "heroWords": 21,
       "heroSpecific": false,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 42.5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 50,
       "thinCardCount": 0,
       "considerationsPresent": true,
       "considerationsWords": 108,
       "considerationsQuality": "specific/useful",
       "faqCount": 4,
-      "totalSubstantiveWords": 525,
-      "safetyFlags": [
-        {
-          "page": "/cottage-insurance/",
-          "field": "coverage:Liability Protection",
-          "quote": "Covers injury or property damage claims arising from your ownership or use of the cottage property, including guest and recreational activity exposure.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "totalSubstantiveWords": 555,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "B",
+      "classificationReason": "Reasonable (555w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful"
     },
     {
       "route": "/crime-fidelity-insurance/",
@@ -1126,20 +1118,20 @@
       "heroWords": 21,
       "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 38.5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 56.5,
       "thinCardCount": 0,
       "considerationsPresent": true,
       "considerationsWords": 102,
       "considerationsQuality": "specific/useful",
       "faqCount": 4,
-      "totalSubstantiveWords": 463,
+      "totalSubstantiveWords": 535,
       "safetyFlags": [
         {
           "page": "/motorcycle-insurance/",
           "field": "coverage:Third-Party Liability",
-          "quote": "Mandatory in Ontario — covers injury or damage you cause to others while operating your motorcycle on public roads.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
+          "quote": "FSRA specifies minimum third-party liability coverage of at least $200,000.",
+          "issue": "Specific dollar amount — unverified limit/deductible",
           "severity": "high"
         }
       ],
@@ -1148,7 +1140,7 @@
       "geoTargeting": "Windsor-Essex + Ontario",
       "geoNotes": "Both Windsor-Essex and Ontario referenced",
       "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classificationReason": "1 content-safety flag(s): Specific dollar amount — unverified limit/deductible"
     },
     {
       "route": "/non-profit-insurance/",
@@ -1519,29 +1511,21 @@
       "heroWords": 19,
       "heroSpecific": false,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 30,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 36,
       "thinCardCount": 0,
       "considerationsPresent": true,
       "considerationsWords": 63,
       "considerationsQuality": "moderate",
       "faqCount": 4,
-      "totalSubstantiveWords": 375,
-      "safetyFlags": [
-        {
-          "page": "/small-business-insurance/",
-          "field": "coverage:Commercial Property",
-          "quote": "Covers your equipment, inventory, and leasehold improvements against covered theft, fire, or other insured losses.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "totalSubstantiveWords": 399,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "C",
+      "classificationReason": "Shallow depth (399w total, cards avg 36w, considerations present but thin overall)"
     },
     {
       "route": "/tenant-insurance/",
@@ -1582,28 +1566,20 @@
       "heroSpecific": true,
       "coverageCount": 4,
       "coverageCardQuality": "specific/hedged (strong)",
-      "avgCardWords": 41,
+      "avgCardWords": 43,
       "thinCardCount": 0,
       "considerationsPresent": true,
       "considerationsWords": 109,
       "considerationsQuality": "specific/useful",
       "faqCount": 4,
-      "totalSubstantiveWords": 532,
-      "safetyFlags": [
-        {
-          "page": "/travel-insurance/",
-          "field": "coverage:Baggage & Personal Effects",
-          "quote": "Covers loss, theft, or damage to luggage and personal belongings during your trip, within stated limits and deductibles.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "totalSubstantiveWords": 540,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "B",
+      "classificationReason": "Reasonable (540w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful"
     },
     {
       "route": "/trucking-insurance/",
@@ -1670,9 +1646,9 @@
   ],
   "counts": {
     "A": 2,
-    "B": 8,
-    "C": 16,
-    "D": 32
+    "B": 10,
+    "C": 17,
+    "D": 29
   },
   "allFlags": [
     {
@@ -1692,16 +1668,23 @@
     {
       "page": "/auto-insurance/",
       "field": "coverage:Accident Benefits",
-      "quote": "Accident benefits help cover medical care, rehabilitation, caregiver costs, and income replacement for you and your passengers after an injury.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
+      "quote": "For policies entered into on or after July 1, 2026, statutory accident benefits include mandatory medical, rehabilitation, and attendant care benefits.",
+      "issue": "Mandatory coverage stated — verify regulatory basis",
+      "severity": "low"
+    },
+    {
+      "page": "/auto-insurance/",
+      "field": "faq",
+      "quote": "A standard policy includes minimum third-party liability coverage of $200,000, uninsured automobile coverage, and direct compensation–property damage coverage (with limited opt-out rights), along with statutory accident benefits.",
+      "issue": "Specific dollar amount — unverified limit/deductible",
       "severity": "high"
     },
     {
       "page": "/auto-insurance/",
       "field": "faq",
-      "quote": "All Ontario drivers are legally required to carry auto insurance.",
-      "issue": "Legal/regulatory requirement stated without verifiable Ontario basis",
-      "severity": "medium"
+      "quote": "For policies entered into on or after July 1, 2026, only medical, rehabilitation, and attendant care benefits are mandatory within accident benefits — other accident benefits such as income replacement are optional.",
+      "issue": "Mandatory coverage stated — verify regulatory basis",
+      "severity": "low"
     },
     {
       "page": "/auto-insurance/",
@@ -1775,13 +1758,6 @@
     },
     {
       "page": "/condo-insurance/",
-      "field": "coverage:Unit Contents & Improvements",
-      "quote": "Covers your belongings and upgrades you have made inside the unit — finishes, fixtures, and betterments beyond what the corporation's policy includes.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/condo-insurance/",
       "field": "considerations",
       "quote": "Some policies include coverage if the corporation assesses owners for the master policy deductible after a claim.",
       "issue": "Flat inclusion statement — may overstate standard policy",
@@ -1798,13 +1774,6 @@
       "page": "/convenience-store-insurance/",
       "field": "coverage:Commercial Property",
       "quote": "Covers building, coolers, shelving, and inventory including tobacco and lottery products.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/cottage-insurance/",
-      "field": "coverage:Liability Protection",
-      "quote": "Covers injury or property damage claims arising from your ownership or use of the cottage property, including guest and recreational activity exposure.",
       "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
       "severity": "high"
     },
@@ -1881,8 +1850,8 @@
     {
       "page": "/motorcycle-insurance/",
       "field": "coverage:Third-Party Liability",
-      "quote": "Mandatory in Ontario — covers injury or damage you cause to others while operating your motorcycle on public roads.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
+      "quote": "FSRA specifies minimum third-party liability coverage of at least $200,000.",
+      "issue": "Specific dollar amount — unverified limit/deductible",
       "severity": "high"
     },
     {
@@ -1942,23 +1911,9 @@
       "severity": "high"
     },
     {
-      "page": "/small-business-insurance/",
-      "field": "coverage:Commercial Property",
-      "quote": "Covers your equipment, inventory, and leasehold improvements against covered theft, fire, or other insured losses.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
       "page": "/tenant-insurance/",
       "field": "faq",
       "quote": "Generally, a tenant policy covers the named insured and their household as defined in the policy.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/travel-insurance/",
-      "field": "coverage:Baggage & Personal Effects",
-      "quote": "Covers loss, theft, or damage to luggage and personal belongings during your trip, within stated limits and deductibles.",
       "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
       "severity": "high"
     },

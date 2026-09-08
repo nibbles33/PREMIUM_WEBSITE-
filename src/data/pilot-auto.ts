@@ -84,9 +84,9 @@ export const autoCoverageItems: AutoCoverageItem[] = [
     title: "Accident Benefits",
     shortLabel: "Accident Benefits",
     description:
-      "Medical, rehabilitation, and income replacement support after an accident — mandatory in Ontario.",
+      "Mandatory medical, rehabilitation, and attendant care benefits for Ontario policies entered into on or after July 1, 2026 — with other accident benefits available to add.",
     detail:
-      "Accident benefits help cover medical care, rehabilitation, caregiver costs, and income replacement for you and your passengers after an injury.",
+      "For policies entered into on or after July 1, 2026, statutory accident benefits include mandatory medical, rehabilitation, and attendant care benefits. Other accident benefits — such as income replacement and caregiver benefits — are optional and must be added to your policy if you want them, subject to policy terms and who is covered under your policy.",
     icon: HeartPulse,
     visualScene: "accident-benefits",
     visualEyebrow: "People first",
@@ -153,7 +153,7 @@ export const autoFaqItems = [
   {
     question: "Is auto insurance mandatory in Ontario?",
     answer:
-      "Yes. All Ontario drivers are legally required to carry auto insurance. At minimum, that includes third-party liability and accident benefits. Optional coverages like collision and comprehensive protect your own vehicle.",
+      "Yes. Ontario law requires you to carry automobile insurance before driving on public roads. A standard policy includes minimum third-party liability coverage of $200,000, uninsured automobile coverage, and direct compensation–property damage coverage (with limited opt-out rights), along with statutory accident benefits. For policies entered into on or after July 1, 2026, only medical, rehabilitation, and attendant care benefits are mandatory within accident benefits — other accident benefits such as income replacement are optional. Physical damage coverages like collision and comprehensive are also optional.",
   },
   {
     question:
