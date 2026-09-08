@@ -371,6 +371,17 @@
   gap: 0.625rem;
   width: max-content;
   will-change: transform;
+  touch-action: none;
+}
+
+.pilot-filmstrip-frame,
+.pilot-filmstrip-frame-dense {
+  touch-action: none;
+}
+
+/* Prevent nested frame content from claiming horizontal pan on mobile */
+.pilot-filmstrip-viewport * {
+  touch-action: none;
 }
 
 /* —— Shared infinite horizontal rail (Carrier, Awards, Yep) —— */
@@ -2177,6 +2188,8 @@
 
 .pilot-product-broker-flow {
   position: relative;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .pilot-product-broker-path {
@@ -2266,6 +2279,8 @@
     top: 2.75rem;
     left: 0;
     right: 0;
+    width: 100%;
+    max-width: 100%;
     height: 24px;
     z-index: 0;
   }

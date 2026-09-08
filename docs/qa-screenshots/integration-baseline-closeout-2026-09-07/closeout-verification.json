@@ -1,0 +1,145 @@
+{
+  "filmstrip": {
+    "before": {
+      "progress": "25%",
+      "transform": "translate3d(-162px, 0px, 0px)"
+    },
+    "after": {
+      "progress": "37.5%",
+      "transform": "translate3d(-137px, 0px, 0px)",
+      "url": "/"
+    },
+    "progressChanged": true,
+    "transformChanged": true,
+    "stayedOnHome": true,
+    "pass": true
+  },
+  "overflow": {},
+  "viewports": {
+    "390": {
+      "/": {
+        "delta": 0,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "/cyber-insurance/": {
+        "delta": 0,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "/restaurant-insurance/": {
+        "delta": 0,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    "768": {
+      "/": {
+        "delta": 0,
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "/cyber-insurance/": {
+        "delta": 0,
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "/restaurant-insurance/": {
+        "delta": 0,
+        "scrollWidth": 768,
+        "clientWidth": 768
+      }
+    },
+    "1024": {
+      "/": {
+        "delta": 0,
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "/cyber-insurance/": {
+        "delta": 0,
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "/restaurant-insurance/": {
+        "delta": 0,
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      }
+    },
+    "1280": {
+      "/": {
+        "delta": 0,
+        "scrollWidth": 1280,
+        "clientWidth": 1280
+      },
+      "/cyber-insurance/": {
+        "delta": 0,
+        "scrollWidth": 1280,
+        "clientWidth": 1280
+      },
+      "/restaurant-insurance/": {
+        "delta": 0,
+        "scrollWidth": 1280,
+        "clientWidth": 1280
+      }
+    },
+    "1440": {
+      "/": {
+        "delta": 0,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "/cyber-insurance/": {
+        "delta": 0,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "/restaurant-insurance/": {
+        "delta": 0,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    }
+  },
+  "reducedMotion": {
+    "home": {
+      "filmstripAutoplayPaused": true,
+      "carrierAnimation": "pilot-rail-scroll-ltr",
+      "carrierDuration": "275s"
+    },
+    "restaurant": {
+      "hasMagnifierStack": true,
+      "magnifierVisible": false,
+      "stateImageTransition": "0.08s"
+    }
+  },
+  "mobileNav": {
+    "closedOverflow": {
+      "overflow": 0
+    },
+    "openState": {
+      "open": true,
+      "linkCount": 69,
+      "bodyOverflow": "hidden",
+      "sampleHrefs": [
+        "/auto-insurance",
+        "/motorcycle-insurance",
+        "/boat-insurance",
+        "/travel-insurance",
+        "/home-sharing-insurance",
+        "/home-insurance",
+        "/condo-insurance",
+        "/tenant-insurance"
+      ],
+      "hasPersonalHome": true,
+      "hasBusinessCommercial": true,
+      "hasAbout": true,
+      "hasBroker": true,
+      "dialogOverflow": 0
+    },
+    "closed": true,
+    "errors": [],
+    "pass": true
+  }
+}

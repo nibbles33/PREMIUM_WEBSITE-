@@ -245,6 +245,15 @@ export function useTransformInfiniteRail({
       ...createPointerDragSession(event.pointerId, event.clientX, event.clientY),
       offset: offsetRef.current,
     };
+
+    const viewport = viewportRef.current;
+    if (viewport && !viewport.hasPointerCapture(event.pointerId)) {
+      try {
+        viewport.setPointerCapture(event.pointerId);
+      } catch {
+        /* ignore — capture may fail on unsupported pointers */
+      }
+    }
   };
 
   const onPointerMove = (event: ReactPointerEvent) => {
@@ -284,9 +293,12 @@ export function useTransformInfiniteRail({
     const viewport = viewportRef.current;
     if (!session.pending && !session.active) return;
 
-    if (session.active && viewport?.hasPointerCapture(event.pointerId)) {
+    if (viewport?.hasPointerCapture(event.pointerId)) {
       viewport.releasePointerCapture(event.pointerId);
     }
+
+    const totalDelta = event.clientX - session.startX;
+    const step = frameStepRef.current;
 
     if (session.suppressClick) {
       suppressClickAfterDrag(viewport);
@@ -294,9 +306,30 @@ export function useTransformInfiniteRail({
 
     isDraggingRef.current = false;
     setIsDragging(false);
-    dragSession.current = { ...idlePointerDragSession(), offset: 0 };
 
-    if (enableMomentum && session.active) {
+    if (session.active && step > 0) {
+      const swipeThreshold = Math.max(24, step * 0.12);
+      if (Math.abs(totalDelta) >= swipeThreshold) {
+        const direction = totalDelta < 0 ? 1 : -1;
+        offsetRef.current = normalizeOffsetLtr(
+          session.offset + direction * step,
+          setWidthRef.current,
+        );
+        applyTransform(offsetRef.current);
+        updateActiveIndex();
+        momentumVelocityRef.current = 0;
+      } else {
+        const progress = offsetRef.current + setWidthRef.current;
+        const nearest = Math.round(progress / step) * step;
+        offsetRef.current = normalizeOffsetLtr(
+          nearest - setWidthRef.current,
+          setWidthRef.current,
+        );
+        applyTransform(offsetRef.current);
+        updateActiveIndex();
+        momentumVelocityRef.current = 0;
+      }
+    } else if (enableMomentum && session.active) {
       momentumVelocityRef.current = Math.max(
         -2.5,
         Math.min(2.5, momentumVelocityRef.current),
@@ -305,6 +338,7 @@ export function useTransformInfiniteRail({
       momentumVelocityRef.current = 0;
     }
 
+    dragSession.current = { ...idlePointerDragSession(), offset: 0 };
     pauseAuto();
   };
 

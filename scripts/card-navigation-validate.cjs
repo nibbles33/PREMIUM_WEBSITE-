@@ -10,6 +10,7 @@ const { buildInventory, normalizeHref, RELATED_FAMILY_PAGES } = require("./card-
 
 const PORT = Number(process.env.CARD_NAV_PORT || 3016);
 const BASE = `http://localhost:${PORT}`;
+const BASE_HOST = new URL(BASE).host;
 const MOBILE_VIEWPORT = { width: 390, height: 844, isMobile: true, hasTouch: true };
 const SWIPE_DISTANCE_PX = 150;
 const TAP_DRAG_THRESHOLD_PX = 8;
@@ -132,9 +133,28 @@ async function clickHrefOnPage(page, target) {
   };
 }
 
-async function desktopDragTest(page, selector, stayPathFragment, action, distance = 120) {
+async function desktopDragTest(
+  page,
+  selector,
+  stayPathFragment,
+  action,
+  distance = 120,
+  { verifyRailAdvance = false } = {},
+) {
+  await page.evaluate((sel) => {
+    document.querySelector(sel)?.scrollIntoView({ block: "center" });
+  }, selector);
+  await new Promise((r) => setTimeout(r, 600));
+
   const el = await page.$(selector);
   if (!el) return { ok: false, error: "element-not-found", action, finalUrl: page.url() };
+
+  const beforeRail = verifyRailAdvance
+    ? await page.evaluate(() => ({
+        progress: document.querySelector(".pilot-filmstrip-progress-fill")?.style.width ?? null,
+        transform: document.querySelector(".pilot-filmstrip-inner")?.style.transform ?? null,
+      }))
+    : null;
 
   const box = await el.boundingBox();
   if (!box) return { ok: false, error: "no-bounding-box", action, finalUrl: page.url() };
@@ -147,8 +167,29 @@ async function desktopDragTest(page, selector, stayPathFragment, action, distanc
   await page.mouse.up();
   await new Promise((r) => setTimeout(r, 400));
 
+  const afterRail = verifyRailAdvance
+    ? await page.evaluate(() => ({
+        progress: document.querySelector(".pilot-filmstrip-progress-fill")?.style.width ?? null,
+        transform: document.querySelector(".pilot-filmstrip-inner")?.style.transform ?? null,
+      }))
+    : null;
+
   const stayed = page.url().includes(stayPathFragment);
-  return { ok: stayed, action, distancePx: distance, finalUrl: page.url() };
+  const railAdvanced =
+    !verifyRailAdvance ||
+    beforeRail?.progress !== afterRail?.progress ||
+    beforeRail?.transform !== afterRail?.transform;
+
+  return {
+    ok: stayed && railAdvanced,
+    stayed,
+    railAdvanced,
+    beforeRail,
+    afterRail,
+    action,
+    distancePx: distance,
+    finalUrl: page.url(),
+  };
 }
 
 async function mobileTapFirstVisible(page, selector, surfaceName) {
@@ -215,9 +256,27 @@ async function mobileTapFirstVisible(page, selector, surfaceName) {
   };
 }
 
-async function mobileSwipeTest(page, trackSelector, stayPathFragment, distance = SWIPE_DISTANCE_PX) {
+async function mobileSwipeTest(
+  page,
+  trackSelector,
+  stayPathFragment,
+  distance = SWIPE_DISTANCE_PX,
+  { verifyRailAdvance = false } = {},
+) {
+  await page.evaluate((sel) => {
+    document.querySelector(sel)?.scrollIntoView({ block: "center" });
+  }, trackSelector);
+  await new Promise((r) => setTimeout(r, 600));
+
   const el = await page.$(trackSelector);
   if (!el) return { ok: false, error: "track-not-found", finalUrl: page.url() };
+
+  const beforeRail = verifyRailAdvance
+    ? await page.evaluate(() => ({
+        progress: document.querySelector(".pilot-filmstrip-progress-fill")?.style.width ?? null,
+        transform: document.querySelector(".pilot-filmstrip-inner")?.style.transform ?? null,
+      }))
+    : null;
 
   const box = await el.boundingBox();
   if (!box) return { ok: false, error: "no-bounding-box", finalUrl: page.url() };
@@ -234,9 +293,25 @@ async function mobileSwipeTest(page, trackSelector, stayPathFragment, distance =
   await page.touchscreen.touchEnd();
   await new Promise((r) => setTimeout(r, 400));
 
+  const afterRail = verifyRailAdvance
+    ? await page.evaluate(() => ({
+        progress: document.querySelector(".pilot-filmstrip-progress-fill")?.style.width ?? null,
+        transform: document.querySelector(".pilot-filmstrip-inner")?.style.transform ?? null,
+      }))
+    : null;
+
   const stayed = page.url().includes(stayPathFragment);
+  const railAdvanced =
+    !verifyRailAdvance ||
+    beforeRail?.progress !== afterRail?.progress ||
+    beforeRail?.transform !== afterRail?.transform;
+
   return {
-    ok: stayed,
+    ok: stayed && railAdvanced,
+    stayed,
+    railAdvanced,
+    beforeRail,
+    afterRail,
     distancePx: distance,
     thresholdPx: TAP_DRAG_THRESHOLD_PX,
     finalUrl: page.url(),
@@ -409,7 +484,9 @@ async function main() {
       page: "/",
       surface: "homepage-personal-filmstrip",
       input: "mouse",
-      ...(await desktopDragTest(page, ".pilot-filmstrip-viewport", "localhost:3016/", "drag-left-120px", 120)),
+      ...(await desktopDragTest(page, ".pilot-filmstrip-viewport", BASE_HOST, "drag-left-120px", 120, {
+        verifyRailAdvance: true,
+      })),
     });
 
     await gotoPage(page, "/commercial-property-insurance/");
@@ -470,7 +547,9 @@ async function main() {
       page: "/",
       surface: "homepage-personal-filmstrip",
       test: "swipe",
-      ...(await mobileSwipeTest(page, ".pilot-filmstrip-viewport", "localhost:3016/", SWIPE_DISTANCE_PX)),
+      ...(await mobileSwipeTest(page, ".pilot-filmstrip-viewport", BASE_HOST, SWIPE_DISTANCE_PX, {
+        verifyRailAdvance: true,
+      })),
     });
 
     // Page 2: Commercial property related rail
