@@ -225,7 +225,12 @@ export function adaptCommercialProductContent(
     ctaQuoteLabel: content.ctaButtonLabel ?? content.quoteLabel,
     serviceName: content.serviceName,
     considerationsPresentation:
-      content.slug === "liquor-liability-insurance" ? "expandable" : "grid",
+      content.slug === "liquor-liability-insurance" ||
+      content.slug === "hotel-motel-insurance" ||
+      content.slug === "event-liability-insurance" ||
+      content.slug === "convenience-store-insurance"
+        ? "expandable"
+        : "grid",
   });
 }
 

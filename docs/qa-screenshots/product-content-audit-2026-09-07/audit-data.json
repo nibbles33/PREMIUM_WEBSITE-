@@ -400,32 +400,24 @@
       "route": "/convenience-store-insurance/",
       "slug": "convenience-store-insurance",
       "category": "commercial",
-      "heroWords": 16,
-      "heroSpecific": false,
+      "heroWords": 108,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 22,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 65.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 214,
-      "safetyFlags": [
-        {
-          "page": "/convenience-store-insurance/",
-          "field": "coverage:Commercial Property",
-          "quote": "Covers building, coolers, shelving, and inventory including tobacco and lottery products.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 371,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1141,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (1141w), 4 cards avg 65.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/cottage-insurance/",
@@ -624,32 +616,24 @@
       "route": "/event-liability-insurance/",
       "slug": "event-liability-insurance",
       "category": "commercial",
-      "heroWords": 18,
-      "heroSpecific": false,
+      "heroWords": 120,
+      "heroSpecific": true,
       "coverageCount": 4,
       "coverageCardQuality": "specific/hedged (strong)",
-      "avgCardWords": 28,
+      "avgCardWords": 63,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 266,
-      "safetyFlags": [
-        {
-          "page": "/event-liability-insurance/",
-          "field": "coverage:Third-Party Bodily Injury",
-          "quote": "Covers claims when attendees are injured during the event — trips, falls, and crowd incidents.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 329,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1094,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (1094w), 4 cards avg 63w, considerations yes, FAQ unique"
     },
     {
       "route": "/farm-insurance/",
@@ -862,32 +846,24 @@
       "route": "/hotel-motel-insurance/",
       "slug": "hotel-motel-insurance",
       "category": "commercial",
-      "heroWords": 19,
-      "heroSpecific": false,
+      "heroWords": 108,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 28.5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 79.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 263,
-      "safetyFlags": [
-        {
-          "page": "/hotel-motel-insurance/",
-          "field": "coverage:Commercial Property",
-          "quote": "Covers the building, furnishings, linens, and equipment against covered fire, water, and theft losses.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 341,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1181,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
-      "geoTargeting": "Windsor-Essex-primary",
-      "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (1181w), 4 cards avg 79.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/landlord-insurance/",
@@ -1576,10 +1552,10 @@
     }
   ],
   "counts": {
-    "A": 5,
+    "A": 8,
     "B": 16,
     "C": 18,
-    "D": 19
+    "D": 16
   },
   "allFlags": [
     {
@@ -1674,13 +1650,6 @@
       "severity": "high"
     },
     {
-      "page": "/convenience-store-insurance/",
-      "field": "coverage:Commercial Property",
-      "quote": "Covers building, coolers, shelving, and inventory including tobacco and lottery products.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
       "page": "/crime-fidelity-insurance/",
       "field": "coverage:Employee Dishonesty",
       "quote": "Covers theft of money, securities, or property by employees acting fraudulently.",
@@ -1705,20 +1674,6 @@
       "page": "/employment-practices-liability-insurance/",
       "field": "coverage:Wrongful Termination",
       "quote": "Covers claims alleging improper dismissal or constructive dismissal.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/event-liability-insurance/",
-      "field": "coverage:Third-Party Bodily Injury",
-      "quote": "Covers claims when attendees are injured during the event — trips, falls, and crowd incidents.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/hotel-motel-insurance/",
-      "field": "coverage:Commercial Property",
-      "quote": "Covers the building, furnishings, linens, and equipment against covered fire, water, and theft losses.",
       "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
       "severity": "high"
     },
