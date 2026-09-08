@@ -198,7 +198,8 @@ Audit reads full `considerations[].description` from source data — not collaps
 
 ## Commit
 
-*(Updated after push — see git log for hash.)*
+**Hash:** `b43e927`  
+**Message:** `feat(restaurant): UX refinement — dedupe intro + expandable considerations`
 
 ---
 
