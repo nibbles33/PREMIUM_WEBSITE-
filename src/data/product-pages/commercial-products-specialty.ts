@@ -717,36 +717,54 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
         title: "General Liability",
         description:
           "Helps protect the operation against certain third-party bodily injury, personal injury, and property-damage claims arising from the premises or operations, subject to policy terms, exclusions, and limits.",
+        detailTitle: "When everyday accidents become liability claims",
+        detailDescription:
+          "Slips on wet floors, playground incidents, and damage to a visitor's property can lead to third-party claims. For daycares and schools, these exposures often involve children, parents, and volunteers on your premises — coverage and limits depend on how your operation is structured and what your policy includes.",
         icon: Briefcase,
       },
       {
         title: "Property",
         description:
           "May help cover your building (if owned), contents, and outdoor or playground property, depending on the causes of loss and endorsements included in your policy.",
+        detailTitle: "Protecting the spaces children learn and play in",
+        detailDescription:
+          "Depending on policy structure, property coverage may address classroom contents, furniture, learning materials, office equipment, and outdoor or playground property. If you own the building, that structure may also be insurable — what is covered and how claims are paid depends on causes of loss, endorsements, and policy terms.",
         icon: Building2,
       },
       {
         title: "Abuse & Molestation Liability",
         description:
           "A distinct coverage addressing allegations of abuse, harassment, or misconduct involving staff, volunteers, or others connected with your operation — insurers offering this coverage frequently require documented safety and screening practices as part of underwriting it.",
+        detailTitle: "A coverage that needs to be addressed specifically",
+        detailDescription:
+          "This is separately underwritten from general liability and should not be assumed to be included. Insurers that offer it often review screening, supervision, and safety practices as part of underwriting. For childcare and education operations, discussing this coverage directly with your broker is an important part of the insurance review.",
         icon: Shield,
       },
       {
         title: "Professional Liability",
         description:
           "May respond to certain claims alleging errors, omissions, or breaches of professional duty in providing educational or care-related services. The scope varies by operation and policy wording.",
+        detailTitle: "Protection for professional and care-related decisions",
+        detailDescription:
+          "Educational and care-related services can involve allegations about instruction, supervision, or professional judgment. Whether a given claim falls within professional liability depends on the allegation and policy wording — it should be reviewed alongside general liability rather than treated as interchangeable coverage.",
         icon: Baby,
       },
       {
         title: "Directors & Officers",
         description:
           "For operations governed by a board, D&O insurance may help protect directors, officers, and the organization against certain claims alleging wrongful acts in governance or management decisions, subject to the policy.",
+        detailTitle: "Protection for the people making governance decisions",
+        detailDescription:
+          "Board-governed schools and larger childcare organizations can face claims tied to governance, financial oversight, or management decisions. D&O coverage addresses a different set of exposures than employment practices liability — whether it is appropriate depends on your organization's structure and should be reviewed with your broker.",
         icon: Users,
       },
       {
         title: "Business Interruption",
         description:
           "May help with lost business income and certain continuing expenses when operations are interrupted by a covered loss, subject to the policy's waiting periods, limits, and terms.",
+        detailTitle: "When a covered loss forces operations to stop",
+        detailDescription:
+          "If a covered property loss closes classrooms or disrupts enrollment, business interruption coverage may respond to lost income and certain continuing expenses — subject to waiting periods, limits, and policy terms. For operations that rely on steady enrollment and licensed capacity, understanding these conditions is part of planning for continuity.",
         icon: Store,
       },
     ],

@@ -21,6 +21,8 @@ type CoverageVisualStageProps = {
   srDetail: string;
   /** Show caption row below stage */
   showCaption?: boolean;
+  /** Show uppercase label above the stage image (default true). */
+  showStageEyebrow?: boolean;
   /** Restaurant multi-image: show base master until user interacts */
   hasInteracted?: boolean;
 };
@@ -106,6 +108,7 @@ export default function CoverageVisualStage({
   explorer,
   srDetail,
   showCaption = true,
+  showStageEyebrow = true,
   hasInteracted = true,
 }: CoverageVisualStageProps) {
   const reduceMotion = usePrefersReducedMotion();
@@ -123,7 +126,9 @@ export default function CoverageVisualStage({
 
   return (
     <div className="pilot-ce-stage" aria-live="polite" aria-atomic="true">
-      <p className="pilot-ce-stage-eyebrow">{visualEyebrow}</p>
+      {showStageEyebrow ? (
+        <p className="pilot-ce-stage-eyebrow">{visualEyebrow}</p>
+      ) : null}
 
       <div
         className={`pilot-ce-stage-frame pilot-ce-stage-frame--${sceneClass}${isStateImages || isInteractiveMaster ? " pilot-ce-stage-frame--interactive-master" : ""}${isStateImages ? " pilot-ce-stage-frame--state-images" : ""}`}

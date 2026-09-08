@@ -18,6 +18,8 @@ export type AutoCoverageItem = {
   shortLabel: string;
   description: string;
   detail: string;
+  detailTitle?: string;
+  detailDescription?: string;
   icon: LucideIcon;
   visualScene:
     | "liability"

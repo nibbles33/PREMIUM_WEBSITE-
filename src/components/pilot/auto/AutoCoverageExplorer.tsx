@@ -19,6 +19,8 @@ export default function AutoCoverageExplorer() {
   const [activeId, setActiveId] = useState(autoCoverageItems[0].id);
   const active =
     autoCoverageItems.find((item) => item.id === activeId) ?? autoCoverageItems[0];
+  const detailTitle = active.detailTitle ?? active.title;
+  const detailDescription = active.detailDescription ?? active.detail;
   const ActiveIcon = active.icon;
   const explorer = useMemo(
     () =>
@@ -70,8 +72,9 @@ export default function AutoCoverageExplorer() {
                 visualCaption={active.visualCaption}
                 visualSubcaption={active.visualSubcaption}
                 explorer={explorer!}
-                srDetail={`${active.title}: ${active.detail}`}
+                srDetail={`${detailTitle}: ${detailDescription}`}
                 showCaption={false}
+                showStageEyebrow={false}
               />
               <div className="mt-6 rounded-xl border border-gold/25 bg-[#FBF5E5]/70 px-4 py-4 lg:mt-7 lg:px-5 lg:py-4.5">
                 <div className="flex items-start gap-3">
@@ -90,10 +93,10 @@ export default function AutoCoverageExplorer() {
                   </span>
                   <div>
                     <h3 className="text-lg font-medium tracking-tight text-charcoal">
-                      {active.title}
+                      {detailTitle}
                     </h3>
                     <p className="mt-1.5 text-[14px] leading-relaxed text-secondary">
-                      {active.detail}
+                      {detailDescription}
                     </p>
                   </div>
                 </div>

@@ -18,6 +18,9 @@ export default function ProductCoverageVisualStage({
   explorer,
   hasImageInteracted = true,
 }: ProductCoverageVisualStageProps) {
+  const detailTitle = active.detailTitle ?? active.title;
+  const detailDescription = active.detailDescription ?? active.detail;
+
   if (explorer) {
     return (
       <CoverageVisualStage
@@ -27,8 +30,9 @@ export default function ProductCoverageVisualStage({
         visualCaption={active.visualCaption}
         visualSubcaption={active.visualSubcaption}
         explorer={explorer}
-        srDetail={`${active.title}: ${active.detail}`}
+        srDetail={`${detailTitle}: ${detailDescription}`}
         showCaption={false}
+        showStageEyebrow={false}
         hasInteracted={hasImageInteracted}
       />
     );

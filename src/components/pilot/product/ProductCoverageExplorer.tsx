@@ -71,6 +71,8 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
   const active =
     config.coverageItems.find((item) => item.id === activeId) ??
     config.coverageItems[0];
+  const detailTitle = active.detailTitle ?? active.title;
+  const detailDescription = active.detailDescription ?? active.detail;
   const ActiveIcon = active.icon;
   const handleTabKeyDown = useCoverageTabKeyboard(
     config.coverageItems,
@@ -135,10 +137,10 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
                   </span>
                   <div>
                     <h3 className="text-lg font-medium tracking-tight text-charcoal">
-                      {active.title}
+                      {detailTitle}
                     </h3>
                     <p className="mt-1.5 text-[14px] leading-relaxed text-secondary">
-                      {active.detail}
+                      {detailDescription}
                     </p>
                   </div>
                 </div>

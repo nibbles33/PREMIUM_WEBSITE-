@@ -31,6 +31,8 @@ import type {
 type CoverageInput = CoverageCard & {
   detail?: string;
   shortLabel?: string;
+  detailTitle?: string;
+  detailDescription?: string;
 };
 
 type BuildPilotProductConfigInput = {
@@ -87,6 +89,8 @@ function toCoverageItems(items: CoverageInput[]): ProductCoverageItem[] {
       shortLabel,
       description: item.description,
       detail,
+      detailTitle: item.detailTitle,
+      detailDescription: item.detailDescription,
       icon: item.icon,
       visualEyebrow: shortLabel,
       visualCaption: item.title,

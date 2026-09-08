@@ -9,6 +9,10 @@ export type ProductCoverageItem = {
   shortLabel: string;
   description: string;
   detail: string;
+  /** Richer detail panel title when set; falls back to `title`. */
+  detailTitle?: string;
+  /** Richer detail panel copy when set; falls back to `detail`. */
+  detailDescription?: string;
   icon: LucideIcon;
   visualEyebrow: string;
   visualCaption: string;

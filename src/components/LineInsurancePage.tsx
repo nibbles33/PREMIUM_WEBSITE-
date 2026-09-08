@@ -15,6 +15,10 @@ export type CoverageCard = {
   title: string;
   description: string;
   icon: LucideIcon;
+  /** Optional richer title for Coverage Explorer detail panel (left under image). */
+  detailTitle?: string;
+  /** Optional richer description for Coverage Explorer detail panel (left under image). */
+  detailDescription?: string;
 };
 
 export type ConsiderationItem = {
