@@ -31,16 +31,23 @@ export default function PartnerLogoCard({
   className = "",
 }: PartnerLogoCardProps) {
   const dims = sizeClasses[size];
-  const inner = (
-    <>
-      <Image
-        src={partner.src}
-        alt={partner.alt}
-        width={200}
-        height={80}
-        className={`w-auto object-contain ${dims.img}`}
-      />
-    </>
+  const showLogo = partner.hasLogo !== false && Boolean(partner.src);
+  const isSvg = partner.src.toLowerCase().endsWith(".svg");
+  const inner = showLogo ? (
+    <Image
+      src={partner.src}
+      alt={partner.alt}
+      width={200}
+      height={80}
+      unoptimized={isSvg}
+      className={`w-auto object-contain ${dims.img}`}
+    />
+  ) : (
+    <span
+      className={`px-1 text-center text-[11px] font-medium leading-snug tracking-[-0.01em] text-charcoal/85 sm:text-xs ${size === "marquee" ? "max-w-[120px] sm:max-w-[140px]" : "max-w-[150px]"}`}
+    >
+      {partner.name}
+    </span>
   );
 
   const shellClass = `partner-logo-card interactive-press flex shrink-0 items-center justify-center rounded-xl border border-border/80 bg-white shadow-[0_4px_16px_rgba(32,39,40,0.05)] transition-[border-color,box-shadow,transform] duration-300 ease-out hover:border-gold/35 hover:shadow-[0_8px_24px_rgba(32,39,40,0.09)] ${dims.shell} ${className}`;

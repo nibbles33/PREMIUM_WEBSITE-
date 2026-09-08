@@ -39,6 +39,7 @@ function CarrierDetailPanel({ carrier }: { carrier: CarrierClaimEntry }) {
               alt=""
               width={160}
               height={56}
+              unoptimized={carrier.logoPath.toLowerCase().endsWith(".svg")}
               className="max-h-12 w-auto max-w-[140px] object-contain"
             />
           </div>

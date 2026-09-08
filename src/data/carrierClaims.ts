@@ -1,4 +1,4 @@
-import { allPartners } from "@/data/partners";
+import { partnerLogoByName } from "@/data/partners";
 
 export type CarrierClaimGroup = "insurance-companies" | "specialty-mgas";
 
@@ -52,9 +52,7 @@ export function email(email: string, label?: string): CarrierClaimEmail {
 }
 
 function partnerLogo(name: string): string | undefined {
-  return allPartners.find(
-    (p) => p.name.toLowerCase() === name.toLowerCase(),
-  )?.src;
+  return partnerLogoByName(name);
 }
 
 /** Verified direct insurers — claims contacts confirmed in specification. */
@@ -361,57 +359,11 @@ const verifiedSpecialtyMgas: CarrierClaimEntry[] = [
   },
 ];
 
-/** Partner names excluded from the selector entirely. */
-const EXCLUDED_PARTNER_NAMES = new Set(
-  [
-    "Facility Association",
-    "Coachman Insurance Company",
-    "Cansure",
-    "Totten Group Insurance",
-  ].map((n) => n.toLowerCase()),
-);
-
-/** Verified entry IDs and names — used to avoid duplicate unverified rows. */
-const VERIFIED_NAMES = new Set(
-  [...verifiedInsuranceCompanies, ...verifiedSpecialtyMgas].flatMap((entry) => [
-    entry.carrierName.toLowerCase(),
-    ...(entry.searchAliases?.map((a) => a.toLowerCase()) ?? []),
-  ]),
-);
-
-function buildUnverifiedFromPartners(): CarrierClaimEntry[] {
-  const entries: CarrierClaimEntry[] = [];
-  const seen = new Set<string>();
-
-  for (const partner of allPartners) {
-    const key = partner.name.toLowerCase();
-    if (EXCLUDED_PARTNER_NAMES.has(key)) continue;
-    if (VERIFIED_NAMES.has(key)) continue;
-    if (seen.has(key)) continue;
-    seen.add(key);
-
-    const slug = partner.name
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-|-$/g, "");
-
-    entries.push({
-      id: `unverified-${slug}`,
-      carrierName: partner.name,
-      logoPath: partner.src,
-      group: "insurance-companies",
-      verified: false,
-      isDirectInsurer: true,
-    });
-  }
-
-  return entries.sort((a, b) => a.carrierName.localeCompare(b.carrierName));
-}
-
-export const insuranceCompanyClaims: CarrierClaimEntry[] = [
-  ...verifiedInsuranceCompanies,
-  ...buildUnverifiedFromPartners(),
-];
+/**
+ * Claims directory includes ONLY independently verified contacts.
+ * Partners without verified claims numbers are omitted — not listed as unverified stubs.
+ */
+export const insuranceCompanyClaims: CarrierClaimEntry[] = verifiedInsuranceCompanies;
 
 export const specialtyMgaClaims: CarrierClaimEntry[] = verifiedSpecialtyMgas;
 
