@@ -228,7 +228,11 @@ export function adaptCommercialProductContent(
       content.slug === "liquor-liability-insurance" ||
       content.slug === "hotel-motel-insurance" ||
       content.slug === "event-liability-insurance" ||
-      content.slug === "convenience-store-insurance"
+      content.slug === "convenience-store-insurance" ||
+      content.slug === "salon-barber-insurance" ||
+      content.slug === "non-profit-insurance" ||
+      content.slug === "warehousing-insurance" ||
+      content.slug === "property-management-insurance"
         ? "expandable"
         : "grid",
   });

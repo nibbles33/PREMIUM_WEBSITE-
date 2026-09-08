@@ -587,42 +587,90 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     metaTitle:
       "Salon & Barber Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Salon and barber shop insurance — general liability, professional treatment liability, property, and product exposure for Windsor-Essex personal care businesses.",
+      "Salon and barber shop insurance through an independent Windsor-Essex broker — general liability, professional treatment liability, property, and product exposure.",
     headline: "Salon & Barber Insurance",
     subhead:
-      "Coverage for hair salons, barbershops, and spas — treatment liability, chemical services, premises injury, and equipment.",
+      "Hair salons and barbershops combine two different exposure types: premises liability for customers in your reception and service areas, and professional treatment liability for cuts, colour, chemical services, and other hands-on work. Depending on what you offer, that can mean general liability for slip-and-fall incidents, treatment or professional liability for service-related injury or reaction claims, property coverage for stations and equipment, and product liability where you retail hair or skin products — each subject to the policies you purchase. Not every salon provides nails, waxing, laser, medical aesthetics, or mobile services, and higher-risk treatments must be disclosed rather than assumed to be included. Premium Insurance Brokers can help align coverage to your actual service menu and staffing model.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Salon Quote",
     coverageIntro:
-      "Salons combine premises liability with professional treatment exposures from chemical services and skin care.",
+      "Salon and barber insurance usually combines premises liability with professional treatment exposure for the services you perform — plus property and product coverage where relevant — depending on your menu, retail sales, and whether stylists are employees or independent renters.",
     coverageTypes: [
       {
         title: "General Liability",
+        shortLabel: "Liability",
         description:
-          "Covers slip-and-fall and premises injury claims in reception and service areas.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from premises incidents in reception, waiting, and service areas — such as slip-and-fall — subject to policy terms, exclusions, and limits.",
+        detailTitle: "When a wet floor in reception becomes a premises claim",
+        detailDescription:
+          "Salons and barbershops concentrate clients in reception areas, walkways, and wash stations where wet floors, cords, and product spills create slip-and-fall exposure distinct from a treatment-gone-wrong claim. General liability may address certain premises and operations claims, but scope depends on policy wording and how your location, chair-rental model, and any mobile services are disclosed during underwriting.",
         icon: Briefcase,
       },
       {
         title: "Professional / Treatment Liability",
+        shortLabel: "Treatment",
         description:
-          "Addresses claims from hair treatments, colour services, waxing, and skin care causing injury or reaction.",
+          "May help respond to certain claims alleging injury, burns, scarring, or allergic reaction from professional services you perform — such as cuts, colour, chemical treatments, or waxing — subject to policy terms and how services are scheduled.",
+        detailTitle: "A colour reaction is a professional claim, not a slip-and-fall",
+        detailDescription:
+          "Claims alleging a cut, chemical burn, scalp reaction, or injury from a treatment you performed are typically evaluated as professional or treatment liability — separate from a simple premises injury. Insurers often ask for your full service menu; waxing, advanced esthetics, laser, injections, or medical-aesthetic procedures may need specific disclosure and may not be included under standard salon wording. Do not assume every treatment type is automatically covered without review.",
         icon: Scissors,
       },
       {
         title: "Commercial Property",
+        shortLabel: "Property",
         description:
-          "Covers styling stations, equipment, product inventory, and leasehold improvements.",
+          "May help cover styling stations, dryers, chairs, product inventory, leasehold improvements, and other business property against covered causes of loss — subject to policy terms, causes of loss, and limits.",
+        detailTitle: "Stations, tools, and retail inventory add up quickly",
+        detailDescription:
+          "Salon property value sits in styling stations, equipment, back-bar inventory, and tenant improvements — with theft and water damage among common loss scenarios. Tools used off-premises or by mobile stylists may be underwritten differently from fixed shop equipment. Confirm what is owned by the salon versus booth renters, and whether gear removed from the premises needs separate scheduling.",
         icon: Store,
       },
       {
         title: "Product Liability",
+        shortLabel: "Products",
         description:
-          "Covers claims that retail products sold in-salon caused allergic reaction or injury.",
+          "May help respond to certain claims alleging illness, allergic reaction, or injury from retail products you sell or recommend — often as products liability within a general liability policy or by endorsement — subject to policy terms.",
+        detailTitle: "Retail product claims are separate from a bad haircut",
+        detailDescription:
+          "Selling shampoo, colour care, or skin products in-salon can generate product liability allegations distinct from a professional treatment claim. What triggers coverage, how completed products are defined, and whether professional-use-only products sold to clients are included depend on policy wording — confirm scope with your broker rather than assuming retail shelves are automatically fully covered.",
         icon: Shield,
       },
     ],
     whoItIsFor:
-      "Salon and barber insurance is for Windsor-Essex hair salons, barbershops, nail studios, estheticians, and day spas.",
+      "For Windsor–Essex hair salons, barbershops, and personal-care operators — reviewed through an independent broker who can coordinate premises, treatment, property, and product coverage for the services you actually provide.",
+    considerations: [
+      {
+        title: "Hair and barber services vs. advanced esthetics",
+        description:
+          "A traditional hair salon or barbershop creates a different underwriting profile from operations that add nails, laser, injections, or medical-aesthetic services. Higher-risk treatments must be disclosed — standard salon insurance does not automatically include every personal-service modality. Your broker needs your complete service menu, not just your business name.",
+      },
+      {
+        title: "Chemical treatments, colour, and allergic reactions",
+        description:
+          "Colour, bleach, relaxers, and other chemical services create burn, reaction, and scarring exposure that insurers evaluate during underwriting. Patch-test protocols and client consultation records support safe operations but do not replace treatment liability coverage. What triggers a professional claim depends on policy wording and disclosed services.",
+      },
+      {
+        title: "Booth renters and independent contractors",
+        description:
+          "Chair or booth renters are often treated as independent businesses requiring their own liability coverage — not automatically covered under the salon owner's policy. Lease agreements and renter insurance requirements should be reviewed before onboarding stylists. Disclose your staffing model to your broker.",
+      },
+      {
+        title: "Products sold vs. professional services performed",
+        description:
+          "Retail product sales can generate product liability allegations separate from professional treatment claims. Product liability, treatment liability, and premises liability address different exposures — confirm how your policy structures each rather than assuming one coverage label covers every client complaint.",
+      },
+      {
+        title: "Tools, equipment, and mobile or off-premises work",
+        description:
+          "Stylists who perform services off-site or at client locations may create coverage questions for tools, equipment, and liability away from the fixed premises. Mobile or home-based personal services may also trigger public health requirements depending on the operation — regulatory compliance is separate from insurance coverage.",
+      },
+      {
+        title: "Public health and personal service settings",
+        description:
+          "Ontario personal service settings may be subject to public health requirements depending on the services offered and how the operation is set up. Compliance supports safe operations but does not replace liability or treatment coverage. Insurers may ask about sanitation and service types during underwriting — that is an evaluation factor, not a coverage product.",
+      },
+    ],
     relatedLinks: [
       { label: "Fitness / Gym", href: "/fitness-gym-insurance/" },
       { label: "Retail Insurance", href: "/retail-insurance/" },
@@ -633,22 +681,27 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       {
         question: "Are chemical burns and allergic reactions covered?",
         answer:
-          "Treatment liability may respond to professional service claims, subject to policy terms and patch-test protocols.",
+          "Treatment or professional liability may help respond to certain claims alleging injury, burns, or allergic reaction from services you performed — subject to policy terms, disclosed services, and exclusions. A premises slip-and-fall is a different claim type from a colour reaction. Confirm which coverage applies and whether your service menu is fully disclosed to your broker.",
       },
       {
-        question: "Do booth renters need separate coverage?",
+        question: "Do booth renters need their own insurance?",
         answer:
-          "Booth renters are often independent contractors requiring their own liability. Salon owners should verify renter insurance requirements.",
+          "Often yes — booth or chair renters are frequently treated as independent operators requiring their own liability coverage rather than automatic coverage under the salon owner's policy. Salon owners should verify renter insurance requirements in lease agreements and disclose the staffing model to their broker.",
       },
       {
-        question: "Is esthetician work covered the same as hair?",
+        question: "Do I need different coverage for waxing, nails, or laser services?",
         answer:
-          "Skin care, laser, and advanced treatments may need specific endorsements. Disclose all services offered.",
+          "Advanced esthetics, laser, injections, and other higher-risk services may need specific disclosure and may not be included under standard salon wording. Do not assume a hair-focused policy automatically covers every personal-service modality — review your full menu with your broker before adding new treatments.",
       },
       {
-        question: "Are tools and equipment covered off-premises?",
+        question: "Are tools covered if I work mobile or off-premises?",
         answer:
-          "Mobile stylists may need inland marine or mobile business endorsements for equipment away from the shop.",
+          "Equipment at a fixed shop location may be insured differently from tools used off-premises or by mobile stylists. Property coverage for portable gear and liability for services performed away from the salon depend on policy wording — disclose mobile or home-based work to your broker rather than assuming standard shop coverage extends automatically.",
+      },
+      {
+        question: "What should I disclose when requesting a quote?",
+        answer:
+          "Service menu, number of stations, employee vs. booth-renter model, retail product sales, chemical services offered, mobile or off-premises work, prior claims, and any plans to add nails, waxing, laser, or other advanced treatments. Incomplete disclosure can affect whether a future claim falls within policy terms.",
       },
     ],
     ctaHeading: "Run a salon or barber shop?",
@@ -665,42 +718,90 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     metaTitle:
       "Non-Profit Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Non-profit and charity insurance — D&O, general liability, property, and volunteer coverage for Windsor-Essex organizations.",
+      "Non-profit and charity insurance through an independent Windsor-Essex broker — general liability, D&O, property, and volunteer coverage for community organizations.",
     headline: "Non-Profit Insurance",
     subhead:
-      "Coverage for charities and nonprofits — board liability, volunteer injury, events, and the property that supports your mission.",
+      "Charities and non-profits combine program delivery, volunteer involvement, and board governance into exposures that differ from a typical small business — even when the day-to-day work looks similar. Depending on your organization, that can mean general liability for events and program locations, directors and officers coverage for governance claims, property coverage for office contents and donated goods, volunteer accident coverage where purchased, and — for programs serving children or vulnerable persons — abuse or misconduct coverage reviewed separately. Not every non-profit needs the same coverage stack; a community sports league, a social service agency, and a grant-making foundation face different profiles. Premium Insurance Brokers can help align insurance to your programs, funding requirements, and governance structure.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Non-Profit Quote",
     coverageIntro:
-      "Nonprofits face governance, volunteer, and event exposures similar to businesses — often with tighter budgets and unique funding requirements.",
+      "Non-profit insurance usually addresses premises and program liability, board governance exposure, property supporting your mission, and — where relevant — volunteer injury and abuse or misconduct coverage — depending on your programs, lease arrangements, and funder requirements.",
     coverageTypes: [
       {
         title: "General Liability",
+        shortLabel: "Liability",
         description:
-          "Covers injury and property damage claims at events, offices, and program locations.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from your operations, events, offices, and program locations — subject to policy terms, exclusions, and limits.",
+        detailTitle: "When a program participant injury becomes an organization claim",
+        detailDescription:
+          "Community programs, fundraising events, food drives, and leased facility operations can generate third-party injury or property-damage claims against the organization — distinct from a board governance dispute or an employee injury covered elsewhere. Whether a specific event, off-site program, or volunteer activity is covered depends on policy wording and what was disclosed during underwriting. Funder and venue certificate requirements are contractual — separate from what any single policy automatically includes.",
         icon: Briefcase,
       },
       {
         title: "Directors & Officers",
+        shortLabel: "D&O",
         description:
-          "Protects board members against claims alleging mismanagement or failure to fulfill fiduciary duties.",
+          "May help respond to certain claims alleging wrongful acts in governance or management decisions by directors, officers, and the organization — subject to policy terms, exclusions, and limits.",
+        detailTitle: "Board decisions can generate claims separate from program injury",
+        detailDescription:
+          "Directors and officers of Ontario non-profits have governance duties under applicable corporate law, including the Ontario Not-for-Profit Corporations Act where it applies — but D&O insurance does not eliminate those statutory duties. It may help respond to certain claims alleging mismanagement, financial oversight failures, or employment-related governance disputes, depending on policy wording. D&O addresses a different exposure from general liability for premises or program injury.",
         icon: Shield,
       },
       {
         title: "Commercial Property",
+        shortLabel: "Property",
         description:
-          "Covers office contents, donated goods inventory, and equipment used in programs.",
+          "May help cover office contents, equipment, donated goods inventory, and other business personal property against covered causes of loss — subject to policy terms, valuation, and limits.",
+        detailTitle: "Donated goods and program equipment still have insurable value",
+        detailDescription:
+          "Non-profits often operate from leased space with contents, computers, program supplies, and donated inventory that represent real property exposure — even when the organization does not own the building. Donated goods may need scheduled values and specific causes of loss. Property coverage for leased premises is separate from the landlord's building insurance — confirm what you are responsible for insuring under your lease.",
         icon: Building2,
       },
       {
         title: "Volunteer Accident",
+        shortLabel: "Volunteers",
         description:
-          "May provide limited medical coverage for volunteers injured while serving, subject to policy terms.",
+          "May provide limited medical or accident benefits for volunteers injured while serving the organization — where purchased and subject to policy terms, limits, and exclusions.",
+        detailTitle: "Volunteer injury is not always the same as employee WSIB coverage",
+        detailDescription:
+          "Volunteers are not employees, and WSIB coverage rules depend on whether a volunteer is deemed a worker in the circumstances — a regulatory question separate from optional volunteer accident insurance. Volunteer accident coverage, where available, may address limited medical expenses for volunteers injured during approved activities — subject to policy terms. It does not replace general liability for third-party claims or abuse coverage where programs serve vulnerable persons.",
         icon: Users,
       },
     ],
     whoItIsFor:
-      "Non-profit insurance is for Windsor-Essex charities, foundations, community organizations, and social service agencies with boards, staff, and volunteers.",
+      "For Windsor–Essex charities, foundations, community organizations, and social-service agencies — reviewed through an independent broker who can coordinate liability, governance, property, and program-specific coverage for how you actually operate.",
+    considerations: [
+      {
+        title: "Board governance and D&O coverage",
+        description:
+          "Directors and officers of Ontario non-profits have governance responsibilities under applicable corporate law. D&O insurance may help respond to certain claims alleging wrongful governance or management acts — but it does not eliminate statutory director duties and is separate from general liability for program injury. Board-governed organizations should review D&O alongside general liability rather than treating one policy as comprehensive protection.",
+      },
+      {
+        title: "Volunteers vs. employees",
+        description:
+          "Volunteers, part-time staff, and paid employees create different injury and liability profiles. WSIB obligations depend on whether a person is deemed a worker — a regulatory question, not an automatic insurance product. Volunteer accident coverage, where purchased, is optional and limited — disclose how your organization uses volunteers during underwriting.",
+      },
+      {
+        title: "Abuse and misconduct coverage — conditional on your programs",
+        description:
+          "Organizations serving children, youth, or vulnerable persons may need abuse or misconduct liability reviewed as a distinct coverage — not assumed to be included in general liability. Insurers offering this coverage often review screening, supervision, and safety practices during underwriting. A food bank or arts council without vulnerable-person programming may not need the same structure as a youth mentorship agency.",
+      },
+      {
+        title: "Fundraising events and temporary locations",
+        description:
+          "Galas, fun runs, festivals, and pop-up program locations can extend liability beyond your primary address. Large or high-risk events may need separate event liability review depending on size, activities, and venue contract requirements. Bring event contracts to your broker so certificates match what you agreed to.",
+      },
+      {
+        title: "Donated property, contents, and leased facilities",
+        description:
+          "Donated inventory, thrift goods, and program supplies may need scheduled values under property coverage. Leased offices and program space require clarity on what the organization insures versus what the landlord covers — property for tenant contents is separate from the building owner's policy.",
+      },
+      {
+        title: "Funder and partner certificate requirements",
+        description:
+          "Grants, municipal partnerships, and facility-use agreements often specify minimum general liability or D&O limits — contractual requirements from the funder or partner, not universal provincial insurance mandates for all non-profits. Maintain copies of what each relationship actually requires.",
+      },
+    ],
     relatedLinks: [
       { label: "Directors & Officers", href: "/directors-officers-insurance/" },
       { label: "Event Liability", href: "/event-liability-insurance/" },
@@ -709,24 +810,29 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     faqTitle: "Non-profit FAQ",
     faqItems: [
       {
-        question: "Do volunteers need WSIB?",
+        question: "Does our board need D&O insurance?",
         answer:
-          "Volunteer coverage varies. Some organizations carry volunteer accident medical coverage. WSIB rules depend on whether volunteers are deemed workers.",
+          "Board-governed non-profits can face claims alleging governance or management failures — separately from general liability for program injury. D&O coverage, where purchased, may help respond to certain claims against directors and officers subject to policy terms. It does not eliminate statutory director duties under applicable corporate law. Many organizations carry D&O to support board recruitment, but the appropriate structure depends on your governance model.",
       },
       {
-        question: "Does our board need D&O?",
+        question: "Are volunteers covered if injured while serving?",
         answer:
-          "Directors can be personally named in governance lawsuits. D&O helps attract and retain board members.",
+          "Volunteer accident coverage, where purchased, may provide limited medical benefits for volunteers injured during approved activities — subject to policy terms. Volunteers are not employees, and WSIB coverage depends on whether a volunteer is deemed a worker in the circumstances. General liability may address certain third-party claims, but volunteer medical expenses are a separate coverage question — review with your broker.",
       },
       {
-        question: "Are fundraising events covered?",
+        question: "Do we need abuse coverage for our programs?",
         answer:
-          "One-off events may need event liability or be included in annual GL depending on size and activities.",
+          "Organizations serving children, youth, or vulnerable persons should review abuse or misconduct liability as a distinct coverage — not assumed to be included in general liability. Insurers offering it often review screening and supervision practices during underwriting. Organizations without vulnerable-person programming may not need the same structure — disclose your actual programs to your broker.",
       },
       {
-        question: "Do funders require insurance certificates?",
+        question: "Are fundraising events covered under our general liability?",
         answer:
-          "Grants and municipal partnerships often specify minimum GL and D&O limits.",
+          "Certain program and event activities may fall within a general liability policy depending on wording, but large fundraisers, amusement activities, or events with alcohol may need separate review or event liability coverage. Venue and municipal contracts often require specific limits or additional-insured certificates — contractual requirements reviewed against your policy.",
+      },
+      {
+        question: "Do funders or municipalities require insurance certificates?",
+        answer:
+          "Grants, facility-use agreements, and municipal partnerships often specify minimum general liability or D&O limits — requirements from the funder or partner, not a single provincial mandate for all non-profits. Certificate wording must match what each agreement actually requires rather than assuming one standard certificate satisfies every relationship.",
       },
     ],
     ctaHeading: "Lead a non-profit organization?",

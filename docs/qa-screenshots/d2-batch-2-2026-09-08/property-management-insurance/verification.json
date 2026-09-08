@@ -1,0 +1,59 @@
+{
+  "slug": "property-management-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "general-liability",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from your management operations — such as incidents at a managed property or in your office — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A visitor injury at a managed building can implicate the manager",
+      "detailDescription": "Property managers coordinate access, maintenance, and site activity across buildings they do not necessarily own — creating premises and operations exposure distinct from the owner's property policy. Whether a specific incident at a managed location falls within the manager's general liability depends on policy wording, the management agreement, and who controlled the area where the injury occurred. General liability for the management firm is separate from the landlord's or corporation's own liability program.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 1,
+      "id": "property-management-e-o",
+      "tabDesc": "May help respond to certain claims alleging negligent management acts, errors, or omissions — such as failure to arrange repairs, improper tenant screening, or lease administration mistakes — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A tenant dispute about maintenance can become a professional claim",
+      "detailDescription": "Allegations that a property manager failed to address repairs, mishandled tenant screening, or made errors in lease administration generate professional liability exposure — separate from a simple slip-and-fall. E&O coverage, where purchased, addresses management-decision claims that general liability may not. Contractual duties in management agreements should be reviewed against policy wording — performing management services does not automatically make every dispute a covered E&O claim.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 2,
+      "id": "commercial-property",
+      "tabDesc": "May help cover your management office contents, computers, records, and equipment against covered causes of loss — subject to policy terms and limits — distinct from insurance on buildings you manage for others.",
+      "detailTitle": "Your office equipment is not the same as the buildings you manage",
+      "detailDescription": "Property management insurance for the firm typically covers the management company's own office contents and equipment — not the building structures owned by landlords or condominium corporations. Tenant improvements in a leased management office may need scheduling under your property policy. Do not confuse the manager's office property coverage with the owner's building insurance on managed portfolios.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 3,
+      "id": "hired-non-owned-auto",
+      "tabDesc": "May help address certain automobile liability when managers or staff use personal or rented vehicles for property visits, showings, or site inspections — where purchased and subject to policy terms.",
+      "detailTitle": "Driving to a managed property in a personal vehicle is a business exposure",
+      "detailDescription": "Property managers and site staff frequently use personal vehicles for inspections, showings, and maintenance coordination — creating hired and non-owned auto exposure that a personal auto policy may not fully address for business use. Disclose how often staff drive for work and whether company vehicles are used. Ontario automobile coverage for business use is regulated separately from general liability for managed-premises incidents.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "considerations": {
+    "count": 6,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "overflow_390": 0,
+  "overflow_1440": 0
+}

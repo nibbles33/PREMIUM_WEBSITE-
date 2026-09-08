@@ -1,0 +1,59 @@
+{
+  "slug": "non-profit-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "general-liability",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from your operations, events, offices, and program locations — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "When a program participant injury becomes an organization claim",
+      "detailDescription": "Community programs, fundraising events, food drives, and leased facility operations can generate third-party injury or property-damage claims against the organization — distinct from a board governance dispute or an employee injury covered elsewhere. Whether a specific event, off-site program, or volunteer activity is covered depends on policy wording and what was disclosed during underwriting. Funder and venue certificate requirements are contractual — separate from what any single policy automatically includes.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 1,
+      "id": "directors-officers",
+      "tabDesc": "May help respond to certain claims alleging wrongful acts in governance or management decisions by directors, officers, and the organization — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "Board decisions can generate claims separate from program injury",
+      "detailDescription": "Directors and officers of Ontario non-profits have governance duties under applicable corporate law, including the Ontario Not-for-Profit Corporations Act where it applies — but D&O insurance does not eliminate those statutory duties. It may help respond to certain claims alleging mismanagement, financial oversight failures, or employment-related governance disputes, depending on policy wording. D&O addresses a different exposure from general liability for premises or program injury.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 2,
+      "id": "commercial-property",
+      "tabDesc": "May help cover office contents, equipment, donated goods inventory, and other business personal property against covered causes of loss — subject to policy terms, valuation, and limits.",
+      "detailTitle": "Donated goods and program equipment still have insurable value",
+      "detailDescription": "Non-profits often operate from leased space with contents, computers, program supplies, and donated inventory that represent real property exposure — even when the organization does not own the building. Donated goods may need scheduled values and specific causes of loss. Property coverage for leased premises is separate from the landlord's building insurance — confirm what you are responsible for insuring under your lease.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 3,
+      "id": "volunteer-accident",
+      "tabDesc": "May provide limited medical or accident benefits for volunteers injured while serving the organization — where purchased and subject to policy terms, limits, and exclusions.",
+      "detailTitle": "Volunteer injury is not always the same as employee WSIB coverage",
+      "detailDescription": "Volunteers are not employees, and WSIB coverage rules depend on whether a volunteer is deemed a worker in the circumstances — a regulatory question separate from optional volunteer accident insurance. Volunteer accident coverage, where available, may address limited medical expenses for volunteers injured during approved activities — subject to policy terms. It does not replace general liability for third-party claims or abuse coverage where programs serve vulnerable persons.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "considerations": {
+    "count": 6,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "overflow_390": 0,
+  "overflow_1440": 0
+}

@@ -1,0 +1,242 @@
+{
+  "consoleErrors": [],
+  "routes": [
+    {
+      "slug": "salon-barber-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "general-liability",
+          "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from premises incidents in reception, waiting, and service areas — such as slip-and-fall — subject to policy terms, exclusions, and limits.",
+          "detailTitle": "When a wet floor in reception becomes a premises claim",
+          "detailDescription": "Salons and barbershops concentrate clients in reception areas, walkways, and wash stations where wet floors, cords, and product spills create slip-and-fall exposure distinct from a treatment-gone-wrong claim. General liability may address certain premises and operations claims, but scope depends on policy wording and how your location, chair-rental model, and any mobile services are disclosed during underwriting.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 1,
+          "id": "professional-treatment-liability",
+          "tabDesc": "May help respond to certain claims alleging injury, burns, scarring, or allergic reaction from professional services you perform — such as cuts, colour, chemical treatments, or waxing — subject to policy terms and how services are scheduled.",
+          "detailTitle": "A colour reaction is a professional claim, not a slip-and-fall",
+          "detailDescription": "Claims alleging a cut, chemical burn, scalp reaction, or injury from a treatment you performed are typically evaluated as professional or treatment liability — separate from a simple premises injury. Insurers often ask for your full service menu; waxing, advanced esthetics, laser, injections, or medical-aesthetic procedures may need specific disclosure and may not be included under standard salon wording. Do not assume every treatment type is automatically covered without review.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 2,
+          "id": "commercial-property",
+          "tabDesc": "May help cover styling stations, dryers, chairs, product inventory, leasehold improvements, and other business property against covered causes of loss — subject to policy terms, causes of loss, and limits.",
+          "detailTitle": "Stations, tools, and retail inventory add up quickly",
+          "detailDescription": "Salon property value sits in styling stations, equipment, back-bar inventory, and tenant improvements — with theft and water damage among common loss scenarios. Tools used off-premises or by mobile stylists may be underwritten differently from fixed shop equipment. Confirm what is owned by the salon versus booth renters, and whether gear removed from the premises needs separate scheduling.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 3,
+          "id": "product-liability",
+          "tabDesc": "May help respond to certain claims alleging illness, allergic reaction, or injury from retail products you sell or recommend — often as products liability within a general liability policy or by endorsement — subject to policy terms.",
+          "detailTitle": "Retail product claims are separate from a bad haircut",
+          "detailDescription": "Selling shampoo, colour care, or skin products in-salon can generate product liability allegations distinct from a professional treatment claim. What triggers coverage, how completed products are defined, and whether professional-use-only products sold to clients are included depend on policy wording — confirm scope with your broker rather than assuming retail shelves are automatically fully covered.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true
+      },
+      "considerations": {
+        "count": 6,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "overflow_390": 0,
+      "overflow_1440": 0
+    },
+    {
+      "slug": "non-profit-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "general-liability",
+          "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from your operations, events, offices, and program locations — subject to policy terms, exclusions, and limits.",
+          "detailTitle": "When a program participant injury becomes an organization claim",
+          "detailDescription": "Community programs, fundraising events, food drives, and leased facility operations can generate third-party injury or property-damage claims against the organization — distinct from a board governance dispute or an employee injury covered elsewhere. Whether a specific event, off-site program, or volunteer activity is covered depends on policy wording and what was disclosed during underwriting. Funder and venue certificate requirements are contractual — separate from what any single policy automatically includes.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 1,
+          "id": "directors-officers",
+          "tabDesc": "May help respond to certain claims alleging wrongful acts in governance or management decisions by directors, officers, and the organization — subject to policy terms, exclusions, and limits.",
+          "detailTitle": "Board decisions can generate claims separate from program injury",
+          "detailDescription": "Directors and officers of Ontario non-profits have governance duties under applicable corporate law, including the Ontario Not-for-Profit Corporations Act where it applies — but D&O insurance does not eliminate those statutory duties. It may help respond to certain claims alleging mismanagement, financial oversight failures, or employment-related governance disputes, depending on policy wording. D&O addresses a different exposure from general liability for premises or program injury.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 2,
+          "id": "commercial-property",
+          "tabDesc": "May help cover office contents, equipment, donated goods inventory, and other business personal property against covered causes of loss — subject to policy terms, valuation, and limits.",
+          "detailTitle": "Donated goods and program equipment still have insurable value",
+          "detailDescription": "Non-profits often operate from leased space with contents, computers, program supplies, and donated inventory that represent real property exposure — even when the organization does not own the building. Donated goods may need scheduled values and specific causes of loss. Property coverage for leased premises is separate from the landlord's building insurance — confirm what you are responsible for insuring under your lease.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 3,
+          "id": "volunteer-accident",
+          "tabDesc": "May provide limited medical or accident benefits for volunteers injured while serving the organization — where purchased and subject to policy terms, limits, and exclusions.",
+          "detailTitle": "Volunteer injury is not always the same as employee WSIB coverage",
+          "detailDescription": "Volunteers are not employees, and WSIB coverage rules depend on whether a volunteer is deemed a worker in the circumstances — a regulatory question separate from optional volunteer accident insurance. Volunteer accident coverage, where available, may address limited medical expenses for volunteers injured during approved activities — subject to policy terms. It does not replace general liability for third-party claims or abuse coverage where programs serve vulnerable persons.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true
+      },
+      "considerations": {
+        "count": 6,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "overflow_390": 0,
+      "overflow_1440": 0
+    },
+    {
+      "slug": "warehousing-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "commercial-property",
+          "tabDesc": "May help cover the warehouse structure, racking, forklifts, material-handling equipment, and other owned business property against covered causes of loss — subject to policy terms, causes of loss, and limits.",
+          "detailTitle": "Your building and forklifts are not the same as customers' inventory",
+          "detailDescription": "Commercial property coverage addresses the warehouse you own or are required to insure under lease — structure, improvements, racking, dock equipment, and forklifts — subject to scheduled values and causes of loss. Customers' goods stored for others are a separate exposure typically addressed through warehouse legal liability or bailee coverage, not automatically included as part of your building limit. Confirm what your property policy schedules versus what your storage contracts make you responsible for.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 1,
+          "id": "warehouse-legal-liability",
+          "tabDesc": "May help address certain liability for loss or damage to customers' goods in your care, custody, or control — where purchased and subject to policy terms, contractual limits, and exclusions.",
+          "detailTitle": "Storage contracts define what you owe when customers' goods are damaged",
+          "detailDescription": "When you store goods belonging to others, your storage agreement and applicable law define the standard of care you owe — and warehouse legal liability coverage, where available, may respond to certain claims for loss or damage to those goods. Coverage limits, per-item caps, and excluded commodities vary by policy and contract. Ordinary commercial property does not automatically insure the full value of customers' inventory — review 3PL and bailment agreements alongside your broker before binding coverage.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 2,
+          "id": "general-liability",
+          "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from warehouse operations — such as loading-dock incidents or visitor injuries — subject to policy terms, exclusions, and limits.",
+          "detailTitle": "A loading-dock injury is premises liability, not a bailee claim",
+          "detailDescription": "Third-party injury on your premises — visitors, drivers, or contractors at the loading dock — generates general liability exposure distinct from damage to stored goods. Forklift operations, dock levellers, and truck traffic create injury and property-damage scenarios insurers evaluate during underwriting. Whether a specific operation or contractor activity is covered depends on policy wording and disclosure.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 3,
+          "id": "business-interruption",
+          "tabDesc": "May help replace lost business income and certain continuing expenses when a covered direct physical loss to insured property interrupts warehouse operations — subject to waiting periods, policy terms, and how income is measured.",
+          "detailTitle": "A fire that closes the dock interrupts revenue and customer obligations",
+          "detailDescription": "A covered property loss that shuts down receiving, storage, or shipping can interrupt revenue while fixed costs continue — and may affect your ability to meet storage contract obligations. Business interruption coverage, where purchased, responds only after a covered direct physical loss to insured property and subject to waiting periods and policy wording. Customer contract penalties or lost storage fees may be treated differently depending on policy structure — confirm triggers with your broker.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true
+      },
+      "considerations": {
+        "count": 6,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "overflow_390": 0,
+      "overflow_1440": 0
+    },
+    {
+      "slug": "property-management-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "general-liability",
+          "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from your management operations — such as incidents at a managed property or in your office — subject to policy terms, exclusions, and limits.",
+          "detailTitle": "A visitor injury at a managed building can implicate the manager",
+          "detailDescription": "Property managers coordinate access, maintenance, and site activity across buildings they do not necessarily own — creating premises and operations exposure distinct from the owner's property policy. Whether a specific incident at a managed location falls within the manager's general liability depends on policy wording, the management agreement, and who controlled the area where the injury occurred. General liability for the management firm is separate from the landlord's or corporation's own liability program.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 1,
+          "id": "property-management-e-o",
+          "tabDesc": "May help respond to certain claims alleging negligent management acts, errors, or omissions — such as failure to arrange repairs, improper tenant screening, or lease administration mistakes — subject to policy terms, exclusions, and limits.",
+          "detailTitle": "A tenant dispute about maintenance can become a professional claim",
+          "detailDescription": "Allegations that a property manager failed to address repairs, mishandled tenant screening, or made errors in lease administration generate professional liability exposure — separate from a simple slip-and-fall. E&O coverage, where purchased, addresses management-decision claims that general liability may not. Contractual duties in management agreements should be reviewed against policy wording — performing management services does not automatically make every dispute a covered E&O claim.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 2,
+          "id": "commercial-property",
+          "tabDesc": "May help cover your management office contents, computers, records, and equipment against covered causes of loss — subject to policy terms and limits — distinct from insurance on buildings you manage for others.",
+          "detailTitle": "Your office equipment is not the same as the buildings you manage",
+          "detailDescription": "Property management insurance for the firm typically covers the management company's own office contents and equipment — not the building structures owned by landlords or condominium corporations. Tenant improvements in a leased management office may need scheduling under your property policy. Do not confuse the manager's office property coverage with the owner's building insurance on managed portfolios.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 3,
+          "id": "hired-non-owned-auto",
+          "tabDesc": "May help address certain automobile liability when managers or staff use personal or rented vehicles for property visits, showings, or site inspections — where purchased and subject to policy terms.",
+          "detailTitle": "Driving to a managed property in a personal vehicle is a business exposure",
+          "detailDescription": "Property managers and site staff frequently use personal vehicles for inspections, showings, and maintenance coordination — creating hired and non-owned auto exposure that a personal auto policy may not fully address for business use. Disclose how often staff drive for work and whether company vehicles are used. Ontario automobile coverage for business use is regulated separately from general liability for managed-premises incidents.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true
+      },
+      "considerations": {
+        "count": 6,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "overflow_390": 0,
+      "overflow_1440": 0
+    }
+  ],
+  "pass": true
+}

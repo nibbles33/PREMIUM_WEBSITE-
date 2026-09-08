@@ -1069,32 +1069,24 @@
       "route": "/non-profit-insurance/",
       "slug": "non-profit-insurance",
       "category": "commercial",
-      "heroWords": 18,
-      "heroSpecific": false,
+      "heroWords": 116,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 25,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 54,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 244,
-      "safetyFlags": [
-        {
-          "page": "/non-profit-insurance/",
-          "field": "coverage:General Liability",
-          "quote": "Covers injury and property damage claims at events, offices, and program locations.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 331,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1051,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (1051w), 4 cards avg 54w, considerations yes, FAQ unique"
     },
     {
       "route": "/personal-umbrella-insurance/",
@@ -1269,32 +1261,24 @@
       "route": "/property-management-insurance/",
       "slug": "property-management-insurance",
       "category": "commercial",
-      "heroWords": 18,
-      "heroSpecific": false,
+      "heroWords": 122,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 26,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 67,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 261,
-      "safetyFlags": [
-        {
-          "page": "/property-management-insurance/",
-          "field": "coverage:General Liability",
-          "quote": "Covers injury and property damage claims arising from managed properties and management office operations.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 324,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1102,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (1102w), 4 cards avg 67w, considerations yes, FAQ unique"
     },
     {
       "route": "/real-estate-insurance/",
@@ -1392,32 +1376,24 @@
       "route": "/salon-barber-insurance/",
       "slug": "salon-barber-insurance",
       "category": "commercial",
-      "heroWords": 16,
-      "heroSpecific": false,
+      "heroWords": 118,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 23.5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 68.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 239,
-      "safetyFlags": [
-        {
-          "page": "/salon-barber-insurance/",
-          "field": "coverage:Product Liability",
-          "quote": "Covers claims that retail products sold in-salon caused allergic reaction or injury.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 316,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1072,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (1072w), 4 cards avg 68.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/small-business-insurance/",
@@ -1523,39 +1499,31 @@
       "route": "/warehousing-insurance/",
       "slug": "warehousing-insurance",
       "category": "commercial",
-      "heroWords": 19,
-      "heroSpecific": false,
+      "heroWords": 111,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 26.5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 62.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 252,
-      "safetyFlags": [
-        {
-          "page": "/warehousing-insurance/",
-          "field": "coverage:Commercial Property",
-          "quote": "Covers the warehouse structure, racking, forklifts, and handling equipment against covered losses.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 306,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1034,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (1034w), 4 cards avg 62.5w, considerations yes, FAQ unique"
     }
   ],
   "counts": {
-    "A": 8,
+    "A": 12,
     "B": 16,
     "C": 18,
-    "D": 16
+    "D": 12
   },
   "allFlags": [
     {
@@ -1692,13 +1660,6 @@
       "severity": "low"
     },
     {
-      "page": "/non-profit-insurance/",
-      "field": "coverage:General Liability",
-      "quote": "Covers injury and property damage claims at events, offices, and program locations.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
       "page": "/pharmacy-insurance/",
       "field": "coverage:Commercial Property",
       "quote": "Covers inventory, fixtures, and dispensing equipment including narcotics storage security requirements.",
@@ -1727,30 +1688,9 @@
       "severity": "low"
     },
     {
-      "page": "/property-management-insurance/",
-      "field": "coverage:General Liability",
-      "quote": "Covers injury and property damage claims arising from managed properties and management office operations.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/salon-barber-insurance/",
-      "field": "coverage:Product Liability",
-      "quote": "Covers claims that retail products sold in-salon caused allergic reaction or injury.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
       "page": "/trucking-insurance/",
       "field": "faq",
       "quote": "Liability covers injury and damage to others; cargo is about the freight itself.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/warehousing-insurance/",
-      "field": "coverage:Commercial Property",
-      "quote": "Covers the warehouse structure, racking, forklifts, and handling equipment against covered losses.",
       "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
       "severity": "high"
     }

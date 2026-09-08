@@ -250,42 +250,90 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Warehousing & Logistics Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Warehousing and logistics insurance — property, liability, bailee coverage, and inventory protection for Windsor-Essex warehouse operators.",
+      "Warehousing and logistics insurance through an independent Windsor-Essex broker — commercial property, warehouse legal liability, general liability, and business interruption.",
     headline: "Warehousing & Logistics Insurance",
     subhead:
-      "Coverage for warehouse operators — protecting the building, stored goods, equipment, and liability to customers whose inventory you hold.",
+      "Warehouse and storage operations combine three exposures that standard business insurance often treats separately: your building and handling equipment, third-party injury on your premises, and — when you store goods for others — your legal responsibility for customers' property. Commercial property may cover the structure, racking, and forklifts you own; warehouse legal liability may address certain loss or damage to customers' goods when you are legally responsible under your storage contract — subject to policy terms and limits. Not every warehouse stores the same commodities, accepts hazardous materials, or operates cold storage. Premium Insurance Brokers can help map property, bailee, and liability coverage to your contracts, sprinkler protection, and commodity mix.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Warehouse Quote",
     coverageIntro:
-      "Warehousing combines property, liability, and care-custody-control exposures for goods belonging to others.",
+      "Warehousing insurance usually separates coverage for your building and equipment from liability for customers' goods stored under your care — plus general liability for premises injury and business interruption when a covered loss interrupts operations.",
     coverageTypes: [
       {
         title: "Commercial Property",
+        shortLabel: "Property",
         description:
-          "Covers the warehouse structure, racking, forklifts, and handling equipment against covered losses.",
+          "May help cover the warehouse structure, racking, forklifts, material-handling equipment, and other owned business property against covered causes of loss — subject to policy terms, causes of loss, and limits.",
+        detailTitle: "Your building and forklifts are not the same as customers' inventory",
+        detailDescription:
+          "Commercial property coverage addresses the warehouse you own or are required to insure under lease — structure, improvements, racking, dock equipment, and forklifts — subject to scheduled values and causes of loss. Customers' goods stored for others are a separate exposure typically addressed through warehouse legal liability or bailee coverage, not automatically included as part of your building limit. Confirm what your property policy schedules versus what your storage contracts make you responsible for.",
         icon: Warehouse,
       },
       {
         title: "Warehouse Legal Liability",
+        shortLabel: "Customers' Goods",
         description:
-          "Addresses your liability for loss or damage to customer goods stored in your facility.",
+          "May help address certain liability for loss or damage to customers' goods in your care, custody, or control — where purchased and subject to policy terms, contractual limits, and exclusions.",
+        detailTitle: "Storage contracts define what you owe when customers' goods are damaged",
+        detailDescription:
+          "When you store goods belonging to others, your storage agreement and applicable law define the standard of care you owe — and warehouse legal liability coverage, where available, may respond to certain claims for loss or damage to those goods. Coverage limits, per-item caps, and excluded commodities vary by policy and contract. Ordinary commercial property does not automatically insure the full value of customers' inventory — review 3PL and bailment agreements alongside your broker before binding coverage.",
         icon: Briefcase,
       },
       {
         title: "General Liability",
+        shortLabel: "Liability",
         description:
-          "Covers third-party injury on premises — loading dock incidents, visitor injuries, and property damage.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from warehouse operations — such as loading-dock incidents or visitor injuries — subject to policy terms, exclusions, and limits.",
+        detailTitle: "A loading-dock injury is premises liability, not a bailee claim",
+        detailDescription:
+          "Third-party injury on your premises — visitors, drivers, or contractors at the loading dock — generates general liability exposure distinct from damage to stored goods. Forklift operations, dock levellers, and truck traffic create injury and property-damage scenarios insurers evaluate during underwriting. Whether a specific operation or contractor activity is covered depends on policy wording and disclosure.",
         icon: Shield,
       },
       {
         title: "Business Interruption",
+        shortLabel: "Income",
         description:
-          "Can help replace income if a covered property loss shuts down warehouse operations.",
+          "May help replace lost business income and certain continuing expenses when a covered direct physical loss to insured property interrupts warehouse operations — subject to waiting periods, policy terms, and how income is measured.",
+        detailTitle: "A fire that closes the dock interrupts revenue and customer obligations",
+        detailDescription:
+          "A covered property loss that shuts down receiving, storage, or shipping can interrupt revenue while fixed costs continue — and may affect your ability to meet storage contract obligations. Business interruption coverage, where purchased, responds only after a covered direct physical loss to insured property and subject to waiting periods and policy wording. Customer contract penalties or lost storage fees may be treated differently depending on policy structure — confirm triggers with your broker.",
         icon: Building2,
       },
     ],
     whoItIsFor:
-      "Warehousing insurance is for Windsor-Essex third-party logistics providers, cold storage operators, distribution centres, and businesses storing goods for clients.",
+      "For Windsor–Essex warehouse operators, third-party logistics providers, and distribution centres — reviewed through an independent broker who can coordinate property, warehouse legal liability, and premises coverage for how you actually store and handle goods.",
+    considerations: [
+      {
+        title: "Your building and equipment vs. customers' goods",
+        description:
+          "Commercial property may cover the warehouse structure and equipment you own or insure under lease. Customers' goods stored for others require warehouse legal liability or bailee coverage reviewed separately — ordinary property limits do not automatically insure the full value of third-party inventory. Storage contracts define the standard of care you owe.",
+      },
+      {
+        title: "Warehouse legal liability and storage contracts",
+        description:
+          "3PL, bailment, and warehousing agreements often specify liability limits, excluded commodities, and notification requirements when goods are damaged. Those contractual terms must be matched to warehouse legal liability limits and policy wording — a certificate alone does not expand coverage beyond what the policy provides.",
+      },
+      {
+        title: "Commodity types, hazardous materials, and cold storage",
+        description:
+          "Not every warehouse accepts the same goods. Hazardous materials, chemicals, refrigerated products, and high-value inventory create different underwriting profiles and may be excluded or sub-limited unless disclosed. Insurers ask about commodity mix, stacking heights, and temperature-controlled areas during underwriting.",
+      },
+      {
+        title: "Forklifts, racking, and loading dock exposure",
+        description:
+          "Material-handling equipment, rack collapse, and dock incidents create both property and injury exposure. Maintenance records, operator training, and rack load ratings matter to underwriting. Forklift damage to customers' goods may implicate warehouse legal liability rather than general liability — depending on the circumstances and contract.",
+      },
+      {
+        title: "Fire protection and sprinkler systems",
+        description:
+          "Construction type, sprinkler coverage, alarm systems, and separation between storage areas affect property rating and availability. Fire and water damage from suppression systems are common warehouse loss scenarios — accurate building and improvement values support proper property limits.",
+      },
+      {
+        title: "Business interruption and contract obligations",
+        description:
+          "A covered property loss that halts operations may trigger business interruption coverage, where purchased — subject to waiting periods and policy terms. Contractual penalties, customer storage fees, and contingent business income may be treated differently depending on wording. A slowdown from supply chain issues alone may not trigger the same coverage.",
+      },
+    ],
     relatedLinks: [
       { label: "Commercial Property", href: "/commercial-property-insurance/" },
       { label: "Cargo & Freight", href: "/cargo-freight-insurance/" },
@@ -293,24 +341,29 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     faqTitle: "Warehousing FAQ",
     faqItems: [
       {
-        question: "Who covers my customer's inventory?",
+        question: "Who covers my customer's inventory if it is damaged in my warehouse?",
         answer:
-          "Warehouse legal liability covers goods you store for others when you are legally responsible. Customer contracts often specify required limits.",
+          "Warehouse legal liability coverage, where purchased, may address certain loss or damage to customers' goods in your care, custody, or control — subject to policy terms, contractual limits, and exclusions. Your storage agreement defines the standard of care you owe. Commercial property for your building does not automatically replace bailee or warehouse legal liability for third-party goods.",
+      },
+      {
+        question: "Does commercial property cover goods belonging to others?",
+        answer:
+          "Generally no — or not for the full value customers expect. Commercial property typically covers the warehouse structure, racking, and equipment you own or insure under lease. Customers' goods require warehouse legal liability or bailee coverage reviewed against your storage contracts — confirm limits and excluded commodities with your broker.",
       },
       {
         question: "Are forklifts and racking covered?",
         answer:
-          "Equipment and building improvements are typically under commercial property, subject to scheduled values and maintenance requirements.",
+          "Owned forklifts, racking, and handling equipment may be scheduled under commercial property coverage depending on how the policy is structured — subject to values, causes of loss, and maintenance requirements. Damage to customers' goods caused by equipment operations may fall under warehouse legal liability rather than property — depending on the claim and contract.",
       },
       {
-        question: "Does warehousing need pollution coverage?",
+        question: "Do 3PL contracts require specific liability limits?",
         answer:
-          "Facilities storing chemicals, refrigerants, or fuel may need pollution liability. Disclose stored commodities accurately.",
+          "Storage and logistics contracts often specify per-occurrence and aggregate limits for warehouse legal liability, notification requirements, and excluded commodities. Those are contractual requirements reviewed against what your policy can actually provide — not universal statutory mandates. Bring contracts to your broker before binding coverage.",
       },
       {
-        question: "What limits do 3PL contracts require?",
+        question: "Does cold storage or hazardous goods change my coverage needs?",
         answer:
-          "Contracts often specify per-occurrence and aggregate limits for warehouse legal liability. Review agreements before binding coverage.",
+          "Refrigerated, frozen, chemical, and hazardous commodities create different underwriting profiles and may be excluded or sub-limited unless disclosed. Insurers ask about temperature-controlled areas, commodity types, and fire protection during underwriting. Do not assume a standard warehouse policy automatically accepts every storage class.",
       },
     ],
     ctaHeading: "Operate a warehouse or 3PL?",
@@ -324,42 +377,90 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Property Management Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Property management insurance — E&O, general liability, and hired/non-owned auto for Windsor-Essex residential and commercial managers.",
+      "Property management insurance through an independent Windsor-Essex broker — general liability, property management E&O, office property, and hired/non-owned auto.",
     headline: "Property Management Insurance",
     subhead:
-      "Coverage for property managers — liability for managed premises, professional errors, and the operations that keep portfolios running.",
+      "Property management firms face liability and professional exposure for the services they perform — coordinating maintenance, handling tenant relations, and managing portfolios on behalf of owners — not insurance on the buildings themselves. A property manager's general liability may address certain premises and operations claims; property management errors and omissions may address certain claims alleging negligent management decisions — each subject to policy terms. The landlord's property policy, a condominium corporation's master policy, or a commercial owner's building insurance protects the property owner's interest in the structure — separate from the management company's own coverage. Premium Insurance Brokers can help align GL, E&O, and operational coverage to your portfolio, contract requirements, and whether you manage residential rentals, commercial properties, or condominium corporations.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Property Management Quote",
     coverageIntro:
-      "Property managers face both operational liability and professional E&O exposures across multiple buildings and owners.",
+      "Property management insurance addresses the management company's liability and professional exposure — distinct from building insurance carried by property owners or condominium corporations for the structures you manage.",
     coverageTypes: [
       {
         title: "General Liability",
+        shortLabel: "Liability",
         description:
-          "Covers injury and property damage claims arising from managed properties and management office operations.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from your management operations — such as incidents at a managed property or in your office — subject to policy terms, exclusions, and limits.",
+        detailTitle: "A visitor injury at a managed building can implicate the manager",
+        detailDescription:
+          "Property managers coordinate access, maintenance, and site activity across buildings they do not necessarily own — creating premises and operations exposure distinct from the owner's property policy. Whether a specific incident at a managed location falls within the manager's general liability depends on policy wording, the management agreement, and who controlled the area where the injury occurred. General liability for the management firm is separate from the landlord's or corporation's own liability program.",
         icon: Briefcase,
       },
       {
         title: "Property Management E&O",
+        shortLabel: "E&O",
         description:
-          "Addresses claims alleging negligent management — failure to maintain, improper tenant screening, or lease administration errors.",
+          "May help respond to certain claims alleging negligent management acts, errors, or omissions — such as failure to arrange repairs, improper tenant screening, or lease administration mistakes — subject to policy terms, exclusions, and limits.",
+        detailTitle: "A tenant dispute about maintenance can become a professional claim",
+        detailDescription:
+          "Allegations that a property manager failed to address repairs, mishandled tenant screening, or made errors in lease administration generate professional liability exposure — separate from a simple slip-and-fall. E&O coverage, where purchased, addresses management-decision claims that general liability may not. Contractual duties in management agreements should be reviewed against policy wording — performing management services does not automatically make every dispute a covered E&O claim.",
         icon: KeyRound,
       },
       {
         title: "Commercial Property",
+        shortLabel: "Office",
         description:
-          "Covers office contents and equipment used in management operations.",
+          "May help cover your management office contents, computers, records, and equipment against covered causes of loss — subject to policy terms and limits — distinct from insurance on buildings you manage for others.",
+        detailTitle: "Your office equipment is not the same as the buildings you manage",
+        detailDescription:
+          "Property management insurance for the firm typically covers the management company's own office contents and equipment — not the building structures owned by landlords or condominium corporations. Tenant improvements in a leased management office may need scheduling under your property policy. Do not confuse the manager's office property coverage with the owner's building insurance on managed portfolios.",
         icon: Building2,
       },
       {
         title: "Hired & Non-Owned Auto",
+        shortLabel: "Auto",
         description:
-          "Covers managers and staff driving for property visits in personal or rented vehicles.",
+          "May help address certain automobile liability when managers or staff use personal or rented vehicles for property visits, showings, or site inspections — where purchased and subject to policy terms.",
+        detailTitle: "Driving to a managed property in a personal vehicle is a business exposure",
+        detailDescription:
+          "Property managers and site staff frequently use personal vehicles for inspections, showings, and maintenance coordination — creating hired and non-owned auto exposure that a personal auto policy may not fully address for business use. Disclose how often staff drive for work and whether company vehicles are used. Ontario automobile coverage for business use is regulated separately from general liability for managed-premises incidents.",
         icon: Car,
       },
     ],
     whoItIsFor:
-      "Property management insurance is for Windsor-Essex firms managing residential rentals, condominium corporations on behalf of boards, and commercial property portfolios.",
+      "For Windsor–Essex property management firms managing residential rentals, commercial portfolios, and condominium corporations on behalf of owners — reviewed through an independent broker who can coordinate GL, E&O, and operational coverage for how you actually manage properties.",
+    considerations: [
+      {
+        title: "Manager coverage vs. landlord or owner building insurance",
+        description:
+          "Property management insurance protects the management company's liability and professional exposure — not the building structure owned by the landlord or condominium corporation. The owner's commercial property or condominium master policy insures the building; the manager's policy insures the management firm's operations. Certificates and contracts should reflect which party carries which coverage.",
+      },
+      {
+        title: "Professional E&O for management decisions",
+        description:
+          "Maintenance coordination, tenant relations, lease administration, and vendor selection create professional exposure distinct from premises injury. E&O coverage, where purchased, may address certain management-negligence claims — subject to policy wording and exclusions for intentional acts or criminal conduct. Review management agreement duties against policy scope.",
+      },
+      {
+        title: "Condominium management and CMRAO licensing",
+        description:
+          "Condominium management providers in Ontario may be subject to licensing under the Condominium Management Services Act and oversight by the Condominium Management Regulatory Authority of Ontario — but not every property manager is a condominium manager. Residential rental and commercial portfolio managers face different regulatory contexts. Licensing is a regulatory requirement separate from purchasing insurance.",
+      },
+      {
+        title: "Contractor selection and maintenance coordination",
+        description:
+          "Arranging repairs, hiring contractors, and coordinating capital projects create exposure when work is delayed, defective, or improperly scoped. Whether a claim against the manager falls within E&O or general liability depends on the allegation and policy wording. Indemnity and hold-harmless clauses in management agreements should be reviewed with your broker.",
+      },
+      {
+        title: "Tenant data, rent handling, and cyber exposure",
+        description:
+          "Managing tenant applications, leases, and rent payments involves records that may create privacy and crime exposure. Cyber and crime coverage, where relevant, is separate from general liability for physical injury. Disclose how tenant data is stored and who handles trust funds or rent collection.",
+      },
+      {
+        title: "Certificate requirements in management agreements",
+        description:
+          "Property owners and condominium boards often require proof of general liability and E&O insurance with specific limits and additional-insured wording in management contracts. Those are contractual requirements reviewed against what your policies can provide — not universal provincial insurance mandates for all managers.",
+      },
+    ],
     relatedLinks: [
       { label: "Real Estate Insurance", href: "/real-estate-insurance/" },
       { label: "Condominium Corporation", href: "/condominium-corporation-insurance/" },
@@ -368,24 +469,29 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     faqTitle: "Property management FAQ",
     faqItems: [
       {
-        question: "Does the owner's policy cover the manager?",
+        question: "Does the building owner's insurance cover the property manager?",
         answer:
-          "Owner policies protect the owner's interest, not the manager's professional liability. Management firms need their own E&O and GL.",
+          "The owner's property and liability policies typically protect the owner's interests in the building — not the management company's professional liability for management decisions. Property managers need their own general liability and E&O coverage for the firm's operations. Which policy responds to a specific incident depends on the allegation, the management agreement, and policy wording.",
       },
       {
-        question: "Are tenant disputes covered?",
+        question: "What is the difference between GL and property management E&O?",
         answer:
-          "E&O may respond to claims alleging negligent management practices. Intentional discrimination or criminal acts are excluded.",
+          "General liability may address certain third-party bodily injury or property-damage claims arising from operations. Property management E&O may address certain claims alleging negligent management acts, errors, or omissions — such as failure to arrange repairs or lease administration mistakes. They address different types of allegations and should be reviewed together rather than treated as interchangeable.",
       },
       {
-        question: "Do I need coverage for each building?",
+        question: "Do I need separate coverage for each building in my portfolio?",
         answer:
-          "Management E&O typically covers your firm across the portfolio. Individual buildings may still need owner-controlled property policies.",
+          "Management E&O and general liability for the firm are typically written to cover the management company across its portfolio — subject to policy terms and disclosed properties. Each building owner or condominium corporation still carries its own property insurance on the structure. Confirm how your policy schedules managed locations and contract limits.",
       },
       {
-        question: "What do management contracts require?",
+        question: "Does property management insurance cover the buildings I manage?",
         answer:
-          "Owner agreements often specify minimum GL and E&O limits and additional insured status. Review before signing new mandates.",
+          "No — property management insurance addresses the management company's liability and professional exposure, not the building structure owned by the landlord or condominium corporation. The owner's commercial property policy or the corporation's master policy insures the building. The manager's office contents may be covered under the firm's own commercial property coverage — a separate component.",
+      },
+      {
+        question: "What do management contracts typically require?",
+        answer:
+          "Management agreements often specify minimum general liability and E&O limits, additional-insured status for the owner or corporation, and certificate deadlines — contractual requirements reviewed against what your policies can provide. Condominium management contracts may include additional requirements depending on the arrangement. Bring agreements to your broker before signing new mandates.",
       },
     ],
     ctaHeading: "Manage properties for others?",
