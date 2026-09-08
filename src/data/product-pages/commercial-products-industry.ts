@@ -28,72 +28,131 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Cargo & Freight Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Cargo and freight insurance for Windsor-Essex carriers — protection for goods in transit, liability, and contract requirements through an independent broker.",
+      "Cargo and freight insurance through an independent Windsor-Essex broker — motor truck cargo, carrier legal liability, refrigerated freight, and contingent cargo for carriers and brokers.",
     headline: "Cargo & Freight Insurance",
     subhead:
-      "Coverage for the freight you haul — protecting goods in transit and meeting shipper and broker contract requirements.",
+      "Cargo and freight insurance is about goods in transit — the customer's freight, not the truck itself. When you carry property belonging to others, loss or damage can generate claims evaluated under motor truck cargo forms, carrier legal liability wording, or contractual bailment terms — depending on policy structure, cause of loss, and who bears legal responsibility. That is separate from Ontario commercial automobile liability for the vehicle on the road and separate from warehouse legal liability for stored goods. Coverage depends on commodities hauled, valuation methods, limits, exclusions, and territorial scope — not every lost or damaged shipment is insured automatically. Premium Insurance Brokers can help align cargo limits with shipper contracts and how your operation actually moves freight.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
     quoteLabel: "Get a Cargo Quote",
     coverageIntro:
-      "Cargo insurance addresses the goods themselves; liability covers damage to others. Shippers often require both with specific limits.",
+      "Cargo insurance addresses freight in transit — motor truck cargo for physical loss or damage, carrier legal liability where policy wording applies, and specialized forms for refrigerated or brokered loads depending on commodities, contracts, and territory.",
     coverageTypes: [
       {
         title: "Motor Truck Cargo",
+        shortLabel: "MTC",
         description:
-          "Covers loss or damage to freight you carry for hire, subject to exclusions for certain commodities and packaging.",
+          "May help address certain physical loss or damage to freight you carry for hire while in your care, custody, or control during transit — where purchased and subject to causes of loss, exclusions, commodity restrictions, limits, and valuation.",
+        detailTitle: "Customers' goods in the trailer — not the tractor's highway liability",
+        detailDescription:
+          "Motor truck cargo coverage, where purchased, insures the shipper's freight against covered physical loss or damage during transit subject to policy triggers — fire, collision, theft, and other named perils depending on wording. It does not replace commercial automobile liability for third-party injury or damage caused by the truck on the road. High-value, restricted, or temperature-sensitive commodities may need endorsements or may be excluded. Maximum value per load, average load values, and packaging standards affect underwriting and claims.",
         icon: Package,
       },
       {
         title: "Carrier Liability",
+        shortLabel: "Legal Liability",
         description:
-          "Addresses your legal liability to shippers when cargo is lost, damaged, or delayed under your care.",
+          "May help respond to certain claims alleging the carrier failed in its legal duty to deliver freight safely — where policy wording provides carrier legal liability coverage and subject to limits, exclusions, and contractual terms.",
+        detailTitle: "Legal responsibility to the shipper is not the same as insuring the goods directly",
+        detailDescription:
+          "Carrier legal liability coverage addresses the motor carrier's legal liability to the cargo owner for loss or damage while the freight is in the carrier's care — a different insuring agreement from direct motor truck cargo coverage on some policy forms. Which arrangement applies depends on policy edition, endorsements, and contracts of carriage. A bill of lading or shipper contract may limit or define liability separately from insurance — contractual terms and policy wording must be reviewed together.",
         icon: Briefcase,
       },
       {
         title: "Refrigerated Cargo",
+        shortLabel: "Reefer",
         description:
-          "Specialized coverage for temperature-sensitive freight with breakdown and spoilage considerations.",
+          "May address certain loss to temperature-controlled freight from covered causes — including refrigeration breakdown or temperature excursion where endorsements apply — subject to policy triggers, maintenance requirements, and sublimits.",
+        detailTitle: "Reefer freight needs cause-of-loss precision — not automatic spoilage coverage",
+        detailDescription:
+          "Produce, pharmaceuticals, and other refrigerated loads can spoil from equipment failure, driver error, or delay. Standard motor truck cargo may treat temperature loss differently from collision damage — reefer breakdown endorsements, where available, depend on causes of loss, alarm systems, and maintenance records disclosed during underwriting. Do not assume every temperature excursion is covered without reviewing triggers and exclusions.",
         icon: Container,
       },
       {
         title: "Contingent Cargo",
+        shortLabel: "Contingent",
         description:
-          "For freight brokers — covers gaps when a carrier's insurance fails to respond on a load you arranged.",
+          "For freight brokers and intermediaries — may provide certain coverage when a contracted carrier's cargo policy fails to respond on a load you arranged, subject to policy terms and secondary-position wording.",
+        detailTitle: "Brokers need a backup layer — not a substitute for carrier coverage",
+        detailDescription:
+          "Freight brokers who arrange transportation but do not physically haul goods may purchase contingent cargo to address gaps when a motor carrier's insurance does not respond on a brokered load — subject to policy conditions and limits. This is secondary coverage, not a replacement for proper carrier cargo insurance or broker contractual liability programs. Broker operations should verify carrier certificates and limits before dispatch.",
         icon: Route,
       },
     ],
     whoItIsFor:
-      "Cargo and freight insurance is for Windsor-Essex truck operators, owner-operators, fleet carriers, and freight brokers moving general freight, specialized goods, or cross-border loads.",
+      "For Windsor–Essex motor carriers, owner-operators, and freight brokers who move general freight, specialized commodities, or temperature-controlled loads — reviewed through an independent broker who can align cargo limits, valuation, and territorial scope with shipper and broker contracts.",
+    considerations: [
+      {
+        title: "Cargo in transit vs. warehousing — different products",
+        description:
+          "Cargo insurance addresses goods while being transported. Warehouse legal liability — as on a warehousing policy — addresses customers' goods while stored under a warehouse contract. Brief loading, staging, or cross-dock activity may create overlap questions depending on contracts and policy wording, but the two coverages are not interchangeable. Do not assume cargo coverage handles goods sitting in your terminal beyond transit definitions in the policy.",
+      },
+      {
+        title: "Automobile liability does not insure the freight",
+        description:
+          "Ontario commercial automobile third-party liability may respond to certain injury or property-damage claims caused by the truck on the road. It does not replace motor truck cargo for loss of the shipper's goods. Each coverage serves a different purpose under separate policy forms.",
+      },
+      {
+        title: "Commodity, valuation, and limits",
+        description:
+          "Insurers schedule commodities — general freight, electronics, alcohol, pharmaceuticals, metals, and others — with different rates and exclusions. Valuation may be actual cash value, invoice cost, or agreed value depending on wording. Maximum per-load limits and annual aggregates must align with your largest contracts — underinsuring high-value lanes creates balance-bill exposure.",
+      },
+      {
+        title: "Theft, security, and unattended vehicles",
+        description:
+          "Theft and pilferage may be covered causes of loss subject to security conditions — locked units, approved parking, GPS, or team-driver requirements in policy conditions. Unattended loaded trailers in unsecured locations are common exclusion triggers. Disclose typical parking and security practices during underwriting.",
+      },
+      {
+        title: "Loading, unloading, and temporary storage",
+        description:
+          "Loss during load, unload, or brief staging at terminals may fall within transit definitions — or may be excluded — depending on policy wording and who performs the handling. Forklift damage at a dock and shift during transit are evaluated under different triggers. Contract terms allocating loading responsibility matter.",
+      },
+      {
+        title: "Territorial limits and cross-border freight",
+        description:
+          "Cargo policies contain territorial limits. Loads originating, passing through, or terminating in the United States may need specific extensions or separate wording. Shipper contracts often specify U.S.-adequate limits and insurer rating requirements — contractual obligations separate from a Canada-only cargo policy.",
+      },
+      {
+        title: "Contracts, bills of lading, and certificates",
+        description:
+          "Shippers and brokers frequently require certificates with minimum cargo limits before tendering freight. Your bill of lading or contract of carriage may cap legal liability differently from your insurance limits — legal, contractual, and insurance layers should be reviewed together with your broker.",
+      },
+    ],
     relatedLinks: [
       { label: "Trucking Insurance", href: "/trucking-insurance/" },
       { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
+      { label: "Warehousing Insurance", href: "/warehousing-insurance/" },
     ],
     faqTitle: "Cargo & freight FAQ",
     faqItems: [
       {
-        question: "Is cargo included in my trucking liability policy?",
+        question: "Who insures customers' goods while I transport them?",
         answer:
-          "No. Liability covers injury and damage to others; cargo is a separate coverage for the freight itself.",
+          "Typically the motor carrier arranges motor truck cargo or carrier legal liability coverage — where purchased — for freight in the carrier's care during transit. The shipper may also carry their own cargo interest policy depending on the contract. Coverage depends on policy wording, cause of loss, limits, and exclusions — not every shipment is automatically insured to full invoice value.",
       },
       {
-        question: "What commodities affect cargo pricing?",
+        question: "Does cargo insurance cover theft of a loaded trailer?",
         answer:
-          "Electronics, alcohol, pharmaceuticals, and high-theft goods often need higher limits or specific endorsements.",
+          "Theft may be a covered cause of loss under motor truck cargo subject to policy conditions — security requirements, unattended vehicle exclusions, and reported commodities. High-theft goods may need specific endorsements or higher deductibles. Prompt police reporting and load documentation affect claims handling.",
       },
       {
-        question: "Do I need cargo for cross-border loads?",
+        question: "How are high-value loads handled?",
         answer:
-          "U.S. shippers frequently require specific cargo limits and insurer ratings. Disclose your lanes when quoting.",
+          "Insurers ask for maximum value per load, typical averages, and commodity type. Loads exceeding policy limits may need scheduled shipments or excess cargo coverage. Shippers often require proof that your limits meet or exceed tendered load values — a contractual requirement your broker should verify against your policy.",
       },
       {
-        question: "What is a contingent cargo policy?",
+        question: "What about refrigerated or temperature-sensitive freight?",
         answer:
-          "Freight brokers use contingent cargo when a carrier's policy fails — it is a secondary layer, not a replacement for proper carrier coverage.",
+          "Temperature-controlled freight may need reefer breakdown or spoilage endorsements where available — subject to causes of loss, maintenance records, and alarm requirements. A refrigeration unit failure does not automatically trigger coverage without reviewing policy triggers and exclusions.",
+      },
+      {
+        question: "Is cargo insurance the same as warehouse legal liability?",
+        answer:
+          "No. Cargo insurance addresses goods in transit under a carrier's care. Warehouse legal liability addresses customers' goods stored under a warehouse contract — the product remediated on the warehousing page. Cross-dock or brief staging may raise overlap questions, but the coverages serve different operations and policy forms.",
       },
     ],
     ctaHeading: "Haul freight for hire?",
     ctaSubhead:
-      "Share your commodities, lanes, and contract requirements — we will align cargo limits with what shippers expect.",
+      "Share commodities, maximum load values, lanes, and shipper contract requirements — we will compare cargo coverage options.",
     serviceName: "Cargo & Freight Insurance",
   },
   {

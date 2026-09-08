@@ -1,0 +1,57 @@
+{
+  "slug": "trucking-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "cargo-insurance",
+      "tabDesc": "May help address certain loss or damage to freight you carry for hire while in your care, custody, or control during transit — where purchased and subject to policy terms, commodity exclusions, limits, and valuation.",
+      "detailTitle": "Shippers' freight is a separate exposure from your tractor on the highway",
+      "detailDescription": "When you haul another party's goods, motor truck cargo coverage — where purchased — may respond to certain physical loss or damage to that freight subject to causes of loss, exclusions, and limits in the policy. Ontario automobile liability does not replace cargo coverage for customers' goods. Shippers, brokers, and 3PL contracts often specify minimum cargo limits, deductibles, or insurer requirements — those are contractual obligations separate from what any base automobile policy includes. Commodity type, packaging, maximum load value, and security practices affect underwriting.",
+      "duplicateDesc": false,
+      "hasImage": true
+    },
+    {
+      "index": 1,
+      "id": "liability-coverage",
+      "tabDesc": "Ontario commercial automobile third-party liability — regulated under FSRA — may help respond to certain bodily injury or property-damage claims arising from the use of insured trucks and trailers on public roads, subject to policy terms, limits, and exclusions.",
+      "detailTitle": "Highway liability is regulated automobile coverage — not cargo or CGL",
+      "detailDescription": "Third-party automobile liability for commercial trucks is part of Ontario's regulated commercial automobile insurance framework — distinct from motor truck cargo, commercial general liability, or warehouse legal liability. Minimum statutory liability limits apply to Ontario automobile policies; higher limits are commonly purchased and often required contractually by shippers or terminals. Driver abstracts, fleet safety programs, and an operator's CVOR safety rating may influence underwriting, but maintaining CVOR registration does not substitute for automobile insurance and does not guarantee coverage.",
+      "duplicateDesc": false,
+      "hasImage": true
+    },
+    {
+      "index": 2,
+      "id": "physical-damage",
+      "tabDesc": "Collision and comprehensive coverage for tractors and trailers, where purchased, may help repair or replace insured units after covered losses — subject to deductibles, stated values, and policy wording.",
+      "detailTitle": "Tractors and trailers are scheduled values — trailers are not automatic",
+      "detailDescription": "Physical damage coverage applies to insured power units and listed trailers subject to how each unit is scheduled and the deductibles you choose. A trailer you pull under contract may need to be listed or covered under a separate agreement. Equipment such as tarps, chains, or onboard technology may be treated differently from the truck itself depending on policy structure. Accurate vehicle values, lienholder interests, and lease terms should be disclosed during quoting.",
+      "duplicateDesc": false,
+      "hasImage": true
+    },
+    {
+      "index": 3,
+      "id": "cross-border-coverage",
+      "tabDesc": "Operating in the United States may require specific territory extensions, higher limits, and insurer filings or endorsements — where available and subject to underwriting — beyond a Canada-only commercial automobile policy.",
+      "detailTitle": "U.S. lanes change territory, limits, and filings — not a generic add-on label",
+      "detailDescription": "Cross-border hauling is not a single universal product name — it reflects how your Ontario commercial automobile program extends territory, limits, and insurer requirements for U.S. operations. Shippers and brokers may require proof of U.S.-adequate limits or specific insurer ratings contractually. Cargo policies may also contain territorial limits. Disclose every state or region you enter, how often, and whether loads originate or terminate in the U.S. so your broker can coordinate automobile and cargo wording — do not assume a Canada-only policy automatically follows the truck south of the border.",
+      "duplicateDesc": false,
+      "hasImage": true
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "considerations": {
+    "count": 7,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

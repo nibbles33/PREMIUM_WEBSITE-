@@ -233,7 +233,8 @@ export function adaptCommercialProductContent(
       content.slug === "non-profit-insurance" ||
       content.slug === "warehousing-insurance" ||
       content.slug === "property-management-insurance" ||
-      content.slug === "pharmacy-insurance"
+      content.slug === "pharmacy-insurance" ||
+      content.slug === "cargo-freight-insurance"
         ? "expandable"
         : "grid",
   });
@@ -326,11 +327,17 @@ export function adaptCommercialIndustryContent(
     trustStatement:
       content.slug === "food-truck-insurance"
         ? "For Windsor–Essex food trucks, mobile trailers, and event vendors — reviewed through an independent broker who can coordinate commercial auto, liability, and equipment coverage for how you actually operate."
-        : content.subhead,
+        : content.slug === "trucking-insurance"
+          ? "For Windsor–Essex motor carriers, owner-operators, and fleet operators — reviewed through an independent broker who can coordinate commercial automobile, cargo, and contract requirements for how you actually haul."
+          : content.slug === "dump-truck-insurance"
+            ? "For Windsor–Essex dump truck operators and small fleets — reviewed through an independent broker who can coordinate commercial automobile, load exposure, and jobsite hauling for how you actually work."
+            : content.subhead,
     showTrustBand: content.slug !== "restaurant-insurance",
     considerationsPresentation:
       content.slug === "restaurant-insurance" ||
-      content.slug === "food-truck-insurance"
+      content.slug === "food-truck-insurance" ||
+      content.slug === "trucking-insurance" ||
+      content.slug === "dump-truck-insurance"
         ? "expandable"
         : "grid",
     coverageHeading: "What's covered",

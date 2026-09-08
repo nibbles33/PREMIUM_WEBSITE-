@@ -216,66 +216,124 @@ export const industryPages: IndustryPageContent[] = [
     slug: "trucking-insurance",
     metaTitle: "Trucking Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Trucking insurance for Windsor-Essex operators — cargo, liability, physical damage, and cross-border coverage through an independent broker.",
+      "Trucking insurance through an independent Windsor-Essex broker — commercial automobile liability, physical damage, motor truck cargo, and U.S. territory coordination for fleets and owner-operators.",
     headline: "Trucking Insurance",
     subhead:
-      "Coverage built for Windsor-Essex's place on the busiest trucking corridor in Canada — cargo, liability, and cross-border protection.",
+      "Motor carriers and for-hire trucking operations face a layered insurance picture — Ontario-regulated commercial automobile liability and physical damage for tractors and trailers on the highway, separate motor truck cargo coverage for freight you haul for others, and additional underwriting when your lanes cross into the United States. That is different from a single light commercial auto policy or from cargo-only coverage for goods in transit. Ontario operators of qualifying commercial motor vehicles must also hold a valid Commercial Vehicle Operator's Registration (CVOR) certificate from the Ministry of Transportation — a regulatory safety-registration program separate from purchasing insurance. Premium Insurance Brokers can help align automobile, cargo, and contract requirements to how your fleet actually runs.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
     quoteLabel: "Get a Trucking Quote",
     coverageIntro:
-      "Coverages commonly needed for for-hire and private trucking operations.",
+      "Trucking insurance usually separates regulated automobile coverage for your power units and trailers from cargo coverage for customers' freight — depending on fleet size, radius, commodities, owner-operator contracts, and whether you haul into the U.S.",
     coverageTypes: [
       {
         title: "Cargo Insurance",
+        shortLabel: "Cargo",
         description:
-          "Helps protect freight you're responsible for while it's in transit under your care.",
+          "May help address certain loss or damage to freight you carry for hire while in your care, custody, or control during transit — where purchased and subject to policy terms, commodity exclusions, limits, and valuation.",
+        detailTitle: "Shippers' freight is a separate exposure from your tractor on the highway",
+        detailDescription:
+          "When you haul another party's goods, motor truck cargo coverage — where purchased — may respond to certain physical loss or damage to that freight subject to causes of loss, exclusions, and limits in the policy. Ontario automobile liability does not replace cargo coverage for customers' goods. Shippers, brokers, and 3PL contracts often specify minimum cargo limits, deductibles, or insurer requirements — those are contractual obligations separate from what any base automobile policy includes. Commodity type, packaging, maximum load value, and security practices affect underwriting.",
         icon: Container,
       },
       {
         title: "Liability Coverage",
+        shortLabel: "Auto Liability",
         description:
-          "Addresses liability for injury or damage arising from your trucking operations.",
+          "Ontario commercial automobile third-party liability — regulated under FSRA — may help respond to certain bodily injury or property-damage claims arising from the use of insured trucks and trailers on public roads, subject to policy terms, limits, and exclusions.",
+        detailTitle: "Highway liability is regulated automobile coverage — not cargo or CGL",
+        detailDescription:
+          "Third-party automobile liability for commercial trucks is part of Ontario's regulated commercial automobile insurance framework — distinct from motor truck cargo, commercial general liability, or warehouse legal liability. Minimum statutory liability limits apply to Ontario automobile policies; higher limits are commonly purchased and often required contractually by shippers or terminals. Driver abstracts, fleet safety programs, and an operator's CVOR safety rating may influence underwriting, but maintaining CVOR registration does not substitute for automobile insurance and does not guarantee coverage.",
         icon: Briefcase,
       },
       {
         title: "Physical Damage",
+        shortLabel: "Phys. Damage",
         description:
-          "Helps repair or replace power units and trailers after covered collision or comprehensive losses.",
+          "Collision and comprehensive coverage for tractors and trailers, where purchased, may help repair or replace insured units after covered losses — subject to deductibles, stated values, and policy wording.",
+        detailTitle: "Tractors and trailers are scheduled values — trailers are not automatic",
+        detailDescription:
+          "Physical damage coverage applies to insured power units and listed trailers subject to how each unit is scheduled and the deductibles you choose. A trailer you pull under contract may need to be listed or covered under a separate agreement. Equipment such as tarps, chains, or onboard technology may be treated differently from the truck itself depending on policy structure. Accurate vehicle values, lienholder interests, and lease terms should be disclosed during quoting.",
         icon: Truck,
       },
       {
         title: "Cross-Border Coverage",
+        shortLabel: "U.S. Territory",
         description:
-          "Options that support operations moving between Canada and the U.S., subject to filings and carrier requirements.",
+          "Operating in the United States may require specific territory extensions, higher limits, and insurer filings or endorsements — where available and subject to underwriting — beyond a Canada-only commercial automobile policy.",
+        detailTitle: "U.S. lanes change territory, limits, and filings — not a generic add-on label",
+        detailDescription:
+          "Cross-border hauling is not a single universal product name — it reflects how your Ontario commercial automobile program extends territory, limits, and insurer requirements for U.S. operations. Shippers and brokers may require proof of U.S.-adequate limits or specific insurer ratings contractually. Cargo policies may also contain territorial limits. Disclose every state or region you enter, how often, and whether loads originate or terminate in the U.S. so your broker can coordinate automobile and cargo wording — do not assume a Canada-only policy automatically follows the truck south of the border.",
         icon: Route,
+      },
+    ],
+    considerations: [
+      {
+        title: "CVOR is MTO registration — not insurance",
+        description:
+          "Ontario requires operators of qualifying commercial motor vehicles — such as buses, trucks, and tow trucks — to hold a valid Commercial Vehicle Operator's Registration (CVOR) certificate from the Ministry of Transportation before operating. CVOR is a carrier safety-registration and monitoring program; it is not an insurance policy and does not pay claims. Insurers may review CVOR safety ratings, collisions, and convictions during underwriting, but regulatory compliance and insurance are separate matters — confirm whether each vehicle in your fleet requires CVOR on the MTO website before operating.",
+      },
+      {
+        title: "Automobile liability, cargo, and CGL are different products",
+        description:
+          "Commercial automobile liability addresses third-party injury or property damage from the use of insured vehicles on roads. Motor truck cargo addresses customers' freight in transit. Commercial general liability may address certain premises or operations exposures at terminals or offices — but does not replace automobile or cargo coverage for highway operations. Each responds under its own policy wording; none automatically includes the others.",
+      },
+      {
+        title: "Fleet, owner-operator, and lease structures",
+        description:
+          "Owner-operators leased to a motor carrier may rely on the carrier's automobile program for dispatched loads while needing separate coverage for bobtail, deadhead, or non-dispatched use — depending on lease terms. Fleets must schedule multiple units, drivers, and often trailers. Who owns the tractor, who holds the CVOR certificate, and who contracts with the shipper all affect how policies should be structured.",
+      },
+      {
+        title: "Radius, commodities, and contract requirements",
+        description:
+          "Local pickup-and-delivery, regional, and long-haul operations present different loss patterns. Commodities such as electronics, alcohol, pharmaceuticals, or high-theft goods may need specific endorsements or sublimits. Shipper and broker contracts frequently specify minimum automobile and cargo limits — contractual requirements you must match to certificates your policies can actually issue.",
+      },
+      {
+        title: "Drivers, abstracts, and loss history",
+        description:
+          "Insurers typically review driver experience, licence class, abstracts, and fleet loss runs. CVOR-related convictions or poor safety ratings may affect availability and pricing — as underwriting factors, not as automatic coverage guarantees. Disclose all regular drivers and any subcontracted operators used in your operation.",
+      },
+      {
+        title: "Trailers, terminals, and equipment breakdown",
+        description:
+          "Trailers may need separate scheduling or interchanged-trailer agreements. Terminal yard operations can create premises liability distinct from over-the-road automobile exposure. Business interruption or downtime coverage, where available for trucking operations, depends on policy triggers and is not automatic with physical damage — confirm scope with your broker.",
+      },
+      {
+        title: "Cross-border disclosure",
+        description:
+          "If any portion of your operation enters the United States, disclose lanes, frequency, and whether loads are domestic, cross-border, or U.S.-domestic. Automobile territory extensions, cargo territorial limits, and contractual shipper requirements must be reviewed together — partial disclosure can leave gaps between what you haul and what your policies cover.",
       },
     ],
     faqTitle: "Trucking insurance FAQ",
     faqItems: [
       {
-        question: "Do I need cargo insurance separately from liability?",
+        question: "Does trucking insurance include cargo for customers' freight?",
         answer:
-          "Usually yes. Liability covers injury and damage to others; cargo is about the freight itself. Shippers and brokers often require specific cargo limits in contracts.",
+          "Generally not automatically. Ontario commercial automobile liability and physical damage address the insured vehicle and third-party claims arising from its use on roads — not loss of customers' freight. Motor truck cargo coverage, where purchased, may address certain physical loss or damage to freight you carry for hire subject to policy terms, exclusions, limits, and valuation. Shippers and brokers often require specific cargo limits contractually — confirm how your program structures automobile and cargo coverage with your broker.",
       },
       {
-        question: "Does my policy cover cross-border US trips?",
+        question: "How does CVOR relate to trucking insurance?",
         answer:
-          "Only if it's arranged that way. Cross-border work can require specific filings, limits, and endorsements. Tell your broker your lanes and destinations so coverage matches how you haul.",
+          "CVOR — Commercial Vehicle Operator's Registration — is an Ontario Ministry of Transportation program that registers and monitors commercial motor vehicle operators. It is regulatory registration, not insurance. You must hold a valid CVOR certificate where required before operating qualifying vehicles, but CVOR does not pay claims and does not replace commercial automobile insurance. Insurers may consider CVOR safety ratings and violation history during underwriting.",
       },
       {
-        question: "Owner-operator vs. fleet trucking insurance?",
+        question: "Does operating in the U.S. change my insurance?",
         answer:
-          "Owner-operators are typically rated on a single unit and their contracts. Fleets need broader structures for multiple units, drivers, and terminals. Both still need liability, physical damage, and often cargo.",
+          "It can. U.S. operations may require territory extensions, higher automobile liability limits, and specific insurer filings or endorsements — depending on your carrier, policy wording, and contracts. Cargo policies may also limit or exclude certain territories. Tell your broker which states you enter, how often, and what shippers require before assuming a Canada-only policy covers southbound loads.",
       },
       {
-        question: "What information do I need for a trucking quote?",
+        question: "Are trailers automatically covered with the tractor?",
         answer:
-          "Equipment list, driver abstracts, radius and commodities hauled, years experience, current coverage, and any claims. Contract insurance requirements help too.",
+          "Not necessarily. Trailers you own, lease, or pull under interchange agreements may need to be listed or covered under specific policy provisions. Physical damage and liability for trailers depend on how units are scheduled, who owns them, and the lease or interchange terms. Provide a full equipment list — tractors, trailers, and specialty units — when quoting.",
+      },
+      {
+        question: "What information affects a trucking insurance quote?",
+        answer:
+          "Expect questions about fleet and trailer lists, stated values, driver rosters and abstracts, radius and territories hauled, commodities, annual distance, CVOR certificate holder, loss history, owner-operator versus employee drivers, and contract insurance requirements from shippers or brokers. Insurers do not all use identical forms — accurate disclosure helps match markets to your operation.",
       },
     ],
     ctaHeading: "Ready to cover your trucking operation?",
     ctaSubhead:
-      "Tell us about your equipment, lanes, and cargo — we'll compare options that fit.",
+      "Share your fleet list, lanes, commodities, and contract requirements — we will compare trucking automobile and cargo options.",
     serviceName: "Trucking Insurance",
   },
   {
@@ -1052,66 +1110,119 @@ export const industryPages: IndustryPageContent[] = [
     slug: "dump-truck-insurance",
     metaTitle: "Dump Truck Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Dump truck insurance through an independent Windsor-Essex broker — commercial auto liability, physical damage, cargo & debris coverage, and non-trucking liability.",
+      "Dump truck insurance through an independent Windsor-Essex broker — commercial auto liability, physical damage, load and debris exposure, and non-trucking liability for construction and aggregate hauling.",
     headline: "Dump Truck Insurance",
     subhead:
-      "Commercial auto and liability coverage built for dump truck operators and small fleets.",
+      "Dump truck operations combine heavy commercial automobile exposure on public roads with construction-site and material-handling risks that ordinary fleet policies do not fully describe — tipping, loading, aggregate or excavation work, and jobsite access differ from long-haul freight hauling. Depending on your operation, that can mean Ontario-regulated commercial automobile liability and physical damage for the unit, separate coverage for certain load or debris exposures where purchased, and non-trucking liability when a leased unit operates outside dispatch — each subject to policy terms. Whether you haul your own material, haul for hire, or operate as a contractor's dedicated truck changes underwriting and contract requirements. Premium Insurance Brokers can align coverage to how your dump trucks actually work.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
     quoteLabel: "Get a Dump Truck Quote",
     coverageIntro:
-      "Coverages commonly needed for dump truck hauling — liability, the unit itself, and loads.",
+      "Dump truck insurance usually separates regulated automobile coverage for the heavy unit on the road from optional load, debris, or non-dispatched liability exposures — depending on whether you haul for hire or your own material, jobsite work, commodities, and lease structure.",
     coverageTypes: [
       {
         title: "Commercial Auto Liability",
+        shortLabel: "Auto Liability",
         description:
-          "Helps protect against injury or property damage claims arising from your dump truck operations.",
+          "Ontario commercial automobile third-party liability may help respond to certain bodily injury or property-damage claims arising from the use of your dump truck on public roads — subject to FSRA-regulated policy terms, limits, and exclusions.",
+        detailTitle: "On the highway is automobile liability — jobsites may be different",
+        detailDescription:
+          "Collisions, property damage, and injury claims arising while your dump truck travels on public roads are typically evaluated under commercial automobile liability — regulated separately from commercial general liability. Loading zones, active construction sites, tipping operations, or debris spills may involve different policy triggers depending on whether the loss arises from automobile use, completed operations, or pollution exclusions. Do not assume automobile liability automatically covers every incident that happens while dumping or entering a jobsite — confirm how your policies define covered automobile use and operations.",
         icon: Briefcase,
       },
       {
         title: "Physical Damage",
+        shortLabel: "Phys. Damage",
         description:
-          "Helps repair or replace your dump truck after covered collision or comprehensive losses.",
+          "Collision and comprehensive coverage for your dump truck, where purchased, may help repair or replace the unit after covered losses — subject to stated values, deductibles, and policy wording.",
+        detailTitle: "Heavy units, bodies, and hydraulics drive values and deductibles",
+        detailDescription:
+          "Dump bodies, hydraulics, tailgates, and reinforcement add to insurable value beyond a standard straight truck. Rollover, overturn, and contact with overhead structures on jobsites are loss scenarios insurers evaluate. Physical damage responds only to covered causes of loss under the automobile policy — mechanical breakdown of hydraulics or wear items may be excluded unless specific endorsements apply. Accurate GVW, body type, and equipment values support proper limits.",
         icon: Truck,
       },
       {
         title: "Cargo & Debris Coverage",
+        shortLabel: "Load / Debris",
         description:
-          "Can address loads you haul — aggregate, soil, or debris — while in transit under your care.",
+          "May help address certain loss to aggregate, soil, asphalt, or other material you haul — or debris falling from the vehicle — where purchased and subject to policy terms, commodities, and whether you haul for others or your own material.",
+        detailTitle: "Own material hauling is not the same as for-hire freight",
+        detailDescription:
+          "Many dump operators haul their own excavation, aggregate, or demolition material rather than customers' freight — underwriting and available coverage differ from motor-carrier cargo policies. When you do haul for others, contracts may specify load limits. Spills, unsecured loads, and debris striking other vehicles create distinct exposure that may be addressed under automobile liability, load coverage endorsements, or pollution-related forms depending on cause and policy wording — not automatically under one label. Disclose whether hauling is for-hire, contract-based, or solely for your own jobs.",
         icon: Container,
       },
       {
         title: "Non-Trucking Liability",
+        shortLabel: "Non-Trucking",
         description:
-          "May apply when a leased or contracted unit is used for personal purposes outside dispatch — subject to lease terms.",
+          "May provide certain automobile liability coverage when a leased or contracted unit is used outside motor-carrier dispatch — where purchased and subject to lease terms and policy definitions.",
+        detailTitle: "Bobtail and non-dispatched use need explicit lease review",
+        detailDescription:
+          "Operators leased to a motor carrier or running under another party's dispatch may need non-trucking liability — sometimes called bobtail coverage — for trips without a load or outside dispatch, depending on lease language. This is not a substitute for commercial automobile liability while operating under dispatch, and it does not cover cargo or physical damage to the unit unless separately arranged. Lease agreements often specify minimum insurance — contractual requirements separate from Ontario statutory automobile rules.",
         icon: Route,
+      },
+    ],
+    considerations: [
+      {
+        title: "For-hire hauling vs. own-material or contractor use",
+        description:
+          "A dump truck hauling aggregate for customers under contract faces motor-carrier-style cargo and automobile requirements different from a contractor moving soil between its own excavation sites. Insurers ask who owns the material, who holds the contract, and whether loads are billed to third parties. Mischaracterizing the operation can leave cargo or liability gaps.",
+      },
+      {
+        title: "Road exposure vs. jobsite and dumping operations",
+        description:
+          "Public-road collisions are automobile exposures. Tipping on uneven ground, contact with utilities, or property damage while maneuvering on a construction site may implicate different policy sections or exclusions — including completed operations under CGL where applicable. Loading and unloading at quarries, asphalt plants, and demolition sites each carry distinct third-party property and injury exposure.",
+      },
+      {
+        title: "Material type and seasonal operations",
+        description:
+          "Aggregate, soil, asphalt, demolition debris, and snow removal each present different spill, weight, and environmental concerns. Seasonal operators should disclose peak months and stored equipment. High-value or hazardous material may need specific endorsements or may be excluded — confirm commodities with your broker.",
+      },
+      {
+        title: "Pollution and environmental exposure — conditional",
+        description:
+          "Soil contamination, fuel spills, or asbestos-laden demolition debris can create pollution liability exposure that standard automobile liability may exclude. Pollution coverage is not universally required for every dump operator — availability depends on material hauled, contracts, and site requirements. Regulatory remediation obligations are separate from insurance.",
+      },
+      {
+        title: "Hydraulics, bodies, and equipment values",
+        description:
+          "Dump bodies, tailgates, and hydraulic systems represent significant repair costs. Physical damage coverage schedules the unit as a whole — confirm whether aftermarket bodies and equipment are included in stated values. Equipment breakdown of non-auto systems may fall outside automobile physical damage.",
+      },
+      {
+        title: "CVOR and heavy commercial vehicle rules",
+        description:
+          "Qualifying dump trucks may require a valid Ontario CVOR certificate from the Ministry of Transportation — regulatory registration separate from insurance. CVOR monitors carrier safety performance; insurers may review related history during underwriting. Confirm on the MTO website whether each unit requires CVOR before operating.",
       },
     ],
     faqTitle: "Dump truck insurance FAQ",
     faqItems: [
       {
-        question: "Do I need cargo coverage for hauling debris or aggregate?",
+        question: "Is a dump truck insured differently from a regular commercial truck?",
         answer:
-          "Often yes if you're responsible for the load. Liability covers damage to others; cargo addresses the material you're hauling. Contracts and job sites may specify minimum cargo limits.",
+          "Often yes in underwriting, even when policy forms overlap. Dump operations involve heavy GVW, tipping, construction-site access, and material types that differ from van or long-haul freight. Automobile liability and physical damage still form the core, but load/debris exposure, jobsite incidents, and whether you haul for hire or your own material change how coverage should be structured — disclose your actual use to your broker.",
       },
       {
-        question: "What is non-trucking liability?",
+        question: "What about damage while dumping or unloading?",
         answer:
-          "Non-trucking (or bobtail) liability can cover liability when a leased truck is operated for personal use and not under dispatch. Whether you need it depends on your lease and how the unit is used.",
+          "Whether damage during tipping, unloading, or jobsite maneuvering is insured depends on the cause of loss and which policy applies — commercial automobile liability, load endorsements, or commercial general liability may each address different scenarios subject to exclusions. Overturn, contact with overhead lines, or spill onto third-party property are not automatically covered without reviewing policy triggers.",
       },
       {
-        question: "Can I insure a single truck, or do I need a fleet policy?",
+        question: "Does my policy cover the material I haul?",
         answer:
-          "You can insure a single dump truck. Fleet structures become useful as you add units and drivers. Your broker will match the setup to how many trucks you run.",
+          "Not automatically. Operators hauling their own material may have different coverage options than for-hire carriers moving customers' freight. Load or cargo-related endorsements, where available, depend on commodities, valuation, and policy wording. Contractual requirements from general contractors or quarry owners may specify limits separately from your automobile policy.",
       },
       {
-        question: "What information do I need for a quote?",
+        question: "What if I work mainly on construction sites?",
         answer:
-          "Truck details (year, make, GVW), driver abstracts, radius and commodities hauled, owner-operator vs. fleet status, and current coverage or claims history.",
+          "Construction-site access, tight maneuvering, and interaction with other trades create automobile and operations exposure beyond highway travel. Disclose typical jobsite types, whether you enter active excavations, and if you sub-contract to general contractors — certificates and additional-insured requirements are often contractual.",
+      },
+      {
+        question: "Does hauling soil or demolition material change underwriting?",
+        answer:
+          "It can. Material type affects spill exposure, weight limits, routing, and whether pollution or debris endorsements are needed. Demolition debris, asphalt, and contaminated soil may face stricter exclusions or higher deductibles. Provide accurate commodity descriptions and any contract requirements when quoting.",
       },
     ],
     ctaHeading: "Ready to cover your dump truck?",
     ctaSubhead:
-      "Tell us about your truck and hauling work — we'll compare options that fit.",
+      "Share your unit details, material hauled, jobsite work, and lease structure — we will compare dump truck coverage options.",
     serviceName: "Dump Truck Insurance",
   },
 ];

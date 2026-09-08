@@ -216,39 +216,24 @@
       "route": "/cargo-freight-insurance/",
       "slug": "cargo-freight-insurance",
       "category": "commercial",
-      "heroWords": 18,
-      "heroSpecific": false,
+      "heroWords": 120,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 31,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 66.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 286,
-      "safetyFlags": [
-        {
-          "page": "/cargo-freight-insurance/",
-          "field": "coverageIntro",
-          "quote": "Cargo insurance addresses the goods themselves; liability covers damage to others.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        },
-        {
-          "page": "/cargo-freight-insurance/",
-          "field": "faq",
-          "quote": "Liability covers injury and damage to others; cargo is a separate coverage for the freight itself.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 376,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1117,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
-      "geoTargeting": "Windsor-Essex-primary",
-      "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "2 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (1117w), 4 cards avg 66.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/commercial-auto-insurance/",
@@ -554,32 +539,24 @@
       "route": "/dump-truck-insurance/",
       "slug": "dump-truck-insurance",
       "category": "commercial",
-      "heroWords": 13,
-      "heroSpecific": false,
+      "heroWords": 116,
+      "heroSpecific": true,
       "coverageCount": 4,
       "coverageCardQuality": "specific/hedged (strong)",
-      "avgCardWords": 32,
+      "avgCardWords": 66,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 326,
-      "safetyFlags": [
-        {
-          "page": "/dump-truck-insurance/",
-          "field": "faq",
-          "quote": "Liability covers damage to others; cargo addresses the material you're hauling.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 319,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1072,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
-      "geoTargeting": "Windsor-Essex-primary",
-      "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (1072w), 4 cards avg 66w, considerations yes, FAQ unique"
     },
     {
       "route": "/employment-practices-liability-insurance/",
@@ -1468,32 +1445,24 @@
       "route": "/trucking-insurance/",
       "slug": "trucking-insurance",
       "category": "commercial",
-      "heroWords": 18,
-      "heroSpecific": false,
+      "heroWords": 115,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 27,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 67,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 293,
-      "safetyFlags": [
-        {
-          "page": "/trucking-insurance/",
-          "field": "faq",
-          "quote": "Liability covers injury and damage to others; cargo is about the freight itself.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 440,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1241,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
-      "geoTargeting": "Windsor-Essex-primary",
-      "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (1241w), 4 cards avg 67w, considerations yes, FAQ unique"
     },
     {
       "route": "/warehousing-insurance/",
@@ -1520,10 +1489,10 @@
     }
   ],
   "counts": {
-    "A": 13,
+    "A": 16,
     "B": 16,
     "C": 18,
-    "D": 11
+    "D": 8
   },
   "allFlags": [
     {
@@ -1597,20 +1566,6 @@
       "severity": "high"
     },
     {
-      "page": "/cargo-freight-insurance/",
-      "field": "coverageIntro",
-      "quote": "Cargo insurance addresses the goods themselves; liability covers damage to others.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/cargo-freight-insurance/",
-      "field": "faq",
-      "quote": "Liability covers injury and damage to others; cargo is a separate coverage for the freight itself.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
       "page": "/contractors-insurance/",
       "field": "faq",
       "quote": "Builder's risk covers the structure and materials during construction or renovation for covered perils like fire or vandalism.",
@@ -1628,13 +1583,6 @@
       "page": "/directors-officers-insurance/",
       "field": "faq",
       "quote": "GL covers the organization's operational liability, not personal claims against directors for management decisions.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/dump-truck-insurance/",
-      "field": "faq",
-      "quote": "Liability covers damage to others; cargo addresses the material you're hauling.",
       "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
       "severity": "high"
     },
@@ -1686,13 +1634,6 @@
       "quote": "Contract requirements vary — $1M to $5M per occurrence is common for mid-size engagements.",
       "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
       "severity": "low"
-    },
-    {
-      "page": "/trucking-insurance/",
-      "field": "faq",
-      "quote": "Liability covers injury and damage to others; cargo is about the freight itself.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
     }
   ]
 }
