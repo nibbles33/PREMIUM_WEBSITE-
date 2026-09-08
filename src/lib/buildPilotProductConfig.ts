@@ -309,6 +309,7 @@ export function adaptCommercialIndustryContent(
     coverageHeading: "What's covered",
     coverageIntro: content.coverageIntro,
     coverageItems: content.coverageTypes,
+    considerations: content.considerations,
     brokerSteps: commercialBrokerSteps,
     relatedProducts: related,
     relatedIntro: DEFAULT_COMMERCIAL_RELATED_INTRO,

@@ -40,11 +40,11 @@
 | Bucket | Count |
 |--------|------:|
 | D1 | 1 |
-| D2 | 11 |
+| D2 | 10 |
 | D3 | 12 |
 | C1 | 7 |
 | C2 | 9 |
-| **Total** | **40** |
+| **Total** | **39** |
 
 ---
 
@@ -86,7 +86,6 @@
 | /property-management-insurance/ | D | 261 | [HIGH] coverage:General Liability — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Industrial/Coverage-Types | Property-mgmt research; fix GL flat card; add tenant/legal-expense/pool considerations. |
 | /real-estate-insurance/ | C | 283 | None | — | Yes | **C2** | Industrial/Coverage-Types | Substantial: E&O vs GL for agents/brokers; thin; FAQ templated with food-truck — needs researched rewrite. |
 | /religious-organizations-insurance/ | C | 215 | None | — | Yes | **C2** | Professional/Institutional | Institutional batch; thin (215w); add abuse/counselling/property considerations — no audit flags but shallow. |
-| /restaurant-insurance/ | D | 306 | [HIGH] coverage:Property Coverage — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Hospitality/Food | Hospitality batch priority; fix property flat card despite hedged family label; add spoilage/liquor/delivery considerations. |
 | /retail-insurance/ | C | 292 | None | — | Yes | **C1** | Retail/Services | Modest: add considerations (inventory valuation, online sales); incremental card/FAQ depth. |
 | /salon-barber-insurance/ | D | 239 | [HIGH] coverage:Product Liability — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Retail/Services | Retail/services batch; fix product-liability flat card; add professional/beauty-service considerations. |
 | /small-business-insurance/ | C | 399 | None | — | No | **D1** | Industrial/Coverage-Types | Single commercial-property card hedging; considerations exist — wording-only pass, not Greenhouse-length expansion. |
@@ -102,7 +101,7 @@
 - **Agriculture:** C2×1
 - **Construction:** D3×3
 - **Construction (Bonding/Surety):** D3×1
-- **Hospitality/Food:** D2×5, C2×1
+- **Hospitality/Food:** D2×4, C2×1
 - **Hospitality/Food (adjacent — events):** D2×1
 - **Industrial/Coverage-Types:** C1×3, C2×3, D3×2, D2×2, D1×1
 - **Industrial/Coverage-Types (Hub):** C2×1
@@ -185,9 +184,6 @@
 
 #### /property-management-insurance/
 - **[HIGH]** `coverage:General Liability`: "Covers injury and property damage claims arising from managed properties and management office operations."
-
-#### /restaurant-insurance/
-- **[HIGH]** `coverage:Property Coverage`: "Covers your building improvements, furniture, and kitchen equipment against covered losses."
 
 #### /salon-barber-insurance/
 - **[HIGH]** `coverage:Product Liability`: "Covers claims that retail products sold in-salon caused allergic reaction or injury."

@@ -1378,32 +1378,24 @@
       "route": "/restaurant-insurance/",
       "slug": "restaurant-insurance",
       "category": "commercial",
-      "heroWords": 17,
-      "heroSpecific": false,
+      "heroWords": 106,
+      "heroSpecific": true,
       "coverageCount": 4,
       "coverageCardQuality": "specific/hedged (strong)",
-      "avgCardWords": 25.5,
+      "avgCardWords": 89,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 306,
-      "safetyFlags": [
-        {
-          "page": "/restaurant-insurance/",
-          "field": "coverage:Property Coverage",
-          "quote": "Covers your building improvements, furniture, and kitchen equipment against covered losses.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 648,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1622,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
-      "geoTargeting": "Windsor-Essex-primary",
-      "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (1622w), 4 cards avg 89w, considerations yes, FAQ unique"
     },
     {
       "route": "/retail-insurance/",
@@ -1592,10 +1584,10 @@
     }
   ],
   "counts": {
-    "A": 2,
+    "A": 3,
     "B": 16,
     "C": 18,
-    "D": 22
+    "D": 21
   },
   "allFlags": [
     {
@@ -1798,13 +1790,6 @@
       "page": "/property-management-insurance/",
       "field": "coverage:General Liability",
       "quote": "Covers injury and property damage claims arising from managed properties and management office operations.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/restaurant-insurance/",
-      "field": "coverage:Property Coverage",
-      "quote": "Covers your building improvements, furniture, and kitchen equipment against covered losses.",
       "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
       "severity": "high"
     },

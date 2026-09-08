@@ -15,7 +15,10 @@ import {
   UtensilsCrossed,
   type LucideIcon,
 } from "lucide-react";
-import type { CoverageCard } from "@/components/LineInsurancePage";
+import type {
+  ConsiderationItem,
+  CoverageCard,
+} from "@/components/LineInsurancePage";
 import type { FaqItem } from "@/components/FaqAccordion";
 
 export const QUOTE_BUSINESS = "/get-a-quote?type=business";
@@ -133,6 +136,7 @@ export type IndustryPageContent = {
   quoteLabel: string;
   coverageIntro: string;
   coverageTypes: CoverageCard[];
+  considerations?: ConsiderationItem[];
   faqTitle: string;
   faqItems: FaqItem[];
   ctaHeading: string;
@@ -509,35 +513,104 @@ export const industryPages: IndustryPageContent[] = [
       "Restaurant insurance through an independent Windsor-Essex broker — general liability, property, liquor liability, and equipment breakdown & spoilage.",
     headline: "Restaurant Insurance",
     subhead:
-      "Coverage built around the realities of running a restaurant — from the kitchen to the dining room.",
+      "Restaurants in Windsor–Essex combine busy dining rooms, commercial kitchens, and — for many operators — AGCO-licensed alcohol service. Insurance needs to reflect those overlapping exposures: guest injury on your premises, property loss affecting kitchen equipment and inventory, food-related illness claims, and (where you serve alcohol) liability that standard general liability often excludes or limits. Ontario food service premises must also meet public health rules under O. Reg. 493/17, including having a certified food handler on site during operating hours — a regulatory requirement separate from what your insurance policy covers. A broker can help align property, liability, and optional endorsements to how your restaurant actually operates.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Restaurant Quote",
     coverageIntro:
-      "Coverages that address guest liability, kitchen equipment, alcohol service, and spoilage risk.",
+      "Coverage options commonly reviewed for restaurants — from premises liability and property to liquor liability and spoilage — depend on your licence status, kitchen equipment, delivery model, and lease requirements.",
     coverageTypes: [
       {
         title: "General Liability",
         description:
-          "Helps protect against guest injury or property damage claims on your premises.",
+          "Helps protect against certain third-party bodily injury and property-damage claims arising from restaurant operations and your premises — such as slip-and-fall incidents in the dining room or parking area — subject to policy terms, exclusions, and limits.",
+        detailTitle: "When a busy dining room becomes a liability claim",
+        detailDescription:
+          "Restaurants concentrate people in high-traffic areas — dining rooms, patios, washrooms, and parking lots — where spills, crowded aisles, and seasonal ice create slip-and-fall exposure. General liability may respond to certain third-party injury or property-damage claims arising from these premises and from day-to-day operations, but scope depends on how your policy defines your premises, operations, and any off-premises catering or delivery activities.",
         icon: Briefcase,
       },
       {
         title: "Property Coverage",
         description:
-          "Covers your building improvements, furniture, and kitchen equipment against covered losses.",
+          "May help cover your building (if owned or required under lease), tenant improvements, furniture, fixtures, and kitchen equipment against covered causes of loss, depending on how the policy is structured and which perils or endorsements apply.",
+        detailTitle: "Why kitchen equipment drives property values",
+        detailDescription:
+          "A restaurant's property exposure is weighted toward the kitchen — commercial ovens, fryers, walk-in coolers, hood systems, and built-in fixtures often represent a large share of insurable value alongside dining-room furniture and tenant improvements. Fire, water damage from suppression systems, and theft of equipment or alcohol stock are common loss scenarios carriers evaluate when structuring property coverage and deductibles.",
         icon: Store,
       },
       {
         title: "Liquor Liability",
         description:
-          "Addresses liability arising from serving alcohol — often required if you have a liquor license.",
+          "Where you sell or serve alcohol under an AGCO Liquor Sales Licence, liquor liability may address certain claims tied to alcohol service — a distinct coverage from general liability, which often excludes or limits liquor-related claims. Holding a licence authorizes legal sale and service; it does not include insurance, and the Liquor Licence and Control Act itself does not mandate liquor liability insurance as a statutory condition.",
+        detailTitle: "Civil liability under the Act versus the coverage on your policy",
+        detailDescription:
+          "Serving alcohol under an AGCO Liquor Sales Licence creates regulatory obligations and civil liability exposure if a patron is overserved or alcohol contributes to injury or property damage after they leave. AGCO's licensing guide addresses that civil exposure directly — it is not the same as carrying liquor liability insurance, and the Act does not prescribe a named insurance product as a licence condition. Liquor liability coverage, where included in your program, is meant to address many alcohol-related claims that standard general liability excludes or limits; landlords and other counterparties may still require proof of coverage contractually.",
         icon: UtensilsCrossed,
       },
       {
         title: "Equipment Breakdown & Spoilage",
         description:
-          "Can cover sudden equipment failure and resulting food spoilage, subject to policy terms.",
+          "Equipment breakdown coverage may address sudden mechanical or electrical failure of covered kitchen or refrigeration equipment; spoilage endorsements may address inventory lost due to temperature change from specified causes — neither is automatic in a base property policy.",
+        detailTitle: "When the walk-in fails on a Friday night",
+        detailDescription:
+          "Refrigeration and cooking equipment are operationally critical — a sudden compressor failure or electrical breakdown can destroy thousands of dollars in perishable inventory and force you to stop service. Base property policies often handle fire or theft differently from mechanical breakdown or temperature-change spoilage. Equipment breakdown and spoilage endorsements exist precisely because restaurants depend on continuous cold chain and functioning kitchen lines; triggers and sublimits vary, especially for off-premises power failures versus on-site equipment failure.",
         icon: Factory,
+      },
+    ],
+    considerations: [
+      {
+        title: "Disclosures your broker typically needs",
+        description:
+          "Cuisine type, seating capacity, cooking methods (deep fryer, open flame, wood-fired oven), hours, delivery or catering model, and whether you hold an AGCO Liquor Sales Licence.",
+      },
+      {
+        title: "Food safety is regulatory — not an insurance substitute",
+        description:
+          "O. Reg. 493/17 requires at least one certified food handler on site during all operating hours at food service premises. Compliance reduces illness risk but does not replace liability coverage.",
+      },
+      {
+        title: "Product Liability / Food Illness",
+        description:
+          "May respond to certain claims alleging illness or injury from food you prepared or served, often as part of products-completed operations coverage within a CGL policy or by endorsement — scope and exclusions vary by carrier and wording. Foodborne illness allegations, undeclared allergen incidents, and contamination events can generate third-party claims distinct from a slip-and-fall or other premises injury. Product liability / products-completed operations is a separate coverage topic from general liability — which addresses certain premises and operations claims in the Explorer above — and should be confirmed with your broker, not assumed from a standard CGL label alone. Food handler compliance under O. Reg. 493/17 is a public health obligation, not a substitute for this coverage.",
+      },
+      {
+        title: "Liquor licensing, civil liability, and insurance are three different things",
+        description:
+          "AGCO issues Liquor Sales Licences for eligible premises. Under the Liquor Licence and Control Act, licensees can face civil liability for harm tied to alcohol service — AGCO's own licensing guidance states there is more to lose than your licence and recommends consulting an insurance professional. That civil exposure exists independently of whether you carry insurance. The Act itself does not mandate liquor liability insurance as a statutory condition of licensing. However, proof of insurance may still be requested during the licensing or application process, by a landlord, or under other contractual terms — that is a documentation or contractual practice, not the same thing as a provincial insurance mandate. Liquor liability insurance, where purchased, is a commercial product that may help respond to certain alcohol-related claims standard general liability excludes or limits — confirm inclusion with your broker.",
+      },
+      {
+        title: "Delivery and app-based orders",
+        description:
+          "In-house or third-party delivery can create commercial auto or hired and non-owned auto exposures when staff use personal vehicles. Disclose your delivery model — platform vendor agreements may impose their own certificate requirements.",
+      },
+      {
+        title: "Kitchen fire and suppression maintenance",
+        description:
+          "Hood and duct cleaning, fire suppression inspection, and fryer protocols affect both fire code compliance and property underwriting.",
+      },
+      {
+        title: "Patio and seasonal operations",
+        description:
+          "Outdoor seating may require municipal encroachment agreements and AGCO licensing of outdoor areas. Seasonality affects business income projections.",
+      },
+      {
+        title: "Business Interruption",
+        description:
+          "May help with lost business income and certain continuing expenses when a covered property loss forces you to close or scale back service, subject to waiting periods, limits, and policy terms — particularly relevant where payroll and rent continue during repairs. After a covered fire, major water loss, or extended equipment failure, repairs can take weeks while fixed costs continue — lease payments, core staff, loan obligations, and supplier commitments do not pause automatically. Business interruption is a distinct coverage from commercial property insurance for physical damage to the building or contents; it addresses income and continuing expense loss during a covered suspension. For seasonal or patio-driven revenue in Windsor–Essex, accurate peak-period projections matter when underwriting this coverage — separate from the property values discussed in the Explorer above.",
+      },
+      {
+        title: "Lease and franchisor requirements",
+        description:
+          "Leases often specify minimum liability limits, additional insured status, and evidence of property coverage. Franchise manuals may add requirements — including liquor liability certificates where alcohol is served.",
+      },
+      {
+        title: "WSIB and kitchen employee injuries",
+        description:
+          "Most Ontario employers must carry WSIB coverage for workers. WSIB is a statutory workplace insurance system, separate from commercial general liability.",
+      },
+      {
+        title: "Did you know?",
+        description:
+          "Municipal business licences, fire inspections, and public health inspections are operational and regulatory requirements — not insurance coverages. They are listed here to explain why restaurant risk profiles differ from generic retail.",
       },
     ],
     faqTitle: "Restaurant insurance FAQ",
@@ -545,22 +618,27 @@ export const industryPages: IndustryPageContent[] = [
       {
         question: "Do I need liquor liability if I serve alcohol?",
         answer:
-          "Usually yes. General liability often excludes or limits liquor-related claims. Liquor liability is designed for establishments that sell or serve alcohol and is commonly required by landlords and licensing bodies.",
+          "If you sell or serve alcohol under an AGCO Liquor Sales Licence, liquor liability is commonly purchased because general liability often excludes or limits liquor-related claims. That is an insurance gap question — not the same as a provincial licensing rule. The Liquor Licence and Control Act does not mandate liquor liability insurance as a statutory condition of holding a licence. AGCO's licensing guidance confirms licensees may face civil liability for harm caused by someone served liquor at the business — separate from administrative penalties such as suspension or revocation — and recommends consulting an insurance professional. Proof of insurance may still be requested during the licensing or application process, by your landlord, or under a lease, franchise, or lender agreement. Those are contractual or documentation requirements; they do not change the fact that the Act itself does not prescribe a named insurance product. If you also cater off-site events with alcohol under a Caterer's Endorsement or Special Occasion Permit, the same insurance-versus-regulation distinction applies: LCBO's Special Occasion Permit FAQ states provincial regulations do not require permit holders to carry party liability insurance, though a venue may require it — confirm what each contract actually asks for.",
       },
       {
         question: "Is food spoilage from a power outage covered?",
         answer:
-          "Sometimes — often through spoilage or equipment breakdown endorsements, not the base property form alone. Coverage depends on the cause of the outage and your policy wording.",
+          "Sometimes — often through spoilage or equipment breakdown endorsements, not the base property form alone. Coverage depends on the cause of the outage (on-premises equipment failure versus widespread grid failure) and your policy wording.",
       },
       {
         question: "Do I need coverage for delivery drivers?",
         answer:
-          "If staff deliver in personal or company vehicles, auto liability and non-owned auto exposures matter. Delivery platforms and employee-owned cars create different gaps — flag your delivery model to a broker.",
+          "If staff deliver in company or personal vehicles, commercial auto and/or hired and non-owned auto exposures should be reviewed. Third-party delivery platforms may impose their own insurance requirements in vendor agreements.",
+      },
+      {
+        question: "What food safety rules apply in Ontario?",
+        answer:
+          "Food service premises must comply with O. Reg. 493/17, including food handler certification on site during operating hours. Public health units inspect and enforce these rules — separate from your insurance policy.",
       },
       {
         question: "What information do I need for a restaurant quote?",
         answer:
-          "Cuisine type, seating capacity, liquor sales percentage, hours, cooking methods (deep fryers, open flame), location details, and current coverage. That helps carriers understand kitchen and occupancy risk.",
+          "Cuisine type, seating capacity, liquor sales percentage (if licensed), hours, cooking methods, location and construction details, equipment and inventory values, delivery model, prior claims, and any lease, franchisor, or lender insurance requirements.",
       },
     ],
     ctaHeading: "Ready to cover your restaurant?",
