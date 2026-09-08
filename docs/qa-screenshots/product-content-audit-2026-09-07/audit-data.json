@@ -1115,32 +1115,32 @@
       "route": "/pharmacy-insurance/",
       "slug": "pharmacy-insurance",
       "category": "commercial",
-      "heroWords": 15,
-      "heroSpecific": false,
+      "heroWords": 114,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 21,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 70,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 205,
+      "considerationsPresent": true,
+      "considerationsWords": 553,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1430,
       "safetyFlags": [
         {
           "page": "/pharmacy-insurance/",
-          "field": "coverage:Commercial Property",
-          "quote": "Covers inventory, fixtures, and dispensing equipment including narcotics storage security requirements.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
+          "field": "considerations",
+          "quote": "Part A pharmacists, pharmacy technicians, interns, and related registrants must maintain personal professional liability insurance (PPLI) in their own name under OCP By-Law requirements — currently a minimum of $2,000,000 per claim and $4,000,000 annual aggregate covering regulated professional services, with full prior-acts protection.",
+          "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+          "severity": "low"
         }
       ],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
-      "geoTargeting": "Windsor-Essex-primary",
-      "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (1430w), 4 cards avg 70w, considerations yes, FAQ unique"
     },
     {
       "route": "/pollution-liability-insurance/",
@@ -1520,10 +1520,10 @@
     }
   ],
   "counts": {
-    "A": 12,
+    "A": 13,
     "B": 16,
     "C": 18,
-    "D": 12
+    "D": 11
   },
   "allFlags": [
     {
@@ -1661,10 +1661,10 @@
     },
     {
       "page": "/pharmacy-insurance/",
-      "field": "coverage:Commercial Property",
-      "quote": "Covers inventory, fixtures, and dispensing equipment including narcotics storage security requirements.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
+      "field": "considerations",
+      "quote": "Part A pharmacists, pharmacy technicians, interns, and related registrants must maintain personal professional liability insurance (PPLI) in their own name under OCP By-Law requirements — currently a minimum of $2,000,000 per claim and $4,000,000 annual aggregate covering regulated professional services, with full prior-acts protection.",
+      "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+      "severity": "low"
     },
     {
       "page": "/product-recall-insurance/",

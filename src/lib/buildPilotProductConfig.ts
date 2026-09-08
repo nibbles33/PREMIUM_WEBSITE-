@@ -232,7 +232,8 @@ export function adaptCommercialProductContent(
       content.slug === "salon-barber-insurance" ||
       content.slug === "non-profit-insurance" ||
       content.slug === "warehousing-insurance" ||
-      content.slug === "property-management-insurance"
+      content.slug === "property-management-insurance" ||
+      content.slug === "pharmacy-insurance"
         ? "expandable"
         : "grid",
   });

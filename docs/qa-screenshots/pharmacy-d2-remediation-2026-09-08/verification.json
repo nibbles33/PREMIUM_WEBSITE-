@@ -1,0 +1,61 @@
+{
+  "consoleErrors": [],
+  "route": {
+    "slug": "pharmacy-insurance",
+    "explorer": [
+      {
+        "index": 0,
+        "id": "commercial-property",
+        "tabDesc": "May help cover the building or tenant improvements, fixtures, dispensing equipment, and prescription inventory against covered causes of loss such as fire, theft, or water damage — subject to policy terms, reported values, and limits.",
+        "detailTitle": "Prescription inventory and cold-chain equipment drive property values",
+        "detailDescription": "Pharmacy property exposure concentrates in dispensary fixtures, automation, compounding equipment, and prescription stock — including high-value and refrigerated medications. Base commercial property may address certain physical damage or theft subject to policy wording, but temperature-related stock loss from equipment failure, power interruption, or utility outage is often treated differently from fire or burglary — equipment breakdown, spoilage, or deterioration endorsements may be needed depending on cause of loss and policy structure. Do not assume refrigerated inventory is fully covered without reviewing triggers, sublimits, and backup-power disclosures with your broker.",
+        "duplicateDesc": false,
+        "hasImage": true
+      },
+      {
+        "index": 1,
+        "id": "general-liability",
+        "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from premises incidents — such as slip-and-fall in aisles or the dispensary waiting area — subject to policy terms, exclusions, and limits.",
+        "detailTitle": "A slip at the pickup counter is not a dispensing-error claim",
+        "detailDescription": "Customer injury in retail aisles, entrances, consultation areas, or parking lots generates premises liability exposure distinct from allegations that the wrong drug, strength, or directions were dispensed or counselled. General liability may address certain non-professional operational claims, but dispensing errors, prescription processing mistakes, and medication-related professional services allegations are typically evaluated under professional liability or errors and omissions coverage — not ordinary CGL. Scope depends on policy wording and disclosed services.",
+        "duplicateDesc": false,
+        "hasImage": true
+      },
+      {
+        "index": 2,
+        "id": "professional-liability",
+        "tabDesc": "May help respond to certain claims alleging dispensing errors, wrong drug or strength, incorrect directions, or other professional services errors at the pharmacy business level — subject to policy terms, limits, and whether coverage is occurrence- or claims-made.",
+        "detailTitle": "A dispensing error is a professional claim — and OCP PPLI is separate",
+        "detailDescription": "Claims alleging the wrong medication, strength, interaction, or counselling were provided are professional exposure — separate from a simple premises injury. Pharmacy business professional liability or E&O, where purchased, may address certain entity-level allegations subject to policy wording; it does not replace each registrant's OCP personal professional liability insurance (PPLI), which must be maintained in the individual pharmacist's or pharmacy technician's name under College By-Law requirements. OCP states corporate employer policies do not meet those personal registration requirements. Whether a given allegation falls within business E&O, a registrant's PPLI, or both depends on the claim and policy structure — confirm with your broker rather than assuming one policy label covers every professional scenario.",
+        "duplicateDesc": false,
+        "hasImage": true
+      },
+      {
+        "index": 3,
+        "id": "cyber-privacy",
+        "tabDesc": "May help address certain costs arising from privacy breaches, ransomware, or system disruptions affecting prescription records and payment systems — where purchased and subject to policy terms — distinct from PHIPA compliance obligations.",
+        "detailTitle": "Patient records create cyber exposure PHIPA does not insure away",
+        "detailDescription": "Pharmacies are health information custodians under Ontario's Personal Health Information Protection Act (PHIPA) and must protect personal health information through reasonable safeguards — a regulatory obligation separate from purchasing insurance. Cyber or privacy coverage, where available, may help with certain breach-response, notification, or business-interruption costs tied to cyber events depending on policy wording, but it does not satisfy PHIPA compliance and does not mean every privacy incident is covered. Insurers may ask about dispensing software, backups, access controls, and vendor arrangements during underwriting.",
+        "duplicateDesc": false,
+        "hasImage": true
+      }
+    ],
+    "pass": true,
+    "trustBand": {
+      "heroPresent": true,
+      "trustPresent": true,
+      "distinct": true
+    },
+    "considerations": {
+      "count": 7,
+      "oneOpenAtATime": true
+    },
+    "faqCount": 5,
+    "forbidden": [],
+    "overflow_390": 0,
+    "overflow_768": 0,
+    "overflow_1024": 0,
+    "overflow_1440": 0
+  },
+  "pass": true
+}
