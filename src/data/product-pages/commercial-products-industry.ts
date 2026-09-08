@@ -443,7 +443,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       {
         title: "Condominium management and CMRAO licensing",
         description:
-          "Condominium management providers in Ontario may be subject to licensing under the Condominium Management Services Act and oversight by the Condominium Management Regulatory Authority of Ontario — but not every property manager is a condominium manager. Residential rental and commercial portfolio managers face different regulatory contexts. Licensing is a regulatory requirement separate from purchasing insurance.",
+          "Condominium management in Ontario is regulated under the Condominium Management Services Act, administered by the Condominium Management Regulatory Authority of Ontario (CMRAO). Persons and providers that perform regulated condominium management services must hold the applicable licence under the Act and its regulations — but managing residential rentals or commercial property portfolios is a different regulatory context from licensed condominium management. Licensed condominium management providers must maintain errors and omissions insurance covering every condominium manager they employ, and fidelity insurance against client losses from dishonesty by managers, employees, directors, or officers — statutory requirements under O. Reg. 4/18 that apply to licensed providers, not to every general property management firm.",
       },
       {
         title: "Contractor selection and maintenance coordination",
@@ -491,7 +491,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       {
         question: "What do management contracts typically require?",
         answer:
-          "Management agreements often specify minimum general liability and E&O limits, additional-insured status for the owner or corporation, and certificate deadlines — contractual requirements reviewed against what your policies can provide. Condominium management contracts may include additional requirements depending on the arrangement. Bring agreements to your broker before signing new mandates.",
+          "Management agreements often specify minimum general liability and E&O limits, additional-insured status for the owner or corporation, and certificate deadlines — contractual requirements reviewed against what your policies can provide. Licensed condominium management providers also face statutory errors and omissions and fidelity insurance requirements under Ontario regulation — separate from what every residential or commercial portfolio manager must carry. Bring agreements to your broker before signing new mandates.",
       },
     ],
     ctaHeading: "Manage properties for others?",

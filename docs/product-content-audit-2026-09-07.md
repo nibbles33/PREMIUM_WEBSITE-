@@ -68,7 +68,7 @@
 | /group-home-auto-insurance/ | 488 | 4 / specific/hedged (strong) | Yes (102w, specific/useful) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /home-insurance/ | 571 | 5 / specific (good) | Yes (70w, moderate) | 6 | No — Shares 2+ FAQ pattern with auto-insurance | 0 | Windsor-Essex + Ontario | **B** |
 | /home-sharing-insurance/ | 588 | 4 / specific/hedged (strong) | Yes (123w, specific/useful) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
-| /hotel-motel-insurance/ | 1181 | 4 / specific/hedged (strong) | Yes (341w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
+| /hotel-motel-insurance/ | 1252 | 4 / specific/hedged (strong) | Yes (378w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /landlord-insurance/ | 497 | 4 / specific/hedged (strong) | Yes (79w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /landscaping-snow-removal-insurance/ | 400 | 4 / specific (good) | Yes (68w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /life-insurance/ | 513 | 4 / specific/hedged (strong) | Yes (109w, specific/useful) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
@@ -77,17 +77,17 @@
 | /medical-dental-insurance/ | 242 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex + Ontario | **C** |
 | /mobile-home-insurance/ | 506 | 4 / specific/hedged (strong) | Yes (102w, specific/useful) | 4 | Yes | 0 | Windsor-Essex + Ontario | **B** |
 | /motorcycle-insurance/ | 535 | 4 / specific/hedged (strong) | Yes (102w, specific/useful) | 4 | Yes | 1 (low only) | Windsor-Essex + Ontario | **B** |
-| /non-profit-insurance/ | 1051 | 4 / specific/hedged (strong) | Yes (331w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
+| /non-profit-insurance/ | 1088 | 4 / specific/hedged (strong) | Yes (355w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /personal-umbrella-insurance/ | 472 | 4 / specific/hedged (strong) | Yes (95w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /pharmacy-insurance/ | 205 | 4 / specific (good) | No | 4 | Yes | 1 | Windsor-Essex-primary | **D** |
 | /pollution-liability-insurance/ | 252 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
 | /product-recall-insurance/ | 252 | 4 / specific (good) | No | 4 | Yes | 2 | Windsor-Essex-primary | **D** |
 | /professional-liability-insurance/ | 391 | 4 / specific (good) | Yes (66w, moderate) | 4 | Yes | 1 (low only) | Windsor-Essex-primary | **C** |
 | /professional-offices-insurance/ | 325 | 4 / specific (good) | No | 4 | No — Shares 2+ FAQ pattern with auto-insurance | 0 | Windsor-Essex-primary | **C** |
-| /property-management-insurance/ | 1102 | 4 / specific/hedged (strong) | Yes (324w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
+| /property-management-insurance/ | 1174 | 4 / specific/hedged (strong) | Yes (378w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /real-estate-insurance/ | 283 | 4 / specific (good) | No | 4 | No — Shares 2+ FAQ pattern with home-insurance | 0 | Windsor-Essex-primary | **C** |
 | /religious-organizations-insurance/ | 215 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
-| /restaurant-insurance/ | 1622 | 4 / specific/hedged (strong) | Yes (648w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
+| /restaurant-insurance/ | 1614 | 4 / specific/hedged (strong) | Yes (646w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /retail-insurance/ | 292 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
 | /salon-barber-insurance/ | 1072 | 4 / specific/hedged (strong) | Yes (316w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /small-business-insurance/ | 399 | 4 / specific/hedged (strong) | Yes (63w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **C** |

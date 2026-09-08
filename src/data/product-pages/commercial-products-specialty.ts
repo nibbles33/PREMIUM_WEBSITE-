@@ -29,7 +29,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       "Hotel and motel insurance through an independent Windsor-Essex broker — commercial property, general liability, business interruption, and licensed alcohol coverage where applicable.",
     headline: "Hotel & Motel Insurance",
     subhead:
-      "Hotels and motels combine guest rooms, common areas, and amenities into overlapping property, liability, and income exposures. Depending on your operation, that can mean commercial property for the building and furnishings, general liability for guest injuries in lobbies, pools, or parking areas, business interruption when a covered loss closes rooms, and — where you operate a licensed bar or restaurant — liquor liability separate from standard commercial general liability. Ontario's Innkeepers Act limits statutory liability for guest belongings in specific circumstances, which is separate from what your property policy covers for your own assets. Premium Insurance Brokers can help align coverage to your room count, amenities, and seasonality.",
+      "Hotels and motels combine guest rooms, common areas, and amenities into overlapping property, liability, and income exposures. Depending on your operation, that can mean commercial property for the building and furnishings, general liability for guest injuries in lobbies, pools, or parking areas, business interruption when a covered loss closes rooms, and — where you operate a licensed bar or restaurant — liquor liability separate from standard commercial general liability. Ontario's Innkeepers Act can limit an innkeeper's statutory liability for guest goods in specified circumstances — separate from what your commercial property policy covers for your own assets. Premium Insurance Brokers can help align coverage to your room count, amenities, and seasonality.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=restaurant`,
     quoteLabel: "Get a Hospitality Quote",
     coverageIntro:
@@ -42,7 +42,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
           "May help cover the building, furnishings, linens, kitchen equipment, and other business property against covered causes of loss such as fire, water damage, or theft — subject to policy terms, causes of loss, and limits.",
         detailTitle: "Guest rooms and back-of-house equipment drive property values",
         detailDescription:
-          "Hotels concentrate insurable value in guest rooms, lobbies, commercial laundry, HVAC, kitchen equipment, and furnishings — often across multiple floors and outbuildings. Fire, water escape from suppression systems, theft of linens or equipment, and seasonal occupancy swings affect how carriers structure property limits and deductibles. Guest personal belongings are typically excluded from the operator's property policy; the Innkeepers Act addresses statutory limits on operator liability for guest goods in specific circumstances — separate from insuring your own property.",
+          "Hotels concentrate insurable value in guest rooms, lobbies, commercial laundry, HVAC, kitchen equipment, and furnishings — often across multiple floors and outbuildings. Fire, water escape from suppression systems, theft of linens or equipment, and seasonal occupancy swings affect how carriers structure property limits and deductibles. Guest personal belongings are typically excluded from the operator's property policy; under the Innkeepers Act, statutory liability for guest goods may be limited in specified circumstances, with exceptions for loss through the innkeeper's wilful act, default, or neglect and for goods expressly deposited for safekeeping — separate from insuring your own property.",
         icon: Building2,
       },
       {
@@ -82,7 +82,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       {
         title: "Guest belongings vs. your property",
         description:
-          "Guest personal property is typically excluded from the hotel operator's property policy — guests generally rely on their own travel or homeowners insurance for belongings. Ontario's Innkeepers Act limits statutory liability for guest goods in specific circumstances when required notices are posted and safe-deposit procedures are followed — a regulatory framework separate from purchasing coverage for your building, furnishings, and business equipment.",
+          "Guest personal property is typically excluded from the hotel operator's property policy — guests generally rely on their own travel or homeowners insurance for belongings. Under Ontario's Innkeepers Act, an innkeeper's liability for guest goods may be limited in specified circumstances, but statutory exceptions apply — including loss through the innkeeper's wilful act, default, or neglect and for goods expressly deposited for safekeeping. Conspicuous posting of section 4 in the office, public rooms, and guest bedrooms is relevant to obtaining the Act's benefit. That legal liability framework is separate from purchasing coverage for your building, furnishings, and business equipment.",
       },
       {
         title: "Pool, spa, and amenity safety",
@@ -120,7 +120,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       {
         question: "Are guest belongings covered under my hotel policy?",
         answer:
-          "Guest personal property is typically excluded from the operator's property policy. Guests generally rely on their own travel or homeowners insurance for belongings. Ontario's Innkeepers Act limits statutory liability for guest goods in specific circumstances when required notices are posted — a regulatory framework separate from insuring your own building, furnishings, and equipment.",
+          "Guest personal property is typically excluded from the operator's property policy. Guests generally rely on their own travel or homeowners insurance for belongings. Under Ontario's Innkeepers Act, an innkeeper's liability for guest goods may be limited in specified circumstances, with exceptions for loss through the innkeeper's wilful act, default, or neglect and for goods expressly deposited for safekeeping. Conspicuous posting of section 4 is relevant to obtaining the Act's benefit — a legal liability framework separate from insuring your own building, furnishings, and equipment.",
       },
       {
         question: "Do I need liquor liability if my hotel has a bar or restaurant?",
@@ -764,7 +764,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
           "May provide limited medical or accident benefits for volunteers injured while serving the organization — where purchased and subject to policy terms, limits, and exclusions.",
         detailTitle: "Volunteer injury is not always the same as employee WSIB coverage",
         detailDescription:
-          "Volunteers are not employees, and WSIB coverage rules depend on whether a volunteer is deemed a worker in the circumstances — a regulatory question separate from optional volunteer accident insurance. Volunteer accident coverage, where available, may address limited medical expenses for volunteers injured during approved activities — subject to policy terms. It does not replace general liability for third-party claims or abuse coverage where programs serve vulnerable persons.",
+          "Community and charitable volunteers who serve without pay are generally not covered under WSIB the way paid workers are — WSIB treats most unpaid volunteer service separately from mandatory employer coverage. Paid employees and certain special statutory categories — such as municipal volunteer fire or ambulance brigades — may fall under different WSIB rules. Optional volunteer accident insurance, where purchased, may address limited medical expenses for volunteers injured during approved activities — subject to policy terms. It does not replace WSIB where that coverage applies to paid workers, and it does not replace general liability for third-party claims or abuse coverage where programs serve vulnerable persons.",
         icon: Users,
       },
     ],
@@ -779,7 +779,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       {
         title: "Volunteers vs. employees",
         description:
-          "Volunteers, part-time staff, and paid employees create different injury and liability profiles. WSIB obligations depend on whether a person is deemed a worker — a regulatory question, not an automatic insurance product. Volunteer accident coverage, where purchased, is optional and limited — disclose how your organization uses volunteers during underwriting.",
+          "Paid employees, part-time staff, and unpaid volunteers create different injury and liability profiles. Most community volunteers are not automatically WSIB-covered; paid workers may require WSIB registration depending on your organization's industry and activities. Certain special statutory volunteer forces — such as municipal fire or ambulance brigades — follow different rules. Optional volunteer accident insurance, where purchased, is limited and separate from WSIB — disclose how your organization uses volunteers and paid staff during underwriting.",
       },
       {
         title: "Abuse and misconduct coverage — conditional on your programs",
@@ -817,7 +817,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       {
         question: "Are volunteers covered if injured while serving?",
         answer:
-          "Volunteer accident coverage, where purchased, may provide limited medical benefits for volunteers injured during approved activities — subject to policy terms. Volunteers are not employees, and WSIB coverage depends on whether a volunteer is deemed a worker in the circumstances. General liability may address certain third-party claims, but volunteer medical expenses are a separate coverage question — review with your broker.",
+          "Volunteer accident coverage, where purchased, may provide limited medical benefits for volunteers injured during approved activities — subject to policy terms. Community and charitable volunteers who serve without pay are generally not covered under WSIB the way paid workers are. Paid employees may require WSIB registration depending on your organization's industry and activities. General liability may address certain third-party claims, but volunteer medical expenses are a separate coverage question — review with your broker.",
       },
       {
         question: "Do we need abuse coverage for our programs?",
@@ -1197,7 +1197,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     ],
     ctaHeading: "Planning an event?",
     ctaSubhead:
-      "Share event date, location, attendance, and activities — we will arrange liability coverage venues accept.",
+      "Share event date, location, attendance, and activities — we will help structure liability coverage around your event and venue certificate requirements.",
     serviceName: "Event Liability Insurance",
   },
   {
