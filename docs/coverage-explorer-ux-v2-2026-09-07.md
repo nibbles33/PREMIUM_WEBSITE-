@@ -31,7 +31,18 @@ Re-ran `scripts/product-content-audit.ts` against implemented Daycare content on
 
 ### Remaining HIGH flag (exact — for owner review)
 
-The audit assigns **D** because of **1 HIGH flag**. It is **not** on a coverage card, hero, or practical consideration. It is on the **FAQ** section:
+**Update (2026-09-07):** Audit script negation-skip fix applied — see `docs/audit-script-negation-fix-2026-09-07.md`. Daycare re-audit result:
+
+| Metric | Value |
+|--------|------:|
+| HIGH/MEDIUM flags | **0** |
+| Classification | **A** |
+| Reason | Substantive (956w), 6 cards avg 57.7w, considerations yes, FAQ unique |
+
+The prior HIGH flag on FAQ *"shouldn't be assumed to be automatically included"* was a script gap (no negation skip on `automatically included`). Daycare content was not changed.
+
+<details>
+<summary>Pre-fix flag (historical — cleared by script fix)</summary>
 
 | Audit field | `faq` |
 |-------------|-------|
@@ -39,16 +50,7 @@ The audit assigns **D** because of **1 HIGH flag**. It is **not** on a coverage 
 | Severity | **high** |
 | **Exact flagged sentence (verbatim):** | *"Abuse and molestation liability is typically its own distinct coverage, separate from general liability — it shouldn't be assumed to be automatically included."* |
 
-**FAQ question this answer belongs to:** *"Does insurance cover allegations of abuse at a daycare or school?"*
-
-**Audit trigger:** `scripts/product-content-audit.ts` pattern `\bautomatically included\b` — no negation skip (unlike the `guarantee` pattern).
-
-**Related abuse coverage copy elsewhere on the page (not flagged):**
-
-- **Coverage card (RIGHT selector):** *"A distinct coverage addressing allegations of abuse, harassment, or misconduct involving staff, volunteers, or others connected with your operation — insurers offering this coverage frequently require documented safety and screening practices as part of underwriting it."*
-- **Explorer detail (LEFT under image):** *"This is separately underwritten from general liability and should not be assumed to be included. Insurers that offer it often review screening, supervision, and safety practices as part of underwriting…"*
-
-**Owner assessment prompt:** Does the flagged FAQ sentence, read in its own FAQ context, read as an unhedged inclusion claim? The previous report incorrectly implied a coverage card was flagged and the FAQ retroactively softened it — that is not what the audit data shows.
+</details>
 
 **Base page content (excluding new Explorer detail copy):** ~765 substantive words — matching the Daycare implementation target. The audit total of 956 includes ~191 words from the six new optional `detailDescription` fields added in this UX task.
 
@@ -307,7 +309,7 @@ Touch/tab click on all 6 Daycare states: **PASS**
 ## 15. Remaining gaps
 
 1. **Detail copy populated for Daycare only** — other 56 routes retain fallback behavior until individually authored.
-2. **Daycare classification D** — 1 HIGH flag on FAQ sentence containing `"automatically included"` (see §1 exact quote); owner review pending.
+2. **Daycare classification** — post-fix audit: **Class A** (0 high/med flags); see `docs/audit-script-negation-fix-2026-09-07.md`.
 3. **Normal routes still show selector/detail duplication** — by design until detail fields are populated per route.
 4. **Unrelated repo noise** — working tree contains pre-existing untracked/modified files outside this task scope (contractors experiments, deployment scripts); not touched.
 

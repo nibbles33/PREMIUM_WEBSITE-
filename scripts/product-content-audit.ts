@@ -79,24 +79,43 @@ const HEDGE_WORDS =
 const NEGATED_GUARANTEE =
   /\b(not|no|aren't|isn't|don't|doesn't|without|never|cannot|can't)\s+(\w+\s+){0,3}guarantee/i;
 
+/** Negated uses of "automatically included" (e.g. "shouldn't be assumed to be automatically included"). */
+const NEGATED_AUTOMATIC_INCLUSION =
+  /\b((?:does|do|will|would|should|can|could|may|might)\s+not|don't|doesn't|won't|shouldn't|should not|cannot|can't|not assumed to be)\s+(\w+\s+){0,6}automatically included\b/i;
+
+/** Negated "covers …" claims (e.g. "landlord's policy does not cover your stuff"). */
+const NEGATED_COVER_CLAIM =
+  /\b((?:does|do|will|would|should|can|could|may|might)\s+not|don't|doesn't|won't|shouldn't|should not|cannot|can't|not)\s+(\w+\s+){0,4}covers?\s+(?:your|the|student|building|damage|claims|injury|loss|equipment|inventory|contents|playground|medical|theft|fire)\b/i;
+
+/** Negated "will cover" promises. */
+const NEGATED_WILL_COVER = /\b(will not|won't)\s+cover\b/i;
+
+/** Negated "includes liability/property/…" statements. */
+const NEGATED_INCLUDES =
+  /\b((?:does|do|will|would|should|can|could|may|might)\s+not|don't|doesn't|won't|shouldn't|should not|cannot|can't|not)\s+(\w+\s+){0,4}includes?\s+(?:liability|property|coverage|protection)\b/i;
+
 const SAFETY_PATTERNS: {
   regex: RegExp;
   issue: string;
   severity: "high" | "medium" | "low";
   requireHedge?: boolean;
-  skipIf?: RegExp;
+  skipIf?: RegExp | RegExp[];
 }[] = [
   {
     regex: /\bcovers?\s+(your|the|student|building|damage|claims|injury|loss|equipment|inventory|contents|playground|medical|theft|fire)\b/i,
     issue: "Flat coverage guarantee — states or implies automatic coverage without hedging",
     severity: "high",
     requireHedge: true,
-    skipIf: /\b(coverage type|what .+ covers|collision coverage|comprehensive coverage)\b/i,
+    skipIf: [
+      /\b(coverage type|what .+ covers|collision coverage|comprehensive coverage)\b/i,
+      NEGATED_COVER_CLAIM,
+    ],
   },
   {
     regex: /\bwill cover\b/i,
     issue: "Definitive future coverage promise",
     severity: "high",
+    skipIf: NEGATED_WILL_COVER,
   },
   {
     regex: /\bguarantee[ds]?\b/i,
@@ -108,6 +127,7 @@ const SAFETY_PATTERNS: {
     regex: /\bautomatically included\b/i,
     issue: "Automatic inclusion claim",
     severity: "high",
+    skipIf: NEGATED_AUTOMATIC_INCLUSION,
   },
   {
     regex: /\$\s?\d[\d,]*(?:\.\d{2})?/,
@@ -143,6 +163,7 @@ const SAFETY_PATTERNS: {
     issue: "Flat inclusion statement — may overstate standard policy",
     severity: "medium",
     requireHedge: true,
+    skipIf: NEGATED_INCLUDES,
   },
 ];
 
@@ -160,7 +181,12 @@ function scanSafety(text: string, route: string, field: string): SafetyFlag[] {
     for (const { regex, issue, severity, requireHedge, skipIf } of SAFETY_PATTERNS) {
       if (!regex.test(sentence)) continue;
       if (requireHedge && HEDGE_WORDS.test(sentence)) continue;
-      if (skipIf?.test(sentence)) continue;
+      const skipPatterns = skipIf
+        ? Array.isArray(skipIf)
+          ? skipIf
+          : [skipIf]
+        : [];
+      if (skipPatterns.some((pattern) => pattern.test(sentence))) continue;
 
       if (
         route.includes("auto-insurance") &&
@@ -806,7 +832,7 @@ ${priority}
 
 - **Source of truth:** TypeScript product data (\`src/data/product-pages/\`, \`commercial-industries.ts\`, \`pilot-*-inline.ts\`, \`pilot-auto.ts\`) — not rendered DOM.
 - **Auto page:** Hero copy from \`AutoProductHero.tsx\`; coverage/FAQ from \`pilot-auto.ts\`.
-- **Safety scan:** Pattern-based; high/medium flags trigger class D. Low-severity surety "guarantee" terminology flagged separately. Negated guarantees ("aren't guaranteed") and conditional phrasing ("protects you if") excluded.
+- **Safety scan:** Pattern-based; high/medium flags trigger class D. Low-severity surety "guarantee" terminology flagged separately. Negated guarantees ("aren't guaranteed"), negated inclusion ("shouldn't be assumed to be automatically included", "does not cover"), and conditional phrasing ("protects you if") excluded.
 - **FAQ uniqueness:** Normalized comparison across all 58 pages; "Shares FAQ pattern" means ≥2 structurally similar questions vs another route.
 - **Cannot confidently assess:** Whether specific commercial claims match actual carrier forms; whether industry pages' coverage categories are complete for every operation type. Flagged language needs broker/owner review, not automated clearance.
 

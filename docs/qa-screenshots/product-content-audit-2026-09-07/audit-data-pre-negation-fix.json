@@ -556,13 +556,21 @@
       "considerationsQuality": "moderate",
       "faqCount": 5,
       "totalSubstantiveWords": 956,
-      "safetyFlags": [],
+      "safetyFlags": [
+        {
+          "page": "/daycare-private-school-insurance/",
+          "field": "faq",
+          "quote": "Abuse and molestation liability is typically its own distinct coverage, separate from general liability — it shouldn't be assumed to be automatically included.",
+          "issue": "Automatic inclusion claim",
+          "severity": "high"
+        }
+      ],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex + Ontario",
       "geoNotes": "Both Windsor-Essex and Ontario referenced",
-      "classification": "A",
-      "classificationReason": "Substantive (956w), 6 cards avg 57.7w, considerations yes, FAQ unique"
+      "classification": "D",
+      "classificationReason": "1 content-safety flag(s): Automatic inclusion claim"
     },
     {
       "route": "/directors-officers-insurance/",
@@ -1562,6 +1570,13 @@
         {
           "page": "/tenant-insurance/",
           "field": "faq",
+          "quote": "Even without a requirement, it protects your belongings and liability — the landlord's policy does not cover your stuff.",
+          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
+          "severity": "high"
+        },
+        {
+          "page": "/tenant-insurance/",
+          "field": "faq",
           "quote": "Generally, a tenant policy covers the named insured and their household as defined in the policy.",
           "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
           "severity": "high"
@@ -1572,7 +1587,7 @@
       "geoTargeting": "Windsor-Essex + Ontario",
       "geoNotes": "Both Windsor-Essex and Ontario referenced",
       "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classificationReason": "2 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat coverage guarantee — states or implies automatic coverage without hedging"
     },
     {
       "route": "/travel-insurance/",
@@ -1669,10 +1684,10 @@
     }
   ],
   "counts": {
-    "A": 2,
+    "A": 1,
     "B": 8,
     "C": 16,
-    "D": 32
+    "D": 33
   },
   "allFlags": [
     {
@@ -1816,6 +1831,13 @@
       "severity": "high"
     },
     {
+      "page": "/daycare-private-school-insurance/",
+      "field": "faq",
+      "quote": "Abuse and molestation liability is typically its own distinct coverage, separate from general liability — it shouldn't be assumed to be automatically included.",
+      "issue": "Automatic inclusion claim",
+      "severity": "high"
+    },
+    {
       "page": "/directors-officers-insurance/",
       "field": "faq",
       "quote": "GL covers the organization's operational liability, not personal claims against directors for management decisions.",
@@ -1945,6 +1967,13 @@
       "page": "/small-business-insurance/",
       "field": "coverage:Commercial Property",
       "quote": "Covers your equipment, inventory, and leasehold improvements against covered theft, fire, or other insured losses.",
+      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
+      "severity": "high"
+    },
+    {
+      "page": "/tenant-insurance/",
+      "field": "faq",
+      "quote": "Even without a requirement, it protects your belongings and liability — the landlord's policy does not cover your stuff.",
       "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
       "severity": "high"
     },
