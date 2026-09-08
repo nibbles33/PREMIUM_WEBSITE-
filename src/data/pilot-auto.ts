@@ -54,9 +54,9 @@ export const autoCoverageItems: AutoCoverageItem[] = [
     title: "Collision Coverage",
     shortLabel: "Collision",
     description:
-      "Repairs or replaces your vehicle after a collision, regardless of fault.",
+      "Optional coverage that can help pay to repair or replace your vehicle after a crash — subject to deductibles, limits, and policy terms.",
     detail:
-      "Collision covers damage to your own vehicle from a crash with another car or object — useful when fault isn't clear or you're at fault.",
+      "When collision coverage is on your policy, it is intended to respond to damage to your own vehicle from a crash with another car or object — including situations where fault isn't clear or you're at fault, subject to deductibles, limits, and policy terms.",
     icon: Car,
     visualScene: "collision",
     visualEyebrow: "Your vehicle",
@@ -69,9 +69,9 @@ export const autoCoverageItems: AutoCoverageItem[] = [
     title: "Comprehensive Coverage",
     shortLabel: "Comprehensive",
     description:
-      "Covers theft, vandalism, weather damage, and other non-collision events.",
+      "Optional coverage intended to address theft, vandalism, weather damage, and other non-collision events — subject to deductibles, limits, exclusions, and policy terms.",
     detail:
-      "Comprehensive protects against events outside your control — hail, fire, theft, vandalism, or hitting an animal.",
+      "When comprehensive coverage is on your policy, it is intended to address events outside your control — hail, fire, theft, vandalism, or hitting an animal — subject to deductibles, limits, exclusions, and policy terms.",
     icon: CloudLightning,
     visualScene: "comprehensive",
     visualEyebrow: "Outside your control",
@@ -159,7 +159,7 @@ export const autoFaqItems = [
     question:
       "What's the difference between collision and comprehensive coverage?",
     answer:
-      "Collision covers damage to your vehicle from a crash with another vehicle or object, regardless of fault. Comprehensive covers non-collision events such as theft, vandalism, hail, fire, and hitting an animal.",
+      "Collision coverage is intended to respond to damage to your vehicle from a crash with another vehicle or object — fault determination affects how claims are handled, subject to policy terms. Comprehensive coverage addresses non-collision events such as theft, vandalism, hail, fire, and hitting an animal when purchased — also subject to policy terms.",
   },
   {
     question: "Will my rates change if I switch brokers?",

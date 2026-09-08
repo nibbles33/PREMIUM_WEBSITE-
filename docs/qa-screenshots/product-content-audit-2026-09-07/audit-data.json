@@ -7,29 +7,15 @@
       "heroWords": 29,
       "heroSpecific": true,
       "coverageCount": 6,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 41,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 51.3,
       "thinCardCount": 0,
       "considerationsPresent": false,
       "considerationsWords": 0,
       "considerationsQuality": "absent",
       "faqCount": 5,
-      "totalSubstantiveWords": 564,
+      "totalSubstantiveWords": 649,
       "safetyFlags": [
-        {
-          "page": "/auto-insurance/",
-          "field": "coverage:Collision Coverage",
-          "quote": "Collision covers damage to your own vehicle from a crash with another car or object — useful when fault isn't clear or you're at fault.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        },
-        {
-          "page": "/auto-insurance/",
-          "field": "coverage:Comprehensive Coverage",
-          "quote": "Covers theft, vandalism, weather damage, and other non-collision events.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        },
         {
           "page": "/auto-insurance/",
           "field": "coverage:Accident Benefits",
@@ -50,21 +36,14 @@
           "quote": "For policies entered into on or after July 1, 2026, only medical, rehabilitation, and attendant care benefits are mandatory within accident benefits — other accident benefits such as income replacement are optional.",
           "issue": "Mandatory coverage stated — verify regulatory basis",
           "severity": "low"
-        },
-        {
-          "page": "/auto-insurance/",
-          "field": "faq",
-          "quote": "Collision covers damage to your vehicle from a crash with another vehicle or object, regardless of fault.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
         }
       ],
       "faqUnique": false,
       "faqTemplateNotes": "Shares 2+ FAQ pattern with professional-offices-insurance",
       "geoTargeting": "Ontario-wide",
       "geoNotes": "Ontario without Windsor-Essex in body",
-      "classification": "D",
-      "classificationReason": "3 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "B",
+      "classificationReason": "Reasonable (649w) but lacks full depth — cards specific/hedged (strong), considerations absent"
     },
     {
       "route": "/boat-insurance/",
@@ -355,21 +334,13 @@
       "considerationsQuality": "moderate",
       "faqCount": 4,
       "totalSubstantiveWords": 565,
-      "safetyFlags": [
-        {
-          "page": "/condo-insurance/",
-          "field": "considerations",
-          "quote": "Some policies include coverage if the corporation assesses owners for the master policy deductible after a claim.",
-          "issue": "Flat inclusion statement — may overstate standard policy",
-          "severity": "medium"
-        }
-      ],
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat inclusion statement — may overstate standard policy"
+      "classification": "B",
+      "classificationReason": "Reasonable (565w) but lacks full depth — cards specific/hedged (strong), considerations moderate"
     },
     {
       "route": "/condominium-corporation-insurance/",
@@ -864,21 +835,13 @@
       "considerationsQuality": "moderate",
       "faqCount": 6,
       "totalSubstantiveWords": 571,
-      "safetyFlags": [
-        {
-          "page": "/home-insurance/",
-          "field": "faq",
-          "quote": "It isn't legally required in Ontario if you own your home free and clear, but it's strongly recommended.",
-          "issue": "Legal/regulatory requirement stated without verifiable Ontario basis",
-          "severity": "medium"
-        }
-      ],
+      "safetyFlags": [],
       "faqUnique": false,
       "faqTemplateNotes": "Shares 2+ FAQ pattern with auto-insurance",
       "geoTargeting": "Windsor-Essex + Ontario",
       "geoNotes": "Both Windsor-Essex and Ontario referenced",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Legal/regulatory requirement stated without verifiable Ontario basis"
+      "classification": "B",
+      "classificationReason": "Reasonable (571w) but lacks full depth — cards specific (good), considerations moderate"
     },
     {
       "route": "/home-sharing-insurance/",
@@ -949,21 +912,13 @@
       "considerationsQuality": "moderate",
       "faqCount": 4,
       "totalSubstantiveWords": 497,
-      "safetyFlags": [
-        {
-          "page": "/landlord-insurance/",
-          "field": "faq",
-          "quote": "Eviction and rent guarantee products are separate considerations.",
-          "issue": "Guarantee language — may overstate policy terms (or surety industry term)",
-          "severity": "medium"
-        }
-      ],
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Guarantee language — may overstate policy terms (or surety industry term)"
+      "classification": "B",
+      "classificationReason": "Reasonable (497w) but lacks full depth — cards specific/hedged (strong), considerations moderate"
     },
     {
       "route": "/landscaping-snow-removal-insurance/",
@@ -1542,21 +1497,13 @@
       "considerationsQuality": "moderate",
       "faqCount": 4,
       "totalSubstantiveWords": 519,
-      "safetyFlags": [
-        {
-          "page": "/tenant-insurance/",
-          "field": "faq",
-          "quote": "Generally, a tenant policy covers the named insured and their household as defined in the policy.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex + Ontario",
       "geoNotes": "Both Windsor-Essex and Ontario referenced",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "B",
+      "classificationReason": "Reasonable (519w) but lacks full depth — cards specific (good), considerations moderate"
     },
     {
       "route": "/travel-insurance/",
@@ -1646,25 +1593,11 @@
   ],
   "counts": {
     "A": 2,
-    "B": 11,
+    "B": 16,
     "C": 18,
-    "D": 27
+    "D": 22
   },
   "allFlags": [
-    {
-      "page": "/auto-insurance/",
-      "field": "coverage:Collision Coverage",
-      "quote": "Collision covers damage to your own vehicle from a crash with another car or object — useful when fault isn't clear or you're at fault.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/auto-insurance/",
-      "field": "coverage:Comprehensive Coverage",
-      "quote": "Covers theft, vandalism, weather damage, and other non-collision events.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
     {
       "page": "/auto-insurance/",
       "field": "coverage:Accident Benefits",
@@ -1685,13 +1618,6 @@
       "quote": "For policies entered into on or after July 1, 2026, only medical, rehabilitation, and attendant care benefits are mandatory within accident benefits — other accident benefits such as income replacement are optional.",
       "issue": "Mandatory coverage stated — verify regulatory basis",
       "severity": "low"
-    },
-    {
-      "page": "/auto-insurance/",
-      "field": "faq",
-      "quote": "Collision covers damage to your vehicle from a crash with another vehicle or object, regardless of fault.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
     },
     {
       "page": "/bonding-insurance/",
@@ -1757,13 +1683,6 @@
       "severity": "high"
     },
     {
-      "page": "/condo-insurance/",
-      "field": "considerations",
-      "quote": "Some policies include coverage if the corporation assesses owners for the master policy deductible after a claim.",
-      "issue": "Flat inclusion statement — may overstate standard policy",
-      "severity": "medium"
-    },
-    {
       "page": "/contractors-insurance/",
       "field": "faq",
       "quote": "Builder's risk covers the structure and materials during construction or renovation for covered perils like fire or vandalism.",
@@ -1820,25 +1739,11 @@
       "severity": "high"
     },
     {
-      "page": "/home-insurance/",
-      "field": "faq",
-      "quote": "It isn't legally required in Ontario if you own your home free and clear, but it's strongly recommended.",
-      "issue": "Legal/regulatory requirement stated without verifiable Ontario basis",
-      "severity": "medium"
-    },
-    {
       "page": "/hotel-motel-insurance/",
       "field": "coverage:Commercial Property",
       "quote": "Covers the building, furnishings, linens, and equipment against covered fire, water, and theft losses.",
       "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
       "severity": "high"
-    },
-    {
-      "page": "/landlord-insurance/",
-      "field": "faq",
-      "quote": "Eviction and rent guarantee products are separate considerations.",
-      "issue": "Guarantee language — may overstate policy terms (or surety industry term)",
-      "severity": "medium"
     },
     {
       "page": "/liquor-liability-insurance/",
@@ -1907,13 +1812,6 @@
       "page": "/salon-barber-insurance/",
       "field": "coverage:Product Liability",
       "quote": "Covers claims that retail products sold in-salon caused allergic reaction or injury.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/tenant-insurance/",
-      "field": "faq",
-      "quote": "Generally, a tenant policy covers the named insured and their household as defined in the policy.",
       "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
       "severity": "high"
     },

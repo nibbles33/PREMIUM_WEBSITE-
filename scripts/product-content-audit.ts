@@ -74,10 +74,21 @@ const GENERIC_HERO_PATTERNS = [
 const THIN_CARD_STARTERS = /^(covers?|helps? protect|addresses?|includes?)\s/i;
 
 const HEDGE_WORDS =
-  /\b(may|might|can|could|subject to|depends on|typically|often|usually|where purchased|if purchased|when purchased|varies|review|should be reviewed|not assumed|help identify|commonly reviewed)\b/i;
+  /\b(may|might|can|could|subject to|depends on|typically|often|usually|vary|varies|where purchased|if purchased|when purchased|review|should be reviewed|not assumed|help identify|commonly reviewed)\b/i;
 
 const NEGATED_GUARANTEE =
   /\b(not|no|aren't|isn't|don't|doesn't|without|never|cannot|can't)\s+(\w+\s+){0,3}guarantee/i;
+
+/** Negated legal-requirement claims (e.g. "isn't legally required in Ontario"). */
+const NEGATED_LEGAL_REQUIREMENT =
+  /\b(isn't|is not|aren't|are not|not)\s+(\w+\s+){0,3}(?:legally required|required by law)\b/i;
+
+/** Product-category reference, not a policy guarantee (e.g. "rent guarantee products"). */
+const GUARANTEE_PRODUCT_CATEGORY = /\brent[- ]guarantee\s+products?\b/i;
+
+/** Qualified household scope in tenant FAQ — same-sentence "Generally" + policy-definition limiter. */
+const QUALIFIED_HOUSEHOLD_COVERS =
+  /\bGenerally,.+\bas defined in the policy\b/i;
 
 /** Negated uses of "automatically included" (e.g. "shouldn't be assumed to be automatically included"). */
 const NEGATED_AUTOMATIC_INCLUSION =
@@ -117,6 +128,7 @@ const SAFETY_PATTERNS: {
     skipIf: [
       /\b(coverage type|what .+ covers|collision coverage|comprehensive coverage)\b/i,
       NEGATED_COVER_CLAIM,
+      QUALIFIED_HOUSEHOLD_COVERS,
     ],
   },
   {
@@ -129,7 +141,7 @@ const SAFETY_PATTERNS: {
     regex: /\bguarantee[ds]?\b/i,
     issue: "Guarantee language — may overstate policy terms (or surety industry term)",
     severity: "medium",
-    skipIf: NEGATED_GUARANTEE,
+    skipIf: [NEGATED_GUARANTEE, GUARANTEE_PRODUCT_CATEGORY],
   },
   {
     regex: /\bautomatically included\b/i,
@@ -191,7 +203,7 @@ const SAFETY_PATTERNS: {
     regex: /\b(required by law|legally required)\b/i,
     issue: "Legal/regulatory requirement stated without verifiable Ontario basis",
     severity: "medium",
-    skipIf: /^\s*(is|are|do|does|what|can|will)\s/i,
+    skipIf: [/^\s*(is|are|do|does|what|can|will)\s/i, NEGATED_LEGAL_REQUIREMENT],
   },
   {
     regex: /\bmandatory\b/i,
@@ -229,6 +241,9 @@ function scanSafety(text: string, route: string, field: string): SafetyFlag[] {
     for (const { regex, issue, severity, requireHedge, skipIf } of SAFETY_PATTERNS) {
       if (!regex.test(sentence)) continue;
       if (requireHedge && HEDGE_WORDS.test(sentence)) continue;
+      // Consideration cards are scanned as one unit (title + description); qualification
+      // in a later sentence of the same item should limit an earlier sentence-level match.
+      if (requireHedge && field === "considerations" && HEDGE_WORDS.test(text)) continue;
       const skipPatterns = skipIf
         ? Array.isArray(skipIf)
           ? skipIf
