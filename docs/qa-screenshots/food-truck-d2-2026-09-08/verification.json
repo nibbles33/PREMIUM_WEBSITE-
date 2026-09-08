@@ -1,0 +1,96 @@
+{
+  "consoleErrors": [],
+  "explorer": [
+    {
+      "index": 0,
+      "id": "general-liability",
+      "tabTitle": "Liability",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from your food-service operations at events, parking areas, commissaries, and other service locations, subject to policy terms, exclusions, and limits.",
+      "detailTitle": "When a line at your service window becomes a liability claim",
+      "detailDescription": "A customer slip, scalding incident, or property damage at a festival, private event, or curbside service location can generate a third-party claim tied to your operations — not your vehicle's road use. General liability may address certain premises and operations claims, but whether a temporary location, off-site event, or commissary is covered depends on policy wording. Event organizers and municipalities often require certificates of insurance with specific limits or additional-insured status — those are contractual requirements separate from what any single policy automatically includes.",
+      "duplicateTitle": false,
+      "duplicateDesc": false,
+      "hasImage": true,
+      "objectFit": "contain",
+      "overflow": 0
+    },
+    {
+      "index": 1,
+      "id": "commercial-auto",
+      "tabTitle": "Auto",
+      "tabDesc": "May help with automobile liability and, where purchased, physical damage for a self-propelled food truck or other commercial vehicle used in the business, subject to FSRA-regulated policy terms — separate from general liability for food-service claims. How a towable trailer is insured depends on the automobile policy and how the unit is scheduled.",
+      "detailTitle": "On the road is a different policy question than at the service window",
+      "detailDescription": "Ontario automobile insurance for business use is regulated separately from commercial general liability. A self-propelled food truck or vehicle used to tow a food trailer for business needs appropriate automobile coverage for that use. How the trailer itself is insured—including physical damage—depends on the automobile policy and how the unit is scheduled. Physical damage coverage for the vehicle unit may not treat permanently installed kitchen equipment, stock, or business personal property the same way as dedicated property or equipment coverage. If you use a personally insured vehicle to tow a food trailer for business, disclose that use to your insurer or broker. Do not assume the existing personal automobile policy is appropriate for the commercial exposure.",
+      "duplicateTitle": false,
+      "duplicateDesc": false,
+      "hasImage": true,
+      "objectFit": "contain",
+      "overflow": 0
+    },
+    {
+      "index": 2,
+      "id": "equipment-coverage",
+      "tabTitle": "Equipment",
+      "tabDesc": "May help cover certain cooking equipment, refrigeration, generators, POS systems, and other business property — attached or portable — subject to how the policy schedules equipment and what causes of loss apply.",
+      "detailTitle": "The kitchen inside the truck is not always insured like the truck itself",
+      "detailDescription": "Fryers, flat tops, refrigeration, generators, and fitted interiors can represent a large share of your insurable value — but commercial auto physical damage may not fully cover permanently installed kitchen equipment or inventory. Depending on the policy, equipment may be insured under commercial property or equipment coverage, depending on how the equipment is installed, stored and used — an equipment floater may apply for certain portable or scheduled gear. Equipment breakdown and spoilage endorsements, where available, address different causes of loss than standard fire or theft — confirm triggers and sublimits with your broker rather than assuming refrigeration failure or spoiled stock is automatically covered.",
+      "duplicateTitle": false,
+      "duplicateDesc": false,
+      "hasImage": true,
+      "objectFit": "contain",
+      "overflow": 0
+    },
+    {
+      "index": 3,
+      "id": "product-liability",
+      "tabTitle": "Food Claims",
+      "tabDesc": "May help respond to certain claims alleging illness, allergic reaction, or injury from food you prepared, handled, or sold, often as products-completed operations coverage within a general liability policy or by endorsement — subject to policy terms.",
+      "detailTitle": "Foodborne illness claims are a distinct exposure from a slip-and-fall",
+      "detailDescription": "Allegations that your food caused illness, allergic reaction, or contamination can generate product liability or products-completed operations claims — separate from a simple premises injury at your service window. Ontario's Food Premises regulation contains requirements for mobile food premises; food-handler certification requirements depend on the type of food operation. Public health compliance supports safe operations but does not replace this coverage. What triggers a product claim, how completed operations are defined, and whether off-site events are included depend on policy wording — confirm scope with your broker.",
+      "duplicateTitle": false,
+      "duplicateDesc": false,
+      "hasImage": true,
+      "objectFit": "contain",
+      "overflow": 0
+    }
+  ],
+  "viewports": [
+    {
+      "name": "390",
+      "overflow": 0
+    },
+    {
+      "name": "768",
+      "overflow": 0
+    },
+    {
+      "name": "1024",
+      "overflow": 0
+    },
+    {
+      "name": "1440",
+      "overflow": 0
+    }
+  ],
+  "considerations": {
+    "count": 8,
+    "expandable": true,
+    "oneOpenAtATime": true
+  },
+  "forbidden": [],
+  "explorerTabCount": 4,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "faqCount": 5,
+  "faqQuestions": [
+    "Is a towable food trailer insured differently from a self-propelled food truck?",
+    "Does my commercial auto policy cover the kitchen equipment inside my truck?",
+    "Do I need insurance to vend at festivals, farmers markets, or private events?",
+    "Is food spoilage automatically covered if my refrigerator or generator fails?",
+    "Can a food truck serve alcohol in Ontario?"
+  ],
+  "pass": true
+}

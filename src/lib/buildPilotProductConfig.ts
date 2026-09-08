@@ -313,10 +313,16 @@ export function adaptCommercialIndustryContent(
     accentColor: COMMERCIAL_ACCENT,
     quoteHref: content.quoteHref,
     quoteLabel: content.quoteLabel,
-    trustStatement: content.subhead,
+    trustStatement:
+      content.slug === "food-truck-insurance"
+        ? "For Windsor–Essex food trucks, mobile trailers, and event vendors — reviewed through an independent broker who can coordinate commercial auto, liability, and equipment coverage for how you actually operate."
+        : content.subhead,
     showTrustBand: content.slug !== "restaurant-insurance",
     considerationsPresentation:
-      content.slug === "restaurant-insurance" ? "expandable" : "grid",
+      content.slug === "restaurant-insurance" ||
+      content.slug === "food-truck-insurance"
+        ? "expandable"
+        : "grid",
     coverageHeading: "What's covered",
     coverageIntro: content.coverageIntro,
     coverageItems: content.coverageTypes,
