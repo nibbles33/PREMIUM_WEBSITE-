@@ -29,6 +29,10 @@ export type CarrierRecord = {
   sharedLogoSlug?: string;
   /** Owner-review notes (not rendered on site) */
   classificationNotes?: string;
+  /** When false, excluded from public Partners directory (default true). */
+  publishToPartners?: boolean;
+  /** Internal audit — withheld from public Partners pending owner confirmation. */
+  ownerReviewRequired?: boolean;
 };
 
 function logo(slug: string, ext: string): string {
@@ -119,14 +123,14 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     categories: ["personal", "commercial"],
   },
   {
-    slug: "definity",
-    name: "Definity",
-    alt: "Definity logo",
-    logo: logo("definity", "png"),
+    slug: "economical",
+    name: "Economical Insurance",
+    alt: "Economical Insurance logo",
     classification: "insurance-carrier",
     categories: ["personal", "commercial"],
-    aliases: ["Economical", "Economical Insurance"],
-    classificationNotes: "Formerly Economical Insurance.",
+    aliases: ["Economical", "Definity"],
+    classificationNotes:
+      "Owner current list: Economical (personal + commercial). No official Economical logo sourced — text card. Definity retained as internal alias only; not presented as a current Premium market.",
   },
   {
     slug: "gore",
@@ -150,8 +154,11 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "High Risk MGA",
     alt: "High Risk MGA logo",
     classification: "mga-wholesale",
-    categories: ["personal"],
-    classificationNotes: "Logo not sourced — wholesale MGA; verify public-facing identity with owner.",
+    categories: ["specialty"],
+    publishToPartners: false,
+    ownerReviewRequired: true,
+    classificationNotes:
+      "OWNER REVIEW REQUIRED — public identity not confidently established. Withheld from Partners directory.",
   },
   {
     slug: "intact",
@@ -176,9 +183,12 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Facility Association logo",
     logo: logo("facility-association", "jpg"),
     classification: "specialty-underwriting",
-    categories: ["personal"],
-    aliases: ["Nordic", "Nordic Insurance"],
-    classificationNotes: "Residual market / Facility Association (Nordic brand in some contexts).",
+    categories: ["specialty"],
+    aliases: ["Nordic", "Nordic Insurance", "Nordic (Facility Association)"],
+    publishToPartners: false,
+    ownerReviewRequired: true,
+    classificationNotes:
+      "OWNER REVIEW REQUIRED — owner source: Nordic (Facility Association). Public identity uncertain; withheld from Partners rather than publishing misleading label.",
   },
   {
     slug: "northbridge",
@@ -338,9 +348,10 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Intact Public Entities logo",
     sharedLogoSlug: "intact",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["IPE"],
-    classificationNotes: "Intact division — collapsed to parent Intact logo per entity-variant review.",
+    classificationNotes:
+      "Intact division — shared Intact artwork. Official IPE brand asset sourcing flagged as future enhancement.",
   },
   {
     slug: "intact-specialty-solutions",
@@ -348,9 +359,10 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Intact Specialty Solutions logo",
     sharedLogoSlug: "intact",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["ISS"],
-    classificationNotes: "Intact division — collapsed to parent Intact logo per entity-variant review.",
+    classificationNotes:
+      "Intact division — shared Intact artwork. Official ISS brand asset sourcing flagged as future enhancement.",
   },
   {
     slug: "aig",
@@ -359,7 +371,9 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     logo: logo("aig", "jpg"),
     classification: "insurance-carrier",
     categories: ["commercial"],
-    classificationNotes: "Retained from prior verified claims research; not in new spreadsheet but verified claims contact exists.",
+    publishToPartners: false,
+    classificationNotes:
+      "Not in owner current market lists — removed from public Partners. Retained for claims logo lookup; claims record unchanged.",
   },
   {
     slug: "sovereign",
@@ -385,7 +399,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Premier Marine logo",
     logo: logo("premier", "jpg"),
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Premier"],
   },
   {
@@ -405,7 +419,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "ABEX logo",
     logo: logo("abex", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Affiliated Brokers Exchange"],
   },
   {
@@ -413,7 +427,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "Agile Underwriting",
     alt: "Agile Underwriting logo",
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     classificationNotes: "Logo not sourced.",
   },
   {
@@ -422,7 +436,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Apollo Exchange logo",
     logo: logo("apollo", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Apollo Insurance"],
   },
   {
@@ -431,7 +445,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "April Canada logo",
     logo: logo("april", "jpg"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["April"],
   },
   {
@@ -439,7 +453,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "Aurora Underwriting",
     alt: "Aurora Underwriting logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Aurora"],
     classificationNotes: "Logo not sourced.",
   },
@@ -449,7 +463,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Beazley logo",
     logo: logo("beazley", "jpg"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Beazley"],
   },
   {
@@ -457,7 +471,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "BOXX Insurance",
     alt: "BOXX Insurance logo",
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     classificationNotes: "Logo not sourced.",
   },
   {
@@ -466,7 +480,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Burns & Wilcox Canada logo",
     logo: logo("burns-wilcox", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Burns & Wilcox"],
   },
   {
@@ -474,7 +488,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "CannGenn Insurance Canada",
     alt: "CannGenn Insurance Canada logo",
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["CannGenn"],
     classificationNotes: "Logo not sourced.",
   },
@@ -484,7 +498,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Cansure logo",
     logo: logo("cansure", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["SPGC", "Cansure/SPGC"],
   },
   {
@@ -492,7 +506,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "CFC Underwriting",
     alt: "CFC Underwriting logo",
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["CFC"],
     classificationNotes: "Logo not sourced.",
   },
@@ -502,7 +516,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "CHES Special Risk logo",
     logo: logo("ches-special-risk", "jpg"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["CHES Special Risk Inc."],
   },
   {
@@ -510,7 +524,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "Chutter Underwriting",
     alt: "Chutter Underwriting logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Chutter"],
     classificationNotes: "Logo not sourced.",
   },
@@ -520,7 +534,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Coast Underwriting logo",
     logo: logo("coast-underwriting", "png"),
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Coast Underwriters"],
   },
   {
@@ -528,7 +542,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "Coalition",
     alt: "Coalition logo",
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     classificationNotes: "Logo not sourced.",
   },
   {
@@ -536,7 +550,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "Eagle Underwriting",
     alt: "Eagle Underwriting logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     classificationNotes: "Logo not sourced.",
   },
   {
@@ -545,7 +559,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Forward Insurance Managers logo",
     logo: logo("forward", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Forward Insurance", "Jet"],
   },
   {
@@ -553,7 +567,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "Gameday Insurance",
     alt: "Gameday Insurance logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     classificationNotes: "Logo not sourced — downloaded asset was invalid HTML during task.",
   },
   {
@@ -561,7 +575,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "GASS",
     alt: "Global Alliance Specialty Solutions logo",
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Global Alliance Specialty Solutions"],
     classificationNotes: "Logo not sourced.",
   },
@@ -571,7 +585,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "GroupOne Insurance logo",
     logo: logo("group-one", "jpg"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Group One"],
   },
   {
@@ -596,7 +610,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "K&K Insurance Canada",
     alt: "K&K Insurance Canada logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["K&K"],
     classificationNotes: "Logo not sourced — official CDN returned invalid asset during task.",
   },
@@ -606,7 +620,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Lions Gate Underwriting logo",
     logo: logo("lions-gate", "jpg"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Lions Gate"],
   },
   {
@@ -615,7 +629,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Milnco Insurance logo",
     logo: logo("milnco", "jpeg"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Milnco"],
   },
   {
@@ -623,7 +637,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "NovaRisk",
     alt: "NovaRisk logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     classificationNotes: "Logo not sourced.",
   },
   {
@@ -631,7 +645,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "ODIS Underwriting",
     alt: "ODIS Underwriting logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["ODIS"],
     classificationNotes: "Logo not sourced.",
   },
@@ -641,7 +655,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "PAL Insurance logo",
     logo: logo("pal", "jpg"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["PAL Insurance Brokers Canada Ltd."],
   },
   {
@@ -649,7 +663,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "Raise Underwriting",
     alt: "Raise Underwriting logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     classificationNotes: "Logo not sourced.",
   },
   {
@@ -657,7 +671,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "REVAU",
     alt: "REVAU logo",
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Groupassur"],
     classificationNotes: "Logo not sourced.",
   },
@@ -666,7 +680,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "Ridge Canada Cyber Solutions",
     alt: "Ridge Canada Cyber Solutions logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Ridge Canada"],
     classificationNotes: "Logo not sourced.",
   },
@@ -675,7 +689,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "Signature Risk",
     alt: "Signature Risk logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     classificationNotes: "Logo not sourced.",
   },
   {
@@ -684,7 +698,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "South Western Insurance Group logo",
     logo: logo("swg", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: [
       "SWG",
       "SWG Specialty",
@@ -700,7 +714,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Special Risk Insurance Managers logo",
     logo: logo("special-risk-srim", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["SRIM", "Special Risk"],
   },
   {
@@ -708,7 +722,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     name: "Sport and Fitness Insurance Canada",
     alt: "Sport and Fitness Insurance Canada logo",
     classification: "specialty-underwriting",
-    categories: ["commercial"],
+    categories: ["specialty"],
     classificationNotes: "Logo not sourced.",
   },
   {
@@ -726,7 +740,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Strategic Underwriting Managers logo",
     logo: logo("sum", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["SUM"],
   },
   {
@@ -735,7 +749,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Totten Group logo",
     logo: logo("totten", "jpg"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Totten Group Insurance", "Totten Group / Cansure"],
     classificationNotes: "Claims handled with Cansure via Specialty Claims administrator.",
   },
@@ -745,8 +759,10 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Trinity Underwriting logo",
     logo: logo("trinity", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
-    classificationNotes: "Retained from prior site; verified claims process (form/email).",
+    categories: ["specialty"],
+    publishToPartners: false,
+    classificationNotes:
+      "Not in owner current market lists — removed from public Partners. Retained for claims logo lookup; claims record unchanged.",
   },
   {
     slug: "unique-risk",
@@ -754,7 +770,7 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Unique Risk Management logo",
     logo: logo("unique-risk", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Unique Risk"],
   },
   {
@@ -763,12 +779,12 @@ export const CARRIER_INVENTORY: CarrierRecord[] = [
     alt: "Victor Insurance Canada logo",
     logo: logo("victor", "png"),
     classification: "mga-wholesale",
-    categories: ["commercial"],
+    categories: ["specialty"],
     aliases: ["Victor", "Encon"],
   },
 ];
 
-/** Slugs curated for homepage marquee — Option B (core + Definity). */
+/** Slugs curated for homepage marquee — approved 12 (unchanged from pre-batch curation). */
 export const HOMEPAGE_MARQUEE_SLUGS: string[] = [
   "caa",
   "intact",
@@ -782,7 +798,6 @@ export const HOMEPAGE_MARQUEE_SLUGS: string[] = [
   "echelon",
   "unica",
   "pembridge",
-  "definity",
 ];
 
 export const PARTNER_GROUP_META = {
@@ -806,10 +821,24 @@ export const PARTNER_GROUP_META = {
   },
 } as const;
 
+export function isPublishedToPartners(record: CarrierRecord): boolean {
+  return record.publishToPartners !== false;
+}
+
+/** Carriers eligible for the public Partners page directory. */
+export function getPublicCarrierInventory(): CarrierRecord[] {
+  return CARRIER_INVENTORY.filter(isPublishedToPartners);
+}
+
 export function getCarriersByCategory(category: MarketCategory): CarrierRecord[] {
-  return CARRIER_INVENTORY.filter((c) => c.categories.includes(category)).sort(
-    (a, b) => a.name.localeCompare(b.name),
-  );
+  return getPublicCarrierInventory()
+    .filter((c) => c.categories.includes(category))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+/** Internal audit — entities withheld from public Partners pending owner review. */
+export function getOwnerReviewRequiredInventory(): CarrierRecord[] {
+  return CARRIER_INVENTORY.filter((c) => c.ownerReviewRequired === true);
 }
 
 export function getHomepageMarqueeCarriers(): CarrierRecord[] {

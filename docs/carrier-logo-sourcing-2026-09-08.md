@@ -248,7 +248,7 @@ Shared logos reused across categories (no duplicate assets).
 
 ---
 
-## 10. Regression
+## 10. Regression (commit 17b1683)
 
 | Check | Result |
 |---|---|
@@ -259,13 +259,130 @@ Shared logos reused across categories (no duplicate assets).
 
 ---
 
+## 11. Owner Precision Fix (post-17b1683)
+
+**Branch:** `cursor/carrier-logos-7402`  
+**Scope:** Targeted data/categorization only — no logo re-sourcing, no page redesign, no claims edits.
+
+### 1. Homepage final 12
+
+Restored approved curated marquee (Definity removed):
+
+CAA Insurance · Intact Insurance · SGI Canada · Wawanesa Insurance · Northbridge Insurance · Aviva · Travelers · Chubb · Gore Mutual · Echelon Insurance · Unica Insurance · Pembridge Insurance
+
+### 2. Partners counts
+
+| Metric | Count |
+|---|---:|
+| **Public entity count** | **76** |
+| Personal Insurance Markets | 21 |
+| Commercial Insurance Markets | 28 |
+| Specialty & MGA Markets | 40 |
+
+*(Group counts include entities appearing in multiple sections; unique public entities = 76.)*
+
+### 3. Economical treatment
+
+- Public Partners entry: **Economical Insurance** (slug `economical`)
+- Categories: personal + commercial
+- **No logo** — premium text-card fallback (Definity logo not substituted)
+- Internal aliases retained: `Economical`, `Definity` (search/metadata only)
+
+### 4. Definity treatment
+
+- **Not presented** as a separate current Premium market on Partners
+- **Not in** homepage marquee
+- Retained as internal alias on Economical record only
+- **`carrierClaims.ts` unchanged** — claims row still displays `Definity` (separate verification pass pending)
+
+### 5. SWG treatment
+
+- One canonical entry: **South Western Insurance Group**
+- Aliases preserved: SWG, SWG Specialty, South Western General, AM Fredericks
+- Asset `swg.png` retained; `partner-am-fredericks.jpg` not deleted
+
+### 6. Intact family treatment
+
+- Three separate public entries retained: Intact Insurance, Intact Public Entities, Intact Specialty Solutions
+- Shared Intact artwork (`/images/carriers/intact.jpg`) — no invented distinct logos
+- IPE/ISS official brand asset sourcing flagged as **future enhancement**
+
+### 7. AIG treatment
+
+- **Removed from public Partners directory** (`publishToPartners: false`)
+- Historical logo asset retained on disk
+- **Claims record unchanged** (17 verified insurers still includes AIG)
+
+### 8. Trinity treatment
+
+- **Removed from public Partners directory** (`publishToPartners: false`)
+- Historical logo asset retained on disk
+- **Claims record unchanged** (8 verified MGAs still includes Trinity)
+
+### 9. High Risk MGA treatment
+
+- **Excluded from public Partners** (`publishToPartners: false`, `ownerReviewRequired: true`)
+- Preserved in internal inventory/audit metadata — public identity not established
+
+### 10. Nordic / Facility Association treatment
+
+- **Excluded from public Partners** (`publishToPartners: false`, `ownerReviewRequired: true`)
+- Source alias preserved internally: `Nordic (Facility Association)`
+- Withheld rather than publishing uncertain public identity
+
+### 11. Claims directory
+
+| Metric | Value |
+|---|---|
+| Verified entries | **25** (17 insurers + 8 MGAs) |
+| Auto-generated unverified rows | **Removed — not restored** |
+| Modified in precision pass | **NO** |
+
+**CLAIMS CONTACT RE-VERIFICATION REQUIRED BEFORE LAUNCH**
+
+The repo identifies contacts as "confirmed in specification" but does not retain sufficient per-entry primary-source provenance. A separate task must verify each public claims contact against current official carrier/MGA sources.
+
+### 12. Privacy re-confirmed
+
+| Check | Result |
+|---|---|
+| Individual underwriter names public | **NO** |
+| Internal extensions public | **NO** |
+| Internal broker codes public | **NO** |
+
+### 13. Public Specialty & MGA entries (40)
+
+ABEX · Agile Underwriting · Apollo Exchange · April Canada · Aurora Underwriting · Beazley Canada · BOXX Insurance · Burns & Wilcox Canada · CannGenn Insurance Canada · Cansure · CFC Underwriting · CHES Special Risk · Chutter Underwriting · Coalition · Coast Underwriting · Eagle Underwriting · Forward Insurance Managers · Gameday Insurance · GASS · GroupOne Insurance · Intact Public Entities · Intact Specialty Solutions · K&K Insurance Canada · Lions Gate Underwriting · Milnco Insurance · NovaRisk · ODIS Underwriting · PAL Insurance · Premier Marine · Raise Underwriting · REVAU · Ridge Canada Cyber Solutions · Signature Risk · South Western Insurance Group · Special Risk Insurance Managers · Sport and Fitness Insurance Canada · Strategic Underwriting Managers · Totten Group · Unique Risk Management · Victor Insurance Canada
+
+### 14. Remaining owner-review questions
+
+1. Confirm **Economical Insurance** text-card treatment until official logo supplied
+2. Confirm **Nordic (Facility Association)** public naming when ready to publish
+3. Confirm **High Risk MGA** public identity/branding
+4. **Claims re-verification** pass before launch (branding separate from Partners precision fix)
+5. Official **IPE/ISS** brand assets — future sourcing enhancement
+
+### 15. Precision-fix regression
+
+| Check | Result |
+|---|---|
+| `npm run build` | ✅ Pass |
+| `npx tsc --noEmit` | ✅ Pass |
+| Homepage marquee count | ✅ 12 |
+| Claims verified count | ✅ 25 |
+| Console errors (homepage, partners) | ✅ 0 |
+| Console errors (claims) | ⚠️ 3× HTTP 500 on static resources during Puppeteer capture (pages return HTTP 200; likely stale server chunk during QA — re-test after deploy) |
+
+---
+
 ## STOP FOR OWNER REVIEW
 
 **Do not merge · Do not deploy · Do not promote Vercel**
 
-### Owner decisions requested:
-1. Confirm **Option B** marquee (13 carriers incl. Definity) vs revert to 12
-2. Provide official logo files for **32 unsourced** carriers (or approve text-only cards)
-3. Confirm questionable classifications in §6
-4. Confirm removal of **The Guarantee** and **AM Fredericks** from public directory
-5. Confirm **AIG** and **Trinity** retention (prior site / claims research, not in spreadsheet)
+### Owner decisions requested (updated):
+1. ~~Confirm Option B marquee~~ → **Precision fix restored approved 12**
+2. Provide official logo files for unsourced carriers (or approve text-only cards) — **Economical priority**
+3. Confirm Nordic/Facility Association and High Risk MGA public identities
+4. Confirm removal of **The Guarantee** from public directory (unchanged)
+5. Claims contact re-verification pass before launch
+6. Official IPE/ISS brand assets (future enhancement)

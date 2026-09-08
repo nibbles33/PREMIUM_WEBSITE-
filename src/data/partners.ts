@@ -3,6 +3,7 @@ import {
   CARRIER_INVENTORY,
   getCarriersByCategory,
   getHomepageMarqueeCarriers,
+  getPublicCarrierInventory,
   PARTNER_GROUP_META,
   resolveCarrierLogo,
   type CarrierRecord,
@@ -36,12 +37,13 @@ function toPartnerLogo(record: CarrierRecord): PartnerLogo {
   };
 }
 
-/** Curated core markets for the homepage marquee (Option B — 13 carriers). */
+/** Curated core markets for the homepage marquee (approved 12). */
 export const homepageCarriers: PartnerLogo[] =
   getHomepageMarqueeCarriers().map(toPartnerLogo);
 
-/** Full partner set for Partners page and claims logo lookup. */
-export const allPartners: PartnerLogo[] = CARRIER_INVENTORY.map(toPartnerLogo);
+/** Public partner set for Partners page (excludes withheld / claims-only entries). */
+export const allPartners: PartnerLogo[] =
+  getPublicCarrierInventory().map(toPartnerLogo);
 
 /** Legacy export — all carriers with resolved logo paths for claims directory. */
 export { CARRIER_INVENTORY, resolveCarrierLogo };

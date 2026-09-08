@@ -1,4 +1,17 @@
 {
-  "consoleErrors": [],
-  "capturedAt": "2026-09-08T21:30:24.318Z"
+  "consoleErrors": [
+    {
+      "route": "/claims/",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    },
+    {
+      "route": "/claims/",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    },
+    {
+      "route": "/claims/",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    }
+  ],
+  "capturedAt": "2026-09-08T22:27:40.325Z"
 }
