@@ -707,7 +707,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Daycare and private school insurance — liability, abuse coverage, property, and student injury for Windsor-Essex childcare and education providers.",
     headline: "Daycare & Private School Insurance",
     subhead:
-      "Coverage for childcare centres and private schools — student injury, abuse allegations, property, and regulatory compliance exposures.",
+      "Licensed child-care operations in Ontario have specific insurance obligations. Ontario Regulation 137/15, s. 71 requires licensees to maintain insurance that includes comprehensive general liability and personal injury coverage and, where the licensee owns vehicles, motor vehicle coverage for those vehicles. Ontario's licensing guidance also tells operators to make their broker aware of activities such as transportation, field trips, volunteers, contractual liability and board/officer exposures. Private schools and other education operations have different insurance considerations, which should be reviewed based on how they operate.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a School Quote",
     coverageIntro:
@@ -716,30 +716,89 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       {
         title: "General Liability",
         description:
-          "Covers student and visitor injury on premises — playgrounds, classrooms, and field trips.",
+          "Helps protect the operation against certain third-party bodily injury, personal injury, and property-damage claims arising from the premises or operations, subject to policy terms, exclusions, and limits.",
         icon: Briefcase,
+      },
+      {
+        title: "Property",
+        description:
+          "May help cover your building (if owned), contents, and outdoor or playground property, depending on the causes of loss and endorsements included in your policy.",
+        icon: Building2,
+      },
+      {
+        title: "Abuse & Molestation Liability",
+        description:
+          "A distinct coverage addressing allegations of abuse, harassment, or misconduct involving staff, volunteers, or others connected with your operation — insurers offering this coverage frequently require documented safety and screening practices as part of underwriting it.",
+        icon: Shield,
       },
       {
         title: "Professional Liability",
         description:
-          "Addresses claims alleging negligent supervision or educational malpractice.",
+          "May respond to certain claims alleging errors, omissions, or breaches of professional duty in providing educational or care-related services. The scope varies by operation and policy wording.",
         icon: Baby,
       },
       {
-        title: "Abuse & Molestation",
+        title: "Directors & Officers",
         description:
-          "Critical coverage responding to allegations of abuse by staff or volunteers.",
-        icon: Shield,
+          "For operations governed by a board, D&O insurance may help protect directors, officers, and the organization against certain claims alleging wrongful acts in governance or management decisions, subject to the policy.",
+        icon: Users,
       },
       {
-        title: "Commercial Property",
+        title: "Business Interruption",
         description:
-          "Covers building contents, playground equipment, and educational materials.",
-        icon: Building2,
+          "May help with lost business income and certain continuing expenses when operations are interrupted by a covered loss, subject to the policy's waiting periods, limits, and terms.",
+        icon: Store,
       },
     ],
     whoItIsFor:
       "Daycare and private school insurance is for Windsor-Essex licensed daycares, Montessori schools, private academies, and before-and-after school programs.",
+    considerations: [
+      {
+        title: "Broker disclosures Ontario licensing guidance expects",
+        description:
+          "Ontario's own child-care licensing guidance specifically directs operators to make sure their broker is aware of:",
+      },
+      {
+        title: "Transportation of children",
+        description:
+          "Vans, buses, or any vehicle used for the operation",
+      },
+      {
+        title: "Field trips",
+        description:
+          "Activities that move outside the regular premises",
+      },
+      {
+        title: "Volunteers",
+        description:
+          "How volunteers are covered relative to employees",
+      },
+      {
+        title: "Contractual liability",
+        description:
+          "Obligations taken on through agreements with landlords, service system managers, or other parties",
+      },
+      {
+        title: "Liability of board members/officers",
+        description:
+          "Relevant for board-governed schools and larger childcare organizations",
+      },
+      {
+        title: "Licensing status affects your insurance obligations directly",
+        description:
+          "Ontario Regulation 137/15 s. 71 applies specifically to licensed operators; unlicensed arrangements are structured differently under provincial rules, which affects what coverage applies and what's expected.",
+      },
+      {
+        title: "Abuse liability coverage typically comes with real conditions",
+        description:
+          "Documented screening and supervision practices are commonly part of what insurers require to offer this coverage, not just a premium.",
+      },
+      {
+        title: "Did you know?",
+        description:
+          "Ontario's regulation also addresses incident records, anaphylaxis policies, and first-aid/CPR certification requirements. These are operational/regulatory requirements, not insurance coverage Premium's policies address directly — they're mentioned here only to illustrate why a childcare operation's risk profile is genuinely different from an ordinary commercial occupancy.",
+      },
+    ],
     relatedLinks: [
       { label: "Non-Profit Insurance", href: "/non-profit-insurance/" },
       { label: "Event Liability", href: "/event-liability-insurance/" },
@@ -748,24 +807,29 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     faqTitle: "Daycare & private school FAQ",
     faqItems: [
       {
-        question: "Are field trips covered?",
+        question: "Does insurance cover allegations of abuse at a daycare or school?",
         answer:
-          "Off-premises activities may need specific endorsements. Disclose all regular and special outing locations.",
+          "Abuse and molestation liability is typically its own distinct coverage, separate from general liability — it shouldn't be assumed to be automatically included. Insurers offering this coverage often require documented safety and screening practices as part of underwriting it. This is worth discussing directly and specifically.",
       },
       {
-        question: "What ratio and licensing requirements apply?",
+        question: "What's the difference between general liability and abuse liability coverage?",
         answer:
-          "Insurance does not replace licensing compliance. Carriers may ask about staff-to-child ratios and inspection history.",
+          "General liability typically addresses bodily injury or property damage claims broadly. Abuse liability is a separate, specifically-underwritten coverage addressing allegations of misconduct — these are genuinely distinct products, not variations of the same coverage.",
       },
       {
-        question: "Is abuse coverage mandatory?",
+        question: "Do private schools need directors and officers insurance?",
         answer:
-          "Most carriers require abuse and molestation coverage for organizations serving minors, along with screening policies.",
+          "If your school or centre is governed by a board, D&O insurance should be considered as part of the insurance review because directors and officers can face exposures arising from governance and management decisions. The need and appropriate coverage depend on the organization's structure and policy terms.",
       },
       {
-        question: "Do busing and transport need separate auto?",
+        question: "What if we transport children in a van or bus?",
         answer:
-          "School-owned buses and vans need commercial auto. Contracted transport should be disclosed.",
+          "If your operation transports children, tell your broker exactly how transportation is provided, who owns the vehicle and how it's used. Ontario's child-care licensing guidance specifically identifies transportation as something licensees should disclose to their insurance broker, and s. 71 requires motor vehicle coverage for vehicles owned by the licensee.",
+      },
+      {
+        question: "Do I need special insurance if I provide child care from my home?",
+        answer:
+          "Don't assume your personal home insurance policy automatically covers a home-based child-care operation. Coverage for business activities varies by insurer and policy, and Ontario's licensing and insurance requirements also differ depending on how the operation is structured — whether it's licensed, agency-affiliated, how many children are cared for, and whether there are employees. Tell your broker these specifics so the right coverage can actually be reviewed.",
       },
     ],
     ctaHeading: "Operate a daycare or private school?",
