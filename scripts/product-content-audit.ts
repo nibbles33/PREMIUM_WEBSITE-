@@ -94,6 +94,14 @@ const NEGATED_WILL_COVER = /\b(will not|won't)\s+cover\b/i;
 const NEGATED_INCLUDES =
   /\b((?:does|do|will|would|should|can|could|may|might)\s+not|don't|doesn't|won't|shouldn't|should not|cannot|can't|not)\s+(\w+\s+){0,4}includes?\s+(?:liability|property|coverage|protection)\b/i;
 
+/** Dollar figure present (informational — not inherently unsafe). */
+const DOLLAR_FIGURE =
+  /\$\s?\d[\d,]*(?:\.\d{2})?(?:\s*[KkMm]\b)?|\$\s?\d+(?:\.\d+)?[KkMm]\b/;
+
+/** Absolute/universal numeric promises — HIGH scrutiny (presence of a figure alone is insufficient). */
+const ABSOLUTE_NUMERICAL_CLAIM =
+  /\b(?:always|guaranteed)\b[^.]{0,100}(?:\$|\d+\s*(?:million|thousand)\b)/i;
+
 const SAFETY_PATTERNS: {
   regex: RegExp;
   issue: string;
@@ -130,14 +138,54 @@ const SAFETY_PATTERNS: {
     skipIf: NEGATED_AUTOMATIC_INCLUSION,
   },
   {
-    regex: /\$\s?\d[\d,]*(?:\.\d{2})?/,
-    issue: "Specific dollar amount — unverified limit/deductible",
+    regex: DOLLAR_FIGURE,
+    issue: "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+    severity: "low",
+    skipIf: ABSOLUTE_NUMERICAL_CLAIM,
+  },
+  {
+    regex: /\b(?:your|the)\s+(?:deductible|premium|limit)\s+is\s+(?:\$|\d)/i,
+    issue: "Personalized numeric limit/deductible stated as fixed — may vary by policy",
+    severity: "high",
+  },
+  {
+    regex: /\b(?:costs?|priced\s+at|starting\s+at)\s+(?:just\s+)?\$/i,
+    issue: "Specific premium/cost figure — may be unverified or non-universal",
+    severity: "high",
+  },
+  {
+    regex: /\b(?:this|the)\s+policy\s+pays?\s+\$/i,
+    issue: "Definitive policy payment amount — may overstate coverage",
+    severity: "high",
+  },
+  {
+    regex: /\b(?:will\s+pay|pays?)\s+\$[\d,]/i,
+    issue: "Definitive dollar payment promise — may overstate coverage",
+    severity: "high",
+    requireHedge: true,
+    skipIf: /\b(?:up to|at least|minimum|statutory|fsra|ontario)\b/i,
+  },
+  {
+    regex: /\bcoverage\s+is\s+\$/i,
+    issue: "Flat coverage amount — states fixed limit without hedging",
+    severity: "high",
+    requireHedge: true,
+  },
+  {
+    regex: /\b(?:the\s+)?(?:legal|statutory)\s+minimum\s+is\s+\$/i,
+    issue: "Unsupported flat statutory minimum — verify regulatory basis",
+    severity: "high",
+  },
+  {
+    regex: ABSOLUTE_NUMERICAL_CLAIM,
+    issue: "Absolute numerical coverage/cost claim — may overstate policy terms",
     severity: "high",
   },
   {
     regex: /\b\d+\s*(?:million|thousand)\b/i,
-    issue: "Specific numeric limit — may be unverified",
-    severity: "high",
+    issue: "Specific numeric limit cited — verify basis if presented as fact",
+    severity: "low",
+    skipIf: ABSOLUTE_NUMERICAL_CLAIM,
   },
   {
     regex: /\b(required by law|legally required)\b/i,
@@ -832,7 +880,7 @@ ${priority}
 
 - **Source of truth:** TypeScript product data (\`src/data/product-pages/\`, \`commercial-industries.ts\`, \`pilot-*-inline.ts\`, \`pilot-auto.ts\`) — not rendered DOM.
 - **Auto page:** Hero copy from \`AutoProductHero.tsx\`; coverage/FAQ from \`pilot-auto.ts\`.
-- **Safety scan:** Pattern-based; high/medium flags trigger class D. Low-severity surety "guarantee" terminology flagged separately. Negated guarantees ("aren't guaranteed"), negated inclusion ("shouldn't be assumed to be automatically included", "does not cover"), and conditional phrasing ("protects you if") excluded.
+- **Safety scan:** Pattern-based; high/medium flags trigger class D. Low-severity surety "guarantee" terminology flagged separately. Negated guarantees ("aren't guaranteed"), negated inclusion ("shouldn't be assumed to be automatically included", "does not cover"), and conditional phrasing ("protects you if") excluded. **Dollar figures:** presence of a limit/deductible/regulatory amount is flagged **low** (informational review); **high** only when the sentence asserts an absolute/universal numeric claim (e.g. "your deductible is $500", "coverage is always $2M", "this policy pays $100,000") — the audit does not verify whether cited statutory figures are correct.
 - **FAQ uniqueness:** Normalized comparison across all 58 pages; "Shares FAQ pattern" means ≥2 structurally similar questions vs another route.
 - **Cannot confidently assess:** Whether specific commercial claims match actual carrier forms; whether industry pages' coverage categories are complete for every operation type. Flagged language needs broker/owner review, not automated clearance.
 

@@ -41,8 +41,8 @@
           "page": "/auto-insurance/",
           "field": "faq",
           "quote": "A standard policy includes minimum third-party liability coverage of $200,000, uninsured automobile coverage, and direct compensation–property damage coverage (with limited opt-out rights), along with statutory accident benefits.",
-          "issue": "Specific dollar amount — unverified limit/deductible",
-          "severity": "high"
+          "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+          "severity": "low"
         },
         {
           "page": "/auto-insurance/",
@@ -64,7 +64,7 @@
       "geoTargeting": "Ontario-wide",
       "geoNotes": "Ontario without Windsor-Essex in body",
       "classification": "D",
-      "classificationReason": "4 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classificationReason": "3 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat coverage guarantee — states or implies automatic coverage without hedging"
     },
     {
       "route": "/boat-insurance/",
@@ -1131,16 +1131,16 @@
           "page": "/motorcycle-insurance/",
           "field": "coverage:Third-Party Liability",
           "quote": "FSRA specifies minimum third-party liability coverage of at least $200,000.",
-          "issue": "Specific dollar amount — unverified limit/deductible",
-          "severity": "high"
+          "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+          "severity": "low"
         }
       ],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex + Ontario",
       "geoNotes": "Both Windsor-Essex and Ontario referenced",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Specific dollar amount — unverified limit/deductible"
+      "classification": "B",
+      "classificationReason": "Reasonable (535w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful"
     },
     {
       "route": "/non-profit-insurance/",
@@ -1308,16 +1308,16 @@
           "page": "/professional-liability-insurance/",
           "field": "faq",
           "quote": "Contract requirements vary — $1M to $5M per occurrence is common for mid-size engagements.",
-          "issue": "Specific dollar amount — unverified limit/deductible",
-          "severity": "high"
+          "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+          "severity": "low"
         }
       ],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Specific dollar amount — unverified limit/deductible"
+      "classification": "C",
+      "classificationReason": "Shallow depth (391w total, cards avg 31w, considerations present but thin overall)"
     },
     {
       "route": "/professional-offices-insurance/",
@@ -1646,9 +1646,9 @@
   ],
   "counts": {
     "A": 2,
-    "B": 10,
-    "C": 17,
-    "D": 29
+    "B": 11,
+    "C": 18,
+    "D": 27
   },
   "allFlags": [
     {
@@ -1676,8 +1676,8 @@
       "page": "/auto-insurance/",
       "field": "faq",
       "quote": "A standard policy includes minimum third-party liability coverage of $200,000, uninsured automobile coverage, and direct compensation–property damage coverage (with limited opt-out rights), along with statutory accident benefits.",
-      "issue": "Specific dollar amount — unverified limit/deductible",
-      "severity": "high"
+      "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+      "severity": "low"
     },
     {
       "page": "/auto-insurance/",
@@ -1851,8 +1851,8 @@
       "page": "/motorcycle-insurance/",
       "field": "coverage:Third-Party Liability",
       "quote": "FSRA specifies minimum third-party liability coverage of at least $200,000.",
-      "issue": "Specific dollar amount — unverified limit/deductible",
-      "severity": "high"
+      "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+      "severity": "low"
     },
     {
       "page": "/non-profit-insurance/",
@@ -1886,8 +1886,8 @@
       "page": "/professional-liability-insurance/",
       "field": "faq",
       "quote": "Contract requirements vary — $1M to $5M per occurrence is common for mid-size engagements.",
-      "issue": "Specific dollar amount — unverified limit/deductible",
-      "severity": "high"
+      "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+      "severity": "low"
     },
     {
       "page": "/property-management-insurance/",

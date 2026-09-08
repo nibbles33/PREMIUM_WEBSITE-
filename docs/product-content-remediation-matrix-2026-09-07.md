@@ -39,12 +39,12 @@
 
 | Bucket | Count |
 |--------|------:|
-| D1 | 9 |
+| D1 | 6 |
 | D2 | 11 |
 | D3 | 12 |
 | C1 | 7 |
 | C2 | 9 |
-| **Total** | **48** |
+| **Total** | **45** |
 
 ---
 
@@ -52,7 +52,7 @@
 
 | Route | Class | Words | Safety flags (summary) | Severity | Depth problem? | Bucket | Risk family | Recommended treatment |
 |-------|------:|------:|------------------------|----------|----------------|--------|-------------|----------------------|
-| /auto-insurance/ | D | 461 | [HIGH] coverage:Collision Coverage — Flat coverage guarantee — states or implies automatic coverage without hedging; [HIGH] coverage:Comprehensive Coverage — Flat coverage guarantee — states or implies automatic coverage without hedging; [HIGH] coverage:Accident Benefits — Flat coverage guarantee — states or implies automatic coverage without hedging; [MEDIUM] faq — Legal/regulatory requirement stated without verifiable Ontario basis; [HIGH] faq — Flat coverage guarantee — states or implies automatic coverage without hedging | high, medium | No | **D1** | Personal | Hedging pass on collision/comprehensive/accident-benefits card + FAQ wording; retain Ontario-mandatory framing where verifiable; no length expansion. |
+| /auto-insurance/ | D | 564 | [HIGH] coverage:Collision Coverage — Flat coverage guarantee — states or implies automatic coverage without hedging; [HIGH] coverage:Comprehensive Coverage — Flat coverage guarantee — states or implies automatic coverage without hedging; [HIGH] faq — Flat coverage guarantee — states or implies automatic coverage without hedging | high | No | **D1** | Personal | Hedging pass on collision/comprehensive/accident-benefits card + FAQ wording; retain Ontario-mandatory framing where verifiable; no length expansion. |
 | /bonding-insurance/ | D | 448 | [MEDIUM] coverage:Bid Bonds — Guarantee language — may overstate policy terms (or surety industry term); [MEDIUM] coverage:Performance Bonds — Guarantee language — may overstate policy terms (or surety industry term); [MEDIUM] faq — Unhedged protection claim | medium | Yes | **D3** | Construction (Bonding/Surety) | Dedicated surety research pass; separate bond-type accuracy from GL; fix unhedged FAQ; do not treat as generic wording-only. |
 | /builders-developers-insurance/ | D | 380 | [HIGH] faq — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D3** | Construction | Researched expansion + hedging; builder's risk / CGL overlap needs technical review, not card rephrase alone. |
 | /builders-risk-insurance/ | D | 292 | [HIGH] coverageIntro — Flat coverage guarantee — states or implies automatic coverage without hedging; [HIGH] coverage:Work in Progress — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D3** | Construction | Dedicated builders-risk research (policy period, who buys, vs CGL); replace flat 'covers structure' intro/cards with hedged, accurate framing. |
@@ -61,11 +61,10 @@
 | /commercial-auto-insurance/ | C | 323 | None | — | Yes | **C1** | Transportation | Add practical considerations (fleet disclosures, hired/non-owned); modest FAQ expansion; cards already hedged. |
 | /commercial-insurance/ | C | 283 | None | — | Yes | **C2** | Industrial/Coverage-Types (Hub) | Hub page rebuild: intro/trust depth for Windsor-Essex commercial entry; not a coverage-card page — focus wayfinding copy, not Greenhouse-length target. |
 | /commercial-property-insurance/ | C | 367 | None | — | Yes | **C1** | Industrial/Coverage-Types | Add practical considerations; deepen property-valuation/co-insurance FAQ; no safety flags — modest pass only. |
-| /condo-insurance/ | D | 547 | [HIGH] coverage:Unit Contents & Improvements — Flat coverage guarantee — states or implies automatic coverage without hedging; [MEDIUM] considerations — Flat inclusion statement — may overstate standard policy | high, medium | No | **D1** | Personal | Hedging pass on unit-contents card + corporation-assessment consideration; depth adequate for personal condo — no length chase. |
+| /condo-insurance/ | D | 565 | [MEDIUM] considerations — Flat inclusion statement — may overstate standard policy | medium | No | **D1** | Personal | Hedging pass on unit-contents card + corporation-assessment consideration; depth adequate for personal condo — no length chase. |
 | /condominium-corporation-insurance/ | C | 277 | None | — | Yes | **C2** | Industrial/Coverage-Types | Substantial researched expansion (master policy, deductibles, unit-owner vs corp); thin corp-specific content missing. |
 | /contractors-insurance/ | D | 345 | [HIGH] faq — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D3** | Construction | Dedicated construction research despite explorer visuals; fix builder's-risk FAQ flat claim; add considerations for subs/tools/wrap-up. |
 | /convenience-store-insurance/ | D | 214 | [HIGH] coverage:Commercial Property — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Hospitality/Food | Hospitality-family research batch + hedging; thin (214w) with flat property card; add considerations ( tobacco/lottery, hours). |
-| /cottage-insurance/ | D | 525 | [HIGH] coverage:Liability Protection — Flat coverage guarantee — states or implies automatic coverage without hedging | high | No | **D1** | Personal | Single liability-card hedging fix; seasonal/vacant considerations already present — accuracy over expansion. |
 | /crime-fidelity-insurance/ | D | 253 | [HIGH] coverage:Employee Dishonesty — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D3** | Industrial/Coverage-Types | Specialized crime/fidelity research; flat employee-dishonesty card; thin page needs researched expansion, not wording-only. |
 | /directors-officers-insurance/ | D | 331 | [HIGH] faq — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D3** | Professional/Institutional | Dedicated D&O research; fix GL-vs-D&O FAQ flat claim; extend considerations for side-A/B/C if accurate. |
 | /dump-truck-insurance/ | D | 326 | [HIGH] faq — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D3** | Transportation | Dedicated heavy-commercial auto/cargo research; fix liability/cargo FAQ flat split; add hauling/disclosure considerations. |
@@ -82,12 +81,11 @@
 | /liquor-liability-insurance/ | D | 258 | [HIGH] coverage:Patron Injury & Property Damage — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Hospitality/Food | Dedicated liquor-liability research within hospitality batch; fix patron-injury flat card; regulatory context if verified. |
 | /manufacturing-insurance/ | C | 399 | None | — | Yes | **C1** | Industrial/Coverage-Types | Modest: add considerations (products/completed ops, supply chain); 5 cards present — incremental only. |
 | /medical-dental-insurance/ | C | 242 | None | — | Yes | **C2** | Retail/Services | Regulated-professional research (malpractice coordination, privacy); thin — needs substance before hedging-only pass. *(Note: Regulated exposure — research depth closer to D3 but no safety flags in audit.)* |
-| /motorcycle-insurance/ | D | 463 | [HIGH] coverage:Third-Party Liability — Flat coverage guarantee — states or implies automatic coverage without hedging | high | No | **D1** | Personal | Hedge mandatory-liability card (Ontario context is verifiable — keep factual, remove flat 'covers'); no length expansion. |
 | /non-profit-insurance/ | D | 244 | [HIGH] coverage:General Liability — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Professional/Institutional | Institutional batch; fix GL flat card; add board/volunteer/D&O cross-reference considerations. |
 | /pharmacy-insurance/ | D | 205 | [HIGH] coverage:Commercial Property — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Retail/Services | Regulated retail research; thinnest D page (205w); fix property flat card; narcotics/compounding disclosures. |
 | /pollution-liability-insurance/ | C | 252 | None | — | Yes | **C2** | Industrial/Coverage-Types | Dedicated pollution research despite C class — high-stakes technical exposure; add considerations + hedged cards proactively. *(Note: No audit safety flags; classify C2 with D3-equivalent research rigor.)* |
 | /product-recall-insurance/ | D | 252 | [HIGH] faq — Flat coverage guarantee — states or implies automatic coverage without hedging; [HIGH] faq — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D3** | Industrial/Coverage-Types | Dedicated recall vs product-liability research; fix two flat FAQ claims; thin page. |
-| /professional-liability-insurance/ | D | 391 | [HIGH] faq — Specific dollar amount — unverified limit/deductible | high | Yes | **D3** | Professional/Institutional | Dedicated E&O research; remove/unverify $1M–$5M FAQ claim; hedging pass on profession-specific scope. |
+| /professional-liability-insurance/ | C | 391 | None | — | Yes | **D3** | Professional/Institutional | Dedicated E&O research; remove/unverify $1M–$5M FAQ claim; hedging pass on profession-specific scope. |
 | /professional-offices-insurance/ | C | 325 | None | — | Yes | **C1** | Professional/Institutional | Modest: add considerations (client records, hybrid work); FAQ de-templating from auto; no safety flags. |
 | /property-management-insurance/ | D | 261 | [HIGH] coverage:General Liability — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Industrial/Coverage-Types | Property-mgmt research; fix GL flat card; add tenant/legal-expense/pool considerations. |
 | /real-estate-insurance/ | C | 283 | None | — | Yes | **C2** | Industrial/Coverage-Types | Substantial: E&O vs GL for agents/brokers; thin; FAQ templated with food-truck — needs researched rewrite. |
@@ -95,9 +93,8 @@
 | /restaurant-insurance/ | D | 306 | [HIGH] coverage:Property Coverage — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Hospitality/Food | Hospitality batch priority; fix property flat card despite hedged family label; add spoilage/liquor/delivery considerations. |
 | /retail-insurance/ | C | 292 | None | — | Yes | **C1** | Retail/Services | Modest: add considerations (inventory valuation, online sales); incremental card/FAQ depth. |
 | /salon-barber-insurance/ | D | 239 | [HIGH] coverage:Product Liability — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Retail/Services | Retail/services batch; fix product-liability flat card; add professional/beauty-service considerations. |
-| /small-business-insurance/ | D | 375 | [HIGH] coverage:Commercial Property — Flat coverage guarantee — states or implies automatic coverage without hedging | high | No | **D1** | Industrial/Coverage-Types | Single commercial-property card hedging; considerations exist — wording-only pass, not Greenhouse-length expansion. |
+| /small-business-insurance/ | C | 399 | None | — | No | **D1** | Industrial/Coverage-Types | Single commercial-property card hedging; considerations exist — wording-only pass, not Greenhouse-length expansion. |
 | /tenant-insurance/ | D | 519 | [HIGH] faq — Flat coverage guarantee — states or implies automatic coverage without hedging | high | No | **D1** | Personal | FAQ hedging pass ('protects your belongings', household coverage scope); adequate for simpler personal line — resist length expansion. *(Note: Explicit: quality bar met with accuracy/specificity at lower word count than Greenhouse/Daycare.)* |
-| /travel-insurance/ | D | 532 | [HIGH] coverage:Baggage & Personal Effects — Flat coverage guarantee — states or implies automatic coverage without hedging | high | No | **D1** | Personal | Single baggage/personal-effects card hedging; strong considerations already — wording fix only. |
 | /trucking-insurance/ | D | 293 | [HIGH] faq — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D3** | Transportation | Dedicated trucking research (MCS-90, cargo, bobtail, jurisdiction); fix liability/cargo FAQ; never wording-only. |
 | /warehousing-insurance/ | D | 252 | [HIGH] coverage:Commercial Property — Flat coverage guarantee — states or implies automatic coverage without hedging | high | Yes | **D2** | Industrial/Coverage-Types | Warehouse/bailee research; fix property flat card; add bailee/legal-liability considerations. |
 
@@ -114,7 +111,7 @@
 - **Hospitality/Food (adjacent — events):** D2×1
 - **Industrial/Coverage-Types:** C1×3, C2×3, D3×2, D2×2, D1×1
 - **Industrial/Coverage-Types (Hub):** C2×1
-- **Personal:** D1×8
+- **Personal:** D1×5
 - **Professional/Institutional:** D3×3, D2×1, C1×1, C2×1
 - **Retail/Services:** C2×2, D2×2, C1×1
 - **Transportation:** D3×3, C1×2
@@ -139,8 +136,6 @@
 #### /auto-insurance/
 - **[HIGH]** `coverage:Collision Coverage`: "Collision covers damage to your own vehicle from a crash with another car or object — useful when fault isn't clear or you're at fault."
 - **[HIGH]** `coverage:Comprehensive Coverage`: "Covers theft, vandalism, weather damage, and other non-collision events."
-- **[HIGH]** `coverage:Accident Benefits`: "Accident benefits help cover medical care, rehabilitation, caregiver costs, and income replacement for you and your passengers after an injury."
-- **[MEDIUM]** `faq`: "All Ontario drivers are legally required to carry auto insurance."
 - **[HIGH]** `faq`: "Collision covers damage to your vehicle from a crash with another vehicle or object, regardless of fault."
 
 #### /bonding-insurance/
@@ -160,7 +155,6 @@
 - **[HIGH]** `faq`: "Liability covers injury and damage to others; cargo is a separate coverage for the freight itself."
 
 #### /condo-insurance/
-- **[HIGH]** `coverage:Unit Contents & Improvements`: "Covers your belongings and upgrades you have made inside the unit — finishes, fixtures, and betterments beyond what the corporation's policy includes."
 - **[MEDIUM]** `considerations`: "Some policies include coverage if the corporation assesses owners for the master policy deductible after a claim."
 
 #### /contractors-insurance/
@@ -168,9 +162,6 @@
 
 #### /convenience-store-insurance/
 - **[HIGH]** `coverage:Commercial Property`: "Covers building, coolers, shelving, and inventory including tobacco and lottery products."
-
-#### /cottage-insurance/
-- **[HIGH]** `coverage:Liability Protection`: "Covers injury or property damage claims arising from your ownership or use of the cottage property, including guest and recreational activity exposure."
 
 #### /crime-fidelity-insurance/
 - **[HIGH]** `coverage:Employee Dishonesty`: "Covers theft of money, securities, or property by employees acting fraudulently."
@@ -202,9 +193,6 @@
 #### /liquor-liability-insurance/
 - **[HIGH]** `coverage:Patron Injury & Property Damage`: "Covers claims that an intoxicated patron injured someone or damaged property after being served at your establishment."
 
-#### /motorcycle-insurance/
-- **[HIGH]** `coverage:Third-Party Liability`: "Mandatory in Ontario — covers injury or damage you cause to others while operating your motorcycle on public roads."
-
 #### /non-profit-insurance/
 - **[HIGH]** `coverage:General Liability`: "Covers injury and property damage claims at events, offices, and program locations."
 
@@ -215,9 +203,6 @@
 - **[HIGH]** `faq`: "Product liability covers injury or damage claims from defective products."
 - **[HIGH]** `faq`: "Recall covers the cost of withdrawing products from the market."
 
-#### /professional-liability-insurance/
-- **[HIGH]** `faq`: "Contract requirements vary — $1M to $5M per occurrence is common for mid-size engagements."
-
 #### /property-management-insurance/
 - **[HIGH]** `coverage:General Liability`: "Covers injury and property damage claims arising from managed properties and management office operations."
 
@@ -227,14 +212,8 @@
 #### /salon-barber-insurance/
 - **[HIGH]** `coverage:Product Liability`: "Covers claims that retail products sold in-salon caused allergic reaction or injury."
 
-#### /small-business-insurance/
-- **[HIGH]** `coverage:Commercial Property`: "Covers your equipment, inventory, and leasehold improvements against covered theft, fire, or other insured losses."
-
 #### /tenant-insurance/
 - **[HIGH]** `faq`: "Generally, a tenant policy covers the named insured and their household as defined in the policy."
-
-#### /travel-insurance/
-- **[HIGH]** `coverage:Baggage & Personal Effects`: "Covers loss, theft, or damage to luggage and personal belongings during your trip, within stated limits and deductibles."
 
 #### /trucking-insurance/
 - **[HIGH]** `faq`: "Liability covers injury and damage to others; cargo is about the freight itself."
