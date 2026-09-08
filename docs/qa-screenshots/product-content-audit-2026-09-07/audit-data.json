@@ -970,32 +970,32 @@
       "route": "/liquor-liability-insurance/",
       "slug": "liquor-liability-insurance",
       "category": "commercial",
-      "heroWords": 21,
-      "heroSpecific": false,
+      "heroWords": 76,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 25,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 72,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 258,
+      "considerationsPresent": true,
+      "considerationsWords": 839,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 2005,
       "safetyFlags": [
         {
           "page": "/liquor-liability-insurance/",
-          "field": "coverage:Patron Injury & Property Damage",
-          "quote": "Covers claims that an intoxicated patron injured someone or damaged property after being served at your establishment.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
+          "field": "considerations",
+          "quote": "Standard 4.1's mandatory training list does not include Special Occasion Permit among its applicable authorization types.",
+          "issue": "Mandatory coverage stated — verify regulatory basis",
+          "severity": "low"
         }
       ],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (2005w), 4 cards avg 72w, considerations yes, FAQ unique"
     },
     {
       "route": "/manufacturing-insurance/",
@@ -1584,10 +1584,10 @@
     }
   ],
   "counts": {
-    "A": 3,
+    "A": 4,
     "B": 16,
     "C": 18,
-    "D": 21
+    "D": 20
   },
   "allFlags": [
     {
@@ -1739,10 +1739,10 @@
     },
     {
       "page": "/liquor-liability-insurance/",
-      "field": "coverage:Patron Injury & Property Damage",
-      "quote": "Covers claims that an intoxicated patron injured someone or damaged property after being served at your establishment.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
+      "field": "considerations",
+      "quote": "Standard 4.1's mandatory training list does not include Special Occasion Permit among its applicable authorization types.",
+      "issue": "Mandatory coverage stated — verify regulatory basis",
+      "severity": "low"
     },
     {
       "page": "/motorcycle-insurance/",

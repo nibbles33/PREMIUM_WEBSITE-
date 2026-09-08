@@ -939,39 +939,102 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Liquor liability insurance for Windsor-Essex — bars, restaurants, event hosts, and AGCO-licensed establishments serving alcohol.",
     headline: "Liquor Liability Insurance",
     subhead:
-      "Coverage for alcohol-related liability — when an patron's intoxication leads to injury, property damage, or other harm after leaving your establishment.",
+      "Liquor liability insurance helps protect bars, restaurants, caterers, event hosts, and other businesses that sell or serve alcohol against certain alcohol-related liability claims. If alcohol service contributes to an injury or property damage, the resulting claim may fall outside standard commercial general liability coverage or be limited by policy wording. Premium Insurance Brokers can help you understand how liquor liability fits with your existing business insurance, your AGCO authorization, and the way you actually serve alcohol.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=restaurant`,
     quoteLabel: "Get a Liquor Liability Quote",
     coverageIntro:
-      "Liquor liability addresses claims arising from serving alcohol — excluded or limited in most standard general liability policies.",
+      "Liquor liability may help respond to certain claims tied to alcohol service or permitted events — coverage that, depending on the policy, may be excluded, restricted, sub-limited, or require separate liquor liability coverage alongside standard commercial general liability.",
     coverageTypes: [
       {
         title: "Patron Injury & Property Damage",
+        shortLabel: "Patron Claims",
         description:
-          "Covers claims that an intoxicated patron injured someone or damaged property after being served at your establishment.",
+          "May help respond to certain claims alleging that a patron served alcohol at your licensed premises or permitted event caused bodily injury or property damage to a third party, subject to policy terms, exclusions, and limits.",
+        detailTitle: "When service at the bar becomes a third-party claim",
+        detailDescription:
+          "Claims that a patron was overserved, or that alcohol contributed to a crash, assault, or other harm after leaving, are a core civil exposure AGCO's licensing guides describe separately from administrative licence penalties. Depending on the policy, alcohol-related third-party injury and property-damage claims may be excluded, sub-limited, or addressed through liquor liability coverage purchased alongside general liability. What triggers coverage, who qualifies as an insured, and whether the claim arose from on-premises service versus a permitted off-site event depend on policy wording — confirm scope with your broker.",
         icon: Wine,
       },
       {
         title: "Assault & Battery",
+        shortLabel: "Altercations",
         description:
-          "May address altercations linked to alcohol service, subject to policy terms.",
+          'May address certain altercation or security-incident claims linked to alcohol service at your premises or event, where included in the policy. Insurance policies commonly refer to this exposure as "assault and battery" — confirm whether it is covered, capped, or excluded in your wording.',
+        detailTitle: "When an altercation leads to a liability claim",
+        detailDescription:
+          "Late-night service, crowded patios, and special events can generate altercation or security-response allegations tied to intoxicated patrons — losses carriers often treat differently from a simple slip-and-fall. Depending on the policy, assault-and-battery coverage may be included, sub-limited, or excluded, particularly where security or crowd-control exposures are involved. Your broker should review whether your expected crowd-control and service hours are reflected in the coverage you are purchasing.",
         icon: Briefcase,
       },
       {
         title: "Legal Defence",
+        shortLabel: "Defence Costs",
         description:
-          "Covers defence costs for covered liquor liability claims.",
+          "May help with legal defence costs for covered liquor liability claims, subject to policy terms, deductibles or retentions, and whether the underlying allegation falls within the insuring agreement.",
+        detailTitle: "Defence costs can accrue before fault is determined",
+        detailDescription:
+          "Civil claims alleging overservice or alcohol-related harm can require immediate legal response — even when you believe service was responsible. Where defence coverage applies, how legal costs are handled depends on the policy wording, including applicable deductibles, retentions, limits and exclusions. Treatment of punitive damages, regulatory fines, and administrative proceedings also depends on policy wording — do not assume they are covered or excluded without review. AGCO licence suspension or revocation is a regulatory enforcement action, separate from a third-party civil lawsuit.",
         icon: Shield,
       },
       {
         title: "Event Host Liquor",
+        shortLabel: "Host / Event",
         description:
-          "Temporary coverage when hosting events where alcohol is served without a permanent liquor licence.",
+          "May address certain alcohol-related liability for temporary events, bring-your-own functions, or service under a Special Occasion Permit or caterer's authorization — distinct from ongoing premises liquor liability under a Liquor Sales Licence, subject to policy terms.",
+        detailTitle: "A one-night event is not the same risk profile as a licensed bar",
+        detailDescription:
+          "Weddings, fundraisers, corporate functions, and catered off-site service often rely on Special Occasion Permits, Caterer's Endorsements, or host-liquor arrangements rather than a standing Liquor Sales Licence at a fixed address. LCBO's Special Occasion Permit FAQ states provincial regulations do not require permit holders to carry party liability insurance — but venues, municipalities, and rental contracts frequently do. Host liquor or event liquor coverage, where available, is often underwritten separately from premises liquor liability; service model, permit type, attendance, and whether you control service must be disclosed to your broker.",
         icon: Calendar,
       },
     ],
     whoItIsFor:
-      "Liquor liability is for Windsor-Essex bars, restaurants, breweries, event venues, caterers with bar service, and AGCO-licensed establishments serving alcohol.",
+      "For Windsor–Essex bars, restaurants, breweries, caterers with alcohol service, event hosts under Special Occasion Permits, and other AGCO-authorized sellers — reviewed through an independent broker who can confirm how liquor liability fits alongside your existing business coverage.",
+    considerations: [
+      {
+        title: "Licence type determines your regulatory framework",
+        description:
+          "AGCO authorizes alcohol through different instruments — Liquor Sales Licence (ongoing on-premises service), Special Occasion Permit (temporary events), Caterer's Endorsement (off-site service tied to an existing licence), and retail licences for convenience or grocery stores. Each has different obligations and service models. Your broker needs to know which authorization applies because insurance structure follows how and where alcohol is legally sold or served — not every licence type maps to the same liquor liability wording.",
+      },
+      {
+        title: "Civil liability is not the same as carrying insurance",
+        description:
+          "Businesses that sell or serve alcohol can face civil liability when alcohol service contributes to harm — separately from AGCO licensing or enforcement consequences. AGCO's Section 1 Liquor Sales Licence guide states that, beyond administrative sanctions, you may be held civilly liable for harm caused by someone who was served liquor in your business, and recommends consulting a legal advisor and insurance professional. That civil exposure exists independently of whether you purchase coverage. The Liquor Licence and Control Act authorizes licensing and sets regulatory standards; it does not, by itself, mandate liquor liability insurance as a statutory condition of holding a licence.",
+      },
+      {
+        title: "Contractual proof of insurance is different from a provincial insurance mandate",
+        description:
+          "A landlord, venue, municipality, franchise, or lender may separately require proof of liquor liability insurance under a lease, event contract, or other agreement. Those contractual requirements are separate from provincial licensing requirements. Maintain copies of what each counterparty actually requires rather than assuming one certificate satisfies every relationship.",
+      },
+      {
+        title: "Responsible-service training depends on your authorization — and is not insurance",
+        description:
+          "Training requirements differ by licence or authorization type. Liquor Sales Licence and related endorsements (including Caterer's Endorsement): Registrar Standard 4.1 requires persons involved in the sale, service, sampling, or delivery of liquor — and security staff employed by the licensee — to hold valid certification from an AGCO Board-approved training program (commonly Smart Serve for on-premises service). Special Occasion Permit: LCBO's SOP FAQ states Smart Serve is not a requirement for permit holders, though training is recommended. Standard 4.1's mandatory training list does not include Special Occasion Permit among its applicable authorization types. Convenience or grocery retail: separate AGCO Board-approved liquor retail training programs apply to retail store employees under the Registrar's Standards for Grocery and Convenience Stores. Training supports regulatory compliance and responsible service but does not replace liquor liability coverage. Insurers may ask about training during underwriting — that is an evaluation factor, not a coverage product.",
+      },
+      {
+        title: "Special Occasion Permits versus a Liquor Sales Licence",
+        description:
+          "A Liquor Sales Licence authorizes ongoing alcohol service at licensed premises. A Special Occasion Permit authorizes temporary sale or service at defined events — private, public/charity, bring-your-own, and other categories with different rules. LCBO's Special Occasion Permit FAQ confirms provincial regulations do not require permit holders to carry party liability insurance, though venues may require it contractually. If your operation spans both models, disclose each scenario to your broker rather than relying on a single premises policy.",
+      },
+      {
+        title: "Caterers, mobile bars, and off-site service",
+        description:
+          "Ontario does not issue a standalone mobile bar licence to food trucks or roaming operators. Off-site alcohol service typically requires a Caterer's Endorsement on an existing Liquor Sales Licence or an appropriate Special Occasion Permit at the event location. A caterer serving under a Caterer's Endorsement does not need a separate SOP for that catered event, but the licence holder remains responsible for compliance. Liquor liability for off-site service may need to be confirmed separately from premises coverage — especially when you serve at venues you do not control.",
+      },
+      {
+        title: "How liquor liability relates to your underlying business policy",
+        description:
+          "Restaurants, bars, hotels, and event venues often carry a commercial package policy with general liability — but depending on the policy, alcohol-related liability may be excluded, restricted, sub-limited, or require separate liquor liability coverage. Liquor liability may be purchased as an endorsement, within a hospitality package, or as a standalone policy depending on carrier and operation. Confirm what your existing restaurant, bar, or event policy actually includes before assuming liquor liability is already in place.",
+      },
+      {
+        title: "Sales mix, hours, and security affect underwriting",
+        description:
+          "Carriers evaluate alcohol as a percentage of revenue, latest service hours, patron capacity, entertainment, and whether you employ security or crowd-control staff. A wine-focused restaurant, a late-night nightclub, and a one-day charity beer garden present different liquor liability profiles even when all require AGCO authorization.",
+      },
+      {
+        title: "Licence enforcement and civil claims are different",
+        description:
+          "AGCO administrative action — warnings, monetary penalties, suspension, or revocation of a licence or permit — is regulatory enforcement under the Liquor Licence and Control Act framework. A civil lawsuit from an injured third party is a separate legal track. Liquor liability insurance may help respond to certain covered civil claims and defence costs, subject to policy terms; it does not prevent licence sanctions or substitute for responsible service obligations. Whether regulatory fines, punitive damages, or costs of responding to AGCO proceedings are insured depends on the specific policy wording — confirm with your broker rather than assuming they are always excluded or always covered.",
+      },
+    ],
     relatedLinks: [
       { label: "Restaurant Insurance", href: "/restaurant-insurance/" },
       { label: "Event Liability", href: "/event-liability-insurance/" },
@@ -980,24 +1043,29 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     faqTitle: "Liquor liability FAQ",
     faqItems: [
       {
-        question: "Is liquor liability included in restaurant insurance?",
+        question: "Does AGCO require liquor liability insurance?",
         answer:
-          "Often packaged together, but liquor liability is a distinct coverage responding to alcohol-specific claims. Confirm it is included, not assumed.",
+          "No — the Liquor Licence and Control Act does not mandate liquor liability insurance as a statutory condition of holding a Liquor Sales Licence or related AGCO authorization. AGCO's Section 1 Liquor Sales Licence guide states that, beyond administrative sanctions, you may be held civilly liable for harm caused by someone served liquor at your business, and recommends consulting an insurance professional — but that is guidance on civil exposure, not a named insurance requirement for licence issuance. Separately, a landlord, venue, municipality, franchise, or lender may require proof of coverage under a lease, event contract, or other agreement. Those are contractual documentation requirements; they do not change the fact that the Act itself does not prescribe a named insurance product. If you are evaluating whether to purchase coverage, the relevant question is usually whether your operations create civil exposure and whether your general liability policy excludes or limits alcohol-related claims — confirm with your broker.",
       },
       {
-        question: "Does AGCO require liquor liability?",
+        question: "How is liquor liability different from general liability on my business policy?",
         answer:
-          "Licensing bodies and landlords typically require proof of liquor liability as a condition of operating.",
+          "Commercial general liability may help with certain third-party injury or property-damage claims arising from your premises and operations, but depending on the policy, claims tied to alcohol service — including overservice allegations and harm occurring after a patron leaves — may be excluded, sub-limited, or require separate liquor liability coverage. Liquor liability is a distinct coverage product or endorsement meant to address many alcohol-related liability scenarios that CGL may not fully cover. If you already have restaurant, bar, hotel, or event insurance, confirm with your broker whether liquor liability is included, endorsed, or needs to be added separately — do not assume from a policy label alone.",
       },
       {
-        question: "Are BYOB events covered?",
+        question: "What is the difference between a Liquor Sales Licence and a Special Occasion Permit?",
         answer:
-          "Host liquor liability may be needed when you allow alcohol without controlling service. Disclose all service models.",
+          "A Liquor Sales Licence authorizes ongoing sale and service of alcohol at licensed premises such as a restaurant, bar, or hotel lounge. A Special Occasion Permit (SOP) authorizes temporary alcohol service at a defined event — such as a wedding, festival, or charity function — outside the normal standing-licence model. The regulatory rules, permit categories, and service responsibilities differ. LCBO's Special Occasion Permit FAQ states provincial regulations do not require SOP holders to carry party liability insurance, though a venue or municipality may require proof of coverage contractually. Insurance should be structured around how you actually serve alcohol — permanent premises, catered events, bring-your-own functions, or a mix — not assumed from one licence type alone.",
       },
       {
-        question: "Do training programs affect coverage?",
+        question: "Do caterers and event hosts need different coverage than a bar or restaurant?",
         answer:
-          "Smart Serve and responsible service training may be underwriting requirements. Maintain documented staff training.",
+          "Coverage needs depend on your service model and policy wording — not every caterer or event host requires a categorically different product, but the exposures differ. A fixed bar operating under a Liquor Sales Licence has different risks from a caterer serving under a Caterer's Endorsement or a charity hosting a public event under a Special Occasion Permit. Host liquor or event liquor coverage may be relevant when you do not control service in the same way as a licensed establishment, or when alcohol service occurs off your primary premises. Bring-your-own events and temporary venues can also trigger certificate and additional-insured requirements from landlords and municipalities that a standard premises policy may not address. Disclose every service scenario to your broker so coverage can be matched to how you actually operate.",
+      },
+      {
+        question: "What information do I need for a liquor liability quote?",
+        answer:
+          "Insurers and brokers commonly ask for: licence or permit type (Liquor Sales Licence, Special Occasion Permit, Caterer's Endorsement, or other AGCO authorization), business legal name, premises address(es) and event locations, annual revenue and estimated alcohol sales percentage, seating capacity or expected event attendance, hours of service, entertainment or security arrangements, prior liquor-related claims or incidents, and any landlord, venue, franchise, or municipal insurance requirements in your contracts. Training certification may also be requested during underwriting — for example, Smart Serve for Liquor Sales Licence staff subject to Standard 4.1, or liquor retail training for convenience/grocery staff. Training requirements are set by AGCO standards and differ by authorization type; what an insurer asks about during underwriting is separate from what the law requires for licensing. If you also carry a restaurant, bar, or event policy, bring your existing declarations page so your broker can identify gaps rather than duplicate coverage.",
       },
     ],
     ctaHeading: "Serve alcohol commercially?",

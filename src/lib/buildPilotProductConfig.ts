@@ -224,6 +224,8 @@ export function adaptCommercialProductContent(
     ctaSubhead: content.ctaSubhead,
     ctaQuoteLabel: content.ctaButtonLabel ?? content.quoteLabel,
     serviceName: content.serviceName,
+    considerationsPresentation:
+      content.slug === "liquor-liability-insurance" ? "expandable" : "grid",
   });
 }
 
