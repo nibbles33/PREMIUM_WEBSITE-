@@ -241,38 +241,62 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     coverageItems: [
       {
         title: "Greenhouse Buildings & Structures",
+        shortLabel: "Greenhouse Property",
         description:
           "Greenhouse structures and other insured buildings/property can represent a significant part of the operation's exposure. Coverage depends on the property insured, policy terms and selected coverages.",
+        detailTitle: "Why greenhouse structures drive insurable values",
+        detailDescription:
+          "Glass bays, poly tunnels, and climate-controlled structures in Leamington and Essex County often represent a large share of total property values alongside tenant improvements and attached packing areas. Building types, construction, and total property values should be reviewed with your broker so limits and descriptions reflect the operation accurately — coverage depends on what is scheduled and how the policy defines insured property.",
         icon: Building2,
       },
       {
         title: "Equipment & Machinery",
+        shortLabel: "Equipment",
         description:
           "Greenhouse operations may rely on heating, ventilation, irrigation and other specialized operational equipment. Coverage for equipment and machinery depends on the policy and coverages purchased.",
+        detailTitle: "When heating and irrigation systems keep the operation running",
+        detailDescription:
+          "Greenhouse operations depend heavily on heating, ventilation, and irrigation — systems that are often central to daily production and may sit outside a basic property form's treatment of contents. Your broker should review how these assets are described and insured, especially where equipment values or specialized machinery endorsements apply.",
         icon: Wrench,
       },
       {
         title: "Business Property & Stock",
+        shortLabel: "Stock & Property",
         description:
           "Consider business contents, supplies and eligible stock or property used in the operation. How particular property is insured varies by policy and insurer.",
+        detailTitle: "How plants, supplies, and stock are treated on the policy",
+        detailDescription:
+          "Growing stock, plants, and seasonal inventory can be treated very differently from fixed equipment or building coverage — and should not be assumed to be included automatically. How particular property is insured varies by policy and insurer; this warrants a focused review rather than a generic contents limit.",
         icon: Package,
       },
       {
         title: "Business Interruption",
+        shortLabel: "Interruption",
         description:
           "A covered property loss can also interrupt operations and affect business income. Business interruption coverage may respond to covered loss of income following an insured loss, subject to the policy terms, limits and coverage purchased.",
+        detailTitle: "When a covered loss forces a shutdown",
+        detailDescription:
+          "A covered fire, equipment failure, or property loss can halt production during peak growing or shipping periods — when payroll, utilities, and lease costs may continue. Business interruption coverage may help with covered loss of income following an insured loss, subject to waiting periods, limits, and the policy terms purchased. Seasonal revenue patterns in Windsor–Essex operations can affect what limits make sense.",
         icon: Briefcase,
       },
       {
         title: "Commercial Liability",
+        shortLabel: "Liability",
         description:
           "Greenhouse and agribusiness operations can have liability exposures arising from their premises and business activities. The appropriate liability protection depends on the nature and scale of the operation.",
+        detailTitle: "Liability from premises, visitors, and daily operations",
+        detailDescription:
+          "Loading bays, customer pickup areas, contractor visits, and on-site activity create third-party injury or property-damage exposure distinct from crop or equipment losses. The appropriate liability protection depends on the nature and scale of the operation — limits and endorsements should reflect how the greenhouse actually interacts with staff, suppliers, and the public.",
         icon: Shield,
       },
       {
         title: "Equipment Breakdown",
+        shortLabel: "Breakdown",
         description:
           "Heating, electrical, ventilation, irrigation and other critical systems can create significant equipment-breakdown exposure. Equipment breakdown coverage may be available where purchased and remains subject to policy terms and exclusions.",
+        detailTitle: "Critical system failure during peak season",
+        detailDescription:
+          "A compressor, boiler, or irrigation controller failure can disrupt climate control and threaten crop viability — losses that base property coverage may treat differently from sudden mechanical or electrical breakdown. Equipment breakdown coverage may be available where purchased; triggers, sublimits, and exclusions require careful review because coverage depends on the policy, cause of loss, and endorsements in place.",
         icon: Zap,
       },
     ],
