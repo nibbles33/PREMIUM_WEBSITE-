@@ -224,7 +224,8 @@ Restaurant, Daycare, Contractors, and all other personal/commercial/agriculture 
 
 ## Commit
 
-*(Updated after push — see git log for hash.)*
+**Hash:** `7b8a041`  
+**Message:** `feat(greenhouse): Coverage Explorer V2 detail copy refinement`
 
 ---
 
