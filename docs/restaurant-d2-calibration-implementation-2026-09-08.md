@@ -251,7 +251,8 @@ No edits to:
 
 ## Commit
 
-*(Updated after push — see git log for hash.)*
+**Hash:** `bbbe4c7`  
+**Message:** `feat(restaurant): D2 calibration — approved copy + considerations plumbing`
 
 ---
 
