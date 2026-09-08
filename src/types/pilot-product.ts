@@ -41,6 +41,8 @@ export type ProductMiniatureAsset = {
 
 export type PilotProductPageLayout = "standard" | "commercial-hub";
 
+export type ConsiderationsPresentation = "grid" | "expandable";
+
 export type PilotProductPageConfig = {
   slug: string;
   layout?: PilotProductPageLayout;
@@ -57,7 +59,11 @@ export type PilotProductPageConfig = {
   brokerHref?: string;
   secondaryCta?: { label: string; href: string };
   trustStatement: string;
+  /** When false, hides the trust band below the hero. Default true. */
+  showTrustBand?: boolean;
   considerations?: ConsiderationItem[];
+  /** @default "grid" — static card grid for Practical Considerations. */
+  considerationsPresentation?: ConsiderationsPresentation;
   coverageHeading: string;
   coverageIntro: string;
   coverageItems: ProductCoverageItem[];

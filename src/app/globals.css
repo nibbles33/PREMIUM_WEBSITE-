@@ -266,6 +266,10 @@ th {
   animation: faq-panel-enter 200ms ease-out;
 }
 
+.consideration-panel-enter {
+  animation: consideration-panel-enter 300ms ease-out;
+}
+
 @keyframes faq-panel-enter {
   from {
     opacity: 0;
@@ -274,6 +278,15 @@ th {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes consideration-panel-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -749,6 +762,10 @@ th {
   }
 
   .faq-panel-enter {
+    animation: none !important;
+  }
+
+  .consideration-panel-enter {
     animation: none !important;
   }
 

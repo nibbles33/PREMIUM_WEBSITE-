@@ -26,6 +26,7 @@ import type {
   PilotProductPageConfig,
   ProductCoverageItem,
   ProductRelatedItem,
+  ConsiderationsPresentation,
 } from "@/types/pilot-product";
 
 type CoverageInput = CoverageCard & {
@@ -50,7 +51,10 @@ type BuildPilotProductConfigInput = {
   brokerHref?: string;
   secondaryCta?: { label: string; href: string };
   trustStatement?: string;
+  /** When false, hides the trust band below the hero. */
+  showTrustBand?: boolean;
   considerations?: ConsiderationItem[];
+  considerationsPresentation?: ConsiderationsPresentation;
   coverageHeading?: string;
   coverageIntro: string;
   coverageItems: CoverageInput[];
@@ -144,7 +148,9 @@ export function buildPilotProductConfig(
     trustStatement:
       input.trustStatement ??
       "Ontario personal insurance through an independent Windsor-Essex broker — explained in plain language, compared across multiple markets.",
+    showTrustBand: input.showTrustBand ?? true,
     considerations: input.considerations,
+    considerationsPresentation: input.considerationsPresentation ?? "grid",
     coverageHeading: input.coverageHeading ?? "What's covered",
     coverageIntro: input.coverageIntro,
     coverageItems,
@@ -306,6 +312,9 @@ export function adaptCommercialIndustryContent(
     quoteHref: content.quoteHref,
     quoteLabel: content.quoteLabel,
     trustStatement: content.subhead,
+    showTrustBand: content.slug !== "restaurant-insurance",
+    considerationsPresentation:
+      content.slug === "restaurant-insurance" ? "expandable" : "grid",
     coverageHeading: "What's covered",
     coverageIntro: content.coverageIntro,
     coverageItems: content.coverageTypes,

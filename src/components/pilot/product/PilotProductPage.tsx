@@ -30,15 +30,17 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
       <main>
         <ProductHero config={config} />
 
-        <section className="border-b border-border bg-white py-8 sm:py-10">
-          <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-            <RevealOnScroll>
-              <p className="text-[15px] leading-relaxed text-secondary sm:text-base">
-                {config.trustStatement}
-              </p>
-            </RevealOnScroll>
-          </div>
-        </section>
+        {config.showTrustBand !== false && config.trustStatement ? (
+          <section className="border-b border-border bg-white py-8 sm:py-10">
+            <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+              <RevealOnScroll>
+                <p className="text-[15px] leading-relaxed text-secondary sm:text-base">
+                  {config.trustStatement}
+                </p>
+              </RevealOnScroll>
+            </div>
+          </section>
+        ) : null}
 
         {isCommercialHub ? <CommercialIndustryGrid /> : null}
         {!isCommercialHub && hasCoverage ? (
@@ -58,7 +60,10 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
           />
         ) : null}
         {config.considerations && config.considerations.length > 0 ? (
-          <ProductConsiderations items={config.considerations} />
+          <ProductConsiderations
+            items={config.considerations}
+            variant={config.considerationsPresentation ?? "grid"}
+          />
         ) : null}
         <ProductBrokerStory steps={config.brokerSteps} />
         {config.relatedProducts.length > 0 ? (

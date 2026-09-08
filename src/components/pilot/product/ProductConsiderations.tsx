@@ -1,14 +1,24 @@
 "use client";
 
 import RevealOnScroll from "@/components/RevealOnScroll";
+import ProductConsiderationsExpandable from "@/components/pilot/product/ProductConsiderationsExpandable";
 import type { ConsiderationItem } from "@/components/LineInsurancePage";
 
 type ProductConsiderationsProps = {
   items: ConsiderationItem[];
+  /** @default "grid" — static card grid. Use "expandable" for accordion cards. */
+  variant?: "grid" | "expandable";
 };
 
-export default function ProductConsiderations({ items }: ProductConsiderationsProps) {
+export default function ProductConsiderations({
+  items,
+  variant = "grid",
+}: ProductConsiderationsProps) {
   if (items.length === 0) return null;
+
+  if (variant === "expandable") {
+    return <ProductConsiderationsExpandable items={items} />;
+  }
 
   return (
     <section
