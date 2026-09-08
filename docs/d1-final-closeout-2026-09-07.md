@@ -287,7 +287,7 @@ The sole remaining **D1 bucket** row is `/small-business-insurance/` (Class **C*
 | `docs/qa-screenshots/d1-final-closeout-2026-09-07/*` | Screenshots |
 | `docs/d1-final-closeout-2026-09-07.md` | This report |
 
-**Commit:** `cccac94`
+**Commit:** `e2bc1d9`
 
 ---
 
