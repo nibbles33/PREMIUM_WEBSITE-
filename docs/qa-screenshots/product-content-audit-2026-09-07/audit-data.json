@@ -72,122 +72,100 @@
       "route": "/bonding-insurance/",
       "slug": "bonding-insurance",
       "category": "commercial",
-      "heroWords": 15,
-      "heroSpecific": false,
-      "coverageCount": 5,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 31.2,
+      "heroWords": 139,
+      "heroSpecific": true,
+      "coverageCount": 4,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 53.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
+      "considerationsPresent": true,
+      "considerationsWords": 491,
+      "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 448,
+      "totalSubstantiveWords": 1257,
       "safetyFlags": [
         {
           "page": "/bonding-insurance/",
-          "field": "coverage:Bid Bonds",
-          "quote": "Required when submitting a bid on certain contracts — guarantees you will honour your bid and enter the contract if selected.",
-          "issue": "Guarantee language — may overstate policy terms (or surety industry term)",
-          "severity": "medium"
-        },
-        {
-          "page": "/bonding-insurance/",
-          "field": "coverage:Performance Bonds",
-          "quote": "Guarantees completion of the contracted work according to project terms if the principal defaults.",
-          "issue": "Guarantee language — may overstate policy terms (or surety industry term)",
-          "severity": "medium"
-        },
-        {
-          "page": "/bonding-insurance/",
-          "field": "faq",
-          "quote": "Insurance protects you against covered losses.",
-          "issue": "Unhedged protection claim",
-          "severity": "medium"
-        },
-        {
-          "page": "/bonding-insurance/",
-          "field": "faq",
-          "quote": "A surety bond is a three-party guarantee — you (the principal), the obligee who requires the bond, and the surety.",
+          "field": "considerations",
+          "quote": "A surety bond guarantees the principal's obligation to an obligee.",
           "issue": "Surety/bond industry uses 'guarantee' as technical term — verify wording is accurate",
+          "severity": "low"
+        },
+        {
+          "page": "/bonding-insurance/",
+          "field": "considerations",
+          "quote": "Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require the contractor to provide both a performance bond and a labour and material payment bond on entering the contract.",
+          "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+          "severity": "low"
+        },
+        {
+          "page": "/bonding-insurance/",
+          "field": "faq",
+          "quote": "Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require both a performance bond and a labour and material payment bond when the contractor enters the contract.",
+          "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
           "severity": "low"
         }
       ],
-      "faqUnique": false,
-      "faqTemplateNotes": "Shares 2+ FAQ pattern with auto-insurance",
-      "geoTargeting": "Windsor-Essex-primary",
-      "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "3 content-safety flag(s): Guarantee language — may overstate policy terms (or surety industry term); Guarantee language — may overstate policy terms (or surety industry term)"
+      "faqUnique": true,
+      "faqTemplateNotes": "Product-specific questions",
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (1257w), 4 cards avg 53.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/builders-developers-insurance/",
       "slug": "builders-developers-insurance",
       "category": "commercial",
-      "heroWords": 11,
-      "heroSpecific": false,
+      "heroWords": 112,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 30.5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 42.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
+      "considerationsPresent": true,
+      "considerationsWords": 333,
+      "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 380,
+      "totalSubstantiveWords": 991,
       "safetyFlags": [
         {
           "page": "/builders-developers-insurance/",
-          "field": "faq",
-          "quote": "Builder's risk covers the structure and materials during construction or major renovation for covered perils.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
+          "field": "hero",
+          "quote": "Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory.",
+          "issue": "Mandatory coverage stated — verify regulatory basis",
+          "severity": "low"
         }
       ],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (991w), 4 cards avg 42.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/builders-risk-insurance/",
       "slug": "builders-risk-insurance",
       "category": "commercial",
-      "heroWords": 17,
-      "heroSpecific": false,
+      "heroWords": 134,
+      "heroSpecific": true,
       "coverageCount": 4,
       "coverageCardQuality": "specific/hedged (strong)",
-      "avgCardWords": 32,
+      "avgCardWords": 50.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 292,
-      "safetyFlags": [
-        {
-          "page": "/builders-risk-insurance/",
-          "field": "coverageIntro",
-          "quote": "Builder's risk covers the project itself during construction — separate from the contractor's ongoing liability policy.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        },
-        {
-          "page": "/builders-risk-insurance/",
-          "field": "coverage:Work in Progress",
-          "quote": "Covers the structure and installed materials during construction against covered perils like fire, theft, and wind.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 380,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1051,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
-      "geoTargeting": "Windsor-Essex-primary",
-      "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "2 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (1051w), 4 cards avg 50.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/business-interruption-insurance/",
@@ -354,32 +332,24 @@
       "route": "/contractors-insurance/",
       "slug": "contractors-insurance",
       "category": "commercial",
-      "heroWords": 9,
-      "heroSpecific": false,
+      "heroWords": 109,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 28,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 46,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
+      "considerationsPresent": true,
+      "considerationsWords": 383,
+      "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 345,
-      "safetyFlags": [
-        {
-          "page": "/contractors-insurance/",
-          "field": "faq",
-          "quote": "Builder's risk covers the structure and materials during construction or renovation for covered perils like fire or vandalism.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "totalSubstantiveWords": 1014,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (1014w), 4 cards avg 46w, considerations yes, FAQ unique"
     },
     {
       "route": "/convenience-store-insurance/",
@@ -1489,10 +1459,10 @@
     }
   ],
   "counts": {
-    "A": 16,
+    "A": 20,
     "B": 16,
     "C": 18,
-    "D": 8
+    "D": 4
   },
   "allFlags": [
     {
@@ -1518,59 +1488,31 @@
     },
     {
       "page": "/bonding-insurance/",
-      "field": "coverage:Bid Bonds",
-      "quote": "Required when submitting a bid on certain contracts — guarantees you will honour your bid and enter the contract if selected.",
-      "issue": "Guarantee language — may overstate policy terms (or surety industry term)",
-      "severity": "medium"
-    },
-    {
-      "page": "/bonding-insurance/",
-      "field": "coverage:Performance Bonds",
-      "quote": "Guarantees completion of the contracted work according to project terms if the principal defaults.",
-      "issue": "Guarantee language — may overstate policy terms (or surety industry term)",
-      "severity": "medium"
-    },
-    {
-      "page": "/bonding-insurance/",
-      "field": "faq",
-      "quote": "Insurance protects you against covered losses.",
-      "issue": "Unhedged protection claim",
-      "severity": "medium"
-    },
-    {
-      "page": "/bonding-insurance/",
-      "field": "faq",
-      "quote": "A surety bond is a three-party guarantee — you (the principal), the obligee who requires the bond, and the surety.",
+      "field": "considerations",
+      "quote": "A surety bond guarantees the principal's obligation to an obligee.",
       "issue": "Surety/bond industry uses 'guarantee' as technical term — verify wording is accurate",
       "severity": "low"
     },
     {
+      "page": "/bonding-insurance/",
+      "field": "considerations",
+      "quote": "Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require the contractor to provide both a performance bond and a labour and material payment bond on entering the contract.",
+      "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+      "severity": "low"
+    },
+    {
+      "page": "/bonding-insurance/",
+      "field": "faq",
+      "quote": "Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require both a performance bond and a labour and material payment bond when the contractor enters the contract.",
+      "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+      "severity": "low"
+    },
+    {
       "page": "/builders-developers-insurance/",
-      "field": "faq",
-      "quote": "Builder's risk covers the structure and materials during construction or major renovation for covered perils.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/builders-risk-insurance/",
-      "field": "coverageIntro",
-      "quote": "Builder's risk covers the project itself during construction — separate from the contractor's ongoing liability policy.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/builders-risk-insurance/",
-      "field": "coverage:Work in Progress",
-      "quote": "Covers the structure and installed materials during construction against covered perils like fire, theft, and wind.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/contractors-insurance/",
-      "field": "faq",
-      "quote": "Builder's risk covers the structure and materials during construction or renovation for covered perils like fire or vandalism.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
+      "field": "hero",
+      "quote": "Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory.",
+      "issue": "Mandatory coverage stated — verify regulatory basis",
+      "severity": "low"
     },
     {
       "page": "/crime-fidelity-insurance/",

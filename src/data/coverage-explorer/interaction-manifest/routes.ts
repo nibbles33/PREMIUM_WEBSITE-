@@ -266,7 +266,6 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
       "performance-bonds": ["active-build", "scaffold-zone", "crane-pad"],
       "labour-material-payment-bonds": ["material-stack", "active-build"],
       "licence-permit-bonds": ["trailer-office", "site-perimeter"],
-      "fidelity-bonds": ["trailer-office", "material-stack"],
     },
   },
   "greenhouse-agribusiness-insurance": {

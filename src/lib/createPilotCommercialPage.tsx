@@ -11,9 +11,9 @@ const hubMetadata: Metadata = {
 };
 
 const bondingMetadata: Metadata = {
-  title: "Bond Insurance in Windsor-Essex | Premium Insurance Brokers",
+  title: "Surety Bonds in Windsor-Essex | Premium Insurance Brokers",
   description:
-    "Surety bonds through an independent Windsor-Essex broker — contract & performance bonds, bid bonds, license & permit bonds, and fidelity bonds.",
+    "Surety bonds through an independent Windsor-Essex broker — bid bonds, performance bonds, labour and material payment bonds, and licence and permit bonds.",
   alternates: { canonical: "/bonding-insurance/" },
 };
 

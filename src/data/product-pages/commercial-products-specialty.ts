@@ -1445,7 +1445,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Crime and fidelity insurance is for Windsor-Essex businesses handling cash, payroll, client funds, retail inventory, or financial transactions — especially those with multiple employees and accounting functions.",
     relatedLinks: [
       { label: "Cyber Insurance", href: "/cyber-insurance/" },
-      { label: "Bonding Insurance", href: "/bonding-insurance/" },
+      { label: "Surety Bonds", href: "/bonding-insurance/" },
       { label: "Retail Insurance", href: "/retail-insurance/" },
     ],
     faqTitle: "Crime & fidelity FAQ",

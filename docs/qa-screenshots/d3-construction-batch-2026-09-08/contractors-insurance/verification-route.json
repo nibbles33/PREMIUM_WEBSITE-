@@ -1,0 +1,93 @@
+{
+  "slug": "contractors-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "general-liability",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from your contracting operations — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "Job-site injury claims follow your operations — not the owner's property policy",
+      "detailDescription": "CGL addresses third-party claims from your work — slips, property damage, and certain completed-operations allegations depending on wording. It does not insure your tools, your vehicles, or the building under construction. Contractual additional-insured and waiver requests must match actual policy capabilities.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 1,
+      "hasStateImageStage": true,
+      "currentStateSrc": "http://127.0.0.1:3018/_next/image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=1920&q=90"
+    },
+    {
+      "index": 1,
+      "id": "tools-equipment-coverage",
+      "tabDesc": "May help cover owned tools and mobile equipment against covered theft or damage — where purchased and subject to scheduling, locations, and deductibles.",
+      "detailTitle": "Stolen tools are rarely covered by liability alone",
+      "detailDescription": "Tool and equipment policies or inland marine floaters schedule items, job-site limits, and overnight storage rules. A theft from a trailer may be excluded without proper coverage and security compliance.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 1,
+      "hasStateImageStage": true,
+      "currentStateSrc": "/_next/image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=1920&q=90"
+    },
+    {
+      "index": 2,
+      "id": "builder-s-risk",
+      "tabDesc": "Project property coverage for work in progress — usually arranged per project when your contract requires it; separate from ongoing commercial general liability.",
+      "detailTitle": "When the contract names you to insure the build",
+      "detailDescription": "Contractors may be required to place or be named on a builder's risk policy for specific projects. That coverage insures the project structure and materials — not your commercial liability for injury claims. Confirm per contract; do not assume your GL replaces builder's risk.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 1,
+      "hasStateImageStage": true,
+      "currentStateSrc": "/_next/image?url=%2Fimages%2Fcontractors-insurance-state-property.png&w=1920&q=90"
+    },
+    {
+      "index": 3,
+      "id": "wrap-up-liability",
+      "tabDesc": "On enrolled projects, wrap-up or OCIP programs may provide project-site liability coverage for participating trades — subject to enrollment and policy terms.",
+      "detailTitle": "OCIP changes whose policy responds on site",
+      "detailDescription": "Large projects may use an owner- or contractor-controlled wrap-up. Enrolled trades may rely on the wrap for onsite liability but typically still need their own coverage for off-site operations, auto, tools, and non-enrolled work. Read enrollment and exclusion language carefully.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 1,
+      "hasStateImageStage": true,
+      "currentStateSrc": "/_next/image?url=%2Fimages%2Fcontractors-insurance-state-installation-work.png&w=1920&q=90"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroSnippetFound": "operating contracting business",
+    "trustSnippetFound": "Windsor–Essex general contractors and trade contractors",
+    "heroPreview": "Contractors insurance is about the operating contracting business — the trade or general contractor that bids work, mana",
+    "trustPreview": "For Windsor–Essex general contractors and trade contractors — reviewed through an independent broker who can align liabi"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "fidelityStateAbsent": true,
+  "headline": "Contractors Insurance",
+  "staticArchitecture": {
+    "hasStateImageStage": true,
+    "uniqueStateImages": 4,
+    "stateSrcs": [
+      "/images/contractors-insurance-state-liability.png",
+      "/images/contractors-insurance-state-tools-equipment.png",
+      "/images/contractors-insurance-state-property.png",
+      "/images/contractors-insurance-state-installation-work.png"
+    ],
+    "expectedSrcs": [
+      "/images/contractors-insurance-state-liability.png",
+      "/images/contractors-insurance-state-tools-equipment.png",
+      "/images/contractors-insurance-state-property.png",
+      "/images/contractors-insurance-state-installation-work.png"
+    ],
+    "mappingsMatch": true,
+    "motionClasses": false
+  },
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

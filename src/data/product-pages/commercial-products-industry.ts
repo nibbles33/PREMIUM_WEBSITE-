@@ -235,72 +235,136 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Builder's Risk Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Builder's risk insurance for Windsor-Essex construction projects — materials, work in progress, and project property coverage during the build.",
+      "Builder's risk and course-of-construction insurance for Windsor-Essex projects — work in progress, materials, renovations, and project property during the build.",
     headline: "Builder's Risk Insurance",
     subhead:
-      "Project-specific property coverage while construction or major renovation is underway — protecting materials and work in progress.",
+      "Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it is being built or renovated. It is project-specific property coverage for the structure and work in progress, not the contractor's everyday commercial general liability policy, not a surety bond, and not a developer's full enterprise insurance program. Policies are typically arranged for a defined construction period and completed value. What responds after fire, theft, vandalism, wind, water damage, or collapse depends on the policy form, causes of loss, deductibles, exclusions, and any endorsements purchased. Soft costs, delay-in-completion, flood, earthquake, materials in transit, off-site storage, and existing structures are not automatic — each must be reviewed against wording and underwriting. Premium Insurance Brokers can help align project value, timeline, and contract or lender requirements for Windsor-Essex builds.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Builder's Risk Quote",
     coverageIntro:
-      "Builder's risk covers the project itself during construction — separate from the contractor's ongoing liability policy.",
+      "Builder's risk is project property insurance during construction or renovation — separate from contractor CGL, surety bonds, and permanent property insurance after handover.",
     coverageTypes: [
       {
         title: "Work in Progress",
+        shortLabel: "WIP",
         description:
-          "Covers the structure and installed materials during construction against covered perils like fire, theft, and wind.",
+          "May help address certain physical loss or damage to the structure and installed work during construction — where purchased and subject to policy causes of loss, exclusions, and limits.",
+        detailTitle: "Hard costs stop when fire or wind hits mid-build",
+        detailDescription:
+          "Builder's risk insures the project itself — not your contractor's everyday liability policy. Covered causes of loss, deductibles, and whether temporary works are included depend on form and endorsements. Accurate completed value and construction timeline support proper limits.",
         icon: HardHat,
       },
       {
         title: "Materials On Site & In Transit",
+        shortLabel: "Materials",
         description:
-          "May extend to building materials stored on site or in transit to the project, subject to limits.",
+          "May address building materials awaiting installation on site — and, where policy wording or endorsements apply, materials in transit or at temporary storage — subject to limits, territory, and conditions.",
+        detailTitle: "Materials off-site are not automatic",
+        detailDescription:
+          "Lumber, fixtures, and equipment awaiting installation can represent a large share of project value. Transit and off-site storage are common endorsement items — confirm distance limits, security conditions, and who owns materials (owner vs sub). Do not assume a base course-of-construction form automatically follows materials away from the job site.",
         icon: Package,
       },
       {
         title: "Soft Costs",
+        shortLabel: "Soft Costs",
         description:
-          "Can cover additional interest, taxes, and architect fees when a covered delay extends the project timeline.",
+          "May address certain delay-related expenses after a covered loss — where delay-in-completion or soft-cost endorsements are purchased and subject to policy wording.",
+        detailTitle: "Delay expenses need their own line item",
+        detailDescription:
+          "Interest, taxes, professional fees, and extended site overhead after an insured loss are not part of basic hard-cost coverage unless scheduled. Document and value soft costs explicitly — formula-only limits can understate exposure when a covered peril extends the construction period.",
         icon: Building2,
       },
       {
         title: "Existing Structure",
+        shortLabel: "Existing",
         description:
-          "Renovation projects may need coverage for the existing building while work is performed on it.",
+          "Renovation projects may need scheduled coverage for the existing building while work proceeds — subject to underwriting and policy wording.",
+        detailTitle: "Occupied renovations change the property picture",
+        detailDescription:
+          "Standard homeowner or commercial property policies may not respond once renovation scale or vacancy triggers exclusions. Existing structure values, demolition scope, occupancy during work, and who retains property insurance should be resolved before demolition starts.",
         icon: Hammer,
       },
     ],
     whoItIsFor:
-      "Builder's risk is for Windsor-Essex general contractors, developers, and property owners funding new construction or major renovations — usually required from groundbreaking until substantial completion.",
+      "For Windsor–Essex owners, developers, and contractors named in the contract to insure project property — reviewed through an independent broker who can align completed value, timeline, renovations, and lender or contract requirements.",
+    considerations: [
+      {
+        title: "Who should purchase the policy — owner, GC, or developer?",
+        description:
+          "Construction contracts (including CCDC and custom forms) usually allocate who must place builder's risk and who is named insured. Lenders often require loss-payee status and evidence of coverage before draws. Confirm allocation before groundbreaking — do not assume the contractor's CGL replaces project property insurance.",
+      },
+      {
+        title: "New construction vs renovation of occupied buildings",
+        description:
+          "New builds and renovations present different property questions. Renovations may need the existing structure scheduled on the builder's risk policy, coordination with any remaining permanent property insurance, and clarity on occupancy while work proceeds. Vacancy or partial occupancy can change how both policies respond.",
+      },
+      {
+        title: "Completed value, construction period, and extensions",
+        description:
+          "Limits are commonly based on completed project value for the construction period stated in the policy. Substantial completion, occupancy, or policy expiry can end coverage — whichever the form triggers first. Delayed projects may need extensions arranged before the policy expires.",
+      },
+      {
+        title: "Hard costs vs soft costs and delay endorsements",
+        description:
+          "Basic builder's risk typically focuses on hard costs — structure and installed work. Soft costs and delay-in-completion expenses after a covered loss are usually endorsement-dependent and should be itemized. Do not treat soft costs as automatic inclusions.",
+      },
+      {
+        title: "Materials, transit, and off-site storage",
+        description:
+          "Materials stored on site, in a yard, or moving to the project may need specific limits, territorial wording, or endorsements. Security conditions, distance from site, and ownership (owner-supplied vs subcontractor materials) affect underwriting and claims. Transit and off-site property are not universally included.",
+      },
+      {
+        title: "Lender and loss-payee requirements",
+        description:
+          "Construction lenders commonly require builder's risk with mortgage or loss-payee clauses, minimum limits, and proof before advances. Share loan and contract insurance schedules with your broker early so certificates match what the lender actually requires.",
+      },
+      {
+        title: "Exclusions: faulty workmanship, water, flood, and earthquake",
+        description:
+          "Faulty workmanship and defective materials are typically excluded from property recovery for the defective work itself — liability policies address certain claim types separately. Water damage, sewer backup, flood, and earthquake treatment vary by form and optional buy-backs. Do not assume catastrophic perils are included without reviewing wording.",
+      },
+      {
+        title: "Handover to permanent property insurance",
+        description:
+          "When the project reaches substantial completion, occupancy, or ready-for-takeover, builder's risk usually ends and permanent property (or habitational) insurance must be in force. Partial occupancy can create timing gaps if both sides are not coordinated.",
+      },
+    ],
     relatedLinks: [
       { label: "Contractors Insurance", href: "/contractors-insurance/" },
       { label: "Builders & Developers", href: "/builders-developers-insurance/" },
+      { label: "Surety Bonds", href: "/bonding-insurance/" },
     ],
     faqTitle: "Builder's risk FAQ",
     faqItems: [
       {
+        question: "Is builder's risk legally required for every Ontario construction project?",
+        answer:
+          "No universal Ontario statute requires builder's risk on every private build. Placement is typically driven by construction contracts, lender conditions, and prudent risk management. Public or institutional owners may impose their own insurance schedules — review the contract rather than assuming a statutory mandate.",
+      },
+      {
         question: "Who should buy builder's risk — owner or contractor?",
         answer:
-          "Contract documents usually specify who must place coverage. Often the owner or developer buys it, but GC-led wrap-ups may differ.",
+          "Contract documents usually specify who must place coverage and who is named insured. Often the owner or developer purchases the policy; some GC-led or wrap-up structures differ. Lenders may dictate evidence and loss-payee wording. Confirm allocation before work starts.",
       },
       {
-        question: "When does builder's risk end?",
+        question: "Does builder's risk include liability, soft costs, or materials away from the site?",
         answer:
-          "Typically at substantial completion, occupancy, or policy expiration — whichever comes first. Extensions may be available for delayed projects.",
+          "Builder's risk is project property coverage — it does not replace commercial general liability or surety bonds. Soft costs, delay-in-completion, transit, and off-site storage may be available only where endorsed or expressly included. Flood, earthquake, equipment breakdown, and contractor tools are likewise not automatic. Review causes of loss and endorsements with your broker.",
       },
       {
-        question: "Is theft of materials covered?",
+        question: "When does builder's risk start and end?",
         answer:
-          "Often yes, subject to security requirements and deductibles. High-theft sites may need enhanced limits.",
+          "Coverage typically applies for a defined construction period and ends at substantial completion, occupancy, policy expiry, or another trigger in the form — whichever applies first. Delayed projects may need extensions arranged before expiry. Occupancy during construction can change how the policy responds.",
       },
       {
-        question: "Does builder's risk cover faulty workmanship?",
+        question: "What project information is needed for a quote?",
         answer:
-          "No. It covers sudden insured perils, not defective work. Liability policies address workmanship claims separately.",
+          "Expect questions about project address and type, new build versus renovation, completed value, construction period, construction methods, occupancy during work, existing structure values if renovating, security and water exposures, neighbouring properties, contractor experience, loss history, and contract or lender insurance requirements.",
       },
     ],
     ctaHeading: "Starting a construction project?",
     ctaSubhead:
-      "Share project value, timeline, and contract requirements — we will arrange builder's risk aligned with your build.",
+      "Share project value, timeline, renovation scope, and contract or lender requirements — we will compare builder's risk options for your build.",
     serviceName: "Builder's Risk Insurance",
   },
   {

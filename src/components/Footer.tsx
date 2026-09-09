@@ -14,7 +14,7 @@ const businessLinks = [
   { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
   { label: "Contractors", href: "/contractors-insurance/" },
   { label: "Farm Insurance", href: "/farm-insurance/" },
-  { label: "Bonding", href: "/bonding-insurance/" },
+  { label: "Surety Bonds", href: "/bonding-insurance/" },
 ] as const;
 
 const resourceLinks = [

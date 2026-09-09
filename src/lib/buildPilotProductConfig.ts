@@ -235,7 +235,8 @@ export function adaptCommercialProductContent(
       content.slug === "warehousing-insurance" ||
       content.slug === "property-management-insurance" ||
       content.slug === "pharmacy-insurance" ||
-      content.slug === "cargo-freight-insurance"
+      content.slug === "cargo-freight-insurance" ||
+      content.slug === "builders-risk-insurance"
         ? "expandable"
         : "grid",
   });
@@ -244,7 +245,7 @@ export function adaptCommercialProductContent(
 const industryRelatedLinks: Record<string, RelatedLink[]> = {
   "contractors-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
-    { label: "Bond Insurance", href: "/bonding-insurance/" },
+    { label: "Surety Bonds", href: "/bonding-insurance/" },
     { label: "Builder's Risk", href: "/builders-risk-insurance/" },
   ],
   "manufacturing-insurance": [
@@ -332,13 +333,19 @@ export function adaptCommercialIndustryContent(
           ? "For Windsor–Essex motor carriers, owner-operators, and fleet operators — reviewed through an independent broker who can coordinate commercial automobile, cargo, and contract requirements for how you actually haul."
           : content.slug === "dump-truck-insurance"
             ? "For Windsor–Essex dump truck operators and small fleets — reviewed through an independent broker who can coordinate commercial automobile, load exposure, and jobsite hauling for how you actually work."
-            : content.subhead,
+            : content.slug === "contractors-insurance"
+              ? "For Windsor–Essex general contractors and trade contractors — reviewed through an independent broker who can align liability, tools, certificates, and project participation with how you actually build."
+              : content.slug === "builders-developers-insurance"
+                ? "For Windsor–Essex builders and developers coordinating projects and ownership entities — reviewed through an independent broker who can structure project property, liability, and wrap-up strategy across your pipeline."
+                : content.subhead,
     showTrustBand: content.slug !== "restaurant-insurance",
     considerationsPresentation:
       content.slug === "restaurant-insurance" ||
       content.slug === "food-truck-insurance" ||
       content.slug === "trucking-insurance" ||
-      content.slug === "dump-truck-insurance"
+      content.slug === "dump-truck-insurance" ||
+      content.slug === "contractors-insurance" ||
+      content.slug === "builders-developers-insurance"
         ? "expandable"
         : "grid",
     coverageHeading: "What's covered",

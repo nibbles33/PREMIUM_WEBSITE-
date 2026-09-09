@@ -22,7 +22,7 @@ export const businessNavClusters: BusinessNavCluster[] = [
     links: [
       { label: "Commercial Insurance", href: "/commercial-insurance/" },
       { label: "Commercial Property", href: "/commercial-property-insurance/" },
-      { label: "Bonding Insurance", href: "/bonding-insurance/" },
+      { label: "Surety Bonds", href: "/bonding-insurance/" },
       { label: "Small Business", href: "/small-business-insurance/" },
       { label: "Business Interruption", href: "/business-interruption-insurance/" },
     ],

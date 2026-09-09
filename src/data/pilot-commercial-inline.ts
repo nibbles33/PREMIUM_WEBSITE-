@@ -10,7 +10,6 @@ import {
   Package,
   ScrollText,
   Shield,
-  ShieldCheck,
   Tractor,
   Warehouse,
   Wrench,
@@ -59,86 +58,145 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
   }),
   "bonding-insurance": buildPilotProductConfig({
     slug: "bonding-insurance",
-    metaTitle: "Bond Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaTitle: "Surety Bonds in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Surety bonds through an independent Windsor-Essex broker — contract & performance bonds, bid bonds, license & permit bonds, and fidelity bonds.",
-    eyebrow: "Bond Insurance",
-    headline: "Bond Insurance",
+      "Surety bonds through an independent Windsor-Essex broker — bid bonds, performance bonds, labour and material payment bonds, and licence and permit bonds.",
+    eyebrow: "Surety Bonds",
+    headline: "Surety Bonds",
     heroLead:
-      "Surety bonds for contractors and businesses that need to meet contract, licensing, or bidding requirements.",
+      "Surety bonding is structurally different from conventional insurance. A surety bond is a three-party obligation among the principal (usually the contractor), the obligee (the project owner or authority that requires the bond), and the surety. The bond backs the principal's contractual or licence obligation to the obligee — it does not primarily protect the contractor the way a liability policy protects an insured. If the surety pays or arranges completion after a default, the principal typically remains responsible under an indemnity agreement. Common construction instruments include bid bonds, performance bonds, and labour and material payment bonds; licence and permit bonds serve separate regulatory purposes. Employee dishonesty or crime coverage is insurance — not a construction surety bond — and is addressed on a separate product page. Premium Insurance Brokers can help Windsor-Essex contractors navigate prequalification, capacity, and tender timelines.",
     photographySlug: "bonding-insurance",
     accentColor: "#5B6B7A",
     quoteHref: "/get-a-quote?type=business",
-    quoteLabel: "Get a Bond Quote",
+    quoteLabel: "Get a Surety Bond Quote",
     trustStatement:
-      "Surety bonds through an independent Windsor-Essex broker — contract, performance, bid, license, and fidelity bonds arranged with plain-language guidance.",
+      "For Windsor–Essex contractors and vendors who must post surety for tenders, contracts, or licences — reviewed through an independent broker who can explain principal, obligee, and surety roles in plain language.",
+    considerationsPresentation: "expandable",
+    coverageHeading: "Common surety bonds",
     coverageIntro:
-      "Common surety bonds for bidding, project performance, subcontractor payment, licensing, and employee dishonesty.",
+      "Surety bonds back obligations to an obligee — bid security, performance after award, payment to certain subcontractors and suppliers, and licence or permit compliance where required.",
     coverageItems: [
       {
         title: "Bid Bonds",
+        shortLabel: "Bid Bond",
         description:
-          "Required when submitting a bid on certain contracts — guarantees you will honour your bid and enter the contract if selected.",
+          "May be required with a tender — provides assurance to the project owner that a selected bidder will enter the contract and furnish required bonds if awarded, subject to bond terms.",
+        detailTitle: "Tender security is about commitment — not project completion",
+        detailDescription:
+          "Bid bonds and consents of surety are tender-phase instruments. They protect the owner if the low bidder withdraws — the surety's obligation is defined in the bond, and the principal typically indemnifies the surety for amounts paid. Bid bonds are generally tender or contractual requirements — not a universal statutory rule for every Ontario construction project.",
         icon: Gavel,
       },
       {
         title: "Performance Bonds",
+        shortLabel: "Performance",
         description:
-          "Guarantees completion of the contracted work according to project terms if the principal defaults.",
+          "A three-party surety bond that may respond if the contractor defaults on performance obligations under the bonded contract — subject to bond conditions and surety remedies.",
+        detailTitle: "Default triggers a process — not an automatic insurance payout",
+        detailDescription:
+          "Performance bonds protect the obligee (project owner), not the contractor. If a default is declared, the surety may arrange completion, tender for a replacement contractor, or other remedies per the bond — then seek recovery from the principal under indemnity.",
         icon: FileCheck,
       },
       {
         title: "Labour & Material Payment Bonds",
+        shortLabel: "Payment",
         description:
-          "Ensures subcontractors and suppliers are paid for work and materials on a project, protecting the project owner from liens.",
+          "May help ensure certain direct subcontractors and suppliers on the bonded project receive payment for approved work and materials — subject to bond form, notice periods, and claim documentation.",
+        detailTitle: "Subs and suppliers claim here — not on the performance bond",
+        detailDescription:
+          "Payment bonds address upstream payment failure on the bonded job. Claimants generally must follow bond notice and documentation requirements. This process is separate from the owner's performance bond claim path.",
         icon: Banknote,
       },
       {
         title: "Licence & Permit Bonds",
+        shortLabel: "Licence",
         description:
-          "Meets bonding requirements for certain licences and permits — common for contractors and regulated trades.",
+          "May satisfy licensing or permit bonding requirements for regulated trades or municipal licences — where required by the authority having jurisdiction.",
+        detailTitle: "Regulatory bonds are not project performance bonds",
+        detailDescription:
+          "Licence and permit bonds guarantee compliance with licence obligations to a government or municipal obligee — different purpose, amount, and underwriting from construction performance programs.",
         icon: ScrollText,
       },
+    ],
+    considerations: [
       {
-        title: "Fidelity Bonds",
+        title: "Surety is not insurance — three parties and indemnity",
         description:
-          "Protects a business against losses caused by employee dishonesty.",
-        icon: ShieldCheck,
+          "Insurance transfers defined risk from an insured to an insurer. A surety bond guarantees the principal's obligation to an obligee. The surety may step in after a default, then look to the principal (and often personal or corporate indemnitors) for reimbursement. Do not treat a performance bond as coverage that protects the contractor like a CGL policy.",
+      },
+      {
+        title: "Prequalification, financial strength, and bonding capacity",
+        description:
+          "Sureties typically review financial statements, working capital, net worth, experience on similar work, backlog or work program, and prior bonding history before setting single-job and aggregate program capacity. Criteria are underwriting judgments — not universal formulas published for every contractor.",
+      },
+      {
+        title: "Ontario public contracts — performance and payment bonds",
+        description:
+          "Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require the contractor to provide both a performance bond and a labour and material payment bond on entering the contract. The general regulatory minimum coverage limit for each bond is 50 per cent of the contract price — owners may require higher amounts. This regime applies to public contracts as defined in the Act and regulations — not to every private construction project in Ontario. Bid bonds are typically set by tender documents, not by that statutory performance-and-payment rule.",
+      },
+      {
+        title: "Bid bonds vs consent of surety at tender",
+        description:
+          "A bid bond accompanies many tenders as security that the bidder will enter the contract and furnish required bonds if awarded. A consent of surety is a related tender-phase assurance that the surety is prepared to issue those bonds. Percentages and forms follow the tender — not a single Ontario-wide statutory bid-bond amount.",
+      },
+      {
+        title: "Performance bond default process",
+        description:
+          "When an obligee declares a contractor default under a performance bond, the surety evaluates options under the bond wording — which may include arranging completion, tendering for a replacement contractor, or other remedies. Remedies and timelines are bond-specific; this is not an automatic insurance payout to the principal.",
+      },
+      {
+        title: "Payment bond claims for direct subcontractors and suppliers",
+        description:
+          "Labour and material payment bonds generally address claims by certain direct subcontractors and suppliers on the bonded project. Notice periods, documentation, and who qualifies as a claimant depend on the bond form (including Ontario prescribed forms on applicable public contracts). Sub-sub tiers may not have the same rights under every form.",
+      },
+      {
+        title: "Private vs public bond forms",
+        description:
+          "Ontario public contracts within the Construction Act bonding regime typically use prescribed performance and payment bond forms. Private and CCDC projects often use industry standard bond forms (such as CCDC bid, performance, and payment forms). Always match the form the owner actually requires in the tender or contract.",
+      },
+      {
+        title: "Licence bonds vs project bonds",
+        description:
+          "Licence and permit bonds serve a regulatory or municipal obligee and are underwritten for licence compliance — separate from bid, performance, and payment bonds on a construction contract. Capacity used for licence bonds may interact with your overall surety program; ask how your surety treats them together.",
       },
     ],
     brokerSteps: commercialBrokerSteps,
-    relatedProducts: [],
-    faqTitle: "Bond insurance FAQ",
+    relatedProducts: relatedLinksToProducts([
+      { label: "Contractors Insurance", href: "/contractors-insurance/" },
+      { label: "Builder's Risk", href: "/builders-risk-insurance/" },
+      { label: "Crime & Fidelity", href: "/crime-fidelity-insurance/" },
+    ]),
+    faqTitle: "Surety bonds FAQ",
     faqIntro: "Straight answers to common surety bond questions.",
     faqItems: [
       {
-        question: "What's the difference between insurance and a surety bond?",
+        question: "Is a surety bond the same as insurance?",
         answer:
-          "Insurance protects you against covered losses. A surety bond is a three-party guarantee — you (the principal), the obligee who requires the bond, and the surety. If you fail to meet the bonded obligation, the surety may pay the obligee and then seek recovery from you.",
+          "No. Conventional insurance protects an insured against covered losses under a two-party policy. A surety bond is a three-party instrument among principal, obligee, and surety that backs the principal's obligation to the obligee. If the surety pays or arranges completion, the principal typically remains liable under indemnity. Employee dishonesty (fidelity) insurance is a separate insurance product — not a construction surety bond.",
       },
       {
-        question: "Do I need a bond to bid on a contract?",
+        question: "Who does a construction surety bond protect?",
         answer:
-          "Many public and private tenders require a bid bond with your submission, and a performance or payment bond if you win. Requirements vary by owner and project — check the tender documents, and your broker can help arrange the right bonds on the timeline you need.",
+          "Primarily the obligee — usually the project owner or the authority requiring the bond. A labour and material payment bond may also allow certain direct subcontractors and suppliers to claim for unpaid work or materials on the bonded project, subject to the bond form. The bond does not primarily protect the contractor/principal like a liability policy.",
       },
       {
-        question: "How is bond pricing determined?",
+        question: "When are performance and payment bonds required on Ontario public projects?",
         answer:
-          "Sureties look at the bond type and amount, your financial strength, experience, credit, and the project or license involved. Rates are typically a percentage of the bond amount and differ between bid, performance, and license bonds.",
+          "Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require both a performance bond and a labour and material payment bond when the contractor enters the contract. The general regulatory minimum coverage for each is 50 per cent of the contract price. This does not mean every private Ontario construction project is bonded by statute — private requirements follow the contract and tender.",
       },
       {
-        question: "What information do I need to apply for a bond?",
+        question: "What information does a surety review for bonding capacity?",
         answer:
-          "Expect requests for business financials, personal financial statements for owners, project or license details, prior bonding history, and company experience. Larger bonds usually need more documentation than small license bonds.",
+          "Sureties commonly review company (and often personal) financial statements, working capital and net worth, experience, backlog or work program, prior bonding history, and details of the contract or licence. They may set single-job and aggregate program limits. Exact documentation varies by surety and bond size — it is underwriting, not a published universal checklist.",
       },
       {
-        question: "What is a labour and material payment bond?",
+        question: "What are common construction bonds, and is a bid bond always required?",
         answer:
-          "It protects the project owner by ensuring subcontractors and suppliers get paid. If the contractor fails to pay, the surety may step in — then seek recovery from the contractor.",
+          "Common construction surety instruments include bid bonds, performance bonds, and labour and material payment bonds. Licence and permit bonds address separate regulatory requirements. Bid bonds are typically required by tender documents where the owner wants tender security — they are not the same as the Construction Act's statutory performance-and-payment bond rule for applicable public contracts.",
       },
     ],
-    ctaHeading: "Ready to get bonded?",
-    ctaSubhead: "Tell us about the contract or license — we'll help you arrange the right bond.",
+    ctaHeading: "Need surety for a tender or contract?",
+    ctaSubhead:
+      "Share the tender or contract documents, bond amounts, and your company financials — we will help arrange the right surety instruments.",
     serviceName: "Surety Bonds",
   }),
   "farm-insurance": buildPilotProductConfig({

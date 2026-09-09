@@ -341,71 +341,129 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Contractors Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Contractors insurance through an independent Windsor-Essex broker — general liability, tools & equipment, builder's risk, and wrap-up liability.",
+      "Contractors insurance through an independent Windsor-Essex broker — commercial general liability, tools and equipment, project participation, and wrap-up enrollment for trades.",
     headline: "Contractors Insurance",
     subhead:
-      "Liability, tools, and project coverage for contractors and tradespeople.",
+      "Contractors insurance is about the operating contracting business — the trade or general contractor that bids work, manages crews and subcontractors, and moves between job sites. Commercial general liability addresses certain third-party injury and property-damage claims arising from your operations. Tools and contractors equipment coverage, where purchased, addresses owned tools and mobile equipment. Project property (builder's risk) and wrap-up or OCIP programs are usually project-specific overlays — not substitutes for ongoing business coverage. Needs differ across general contractors, electricians, plumbers and HVAC, roofers, excavation and concrete trades, renovators, and landscapers. Premium Insurance Brokers can help Windsor-Essex contractors align certificates, additional-insured requests, and trade exposures with how you actually work.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Contractors Quote",
     coverageIntro:
-      "Coverages that address job-site liability, equipment, and project risk.",
+      "Core coverages for the operating contractor — liability and tools for ongoing work, plus project property and wrap-up participation when a specific job requires them.",
     coverageTypes: [
       {
         title: "General Liability",
+        shortLabel: "GL",
         description:
-          "Helps protect against third-party injury or property damage claims tied to your contracting work.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from your contracting operations — subject to policy terms, exclusions, and limits.",
+        detailTitle: "Job-site injury claims follow your operations — not the owner's property policy",
+        detailDescription:
+          "CGL addresses third-party claims from your work — slips, property damage, and certain completed-operations allegations depending on wording. It does not insure your tools, your vehicles, or the building under construction. Contractual additional-insured and waiver requests must match actual policy capabilities.",
         icon: Briefcase,
       },
       {
         title: "Tools & Equipment Coverage",
+        shortLabel: "Tools",
         description:
-          "Can cover owned tools and mobile equipment against theft or damage, subject to policy terms.",
+          "May help cover owned tools and mobile equipment against covered theft or damage — where purchased and subject to scheduling, locations, and deductibles.",
+        detailTitle: "Stolen tools are rarely covered by liability alone",
+        detailDescription:
+          "Tool and equipment policies or inland marine floaters schedule items, job-site limits, and overnight storage rules. A theft from a trailer may be excluded without proper coverage and security compliance.",
         icon: Hammer,
       },
       {
         title: "Builder's Risk",
+        shortLabel: "Project Property",
         description:
-          "Protects a project under construction — materials and work in progress — against covered losses.",
+          "Project property coverage for work in progress — usually arranged per project when your contract requires it; separate from ongoing commercial general liability.",
+        detailTitle: "When the contract names you to insure the build",
+        detailDescription:
+          "Contractors may be required to place or be named on a builder's risk policy for specific projects. That coverage insures the project structure and materials — not your commercial liability for injury claims. Confirm per contract; do not assume your GL replaces builder's risk.",
         icon: HardHat,
       },
       {
         title: "Wrap-Up Liability",
+        shortLabel: "Wrap-Up",
         description:
-          "Project-specific liability structures for larger builds where one policy covers multiple parties.",
+          "On enrolled projects, wrap-up or OCIP programs may provide project-site liability coverage for participating trades — subject to enrollment and policy terms.",
+        detailTitle: "OCIP changes whose policy responds on site",
+        detailDescription:
+          "Large projects may use an owner- or contractor-controlled wrap-up. Enrolled trades may rely on the wrap for onsite liability but typically still need their own coverage for off-site operations, auto, tools, and non-enrolled work. Read enrollment and exclusion language carefully.",
         icon: Building2,
+      },
+    ],
+    considerations: [
+      {
+        title: "Certificates, additional insured, and waiver wording",
+        description:
+          "Owners and GCs often require certificates before mobilization, plus additional-insured status, waivers of subrogation, and primary/non-contributory wording. Those are contractual asks — your broker must confirm the policy can actually support them. A certificate alone does not expand coverage beyond the policy.",
+      },
+      {
+        title: "Subcontractor insurance requirements and COI review",
+        description:
+          "General contractors commonly require subs to carry their own liability (and often WSIB clearance in Ontario), with minimum limits and certificate deadlines. Reviewing sub COIs reduces gaps when a claim involves lower-tier trades — but each party still needs coverage appropriate to its work.",
+      },
+      {
+        title: "OCIP / wrap enrollment vs your own GL",
+        description:
+          "On Owner Controlled or Contractor Controlled Insurance Programs, enrolled trades may rely on the project wrap for certain onsite liability while enrolled. Off-site operations, commercial auto, tools, and non-enrolled work usually still need your own policies. Enrollment is not a full replacement for an operating contractor program.",
+      },
+      {
+        title: "Tools and equipment — job-site theft and scheduling",
+        description:
+          "Tool schedules, job-site limits, overnight storage, and locked-vehicle conditions affect whether a theft claim may respond. High-value specialty tools may need itemization. Liability policies do not replace stolen tools.",
+      },
+      {
+        title: "When builder's risk applies to your contract role",
+        description:
+          "Some contracts require the contractor to place or be named on builder's risk for that project. Others assign placement to the owner. Confirm who buys project property coverage before you assume your GL addresses the structure under construction.",
+      },
+      {
+        title: "Trade-specific exposures differ",
+        description:
+          "Roofing, excavation, electrical, plumbing/HVAC, concrete, renovation, and landscaping present different height, underground, water, fire, and completed-operations patterns. Design-build or drafting responsibility may introduce professional liability questions. Pollution exposures can arise for excavation, fuel, or abatement work. Do not assume identical coverage across trades.",
+      },
+      {
+        title: "Commercial auto vs CGL — travelling between sites",
+        description:
+          "Driving between job sites in a company vehicle is generally a commercial automobile exposure — regulated separately from CGL. Hired and non-owned auto may matter when staff use rentals or personal vehicles for work. CGL does not replace automobile coverage for highway use.",
+      },
+      {
+        title: "Completed operations after you leave the site",
+        description:
+          "Claims alleging injury or damage from your completed work can surface after demobilization. Products-completed operations coverage under a CGL may respond subject to policy wording, exclusions, and limits — it is not open-ended. Defective work itself is often treated differently from resulting damage.",
       },
     ],
     faqTitle: "Contractors insurance FAQ",
     faqItems: [
       {
-        question: "Do subcontractors need their own liability insurance?",
+        question: "Does commercial general liability cover my tools or vehicles?",
         answer:
-          "Usually yes. General contractors typically require subs to carry their own liability and provide certificates. Your broker can help set requirements that protect the job without creating gaps.",
+          "Generally no. CGL addresses certain third-party bodily injury and property-damage claims arising from your operations — subject to policy terms. Stolen or damaged tools need tools/equipment or inland marine coverage where purchased. Company vehicles need commercial automobile coverage. Do not rely on CGL alone for tools or highway auto exposures.",
       },
       {
-        question: "Are my tools covered if stolen from a job site?",
+        question: "Do subcontractors need their own insurance?",
         answer:
-          "Only if you have tools or inland marine coverage that includes that location and scenario. Standard liability policies don't replace stolen tools. Limits, deductibles, and overnight storage rules matter.",
+          "Usually yes. General contractors and owners typically require subs to carry their own liability insurance and provide certificates before starting. Your own policy and a project wrap-up (where enrolled) do not automatically replace every sub's obligation — confirm contract requirements for each tier.",
       },
       {
-        question: "What is builder's risk insurance?",
+        question: "What about completed work after I leave the job?",
         answer:
-          "Builder's risk covers the structure and materials during construction or renovation for covered perils like fire or vandalism. It's usually arranged per project and is separate from your ongoing liability policy.",
+          "Completed-operations claims can arise after handover. Coverage depends on your CGL products-completed operations wording, exclusions, and limits — and on whether a project wrap-up or other program applies for that job. Defective work and resulting damage are often treated differently under policy forms.",
       },
       {
-        question: "Do I need proof of insurance for every job?",
+        question: "Do I need my own GL if the project has a wrap-up or OCIP?",
         answer:
-          "Many owners, GCs, and municipalities require certificates before you start. Your broker can issue certificates and add additional insured wording when contracts require it.",
+          "Often yes for off-site work, non-enrolled projects, commercial auto, tools, and any periods before or after enrollment. Wrap-ups may address certain onsite liability for enrolled parties during the project — they rarely eliminate the need for an operating contractor program entirely. Read enrollment documents carefully.",
       },
       {
-        question: "What is OCIP and when does it apply to contractors?",
+        question: "What information is needed to quote contractors insurance?",
         answer:
-          "On large projects with an Owner Controlled Insurance Program, enrolled trades may rely on the project wrap-up for onsite liability instead of their own GL for that job. Subcontractors should confirm enrollment requirements, exclusions, and what off-site work still needs their own policy.",
+          "Expect questions about your trade and operations, revenue and payroll, subcontracting percentage, tools and equipment values, vehicles, typical jobsite types (new build, renovation, occupied premises), contract insurance requirements, claims history, and whether you participate in wrap-up or OCIP projects. Trade-specific details matter — roofing is not underwritten like landscaping.",
       },
     ],
-    ctaHeading: "Ready to cover your contracting work?",
+    ctaHeading: "Ready to cover your contracting business?",
     ctaSubhead:
-      "Tell us about your trade, projects, and equipment — we'll compare options that fit.",
+      "Share your trade, revenue, equipment, and contract requirements — we will compare liability, tools, and project participation options.",
     serviceName: "Contractors Insurance",
   },
   {
@@ -843,71 +901,129 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Builders & Developers Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Builders and developers insurance through an independent Windsor-Essex broker — builder's risk, general liability, wrap-up liability, and completed operations.",
+      "Builders and developers insurance through an independent Windsor-Essex broker — project builder's risk, development liability, wrap-up programs, and completed operations coordination.",
     headline: "Builders & Developers Insurance",
     subhead:
-      "Project-based coverage for builders and developers — from groundbreaking to handover.",
+      "Builders and developers insurance focuses on the ownership or development entity that acquires sites, finances projects, and coordinates multiple trades across one project or a pipeline. It is not a second copy of a single builder's risk page and not the same as an operating trade contractor's tools-and-GL program. Developers typically coordinate project-specific course-of-construction (builder's risk) policies, entity-level commercial general liability, and — on larger jobs — wrap-up or OCIP liability programs, then transition to permanent property or inventory coverage at occupancy. Lenders, joint-venture partners, and construction contracts drive named-insured, loss-payee, and certificate requirements. Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Builders Quote",
     coverageIntro:
-      "Coverages that follow a project from construction through completed work.",
+      "Coverage for the development entity and its projects — project property during construction, operations liability, coordinated wrap-ups where used, and post-handover completed-operations exposure.",
     coverageTypes: [
       {
         title: "Builder's Risk",
+        shortLabel: "BR",
         description:
-          "Protects the project under construction — materials and work in progress — against covered property losses.",
+          "May help address certain physical loss or damage to each project during construction — where a course-of-construction policy is purchased for that project.",
+        detailTitle: "Each project needs its own property schedule",
+        detailDescription:
+          "Developers typically arrange builder's risk per project (or via a master program) covering hard costs and endorsed extensions. Lenders often require loss-payee status and evidence of coverage before draw releases. Soft costs, transit, and existing structures remain endorsement-dependent.",
         icon: HardHat,
       },
       {
         title: "General Liability",
+        shortLabel: "GL",
         description:
-          "Helps protect against third-party injury or property damage claims arising from construction operations.",
+          "May help respond to certain third-party injury or property-damage claims arising from development operations — subject to policy terms.",
+        detailTitle: "Sales centres and site supervision create liability",
+        detailDescription:
+          "Development entities face premises and operations exposure at sales offices, model homes, and active sites. Project-specific wrap-up programs may alter how onsite claims are handled — entity GL still matters for non-enrolled activities.",
         icon: Briefcase,
       },
       {
         title: "Wrap-Up Liability",
+        shortLabel: "Wrap-Up",
         description:
-          "A project-specific liability structure that can cover the owner, GC, and subcontractors under one program.",
+          "May consolidate liability for enrolled parties on a project under an owner- or sponsor-controlled program — where purchased and subject to enrollment terms.",
+        detailTitle: "OCIP reduces gaps between trades — at a cost",
+        detailDescription:
+          "Wrap-ups centralize certificates and limits for major projects but require active administration. They do not automatically replace every contractor's own CGL for off-site work, auto, or tools. Developers sponsoring OCIPs should coordinate insurance with counsel and any surety requirements separately.",
         icon: Building2,
       },
       {
         title: "Completed Operations",
+        shortLabel: "Completed Ops",
         description:
-          "Addresses liability claims that arise after the work is finished and the project has been handed over.",
+          "May address certain liability claims alleging injury or damage after handover — where products-completed operations coverage applies under policy wording.",
+        detailTitle: "Defect claims can surface after occupancy",
+        detailDescription:
+          "Latent defect and completed-operations claims may arise months or years after sale or lease-up. Policy limits, exclusions, and how long completed-operations coverage applies should be reviewed with your broker — coverage is not open-ended.",
         icon: Shield,
+      },
+    ],
+    considerations: [
+      {
+        title: "Per-project builder's risk vs master programs",
+        description:
+          "Most developments place course-of-construction coverage per project for completed value and duration. Some developers use master or reporting programs across a pipeline. Either way, limits, start dates, and occupancy triggers must match each site — do not assume one BR policy covers every project automatically.",
+      },
+      {
+        title: "Lender requirements and draw conditions",
+        description:
+          "Construction lenders commonly require evidence of builder's risk, liability limits, loss-payee or mortgage clauses, and sometimes wrap-up structures before releasing advances. Share loan insurance schedules early so certificates match lender conditions.",
+      },
+      {
+        title: "OCIP / CCIP sponsorship decisions",
+        description:
+          "Owner- or contractor-controlled wrap-ups can simplify onsite liability for enrolled parties on large projects, but they need administration, enrollment discipline, and clarity on what remains outside the wrap. Sponsorship is a project strategy — not required for every development.",
+      },
+      {
+        title: "Completed operations and post-handover exposure",
+        description:
+          "After units or buildings are sold or leased, claims can still allege injury or damage from construction work. How completed-operations coverage responds depends on policy wording, program structure (entity GL vs wrap), and timing. Review transitions with your broker before handover.",
+      },
+      {
+        title: "Unsold inventory and spec buildings after builder's risk ends",
+        description:
+          "When course-of-construction coverage ends, unsold completed buildings or speculative inventory typically need permanent property or inventory arrangements. Leaving a finished building on an expired BR policy creates a gap.",
+      },
+      {
+        title: "Vacant land and pre-construction liability",
+        description:
+          "Owned vacant parcels and sites awaiting permits can create premises liability even before construction starts. Entity GL and site controls matter during the land-hold period — separate from the eventual builder's risk policy.",
+      },
+      {
+        title: "Joint ventures — who places what coverage",
+        description:
+          "JV and co-development agreements should allocate who places builder's risk, who sponsors wrap-up liability, named-insured status, and how certificates flow to lenders. Ambiguity between partners is a common source of coverage gaps.",
+      },
+      {
+        title: "Transition from construction to permanent property",
+        description:
+          "Substantial completion, occupancy, and ready-for-takeover often end builder's risk. Permanent property, condominium corporation, or habitational programs — as applicable — must be ready. Partial occupancy requires careful coordination so neither policy leaves the asset uninsured.",
       },
     ],
     faqTitle: "Builders & developers FAQ",
     faqItems: [
       {
-        question: "What is builder's risk insurance and when do I need it?",
+        question: "Is builder's risk enough for a development company?",
         answer:
-          "Builder's risk covers the structure and materials during construction or major renovation for covered perils. It's typically required from groundbreaking until the project is substantially complete or occupied.",
+          "Usually no. Builder's risk addresses project property during construction for a specific site. Development entities also need liability for premises and operations, may sponsor or participate in wrap-ups on larger jobs, and must plan for completed-operations exposure and permanent property after handover. Tools coverage for trade contractors belongs on the contractors page — not as a substitute for developer enterprise coordination.",
       },
       {
-        question: "What is wrap-up liability?",
+        question: "What is a wrap-up or OCIP, and when do developers use one?",
         answer:
-          "A wrap-up consolidates liability for multiple parties on a large project into one controlled program. It can reduce certificate chasing and coverage gaps between trades — usually for bigger builds.",
+          "A wrap-up consolidates liability for enrolled parties on a project under one controlled program. An Owner Controlled Insurance Program (OCIP) is owner-sponsored; a Contractor Controlled Insurance Program (CCIP) is GC-led. Developers often consider wrap-ups on larger multi-trade projects to reduce certificate gaps — they do not automatically replace every contractor's own CGL for off-site work, auto, or tools.",
       },
       {
-        question: "What is OCIP and how does it relate to wrap-up coverage?",
+        question: "How are multiple projects handled?",
         answer:
-          "An Owner Controlled Insurance Program (OCIP) is a type of wrap-up where the project owner sponsors a single liability program for the job site — often covering the owner, general contractor, and enrolled subcontractors. A Contractor Controlled Insurance Program (CCIP) is the GC-led equivalent. Your broker can explain which structure fits a project and what enrollment means for subs.",
+          "Each project typically needs its own builder's risk schedule (or clear reporting under a master program), while entity liability may sit at the corporate or development-company level. Pipeline size, JV structures, and lender conditions affect how programs are organized. Tell your broker about active and upcoming sites — not only the job starting next month.",
       },
       {
-        question: "Am I covered after a project is completed?",
+        question: "What happens to coverage after project completion or occupancy?",
         answer:
-          "Completed operations coverage addresses claims that surface after handover — for example, alleged defective work that later causes injury or damage. Limits, terms, and how long coverage applies should be reviewed with your broker.",
+          "Builder's risk usually ends at substantial completion, occupancy, or another policy trigger. Permanent property or inventory coverage should be in force for completed assets. Liability for alleged post-handover injury or damage depends on completed-operations wording under the applicable GL or wrap program — review timing before units are sold or leased.",
       },
       {
-        question: "What information do I need for a quote?",
+        question: "What information is needed to structure a developers insurance program?",
         answer:
-          "Project type and value, construction methods, locations, subcontracting approach, contract insurance requirements, and claims history. For wrap-ups, the full project schedule and party list matter.",
+          "Expect questions about ownership entities, project pipeline and values, construction types, contract structures, lender insurance schedules, wrap-up strategy, subcontracting approach, joint ventures, claims history, and how projects transition to occupancy. Professional or environmental exposures are reviewed where operations create them — not every developer needs every specialty line.",
       },
     ],
-    ctaHeading: "Ready to cover your next project?",
+    ctaHeading: "Structuring coverage across your developments?",
     ctaSubhead:
-      "Tell us about your build — we'll compare project and liability options that fit.",
+      "Share your pipeline, ownership entities, and lender or contract requirements — we will help coordinate project and entity coverage.",
     serviceName: "Builders & Developers Insurance",
   },
   {
