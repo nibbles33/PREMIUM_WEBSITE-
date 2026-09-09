@@ -1,0 +1,74 @@
+{
+  "slug": "fitness-gym-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "general-liability",
+      "tabLabel": "GLMay help respond to certain third-party bodily injury or property-damage claim",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from premises conditions — slip-and-fall hazards, equipment layout, or maintenance issues in workout areas — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A loose cable on the gym floor is a premises claim",
+      "detailDescription": "General liability for fitness operations typically addresses premises and operations exposure — wet floors, poorly maintained equipment in common areas, and visitor injuries in lobbies or locker rooms. Claims alleging negligent personal training, class programming, or exercise prescription often fall under professional or fitness liability depending on how the claim is framed — not every participant injury is treated as ordinary premises liability. Assumption-of-risk waivers may be part of risk management under Ontario occupiers' liability principles, but enforceability depends on wording, notice, activity type, and facts — waivers do not replace insurance.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "general-liability"
+    },
+    {
+      "index": 1,
+      "id": "professional-liability",
+      "tabLabel": "Prof.May help address certain claims alleging negligent instruction, exercise pr",
+      "tabDesc": "May help address certain claims alleging negligent instruction, exercise programming, personal training advice, or supervision failures — subject to policy definitions, exclusions, and limits. Distinct from general liability for ordinary premises injury.",
+      "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls",
+      "detailDescription": "When a member alleges injury because a trainer prescribed the wrong exercise, progressed load too quickly, or failed to screen for a medical condition, the claim often implicates professional or fitness liability rather than premises coverage. Employee trainers, contract instructors, and independent contractors create different underwriting questions — disclose who delivers classes and whether trainers carry their own coverage. General liability does not automatically respond to professional instruction allegations.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "professional-liability"
+    },
+    {
+      "index": 2,
+      "id": "commercial-property",
+      "tabLabel": "PropertyMay help cover cardio machines, weights, flooring, mirrors, and leasehol",
+      "tabDesc": "May help cover cardio machines, weights, flooring, mirrors, and leasehold improvements against covered direct physical loss — subject to policy causes of loss, limits, deductibles, and valuation.",
+      "detailTitle": "A treadmill fleet is a capital exposure",
+      "detailDescription": "Fitness equipment, rubber flooring, sound systems, and tenant build-outs represent significant property values — especially in boutique studios with specialized rigs. Base commercial property may address certain fire, theft, and water losses subject to causes of loss and security conditions. Equipment breakdown for HVAC or electrical failure may require a separate endorsement where available. Accurate scheduling of high-value machines supports proper limits after a partial loss.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "commercial-property"
+    },
+    {
+      "index": 3,
+      "id": "sexual-abuse-misconduct",
+      "tabLabel": "AbuseWhere available as a specialized coverage, may help address certain claims ",
+      "tabDesc": "Where available as a specialized coverage, may help address certain claims alleging abuse or misconduct by staff or volunteers — subject to policy wording, limits, exclusions, and underwriting review of screening practices. Not automatic on general liability.",
+      "detailTitle": "Youth classes change the coverage conversation",
+      "detailDescription": "Youth programs, camps, and classes serving minors or vulnerable persons may need abuse or misconduct liability reviewed as a distinct coverage — many general liability forms contain abuse exclusions. Specialized coverage, where offered, is policy-dependent and may review supervision, background checks, and safeguarding policies during underwriting. Coverage may address organizational response to allegations subject to wording — not indemnification of intentional criminal conduct by a perpetrator.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "sexual-abuse-misconduct"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Gyms, fitness centres, boutique studios, yoga and pilates spaces, personal-training operations, and martial arts schools combine premises injury exposure, instr"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

@@ -1287,66 +1287,135 @@ export const industryPages: IndustryPageContent[] = [
     slug: "retail-insurance",
     metaTitle: "Retail Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Retail insurance through an independent Windsor-Essex broker — general liability, property & inventory, business interruption, and product liability.",
+      "Retail insurance through an independent Windsor-Essex broker — general liability, property and inventory, business interruption, product liability, and optional crime or cyber coverage for Windsor-Essex storefront retailers.",
     headline: "Retail Insurance",
     subhead:
-      "Coverage for retail businesses — from the storefront to the stockroom.",
+      "Ordinary storefront retail — clothing boutiques, gift shops, electronics stores, furniture and home-goods shops, and specialty retailers — combines premises liability, stock and fixture values, and product-related claims in a package that differs from food retail, pharmacy, convenience, or fuel operations. Depending on your store, that can mean commercial general liability for customer incidents on the sales floor, commercial property for fixtures, equipment, and inventory, optional business interruption after a covered physical loss, and products liability for goods you sell or distribute — each subject to the policies you purchase. Not every shop sells online, carries high-theft inventory, or needs the same crime or cyber endorsements. Premium Insurance Brokers can help Windsor–Essex retailers align coverage to your actual merchandise, lease, and sales channels.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Retail Quote",
     coverageIntro:
-      "Coverages that protect your premises, stock, income, and product-related liability.",
+      "Retail insurance is usually organized around four exposures most storefront operators share — customer liability, property and stock, income after a covered loss, and products you sell — with optional crime, cyber, and delivery coverage reviewed separately where your operation needs them.",
     coverageTypes: [
       {
-        title: "General Liability",
+        id: "general-liability",
+        title: "Premises & Customer Liability",
+        shortLabel: "Liability",
         description:
-          "Helps protect against customer injury or property damage claims in your store.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from customer incidents on your premises — slips at entrances, aisle hazards, or display-related injuries — subject to policy terms, exclusions, and limits.",
+        detailTitle: "A wet entrance isn't just housekeeping",
+        detailDescription:
+          "Retail premises exposure concentrates at entrances, fitting rooms, stockrooms open to staff traffic, and parking areas — especially in winter when tracked-in moisture and salt create slip hazards. Tenant legal liability for damage to leased premises may be available where endorsed. Product-related injury claims from something you sold are typically addressed under products liability rather than premises coverage — the policy part depends on how the claim is framed and what was disclosed during underwriting.",
         icon: Briefcase,
       },
       {
-        title: "Property & Inventory Coverage",
+        id: "property-inventory-coverage",
+        title: "Property, Stock & Fixtures",
+        shortLabel: "Property",
         description:
-          "Covers fixtures, equipment, and stock against covered theft, fire, or other insured losses.",
+          "May help cover fixtures, equipment, and stock against covered direct physical loss such as fire, theft, or water damage — subject to policy causes of loss, limits, deductibles, valuation basis, and security conditions.",
+        detailTitle: "Seasonal inventory can outgrow your limit",
+        detailDescription:
+          "Retail value sits in seasonal merchandise, display fixtures, POS equipment, and back-room stock — not just the building shell your landlord may insure separately. Inventory valuation basis varies by form: unsold stock may be valued on actual cash value or replacement cost depending on endorsements, and sold-but-undelivered stock may use selling price only where that valuation condition applies. Peak seasons such as holidays may need higher reported values or peak-season endorsements. External theft of stock differs from employee dishonesty, which typically requires a crime or fidelity endorsement rather than standard property coverage alone.",
         icon: Package,
       },
       {
-        title: "Business Interruption",
+        id: "business-interruption",
+        title: "Business Income (Optional)",
+        shortLabel: "BI",
         description:
-          "Can help replace lost income if a covered property loss forces a temporary closure.",
+          "Where purchased, may help address certain lost income and continuing expenses after a covered direct physical loss forces a temporary closure — subject to waiting periods, indemnity limits, and policy terms.",
+        detailTitle: "A fire doesn't pause your lease",
+        detailDescription:
+          "When a covered fire, major water loss, or other insured property damage closes your store, rent, payroll, and supplier obligations may continue while revenue stops. Business interruption coverage, where added, is designed for that income gap — but it requires a covered physical property loss trigger on the policy, not every shutdown or supply-chain delay. Waiting periods, indemnity periods, and extra-expense provisions vary by insurer and form — confirm what your lease and lender expect if you carry financing.",
         icon: Store,
       },
       {
-        title: "Product Liability",
+        id: "product-liability",
+        title: "Products You Sell",
+        shortLabel: "Products",
         description:
-          "Addresses claims that a product you sell caused injury or damage, including distributed brands in many cases.",
+          "May help address certain claims alleging bodily injury or property damage arising from products you sell or distribute — including other manufacturers' brands in many cases — subject to products-completed operations wording, exclusions, and limits.",
+        detailTitle: "A defective product claim can name the seller",
+        detailDescription:
+          "Retailers who sell or distribute goods — even when they did not manufacture them — can be drawn into product liability claims when a customer alleges injury or damage from a product purchased at the store. Vendor indemnity agreements and manufacturer warranties do not always replace your own coverage. Product recall or withdrawal expense is a separate first-party exposure addressed on our product recall page — general liability does not automatically pay recall costs.",
         icon: Shield,
+      },
+    ],
+    whoItIsFor:
+      "For Windsor–Essex clothing stores, gift shops, electronics retailers, furniture and home-goods shops, and other ordinary storefront retailers — reviewed through an independent broker who can coordinate liability, property, inventory, and optional crime or cyber coverage for how you actually sell.",
+    considerations: [
+      {
+        title: "Inventory values and seasonal peaks",
+        description:
+          "Holiday, back-to-school, and promotional seasons can push stock values well above average. Many commercial property programs use reported inventory values or blanket limits that may need adjustment when peaks are predictable. Underinsurance can trigger coinsurance penalties on some forms after a partial loss — disclose peak stock to your broker before renewal.",
+      },
+      {
+        title: "Valuation basis — replacement cost, ACV, and sold stock",
+        description:
+          "How your policy values unsold inventory and sold-but-undelivered goods depends on form and endorsements — not every program automatically insures stock at retail selling price. Replacement cost and actual cash value treat depreciation differently. Confirm valuation conditions for your merchandise mix rather than assuming one method applies to all stock.",
+      },
+      {
+        title: "Tenant improvements and leased premises",
+        description:
+          "If you lease your storefront, the landlord typically insures the building while you may need contents, inventory, and leasehold improvements coverage. Build-outs, custom shelving, and tenant-paid improvements are often your insurable interest — separate from the landlord's building policy and from general liability for customer injury.",
+      },
+      {
+        title: "Theft, security, and crime vs property",
+        description:
+          "External theft of stock may be a covered cause of loss under commercial property subject to limits and security conditions such as alarms and after-hours protocols. Employee dishonesty and certain robbery scenarios typically require crime or fidelity coverage — not automatic in standard property forms. Cross-link our crime and fidelity page if cash handling or high-shrink merchandise is material.",
+      },
+      {
+        title: "Products sold vs manufactured",
+        description:
+          "Selling other brands' products still creates products liability exposure when a customer alleges injury or damage from a product purchased at your store. If you import, repackage, or white-label goods, underwriting and coverage needs may differ from a pure reseller — disclose your supply chain and any product-alteration activities.",
+      },
+      {
+        title: "E-commerce, POS systems, and cyber",
+        description:
+          "Online sales, customer databases, and point-of-sale systems create privacy and payment-card exposure that base retail property and liability policies may not fully address. Cyber or privacy coverage, where purchased, is a separate commercial product — PCI compliance is an industry standard for card handling, not a named insurance mandate. Disclose your online sales share and how customer data is stored.",
+      },
+      {
+        title: "Business interruption trigger",
+        description:
+          "Business interruption responds after a covered direct physical loss to insured property — not after every supply delay, pandemic closure, or utility outage unless specific endorsements apply. Coordinate BI limits with your lease, payroll, and fixed costs so waiting periods and indemnity periods match how long recovery would realistically take.",
+      },
+      {
+        title: "Delivery and hired/non-owned auto",
+        description:
+          "Local delivery using company vehicles, employee personal cars, or contracted couriers creates automobile liability exposure separate from store property and general liability. Commercial auto or hired and non-owned auto coverage may be needed where you deliver goods — do not assume premises liability covers vehicle use on public roads.",
       },
     ],
     faqTitle: "Retail insurance FAQ",
     faqItems: [
       {
-        question: "Is my inventory covered against theft?",
+        question: "What does retail insurance typically combine?",
         answer:
-          "Often yes under commercial property, subject to limits, deductibles, and security requirements. High-theft merchandise may need higher limits or specific endorsements — tell your broker what you stock.",
+          "Most Windsor–Essex storefront retailers start with commercial general liability and commercial property for premises and stock — then add business interruption, crime, cyber, or product-specific endorsements depending on inventory values, online sales, and contract requirements. Each component is subject to the policies you purchase; a quote description is not a guarantee every coverage type is included until confirmed on your binder.",
       },
       {
-        question: "Do I need product liability if I sell other brands' products?",
+        question: "How should inventory values be insured?",
         answer:
-          "Usually yes. Selling or distributing products can still create liability exposure even if you didn't manufacture them. Contracts and brand warranties don't always replace your own coverage.",
+          "Report average and peak stock values, including seasonal merchandise and back-room inventory. Valuation basis — replacement cost, actual cash value, or selling price for certain sold stock — depends on your policy form and endorsements. Higher-theft categories such as electronics or designer goods may need scheduling or sublimits — review limits when your product mix changes.",
       },
       {
-        question: "Does my policy cover business interruption?",
+        question: "Is employee theft covered by property insurance?",
         answer:
-          "Only if that coverage is included or added. Property coverage repairs physical damage; business interruption addresses income loss while you rebuild or relocate after a covered loss.",
+          "External theft of stock may fall under commercial property subject to causes of loss and security conditions. Employee dishonesty, embezzlement, and certain internal theft scenarios typically require crime or fidelity coverage — not automatic in standard property forms. If shrinkage from staff is a concern, review crime coverage separately rather than assuming property limits address it.",
       },
       {
-        question: "What information do I need for a quote?",
+        question: "What if I also sell online?",
         answer:
-          "Store location, square footage, inventory values, product types, sales volume, security features, and current coverage. Seasonal inventory peaks should be noted so limits keep up.",
+          "E-commerce adds cyber, privacy, and payment-processing exposure beyond the physical storefront. Online order fulfillment, customer data storage, and PCI-related card handling should be disclosed during underwriting. Cyber coverage, where purchased, is reviewed separately from general liability for slip-and-fall claims — confirm how your program addresses data incidents and online sales volume.",
+      },
+      {
+        question: "What information is needed to quote?",
+        answer:
+          "Store location, square footage, lease or ownership status, inventory and fixture values, product types, security features, online vs in-store sales split, delivery practices, and any landlord or franchise certificate requirements. Seasonal peaks and recent build-outs should be noted so property limits and endorsements match how you actually operate.",
       },
     ],
     ctaHeading: "Ready to cover your retail business?",
     ctaSubhead:
-      "Tell us about your storefront and stock — we'll compare options that fit.",
+      "Tell us about your storefront, stock, and sales channels — we will compare retail programs that fit.",
     serviceName: "Retail Insurance",
   },
   {

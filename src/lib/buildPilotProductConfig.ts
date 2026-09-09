@@ -247,7 +247,10 @@ export function adaptCommercialProductContent(
       content.slug === "business-interruption-insurance" ||
       content.slug === "condominium-corporation-insurance" ||
       content.slug === "garage-dealership-insurance" ||
-      content.slug === "pollution-liability-insurance"
+      content.slug === "pollution-liability-insurance" ||
+      content.slug === "grocery-specialty-food-insurance" ||
+      content.slug === "fitness-gym-insurance" ||
+      content.slug === "religious-organizations-insurance"
         ? "expandable"
         : "grid",
   });
@@ -290,9 +293,11 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "Builder's Risk", href: "/builders-risk-insurance/" },
   ],
   "retail-insurance": [
-    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Small Business", href: "/small-business-insurance/" },
     { label: "Commercial Property", href: "/commercial-property-insurance/" },
-    { label: "Crime & Fidelity", href: "/crime-fidelity-insurance/" },
+    { label: "Grocery & Specialty Food", href: "/grocery-specialty-food-insurance/" },
+    { label: "Convenience Store", href: "/convenience-store-insurance/" },
+    { label: "Pharmacy", href: "/pharmacy-insurance/" },
   ],
   "food-truck-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
@@ -357,7 +362,9 @@ export function adaptCommercialIndustryContent(
                       ? "For Windsor–Essex businesses and commercial property owners insuring buildings, contents, inventory, and leasehold interests — reviewed through an independent broker who can coordinate property limits, optional endorsements, and business interruption where a covered loss would interrupt operations."
                       : content.slug === "commercial-auto-insurance"
                         ? "For Windsor–Essex service businesses, contractors, trades, local delivery operations, and companies with vans, pickups, or business-owned passenger vehicles — reviewed through an independent broker who can coordinate Ontario automobile coverage, optional physical damage, and hired/non-owned auto without treating every risk like a for-hire motor carrier."
-                        : content.whoItIsFor ?? content.subhead,
+                        : content.slug === "retail-insurance"
+                          ? "For Windsor–Essex clothing stores, gift shops, electronics retailers, furniture and home-goods shops, and other ordinary storefront retailers — reviewed through an independent broker who can coordinate liability, property, inventory, and optional crime or cyber coverage for how you actually sell."
+                          : content.whoItIsFor ?? content.subhead,
     showTrustBand: content.slug !== "restaurant-insurance",
     considerationsPresentation:
       content.slug === "restaurant-insurance" ||
@@ -369,7 +376,8 @@ export function adaptCommercialIndustryContent(
       content.slug === "professional-offices-insurance" ||
       content.slug === "real-estate-insurance" ||
       content.slug === "commercial-property-insurance" ||
-      content.slug === "commercial-auto-insurance"
+      content.slug === "commercial-auto-insurance" ||
+      content.slug === "retail-insurance"
         ? "expandable"
         : "grid",
     coverageHeading: "What's covered",

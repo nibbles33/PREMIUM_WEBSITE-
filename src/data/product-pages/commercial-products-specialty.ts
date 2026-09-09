@@ -287,42 +287,104 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     metaTitle:
       "Grocery, Specialty Food & Bakery Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Grocery, specialty food, and bakery insurance — spoilage, product liability, equipment breakdown, and retail property for Windsor-Essex food sellers.",
+      "Grocery, specialty food, and bakery insurance through an independent Windsor-Essex broker — commercial property, spoilage and refrigeration endorsements, product liability, and premises liability for food retailers with limited preparation.",
     headline: "Grocery, Specialty Food & Bakery Insurance",
     subhead:
-      "Coverage for food retailers and artisan producers — spoilage, refrigeration breakdown, product liability, and customer-facing premises risk.",
+      "Grocery stores, specialty food markets, butcher shops, bakeries, and delis with limited in-store preparation face perishable inventory, refrigeration equipment, and food-product liability exposures that differ from full-service restaurants, convenience stores with fuel, or general merchandise retail. Depending on your operation, that can mean commercial property for stock and fixtures, optional spoilage or equipment-breakdown endorsements for refrigerated loss, products liability for illness or allergen allegations, and general liability for customer incidents on premises — each subject to the policies you purchase. Spoilage does not automatically respond because food became unusable; equipment breakdown, utility interruption, and off-premises power failure follow different triggers. Primarily prepared-food and table-service operations belong on our restaurant page. Premium Insurance Brokers can help Windsor–Essex food retailers align coverage to your refrigeration, preparation level, and product mix.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Food Retail Quote",
     coverageIntro:
-      "Food retail combines inventory spoilage, product liability, and equipment failure exposures unique to perishable goods.",
+      "Food retail insurance is organized around property and stock, optional spoilage and refrigeration endorsements, food products liability, and customer premises liability — because each coverage responds to different triggers and is purchased separately on most programs.",
     coverageTypes: [
       {
-        title: "Commercial Property & Inventory",
+        id: "commercial-property-inventory",
+        title: "Store Property & Stock",
+        shortLabel: "Property",
         description:
-          "Covers stock, fixtures, and refrigeration equipment against covered theft, fire, and equipment failure.",
+          "May help cover stock, fixtures, coolers, and point-of-sale equipment against covered direct physical loss such as fire or theft — subject to policy causes of loss, limits, deductibles, and valuation. Mechanical refrigeration failure and spoilage typically require separate endorsements.",
+        detailTitle: "Coolers and peak holiday stock drive values",
+        detailDescription:
+          "Food retailers concentrate value in refrigerated and frozen inventory, display cases, and back-room stock — with seasonal peaks around holidays and harvest periods. Base commercial property may address certain fire, theft, and water losses to stock and fixtures, but equipment breakdown of compressors and spoilage from temperature rise are separate coverage questions requiring their own endorsements where available. Report peak inventory and cooler values accurately — underinsurance can reduce recovery after a partial loss on many commercial property forms.",
         icon: Store,
       },
       {
-        title: "Spoilage & Refrigeration Breakdown",
+        id: "spoilage-refrigeration-breakdown",
+        title: "Spoilage & Refrigeration (Optional)",
+        shortLabel: "Spoilage",
         description:
-          "Can cover inventory lost when coolers fail or power is interrupted, subject to policy terms.",
+          "Where purchased as a spoilage or equipment-breakdown endorsement, may address certain loss of perishable stock from mechanical failure, contamination, or specified power interruption — subject to limits, deductibles, waiting periods, maintenance conditions, and cause-of-loss definitions in the endorsement.",
+        detailTitle: "A compressor failure can empty the dairy case",
+        detailDescription:
+          "Perishable inventory loss does not automatically respond under base property because food became unusable. Spoilage endorsements — such as common CP 04 40 patterns — typically cover named perishable stock only, with their own limits and deductibles. Equipment breakdown addresses mechanical failure of refrigeration equipment; on-premises power interruption may be covered only where the spoilage endorsement schedules that cause. Off-premises utility failure often requires separate utility-services direct-damage or time-element endorsements working together with spoilage — not assumed in every food retail quote. Maintenance and inspection conditions may apply.",
         icon: UtensilsCrossed,
       },
       {
-        title: "Product Liability",
+        id: "product-liability",
+        title: "Food Products Liability",
+        shortLabel: "Products",
         description:
-          "Addresses illness or injury claims from food products you sell or produce.",
+          "May help address certain claims alleging bodily injury from food products you sell or prepare for retail — including allergen and foodborne-illness allegations — subject to products-completed operations wording, exclusions, and limits.",
+        detailTitle: "One allergen label error can reach the whole chain",
+        detailDescription:
+          "Bakeries, delis, and specialty food counters that prepare or repackage goods face product liability exposure when a customer alleges illness, allergic reaction, or contamination from food sold at the store. Products liability is distinct from premises slip-and-fall claims and from first-party product recall or withdrawal expense — recall costs are addressed on our product recall page, not automatically under general liability. Food safety compliance under Ontario food-premises rules supports operations but does not replace liability coverage.",
         icon: Briefcase,
       },
       {
-        title: "General Liability",
+        id: "general-liability",
+        title: "Customer Premises Liability",
+        shortLabel: "Liability",
         description:
-          "Covers customer injury on premises — spills, display cases, and parking areas.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from customer incidents on your premises — aisle spills, display hazards, or parking-area injuries — subject to policy terms, exclusions, and limits.",
+        detailTitle: "Spills and carts create premises exposure",
+        detailDescription:
+          "Food retail premises exposure concentrates in wet produce areas, busy aisles, loading zones, and winter parking lots — separate from foodborne illness claims that typically fall under products liability depending on how the loss is framed. If you hold an AGCO Grocery Store Licence for packaged retail alcohol, that creates underwriting questions distinct from on-premises liquor service at restaurants — AGCO does not prescribe a named liquor-liability insurance product in its public grocery guides. Delivery using company or employee vehicles may need commercial auto coverage separate from store liability.",
         icon: Shield,
       },
     ],
     whoItIsFor:
-      "Grocery and specialty food insurance is for Windsor-Essex grocers, butcher shops, bakeries, specialty food stores, and delis selling perishable products.",
+      "For Windsor–Essex grocers, butcher shops, bakeries, specialty food stores, and delis with limited food preparation — reviewed through an independent broker who can coordinate property, spoilage endorsements, and food liability for how you actually sell.",
+    considerations: [
+      {
+        title: "Refrigeration equipment and maintenance",
+        description:
+          "Walk-in coolers, display cases, and compressors represent both property values and spoilage triggers. Equipment breakdown and spoilage endorsements, where purchased, may include maintenance or inspection conditions. Document service records and disclose equipment age during underwriting — mechanical failure coverage is endorsement-specific, not automatic in base property.",
+      },
+      {
+        title: "Spoilage endorsement vs utility interruption",
+        description:
+          "Spoilage, equipment breakdown, and utility interruption are distinct triggers on most commercial programs. On-premises power loss may be addressed only where a spoilage endorsement schedules that cause; off-premises utility failure often needs separate utility-services endorsements. Do not assume one endorsement covers every scenario where refrigerated stock becomes unusable.",
+      },
+      {
+        title: "Food preparation level — deli, bakery, or prepack only",
+        description:
+          "Limited slicing, baking, or deli preparation on this route differs from primarily prepared-food and table-service restaurants on our restaurant page. O. Reg. 493/17 under the Health Protection and Promotion Act may apply where food is prepared or served — a regulatory obligation separate from insurance. Disclose preparation activities so products and premises coverage match your actual operation.",
+      },
+      {
+        title: "Product liability vs recall expense",
+        description:
+          "Products liability may address certain third-party injury claims from food sold at your store. Product recall or withdrawal expense — the cost of pulling product from shelves — is a separate first-party coverage on our product recall page. General liability does not automatically pay recall costs even when a product issue also generates injury allegations.",
+      },
+      {
+        title: "Food safety compliance — regulatory, not insurance",
+        description:
+          "Ontario food-premises requirements, certified food handlers where applicable, and inspection compliance are regulatory duties under public-health law — separate from purchasing property or liability insurance. Compliance supports safer operations but does not substitute for products liability where food-related claims arise.",
+      },
+      {
+        title: "AGCO retail alcohol where applicable",
+        description:
+          "Eligible grocers may hold an AGCO Grocery Store Licence for retail sale of beer, wine, and ready-to-drink beverages — distinct from on-premises liquor service at bars or restaurants. AGCO guides set licensing obligations but do not prescribe a named liquor-liability insurance limit in public materials. If you sell packaged alcohol, disclose authorization and storage practices during underwriting.",
+      },
+      {
+        title: "Delivery and commercial auto",
+        description:
+          "Local delivery using company vehicles, employee personal cars, or third-party apps creates automobile liability exposure separate from store property and general liability. Commercial auto or hired and non-owned auto coverage may be needed where you deliver — vehicle use on public roads is not the same coverage question as a slip in the aisle.",
+      },
+      {
+        title: "Business interruption after covered property loss",
+        description:
+          "When a covered fire, equipment failure, or other insured property loss closes your store, business interruption — where purchased — may address certain lost income subject to waiting periods and policy triggers. Utility outage alone may not trigger BI unless specific endorsements apply. Coordinate property, spoilage, and BI limits with your fixed costs and lease obligations.",
+      },
+    ],
     relatedLinks: [
       { label: "Retail Insurance", href: "/retail-insurance/" },
       { label: "Product Recall", href: "/product-recall-insurance/" },
@@ -331,29 +393,34 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     faqTitle: "Grocery & specialty food FAQ",
     faqItems: [
       {
-        question: "Is power outage spoilage covered?",
+        question: "Does insurance cover spoiled refrigerated stock?",
         answer:
-          "Spoilage endorsements may cover inventory lost during extended outages, subject to waiting periods and cause-of-loss definitions.",
+          "Perishable stock loss is not automatic because food became unusable. Spoilage endorsements, where purchased, may address certain loss from mechanical breakdown, contamination, or specified power interruption — subject to limits, deductibles, waiting periods, and maintenance conditions. Equipment breakdown and off-premises utility failure follow different triggers and may need separate endorsements. Review your program with your broker rather than assuming base property covers every cooler failure.",
       },
       {
-        question: "Do bakeries need product liability?",
+        question: "What if a customer alleges foodborne illness?",
         answer:
-          "Yes — allergen claims and foodborne illness allegations are product liability exposures for any food seller.",
+          "Products liability coverage, where included in your program, may address certain third-party bodily injury claims alleging illness or allergic reaction from food you sold or prepared — subject to policy wording, exclusions, and limits. Premises liability and products liability respond to different claim types. Food safety compliance is regulatory — separate from whether a specific claim is covered under your policy.",
       },
       {
-        question: "Are delivery operations covered?",
+        question: "Is product recall included with liability?",
         answer:
-          "In-store delivery using company or employee vehicles may need commercial auto or non-owned auto coverage.",
+          "No — product recall or withdrawal expense is typically a separate first-party coverage, not automatic under general or products liability. Recall costs — pulling product from shelves, notifying customers, destroying stock — are addressed on our product recall page. Products liability may address certain third-party injury claims from the same incident, but the recall expense itself is a different coverage question.",
       },
       {
-        question: "How are seasonal inventory peaks handled?",
+        question: "What about refrigeration breakdown or power failure?",
         answer:
-          "Holiday and harvest peaks may need higher seasonal limits. Report peak inventory values to your broker.",
+          "Mechanical breakdown of refrigeration equipment may be addressed under an equipment breakdown endorsement where purchased. Spoilage endorsements may cover perishable stock loss from specified causes — sometimes including on-premises power interruption — subject to waiting periods and cause definitions. Off-premises utility failure often requires utility-services endorsements in addition to spoilage. These are distinct triggers; confirm each endorsement on your binder.",
+      },
+      {
+        question: "What information is needed to quote?",
+        answer:
+          "Square footage, product mix, refrigeration equipment details, food preparation activities, inventory and peak stock values, delivery practices, AGCO grocery alcohol licence status if applicable, and any landlord or supplier certificate requirements. Seasonal peaks and recent equipment upgrades should be disclosed so spoilage and property limits match your operation.",
       },
     ],
     ctaHeading: "Sell food at retail?",
     ctaSubhead:
-      "Share your product mix, refrigeration setup, and sales volume — we will compare food retail programs.",
+      "Share your product mix, refrigeration setup, and preparation level — we will compare food retail programs.",
     serviceName: "Grocery, Specialty Food & Bakery Insurance",
   },
   {
@@ -635,68 +702,135 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     metaTitle:
       "Fitness & Gym Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Fitness and gym insurance — general liability, professional liability for trainers, property, and participant injury for Windsor-Essex fitness businesses.",
+      "Fitness and gym insurance through an independent Windsor-Essex broker — general liability, professional liability for trainers, commercial property, and abuse coverage where available for gyms, studios, and fitness operators.",
     headline: "Fitness & Gym Insurance",
     subhead:
-      "Coverage for gyms, studios, and fitness operators — participant injury, equipment, trainer liability, and premises risk.",
+      "Gyms, fitness centres, boutique studios, yoga and pilates spaces, personal-training operations, and martial arts schools combine premises injury exposure, instruction-related professional claims, equipment values, and — where youth or vulnerable-person programs exist — specialized abuse coverage reviewed separately from general liability. Depending on your facility, that can mean commercial general liability for certain premises and operations claims, professional or fitness liability for negligent instruction allegations, commercial property for equipment and leasehold improvements, and abuse or misconduct coverage where purchased — each subject to policy terms. Participant injury during activity is not automatically a general liability claim when the allegation centres on programming or coaching advice. Waivers may be part of risk management, but waivers do not replace insurance, do not prevent lawsuits, and do not guarantee enforceability under Ontario law — including principles under the Occupiers' Liability Act. Premium Insurance Brokers can help Windsor–Essex fitness operators align coverage to your trainers, activities, and member profile.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Fitness Quote",
     coverageIntro:
-      "Fitness businesses face participant injury claims, equipment liability, and professional exposure from trainers and instructors.",
+      "Fitness insurance is organized around premises liability, trainer and instruction liability, property and equipment, and — where relevant — abuse or misconduct coverage — because general liability and professional liability respond to different claim types and are not interchangeable.",
     coverageTypes: [
       {
-        title: "General Liability",
+        id: "general-liability",
+        title: "Premises & Operations Liability",
+        shortLabel: "GL",
         description:
-          "Covers member slip-and-fall, equipment-related injury, and premises claims in workout areas.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from premises conditions — slip-and-fall hazards, equipment layout, or maintenance issues in workout areas — subject to policy terms, exclusions, and limits.",
+        detailTitle: "A loose cable on the gym floor is a premises claim",
+        detailDescription:
+          "General liability for fitness operations typically addresses premises and operations exposure — wet floors, poorly maintained equipment in common areas, and visitor injuries in lobbies or locker rooms. Claims alleging negligent personal training, class programming, or exercise prescription often fall under professional or fitness liability depending on how the claim is framed — not every participant injury is treated as ordinary premises liability. Assumption-of-risk waivers may be part of risk management under Ontario occupiers' liability principles, but enforceability depends on wording, notice, activity type, and facts — waivers do not replace insurance.",
         icon: Briefcase,
       },
       {
-        title: "Professional Liability",
+        id: "professional-liability",
+        title: "Trainer & Instruction Liability",
+        shortLabel: "Prof.",
         description:
-          "Addresses claims alleging negligent instruction, programming, or personal training advice.",
+          "May help address certain claims alleging negligent instruction, exercise programming, personal training advice, or supervision failures — subject to policy definitions, exclusions, and limits. Distinct from general liability for ordinary premises injury.",
+        detailTitle: "Bad programming allegations aren't ordinary slip-and-falls",
+        detailDescription:
+          "When a member alleges injury because a trainer prescribed the wrong exercise, progressed load too quickly, or failed to screen for a medical condition, the claim often implicates professional or fitness liability rather than premises coverage. Employee trainers, contract instructors, and independent contractors create different underwriting questions — disclose who delivers classes and whether trainers carry their own coverage. General liability does not automatically respond to professional instruction allegations.",
         icon: Dumbbell,
       },
       {
-        title: "Commercial Property",
+        id: "commercial-property",
+        title: "Equipment & Fit-Out Property",
+        shortLabel: "Property",
         description:
-          "Covers cardio machines, weights, flooring, and leasehold improvements.",
+          "May help cover cardio machines, weights, flooring, mirrors, and leasehold improvements against covered direct physical loss — subject to policy causes of loss, limits, deductibles, and valuation.",
+        detailTitle: "A treadmill fleet is a capital exposure",
+        detailDescription:
+          "Fitness equipment, rubber flooring, sound systems, and tenant build-outs represent significant property values — especially in boutique studios with specialized rigs. Base commercial property may address certain fire, theft, and water losses subject to causes of loss and security conditions. Equipment breakdown for HVAC or electrical failure may require a separate endorsement where available. Accurate scheduling of high-value machines supports proper limits after a partial loss.",
         icon: Building2,
       },
       {
-        title: "Sexual Abuse & Misconduct",
+        id: "sexual-abuse-misconduct",
+        title: "Abuse & Misconduct (Where Available)",
+        shortLabel: "Abuse",
         description:
-          "Some markets offer coverage for claims alleging abuse by staff — important for youth and vulnerable populations.",
+          "Where available as a specialized coverage, may help address certain claims alleging abuse or misconduct by staff or volunteers — subject to policy wording, limits, exclusions, and underwriting review of screening practices. Not automatic on general liability.",
+        detailTitle: "Youth classes change the coverage conversation",
+        detailDescription:
+          "Youth programs, camps, and classes serving minors or vulnerable persons may need abuse or misconduct liability reviewed as a distinct coverage — many general liability forms contain abuse exclusions. Specialized coverage, where offered, is policy-dependent and may review supervision, background checks, and safeguarding policies during underwriting. Coverage may address organizational response to allegations subject to wording — not indemnification of intentional criminal conduct by a perpetrator.",
         icon: Shield,
       },
     ],
     whoItIsFor:
-      "Fitness and gym insurance is for Windsor-Essex gyms, CrossFit boxes, yoga studios, martial arts schools, and personal training businesses.",
+      "For Windsor–Essex gyms, CrossFit boxes, yoga and pilates studios, martial arts schools, and personal training businesses — reviewed through an independent broker who can coordinate premises liability, instruction liability, property, and youth-program coverage for how you actually train.",
+    considerations: [
+      {
+        title: "Member volume and activity types",
+        description:
+          "High-intensity classes, contact martial arts, obstacle courses, and unsupervised open-gym periods create different injury profiles than appointment-only personal training. Disclose all activity types, age groups, and peak occupancy so liability and property limits reflect actual exposure — not a generic fitness template.",
+      },
+      {
+        title: "Equipment values and maintenance logs",
+        description:
+          "Cardio fleets, free weights, rigging, and specialized machines should be scheduled at accurate replacement values. Insurers may review maintenance and inspection practices for premises claims involving equipment failure. Equipment breakdown for HVAC or electrical systems may require a separate endorsement where available.",
+      },
+      {
+        title: "Employee vs contract trainers",
+        description:
+          "W-2 employees, independent contractors, and visiting instructors create different professional liability and additional-insured questions. Contract trainers may need their own professional coverage — your policy should reflect who employs or contracts each instructor and whether certificates are required.",
+      },
+      {
+        title: "Professional and instruction exposure",
+        description:
+          "Personal training, nutrition advice beyond generic wellness, physical therapy-style services, and medical-adjacent programming may fall outside standard fitness professional forms. Disclose the full scope of instruction so professional liability matches what you actually deliver — general liability alone does not address negligent coaching allegations.",
+      },
+      {
+        title: "Waivers as risk management — not insurance replacement",
+        description:
+          "Assumption-of-risk waivers and membership agreements may be part of risk management under the Occupiers' Liability Act and related Ontario case law, but enforceability depends on wording, notice, the activity involved, and case-specific facts. Waivers do not replace insurance, do not prevent lawsuits, and do not guarantee a court will bar a claim. Maintain insurance alongside waiver programs rather than treating signed forms as comprehensive protection.",
+      },
+      {
+        title: "Youth programs and abuse coverage",
+        description:
+          "Classes, camps, or childcare rooms serving minors may need abuse or misconduct coverage reviewed separately from general liability — many CGL forms exclude abuse-related claims. Insurers offering specialized coverage often review screening, supervision ratios, and safeguarding policies. Youth programming should be disclosed during underwriting even when abuse coverage is not ultimately required.",
+      },
+      {
+        title: "Off-site boot camps and events",
+        description:
+          "Outdoor boot camps, charity events, and pop-up classes at parks or partner venues extend liability beyond your primary address. Off-site activities may need event liability review or location endorsements depending on size, activities, and venue contracts — disclose all programming locations to your broker.",
+      },
+      {
+        title: "Supplements and retail merchandise",
+        description:
+          "Selling supplements, apparel, or equipment creates products liability exposure separate from premises injury. Product claims from merchandise you retail may fall under products liability depending on policy wording — disclose retail activity and supplier relationships during underwriting.",
+      },
+    ],
     relatedLinks: [
-      { label: "Salon / Barber", href: "/salon-barber-insurance/" },
+      { label: "Professional Liability", href: "/professional-liability-insurance/" },
       { label: "Event Liability", href: "/event-liability-insurance/" },
       { label: "Small Business Insurance", href: "/small-business-insurance/" },
     ],
     faqTitle: "Fitness & gym FAQ",
     faqItems: [
       {
-        question: "Are member injuries covered?",
+        question: "What policies should a Windsor–Essex gym or studio review?",
         answer:
-          "GL may respond to premises liability claims. Assumption-of-risk waivers do not replace insurance — carriers still evaluate supervision and equipment maintenance.",
+          "Most fitness operators review commercial general liability for premises exposure, professional or fitness liability for instruction-related claims, and commercial property for equipment and leasehold improvements. Youth programs may also need abuse or misconduct coverage reviewed separately. Each coverage is subject to the policies you purchase — a package description is not a guarantee every component is included until confirmed on your binder.",
       },
       {
-        question: "Do independent trainers need their own coverage?",
+        question: "Can negligent coaching allegations fall under professional liability?",
         answer:
-          "Contract trainers may need their own professional liability. Your policy should reflect who employs or contracts instructors.",
+          "Claims alleging negligent instruction, programming, or personal training advice often implicate professional or fitness liability rather than general premises coverage — depending on how the claim is framed and your policy wording. General liability may address certain slip-and-fall or premises maintenance claims, but it does not automatically respond to professional coaching allegations. Confirm how your program separates GL and professional coverage.",
       },
       {
-        question: "Is child fitness different to insure?",
+        question: "Why do member waivers not replace gym insurance?",
         answer:
-          "Youth programs may need enhanced abuse and molestation coverage and stricter screening protocols.",
+          "Assumption-of-risk waivers may be part of risk management, but waivers do not replace insurance and do not guarantee a claim will be barred. Enforceability under Ontario law depends on wording, notice, the activity involved, and case-specific facts — including principles under the Occupiers' Liability Act. Maintain appropriate liability coverage alongside waiver programs.",
       },
       {
-        question: "Are special events and boot camps covered?",
+        question: "Should youth fitness classes trigger an abuse-coverage review?",
         answer:
-          "Off-site events may need event liability or activity-specific endorsements. Disclose all programming locations.",
+          "Youth classes, camps, and programs serving minors may need abuse or misconduct coverage reviewed as a distinct coverage — not assumed to be included in general liability. Insurers offering specialized coverage often review screening, supervision, and safeguarding practices during underwriting. Disclose all youth programming so your broker can align coverage to actual exposure.",
+      },
+      {
+        question: "What gym details help an accurate fitness insurance quote?",
+        answer:
+          "Member count, square footage, activity types, employee vs contract trainer arrangements, equipment values, youth program details, off-site class locations, retail merchandise sold, waiver practices, and any landlord or franchise certificate requirements. Recent build-outs and new program lines should be disclosed at renewal.",
       },
     ],
     ctaHeading: "Operate a gym or fitness studio?",
@@ -969,68 +1103,135 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     metaTitle:
       "Religious Organization Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Church and religious organization insurance — property, liability, abuse coverage, and event exposure for Windsor-Essex faith communities.",
+      "Church and religious organization insurance through an independent Windsor-Essex broker — worship property, congregation liability, pastoral counselling, and abuse coverage where available for faith communities.",
     headline: "Religious Organization Insurance",
     subhead:
-      "Coverage for churches, temples, and faith communities — worship premises, events, pastoral counselling liability, and property.",
+      "Churches, mosques, synagogues, temples, and faith-based community centres combine worship premises, congregation activities, hall rentals, pastoral counselling, and — where youth or vulnerable-person programs exist — abuse coverage reviewed separately from general liability. This route focuses on houses of worship and faith-community operations — distinct from broader charitable governance on our non-profit page. Depending on your organization, that can mean commercial property for sanctuaries, halls, and contents, general liability for visitor and event exposure, pastoral counselling liability where included, and abuse or molestation coverage where purchased — each subject to policy terms. Volunteers are not automatically covered under general liability or WSIB. Abuse coverage is not automatic on CGL and is not a statutory insurance requirement for every faith community. Premium Insurance Brokers can help Windsor–Essex faith communities align coverage to your facilities, programs, and governance structure.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Church Quote",
     coverageIntro:
-      "Religious organizations combine property, congregation liability, and sensitive counselling and youth program exposures.",
+      "Religious organization insurance is organized around worship property, congregation and visitor liability, pastoral counselling where applicable, and abuse or misconduct coverage where programs warrant — because each exposure maps to different policy parts and is not assumed in every package.",
     coverageTypes: [
       {
-        title: "Commercial Property",
+        id: "commercial-property",
+        title: "Worship Property & Contents",
+        shortLabel: "Property",
         description:
-          "Covers sanctuaries, halls, offices, and contents including audio-visual equipment.",
+          "May help cover sanctuaries, fellowship halls, offices, kitchens, and contents including audio-visual equipment against covered direct physical loss — subject to policy causes of loss, limits, deductibles, and valuation.",
+        detailTitle: "Stained glass and AV can exceed ordinary contents limits",
+        detailDescription:
+          "Houses of worship often hold specialty property — stained glass, organs, historic finishes, and production-grade AV — that may need agreed values or scheduling beyond generic contents limits. Heritage buildings may have restoration requirements that differ from standard replacement-cost assumptions. Kitchens, community halls, and office wings add property values separate from the sanctuary itself. Confirm what your organization owns versus what a landlord or denomination carries on a master policy.",
         icon: Church,
       },
       {
-        title: "General Liability",
+        id: "general-liability",
+        title: "Congregation & Visitor Liability",
+        shortLabel: "Liability",
         description:
-          "Addresses injury claims on premises, parking lots, and during congregational activities.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from visitor incidents on premises, parking areas, and congregational activities — subject to policy terms, exclusions, and limits.",
+        detailTitle: "A winter parking-lot fall reaches the organization",
+        detailDescription:
+          "Congregation and visitor exposure includes services, fellowship events, food preparation in church kitchens, and parking-lot injuries — especially in winter. Hall rentals to third parties may create premises exposure and certificate requirements; renters often need their own event liability depending on the contract. Off-site mission trips and community programs may extend beyond the primary address depending on policy wording and what was disclosed during underwriting — not every activity is automatically covered.",
         icon: Briefcase,
       },
       {
-        title: "Pastoral Counselling Liability",
+        id: "pastoral-counselling-liability",
+        title: "Pastoral Counselling (Where Included)",
+        shortLabel: "Counselling",
         description:
-          "May address professional counselling claims, subject to policy definitions and qualifications.",
+          "Where included in the program, may help address certain claims arising from pastoral or spiritual counselling services — subject to policy definitions, qualifications, credentials, and exclusions. Distinct from general premises liability.",
+        detailTitle: "Counselling allegations need the right policy part",
+        detailDescription:
+          "Pastoral counselling, spiritual direction, and marriage support offered by clergy or lay counsellors may create professional liability exposure separate from a slip in the nave. Whether coverage responds depends on policy wording, counsellor credentials, and whether services were disclosed during underwriting. Licensed mental-health practitioners may need different professional coverage than informal pastoral care — disclose all counselling programs to your broker.",
         icon: Shield,
       },
       {
-        title: "Abuse & Molestation",
+        id: "abuse-molestation",
+        title: "Abuse & Molestation (Where Available)",
+        shortLabel: "Abuse",
         description:
-          "Critical coverage for organizations with youth and vulnerable population programs.",
+          "Where available as a specialized coverage, may help address certain claims alleging abuse or misconduct involving youth or vulnerable persons — subject to policy wording, limits, exclusions, and underwriting review. Not automatic on general liability.",
+        detailTitle: "Youth ministry deserves its own coverage review",
+        detailDescription:
+          "Youth ministries, childcare rooms, and programs serving vulnerable persons may need abuse or molestation liability reviewed separately — many general liability forms contain abuse exclusions. Specialized coverage, where offered, is policy-dependent and may review screening, supervision, and safeguarding policies. Coverage may address organizational response to allegations subject to wording — not indemnification of intentional criminal conduct by a perpetrator. Safeguarding practices support safer programs but do not replace appropriate coverage review.",
         icon: Users,
       },
     ],
     whoItIsFor:
-      "Religious organization insurance is for Windsor-Essex churches, mosques, synagogues, temples, and faith-based community centres.",
+      "For Windsor–Essex churches, mosques, synagogues, temples, and faith-based community centres — reviewed through an independent broker who can coordinate worship property, congregation liability, pastoral counselling, and youth-program coverage for how your faith community actually operates.",
+    considerations: [
+      {
+        title: "Building use — worship, hall rental, and kitchen",
+        description:
+          "Multi-use campuses combining sanctuary worship, fellowship halls, commercial kitchens, and office space create different property and liability profiles than a single-purpose chapel. Hall rentals to third parties may require certificate tracking and renter insurance — contractual requirements separate from what your policy automatically includes for every event.",
+      },
+      {
+        title: "Attendance, events, and off-site programs",
+        description:
+          "Large festivals, outreach events, mission trips, and community suppers extend liability beyond regular services. Off-site activities and high-attendance events should be disclosed during underwriting — not every gathering is treated the same under premises coverage depending on policy wording.",
+      },
+      {
+        title: "Hall rental and third-party user certificates",
+        description:
+          "Renting fellowship halls to community groups, weddings, or external organizations may require additional-insured certificates and minimum limits in rental agreements. Third-party renters often need their own event liability — your general liability may not extend to every activity a renter conducts. Review rental contracts alongside your policy.",
+      },
+      {
+        title: "Youth and vulnerable-person programs",
+        description:
+          "Sunday schools, youth groups, nurseries, and senior programs serving vulnerable persons may need abuse or misconduct coverage reviewed separately from general liability. Insurers offering specialized coverage often review background checks, supervision ratios, and safeguarding policies. Program details should be disclosed even when abuse coverage is ultimately not purchased.",
+      },
+      {
+        title: "Volunteers vs paid staff — WSIB and liability context",
+        description:
+          "Unpaid volunteers serving faith communities are generally not WSIB-covered the way paid workers are — WSIB registration for paid staff depends on your organization's industry classification and activities. Volunteers are not automatically insured under general liability for their own injuries. Optional volunteer accident coverage, where purchased, may address limited medical benefits — separate from WSIB and from abuse coverage where youth programs exist.",
+      },
+      {
+        title: "Board governance and D&O cross-link",
+        description:
+          "Trustees, boards, and governance committees may face management and governance claims addressed by directors and officers coverage — separate from general liability for premises injury. Full Side A/B/C education lives on our directors and officers page; mention governance exposure here and cross-link rather than duplicating D&O precision on this route.",
+      },
+      {
+        title: "Heritage and specialty property values",
+        description:
+          "Historic sanctuaries, stained glass, organs, and artisan finishes may need agreed values or specialty scheduling. Restoration after a partial loss may follow different valuation assumptions than standard commercial contents — accurate values support proper limits and avoid underinsurance penalties on some forms.",
+      },
+      {
+        title: "Donations, online giving, and cyber/crime",
+        description:
+          "Online giving platforms, member databases, and donation processing create cyber and fraud exposure. Employee or volunteer dishonesty may require crime or fidelity coverage separate from property theft of physical items. Disclose how donations are collected and who handles funds during underwriting.",
+      },
+    ],
     relatedLinks: [
       { label: "Non-Profit Insurance", href: "/non-profit-insurance/" },
-      { label: "Daycare / Private School", href: "/daycare-private-school-insurance/" },
+      { label: "Directors & Officers", href: "/directors-officers-insurance/" },
       { label: "Event Liability", href: "/event-liability-insurance/" },
     ],
     faqTitle: "Religious organization FAQ",
     faqItems: [
       {
-        question: "Is the pastor covered for counselling?",
+        question: "What insurance does a house of worship need?",
         answer:
-          "Pastoral professional liability may apply depending on credentials and policy wording. Disclose all counselling services.",
+          "Most Windsor–Essex faith communities review commercial property for buildings and contents, general liability for visitor and event exposure, pastoral counselling liability where counselling services are offered, and abuse or misconduct coverage where youth or vulnerable-person programs exist — each subject to the policies you purchase. Governance exposure may also warrant directors and officers coverage on our D&O page. A package description is not a guarantee every component is included until confirmed on your binder.",
       },
       {
-        question: "Are rental hall users covered?",
+        question: "Are volunteers automatically covered?",
         answer:
-          "Third-party renters may need their own event liability. Your policy may require additional insured certificates from renters.",
+          "No. Volunteers are not automatically insured under general liability for their own injuries, and unpaid volunteers are generally not WSIB-covered the way paid workers are. Optional volunteer accident coverage, where purchased, may provide limited medical benefits for volunteers injured during approved activities — subject to policy terms. Paid staff may require WSIB registration depending on your organization's activities and industry classification — review with your broker rather than assuming universal coverage.",
       },
       {
-        question: "Do youth programs need special coverage?",
+        question: "What about youth programs?",
         answer:
-          "Youth ministries typically require abuse and molestation coverage and background check protocols.",
+          "Youth ministries and programs serving minors or vulnerable persons should review abuse or misconduct coverage as a distinct question — not assumed to be included in general liability. Insurers offering specialized coverage often review screening, supervision, and safeguarding practices during underwriting. Safeguarding policies support safer programs but do not replace appropriate coverage review.",
       },
       {
-        question: "Is heritage building construction a factor?",
+        question: "Does the policy cover hall rentals and events?",
         answer:
-          "Older sanctuaries may have unique valuation and restoration requirements. Accurate building values matter.",
+          "Certain congregational activities and on-premises events may fall within general liability depending on policy wording and what was disclosed during underwriting. Hall rentals to third parties often require renters to carry their own event liability and name the organization as additional insured where the contract requires — certificate requirements are contractual, not automatic policy extensions for every renter activity.",
+      },
+      {
+        question: "What information is needed to quote?",
+        answer:
+          "Building age and construction, square footage, property values including specialty items, attendance and event frequency, hall rental practices, youth and counselling programs, volunteer and paid staff counts, online giving systems, and any denominational or landlord insurance requirements. Heritage features and recent renovations should be disclosed so property limits match actual values.",
       },
     ],
     ctaHeading: "Insure a faith community?",
