@@ -551,76 +551,135 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Commercial Property Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Commercial property insurance through an independent Windsor-Essex broker — building, contents, business interruption, and additional operating expenses.",
+      "Commercial property insurance through an independent Windsor-Essex broker — building, contents, tenant improvements, and optional endorsements coordinated with business interruption where needed.",
     headline: "Commercial Property Insurance",
     subhead:
-      "Protection for the building, contents, and income your business depends on.",
+      "Commercial property insurance addresses direct physical loss or damage to the building, contents, stock, and equipment your business owns or is required to insure — subject to the causes of loss, limits, deductibles, and endorsements on your policy. Whether you own the premises, lease space, or rent out a commercial building, the insurable interests differ: landlords typically insure the shell; tenants often insure contents, inventory, and leasehold improvements; owner-occupiers may need both. Valuation basis (replacement cost versus actual cash value), coinsurance, vacancy conditions, and optional extensions for water damage, sewer backup, earthquake, or overland flood are policy-dependent — not automatic in every form. Business interruption is a separate coverage that may coordinate with property after a covered loss. Premium Insurance Brokers can help Windsor–Essex businesses compare property programs for how you actually occupy and use your premises.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Property Quote",
     coverageIntro:
-      "Building blocks for protecting commercial premises and the income they generate.",
+      "Commercial property coverage is organized here by what you may need to insure — building, contents, optional equipment breakdown, and owner/lessor interests — because owned, leased, and rental-property exposures are structured differently on most policies.",
     coverageTypes: [
       {
+        id: "building-coverage",
         title: "Building Coverage",
+        shortLabel: "Building",
         description:
-          "Helps repair or rebuild the structure after covered damage such as fire or wind.",
+          "May help repair or rebuild the insured building structure and permanently attached improvements after covered direct physical loss — subject to causes of loss, valuation basis, limits, deductibles, and policy terms.",
+        detailTitle: "A fire doesn't pause your mortgage",
+        detailDescription:
+          "When you own the building or are contractually required to insure it under a lease or mortgage, the structure and attached improvements often represent your largest fixed asset. A covered fire, windstorm, or other insured peril can damage walls, roof, and built-in systems long before operations resume. Building limits should reflect current replacement or repair values — and coinsurance or agreed-value provisions on many forms can reduce recovery if values are understated. Vacancy or unoccupancy conditions may also restrict coverage if the premises sit empty beyond policy thresholds.",
         icon: Building2,
       },
       {
-        title: "Contents & Equipment",
+        id: "contents-equipment",
+        title: "Contents & Business Property",
+        shortLabel: "Contents",
         description:
-          "Protects furniture, stock, and business equipment against covered theft or damage.",
+          "May help cover furniture, fixtures, equipment, inventory, and stock against covered direct physical loss — subject to schedules, sublimits, causes of loss, and whether property is at the premises or temporarily away, as defined in the policy.",
+        detailTitle: "Your landlord's policy doesn't cover your desks",
+        detailDescription:
+          "Tenants and owner-operators both have insurable interest in movable business property — computers, production equipment, retail inventory, and stock — that a landlord's building policy typically does not cover. Leasehold improvements and betterments you paid to install may need separate scheduling or a tenant-improvements limit. Accurate contents and inventory values support proper limits; underinsurance can trigger coinsurance penalties on many commercial property forms after a partial loss.",
         icon: Store,
       },
       {
+        id: "equipment-breakdown",
         title: "Equipment Breakdown",
+        shortLabel: "Breakdown",
         description:
-          "Covers sudden mechanical or electrical failure of boilers, HVAC, and production equipment not addressed by standard property forms.",
+          "Where purchased as an endorsement or separate coverage, may address certain sudden mechanical or electrical failure of boilers, HVAC, compressors, and production equipment — losses many base property forms treat differently from fire or theft.",
+        detailTitle: "A failed compressor can stop production without fire",
+        detailDescription:
+          "Mechanical and electrical breakdown — a seized boiler, failed chiller, or burned-out motor — can halt operations without a traditional fire or theft claim. Base commercial property policies often exclude or limit these failure modes. Equipment breakdown coverage, where added, is designed for that gap — but triggers, sublimits, and waiting periods vary by insurer and form. Do not assume breakdown is included in a standard property quote; confirm whether your program needs a separate endorsement.",
         icon: Hammer,
       },
       {
-        title: "Commercial Landlord / Property Owner",
+        id: "commercial-landlord-property-owner",
+        title: "Commercial Property Owner / Lessor",
+        shortLabel: "Owner/Lessor",
         description:
-          "Protects rental property owners for building damage, landlord liability, and loss of rental income after a covered property loss.",
+          "May help address building, certain landlord-property, and loss-of-rental-income exposures for owners who lease commercial premises to tenants — where purchased and subject to policy terms, distinct from a tenant's contents and improvements coverage.",
+        detailTitle: "Rent cheques stop when the building is shut down",
+        detailDescription:
+          "If you own a commercial building and lease space to tenants, your insurable interests include the structure, common areas you retain, and — where endorsed — rental income lost after a covered property loss forces tenants out or delays re-leasing. This is commercial property owner exposure, not the same product as a residential landlord policy on a separate route. Tenant contents, leasehold improvements, and tenant liability remain the tenant's insurance conversation — coordinate certificates and lease insurance clauses with your broker rather than assuming one policy covers every party.",
         icon: KeyRound,
+      },
+    ],
+    whoItIsFor:
+      "For Windsor–Essex businesses and commercial property owners insuring buildings, contents, inventory, and leasehold interests — reviewed through an independent broker who can coordinate property limits, optional endorsements, and business interruption where a covered loss would interrupt operations.",
+    considerations: [
+      {
+        title: "Owned versus leased premises",
+        description:
+          "If you lease, the landlord typically insures the building shell while you may need contents, inventory, and tenant improvements coverage — plus liability separate from property. Leases often specify who insures what and may require you to name the landlord as an additional insured on liability, not property. Review your lease before binding limits.",
+      },
+      {
+        title: "Valuation basis — replacement cost versus actual cash value",
+        description:
+          "Policies may pay on a replacement-cost or actual-cash-value basis depending on form, property type, and endorsements purchased. Replacement cost generally aims to restore property without deducting depreciation; ACV reduces payment for age and wear. Neither is automatic in every policy — confirm how your building and contents are valued and whether replacement-cost coverage requires full repair or replacement.",
+      },
+      {
+        title: "Coinsurance and agreed value",
+        description:
+          "Many commercial property forms include a coinsurance clause requiring you to insure to a stated percentage of value — often 80% or 90% on many forms, though percentages vary. If limits at the time of loss fall short, a partial loss payment may be reduced even when total limits appear adequate on paper. Agreed-value or value-reporting options may be available on some programs — disclose accurate values at application and renewal.",
+      },
+      {
+        title: "Tenant improvements and betterments",
+        description:
+          "Build-outs, racking, and leasehold improvements you fund as a tenant may not be covered under the landlord's building policy. Schedule improvement values separately or confirm they sit within your contents limit. On sale or lease termination, who owns those improvements is also a contract question — insurance should align with insurable interest.",
+      },
+      {
+        title: "Stock, inventory, and equipment values",
+        description:
+          "Seasonal inventory swings, new production lines, and purchased equipment change insurable values throughout the year. Peak stock periods and high-value machinery may need scheduling or reporting. Business personal property limits that made sense at policy inception may be inadequate after growth — review values when operations change materially.",
+      },
+      {
+        title: "Water damage, sewer backup, and catastrophe extensions",
+        description:
+          "Base property forms vary in how they treat water escape, sewer backup, overland flood, and earthquake. These perils are often excluded or sub-limited unless endorsed — do not assume flood or sewer backup is included because fire and wind are covered. Windsor–Essex proximity to waterways and seasonal storms makes disclosure and optional extensions worth reviewing with your broker.",
+      },
+      {
+        title: "Vacancy and unoccupancy",
+        description:
+          "Many policies restrict or reduce coverage when premises are vacant or unoccupied beyond a stated number of consecutive days — common during renovations, seasonal shutdowns, or between tenants for commercial owners. Notify your broker when occupancy status changes; vacancy endorsements or different programs may be required.",
+      },
+      {
+        title: "Business interruption coordination",
+        description:
+          "Commercial property covers physical damage to insured property; business interruption — where purchased — addresses income and certain continuing expenses after a covered loss forces a temporary shutdown. BI is typically not automatic in every property quote and uses its own waiting periods, limits, and indemnity periods. Coordinate both coverages when a fire or major water loss would interrupt revenue while repairs continue.",
       },
     ],
     faqTitle: "Commercial property FAQ",
     faqItems: [
       {
-        question: "What's the difference between building and contents coverage?",
+        question: "What does commercial property insurance cover?",
         answer:
-          "Building coverage is for the structure and permanently attached improvements. Contents covers movable business property — furniture, equipment, and stock. Tenants often need contents even when the landlord insures the building.",
+          "Commercial property insurance may help respond to direct physical loss or damage to insured buildings, contents, equipment, and stock from covered perils — subject to causes of loss, limits, deductibles, and endorsements on your policy. It does not automatically cover every cause of loss, every piece of equipment, or income lost during repairs. Optional extensions for sewer backup, overland flood, earthquake, and equipment breakdown must be confirmed with your broker rather than assumed from a standard quote.",
       },
       {
-        question: "Does commercial property cover business interruption?",
+        question: "Does it cover inventory and equipment?",
         answer:
-          "Only if that coverage is included or added. Property coverage repairs physical damage; business interruption addresses income loss during the rebuild. Many businesses need both.",
+          "Business personal property — furniture, machinery, inventory, and stock — may be covered for covered direct physical loss when scheduled or included within contents limits, subject to policy terms. High-value items, property away from premises, and mechanical breakdown often need separate scheduling or endorsements. Tenants insure their own contents even when a landlord insures the building shell.",
       },
       {
-        question: "Am I covered if I rent my space?",
+        question: "What if I lease the premises?",
         answer:
-          "You typically need tenants' improvements and contents coverage, plus liability. The landlord's building policy usually doesn't cover your equipment, stock, or leasehold improvements.",
+          "Leased premises usually mean you insure contents, inventory, and tenant improvements while the landlord insures the building — but read your lease: some agreements shift more insurance responsibility to the tenant. You still need commercial general liability for operations on the premises. Bring your lease to your broker so property and liability limits match contractual requirements.",
       },
       {
-        question: "What information do I need for a property quote?",
+        question: "Is equipment breakdown included?",
         answer:
-          "Address, construction details, year built, square footage, occupancy, values for building and contents, alarm/sprinkler info, and current coverage. Photos or a statement of values help on larger risks.",
+          "Not automatically on most base property forms. Equipment breakdown coverage — where purchased — may address certain sudden mechanical or electrical failure of boilers, HVAC, and production equipment that standard property perils do not cover the same way. Confirm whether your quote includes an endorsement or a separate equipment breakdown policy.",
       },
       {
-        question: "Does commercial property cover equipment breakdown?",
+        question: "How are property limits determined?",
         answer:
-          "Standard property forms often exclude mechanical and electrical breakdown. Equipment breakdown coverage is typically added for HVAC, boilers, and production machinery.",
-      },
-      {
-        question: "What is commercial landlord coverage?",
-        answer:
-          "Landlord policies protect property owners who rent out commercial or residential units — covering the building, landlord liability, and sometimes rental income loss after a covered property claim.",
+          "Carriers use building construction details, occupancy, square footage, and reported values for building, contents, and business personal property. Replacement-cost building valuations, inventory reports, and equipment schedules support accurate limits. Coinsurance on many forms means underreported values can reduce a claim payment — disclose values honestly and update them when you add equipment or expand inventory.",
       },
     ],
     ctaHeading: "Ready to protect your commercial property?",
     ctaSubhead:
-      "Tell us about your building and contents — we'll compare options that fit.",
+      "Share how you occupy the premises, what you own or lease, and current values — we will compare property options and optional endorsements that fit.",
     serviceName: "Commercial Property Insurance",
   },
   {

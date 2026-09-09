@@ -628,42 +628,104 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Condominium Corporation Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Condominium corporation insurance — master policy, liability, equipment, and directors coverage for Windsor-Essex condo boards and managers.",
+      "Condominium corporation insurance for Ontario boards — master property under the Condominium Act, common-element liability, optional equipment breakdown, and directors and officers insurance if reasonably available.",
     headline: "Condominium Corporation Insurance",
     subhead:
-      "Master policy and liability coverage for condominium corporations — protecting common elements, shared systems, and the board's exposures.",
+      "This page is for Ontario condominium corporations — the corporation's master insurance program — not for individual unit owners (see Condo Insurance for unit-owner coverage). Under the Condominium Act, 1998, corporations must obtain and maintain property insurance for damage to units and common elements caused by major perils and other perils specified in the declaration or by-laws, to replacement cost subject to a reasonable deductible — excluding improvements to units above the standard unit definition. Corporations must also maintain liability insurance for common-element occupier exposure and certain machinery and motor vehicle liabilities under s.102, and must purchase and maintain directors' and officers' insurance for board members if reasonably available under s.39. Master policy deductibles are treated as common expenses, and chargeback rules may apply to owners under s.105 — subject to corporation by-laws. Equipment breakdown is not statutory; it may be added where appropriate. Premium Insurance Brokers can help Windsor–Essex boards and property managers review corporation programs alongside unit-owner coordination.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Condo Corporation Quote",
     coverageIntro:
-      "Condominium corporations need property coverage for shared building elements and liability for common areas and governance.",
+      "Condominium corporation insurance is organized here by the four program pillars boards most often review — master property, common-element liability, optional equipment breakdown, and directors and officers insurance — because corporation and unit-owner responsibilities are legally distinct under Ontario's Condominium Act.",
     coverageTypes: [
       {
+        id: "master-property-policy",
         title: "Master Property Policy",
+        shortLabel: "Master",
         description:
-          "Covers common elements, building structure, and shared systems — hallways, roof, elevators, and recreational facilities.",
+          "The corporation must obtain and maintain insurance for damage to units and common elements caused by major perils — including fire, lightning, smoke, windstorm, hail, explosion, water escape, and other perils listed in the Act — plus additional perils specified in the declaration or by-laws, to replacement cost subject to a reasonable deductible, excluding improvements to units above the standard unit.",
+        detailTitle: "A pipe burst can reach units and corridors at once",
+        detailDescription:
+          "The master policy insures units to the standard unit definition and common elements against major perils under s.99 of the Condominium Act — not overland flood, which is not listed as a major peril in the Act and is typically a separate commercial property endorsement where available. Owner-installed improvements and betterments above the standard unit are excluded from the corporation's property insurance obligation under s.99(4). What counts as a standard unit is set by a corporation by-law under s.56(1)(h) or the declarant's schedule under s.43(5)(h) if no by-law exists — review your corporation's documents rather than assuming a universal definition.",
         icon: Building2,
       },
       {
-        title: "General Liability",
+        id: "general-liability",
+        title: "Common Element Liability",
+        shortLabel: "GL",
         description:
-          "Addresses injury claims in common areas — lobbies, parking garages, pools, and walkways.",
+          "The corporation must maintain insurance against liability incurred by the corporation as occupier of common elements and for certain liabilities arising from boilers, machinery, pressure vessels, and motor vehicles as required under s.102 — subject to policy terms and limits.",
+        detailTitle: "A slip-and-fall in the parking garage is a corporation exposure",
+        detailDescription:
+          "Under the Condominium Act, the corporation — not individual unit owners — is generally the occupier of common elements for liability purposes. Injury claims in lobbies, parking garages, pools, walkways, and recreational facilities may implicate the corporation's general liability program. Unit owners carry personal liability for activities within their units. Corporation liability insurance under s.102 is separate from a unit owner's personal condo policy.",
         icon: Briefcase,
       },
       {
+        id: "equipment-breakdown",
         title: "Equipment Breakdown",
+        shortLabel: "Breakdown",
         description:
-          "Covers sudden failure of boilers, elevators, and HVAC serving the corporation.",
+          "Where purchased as an endorsement or separate coverage, may help address sudden failure of boilers, HVAC, elevators, pumps, and electrical or mechanical systems serving the corporation — not required by the Condominium Act; availability depends on insurer and master policy form.",
+        detailTitle: "An elevator outage affects every floor",
+        detailDescription:
+          "Shared mechanical systems — boilers, chillers, elevators, and pressure equipment — are operationally critical for a condominium corporation. Equipment breakdown coverage, where added, may address certain sudden mechanical or electrical failure losses that base property forms treat differently from fire or water escape. This is optional, policy-dependent coverage — not a statutory requirement under s.99. Confirm with your broker whether your master program includes breakdown protection or needs a separate endorsement.",
         icon: Wrench,
       },
       {
+        id: "directors-officers",
         title: "Directors & Officers",
+        shortLabel: "D&O",
         description:
-          "Protects board members against claims alleging wrongful governance or failure to maintain the corporation.",
+          "The corporation must purchase and maintain insurance for the benefit of directors and officers if reasonably available under s.39 — covering certain governance-related liabilities except losses from breach of the duty to act honestly and in good faith, subject to policy terms.",
+        detailTitle: "A board decision can still draw a personal claim",
+        detailDescription:
+          "Condominium board members make decisions about budgets, repairs, rules enforcement, and contractor selection — any of which can generate allegations of mismanagement or wrongful acts. Section 39 of the Condominium Act requires corporations to maintain directors' and officers' insurance if reasonably available. This is condominium s.39 insurance — not identical to generic corporate D&O programs on other routes. Indemnification by-laws under s.38 may also apply, but insurance and indemnification are separate mechanisms with different exclusions.",
         icon: Shield,
       },
     ],
     whoItIsFor:
-      "Condominium corporation insurance is for Windsor-Essex condo boards, property managers arranging master policies, and corporations governing residential and mixed-use buildings.",
+      "For Ontario condominium corporations, boards, and property managers arranging master policies in Windsor–Essex — reviewed through an independent broker who can coordinate statutory property and liability requirements, optional equipment breakdown, and s.39 directors and officers insurance alongside unit-owner policy coordination.",
+    considerations: [
+      {
+        title: "Standard unit definition",
+        description:
+          "The master policy insures units to the standard unit — not owner-installed improvements or betterments above that standard under s.99(4). Boards may pass a standard-unit by-law under s.56(1)(h), or the declarant's schedule under s.43(5)(h) applies if no by-law exists. Unit owners typically insure improvements, betterments, and personal property through their own policies — coordination prevents gaps after a loss.",
+      },
+      {
+        title: "Replacement cost and property values",
+        description:
+          "Statutory property insurance must cover replacement cost of damaged property subject to a reasonable deductible under s.99(7). Accurate building and common-element valuations support adequate master policy limits — underinsurance can leave the corporation and owners exposed to assessments beyond policy proceeds. The Act does not prescribe a fixed appraisal interval; review values when construction costs shift materially or after major capital projects.",
+      },
+      {
+        title: "Major perils, water escape, and overland flood",
+        description:
+          "Major perils under s.99(2) include water escape — not the same as overland flood, which is not listed as a major peril in the Act and may require a separate endorsement on the master property policy where available. Do not treat statutory water-escape coverage and optional flood extensions as interchangeable concepts.",
+      },
+      {
+        title: "Master policy deductible and common expenses",
+        description:
+          "The portion of a loss excluded by the master policy deductible is treated as a common expense under s.105(1) — funded by owners through the corporation's budget. Deductible amounts are not fixed in the Act; they must be reasonable. Boards should understand how the chosen deductible affects annual budgeting and potential owner chargebacks.",
+      },
+      {
+        title: "Deductible chargebacks to unit owners",
+        description:
+          "Under s.105(2), an owner may be charged back up to the lesser of repair cost or the deductible when damage to their unit arises from an act or omission of the owner, lessee, or occupant with permission or knowledge. Corporations may extend chargeback circumstances by by-law under s.105(3). Amounts charged back may be insurable under a unit owner's policy — confirm limits with owners' brokers. Outcomes depend on corporation by-laws and the facts of each loss.",
+      },
+      {
+        title: "Unit-owner policy coordination",
+        description:
+          "Unit owners insure personal property, personal liability, improvements above the standard unit, and — where purchased — loss assessment and deductible assessment coverage. The Act coordinates master and unit policies under s.101 so they are not treated as duplicate coverage for the same interest. Direct unit owners to the unit-owner condo route for personal coverage — this page addresses the corporation's program only.",
+      },
+      {
+        title: "Directors and officers — s.39 requirement",
+        description:
+          "Corporations must purchase and maintain insurance for directors and officers if reasonably available under s.39, excluding coverage for losses from breach of the duty to act honestly and in good faith. This is a statutory insurance obligation — distinct from prudent practice alone. Policy wording, limits, and exclusions still vary by insurer; review certificates and compare markets at renewal.",
+      },
+      {
+        title: "Contractors, renovations, and common-element projects",
+        description:
+          "Capital repairs, envelope projects, and unit-owner renovations affecting common elements create insurance and by-law questions — who insures work in progress, how deductibles apply, and whether contractors carry adequate liability and property coverage. Board approval processes and insurance certificates for major projects reduce dispute risk after a loss.",
+      },
+    ],
     relatedLinks: [
       { label: "Property Management", href: "/property-management-insurance/" },
       { label: "Commercial Property", href: "/commercial-property-insurance/" },
@@ -672,29 +734,34 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     faqTitle: "Condominium corporation FAQ",
     faqItems: [
       {
-        question: "What does the master policy cover vs. unit owner policies?",
+        question: "What does the corporation's master policy insure?",
         answer:
-          "The master policy covers common elements and the building structure. Unit owners need personal condo policies for contents, improvements, and liability inside their units.",
+          "Under s.99 of the Condominium Act, 1998, the corporation must obtain and maintain property insurance for damage to units and common elements caused by major perils — fire, lightning, smoke, windstorm, hail, explosion, water escape, and other perils listed in the Act — plus additional perils specified in the declaration or by-laws, to replacement cost subject to a reasonable deductible. The corporation's obligation does not include insurance for improvements to units above the standard unit definition under s.99(4). Overland flood is not a listed major peril in the Act.",
       },
       {
-        question: "Are special assessments covered?",
+        question: "What does the unit owner insure separately?",
         answer:
-          "When a covered loss exceeds master policy limits, owners may face assessments. Unit owner loss assessment coverage helps individuals; the corporation needs adequate master limits.",
+          "Unit owners typically purchase personal condo insurance for contents, personal liability, improvements and betterments above the standard unit, and — where available on the unit-owner policy — loss assessment and deductible assessment coverage. The corporation's master policy and a unit owner's policy coordinate under the Act — they address different interests. Declarations, standard-unit by-laws, and policy wording can affect how a specific loss is allocated.",
       },
       {
-        question: "Does the corporation need D&O?",
+        question: "What is a standard unit?",
         answer:
-          "Board members face personal liability for governance decisions. D&O helps protect directors when claims allege mismanagement.",
+          "The standard unit defines which components of a unit the corporation's master property policy insures versus what the unit owner must insure — such as owner-installed flooring, cabinetry, or fixtures above that baseline. Under the Condominium Act, the standard unit is established by a corporation by-law under s.56(1)(h) or by the declarant's schedule under s.43(5)(h) if no by-law exists. There is no single province-wide standard-unit dollar schedule — review your corporation's by-law or declarant schedule.",
       },
       {
-        question: "How often should values be updated?",
+        question: "How do deductibles affect unit owners?",
         answer:
-          "Building valuations should reflect current replacement costs. Underinsurance can lead to co-insurance penalties after a major loss.",
+          "The master policy deductible is treated as a common expense under s.105(1). Under s.105(2), an owner may be charged back up to the lesser of repair cost or the deductible when damage to their unit results from an act or omission of the owner, lessee, or occupant with permission or knowledge. Corporations may pass an insurance deductible by-law under s.105(3) extending chargeback rules. Deductible amounts are not fixed in the Act. Unit owners may insurable chargeback amounts under their own policies — confirm with their broker.",
+      },
+      {
+        question: "Does a condo corporation need D&O insurance?",
+        answer:
+          "Under s.39 of the Condominium Act, a corporation must purchase and maintain insurance for the benefit of directors and officers if reasonably available — excluding losses from breach of the duty to act honestly and in good faith. This is a statutory requirement when insurance is reasonably available, not merely optional best practice. Policy limits, exclusions, and defence-cost treatment still vary — boards should review coverage at renewal and after governance changes.",
       },
     ],
     ctaHeading: "Insuring a condominium corporation?",
     ctaSubhead:
-      "Share building type, amenities, and current master policy details — we will review corporation coverage needs.",
+      "Share building type, amenities, standard-unit by-law status, and current master policy details — we will review corporation coverage against Condominium Act requirements.",
     serviceName: "Condominium Corporation Insurance",
   },
   {

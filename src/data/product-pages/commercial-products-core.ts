@@ -22,90 +22,140 @@ export const commercialProductPages: ProductPageContent[] = [
     metaTitle:
       "Small Business Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Small business insurance for Windsor-Essex — general liability, property, and commercial auto packaged for owner-operators and growing businesses.",
+      "Small business insurance for Windsor-Essex — how liability, property, commercial auto, and business interruption may be assembled through package policies, endorsements, or separate coverages.",
     headline: "Small Business Insurance",
     subhead:
-      "Core commercial coverages for Windsor-Essex small businesses — liability, property, and the endorsements that match how you actually operate.",
+      "There is no single universal small-business insurance policy. Windsor–Essex owner-operators, storefronts, home-based businesses, and growing teams typically assemble coverage through a business owners policy, commercial package policy, or separate policies and endorsements — depending on industry, revenue, premises, vehicles, and contract requirements. General liability may address certain third-party injury and property-damage claims; commercial property may cover contents, inventory, and tenant improvements; commercial auto applies when you own, lease, or regularly use vehicles for operations; business interruption — where purchased with property — may help with income after a covered physical loss. Cyber, crime, professional liability, and product liability are often added when operations warrant them — not every small business needs every coverage on day one. Premium Insurance Brokers can help map a practical program to how you actually operate rather than selling a one-size-fits-all bundle.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Business Quote",
     coverageIntro:
-      "Most small businesses start with a foundation of liability and property protection, then add coverages as operations grow.",
+      "Small business insurance is organized here by four broad coverage categories most Windsor–Essex businesses review first — because liability, property, vehicles, and income interruption are common starting points before industry-specific endorsements are added.",
     coverageTypes: [
       {
+        id: "general-liability",
         title: "General Liability",
+        shortLabel: "GL",
         description:
-          "Helps protect against third-party injury or property damage claims tied to your business operations, premises, or products.",
+          "May help respond to certain third-party bodily injury and property-damage claims arising from your operations, premises, or products — subject to policy terms, exclusions, and limits.",
+        detailTitle: "A customer slip-and-fall is often a GL claim",
+        detailDescription:
+          "Retail shops, offices, and service businesses with public contact face premises and operations liability — a visitor injury, damage to a client's property on site, or certain product-related claims may fall under commercial general liability when covered by the form. GL does not replace professional liability for advice errors, cyber coverage for data breaches, or property insurance for your own equipment. Contractual certificate requirements from landlords and clients often start with GL limits and additional insured status.",
         icon: Briefcase,
       },
       {
+        id: "commercial-property",
         title: "Commercial Property",
+        shortLabel: "Property",
         description:
-          "Intended to insure your equipment, inventory, and leasehold improvements for theft, fire, and other insured perils — subject to causes of loss, limits, deductibles, and policy terms.",
+          "May help cover equipment, inventory, furniture, and leasehold improvements against covered direct physical loss — subject to causes of loss, limits, deductibles, and policy terms.",
+        detailTitle: "Stolen laptops aren't a liability claim",
+        detailDescription:
+          "If you own equipment, carry inventory, or have invested in leasehold improvements, commercial property addresses physical loss to those assets — distinct from liability for injury to others. Home-based businesses often need a separate business property solution because personal home policies limit or exclude business contents. Valuation, coinsurance, and optional perils like sewer backup or equipment breakdown are policy-dependent — see the Commercial Property page for depth on building versus contents structuring.",
         icon: Store,
       },
       {
+        id: "commercial-auto",
         title: "Commercial Auto",
+        shortLabel: "Auto",
         description:
-          "Addresses vehicles used for business — delivery vans, service trucks, and employee-driven company cars.",
+          "May help address owned or leased business vehicles and certain automobile liability arising when your business owns, leases, or regularly uses vehicles for deliveries, service calls, or client visits — subject to Ontario auto rules and policy terms.",
+        detailTitle: "Delivery vans create a separate auto policy conversation",
+        detailDescription:
+          "Commercial auto is relevant when your business owns, leases, or regularly uses vehicles for operations — not every small business has that exposure. A consultant who occasionally drives to clients may need hired and non-owned auto coverage instead of or in addition to a fleet policy. Personal auto policies often restrict business use. Disclose how staff use vehicles, whether you deliver goods, and whether subcontractors drive on your behalf — Ontario automobile insurance is a regulated line separate from general liability.",
         icon: Truck,
       },
       {
+        id: "business-interruption",
         title: "Business Interruption",
+        shortLabel: "BI",
         description:
-          "Can help replace lost income if a covered property loss forces a temporary shutdown.",
+          "Where purchased with commercial property, may help replace lost business income and certain continuing expenses after covered direct physical loss to insured property forces a temporary shutdown — subject to waiting periods, limits, and policy terms.",
+        detailTitle: "Could you pay rent if a fire closed you for three months?",
+        detailDescription:
+          "A covered fire or major water loss can close a storefront or office while lease payments, core payroll, and loan obligations continue. Business interruption — where included or endorsed on a property program — addresses that income gap, not the physical repair itself. It is not standalone protection against market slowdowns or pandemic closures, and it commonly requires a covered physical loss trigger. Coordinate BI limits and indemnity periods with your property values — see the Business Interruption page for trigger and timing detail.",
         icon: Building2,
       },
     ],
     whoItIsFor:
-      "Small business insurance is for Windsor-Essex owner-operators, storefronts, home-based businesses, and growing teams that need liability and property protection without overbuying coverage they do not need.",
+      "For Windsor–Essex owner-operators, storefronts, home-based businesses, and growing teams assembling their first commercial program — reviewed through an independent broker who can compare package policies, endorsements, and separate coverages for how you actually operate.",
     considerations: [
       {
-        title: "Home-based operations",
+        title: "Operations and industry classification",
         description:
-          "Running a business from home often requires endorsements or a separate policy — personal home insurance typically limits business activity.",
+          "Insurers classify risk by what you do — retail, trades, professional services, food, and manufacturing each carry different liability and property profiles. Accurate operations descriptions affect both availability and pricing. Misclassification can create coverage gaps if a loss falls outside the class described on the application.",
       },
       {
-        title: "Contract requirements",
+        title: "Premises — owned, leased, or home-based",
         description:
-          "Clients and landlords may require specific liability limits, additional insured status, or certificates before you start work.",
+          "Where you operate drives property and liability structure. Leased storefronts need contents and improvements coverage; home-based businesses may need business endorsements or separate policies because personal home insurance limits business activity. Landlords often require liability certificates before occupancy.",
       },
       {
-        title: "Scaling with growth",
+        title: "Property and equipment values",
         description:
-          "Adding employees, vehicles, or a second location changes your exposure. Review coverage when revenue, payroll, or operations shift materially.",
+          "Inventory, tools, computers, and leasehold build-outs should be reflected in property limits. Underinsurance can trigger coinsurance penalties on many commercial property forms. Update values when you add equipment, expand stock, or open a second location.",
+      },
+      {
+        title: "Products, completed operations, and professional services",
+        description:
+          "Businesses that manufacture, install, or advise may need product liability, completed-operations coverage, or professional liability beyond a basic general liability label. Selling goods online, performing contract work, or giving paid advice each creates distinct exposure — disclose them during quoting.",
+      },
+      {
+        title: "Vehicles and driving exposure",
+        description:
+          "Owned delivery vans, service trucks, and regular client visits may require commercial auto or hired and non-owned auto coverage. Businesses with no vehicles skip this line — but staff using personal cars for deliveries still create exposure worth disclosing.",
+      },
+      {
+        title: "Cyber, data, and payment-card exposure",
+        description:
+          "Customer records, e-commerce, and point-of-sale systems create cyber and privacy exposure that general liability may not address. Cyber coverage is commonly added by endorsement or separate policy when you store client data or accept online payments — not part of the four core Explorer categories above, but frequently reviewed for growing SMBs.",
+      },
+      {
+        title: "Employees, payroll, and subcontractors",
+        description:
+          "Hiring staff may trigger WSIB registration and employment-practices considerations. Using subcontractors shifts liability depending on contracts and supervision. Carriers ask about employee count, payroll, and subcontractor use during underwriting — answers affect both GL and, where applicable, EPL or crime coverage.",
+      },
+      {
+        title: "Contracts, U.S. exposure, and prior losses",
+        description:
+          "Client and landlord contracts may specify minimum liability limits, additional insured status, and waiver of subrogation. Cross-border sales or U.S. operations may need different policy territory. Prior claims and circumstances should be disclosed honestly — they affect availability, pricing, and whether a claims-made or occurrence form is offered.",
       },
     ],
     relatedLinks: [
       { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
-      { label: "Professional Liability", href: "/professional-liability-insurance/" },
+      { label: "Commercial Property", href: "/commercial-property-insurance/" },
       { label: "Cyber Insurance", href: "/cyber-insurance/" },
     ],
     faqTitle: "Small business insurance FAQ",
     faqItems: [
       {
-        question: "What insurance does a new small business need first?",
+        question: "What insurance does a small business actually need?",
         answer:
-          "Most start with general liability and commercial property if they have equipment or inventory. Businesses with vehicles, employees, or professional advice need additional coverages from day one.",
+          "Most Windsor–Essex small businesses start by reviewing general liability and commercial property if they have equipment, inventory, or public premises contact. Businesses that own or regularly use vehicles need commercial auto or hired/non-owned auto coverage. Business interruption may matter when a covered property loss would interrupt income. Professional advice, cyber exposure, crime, and product liability are added when operations warrant them — there is no single mandatory bundle for every business type.",
       },
       {
-        question: "Is my home business covered by my home policy?",
+        question: "Is there one package that includes everything?",
         answer:
-          "Usually not fully. Home policies often limit or exclude business property and liability. Tell your broker about any business run from home.",
+          "Some carriers offer business owners policies or commercial package policies combining liability and property — and sometimes other lines — for eligible small businesses. Not every industry qualifies, and not every exposure fits a package. Auto, cyber, professional liability, and directors and officers coverage are often separate policies or endorsements. A broker compares what can be packaged versus what should stay separate for your operations.",
       },
       {
-        question: "How is small business insurance priced?",
+        question: "When is commercial auto relevant?",
         answer:
-          "Carriers look at industry, revenue or payroll, location, claims history, and specific exposures. Two similar businesses can price differently based on operations details.",
+          "Commercial auto applies when your business owns, leases, or regularly uses vehicles for deliveries, service calls, or transporting tools and goods. Occasional personal-car use for errands may instead require hired and non-owned auto coverage on a liability policy. Businesses with no driving exposure do not need a commercial auto policy — but disclose any business use of personal vehicles to your broker.",
       },
       {
-        question: "Can I bundle coverages?",
+        question: "What if I work from home?",
         answer:
-          "Many small businesses package liability, property, and optional coverages into a business owners policy or commercial package when carriers allow it.",
+          "Home-based businesses often need business property and liability coverage beyond a personal home policy, which typically limits or excludes business activity and business contents. Clients visiting your home office create premises liability. Zoning, municipal business licensing, and landlord rules may also apply — insurance does not replace those requirements.",
+      },
+      {
+        question: "What information is needed to quote?",
+        answer:
+          "Carriers commonly ask about operations, annual revenue or sales, payroll, employee count, premises (owned, leased, or home-based), property and equipment values, vehicles, products or services sold, subcontractor use, prior losses, and any U.S. or cross-border exposure — though questions vary by insurer. Accurate answers support proper classification and limits; bring existing policies and contract requirements to your broker.",
       },
     ],
     ctaHeading: "Ready to protect your small business?",
     ctaSubhead:
-      "Tell us what you do, where you operate, and what you own — we will compare options that fit your stage of growth.",
+      "Tell us what you do, where you operate, and what you own — we will compare package and separate-policy options that fit your stage of growth.",
     serviceName: "Small Business Insurance",
   },
   {
@@ -436,57 +486,102 @@ export const commercialProductPages: ProductPageContent[] = [
     metaTitle:
       "Business Interruption Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Business interruption insurance for Windsor-Essex — income replacement and ongoing expense coverage when a covered property loss stops operations.",
+      "Business interruption insurance for Windsor-Essex — income, continuing expenses, and extra expense coverage when covered physical loss or damage interrupts operations, subject to policy form.",
     headline: "Business Interruption Insurance",
     subhead:
-      "Helps replace lost income and cover ongoing expenses when a covered property loss forces your business to slow down or shut temporarily.",
+      "Business interruption coverage — also called business income coverage on many forms — commonly responds when a covered cause of physical loss or damage affects insured property and results in a qualifying interruption, subject to the policy form. It may help replace lost net income or gross earnings, pay certain continuing expenses, and fund extra costs to resume operations faster — but it is not protection against every shutdown, market downturn, or supply-chain delay. Waiting periods, indemnity or restoration periods, limits, and how payroll and dependent properties are treated all vary by insurer and wording. Ontario courts have emphasized that standard property-linked business interruption typically requires direct physical loss or damage — not mere loss of use without damage. Premium Insurance Brokers can help Windsor–Essex businesses align BI limits, periods, and property values with realistic recovery timelines.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Business Quote",
     coverageIntro:
-      "Business interruption sits alongside commercial property — it addresses the income impact, not the physical repair itself.",
+      "Business interruption is organized here by what a policy may pay during a covered suspension — lost income, continuing expenses, extra expense, and contingent dependent-property loss — because each component has different triggers, limits, and definitions on most forms.",
     coverageTypes: [
       {
-        title: "Lost Income",
+        id: "lost-income",
+        title: "Lost Business Income",
+        shortLabel: "Income",
         description:
-          "Can replace net income you would have earned during a covered shutdown, subject to waiting periods and policy limits.",
+          "May help replace net income or gross earnings you would have earned during a necessary suspension after covered direct physical loss to insured property — subject to waiting periods, indemnity or restoration periods, limits, and how the form measures income.",
+        detailTitle: "Revenue doesn't pause when the doors close",
+        detailDescription:
+          "When a covered fire, water loss, or other insured peril damages your premises and forces a temporary shutdown, revenue may stop while fixed obligations continue. Lost income coverage addresses that financial gap — not the cost to repair the building itself. Forms differ on whether they pay net profit, gross earnings, or actual loss sustained, and saved expenses may reduce the payment. Accurate financial records and realistic revenue projections support proper limits at application.",
         icon: Briefcase,
       },
       {
+        id: "continuing-expenses",
         title: "Continuing Expenses",
+        shortLabel: "Expenses",
         description:
-          "Helps pay rent, payroll, loan payments, and other obligations that continue while operations are disrupted.",
+          "May help pay certain fixed costs — such as rent, debt service, and some payroll categories — that continue during a covered interruption, subject to policy definitions of continuing versus non-continuing expenses and saved-expense offsets.",
+        detailTitle: "Rent and loan payments don't wait for repairs",
+        detailDescription:
+          "Lease payments, loan covenants, property taxes, and core staff may continue while you cannot operate at full capacity. Policies define which expenses qualify as continuing and whether ordinary payroll for non-key employees is included, excluded, or optional. Not every expense continues at the same rate — utilities may drop, but rent typically does not. Review payroll treatment and expense classifications with your broker when underwriting BI.",
         icon: Building2,
       },
       {
+        id: "extra-expense",
         title: "Extra Expense",
+        shortLabel: "Extra Exp.",
         description:
-          "Covers additional costs to resume operations faster — temporary location, rented equipment, or expedited repairs.",
+          "May help pay additional costs incurred to reduce the business income loss or resume operations more quickly — such as temporary premises, expedited shipping, or rented equipment — subject to policy limits and whether extra expense applies with or without a concurrent income loss.",
+        detailTitle: "A temporary location can cost more than staying shut",
+        detailDescription:
+          "Sometimes spending more now reduces total loss — renting temporary space, paying overtime for expedited repairs, or leasing replacement equipment can shorten the shutdown. Extra expense coverage, where included, may address those incremental costs even when they exceed the income loss alone, depending on form. It is distinct from continuing expenses, which pay obligations you already had — extra expense pays additional costs above normal operations to speed recovery.",
         icon: Package,
       },
       {
+        id: "contingent-business-interruption",
         title: "Contingent Business Interruption",
+        shortLabel: "Contingent",
         description:
-          "May address income loss when a key supplier or customer suffers a covered loss that disrupts your supply chain.",
+          "Where purchased by endorsement, may address income loss when a policy-defined dependent property — such as a named key supplier, customer, or leader location — suffers covered direct physical loss that disrupts your operations, subject to named locations, covered causes of loss, and policy terms.",
+        detailTitle: "Your key supplier's fire can idle your line",
+        detailDescription:
+          "Contingent business interruption is not general supply-chain disruption insurance. It typically requires a named dependent property, covered direct physical loss or damage at that property, and a resulting interruption to your business as defined in the endorsement. A supplier's financial failure, labour strike, or utility outage without physical damage at the dependent location may not trigger coverage. Disclose critical suppliers and customers during underwriting and confirm which locations are scheduled on the endorsement.",
         icon: Route,
       },
     ],
     whoItIsFor:
-      "Business interruption coverage is for Windsor-Essex businesses that would struggle to pay rent, payroll, and loans if a fire, flood, or other covered property loss closed their doors for weeks or months.",
+      "For Windsor–Essex businesses that would struggle to pay rent, payroll, and debt service if a covered property loss closed operations for weeks or months — reviewed through an independent broker who can coordinate BI limits, waiting periods, and property values with your commercial property program.",
     considerations: [
       {
-        title: "Requires underlying property coverage",
+        title: "The trigger — covered physical loss or damage",
         description:
-          "Business interruption typically triggers only after a covered property loss on an insured peril. It is not standalone income protection for market downturns.",
+          "Business interruption coverage commonly responds when a covered cause of physical loss or damage affects insured property and results in a qualifying interruption, subject to the policy form. Government-ordered closures, pandemics, utility failures without physical damage, and market downturns are generally outside standard property-linked BI unless a specific extension applies. Confirm your form's trigger language with your broker.",
       },
       {
-        title: "Waiting periods",
+        title: "Waiting period (time deductible)",
         description:
-          "Policies often include a waiting period before income replacement begins. Shorter waiting periods usually cost more.",
+          "Many policies include a waiting period — often 24 to 72 hours on many forms, though periods vary — before BI payments begin. Losses during that window are uninsured. Shorter waiting periods generally cost more. Align the waiting period with how quickly your business would feel cash-flow pressure after a covered loss.",
       },
       {
-        title: "Indemnity period length",
+        title: "Indemnity or restoration period",
         description:
-          "Choose a restoration period long enough to rebuild and resume normal revenue — underestimating extends your uninsured gap.",
+          "Policies limit how long BI payments continue — commonly 12, 18, or 24 months on many programs, though options vary. The period should cover realistic rebuild and ramp-up time for your operations. Underestimating extends the gap after coverage stops even if repairs are incomplete.",
+      },
+      {
+        title: "Limits and coinsurance on business income values",
+        description:
+          "BI limits should reflect projected earnings and continuing expenses during the maximum foreseeable shutdown. Some forms include coinsurance on business income values — underreporting projected income can reduce recovery. Agreed-value or monthly reporting options may be available on certain programs.",
+      },
+      {
+        title: "Continuing expenses and ordinary payroll",
+        description:
+          "Policies distinguish continuing fixed costs from expenses that stop when you close. Ordinary payroll for non-key employees may be included, excluded, or offered as an optional extension depending on form — do not assume all payroll continues automatically.",
+      },
+      {
+        title: "Extra expense versus lost income",
+        description:
+          "Extra expense pays additional costs to minimize the BI loss or speed resumption; lost income pays the earnings gap. Some forms coordinate the two within a combined limit. Understand whether expediting repairs or renting temporary space is more valuable for your recovery model.",
+      },
+      {
+        title: "Dependent properties and contingent BI",
+        description:
+          "When your business depends on a few key suppliers, customers, or a leader property, contingent business interruption — where purchased — may respond to their covered physical loss. Locations must typically be named, and the dependent property must suffer covered damage — not merely a slowdown or contract dispute.",
+      },
+      {
+        title: "Accounting records and documentation",
+        description:
+          "Claims adjusters rely on profit-and-loss statements, tax returns, payroll records, and pre-loss revenue trends to calculate loss. Incomplete or inconsistent books delay settlement. Maintain financial records that support the income values declared at application.",
       },
     ],
     relatedLinks: [
@@ -497,29 +592,34 @@ export const commercialProductPages: ProductPageContent[] = [
     faqTitle: "Business interruption FAQ",
     faqItems: [
       {
-        question: "Does business interruption cover COVID or pandemic shutdowns?",
+        question: "What triggers business interruption coverage?",
         answer:
-          "Standard business interruption tied to property policies typically requires physical damage from a covered peril. Pandemic-related closures are generally excluded unless specifically added.",
+          "Business interruption coverage commonly responds when a covered cause of physical loss or damage affects insured property and results in a qualifying interruption, subject to the policy form. Standard property-linked BI typically requires direct physical loss or damage — not merely lost revenue, a supplier delay, or a government closure without an insured peril affecting your property. Extensions for contingent properties, utilities, or civil authority may have different triggers — confirm each with your broker.",
       },
       {
-        question: "How is the income loss calculated?",
+        question: "Is business interruption automatically included with property insurance?",
         answer:
-          "Carriers use financial records — profit and loss statements, tax returns — to project what you would have earned during the indemnity period, minus saved expenses.",
+          "Not always. BI is often an endorsement or component of a commercial property program, but it must be explicitly included with chosen limits, waiting periods, and indemnity periods. Some bare property quotes omit BI or include minimal limits. Review declarations and endorsements rather than assuming income coverage is bundled.",
       },
       {
-        question: "Can I buy business interruption without property insurance?",
+        question: "What is an indemnity or restoration period?",
         answer:
-          "Usually no. BI is typically an endorsement or component of a commercial property program.",
+          "The indemnity period — sometimes called the period of restoration — is the maximum time BI payments continue after a covered loss, measured from the date of loss or from when the waiting period ends, depending on form. It should reflect how long rebuild, equipment replacement, and return to normal revenue would realistically take. Once the period expires, payments stop even if you have not fully recovered.",
       },
       {
-        question: "What is extra expense coverage?",
+        question: "What is contingent business interruption?",
         answer:
-          "It pays additional costs to minimize the shutdown — like renting temporary space — even if those costs exceed the income loss alone.",
+          "Contingent business interruption — where purchased — may address income loss when a named dependent property such as a key supplier or major customer suffers covered direct physical loss that disrupts your operations. It does not cover every supply-chain interruption: the dependent location must be scheduled, suffer covered physical damage, and the policy must define the resulting interruption. Financial failure, strikes, or utility outages without physical damage at the dependent property are typically excluded unless a separate extension applies.",
+      },
+      {
+        question: "What information is needed to quote business interruption?",
+        answer:
+          "Carriers commonly review operations, property values, projected gross earnings or net income, continuing expense breakdowns, payroll, number of locations, critical suppliers or customers, prior losses, and desired waiting and indemnity periods — though questions vary by insurer. Financial statements and realistic downtime scenarios help align limits with exposure. BI is usually quoted alongside commercial property rather than standalone.",
       },
     ],
     ctaHeading: "Could your business survive a long shutdown?",
     ctaSubhead:
-      "Walk through realistic downtime scenarios with a broker and align indemnity periods with your recovery timeline.",
+      "Walk through realistic downtime scenarios with a broker and align waiting periods, indemnity periods, and limits with your recovery timeline.",
     serviceName: "Business Interruption Insurance",
   },
   {

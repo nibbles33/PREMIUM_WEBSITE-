@@ -242,7 +242,10 @@ export function adaptCommercialProductContent(
       content.slug === "employment-practices-liability-insurance" ||
       content.slug === "product-recall-insurance" ||
       content.slug === "professional-liability-insurance" ||
-      content.slug === "medical-dental-insurance"
+      content.slug === "medical-dental-insurance" ||
+      content.slug === "small-business-insurance" ||
+      content.slug === "business-interruption-insurance" ||
+      content.slug === "condominium-corporation-insurance"
         ? "expandable"
         : "grid",
   });
@@ -347,7 +350,9 @@ export function adaptCommercialIndustryContent(
                   ? "For Windsor–Essex professional service firms operating from commercial offices — reviewed through an independent broker who can coordinate general liability, property, professional liability, and cyber coverage for how your office actually runs."
                   : content.slug === "real-estate-insurance"
                     ? "For Windsor–Essex real estate brokerages and office operations — reviewed through an independent broker who can coordinate commercial general liability, property, and cyber alongside RECO's registrant program."
-                    : content.whoItIsFor ?? content.subhead,
+                    : content.slug === "commercial-property-insurance"
+                      ? "For Windsor–Essex businesses and commercial property owners insuring buildings, contents, inventory, and leasehold interests — reviewed through an independent broker who can coordinate property limits, optional endorsements, and business interruption where a covered loss would interrupt operations."
+                      : content.whoItIsFor ?? content.subhead,
     showTrustBand: content.slug !== "restaurant-insurance",
     considerationsPresentation:
       content.slug === "restaurant-insurance" ||
@@ -357,7 +362,8 @@ export function adaptCommercialIndustryContent(
       content.slug === "contractors-insurance" ||
       content.slug === "builders-developers-insurance" ||
       content.slug === "professional-offices-insurance" ||
-      content.slug === "real-estate-insurance"
+      content.slug === "real-estate-insurance" ||
+      content.slug === "commercial-property-insurance"
         ? "expandable"
         : "grid",
     coverageHeading: "What's covered",
