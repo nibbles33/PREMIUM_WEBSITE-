@@ -333,7 +333,7 @@ Explorer UX v2 regression (daycare, restaurant, contractors): **pass**
 
 **Branch:** `cursor/coverage-explorer-ux-v2-2026-09-07`  
 **Baseline commit:** `af2e96d`  
-**Precision fix commit:** `d79ae94`
+**Precision fix commit:** `e4fbb03`
 **Isolated worktree:** `/tmp/PREMIUM_WEBSITE-d3-transportation`  
 **Primary worktree untouched:** `cursor/carrier-logos-7402` @ `90f5bbf` (unrelated uncommitted changes preserved)
 
