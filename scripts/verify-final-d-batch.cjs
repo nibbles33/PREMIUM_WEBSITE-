@@ -17,7 +17,7 @@ const ROUTES = [
       "computer-fraud",
     ],
     detailTitles: [
-      "Insider theft is usually excluded from ordinary property coverage",
+      "Many property forms exclude or restrict insider theft",
       "A forged instrument can drain an account before anyone notices",
       "Cash and negotiable instruments need their own crime agreements",
       "A convincing email is not the same as a computer takeover",

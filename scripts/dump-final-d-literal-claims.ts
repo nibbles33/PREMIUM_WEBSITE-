@@ -417,7 +417,7 @@ Considerations emit TITLE: and BODY: on separate lines.
 
         if (m.path.endsWith(".q+a")) {
           faqChecked++;
-          if (!/^Q: .+\nA: .+/s.test(m.value) || /\nA:\s*$/m.test(m.value)) {
+          if (!/^Q: [\s\S]+\nA: [\s\S]+/.test(m.value) || /\nA:\s*$/m.test(m.value)) {
             faqIncomplete++;
           }
         }

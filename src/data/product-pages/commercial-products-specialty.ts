@@ -1410,7 +1410,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       "Crime and fidelity insurance for Windsor-Essex businesses — employee dishonesty, forgery, money and securities, and computer fraud through an independent broker.",
     headline: "Crime & Fidelity Insurance",
     subhead:
-      "Crime & Fidelity Insurance can address specified first-party losses involving employee dishonesty, theft, forgery, fraud, money and securities, or related crime events — depending on the policy form and the insuring agreements you purchase. It is not a surety bond, not cyber insurance for privacy or ransomware response, and not a substitute for ordinary commercial property coverage on stock and buildings. Standard property forms typically exclude theft by employees; crime coverage is the product that may respond to certain insider and defined fraud losses when wording, definitions, limits, and proof requirements are met. Computer fraud and social-engineering / fraudulent-instruction losses are not necessarily treated the same way — many forms require separate or specific wording, endorsements, limits, or sublimits for voluntary payment schemes. Premium Insurance Brokers can help Windsor–Essex businesses compare crime agreements against cash handling, payroll, client funds, and payment controls.",
+      "Crime & Fidelity Insurance can address specified first-party losses involving employee dishonesty, theft, forgery, fraud, money and securities, or related crime events — depending on the policy form and the insuring agreements you purchase. It is not a surety bond, not cyber insurance for privacy or ransomware response, and not a substitute for ordinary commercial property coverage on stock and buildings. Many commercial property forms exclude or restrict theft by employees; business crime coverage may address specified employee dishonesty losses subject to the crime policy’s insuring agreement, definitions, conditions, limits, exclusions, and proof requirements. Computer fraud and social-engineering / fraudulent-instruction losses are not necessarily treated the same way — many forms require separate or specific wording, endorsements, limits, or sublimits for voluntary payment schemes. Premium Insurance Brokers can help Windsor–Essex businesses compare crime agreements against cash handling, payroll, client funds, and payment controls.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Crime Quote",
     coverageIntro:
@@ -1421,9 +1421,9 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
         shortLabel: "Employee Theft",
         description:
           "May help address certain direct loss of money, securities, or property caused by employee theft or dishonesty — where purchased and subject to the policy’s employee definition, conditions, and exclusions.",
-        detailTitle: "Insider theft is usually excluded from ordinary property coverage",
+        detailTitle: "Many property forms exclude or restrict insider theft",
         detailDescription:
-          "Standard commercial property policies typically exclude theft by employees. Crime coverage is a separate first-party product. Inventory shortage alone often does not prove a covered employee-dishonesty loss without other evidence — follow policy proof requirements. Not every worker qualifies as an “employee” under the form.",
+          "Many commercial property forms exclude or restrict theft by employees. Business crime coverage may address specified employee dishonesty losses subject to the crime policy’s insuring agreement, definitions, conditions, limits, exclusions, and proof requirements. Inventory shortage alone often does not prove a covered employee-dishonesty loss without other evidence — follow policy proof requirements. Not every worker qualifies as an “employee” under the form.",
         icon: Users,
       },
       {
@@ -1526,7 +1526,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       {
         question: "Who counts as an employee under a crime policy?",
         answer:
-          "The policy definition controls. Permanent employees are usually included; independent contractors, leased workers, owners, directors, and certain volunteers may be excluded or need specific wording. If non-employees handle cash or payment instructions, disclose that structure when quoting.",
+          "The policy’s definition of “employee” controls. How permanent employees, temporary workers, leased workers, independent contractors, owners, directors, and volunteers are treated can vary by form — do not assume a universal list of included or excluded persons. If non-employees handle cash, property, or payment instructions, disclose that structure when quoting.",
       },
       {
         question: "What information is needed to quote crime coverage?",
@@ -1649,7 +1649,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       {
         question: "Does EPL pay ESA termination pay or severance?",
         answer:
-          "Not as a substitute for statutory wages. Ontario’s Employment Standards Act, 2000 can require termination pay and, where applicable, severance pay as employer obligations. EPL may respond to certain wrongful-dismissal or related allegations under policy wording — it does not automatically pay statutory termination pay, severance pay, unpaid wages, vacation pay, or benefits. Keep employment obligations distinct from insured claims.",
+          "EPL should not be treated as insurance for ordinary statutory or contractual pay obligations. Ontario’s Employment Standards Act, 2000 can require termination pay and, where applicable, severance pay as employer obligations regardless of insurance. Depending on policy wording, EPL may respond to certain covered allegations arising from employment decisions — including defence costs or covered damages where applicable — but it does not automatically pay statutory termination pay, severance pay, unpaid wages, vacation pay, or benefits. Keep employment obligations distinct from insured claims.",
       },
       {
         question: "What types of employment allegations may be insured?",

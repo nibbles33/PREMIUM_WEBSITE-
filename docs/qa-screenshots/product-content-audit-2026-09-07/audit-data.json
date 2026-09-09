@@ -401,7 +401,7 @@
       "route": "/crime-fidelity-insurance/",
       "slug": "crime-fidelity-insurance",
       "category": "commercial",
-      "heroWords": 142,
+      "heroWords": 143,
       "heroSpecific": true,
       "coverageCount": 4,
       "coverageCardQuality": "specific/hedged (strong)",
@@ -411,14 +411,14 @@
       "considerationsWords": 399,
       "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 1175,
+      "totalSubstantiveWords": 1189,
       "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
       "classification": "A",
-      "classificationReason": "Substantive (1175w), 4 cards avg 61.5w, considerations yes, FAQ unique"
+      "classificationReason": "Substantive (1189w), 4 cards avg 61.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/cyber-insurance/",
@@ -526,14 +526,14 @@
       "considerationsWords": 322,
       "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 983,
+      "totalSubstantiveWords": 1006,
       "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex + Ontario",
       "geoNotes": "Both Windsor-Essex and Ontario referenced",
       "classification": "A",
-      "classificationReason": "Substantive (983w), 4 cards avg 41w, considerations yes, FAQ unique"
+      "classificationReason": "Substantive (1006w), 4 cards avg 41w, considerations yes, FAQ unique"
     },
     {
       "route": "/event-liability-insurance/",
@@ -1092,17 +1092,17 @@
       "route": "/product-recall-insurance/",
       "slug": "product-recall-insurance",
       "category": "commercial",
-      "heroWords": 185,
+      "heroWords": 204,
       "heroSpecific": true,
       "coverageCount": 4,
       "coverageCardQuality": "specific/hedged (strong)",
       "avgCardWords": 45.5,
       "thinCardCount": 0,
       "considerationsPresent": true,
-      "considerationsWords": 337,
+      "considerationsWords": 343,
       "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 1068,
+      "totalSubstantiveWords": 1093,
       "safetyFlags": [
         {
           "page": "/product-recall-insurance/",
@@ -1117,7 +1117,7 @@
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
       "classification": "A",
-      "classificationReason": "Substantive (1068w), 4 cards avg 45.5w, considerations yes, FAQ unique"
+      "classificationReason": "Substantive (1093w), 4 cards avg 45.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/professional-liability-insurance/",

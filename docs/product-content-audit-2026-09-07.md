@@ -52,12 +52,12 @@
 | /contractors-insurance/ | 1025 | 4 / specific/hedged (strong) | Yes (388w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /convenience-store-insurance/ | 1141 | 4 / specific/hedged (strong) | Yes (371w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /cottage-insurance/ | 555 | 4 / specific/hedged (strong) | Yes (108w, specific/useful) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
-| /crime-fidelity-insurance/ | 1175 | 4 / specific/hedged (strong) | Yes (399w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
+| /crime-fidelity-insurance/ | 1189 | 4 / specific/hedged (strong) | Yes (399w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /cyber-insurance/ | 409 | 4 / specific/hedged (strong) | Yes (67w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /daycare-private-school-insurance/ | 956 | 6 / specific/hedged (strong) | Yes (186w, moderate) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /directors-officers-insurance/ | 1054 | 4 / specific/hedged (strong) | Yes (296w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /dump-truck-insurance/ | 1075 | 4 / specific/hedged (strong) | Yes (322w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
-| /employment-practices-liability-insurance/ | 983 | 4 / specific/hedged (strong) | Yes (322w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
+| /employment-practices-liability-insurance/ | 1006 | 4 / specific/hedged (strong) | Yes (322w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /event-liability-insurance/ | 1094 | 4 / specific/hedged (strong) | Yes (329w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /farm-insurance/ | 332 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary (local) | **C** |
 | /fitness-gym-insurance/ | 240 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
@@ -81,7 +81,7 @@
 | /personal-umbrella-insurance/ | 472 | 4 / specific/hedged (strong) | Yes (95w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /pharmacy-insurance/ | 1430 | 4 / specific/hedged (strong) | Yes (553w, specific/useful) | 5 | Yes | 1 (low only) | Windsor-Essex + Ontario | **A** |
 | /pollution-liability-insurance/ | 252 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
-| /product-recall-insurance/ | 1068 | 4 / specific/hedged (strong) | Yes (337w, specific/useful) | 5 | Yes | 1 (low only) | Windsor-Essex-primary | **A** |
+| /product-recall-insurance/ | 1093 | 4 / specific/hedged (strong) | Yes (343w, specific/useful) | 5 | Yes | 1 (low only) | Windsor-Essex-primary | **A** |
 | /professional-liability-insurance/ | 391 | 4 / specific (good) | Yes (66w, moderate) | 4 | Yes | 1 (low only) | Windsor-Essex-primary | **C** |
 | /professional-offices-insurance/ | 325 | 4 / specific (good) | No | 4 | No — Shares 2+ FAQ pattern with auto-insurance | 0 | Windsor-Essex-primary | **C** |
 | /property-management-insurance/ | 1174 | 4 / specific/hedged (strong) | Yes (378w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
