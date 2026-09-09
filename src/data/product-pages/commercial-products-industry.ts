@@ -751,7 +751,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       {
         question: "How do deductibles affect unit owners?",
         answer:
-          "The master policy deductible is treated as a common expense under s.105(1). Under s.105(2), an owner may be charged back up to the lesser of repair cost or the deductible when damage to their unit results from an act or omission of the owner, lessee, or occupant with permission or knowledge. Corporations may pass an insurance deductible by-law under s.105(3) extending chargeback rules. Deductible amounts are not fixed in the Act. Unit owners may insurable chargeback amounts under their own policies — confirm with their broker.",
+          "The master policy deductible is treated as a common expense under s.105(1). Under s.105(2), an owner may be charged back up to the lesser of repair cost or the deductible when damage to their unit results from an act or omission of the owner, lessee, or occupant with permission or knowledge. Corporations may pass an insurance deductible by-law under s.105(3) extending chargeback rules. Deductible amounts are not fixed in the Act. Unit owners may insure chargeback amounts under their own policies — confirm limits with their broker.",
       },
       {
         question: "Does a condo corporation need D&O insurance?",

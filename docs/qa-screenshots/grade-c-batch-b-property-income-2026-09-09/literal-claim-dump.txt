@@ -318,14 +318,14 @@ relatedIntro:
 One policy is rarely the whole picture. Explore other commercial coverage from Premium.
 
 --- Broker steps ---
-[0] title: undefined
-    description: undefined
-[1] title: undefined
-    description: undefined
-[2] title: undefined
-    description: undefined
-[3] title: undefined
-    description: undefined
+[0] label: Your operation
+    detail: Your industry, locations, and how the business actually runs day to day.
+[1] label: Multiple insurance markets
+    detail: Independent access to commercial carriers — options compared side by side.
+[2] label: Premium broker
+    detail: Windsor-Essex guidance that translates policy wording into decisions.
+[3] label: Right-fit coverage
+    detail: Protection aligned to your operations — not generic off-the-shelf limits.
 
 ctaEyebrow:
 Ready when you are
@@ -653,14 +653,14 @@ relatedIntro:
 One policy is rarely the whole picture. Explore other commercial coverage from Premium.
 
 --- Broker steps ---
-[0] title: undefined
-    description: undefined
-[1] title: undefined
-    description: undefined
-[2] title: undefined
-    description: undefined
-[3] title: undefined
-    description: undefined
+[0] label: Your operation
+    detail: Your industry, locations, and how the business actually runs day to day.
+[1] label: Multiple insurance markets
+    detail: Independent access to commercial carriers — options compared side by side.
+[2] label: Premium broker
+    detail: Windsor-Essex guidance that translates policy wording into decisions.
+[3] label: Right-fit coverage
+    detail: Protection aligned to your operations — not generic off-the-shelf limits.
 
 ctaEyebrow:
 Ready when you are
@@ -988,14 +988,14 @@ relatedIntro:
 One policy is rarely the whole picture. Explore other commercial coverage from Premium.
 
 --- Broker steps ---
-[0] title: undefined
-    description: undefined
-[1] title: undefined
-    description: undefined
-[2] title: undefined
-    description: undefined
-[3] title: undefined
-    description: undefined
+[0] label: Your operation
+    detail: Your industry, locations, and how the business actually runs day to day.
+[1] label: Multiple insurance markets
+    detail: Independent access to commercial carriers — options compared side by side.
+[2] label: Premium broker
+    detail: Windsor-Essex guidance that translates policy wording into decisions.
+[3] label: Right-fit coverage
+    detail: Protection aligned to your operations — not generic off-the-shelf limits.
 
 ctaEyebrow:
 Ready when you are
@@ -1294,11 +1294,11 @@ question:
 How do deductibles affect unit owners?
 
 answer (complete):
-The master policy deductible is treated as a common expense under s.105(1). Under s.105(2), an owner may be charged back up to the lesser of repair cost or the deductible when damage to their unit results from an act or omission of the owner, lessee, or occupant with permission or knowledge. Corporations may pass an insurance deductible by-law under s.105(3) extending chargeback rules. Deductible amounts are not fixed in the Act. Unit owners may insurable chargeback amounts under their own policies — confirm with their broker.
+The master policy deductible is treated as a common expense under s.105(1). Under s.105(2), an owner may be charged back up to the lesser of repair cost or the deductible when damage to their unit results from an act or omission of the owner, lessee, or occupant with permission or knowledge. Corporations may pass an insurance deductible by-law under s.105(3) extending chargeback rules. Deductible amounts are not fixed in the Act. Unit owners may insure chargeback amounts under their own policies — confirm limits with their broker.
 
 Q+A COMBINED:
 Q: How do deductibles affect unit owners?
-A: The master policy deductible is treated as a common expense under s.105(1). Under s.105(2), an owner may be charged back up to the lesser of repair cost or the deductible when damage to their unit results from an act or omission of the owner, lessee, or occupant with permission or knowledge. Corporations may pass an insurance deductible by-law under s.105(3) extending chargeback rules. Deductible amounts are not fixed in the Act. Unit owners may insurable chargeback amounts under their own policies — confirm with their broker.
+A: The master policy deductible is treated as a common expense under s.105(1). Under s.105(2), an owner may be charged back up to the lesser of repair cost or the deductible when damage to their unit results from an act or omission of the owner, lessee, or occupant with permission or knowledge. Corporations may pass an insurance deductible by-law under s.105(3) extending chargeback rules. Deductible amounts are not fixed in the Act. Unit owners may insure chargeback amounts under their own policies — confirm limits with their broker.
 
 --- FAQ [4] ---
 question:
@@ -1323,14 +1323,14 @@ relatedIntro:
 One policy is rarely the whole picture. Explore other commercial coverage from Premium.
 
 --- Broker steps ---
-[0] title: undefined
-    description: undefined
-[1] title: undefined
-    description: undefined
-[2] title: undefined
-    description: undefined
-[3] title: undefined
-    description: undefined
+[0] label: Your operation
+    detail: Your industry, locations, and how the business actually runs day to day.
+[1] label: Multiple insurance markets
+    detail: Independent access to commercial carriers — options compared side by side.
+[2] label: Premium broker
+    detail: Windsor-Essex guidance that translates policy wording into decisions.
+[3] label: Right-fit coverage
+    detail: Protection aligned to your operations — not generic off-the-shelf limits.
 
 ctaEyebrow:
 Ready when you are
@@ -1354,5 +1354,5 @@ Total FAQs: 20
 Total considerations: 32
 Total Explorer states: 16
 Blank FAQ answers: 0
-Total characters: 83569
+Total characters: 84649
 Truncation: None

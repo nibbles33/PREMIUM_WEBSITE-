@@ -217,3 +217,49 @@ Screenshots: `docs/qa-screenshots/grade-c-batch-b-2026-09-09/` (not committed)
 ---
 
 **STOP FOR OWNER REVIEW** — do not merge, deploy, or promote preview to production.
+
+---
+
+## FINAL PRECISION FIX
+
+**PRECISION BASE:** `9b7b824` (factual gate commit)
+
+| Item | Value |
+|------|-------|
+| **ROUTE** | `condominium-corporation-insurance` |
+| **FIELD** | FAQ [3] answer (`How do deductibles affect unit owners?`) |
+
+**OLD:**
+> The master policy deductible is treated as a common expense under s.105(1). Under s.105(2), an owner may be charged back up to the lesser of repair cost or the deductible when damage to their unit results from an act or omission of the owner, lessee, or occupant with permission or knowledge. Corporations may pass an insurance deductible by-law under s.105(3) extending chargeback rules. Deductible amounts are not fixed in the Act. Unit owners **may insurable** chargeback amounts under their own policies — confirm with their broker.
+
+**NEW:**
+> The master policy deductible is treated as a common expense under s.105(1). Under s.105(2), an owner may be charged back up to the lesser of repair cost or the deductible when damage to their unit results from an act or omission of the owner, lessee, or occupant with permission or knowledge. Corporations may pass an insurance deductible by-law under s.105(3) extending chargeback rules. Deductible amounts are not fixed in the Act. Unit owners **may insure** chargeback amounts under their own policies — confirm limits with their broker.
+
+**Literal verification:**
+| Check | Result |
+|-------|--------|
+| `"may insurable"` present | **NO** |
+| `"may insure chargeback amounts"` present | **YES** |
+| Other Condo production fields changed | **NO** |
+| Other Batch B routes changed | **NO** |
+
+### Post-fix validation
+
+| Check | Result |
+|-------|--------|
+| **BUILD** | PASS |
+| **TSC** | PASS |
+| **CONTENT AUDIT** | **A32 / B16 / C10 / D0** |
+| **EXPLORER REGRESSION** | PASS — 228/228 |
+| **BATCH VERIFIER** | PASS — 4/4 |
+
+| Route | Grade | Flags |
+|-------|-------|-------|
+| Commercial Property | A | unchanged |
+| Business Interruption | A | unchanged |
+| Small Business | A | unchanged |
+| Condo Corporation | A | 0 HIGH / 0 MEDIUM |
+
+**SITE TOTAL:** A32 / B16 / C10 / D0
+
+**BATCH B READY TO FREEZE:** **YES**
