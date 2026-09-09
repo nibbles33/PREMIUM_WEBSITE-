@@ -40,8 +40,8 @@
 | /auto-insurance/ | 649 | 6 / specific/hedged (strong) | No | 5 | No — Shares 2+ FAQ pattern with professional-offices-insurance | 3 (low only) | Ontario-wide | **B** |
 | /boat-insurance/ | 539 | 4 / specific/hedged (strong) | Yes (106w, specific/useful) | 4 | Yes | 0 | Windsor-Essex + Ontario | **B** |
 | /bonding-insurance/ | 1257 | 4 / specific/hedged (strong) | Yes (491w, specific/useful) | 5 | Yes | 3 (low only) | Windsor-Essex + Ontario | **A** |
-| /builders-developers-insurance/ | 991 | 4 / specific/hedged (strong) | Yes (333w, specific/useful) | 5 | Yes | 1 (low only) | Windsor-Essex-primary | **A** |
-| /builders-risk-insurance/ | 1051 | 4 / specific/hedged (strong) | Yes (380w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
+| /builders-developers-insurance/ | 1022 | 4 / specific/hedged (strong) | Yes (355w, specific/useful) | 5 | Yes | 1 (low only) | Windsor-Essex-primary | **A** |
+| /builders-risk-insurance/ | 1071 | 4 / specific/hedged (strong) | Yes (393w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /business-interruption-insurance/ | 395 | 4 / specific/hedged (strong) | Yes (66w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
 | /cargo-freight-insurance/ | 1127 | 4 / specific/hedged (strong) | Yes (386w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /commercial-auto-insurance/ | 323 | 4 / specific/hedged (strong) | No | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
@@ -49,7 +49,7 @@
 | /commercial-property-insurance/ | 367 | 4 / specific (good) | No | 6 | No — Shares 2+ FAQ pattern with auto-insurance | 0 | Windsor-Essex-primary | **C** |
 | /condo-insurance/ | 565 | 4 / specific/hedged (strong) | Yes (83w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /condominium-corporation-insurance/ | 277 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
-| /contractors-insurance/ | 1014 | 4 / specific/hedged (strong) | Yes (383w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
+| /contractors-insurance/ | 1025 | 4 / specific/hedged (strong) | Yes (388w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /convenience-store-insurance/ | 1141 | 4 / specific/hedged (strong) | Yes (371w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /cottage-insurance/ | 555 | 4 / specific/hedged (strong) | Yes (108w, specific/useful) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /crime-fidelity-insurance/ | 253 | 4 / specific (good) | No | 4 | Yes | 1 | Windsor-Essex-primary | **D** |

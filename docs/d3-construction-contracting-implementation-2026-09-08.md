@@ -245,3 +245,133 @@ Full dump: `docs/qa-screenshots/d3-construction-batch-2026-09-08/literal-claim-d
 ## STOP FOR OWNER REVIEW
 
 **NO MERGE · NO DEPLOY · NO VERCEL PROMOTION · NO PUSH TO MAIN**
+
+---
+
+## FINAL PRECISION FIX (post `a4e1634`)
+
+**Date:** 2026-09-09  
+**Scope:** Targeted wording precision only — not a rewrite.
+
+### Ontario public-contract bonding reconfirmation
+
+| Claim | Primary source | Verified |
+|-------|----------------|----------|
+| **ONTARIO $500,000 THRESHOLD PRIMARY SOURCE VERIFIED** | [O. Reg. 304/18 s.12](https://www.ontario.ca/laws/regulation/180304) (current e-Laws consolidation through 2026-09-04): “Section 85.1 of the Act applies to a public contract if the contract price is $500,000 or more.” | **YES** |
+| **50% MINIMUM PRIMARY SOURCE VERIFIED** | [O. Reg. 304/18 s.12.1(1)](https://www.ontario.ca/laws/regulation/180304) (via O. Reg. 260/24): minimum coverage limit for required labour/material payment and performance bonds is 50 per cent of the contract price (except as otherwise provided). | **YES** |
+
+Surety Bonds page **not broadly rewritten**. Numeric public-contract statements retained.
+
+### Fields changed
+
+**Builder's Risk**
+
+- `coverageItems[2].detailDescription` — removed “unless scheduled”; soft costs framed as form/endorsement/limits-dependent
+- `considerations[2].description` — termination framed by policy wording
+- `faqItems[3].answer` — same termination concept
+- `considerations[6].title` — “Review workmanship, water, flood & earthquake wording”
+- `considerations[5].description` — lender language de-universalized (aligned with financing-documents concept)
+
+**Contractors** (Explorer architecture untouched)
+
+- `faqItems[1].answer` — contract-driven subcontractor insurance (not “Usually yes…”)
+- `coverageItems[3].description` / `detailDescription` — removed “rely on the wrap”
+- `faqItems[3].answer` — wrap may provide certain coverage subject to wording; own program may still be needed outside wrap
+- `considerations[2].description` — same wrap precision
+
+**Builders & Developers**
+
+- `coverageItems[0].detailDescription` / `considerations[1].description` — financing-documents-driven lender requirements
+- `coverageItems[2].detailDescription` — wrap centralizes certain project liability coverage (not certificates/limits shorthand)
+- `considerations[7].description` / `faqItems[3].answer` — BR ending depends on policy wording
+
+### Literal phrase presence (post-fix)
+
+| Phrase / concept | Present |
+|------------------|---------|
+| “unless scheduled” in Builders Risk soft-cost detail | **NO** |
+| “Exclusions: faulty workmanship, water, flood, and earthquake” | **NO** |
+| “Usually yes. General contractors and owners typically require” | **NO** |
+| “Enrolled trades may rely on the wrap” | **NO** |
+| “Construction lenders commonly require” | **NO** |
+| “Wrap-ups centralize certificates and limits” | **NO** |
+| “Substantial completion, occupancy, and ready-for-takeover often end” | **NO** |
+
+### Validation
+
+| Check | Result |
+|-------|--------|
+| **BUILD** | **PASS** |
+| **TSC** | **PASS** |
+| **CONTENT AUDIT** | **PASS** |
+| **EXPLORER REGRESSION** | **PASS** |
+| **D3 VERIFIER** | **PASS** |
+| BONDING EXPLORER STATES | **4** |
+| FIDELITY STATE | **ABSENT** |
+| CONTRACTORS STATIC STATES | **4** |
+| CONTRACTORS IMAGE MAPPINGS CHANGED | **NO** |
+| CONTRACTORS MOTION INTRODUCED | **NO** |
+| FROZEN ROUTES CHANGED | **NO** |
+| TRANSPORTATION CHANGED | **NO** |
+
+### Grades after precision fix
+
+| Route | Grade | HIGH | MEDIUM |
+|-------|-------|-----:|-------:|
+| Builders Risk | **A** | 0 | 0 |
+| Surety Bonds | **A** | 0 | 0 |
+| Contractors | **A** | 0 | 0 |
+| Builders & Developers | **A** | 0 | 0 |
+
+**SITE TOTAL:** **A20 / B16 / C18 / D4**
+
+### Complete current values for changed fields
+
+**FIELD PATH:** `builders-risk-insurance` → `coverageItems[2].detailDescription`  
+**COMPLETE CURRENT VALUE:** Interest, taxes, professional fees, and extended site overhead may require specific soft-cost coverage, limits, or endorsements depending on the policy form. Document and value soft costs explicitly — formula-only limits can understate exposure when a covered peril extends the construction period.
+
+**FIELD PATH:** `builders-risk-insurance` → `considerations[2].description`  
+**COMPLETE CURRENT VALUE:** Limits are commonly based on completed project value for the construction period defined by the policy. Completion, occupancy, policy expiry, or other conditions in the wording may affect when coverage ends. Delayed projects may require extensions before expiry, subject to insurer approval and policy terms.
+
+**FIELD PATH:** `builders-risk-insurance` → `considerations[5].description`  
+**COMPLETE CURRENT VALUE:** Construction financing agreements may require builder's risk with mortgage or loss-payee wording, minimum limits, and proof before advances — where the loan documents specify those terms. Share loan and contract insurance schedules with your broker early so certificates match what the financing actually requires.
+
+**FIELD PATH:** `builders-risk-insurance` → `considerations[6].title`  
+**COMPLETE CURRENT VALUE:** Review workmanship, water, flood & earthquake wording
+
+**FIELD PATH:** `builders-risk-insurance` → `faqItems[3].answer`  
+**COMPLETE CURRENT VALUE:** Builder's risk applies for the construction period defined by the policy. Completion, occupancy, policy expiry, or other conditions in the wording may affect when coverage ends. Delayed projects may require extensions before expiry, subject to insurer approval and policy terms. Occupancy during construction can also change how the policy responds.
+
+**FIELD PATH:** `contractors-insurance` → `coverageItems[3].description`  
+**COMPLETE CURRENT VALUE:** A wrap-up or OCIP may provide certain project-site liability coverage for enrolled trades — subject to program wording, enrollment, exclusions, and limits.
+
+**FIELD PATH:** `contractors-insurance` → `coverageItems[3].detailDescription`  
+**COMPLETE CURRENT VALUE:** Large projects may use an owner- or contractor-controlled wrap-up. A wrap-up may provide certain project-site liability coverage for enrolled trades, subject to program wording, enrollment, exclusions, and limits. Their own insurance program may still be needed for exposures outside the wrap — including off-site operations, auto, tools, and non-enrolled work.
+
+**FIELD PATH:** `contractors-insurance` → `considerations[2].description`  
+**COMPLETE CURRENT VALUE:** On Owner Controlled or Contractor Controlled Insurance Programs, a wrap-up may provide certain project-site liability coverage for enrolled trades, subject to program wording, enrollment, exclusions, and limits. Off-site operations, commercial auto, tools, and non-enrolled work usually still need your own policies. Enrollment is not a full replacement for an operating contractor program.
+
+**FIELD PATH:** `contractors-insurance` → `faqItems[1].answer`  
+**COMPLETE CURRENT VALUE:** Many contracts require subcontractors to carry their own liability insurance and provide evidence of coverage before starting work. Your own policy and a project wrap-up (where enrolled) do not automatically replace each subcontractor's contractual insurance obligations — confirm contract requirements for each tier.
+
+**FIELD PATH:** `contractors-insurance` → `faqItems[3].answer`  
+**COMPLETE CURRENT VALUE:** A wrap-up may provide certain project-site liability coverage for enrolled trades, subject to program wording, enrollment, exclusions, and limits. Your own insurance program may still be needed for exposures outside the wrap — including off-site work, non-enrolled projects, commercial auto, tools, and periods before or after enrollment. Read enrollment documents carefully.
+
+**FIELD PATH:** `builders-developers-insurance` → `coverageItems[0].detailDescription`  
+**COMPLETE CURRENT VALUE:** Developers typically arrange builder's risk per project (or via a master program) covering hard costs and endorsed extensions. Construction financing agreements may require evidence of builder's risk and other specified insurance before advances are released — including lender interests where the documents require them. Soft costs, transit, and existing structures remain endorsement-dependent.
+
+**FIELD PATH:** `builders-developers-insurance` → `coverageItems[2].detailDescription`  
+**COMPLETE CURRENT VALUE:** Wrap-ups can centralize certain project liability coverage for enrolled parties, subject to program wording, enrollment, exclusions, and limits. Administration and certificates can be discussed separately. They do not automatically replace every contractor's own CGL for off-site work, auto, or tools. Developers sponsoring OCIPs should coordinate insurance with counsel and any surety requirements separately.
+
+**FIELD PATH:** `builders-developers-insurance` → `considerations[1].description`  
+**COMPLETE CURRENT VALUE:** Construction financing agreements may require evidence of builder's risk and other specified insurance before advances are released. Required limits, lender interests, certificates, and project-specific liability requirements should be taken from the financing documents — not assumed as a universal package.
+
+**FIELD PATH:** `builders-developers-insurance` → `considerations[7].description`  
+**COMPLETE CURRENT VALUE:** Completion, occupancy, ready-for-takeover, policy expiry, or other events may affect when builder's risk ends depending on the policy wording. Permanent property, inventory, habitational, or condominium coverage should be coordinated as applicable before the construction coverage ends. Partial occupancy requires careful timing so neither policy leaves the asset uninsured.
+
+**FIELD PATH:** `builders-developers-insurance` → `faqItems[3].answer`  
+**COMPLETE CURRENT VALUE:** Completion, occupancy, ready-for-takeover, policy expiry, or other events may affect when builder's risk ends depending on the policy wording. Permanent property or inventory coverage should be coordinated as applicable before construction coverage ends. Liability for alleged post-handover injury or damage depends on completed-operations wording under the applicable GL or wrap program — review timing before units are sold or leased.
+
+### STOP FOR OWNER REVIEW (precision fix)
+
+**NO MERGE · NO DEPLOY · NO VERCEL PROMOTION · NO PUSH TO MAIN**

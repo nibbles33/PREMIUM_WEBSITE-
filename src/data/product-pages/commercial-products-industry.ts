@@ -271,7 +271,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
           "May address certain delay-related expenses after a covered loss — where delay-in-completion or soft-cost endorsements are purchased and subject to policy wording.",
         detailTitle: "Delay expenses need their own line item",
         detailDescription:
-          "Interest, taxes, professional fees, and extended site overhead after an insured loss are not part of basic hard-cost coverage unless scheduled. Document and value soft costs explicitly — formula-only limits can understate exposure when a covered peril extends the construction period.",
+          "Interest, taxes, professional fees, and extended site overhead may require specific soft-cost coverage, limits, or endorsements depending on the policy form. Document and value soft costs explicitly — formula-only limits can understate exposure when a covered peril extends the construction period.",
         icon: Building2,
       },
       {
@@ -301,7 +301,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       {
         title: "Completed value, construction period, and extensions",
         description:
-          "Limits are commonly based on completed project value for the construction period stated in the policy. Substantial completion, occupancy, or policy expiry can end coverage — whichever the form triggers first. Delayed projects may need extensions arranged before the policy expires.",
+          "Limits are commonly based on completed project value for the construction period defined by the policy. Completion, occupancy, policy expiry, or other conditions in the wording may affect when coverage ends. Delayed projects may require extensions before expiry, subject to insurer approval and policy terms.",
       },
       {
         title: "Hard costs vs soft costs and delay endorsements",
@@ -316,10 +316,10 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       {
         title: "Lender and loss-payee requirements",
         description:
-          "Construction lenders commonly require builder's risk with mortgage or loss-payee clauses, minimum limits, and proof before advances. Share loan and contract insurance schedules with your broker early so certificates match what the lender actually requires.",
+          "Construction financing agreements may require builder's risk with mortgage or loss-payee wording, minimum limits, and proof before advances — where the loan documents specify those terms. Share loan and contract insurance schedules with your broker early so certificates match what the financing actually requires.",
       },
       {
-        title: "Exclusions: faulty workmanship, water, flood, and earthquake",
+        title: "Review workmanship, water, flood & earthquake wording",
         description:
           "Faulty workmanship and defective materials are typically excluded from property recovery for the defective work itself — liability policies address certain claim types separately. Water damage, sewer backup, flood, and earthquake treatment vary by form and optional buy-backs. Do not assume catastrophic perils are included without reviewing wording.",
       },
@@ -354,7 +354,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       {
         question: "When does builder's risk start and end?",
         answer:
-          "Coverage typically applies for a defined construction period and ends at substantial completion, occupancy, policy expiry, or another trigger in the form — whichever applies first. Delayed projects may need extensions arranged before expiry. Occupancy during construction can change how the policy responds.",
+          "Builder's risk applies for the construction period defined by the policy. Completion, occupancy, policy expiry, or other conditions in the wording may affect when coverage ends. Delayed projects may require extensions before expiry, subject to insurer approval and policy terms. Occupancy during construction can also change how the policy responds.",
       },
       {
         question: "What project information is needed for a quote?",

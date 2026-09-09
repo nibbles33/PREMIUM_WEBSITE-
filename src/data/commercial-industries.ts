@@ -384,10 +384,10 @@ export const industryPages: IndustryPageContent[] = [
         title: "Wrap-Up Liability",
         shortLabel: "Wrap-Up",
         description:
-          "On enrolled projects, wrap-up or OCIP programs may provide project-site liability coverage for participating trades — subject to enrollment and policy terms.",
+          "A wrap-up or OCIP may provide certain project-site liability coverage for enrolled trades — subject to program wording, enrollment, exclusions, and limits.",
         detailTitle: "OCIP changes whose policy responds on site",
         detailDescription:
-          "Large projects may use an owner- or contractor-controlled wrap-up. Enrolled trades may rely on the wrap for onsite liability but typically still need their own coverage for off-site operations, auto, tools, and non-enrolled work. Read enrollment and exclusion language carefully.",
+          "Large projects may use an owner- or contractor-controlled wrap-up. A wrap-up may provide certain project-site liability coverage for enrolled trades, subject to program wording, enrollment, exclusions, and limits. Their own insurance program may still be needed for exposures outside the wrap — including off-site operations, auto, tools, and non-enrolled work.",
         icon: Building2,
       },
     ],
@@ -405,7 +405,7 @@ export const industryPages: IndustryPageContent[] = [
       {
         title: "OCIP / wrap enrollment vs your own GL",
         description:
-          "On Owner Controlled or Contractor Controlled Insurance Programs, enrolled trades may rely on the project wrap for certain onsite liability while enrolled. Off-site operations, commercial auto, tools, and non-enrolled work usually still need your own policies. Enrollment is not a full replacement for an operating contractor program.",
+          "On Owner Controlled or Contractor Controlled Insurance Programs, a wrap-up may provide certain project-site liability coverage for enrolled trades, subject to program wording, enrollment, exclusions, and limits. Off-site operations, commercial auto, tools, and non-enrolled work usually still need your own policies. Enrollment is not a full replacement for an operating contractor program.",
       },
       {
         title: "Tools and equipment — job-site theft and scheduling",
@@ -443,7 +443,7 @@ export const industryPages: IndustryPageContent[] = [
       {
         question: "Do subcontractors need their own insurance?",
         answer:
-          "Usually yes. General contractors and owners typically require subs to carry their own liability insurance and provide certificates before starting. Your own policy and a project wrap-up (where enrolled) do not automatically replace every sub's obligation — confirm contract requirements for each tier.",
+          "Many contracts require subcontractors to carry their own liability insurance and provide evidence of coverage before starting work. Your own policy and a project wrap-up (where enrolled) do not automatically replace each subcontractor's contractual insurance obligations — confirm contract requirements for each tier.",
       },
       {
         question: "What about completed work after I leave the job?",
@@ -453,7 +453,7 @@ export const industryPages: IndustryPageContent[] = [
       {
         question: "Do I need my own GL if the project has a wrap-up or OCIP?",
         answer:
-          "Often yes for off-site work, non-enrolled projects, commercial auto, tools, and any periods before or after enrollment. Wrap-ups may address certain onsite liability for enrolled parties during the project — they rarely eliminate the need for an operating contractor program entirely. Read enrollment documents carefully.",
+          "A wrap-up may provide certain project-site liability coverage for enrolled trades, subject to program wording, enrollment, exclusions, and limits. Your own insurance program may still be needed for exposures outside the wrap — including off-site work, non-enrolled projects, commercial auto, tools, and periods before or after enrollment. Read enrollment documents carefully.",
       },
       {
         question: "What information is needed to quote contractors insurance?",
@@ -917,7 +917,7 @@ export const industryPages: IndustryPageContent[] = [
           "May help address certain physical loss or damage to each project during construction — where a course-of-construction policy is purchased for that project.",
         detailTitle: "Each project needs its own property schedule",
         detailDescription:
-          "Developers typically arrange builder's risk per project (or via a master program) covering hard costs and endorsed extensions. Lenders often require loss-payee status and evidence of coverage before draw releases. Soft costs, transit, and existing structures remain endorsement-dependent.",
+          "Developers typically arrange builder's risk per project (or via a master program) covering hard costs and endorsed extensions. Construction financing agreements may require evidence of builder's risk and other specified insurance before advances are released — including lender interests where the documents require them. Soft costs, transit, and existing structures remain endorsement-dependent.",
         icon: HardHat,
       },
       {
@@ -937,7 +937,7 @@ export const industryPages: IndustryPageContent[] = [
           "May consolidate liability for enrolled parties on a project under an owner- or sponsor-controlled program — where purchased and subject to enrollment terms.",
         detailTitle: "OCIP reduces gaps between trades — at a cost",
         detailDescription:
-          "Wrap-ups centralize certificates and limits for major projects but require active administration. They do not automatically replace every contractor's own CGL for off-site work, auto, or tools. Developers sponsoring OCIPs should coordinate insurance with counsel and any surety requirements separately.",
+          "Wrap-ups can centralize certain project liability coverage for enrolled parties, subject to program wording, enrollment, exclusions, and limits. Administration and certificates can be discussed separately. They do not automatically replace every contractor's own CGL for off-site work, auto, or tools. Developers sponsoring OCIPs should coordinate insurance with counsel and any surety requirements separately.",
         icon: Building2,
       },
       {
@@ -960,7 +960,7 @@ export const industryPages: IndustryPageContent[] = [
       {
         title: "Lender requirements and draw conditions",
         description:
-          "Construction lenders commonly require evidence of builder's risk, liability limits, loss-payee or mortgage clauses, and sometimes wrap-up structures before releasing advances. Share loan insurance schedules early so certificates match lender conditions.",
+          "Construction financing agreements may require evidence of builder's risk and other specified insurance before advances are released. Required limits, lender interests, certificates, and project-specific liability requirements should be taken from the financing documents — not assumed as a universal package.",
       },
       {
         title: "OCIP / CCIP sponsorship decisions",
@@ -990,7 +990,7 @@ export const industryPages: IndustryPageContent[] = [
       {
         title: "Transition from construction to permanent property",
         description:
-          "Substantial completion, occupancy, and ready-for-takeover often end builder's risk. Permanent property, condominium corporation, or habitational programs — as applicable — must be ready. Partial occupancy requires careful coordination so neither policy leaves the asset uninsured.",
+          "Completion, occupancy, ready-for-takeover, policy expiry, or other events may affect when builder's risk ends depending on the policy wording. Permanent property, inventory, habitational, or condominium coverage should be coordinated as applicable before the construction coverage ends. Partial occupancy requires careful timing so neither policy leaves the asset uninsured.",
       },
     ],
     faqTitle: "Builders & developers FAQ",
@@ -1013,7 +1013,7 @@ export const industryPages: IndustryPageContent[] = [
       {
         question: "What happens to coverage after project completion or occupancy?",
         answer:
-          "Builder's risk usually ends at substantial completion, occupancy, or another policy trigger. Permanent property or inventory coverage should be in force for completed assets. Liability for alleged post-handover injury or damage depends on completed-operations wording under the applicable GL or wrap program — review timing before units are sold or leased.",
+          "Completion, occupancy, ready-for-takeover, policy expiry, or other events may affect when builder's risk ends depending on the policy wording. Permanent property or inventory coverage should be coordinated as applicable before construction coverage ends. Liability for alleged post-handover injury or damage depends on completed-operations wording under the applicable GL or wrap program — review timing before units are sold or leased.",
       },
       {
         question: "What information is needed to structure a developers insurance program?",

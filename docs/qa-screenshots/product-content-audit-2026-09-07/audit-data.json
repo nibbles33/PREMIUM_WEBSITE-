@@ -124,10 +124,10 @@
       "avgCardWords": 42.5,
       "thinCardCount": 0,
       "considerationsPresent": true,
-      "considerationsWords": 333,
+      "considerationsWords": 355,
       "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 991,
+      "totalSubstantiveWords": 1022,
       "safetyFlags": [
         {
           "page": "/builders-developers-insurance/",
@@ -142,7 +142,7 @@
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
       "classification": "A",
-      "classificationReason": "Substantive (991w), 4 cards avg 42.5w, considerations yes, FAQ unique"
+      "classificationReason": "Substantive (1022w), 4 cards avg 42.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/builders-risk-insurance/",
@@ -155,17 +155,17 @@
       "avgCardWords": 50.5,
       "thinCardCount": 0,
       "considerationsPresent": true,
-      "considerationsWords": 380,
+      "considerationsWords": 393,
       "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 1051,
+      "totalSubstantiveWords": 1071,
       "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex + Ontario",
       "geoNotes": "Both Windsor-Essex and Ontario referenced",
       "classification": "A",
-      "classificationReason": "Substantive (1051w), 4 cards avg 50.5w, considerations yes, FAQ unique"
+      "classificationReason": "Substantive (1071w), 4 cards avg 50.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/business-interruption-insurance/",
@@ -339,17 +339,17 @@
       "avgCardWords": 46,
       "thinCardCount": 0,
       "considerationsPresent": true,
-      "considerationsWords": 383,
+      "considerationsWords": 388,
       "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 1014,
+      "totalSubstantiveWords": 1025,
       "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
       "classification": "A",
-      "classificationReason": "Substantive (1014w), 4 cards avg 46w, considerations yes, FAQ unique"
+      "classificationReason": "Substantive (1025w), 4 cards avg 46w, considerations yes, FAQ unique"
     },
     {
       "route": "/convenience-store-insurance/",
