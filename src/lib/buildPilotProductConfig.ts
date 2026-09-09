@@ -236,7 +236,11 @@ export function adaptCommercialProductContent(
       content.slug === "property-management-insurance" ||
       content.slug === "pharmacy-insurance" ||
       content.slug === "cargo-freight-insurance" ||
-      content.slug === "builders-risk-insurance"
+      content.slug === "builders-risk-insurance" ||
+      content.slug === "crime-fidelity-insurance" ||
+      content.slug === "directors-officers-insurance" ||
+      content.slug === "employment-practices-liability-insurance" ||
+      content.slug === "product-recall-insurance"
         ? "expandable"
         : "grid",
   });

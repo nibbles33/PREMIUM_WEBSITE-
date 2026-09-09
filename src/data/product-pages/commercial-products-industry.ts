@@ -778,42 +778,100 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Product Recall Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Product recall insurance for Windsor-Essex manufacturers and distributors — recall costs, brand protection, and customer notification expenses.",
+      "Product recall insurance for Windsor-Essex manufacturers and distributors — recall and withdrawal expense coverage distinct from product liability, subject to policy triggers.",
     headline: "Product Recall Insurance",
     subhead:
-      "Coverage for the cost of pulling products from the market — notification, transport, storage, and disposal when a recall is necessary.",
+      "Product recall insurance addresses specified first-party recall or withdrawal costs — and other scheduled expenses — only where the policy trigger and selected coverage apply. It is not the same product as product liability insurance. Product liability generally addresses certain third-party bodily injury or property-damage claims arising from products, subject to policy wording. Recall insurance is about the operational cost of getting product out of the market when an insured event is met: notification, transportation, storage, disposal, and — only where included — replacement, consultant or lab fees, crisis management, brand rehabilitation, or limited business interruption. A voluntary withdrawal, a regulator-involved recall, or a customer demand does not automatically trigger coverage. In Canada, most food recalls are company-led actions with Canadian Food Inspection Agency oversight, and the Minister of Health may order a mandatory food recall in defined circumstances; consumer products may involve Health Canada authorities under the Canada Consumer Product Safety Act — regulatory involvement alone does not mean the insurance will respond. Premium Insurance Brokers can help Windsor–Essex manufacturers, importers, and distributors compare recall expense forms against product type, traceability, and supply-chain role.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Recall Quote",
     coverageIntro:
-      "Product recall helps with expenses to withdraw contaminated or defective products — separate from liability for injury claims.",
+      "Product recall programs schedule first-party expense categories after a covered recall or withdrawal event. Product liability for injury or damage claims remains a separate discussion. Replacement, consultants, brand rehabilitation, and lost profits are not automatic inclusions on every form.",
     coverageTypes: [
       {
         title: "Recall Expenses",
+        shortLabel: "Recall Expense",
         description:
-          "Covers costs to notify customers, retrieve products, and dispose of or destroy affected inventory.",
+          "May help with certain first-party expenses to notify, retrieve, store, and dispose of affected products after a covered recall or withdrawal event — subject to the policy trigger and exclusions.",
+        detailTitle: "Pulling product is an operations problem before it is a liability lawsuit",
+        detailDescription:
+          "Product liability addresses injury or damage claims. Recall expense coverage addresses the cost of getting product out of the market when the insured event is met — voluntary or regulator-involved actions do not automatically equal coverage. Confirm how the form defines the insured event, contaminated product, or malicious act.",
         icon: Package,
       },
       {
         title: "Replacement Costs",
+        shortLabel: "Replacement",
         description:
-          "May cover expenses to replace recalled products with safe alternatives.",
+          "May help with certain costs to replace recalled product with conforming product — only where the form or endorsement includes replacement expense.",
+        detailTitle: "Replacement is a separate expense category — not automatic",
+        detailDescription:
+          "Many programs schedule or sublimit replacement separately from basic recall expense. Confirm whether customer refunds, rework, or new production are included. Do not assume replacement follows every covered recall automatically.",
         icon: Factory,
       },
       {
         title: "Consultant & Lab Fees",
+        shortLabel: "Consultants",
         description:
-          "Addresses testing and expert costs to identify contamination sources and scope.",
+          "May help with certain consultant, crisis-management, or laboratory testing costs tied to a covered recall event — where included.",
+        detailTitle: "Finding the source and scope drives both cost and credibility",
+        detailDescription:
+          "Lab work and recall consultants can be required quickly for allergen, pathogen, or foreign-material events. These fees are not universally built into every recall form. Ask which professional fees are scheduled and whether pre-approved panel consultants are required.",
         icon: Briefcase,
       },
       {
         title: "Brand Rehabilitation",
+        shortLabel: "Brand Rehab",
         description:
-          "Some policies include limited crisis communication and brand restoration expenses.",
+          "May help with limited crisis-communication or brand-restoration expenses after a covered event — only where purchased and subject to sublimits.",
+        detailTitle: "Reputation spend is optional coverage, not a free add-on",
+        detailDescription:
+          "Brand rehabilitation is frequently limited or endorsed. Lost profits or business interruption, if available, usually need separate triggers and are not assumed to follow recall expense automatically. Confirm sublimits before treating PR spend as insured.",
         icon: Shield,
       },
     ],
     whoItIsFor:
-      "Product recall insurance is for Windsor-Essex food manufacturers, consumer goods producers, and distributors whose products could trigger a voluntary or regulatory recall.",
+      "For Windsor–Essex food manufacturers, consumer-goods producers, importers, and distributors whose products could face a voluntary or regulator-involved recall — reviewed through an independent broker who can separate recall expense coverage from product liability and map scheduled expense categories to your supply chain.",
+    considerations: [
+      {
+        title: "Product type and regulatory regime",
+        description:
+          "Food products, consumer goods, and other categories sit under different Canadian regimes. CFIA oversees many food-recall processes; Health Canada and the Canada Consumer Product Safety Act address many non-food consumer products, with category exclusions. Match underwriting disclosure to the products you actually make or distribute.",
+      },
+      {
+        title: "Traceability, lot coding, and batch records",
+        description:
+          "Lot codes, batch records, and customer shipment data determine how wide a recall must run and how quickly you can isolate affected product. Weak traceability increases operational cost and complicates claims. Carriers often ask how you track ingredients, finished goods, and distribution.",
+      },
+      {
+        title: "Written recall plan and roles",
+        description:
+          "A documented recall plan — who decides, who notifies customers and regulators, who handles logistics — supports both regulatory readiness and underwriting. Insurance does not replace an operational plan.",
+      },
+      {
+        title: "Manufacturer, importer, or distributor duties",
+        description:
+          "Supply contracts may impose recall cost-sharing, notification, or indemnification duties even when you did not manufacture the product. Your contractual role affects which expense categories and third-party recall expense options matter.",
+      },
+      {
+        title: "Insured event and trigger definitions",
+        description:
+          "Coverage turns on how the policy defines accidental contamination, malicious tampering, government action, or other insured events. A voluntary withdrawal for quality reasons may not meet the trigger even if it is commercially necessary. Read the event definitions before assuming a recall is insured.",
+      },
+      {
+        title: "Which expense categories are actually scheduled",
+        description:
+          "Basic recall expense, replacement, consultant and lab fees, crisis management, brand rehabilitation, and business interruption or lost profit are often separate lines or endorsements with their own sublimits and retentions. Confirm what is included versus optional.",
+      },
+      {
+        title: "Supply-chain cascading recalls",
+        description:
+          "A component or ingredient recall can force downstream finished-goods withdrawals. Disclose your role as component supplier or finished-goods assembler so limits and third-party expense wording can be reviewed against cascading exposure.",
+      },
+      {
+        title: "Coordination with product liability limits",
+        description:
+          "Recall expense coverage does not replace product liability for bodily injury or property-damage claims from products. Keep both conversations open when you manufacture or distribute consumer goods — and do not assume one policy pays the other’s loss categories.",
+      },
+    ],
     relatedLinks: [
       { label: "Manufacturing Insurance", href: "/manufacturing-insurance/" },
       { label: "Product Liability (Retail)", href: "/retail-insurance/" },
@@ -822,29 +880,34 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     faqTitle: "Product recall FAQ",
     faqItems: [
       {
-        question: "Is recall the same as product liability?",
+        question: "Is product recall insurance the same as product liability?",
         answer:
-          "No. Product liability covers injury or damage claims from defective products. Recall covers the cost of withdrawing products from the market.",
+          "No. Product liability generally addresses certain third-party bodily injury or property-damage claims arising from products, subject to policy wording. Product recall insurance addresses specified first-party recall or withdrawal expenses — and other scheduled costs — only where the policy trigger and selected coverage apply. One does not automatically pay the other’s loss categories.",
       },
       {
-        question: "Who triggers a recall?",
+        question: "Does every recall or withdrawal trigger insurance?",
         answer:
-          "Recalls may be voluntary or mandated by regulators like the CFIA for food products. Policies define what triggers coverage.",
+          "No. Coverage depends on whether the facts meet the policy’s insured-event or trigger definitions, exclusions, retentions, and sublimits. A commercially necessary withdrawal, a customer demand, or a regulator inquiry does not automatically create an insured recall event.",
       },
       {
-        question: "Does recall cover lost profits?",
+        question: "Are voluntary recalls treated the same as mandatory recalls for coverage?",
         answer:
-          "Some policies include business interruption components. Review indemnity periods and triggers with your broker.",
+          "Insurance response follows the policy trigger, not the public label alone. In Canada, most food recalls are company-led actions with CFIA oversight, and ordered food-recall authority exists in defined circumstances; consumer-product recalls may involve Health Canada authorities. Whether voluntary or ordered, coverage still requires the insured event and scheduled expense categories to apply.",
       },
       {
-        question: "Do distributors need recall coverage?",
+        question: "Can replacement, testing, brand, or lost-profit costs be included?",
         answer:
-          "Distributors may face recall obligations in supply contracts even when they did not manufacture the product.",
+          "Sometimes — where the form or endorsements specifically include those expense categories. Replacement, consultant and lab fees, brand rehabilitation, and business interruption or lost profits are frequently optional, sublimited, or subject to separate triggers. Do not treat them as universal benefits of every recall policy.",
+      },
+      {
+        question: "What information is needed to quote recall coverage?",
+        answer:
+          "Expect questions about product types and markets, manufacturing versus importing versus distributing role, annual sales, distribution footprint, traceability and lot-coding practices, written recall plans, prior incidents, supply-contract recall duties, and which expense categories (replacement, consultants, brand, business interruption) you want reviewed.",
       },
     ],
-    ctaHeading: "Manufacture or distribute consumer products?",
+    ctaHeading: "Manufacture or distribute products that could be recalled?",
     ctaSubhead:
-      "Share your product types and supply chain — we will discuss recall coverage alongside product liability.",
+      "Share your product types, supply-chain role, and traceability practices — we will discuss recall expense coverage alongside product liability.",
     serviceName: "Product Recall Insurance",
   },
 ];

@@ -298,57 +298,98 @@ export const commercialProductPages: ProductPageContent[] = [
     metaTitle:
       "Directors & Officers (D&O) Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Directors and officers liability insurance for Windsor-Essex — protection for board members and executives against management liability claims.",
+      "Directors and officers liability insurance for Windsor-Essex — management liability for directors, officers, and boards subject to policy wording and Side A/B/C structure.",
     headline: "Directors & Officers (D&O) Insurance",
     subhead:
-      "Coverage for directors, officers, and board members when management decisions face legal challenge from shareholders, regulators, or stakeholders.",
+      "Directors and officers liability insurance may help respond to certain claims alleging wrongful acts by directors, officers, or other insured persons in their management or governance capacities — subject to policy definitions, exclusions, claims-made conditions, and reporting requirements. It is not a guarantee against every personal liability, not a replacement for professional liability when you render professional services, and not a substitute for employment practices liability when the dispute is primarily an employment claim. Typical programs use Side A (individual), Side B (corporate reimbursement), and — where included — Side C (entity) coverage, but not every form uses an identical ABC structure, and entity coverage varies materially by organization type. Defence costs are often a major part of the product and may erode available limits depending on the form. Premium Insurance Brokers can help Windsor–Essex corporations, nonprofits, and private companies compare D&O structure against board composition, funding stage, and related management-liability needs.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=professional`,
     quoteLabel: "Get a D&O Quote",
     coverageIntro:
-      "D&O policies address personal liability exposures leaders face when acting in their official capacity.",
+      "D&O is management liability insurance for certain alleged wrongful acts in governance or executive roles. Side A, Side B, and Side C address different payees and claim paths — subject to the form — and defence costs often sit inside shared limits unless wording provides otherwise.",
     coverageTypes: [
       {
         title: "Side A — Individual Coverage",
+        shortLabel: "Side A",
         description:
-          "Protects directors and officers personally when the organization cannot indemnify them.",
+          "May help respond to certain covered loss that insured directors or officers must bear personally when the organization cannot or does not indemnify them — subject to policy terms.",
+        detailTitle: "Personal assets are exposed when indemnification fails",
+        detailDescription:
+          "Side A matters most in insolvency or non-indemnifiable situations. It does not erase every personal exposure — conduct exclusions and final-adjudication language still apply. Confirm who qualifies as an insured person under the form.",
         icon: Shield,
       },
       {
         title: "Side B — Corporate Reimbursement",
+        shortLabel: "Side B",
         description:
-          "Reimburses the organization when it indemnifies directors and officers for covered claims.",
+          "May reimburse the organization when it indemnifies directors or officers for covered claims — typically subject to a retention.",
+        detailTitle: "The company’s indemnity promise needs balance-sheet backup",
+        detailDescription:
+          "Side B protects the entity’s cash after it advances defence or settlement for individuals under corporate law and by-laws. Deductibles or retentions usually attach here rather than on Side A. Indemnification capacity and insurance response remain separate questions.",
         icon: Briefcase,
       },
       {
         title: "Side C — Entity Coverage",
+        shortLabel: "Side C",
         description:
-          "May extend to the organization itself for securities or entity claims, depending on policy form.",
+          "May extend to certain claims against the organization itself — scope varies materially by form and whether the insured is public, private, or nonprofit.",
+        detailTitle: "Entity coverage is not one-size-fits-all",
+        detailDescription:
+          "Public-company Side C is often limited to securities claims. Private and nonprofit forms may be broader or packaged differently. Do not assume Side C covers every lawsuit naming the company — many operational claims belong in general liability, professional liability, or EPL instead.",
         icon: Building2,
       },
       {
         title: "Defence Costs",
+        shortLabel: "Defence",
         description:
-          "Can cover legal defence for covered management liability claims, often irrespective of outcome.",
+          "May help with legal defence costs for covered claims — often on a claims-made basis. Defence costs frequently erode shared policy limits unless the form provides otherwise.",
+        detailTitle: "Legal bills can consume the limit before settlement",
+        detailDescription:
+          "Management liability disputes are expensive. Confirm whether defence is inside or outside limits, how advancement works, and reporting deadlines after a claim or circumstance. Defence is not an automatic unlimited benefit irrespective of outcome or wording.",
         icon: Gavel,
       },
     ],
     whoItIsFor:
-      "D&O insurance is for Windsor-Essex corporations, nonprofits with boards, startups with investors, and private companies whose directors want protection when management decisions are challenged.",
+      "For Windsor–Essex corporations, nonprofit boards, startups with investors, and private companies whose directors and officers need management liability reviewed through an independent broker — including Side structure, claims-made reporting, and coordination with EPL where employment exposure overlaps.",
     considerations: [
       {
-        title: "Private vs. public company forms",
+        title: "Private, public, and nonprofit forms differ",
         description:
-          "Public, private, and nonprofit D&O programs differ in structure and claims history expectations. Disclose your organization type accurately.",
+          "Organization type drives Side C scope, underwriting questions, and claims history expectations. Public, private, and nonprofit D&O programs are not interchangeable. Disclose structure, ownership, and board composition accurately.",
       },
       {
-        title: "Investor and lender requirements",
+        title: "Side A / B / C structure and retentions",
         description:
-          "Venture investors and lenders may require D&O as a condition of funding. Limits and tail coverage should align with agreements.",
+          "Not every policy uses an identical ABC layout. Confirm who is an insured person, when Side A responds without indemnification, how Side B retentions apply, and whether entity coverage exists at all for your organization type.",
       },
       {
-        title: "Employment practices overlap",
+        title: "Claims-made reporting and prior/pending litigation",
         description:
-          "Wrongful termination and harassment claims may fall under EPL insurance rather than D&O. Both may be needed for leadership teams.",
+          "D&O is typically claims-made. Continuity dates, prior-and-pending litigation exclusions, and notice of circumstances affect whether a matter is covered. Late reporting can jeopardize defence and indemnity.",
+      },
+      {
+        title: "Defence costs inside vs outside limits",
+        description:
+          "Many management liability forms treat defence costs as eroding the shared limit. Some enhancements place defence outside limits — do not assume that treatment. Ask how advancement and allocation work when covered and uncovered allegations are mixed.",
+      },
+      {
+        title: "Conduct, fraud, and insured-vs-insured exclusions",
+        description:
+          "Dishonesty and fraud exclusions with final-adjudication language are common. Insured-versus-insured provisions can restrict certain internal disputes. Read these carefully before assuming every stakeholder claim is covered.",
+      },
+      {
+        title: "EPL and professional liability overlap",
+        description:
+          "Employment allegations against leadership may belong primarily in EPL. Errors in rendering professional services belong in professional liability. D&O focuses on management and governance wrongful acts — many organizations need more than one product.",
+      },
+      {
+        title: "M&A, change in control, insolvency, and runoff",
+        description:
+          "Ownership changes, mergers, and insolvency can trigger change-in-control provisions, runoff or tail needs, and Side A importance when indemnification fails. Tell your broker about planned transactions before they close.",
+      },
+      {
+        title: "Investor, lender, and contract insurance schedules",
+        description:
+          "Venture investors and lenders may require D&O evidence, minimum limits, or tail coverage as a condition of funding. Align policy structure with those schedules rather than assuming a certificate expands wording.",
       },
     ],
     relatedLinks: [
@@ -359,29 +400,34 @@ export const commercialProductPages: ProductPageContent[] = [
     faqTitle: "D&O insurance FAQ",
     faqItems: [
       {
-        question: "Who needs D&O insurance?",
+        question: "Does D&O protect the company, the directors, or both?",
         answer:
-          "Any organization with a board or executive team facing management liability — including employment-related shareholder suits, regulatory investigations, and alleged mismanagement.",
+          "It depends on the form. Side A may help with certain personal loss when insured individuals are not indemnified. Side B may reimburse the organization after it indemnifies them. Side C, where included, may address certain claims against the entity itself — with scope that varies by organization type. Many programs combine these concepts; none erase every personal or corporate exposure.",
       },
       {
-        question: "Does general liability cover directors personally?",
+        question: "What are Side A, Side B, and Side C?",
         answer:
-          "No. GL covers the organization's operational liability, not personal claims against directors for management decisions.",
+          "Side A typically benefits individual directors and officers when the organization cannot or will not indemnify. Side B reimburses the organization for indemnification of insured persons. Side C may extend to the organization for certain entity claims — often narrower for public companies (for example, securities-focused) and different again for private or nonprofit forms. Confirm the actual schedule on your policy.",
       },
       {
-        question: "Do nonprofits need D&O?",
+        question: "Are defence costs covered — and do they reduce the limit?",
         answer:
-          "Nonprofit boards face similar personal liability exposures — especially around employment, governance, and regulatory compliance.",
+          "Defence costs for covered claims may be available subject to policy wording, retentions, and reporting. On many forms, defence costs erode shared limits unless an enhancement places defence outside limits. Do not assume defence is unlimited or always outside the limit.",
       },
       {
-        question: "What triggers a D&O claim?",
+        question: "Does commercial general liability cover management decisions?",
         answer:
-          "Examples include shareholder lawsuits, regulatory actions, creditor claims alleging mismanagement, and certain employment-related claims against directors.",
+          "Commercial general liability is primarily designed for certain bodily injury and property-damage exposures arising from operations — not for personal management-liability claims against directors and officers alleging wrongful acts in governance. D&O addresses a different class of allegation. Some employment matters may also belong in EPL rather than CGL or D&O alone.",
+      },
+      {
+        question: "What happens to coverage after ownership or control changes?",
+        answer:
+          "Change-in-control, merger, or sale provisions can alter who is covered, freeze the policy into runoff, or require new coverage for the surviving entity. Tail or runoff options may be needed for prior acts. Notify your broker before ownership changes close so continuity and prior/pending issues can be reviewed.",
       },
     ],
     ctaHeading: "Protect your leadership team?",
     ctaSubhead:
-      "Share your organization type, board structure, and funding stage — we will compare D&O options that fit.",
+      "Share your organization type, board structure, and funding stage — we will compare D&O options that fit alongside EPL where needed.",
     serviceName: "Directors & Officers Insurance",
   },
   {

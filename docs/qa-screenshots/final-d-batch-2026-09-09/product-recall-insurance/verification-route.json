@@ -1,0 +1,66 @@
+{
+  "slug": "product-recall-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "recall-expenses",
+      "tabDesc": "May help with certain first-party expenses to notify, retrieve, store, and dispose of affected products after a covered recall or withdrawal event — subject to the policy trigger and exclusions.",
+      "detailTitle": "Pulling product is an operations problem before it is a liability lawsuit",
+      "detailDescription": "Product liability addresses injury or damage claims. Recall expense coverage addresses the cost of getting product out of the market when the insured event is met — voluntary or regulator-involved actions do not automatically equal coverage. Confirm how the form defines the insured event, contaminated product, or malicious act.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "recall-expenses"
+    },
+    {
+      "index": 1,
+      "id": "replacement-costs",
+      "tabDesc": "May help with certain costs to replace recalled product with conforming product — only where the form or endorsement includes replacement expense.",
+      "detailTitle": "Replacement is a separate expense category — not automatic",
+      "detailDescription": "Many programs schedule or sublimit replacement separately from basic recall expense. Confirm whether customer refunds, rework, or new production are included. Do not assume replacement follows every covered recall automatically.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "replacement-costs"
+    },
+    {
+      "index": 2,
+      "id": "consultant-lab-fees",
+      "tabDesc": "May help with certain consultant, crisis-management, or laboratory testing costs tied to a covered recall event — where included.",
+      "detailTitle": "Finding the source and scope drives both cost and credibility",
+      "detailDescription": "Lab work and recall consultants can be required quickly for allergen, pathogen, or foreign-material events. These fees are not universally built into every recall form. Ask which professional fees are scheduled and whether pre-approved panel consultants are required.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "consultant-lab-fees"
+    },
+    {
+      "index": 3,
+      "id": "brand-rehabilitation",
+      "tabDesc": "May help with limited crisis-communication or brand-restoration expenses after a covered event — only where purchased and subject to sublimits.",
+      "detailTitle": "Reputation spend is optional coverage, not a free add-on",
+      "detailDescription": "Brand rehabilitation is frequently limited or endorsed. Lost profits or business interruption, if available, usually need separate triggers and are not assumed to follow recall expense automatically. Confirm sublimits before treating PR spend as insured.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "brand-rehabilitation"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Product recall insurance addresses specified first-party recall or withdrawal costs — and other scheduled expenses — only where the policy t",
+    "trustPreview": "For Windsor–Essex food manufacturers, consumer-goods producers, importers, and distributors whose products could face a voluntary or regulat"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "headline": "Product Recall Insurance",
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

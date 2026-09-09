@@ -1,0 +1,66 @@
+{
+  "slug": "crime-fidelity-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "employee-dishonesty",
+      "tabDesc": "May help address certain direct loss of money, securities, or property caused by employee theft or dishonesty — where purchased and subject to the policy’s employee definition, conditions, and exclusions.",
+      "detailTitle": "Insider theft is usually excluded from ordinary property coverage",
+      "detailDescription": "Standard commercial property policies typically exclude theft by employees. Crime coverage is a separate first-party product. Inventory shortage alone often does not prove a covered employee-dishonesty loss without other evidence — follow policy proof requirements. Not every worker qualifies as an “employee” under the form.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "employee-dishonesty"
+    },
+    {
+      "index": 1,
+      "id": "forgery-alteration",
+      "tabDesc": "May help address certain losses from forgery or alteration of cheques or specified financial instruments — subject to policy wording.",
+      "detailTitle": "A forged instrument can drain an account before anyone notices",
+      "detailDescription": "Forgery and alteration agreements focus on instrument fraud, not every contract dispute. Banking controls and dual signatures affect both prevention and underwriting. Confirm which instruments and territories the form actually schedules.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "forgery-alteration"
+    },
+    {
+      "index": 2,
+      "id": "theft-of-money-securities",
+      "tabDesc": "May help address certain robbery, burglary, or theft of money and securities on premises or in transit — where the form provides those agreements and subject to limits.",
+      "detailTitle": "Cash and negotiable instruments need their own crime agreements",
+      "detailDescription": "Ordinary property forms often treat money and securities differently from stock-in-trade. Transit to the bank and on-premises holdup exposures should be scheduled accurately. Limits and deductibles for money frequently differ from inventory limits.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "theft-of-money-securities"
+    },
+    {
+      "index": 3,
+      "id": "computer-fraud",
+      "tabDesc": "May help address certain losses from computer fraud as defined in the policy — typically involving fraudulent use of a computer to cause a transfer. Social engineering and voluntary fraudulent-instruction losses are often treated separately and may require a specific endorsement, sublimit, or verification conditions.",
+      "detailTitle": "A convincing email is not the same as a computer takeover",
+      "detailDescription": "Direct computer fraud and social-engineering / fraudulent-instruction losses are not necessarily treated the same way by policy wording. Canadian claim disputes show social-engineering losses frequently fall outside traditional computer-fraud or funds-transfer agreements when an employee voluntarily authorizes payment. Ask whether fraudulent-instruction coverage is included and at what sublimit — do not assume computer fraud automatically includes social engineering.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "computer-fraud"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Crime & Fidelity Insurance can address specified first-party losses involving employee dishonesty, theft, forgery, fraud, money and securiti",
+    "trustPreview": "For Windsor–Essex businesses handling cash, payroll, client funds, retail inventory, or payment instructions — reviewed through an independe"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "headline": "Crime & Fidelity Insurance",
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

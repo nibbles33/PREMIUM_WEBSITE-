@@ -401,32 +401,24 @@
       "route": "/crime-fidelity-insurance/",
       "slug": "crime-fidelity-insurance",
       "category": "commercial",
-      "heroWords": 16,
-      "heroSpecific": false,
+      "heroWords": 142,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 22.5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 61.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 253,
-      "safetyFlags": [
-        {
-          "page": "/crime-fidelity-insurance/",
-          "field": "coverage:Employee Dishonesty",
-          "quote": "Covers theft of money, securities, or property by employees acting fraudulently.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 399,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1175,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (1175w), 4 cards avg 61.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/cyber-insurance/",
@@ -478,32 +470,24 @@
       "route": "/directors-officers-insurance/",
       "slug": "directors-officers-insurance",
       "category": "commercial",
-      "heroWords": 18,
-      "heroSpecific": false,
+      "heroWords": 152,
+      "heroSpecific": true,
       "coverageCount": 4,
       "coverageCardQuality": "specific/hedged (strong)",
-      "avgCardWords": 25.5,
+      "avgCardWords": 49.5,
       "thinCardCount": 0,
       "considerationsPresent": true,
-      "considerationsWords": 70,
-      "considerationsQuality": "moderate",
-      "faqCount": 4,
-      "totalSubstantiveWords": 331,
-      "safetyFlags": [
-        {
-          "page": "/directors-officers-insurance/",
-          "field": "faq",
-          "quote": "GL covers the organization's operational liability, not personal claims against directors for management decisions.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsWords": 296,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1054,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (1054w), 4 cards avg 49.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/dump-truck-insurance/",
@@ -532,32 +516,24 @@
       "route": "/employment-practices-liability-insurance/",
       "slug": "employment-practices-liability-insurance",
       "category": "commercial",
-      "heroWords": 13,
-      "heroSpecific": false,
+      "heroWords": 137,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 22.5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 41,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 227,
-      "safetyFlags": [
-        {
-          "page": "/employment-practices-liability-insurance/",
-          "field": "coverage:Wrongful Termination",
-          "quote": "Covers claims alleging improper dismissal or constructive dismissal.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        }
-      ],
+      "considerationsPresent": true,
+      "considerationsWords": 322,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 983,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
-      "geoTargeting": "Windsor-Essex-primary",
-      "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (983w), 4 cards avg 41w, considerations yes, FAQ unique"
     },
     {
       "route": "/event-liability-insurance/",
@@ -1116,39 +1092,32 @@
       "route": "/product-recall-insurance/",
       "slug": "product-recall-insurance",
       "category": "commercial",
-      "heroWords": 21,
-      "heroSpecific": false,
+      "heroWords": 185,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 22.5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 45.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 252,
+      "considerationsPresent": true,
+      "considerationsWords": 337,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1068,
       "safetyFlags": [
         {
           "page": "/product-recall-insurance/",
-          "field": "faq",
-          "quote": "Product liability covers injury or damage claims from defective products.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
-        },
-        {
-          "page": "/product-recall-insurance/",
-          "field": "faq",
-          "quote": "Recall covers the cost of withdrawing products from the market.",
-          "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-          "severity": "high"
+          "field": "hero",
+          "quote": "In Canada, most food recalls are company-led actions with Canadian Food Inspection Agency oversight, and the Minister of Health may order a mandatory food recall in defined circumstances; consumer products may involve Health Canada authorities under the Canada Consumer Product Safety Act — regulatory involvement alone does not mean the insurance will respond.",
+          "issue": "Mandatory coverage stated — verify regulatory basis",
+          "severity": "low"
         }
       ],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "D",
-      "classificationReason": "2 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat coverage guarantee — states or implies automatic coverage without hedging"
+      "classification": "A",
+      "classificationReason": "Substantive (1068w), 4 cards avg 45.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/professional-liability-insurance/",
@@ -1459,10 +1428,10 @@
     }
   ],
   "counts": {
-    "A": 20,
+    "A": 24,
     "B": 16,
     "C": 18,
-    "D": 4
+    "D": 0
   },
   "allFlags": [
     {
@@ -1515,27 +1484,6 @@
       "severity": "low"
     },
     {
-      "page": "/crime-fidelity-insurance/",
-      "field": "coverage:Employee Dishonesty",
-      "quote": "Covers theft of money, securities, or property by employees acting fraudulently.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/directors-officers-insurance/",
-      "field": "faq",
-      "quote": "GL covers the organization's operational liability, not personal claims against directors for management decisions.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/employment-practices-liability-insurance/",
-      "field": "coverage:Wrongful Termination",
-      "quote": "Covers claims alleging improper dismissal or constructive dismissal.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
       "page": "/liquor-liability-insurance/",
       "field": "considerations",
       "quote": "Standard 4.1's mandatory training list does not include Special Occasion Permit among its applicable authorization types.",
@@ -1558,17 +1506,10 @@
     },
     {
       "page": "/product-recall-insurance/",
-      "field": "faq",
-      "quote": "Product liability covers injury or damage claims from defective products.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
-    },
-    {
-      "page": "/product-recall-insurance/",
-      "field": "faq",
-      "quote": "Recall covers the cost of withdrawing products from the market.",
-      "issue": "Flat coverage guarantee — states or implies automatic coverage without hedging",
-      "severity": "high"
+      "field": "hero",
+      "quote": "In Canada, most food recalls are company-led actions with Canadian Food Inspection Agency oversight, and the Minister of Health may order a mandatory food recall in defined circumstances; consumer products may involve Health Canada authorities under the Canada Consumer Product Safety Act — regulatory involvement alone does not mean the insurance will respond.",
+      "issue": "Mandatory coverage stated — verify regulatory basis",
+      "severity": "low"
     },
     {
       "page": "/professional-liability-insurance/",

@@ -1407,42 +1407,100 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     metaTitle:
       "Crime & Fidelity Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Crime and fidelity insurance for Windsor-Essex businesses — employee dishonesty, theft, forgery, and computer fraud through an independent broker.",
+      "Crime and fidelity insurance for Windsor-Essex businesses — employee dishonesty, forgery, money and securities, and computer fraud through an independent broker.",
     headline: "Crime & Fidelity Insurance",
     subhead:
-      "Protection against internal theft, fraud, and criminal acts that commercial property and liability policies typically exclude.",
+      "Crime & Fidelity Insurance can address specified first-party losses involving employee dishonesty, theft, forgery, fraud, money and securities, or related crime events — depending on the policy form and the insuring agreements you purchase. It is not a surety bond, not cyber insurance for privacy or ransomware response, and not a substitute for ordinary commercial property coverage on stock and buildings. Standard property forms typically exclude theft by employees; crime coverage is the product that may respond to certain insider and defined fraud losses when wording, definitions, limits, and proof requirements are met. Computer fraud and social-engineering / fraudulent-instruction losses are not necessarily treated the same way — many forms require separate or specific wording, endorsements, limits, or sublimits for voluntary payment schemes. Premium Insurance Brokers can help Windsor–Essex businesses compare crime agreements against cash handling, payroll, client funds, and payment controls.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Crime Quote",
     coverageIntro:
-      "Crime policies address losses from employee dishonesty, forgery, theft of money and securities, and computer fraud.",
+      "Commercial crime and fidelity forms typically schedule separate insuring agreements — employee dishonesty, forgery or alteration, theft of money and securities, and computer fraud — each with its own definitions, limits, and exclusions. What responds depends on the agreement purchased and the facts of the loss.",
     coverageTypes: [
       {
         title: "Employee Dishonesty",
+        shortLabel: "Employee Theft",
         description:
-          "Covers theft of money, securities, or property by employees acting fraudulently.",
+          "May help address certain direct loss of money, securities, or property caused by employee theft or dishonesty — where purchased and subject to the policy’s employee definition, conditions, and exclusions.",
+        detailTitle: "Insider theft is usually excluded from ordinary property coverage",
+        detailDescription:
+          "Standard commercial property policies typically exclude theft by employees. Crime coverage is a separate first-party product. Inventory shortage alone often does not prove a covered employee-dishonesty loss without other evidence — follow policy proof requirements. Not every worker qualifies as an “employee” under the form.",
         icon: Users,
       },
       {
         title: "Forgery & Alteration",
+        shortLabel: "Forgery",
         description:
-          "Addresses losses from forged cheques, contracts, or financial documents.",
+          "May help address certain losses from forgery or alteration of cheques or specified financial instruments — subject to policy wording.",
+        detailTitle: "A forged instrument can drain an account before anyone notices",
+        detailDescription:
+          "Forgery and alteration agreements focus on instrument fraud, not every contract dispute. Banking controls and dual signatures affect both prevention and underwriting. Confirm which instruments and territories the form actually schedules.",
         icon: Briefcase,
       },
       {
         title: "Theft of Money & Securities",
+        shortLabel: "Money & Securities",
         description:
-          "Covers robbery and theft of cash on premises or in transit to the bank.",
+          "May help address certain robbery, burglary, or theft of money and securities on premises or in transit — where the form provides those agreements and subject to limits.",
+        detailTitle: "Cash and negotiable instruments need their own crime agreements",
+        detailDescription:
+          "Ordinary property forms often treat money and securities differently from stock-in-trade. Transit to the bank and on-premises holdup exposures should be scheduled accurately. Limits and deductibles for money frequently differ from inventory limits.",
         icon: Shield,
       },
       {
         title: "Computer Fraud",
+        shortLabel: "Computer Fraud",
         description:
-          "May cover losses from fraudulent electronic transfers and social engineering schemes.",
+          "May help address certain losses from computer fraud as defined in the policy — typically involving fraudulent use of a computer to cause a transfer. Social engineering and voluntary fraudulent-instruction losses are often treated separately and may require a specific endorsement, sublimit, or verification conditions.",
+        detailTitle: "A convincing email is not the same as a computer takeover",
+        detailDescription:
+          "Direct computer fraud and social-engineering / fraudulent-instruction losses are not necessarily treated the same way by policy wording. Canadian claim disputes show social-engineering losses frequently fall outside traditional computer-fraud or funds-transfer agreements when an employee voluntarily authorizes payment. Ask whether fraudulent-instruction coverage is included and at what sublimit — do not assume computer fraud automatically includes social engineering.",
         icon: Scale,
       },
     ],
     whoItIsFor:
-      "Crime and fidelity insurance is for Windsor-Essex businesses handling cash, payroll, client funds, retail inventory, or financial transactions — especially those with multiple employees and accounting functions.",
+      "For Windsor–Essex businesses handling cash, payroll, client funds, retail inventory, or payment instructions — reviewed through an independent broker who can compare crime insuring agreements, controls expectations, and how crime coordinates with cyber and surety requirements.",
+    considerations: [
+      {
+        title: "Who counts as an “employee” under the policy?",
+        description:
+          "Crime forms define “employee” carefully. Temporary workers, independent contractors, owners, partners, and certain volunteers may fall outside the definition or need specific wording. Confirm who has access to money, inventory, and payment systems against the form’s definition before assuming coverage.",
+      },
+      {
+        title: "Computer fraud vs social engineering / fraudulent instruction",
+        description:
+          "Computer fraud often requires fraudulent use of a computer to cause a transfer. Social-engineering and fraudulent-instruction losses — where an employee is deceived into authorizing payment — frequently need a separate endorsement with verification conditions and lower sublimits. Do not treat them as one automatic agreement.",
+      },
+      {
+        title: "Funds-transfer and banking instruction exposure",
+        description:
+          "Funds-transfer fraud agreements, where purchased, typically focus on fraudulent instructions to a financial institution without the insured’s knowledge or consent. Voluntary transfers initiated by your own staff after a deceptive email may not fit that trigger. Map how your organization actually moves money when reviewing wording.",
+      },
+      {
+        title: "Money and securities limits, premises, and transit",
+        description:
+          "Cash on premises, cash in a safe, and cash in transit to the bank are often treated as distinct exposures with their own limits and conditions. Negotiable instruments may be scheduled differently from inventory. Align limits with peak cash days and deposit routines.",
+      },
+      {
+        title: "Internal controls insurers expect to see",
+        description:
+          "Dual authorization on wires, segregation of duties, background checks, vacation enforcement, and vendor-change verification are common underwriting questions. Strong controls do not create coverage by themselves, but weak controls can affect availability, deductibles, and social-engineering endorsements.",
+      },
+      {
+        title: "Discovery, loss-sustained, and reporting conditions",
+        description:
+          "Crime forms may use discovery or loss-sustained structures with specific reporting and proof-of-loss deadlines. Late notice can jeopardize recovery. Know how your form treats prior acts and when a loss is considered discovered.",
+      },
+      {
+        title: "Client property and third-party crime needs",
+        description:
+          "If you hold client money, trust funds, or customer property, some contracts require evidence of crime or fidelity coverage for that exposure. Ordinary first-party crime for your own assets may not automatically satisfy a client-property requirement — review certificates against actual wording.",
+      },
+      {
+        title: "Crime insurance vs cyber insurance vs surety bonds",
+        description:
+          "Crime is first-party coverage for defined dishonest or fraudulent loss of money, securities, or property. Cyber insurance focuses on network incidents, privacy response, ransomware, and related liability — it is not a drop-in replacement for stolen funds. Surety bonds are three-party obligations and are not the same product as business crime insurance, even when “fidelity” language appears in both markets.",
+      },
+    ],
     relatedLinks: [
       { label: "Cyber Insurance", href: "/cyber-insurance/" },
       { label: "Surety Bonds", href: "/bonding-insurance/" },
@@ -1451,29 +1509,34 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     faqTitle: "Crime & fidelity FAQ",
     faqItems: [
       {
-        question: "Does commercial property cover employee theft?",
+        question: "Is all employee theft covered under crime insurance?",
         answer:
-          "Standard property policies exclude theft by employees. Crime coverage specifically addresses insider losses.",
+          "No. Employee dishonesty or employee theft agreements may help address certain direct losses caused by a person who meets the policy’s employee definition — subject to proof requirements, exclusions, limits, and deductibles. Inventory shortage alone often does not prove a covered loss without other evidence. Owners, partners, contractors, and some temporary workers may fall outside the employee definition.",
       },
       {
-        question: "What is the difference between crime and fidelity bonds?",
+        question: "Is social engineering the same as computer fraud?",
         answer:
-          "Crime insurance is typically first-party coverage for the business's own losses. Fidelity bonds may also respond to client fund losses in certain professions.",
+          "Usually not. Computer fraud typically involves fraudulent use of a computer to cause a transfer as defined in the policy. Social-engineering or fraudulent-instruction losses — where someone is tricked into authorizing a payment — are often treated separately and may require a specific endorsement, verification conditions, and sublimits. Do not assume computer fraud automatically includes social engineering.",
       },
       {
-        question: "Does crime cover wire fraud?",
+        question: "Does cyber insurance cover stolen funds?",
         answer:
-          "Computer fraud and funds transfer fraud endorsements may cover social engineering losses — verify wording with your broker.",
+          "Cyber insurance and crime insurance address different primary exposures. Cyber programs focus on network incidents, privacy response, ransomware, and related liability. Some cyber forms may touch payment fraud in limited ways, but they are not interchangeable with commercial crime agreements for employee dishonesty, forgery, or money and securities. Review both products against how money actually moves in your business.",
       },
       {
-        question: "What controls do carriers require?",
+        question: "Who counts as an employee under a crime policy?",
         answer:
-          "Dual authorization on transfers, segregation of duties, and background checks are common requirements.",
+          "The policy definition controls. Permanent employees are usually included; independent contractors, leased workers, owners, directors, and certain volunteers may be excluded or need specific wording. If non-employees handle cash or payment instructions, disclose that structure when quoting.",
+      },
+      {
+        question: "What information is needed to quote crime coverage?",
+        answer:
+          "Expect questions about employee count and roles, cash handling and deposit routines, payment authorization controls, dual-signature or dual-approval practices, prior crime losses, background-check practices, requested limits and deductibles, whether client property or trust funds are handled, and whether social-engineering or fraudulent-instruction coverage is needed.",
       },
     ],
-    ctaHeading: "Handle cash or client funds?",
+    ctaHeading: "Handle cash, payroll, or payment instructions?",
     ctaSubhead:
-      "Describe your financial controls and exposure — we will compare crime and fidelity options.",
+      "Describe your controls, who handles money, and whether client funds are involved — we will compare crime and fidelity options against cyber and bonding needs.",
     serviceName: "Crime & Fidelity Insurance",
   },
   {
@@ -1482,42 +1545,100 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     metaTitle:
       "Employment Practices Liability (EPL) in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Employment practices liability insurance for Windsor-Essex — wrongful termination, harassment, and discrimination claims against employers.",
+      "Employment practices liability insurance for Windsor-Essex employers — wrongful termination allegations, harassment, discrimination, and retaliation claims subject to policy wording.",
     headline: "Employment Practices Liability (EPL)",
     subhead:
-      "Coverage for claims from current, former, and prospective employees alleging wrongful workplace practices.",
+      "Employment practices liability insurance may respond to certain employment-related claims or allegations — such as wrongful dismissal, discrimination, harassment, or retaliation — subject to policy definitions, exclusions, claims-made conditions, and reporting requirements. It is liability insurance for defined employment claims, not a fund that automatically pays Employment Standards Act termination pay, severance pay, unpaid wages, vacation pay, or benefits. It also does not replace human-resources advice, legal counsel on how to terminate, or Workplace Safety and Insurance Board coverage for workplace injury. Ontario employers operate under statutes such as the Employment Standards Act, 2000, the Human Rights Code, and OHSA workplace-harassment duties — those create employment and compliance obligations; insurance response still depends on the form. Premium Insurance Brokers can help Windsor–Essex employers compare EPL alongside directors and officers coverage where both management and workforce exposures exist.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=professional`,
     quoteLabel: "Get an EPL Quote",
     coverageIntro:
-      "EPL addresses employment-related claims that general liability and D&O may not fully cover.",
+      "EPL may help with certain employment-related allegations against the employer — distinct from general liability for premises injury, WSIB for workplace injury, and D&O for management or governance claims. Defence costs are often a major part of the value, subject to wording and limits.",
     coverageTypes: [
       {
         title: "Wrongful Termination",
+        shortLabel: "Termination",
         description:
-          "Covers claims alleging improper dismissal or constructive dismissal.",
+          "May help respond to certain claims alleging wrongful dismissal, termination, or constructive dismissal — subject to policy definitions and exclusions.",
+        detailTitle: "Termination disputes are common — insurance is not severance pay",
+        detailDescription:
+          "Ontario employers may owe ESA termination pay or severance as statutory obligations regardless of insurance. EPL, where purchased, addresses certain claims or allegations under policy wording — it does not automatically fund statutory wages or every common-law package. Documented process and counsel still matter for risk management.",
         icon: Briefcase,
       },
       {
         title: "Harassment & Discrimination",
+        shortLabel: "Harassment",
         description:
-          "Addresses claims of workplace harassment, discrimination, and hostile work environment.",
+          "May help respond to certain harassment or discrimination allegations in employment — subject to policy wording and exclusions.",
+        detailTitle: "Human rights and workplace allegations create defence exposure",
+        detailDescription:
+          "The Ontario Human Rights Code protects equal treatment and freedom from workplace harassment. Allegations may lead to tribunal or court proceedings. Whether EPL defends or indemnifies depends on the policy — not on the allegation alone. Not every complaint or award is insurable.",
         icon: Scale,
       },
       {
         title: "Retaliation Claims",
+        shortLabel: "Retaliation",
         description:
-          "Covers allegations that adverse action was taken against an employee who reported misconduct.",
+          "May help respond to certain allegations that an employer retaliated after a protected complaint or report — subject to policy wording.",
+        detailTitle: "Reporting misconduct can precede a second claim",
+        detailDescription:
+          "Retaliation or reprisal allegations often follow harassment, safety, or human-rights complaints. Documented investigation and non-retaliation practices matter for both risk management and underwriting. Coverage still turns on definitions, exclusions, and whether the matter is a covered claim under the form.",
         icon: Shield,
       },
       {
         title: "Defence Costs",
+        shortLabel: "Defence",
         description:
-          "Pays legal defence for covered employment claims regardless of outcome, subject to policy limits.",
+          "May help with defence costs for covered employment claims — often on a claims-made basis, subject to limits, retentions, reporting conditions, and exclusions.",
+        detailTitle: "Defence can dominate the cost of an employment claim",
+        detailDescription:
+          "Even disputed claims generate legal expense. Confirm reporting conditions after a claim or circumstance, whether human-rights proceedings are treated as covered claims, and how defence interacts with indemnity and shared limits. Defence is not an unlimited benefit irrespective of wording.",
         icon: Users,
       },
     ],
     whoItIsFor:
-      "EPL insurance is for Windsor-Essex employers with staff — from small teams to larger organizations facing increasing employment litigation exposure.",
+      "For Windsor–Essex employers with staff — from small teams to growing organizations — reviewed through an independent broker who can compare EPL wording, claims-made reporting, and coordination with D&O where leadership and workforce exposures overlap.",
+    considerations: [
+      {
+        title: "Workforce size, turnover, and jurisdictions",
+        description:
+          "Headcount, seasonal staff, contractors misclassified as employees, and workers in more than one province change underwriting and which employment statutes apply. Disclose multi-jurisdiction payroll accurately when quoting.",
+      },
+      {
+        title: "Written HR, harassment, and investigation procedures",
+        description:
+          "Ontario employers face Human Rights Code and OHSA workplace-harassment expectations for policies, training, and investigation. Strong HR practice supports risk management and underwriting — it does not guarantee every allegation will be insured.",
+      },
+      {
+        title: "Terminations, layoffs, and restructuring",
+        description:
+          "Plant closures, group layoffs, and individual dismissals concentrate claim activity. Plan documentation, notice strategy, and broker notice before a major restructuring so claims-made reporting and continuity questions are not handled after the fact.",
+      },
+      {
+        title: "ESA statutory pay vs insured employment claims",
+        description:
+          "Termination pay and severance pay under the Employment Standards Act, 2000 are employer obligations where the statute applies. EPL is not a payroll substitute and does not automatically fund those amounts. Keep employment obligations separate from insured claim response when reviewing a dispute.",
+      },
+      {
+        title: "Discrimination, harassment, and human-rights proceedings",
+        description:
+          "Allegations under the Human Rights Code can generate defence costs and potential indemnity questions. Whether tribunal-style proceedings, mediation, or court actions fall within “claim” definitions varies by form. Do not assume every award, fine, or penalty is insurable.",
+      },
+      {
+        title: "Claims-made reporting and prior matters",
+        description:
+          "Most EPL policies are claims-made. Late notice of a claim or circumstance, and prior or pending matters, can affect coverage. Know reporting deadlines and what must be disclosed on applications and renewals.",
+      },
+      {
+        title: "Wage, hour, and contractual exclusions",
+        description:
+          "Unpaid wages, vacation pay, overtime disputes, and certain contractual employment obligations are frequently limited or excluded. Intentional misconduct and fines or penalties are also commonly restricted. Read exclusions before assuming a payroll dispute is an insured claim.",
+      },
+      {
+        title: "Third-party EPL and acquisitions",
+        description:
+          "Some forms offer third-party EPL for allegations by customers or vendors; others do not. Acquisitions can bring undisclosed employment claims into your program. Tell your broker about deal activity and whether third-party EPL is relevant to your industry.",
+      },
+    ],
     relatedLinks: [
       { label: "Directors & Officers", href: "/directors-officers-insurance/" },
       { label: "Small Business Insurance", href: "/small-business-insurance/" },
@@ -1526,29 +1647,34 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     faqTitle: "Employment practices liability FAQ",
     faqItems: [
       {
-        question: "Is EPL the same as WSIB?",
+        question: "Does EPL pay ESA termination pay or severance?",
         answer:
-          "No. WSIB covers workplace injuries. EPL covers employment litigation — termination, harassment, and discrimination claims.",
+          "Not as a substitute for statutory wages. Ontario’s Employment Standards Act, 2000 can require termination pay and, where applicable, severance pay as employer obligations. EPL may respond to certain wrongful-dismissal or related allegations under policy wording — it does not automatically pay statutory termination pay, severance pay, unpaid wages, vacation pay, or benefits. Keep employment obligations distinct from insured claims.",
       },
       {
-        question: "Do small businesses need EPL?",
+        question: "What types of employment allegations may be insured?",
         answer:
-          "Employment claims affect businesses of all sizes. Small employers face the same human rights and employment standards exposure.",
+          "Depending on the form, EPL may help with certain allegations involving wrongful dismissal or termination, constructive dismissal, discrimination, harassment, retaliation or reprisal, and related employment wrongful acts as defined. Coverage is not automatic for every workplace dispute. Definitions, exclusions, claims-made conditions, and reporting all matter.",
       },
       {
-        question: "Does D&O cover employment claims?",
+        question: "Are harassment and discrimination allegations included?",
         answer:
-          "Some employment claims against directors may fall under D&O, but EPL provides broader workplace coverage for the organization.",
+          "Many EPL forms address certain harassment and discrimination allegations in employment, subject to wording and exclusions. The Ontario Human Rights Code sets out rights to equal treatment and freedom from workplace harassment — that legal context explains exposure, but insurance response still depends on the policy. Not every complaint, mediation outcome, or award is insurable.",
       },
       {
-        question: "What HR practices affect underwriting?",
+        question: "Does EPL replace HR advice or legal counsel?",
         answer:
-          "Written policies, harassment training, and documented discipline procedures support insurability.",
+          "No. EPL is insurance for certain covered claims. It does not replace written policies, training, investigation practices, or advice from employment counsel on how to hire, discipline, or terminate. WSIB remains a separate system for workplace injury and disease.",
+      },
+      {
+        question: "What information is needed to quote EPL?",
+        answer:
+          "Expect questions about employee count and locations, turnover, prior claims or human-rights complaints, written HR and harassment policies, training practices, planned layoffs or restructuring, multi-jurisdiction workers, whether third-party EPL is needed, and requested limits and retentions.",
       },
     ],
     ctaHeading: "Employ staff in Ontario?",
     ctaSubhead:
-      "Share your team size and HR practices — we will compare EPL options alongside your management liability coverage.",
+      "Share your team size, HR practices, and any restructuring plans — we will compare EPL options alongside your management liability coverage.",
     serviceName: "Employment Practices Liability Insurance",
   },
 ];

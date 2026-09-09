@@ -20,14 +20,14 @@
 
 | Classification | Count | Meaning |
 |----------------|------:|---------|
-| **A — STRONG** | 20 | Genuinely substantive, specific, no high/medium content-safety concerns |
+| **A — STRONG** | 24 | Genuinely substantive, specific, no high/medium content-safety concerns |
 | **B — ADEQUATE** | 16 | Reasonable depth; could be deepened; no high/medium safety flags |
 | **C — THIN** | 18 | Noticeably shallow — similar pre-fix Greenhouse/Daycare pattern |
-| **D — CONTENT-SAFETY** | 4 | High/medium content-safety language flagged (regardless of visual depth) |
+| **D — CONTENT-SAFETY** | 0 | High/medium content-safety language flagged (regardless of visual depth) |
 
 **Total pages audited:** 58 live product routes.
 
-**Key finding:** Only **Greenhouse & Agribusiness** (`/greenhouse-agribusiness-insurance/`) currently meets the STRONG bar established by the owner-approved fix. A large share of pages (4 D + 18 C = 22 pages, **38%**) combine thin or templated copy with unhedged "Covers…" / "Protects…" coverage-card language — the exact pattern Greenhouse was rewritten to avoid.
+**Key finding:** Only **Greenhouse & Agribusiness** (`/greenhouse-agribusiness-insurance/`) currently meets the STRONG bar established by the owner-approved fix. A large share of pages (0 D + 18 C = 18 pages, **31%**) combine thin or templated copy with unhedged "Covers…" / "Protects…" coverage-card language — the exact pattern Greenhouse was rewritten to avoid.
 
 **Geographic targeting note:** No formal "Product Expansion 2.0" ratio document exists in the repo. This audit infers targeting from actual copy. Nearly all `metaTitle` values say Windsor-Essex; body copy varies between Windsor-Essex-primary, Windsor-Essex + Ontario, and Ontario-wide (common on personal lines).
 
@@ -52,12 +52,12 @@
 | /contractors-insurance/ | 1025 | 4 / specific/hedged (strong) | Yes (388w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /convenience-store-insurance/ | 1141 | 4 / specific/hedged (strong) | Yes (371w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /cottage-insurance/ | 555 | 4 / specific/hedged (strong) | Yes (108w, specific/useful) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
-| /crime-fidelity-insurance/ | 253 | 4 / specific (good) | No | 4 | Yes | 1 | Windsor-Essex-primary | **D** |
+| /crime-fidelity-insurance/ | 1175 | 4 / specific/hedged (strong) | Yes (399w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /cyber-insurance/ | 409 | 4 / specific/hedged (strong) | Yes (67w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /daycare-private-school-insurance/ | 956 | 6 / specific/hedged (strong) | Yes (186w, moderate) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
-| /directors-officers-insurance/ | 331 | 4 / specific/hedged (strong) | Yes (70w, moderate) | 4 | Yes | 1 | Windsor-Essex-primary | **D** |
+| /directors-officers-insurance/ | 1054 | 4 / specific/hedged (strong) | Yes (296w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /dump-truck-insurance/ | 1075 | 4 / specific/hedged (strong) | Yes (322w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
-| /employment-practices-liability-insurance/ | 227 | 4 / specific (good) | No | 4 | Yes | 1 | Windsor-Essex-primary | **D** |
+| /employment-practices-liability-insurance/ | 983 | 4 / specific/hedged (strong) | Yes (322w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /event-liability-insurance/ | 1094 | 4 / specific/hedged (strong) | Yes (329w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /farm-insurance/ | 332 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary (local) | **C** |
 | /fitness-gym-insurance/ | 240 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
@@ -81,7 +81,7 @@
 | /personal-umbrella-insurance/ | 472 | 4 / specific/hedged (strong) | Yes (95w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /pharmacy-insurance/ | 1430 | 4 / specific/hedged (strong) | Yes (553w, specific/useful) | 5 | Yes | 1 (low only) | Windsor-Essex + Ontario | **A** |
 | /pollution-liability-insurance/ | 252 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
-| /product-recall-insurance/ | 252 | 4 / specific (good) | No | 4 | Yes | 2 | Windsor-Essex-primary | **D** |
+| /product-recall-insurance/ | 1068 | 4 / specific/hedged (strong) | Yes (337w, specific/useful) | 5 | Yes | 1 (low only) | Windsor-Essex-primary | **A** |
 | /professional-liability-insurance/ | 391 | 4 / specific (good) | Yes (66w, moderate) | 4 | Yes | 1 (low only) | Windsor-Essex-primary | **C** |
 | /professional-offices-insurance/ | 325 | 4 / specific (good) | No | 4 | No — Shares 2+ FAQ pattern with auto-insurance | 0 | Windsor-Essex-primary | **C** |
 | /property-management-insurance/ | 1174 | 4 / specific/hedged (strong) | Yes (378w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
@@ -104,8 +104,8 @@
 
 ## B. Content-safety flags (quoted, by page)
 
-**5 high/medium flags** across 4 pages.  
-**11 low-severity flags** (mostly surety/bond industry "guarantee" terminology) listed where present — informational, not auto-classified as D.
+**0 high/medium flags** across 0 pages.  
+**12 low-severity flags** (mostly surety/bond industry "guarantee" terminology) listed where present — informational, not auto-classified as D.
 
 ### /auto-insurance/
   - **[LOW]** `coverage:Accident Benefits`: "For policies entered into on or after July 1, 2026, statutory accident benefits include mandatory medical, rehabilitation, and attendant care benefits." — Mandatory coverage stated — verify regulatory basis
@@ -120,15 +120,6 @@
 ### /builders-developers-insurance/
   - **[LOW]** `hero`: "Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory." — Mandatory coverage stated — verify regulatory basis
 
-### /crime-fidelity-insurance/
-  - **[HIGH]** `coverage:Employee Dishonesty`: "Covers theft of money, securities, or property by employees acting fraudulently." — Flat coverage guarantee — states or implies automatic coverage without hedging
-
-### /directors-officers-insurance/
-  - **[HIGH]** `faq`: "GL covers the organization's operational liability, not personal claims against directors for management decisions." — Flat coverage guarantee — states or implies automatic coverage without hedging
-
-### /employment-practices-liability-insurance/
-  - **[HIGH]** `coverage:Wrongful Termination`: "Covers claims alleging improper dismissal or constructive dismissal." — Flat coverage guarantee — states or implies automatic coverage without hedging
-
 ### /liquor-liability-insurance/
   - **[LOW]** `considerations`: "Standard 4.1's mandatory training list does not include Special Occasion Permit among its applicable authorization types." — Mandatory coverage stated — verify regulatory basis
 
@@ -139,8 +130,7 @@
   - **[LOW]** `considerations`: "Part A pharmacists, pharmacy technicians, interns, and related registrants must maintain personal professional liability insurance (PPLI) in their own name under OCP By-Law requirements — currently a minimum of $2,000,000 per claim and $4,000,000 annual aggregate covering regulated professional services, with full prior-acts protection." — Specific dollar amount cited — verify limit, deductible, or regulatory basis
 
 ### /product-recall-insurance/
-  - **[HIGH]** `faq`: "Product liability covers injury or damage claims from defective products." — Flat coverage guarantee — states or implies automatic coverage without hedging
-  - **[HIGH]** `faq`: "Recall covers the cost of withdrawing products from the market." — Flat coverage guarantee — states or implies automatic coverage without hedging
+  - **[LOW]** `hero`: "In Canada, most food recalls are company-led actions with Canadian Food Inspection Agency oversight, and the Minister of Health may order a mandatory food recall in defined circumstances; consumer products may involve Health Canada authorities under the Canada Consumer Product Safety Act — regulatory involvement alone does not mean the insurance will respond." — Mandatory coverage stated — verify regulatory basis
 
 ### /professional-liability-insurance/
   - **[LOW]** `faq`: "Contract requirements vary — $1M to $5M per occurrence is common for mid-size engagements." — Specific dollar amount cited — verify limit, deductible, or regulatory basis
@@ -151,10 +141,10 @@
 
 | Class | Count | Routes |
 |-------|------:|--------|
-| A | 20 | /bonding-insurance/, /builders-developers-insurance/, /builders-risk-insurance/, /cargo-freight-insurance/, /contractors-insurance/, /convenience-store-insurance/, /daycare-private-school-insurance/, /dump-truck-insurance/, /event-liability-insurance/, /food-truck-insurance/, /greenhouse-agribusiness-insurance/, /hotel-motel-insurance/, /liquor-liability-insurance/, /non-profit-insurance/, /pharmacy-insurance/, /property-management-insurance/, /restaurant-insurance/, /salon-barber-insurance/, /trucking-insurance/, /warehousing-insurance/ |
+| A | 24 | /bonding-insurance/, /builders-developers-insurance/, /builders-risk-insurance/, /cargo-freight-insurance/, /contractors-insurance/, /convenience-store-insurance/, /crime-fidelity-insurance/, /daycare-private-school-insurance/, /directors-officers-insurance/, /dump-truck-insurance/, /employment-practices-liability-insurance/, /event-liability-insurance/, /food-truck-insurance/, /greenhouse-agribusiness-insurance/, /hotel-motel-insurance/, /liquor-liability-insurance/, /non-profit-insurance/, /pharmacy-insurance/, /product-recall-insurance/, /property-management-insurance/, /restaurant-insurance/, /salon-barber-insurance/, /trucking-insurance/, /warehousing-insurance/ |
 | B | 16 | /auto-insurance/, /boat-insurance/, /condo-insurance/, /cottage-insurance/, /cyber-insurance/, /group-home-auto-insurance/, /home-insurance/, /home-sharing-insurance/, /landlord-insurance/, /landscaping-snow-removal-insurance/, /life-insurance/, /mobile-home-insurance/, /motorcycle-insurance/, /personal-umbrella-insurance/, /tenant-insurance/, /travel-insurance/ |
 | C | 18 | /business-interruption-insurance/, /commercial-auto-insurance/, /commercial-insurance/, /commercial-property-insurance/, /condominium-corporation-insurance/, /farm-insurance/, /fitness-gym-insurance/, /garage-dealership-insurance/, /grocery-specialty-food-insurance/, /manufacturing-insurance/, /medical-dental-insurance/, /pollution-liability-insurance/, /professional-liability-insurance/, /professional-offices-insurance/, /real-estate-insurance/, /religious-organizations-insurance/, /retail-insurance/, /small-business-insurance/ |
-| D | 4 | /crime-fidelity-insurance/, /directors-officers-insurance/, /employment-practices-liability-insurance/, /product-recall-insurance/ |
+| D | 0 |  |
 
 ---
 
@@ -213,44 +203,40 @@ Content matches approved final state described in `docs/greenhouse-route-recover
 
 Ranked by severity (D first, then C, then B). Do **not** start rewrites until owner approves scope. Specialized lines need researched, hedged drafting — not bulk AI generation.
 
-1. **/employment-practices-liability-insurance/** (D) — 1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging
-2. **/product-recall-insurance/** (D) — 2 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging; Flat coverage guarantee — states or implies automatic coverage without hedging
-3. **/crime-fidelity-insurance/** (D) — 1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging
-4. **/directors-officers-insurance/** (D) — 1 content-safety flag(s): Flat coverage guarantee — states or implies automatic coverage without hedging
-5. **/religious-organizations-insurance/** (C) — Shallow depth (215w total, cards avg 20.5w, considerations absent)
-6. **/fitness-gym-insurance/** (C) — Shallow depth (240w total, cards avg 23w, considerations absent)
-7. **/medical-dental-insurance/** (C) — Shallow depth (242w total, cards avg 23.5w, considerations absent)
-8. **/grocery-specialty-food-insurance/** (C) — Shallow depth (251w total, cards avg 26w, considerations absent)
-9. **/pollution-liability-insurance/** (C) — Shallow depth (252w total, cards avg 25w, considerations absent)
-10. **/condominium-corporation-insurance/** (C) — Shallow depth (277w total, cards avg 26.5w, considerations absent)
-11. **/commercial-insurance/** (C) — Shallow depth (283w total, cards avg 0w, considerations absent)
-12. **/garage-dealership-insurance/** (C) — Shallow depth (283w total, cards avg 27.5w, considerations absent)
-13. **/real-estate-insurance/** (C) — Shallow depth (283w total, cards avg 26w, considerations absent)
-14. **/retail-insurance/** (C) — Shallow depth (292w total, cards avg 28w, considerations absent)
-15. **/commercial-auto-insurance/** (C) — Shallow depth (323w total, cards avg 26w, considerations absent)
-16. **/professional-offices-insurance/** (C) — Shallow depth (325w total, cards avg 31w, considerations absent)
-17. **/farm-insurance/** (C) — Shallow depth (332w total, cards avg 21w, considerations absent)
-18. **/commercial-property-insurance/** (C) — Shallow depth (367w total, cards avg 31w, considerations absent)
-19. **/professional-liability-insurance/** (C) — Shallow depth (391w total, cards avg 31w, considerations present but thin overall)
-20. **/business-interruption-insurance/** (C) — Shallow depth (395w total, cards avg 34w, considerations present but thin overall)
-21. **/manufacturing-insurance/** (C) — Shallow depth (399w total, cards avg 29.2w, considerations absent)
-22. **/small-business-insurance/** (C) — Shallow depth (399w total, cards avg 36w, considerations present but thin overall)
-23. **/landscaping-snow-removal-insurance/** (B) — Reasonable (400w) but lacks full depth — cards specific (good), considerations moderate
-24. **/cyber-insurance/** (B) — Reasonable (409w) but lacks full depth — cards specific/hedged (strong), considerations moderate
-25. **/personal-umbrella-insurance/** (B) — Reasonable (472w) but lacks full depth — cards specific/hedged (strong), considerations moderate
-26. **/group-home-auto-insurance/** (B) — Reasonable (488w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
-27. **/landlord-insurance/** (B) — Reasonable (497w) but lacks full depth — cards specific/hedged (strong), considerations moderate
-28. **/mobile-home-insurance/** (B) — Reasonable (506w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
-29. **/life-insurance/** (B) — Reasonable (513w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
-30. **/tenant-insurance/** (B) — Reasonable (519w) but lacks full depth — cards specific (good), considerations moderate
-31. **/motorcycle-insurance/** (B) — Reasonable (535w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
-32. **/boat-insurance/** (B) — Reasonable (539w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
-33. **/travel-insurance/** (B) — Reasonable (540w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
-34. **/cottage-insurance/** (B) — Reasonable (555w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
-35. **/condo-insurance/** (B) — Reasonable (565w) but lacks full depth — cards specific/hedged (strong), considerations moderate
-36. **/home-insurance/** (B) — Reasonable (571w) but lacks full depth — cards specific (good), considerations moderate
-37. **/home-sharing-insurance/** (B) — Reasonable (588w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
-38. **/auto-insurance/** (B) — Reasonable (649w) but lacks full depth — cards specific/hedged (strong), considerations absent
+1. **/religious-organizations-insurance/** (C) — Shallow depth (215w total, cards avg 20.5w, considerations absent)
+2. **/fitness-gym-insurance/** (C) — Shallow depth (240w total, cards avg 23w, considerations absent)
+3. **/medical-dental-insurance/** (C) — Shallow depth (242w total, cards avg 23.5w, considerations absent)
+4. **/grocery-specialty-food-insurance/** (C) — Shallow depth (251w total, cards avg 26w, considerations absent)
+5. **/pollution-liability-insurance/** (C) — Shallow depth (252w total, cards avg 25w, considerations absent)
+6. **/condominium-corporation-insurance/** (C) — Shallow depth (277w total, cards avg 26.5w, considerations absent)
+7. **/commercial-insurance/** (C) — Shallow depth (283w total, cards avg 0w, considerations absent)
+8. **/garage-dealership-insurance/** (C) — Shallow depth (283w total, cards avg 27.5w, considerations absent)
+9. **/real-estate-insurance/** (C) — Shallow depth (283w total, cards avg 26w, considerations absent)
+10. **/retail-insurance/** (C) — Shallow depth (292w total, cards avg 28w, considerations absent)
+11. **/commercial-auto-insurance/** (C) — Shallow depth (323w total, cards avg 26w, considerations absent)
+12. **/professional-offices-insurance/** (C) — Shallow depth (325w total, cards avg 31w, considerations absent)
+13. **/farm-insurance/** (C) — Shallow depth (332w total, cards avg 21w, considerations absent)
+14. **/commercial-property-insurance/** (C) — Shallow depth (367w total, cards avg 31w, considerations absent)
+15. **/professional-liability-insurance/** (C) — Shallow depth (391w total, cards avg 31w, considerations present but thin overall)
+16. **/business-interruption-insurance/** (C) — Shallow depth (395w total, cards avg 34w, considerations present but thin overall)
+17. **/manufacturing-insurance/** (C) — Shallow depth (399w total, cards avg 29.2w, considerations absent)
+18. **/small-business-insurance/** (C) — Shallow depth (399w total, cards avg 36w, considerations present but thin overall)
+19. **/landscaping-snow-removal-insurance/** (B) — Reasonable (400w) but lacks full depth — cards specific (good), considerations moderate
+20. **/cyber-insurance/** (B) — Reasonable (409w) but lacks full depth — cards specific/hedged (strong), considerations moderate
+21. **/personal-umbrella-insurance/** (B) — Reasonable (472w) but lacks full depth — cards specific/hedged (strong), considerations moderate
+22. **/group-home-auto-insurance/** (B) — Reasonable (488w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
+23. **/landlord-insurance/** (B) — Reasonable (497w) but lacks full depth — cards specific/hedged (strong), considerations moderate
+24. **/mobile-home-insurance/** (B) — Reasonable (506w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
+25. **/life-insurance/** (B) — Reasonable (513w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
+26. **/tenant-insurance/** (B) — Reasonable (519w) but lacks full depth — cards specific (good), considerations moderate
+27. **/motorcycle-insurance/** (B) — Reasonable (535w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
+28. **/boat-insurance/** (B) — Reasonable (539w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
+29. **/travel-insurance/** (B) — Reasonable (540w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
+30. **/cottage-insurance/** (B) — Reasonable (555w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
+31. **/condo-insurance/** (B) — Reasonable (565w) but lacks full depth — cards specific/hedged (strong), considerations moderate
+32. **/home-insurance/** (B) — Reasonable (571w) but lacks full depth — cards specific (good), considerations moderate
+33. **/home-sharing-insurance/** (B) — Reasonable (588w) but lacks full depth — cards specific/hedged (strong), considerations specific/useful
+34. **/auto-insurance/** (B) — Reasonable (649w) but lacks full depth — cards specific/hedged (strong), considerations absent
 
 ### Suggested work packages (for owner scope approval)
 
