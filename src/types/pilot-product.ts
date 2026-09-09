@@ -13,6 +13,8 @@ export type ProductCoverageItem = {
   detailTitle?: string;
   /** Richer detail panel copy when set; falls back to `detail`. */
   detailDescription?: string;
+  /** Hub orientation cards — link target when set (commercial hub only). */
+  href?: string;
   icon: LucideIcon;
   visualEyebrow: string;
   visualCaption: string;

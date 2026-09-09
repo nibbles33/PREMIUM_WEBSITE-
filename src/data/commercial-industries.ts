@@ -3,10 +3,12 @@ import {
   Building2,
   Container,
   Factory,
+  Gavel,
   Hammer,
   HardHat,
   KeyRound,
   Laptop,
+  Wrench,
   Package,
   Route,
   Shield,
@@ -95,31 +97,112 @@ export const commercialIndustryTiles: CommercialIndustryTile[] = [
   },
 ];
 
+export type CommercialHubCategory = {
+  label: string;
+  href: string;
+  description: string;
+  icon: LucideIcon;
+};
+
+/** Orientation-level coverage categories for the commercial insurance hub — links only, not Explorer states. */
+export const commercialHubCategories: CommercialHubCategory[] = [
+  {
+    label: "Commercial Property",
+    href: "/commercial-property-insurance/",
+    description:
+      "May help address direct physical loss or damage to buildings, contents, machinery, inventory, and tenant improvements — subject to causes of loss, limits, and endorsements on your policy.",
+    icon: Building2,
+  },
+  {
+    label: "General Liability",
+    href: "/small-business-insurance/",
+    description:
+      "May help respond to certain third-party bodily injury or property-damage claims arising from your operations or products — subject to policy terms, exclusions, and limits. Often reviewed first, but not a universal bundle with property or auto.",
+    icon: Briefcase,
+  },
+  {
+    label: "Commercial Auto & Fleet",
+    href: "/commercial-auto-insurance/",
+    description:
+      "Ontario-regulated automobile coverage when your business owns, leases, or regularly uses vehicles for deliveries, service calls, or sales routes — separate from general liability for premises operations.",
+    icon: Truck,
+  },
+  {
+    label: "Business Interruption",
+    href: "/business-interruption-insurance/",
+    description:
+      "Where purchased with property, may help with lost income and certain continuing expenses after a covered direct physical loss interrupts operations — not protection against every shutdown or supply delay.",
+    icon: Factory,
+  },
+  {
+    label: "Professional Liability / E&O",
+    href: "/professional-liability-insurance/",
+    description:
+      "May address certain claims alleging negligent professional services, design, or advice — distinct from general liability for premises and product injury claims when those services are material to your business.",
+    icon: Laptop,
+  },
+  {
+    label: "Cyber Insurance",
+    href: "/cyber-insurance/",
+    description:
+      "May help with certain privacy, ransomware, and network interruption events that standard property and liability forms often restrict — reviewed when you store customer data or depend on systems to operate.",
+    icon: Shield,
+  },
+  {
+    label: "Crime & Fidelity",
+    href: "/crime-fidelity-insurance/",
+    description:
+      "May address specified employee dishonesty, forgery, and certain computer-fraud losses — separate from ordinary property coverage, which often excludes or restricts insider theft.",
+    icon: KeyRound,
+  },
+  {
+    label: "Pollution Liability",
+    href: "/pollution-liability-insurance/",
+    description:
+      "May help when environmental contamination exposures exceed what commercial general liability typically addresses — relevant for some manufacturers, contractors, and storage operations subject to policy triggers.",
+    icon: HardHat,
+  },
+  {
+    label: "Equipment Breakdown",
+    href: "/commercial-property-insurance/",
+    description:
+      "Where purchased, may address certain sudden internal mechanical or electrical failures of boilers, compressors, and production equipment — often an endorsement separate from standard property perils such as fire or theft.",
+    icon: Wrench,
+  },
+  {
+    label: "Directors & Officers",
+    href: "/directors-officers-insurance/",
+    description:
+      "May help with certain management and governance liability claims against directors and officers — distinct from general liability for premises and operations when leadership exposure is material.",
+    icon: Gavel,
+  },
+];
+
 export const commercialHubFaqs: FaqItem[] = [
   {
     question: "What's the difference between commercial and personal insurance?",
     answer:
-      "Personal policies cover you, your home, and your personal vehicles. Commercial insurance is designed for business risks — liability tied to your operations, commercial vehicles, business property, employees, and income interruption. Mixing the two can leave gaps when a claim involves work activity.",
+      "Personal policies are built around you, your home, and personal vehicles. Commercial insurance addresses business risks — liability tied to operations, commercial property and inventory, fleet or delivery vehicles, employees, and income interruption after certain covered losses. Using personal coverage for business activity can leave gaps when a claim involves work — your broker can help separate what belongs on each side.",
   },
   {
-    question: "What is general liability insurance?",
+    question: "Do I need every type of commercial coverage?",
     answer:
-      "General liability helps protect your business if a third party claims bodily injury, property damage, or certain advertising injuries arising from your operations. It doesn't typically cover your own property, employee injuries, or professional advice — those usually need other policies.",
+      "No. Windsor–Essex businesses typically assemble a program from the categories that match their operations — liability, property, auto if you have vehicles, and specialty coverages such as cyber, crime, or pollution only when exposures warrant them. There is no single universal commercial policy that automatically includes every category; each part is subject to the policies and endorsements you purchase.",
   },
   {
-    question: "Do I need business interruption coverage?",
+    question: "How is this page different from small business insurance?",
     answer:
-      "Business interruption can help replace lost income and cover ongoing expenses if a covered property loss forces you to pause or slow operations. Whether you need it depends on how long you could absorb a shutdown. A broker can walk through realistic downtime scenarios for your industry.",
+      "This hub orients you to industries and coverage categories across our commercial site. Small business insurance explains how liability, property, auto, and business interruption may be assembled for owner-operators and growing teams in more detail. Start here for route discovery; follow the industry or product links that match how you actually operate.",
   },
   {
     question: "How is commercial insurance priced?",
     answer:
-      "Carriers look at your industry, revenue or payroll, location, claims history, coverage limits, deductibles, and specific exposures (vehicles, property values, products, and contracts). Two similar businesses can still price differently based on those details.",
+      "Carriers review your industry classification, revenue or payroll, locations, property and equipment values, fleet details, products, claims history, limits, and deductibles. Contract requirements — certificates, additional insureds, minimum limits — also shape what must be quoted. Two similar businesses can price differently when operations, values, or loss history differ.",
   },
   {
-    question: "What information do I need for a commercial quote?",
+    question: "What information helps start a commercial quote?",
     answer:
-      "Expect questions about your business activities, years in operation, revenue or payroll, locations, vehicles or equipment, current coverage, and any recent claims. Contract requirements (certificates, additional insureds, or limit minimums) also help your broker match the right markets.",
+      "Expect questions about business activities, years in operation, revenue or payroll, premises and occupancy, vehicles and equipment, inventory or work-in-progress values, current coverage, recent claims, and any contract insurance requirements. The more accurately you describe operations, the better a broker can compare markets — a quote conversation is not a guarantee every coverage type will be available until underwriting confirms.",
   },
 ];
 
@@ -542,77 +625,146 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Manufacturing Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Manufacturing insurance for Windsor-Essex — product liability, commercial property, business interruption, equipment breakdown, and machine shop coverage through an independent broker.",
+      "Manufacturing insurance for Windsor-Essex — commercial property, product liability, business interruption, equipment breakdown, and job-shop coverage through an independent broker.",
     headline: "Manufacturing Insurance",
     subhead:
-      "Property, product liability, and business interruption coverage for Windsor-Essex manufacturers — including machine shops and tool and die operations.",
+      "Ordinary manufacturing and light industrial operations in Windsor–Essex — fabrication, machining, metalworking, plastics, assembly, and job-shop production — combine property values, production equipment, products liability, and income interruption risks that differ from retail, contracting, or warehouse-only businesses. Depending on your plant, that can mean commercial property for buildings, machinery, raw materials, work-in-progress, and finished goods; commercial general liability for certain third-party injury and property-damage claims tied to products you make; optional business interruption after a covered direct physical loss; and equipment breakdown coverage where purchased for internal mechanical or electrical failures not handled like fire or theft on a standard property form. Pollution, product recall expense, crime, and cyber may need separate review when exposures are material — not every manufacturer needs every specialty line on day one. Premium Insurance Brokers can help align limits to how you actually produce, stock, and ship.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Manufacturing Quote",
     coverageIntro:
-      "Coverages that address products, facilities, equipment, and income after a covered loss.",
+      "Manufacturing insurance is organized here around five exposures most Windsor–Essex plants and job shops review first — product liability, property and stock, income after a covered physical loss, equipment breakdown where purchased, and job-shop-specific values — because each insuring agreement has different triggers, limits, and endorsements.",
     coverageTypes: [
       {
+        id: "product-liability",
         title: "Product Liability",
+        shortLabel: "Products",
         description:
-          "Helps protect against claims that a product you make or sell caused injury or damage.",
+          "May help respond to certain third-party bodily injury or property-damage claims alleging a product you manufacture, assemble, or distribute caused harm — subject to products-completed operations wording, exclusions, limits, and policy terms.",
+        detailTitle: "A defective part can follow your product long after it leaves the dock",
+        detailDescription:
+          "Manufacturers and assemblers face products-completed operations exposure when a customer or downstream user alleges injury or damage from a part, component, or finished good you produced — including precision work to customer specifications on many programs. Commercial general liability may address certain covered claims subject to policy wording, but it does not automatically pay product recall or withdrawal expenses, warranty rework, or every contractual quality dispute. Product recall insurance is a separate first-party discussion on our product recall page.",
         icon: Briefcase,
       },
       {
+        id: "commercial-property",
         title: "Commercial Property",
+        shortLabel: "Property",
         description:
-          "Covers buildings, machinery, and stock against covered property losses.",
+          "May help address direct physical loss or damage to buildings, production machinery, tools, raw materials, work-in-progress, and finished goods you own or are required to insure — subject to causes of loss, valuation basis, limits, deductibles, and policy terms.",
+        detailTitle: "Your landlord's policy doesn't cover your CNC line",
+        detailDescription:
+          "When you lease industrial space, the landlord typically insures the building while you may need contents, inventory, leasehold improvements, and scheduled machinery values. Raw materials, packaging, WIP, and finished stock may be valued on different bases — cost, replacement cost, or selling price depending on form and endorsements — and peak production seasons may need higher reported values. Coinsurance on many commercial property programs can reduce recovery if values are understated. Internal mechanical breakdown of production equipment is often treated differently from fire or theft — see equipment breakdown below.",
         icon: Factory,
       },
       {
+        id: "business-interruption",
         title: "Business Interruption",
+        shortLabel: "BI",
         description:
-          "Can help replace lost income and pay ongoing expenses if a covered property loss stops production.",
+          "Where purchased with commercial property, may help replace certain lost income and pay qualifying continuing expenses when a covered direct physical loss to insured property forces a necessary production suspension — subject to waiting periods, indemnity or restoration periods, and policy terms.",
+        detailTitle: "Rent and payroll don't pause when the line stops",
+        detailDescription:
+          "A covered fire, major water loss, or other insured property damage can idle presses, CNC cells, or assembly lines while fixed costs continue. Business interruption coverage, where included, addresses that income gap — not market slowdowns, utility outages without physical damage, or supplier delays unless a specific contingent business interruption endorsement applies to a named dependent property that suffers covered damage. Waiting periods and restoration limits vary — coordinate BI values with realistic rebuild and ramp-up timelines on our business interruption page.",
         icon: Building2,
       },
       {
+        id: "equipment-breakdown",
         title: "Equipment Breakdown",
+        shortLabel: "Breakdown",
         description:
-          "Addresses sudden mechanical or electrical breakdown of critical production equipment — CNC machines, presses, and compressors.",
+          "Where purchased as an endorsement or separate coverage — not automatic on standard property forms — may help address certain sudden and accidental internal mechanical, electrical, or pressure-system failures of production equipment, subject to policy terms and exclusions.",
+        detailTitle: "Fire insurance and breakdown insurance respond to different failures",
+        detailDescription:
+          "Commercial property may respond when a fire or external insured peril damages machinery, but many standard property forms exclude or restrict loss from internal mechanical breakdown, electrical arcing, motor burnout, or pressure-system failure. Equipment breakdown coverage, where added, is designed for that gap — it is not automatic on every property policy. Wear and tear, lack of maintenance, and every resulting business income loss may still be excluded unless your form specifically includes EB-linked business interruption or spoilage extensions. Confirm what your property program includes before assuming breakdown is already insured.",
         icon: Hammer,
       },
       {
-        title: "Machine Shop & Tool & Die",
+        id: "machine-shop-tool-die",
+        title: "Job Shop & Tool & Die",
+        shortLabel: "Job Shop",
         description:
-          "Tailored considerations for precision machining, custom tooling, and job-shop operations where work-in-progress and specialized equipment drive exposure.",
+          "Precision machining, custom tooling, and job-shop operations often carry higher equipment values, customer-owned materials, and work-in-progress that should be disclosed separately from commodity finished-goods manufacturing.",
+        detailTitle: "Custom work-in-progress is hard to replace overnight",
+        detailDescription:
+          "Job shops and tool-and-die operations frequently work to customer drawings, hold specialized dies and fixtures, and carry WIP with values that spike mid-job. Product liability for precision components, property limits for specialized equipment, and accurate WIP reporting all affect underwriting. This is an exposure segment to disclose clearly — not a separate policy name on every program — so limits reflect materials, processes, and whether you rework customer-supplied parts.",
         icon: Factory,
+      },
+    ],
+    whoItIsFor:
+      "For Windsor–Essex fabrication shops, machining and metalworking plants, plastics and assembly operations, and job-shop or tool-and-die producers — reviewed through an independent broker who can coordinate property, products liability, business interruption, equipment breakdown, and specialty coverages for how you actually manufacture.",
+    considerations: [
+      {
+        title: "Building, machinery, and property values",
+        description:
+          "Production equipment, building improvements, and contents often represent the largest insurable values on a manufacturing balance sheet. Replacement cost versus actual cash value, coinsurance, and agreed-value options affect how claims settle — underreported values can reduce payments after a partial loss. Update schedules when you add CNC capacity, expand lines, or renovate leased space.",
+      },
+      {
+        title: "Raw materials, WIP, and finished goods valuation",
+        description:
+          "Raw stock, packaging, work-in-progress, and finished inventory may not share one valuation method on your policy. Job-shop WIP tied to open customer orders differs from commodity finished goods held for shipment. Peak seasons and large single orders may need higher limits or reporting endorsements — disclose how inventory is counted and where it is stored.",
+      },
+      {
+        title: "Equipment breakdown vs commercial property",
+        description:
+          "Fire, wind, and theft are typically property-peril conversations; motor seizure, electrical arcing, and compressor failure are often equipment breakdown endorsements. Do not assume one policy part covers both without reading causes of loss and exclusions. Maintenance-related deterioration and gradual wear are commonly excluded from breakdown coverage.",
+      },
+      {
+        title: "Production interruption and business income",
+        description:
+          "Business interruption commonly requires a covered direct physical loss to insured property — not every supply shortage, labour dispute, or pandemic closure. Waiting periods, indemnity limits, and how payroll is treated during a shutdown vary by form. If a few weeks without production would strain cash flow, BI limits and periods deserve a dedicated review with our business interruption page.",
+      },
+      {
+        title: "Product liability and precision components",
+        description:
+          "Claims alleging injury or damage from a manufactured product may fall under products-completed operations coverage on a CGL program subject to limits, exclusions, and separate aggregate structures — not every quality dispute or contractual penalty. Component parts sold into automotive, medical, or safety-critical supply chains may face tighter underwriting questions than general fabrication.",
+      },
+      {
+        title: "Product recall vs product liability",
+        description:
+          "Third-party injury or property-damage lawsuits and first-party recall or withdrawal expenses are different insuring problems. General liability does not automatically pay notification, retrieval, disposal, or consultant costs after a recall decision — product recall insurance may be reviewed separately on our product recall page when traceability and brand exposure warrant it.",
+      },
+      {
+        title: "Key suppliers, customers, and contingent BI",
+        description:
+          "Single-source materials, outsourced coating or heat-treat, and just-in-time components create operational bottlenecks. Contingent business interruption, where purchased, may respond when a named supplier or customer location suffers covered direct physical loss that disrupts your production — not when a vendor simply runs late or fails financially without insured damage.",
+      },
+      {
+        title: "Pollution, chemicals, waste, cyber, and crime",
+        description:
+          "Solvents, paints, refrigerants, waste handling, and storage tanks may create environmental exposures that CGL pollution exclusions restrict — pollution liability may be reviewed when material. Employee theft of inventory, payroll fraud, and ransomware affecting production or accounting systems may need crime or cyber coverage rather than standard property forms alone — disclose controls and system dependencies to your broker.",
       },
     ],
     faqTitle: "Manufacturing insurance FAQ",
     faqItems: [
       {
-        question: "What is product liability insurance?",
+        question: "What insurance does a manufacturer typically need?",
         answer:
-          "It helps if a third party claims your product caused bodily injury or property damage. It's especially important when you manufacture, assemble, or distribute goods under your brand.",
+          "Most Windsor–Essex manufacturers start with commercial general liability — including products-completed operations — and commercial property for buildings, machinery, and stock. Business interruption, equipment breakdown, commercial auto, pollution, product recall, crime, and cyber are added when operations, contracts, or exposures warrant them — each subject to separate policy terms. There is no single universal manufacturing policy that automatically bundles every coverage type.",
       },
       {
-        question: "Does my policy cover equipment breakdown?",
+        question: "Does property insurance cover machinery breakdown?",
         answer:
-          "Not always. Standard property policies may exclude mechanical or electrical breakdown. Equipment breakdown coverage is often added specifically for boilers, compressors, CNC equipment, and similar assets.",
+          "Not always. Commercial property may address fire, theft, wind, and other insured perils that damage equipment, but many forms exclude or restrict internal mechanical or electrical breakdown. Equipment breakdown coverage — where purchased — may address certain sudden and accidental failures of boilers, compressors, CNC equipment, and similar assets subject to maintenance exclusions and policy limits. Confirm how your program separates property perils from breakdown coverage.",
       },
       {
         question: "What happens if production stops due to a covered loss?",
         answer:
-          "Business interruption coverage can help with lost profits and continuing expenses during a shutdown caused by a covered property peril. Waiting periods and indemnity periods apply — your broker can explain the details.",
+          "Business interruption coverage, where purchased with property, may help with lost income and certain continuing expenses during a suspension caused by covered direct physical loss to insured property — not after every supplier delay or market downturn. Waiting periods, indemnity or restoration periods, and extra-expense provisions apply and vary by insurer. See our business interruption page for trigger and timing detail.",
       },
       {
-        question: "Do I need separate coverage for inventory?",
+        question: "Does product liability pay for a product recall?",
         answer:
-          "Inventory is often included under commercial property, but limits, valuation (cost vs. selling price), and locations matter. Seasonal stock spikes should be flagged so limits keep up.",
+          "Generally no. Product liability under commercial general liability may address certain third-party bodily injury or property-damage claims arising from products subject to policy wording. Product recall or withdrawal expense — notification, retrieval, storage, disposal, and related costs — is typically a separate coverage with its own trigger on our product recall page. A recall decision, including regulator involvement, does not by itself mean insurance will respond.",
       },
       {
-        question: "Is machine shop and tool and die work insured differently?",
+        question: "What should a manufacturer disclose when requesting a quote?",
         answer:
-          "Job shops and tool and die operations often carry higher equipment values, custom work-in-progress, and product liability tied to precision parts. Disclose your processes, materials, and whether you work to customer specifications so limits reflect the exposure.",
+          "Expect questions about your processes and products, revenue, building and occupancy, machinery and equipment values, raw materials and WIP, finished-goods inventory, shipping and supply-chain dependencies, prior claims, and any customer contract insurance requirements. Job shops should disclose customer-spec work, tooling values, and materials handled. Accurate values support proper property limits and help avoid coinsurance penalties on many forms.",
       },
     ],
-    ctaHeading: "Ready to cover your manufacturing operation?",
+    ctaHeading: "Ready to review your manufacturing program?",
     ctaSubhead:
-      "Tell us about your facility, products, and equipment — we'll compare options that fit.",
+      "Share your facility, products, equipment values, and production flow — we will compare commercial markets and explain what fits.",
     serviceName: "Manufacturing Insurance",
   },
   {

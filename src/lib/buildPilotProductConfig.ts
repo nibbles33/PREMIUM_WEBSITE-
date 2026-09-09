@@ -35,6 +35,7 @@ type CoverageInput = CoverageCard & {
   detailTitle?: string;
   detailDescription?: string;
   id?: string;
+  href?: string;
 };
 
 type BuildPilotProductConfigInput = {
@@ -96,6 +97,7 @@ function toCoverageItems(items: CoverageInput[]): ProductCoverageItem[] {
       detail,
       detailTitle: item.detailTitle,
       detailDescription: item.detailDescription,
+      href: item.href,
       icon: item.icon,
       visualEyebrow: shortLabel,
       visualCaption: item.title,
@@ -265,6 +267,7 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
   "manufacturing-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     { label: "Commercial Property", href: "/commercial-property-insurance/" },
+    { label: "Business Interruption", href: "/business-interruption-insurance/" },
     { label: "Product Recall", href: "/product-recall-insurance/" },
   ],
   "commercial-property-insurance": [
@@ -364,7 +367,9 @@ export function adaptCommercialIndustryContent(
                         ? "For Windsor–Essex service businesses, contractors, trades, local delivery operations, and companies with vans, pickups, or business-owned passenger vehicles — reviewed through an independent broker who can coordinate Ontario automobile coverage, optional physical damage, and hired/non-owned auto without treating every risk like a for-hire motor carrier."
                         : content.slug === "retail-insurance"
                           ? "For Windsor–Essex clothing stores, gift shops, electronics retailers, furniture and home-goods shops, and other ordinary storefront retailers — reviewed through an independent broker who can coordinate liability, property, inventory, and optional crime or cyber coverage for how you actually sell."
-                          : content.whoItIsFor ?? content.subhead,
+                          : content.slug === "manufacturing-insurance"
+                            ? "For Windsor–Essex fabrication shops, machining and metalworking plants, plastics and assembly operations, and job-shop or tool-and-die producers — reviewed through an independent broker who can coordinate property, products liability, business interruption, equipment breakdown, and specialty coverages for how you actually manufacture."
+                            : content.whoItIsFor ?? content.subhead,
     showTrustBand: content.slug !== "restaurant-insurance",
     considerationsPresentation:
       content.slug === "restaurant-insurance" ||
@@ -377,7 +382,8 @@ export function adaptCommercialIndustryContent(
       content.slug === "real-estate-insurance" ||
       content.slug === "commercial-property-insurance" ||
       content.slug === "commercial-auto-insurance" ||
-      content.slug === "retail-insurance"
+      content.slug === "retail-insurance" ||
+      content.slug === "manufacturing-insurance"
         ? "expandable"
         : "grid",
     coverageHeading: "What's covered",

@@ -19,6 +19,7 @@ import {
   COMMERCIAL_ACCENT,
   QUOTE_BUSINESS,
   commercialBrokerCopy,
+  commercialHubCategories,
   commercialHubFaqs,
 } from "@/data/commercial-industries";
 import {
@@ -28,32 +29,80 @@ import {
 import { commercialBrokerSteps } from "@/data/pilot-product-shared";
 import type { PilotProductPageConfig } from "@/types/pilot-product";
 
+const commercialHubCoverageItems = commercialHubCategories.map((category) => ({
+  id: category.label
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, ""),
+  title: category.label,
+  shortLabel: category.label.split(" ")[0] ?? category.label,
+  description: category.description,
+  href: category.href,
+  icon: category.icon,
+}));
+
 export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig> = {
   "commercial-insurance": buildPilotProductConfig({
     layout: "commercial-hub",
     slug: "commercial-insurance",
     metaTitle: "Commercial Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Commercial insurance for Windsor-Essex manufacturers, trucking fleets, contractors, restaurants, and more — industry-specific coverage through an independent broker.",
+      "Commercial insurance hub for Windsor-Essex — discover industry routes, core coverage categories, and specialty lines through an independent broker.",
     eyebrow: "Commercial Insurance",
     headline: "Commercial insurance, built for your industry",
     heroLead:
-      "Windsor-Essex runs on manufacturing, trucking, and trades. We build coverage around the risks specific to your industry — not a generic business policy.",
+      "This page is your Windsor–Essex commercial insurance starting point — not a single bundled policy. Manufacturers, contractors, fleets, restaurants, professional firms, and specialty operators each carry different property, liability, auto, and income-interruption exposures. Use the categories and industry links below to find the routes that match how you actually operate, then talk to a broker about assembling the policies and endorsements your business may need — subject to underwriting and policy terms.",
+    heroSupporting:
+      "Looking for how liability, property, auto, and business interruption fit together for a smaller operation? Our small business insurance page goes deeper on program assembly. Start here when you need orientation and navigation across the full commercial site.",
     photographySlug: "commercial-insurance",
     accentColor: COMMERCIAL_ACCENT,
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Commercial Quote",
     trustStatement: commercialBrokerCopy,
-    coverageIntro: "",
-    coverageItems: [],
+    coverageIntro:
+      "Core commercial categories below are orientation only — each links to a dedicated route with more detail. Not every Windsor–Essex business needs every category; programs are built from the policies and endorsements you purchase rather than one pre-assembled bundle.",
+    coverageItems: commercialHubCoverageItems,
+    considerations: [
+      {
+        title: "Industry classification drives the starting point",
+        description:
+          "A machine shop, restaurant, trucking fleet, and professional office are underwritten as different operations — even when they share broad categories such as liability or property. Choose the industry route closest to your work first, then layer specialty coverages where contracts or exposures require them.",
+      },
+      {
+        title: "Certificates and contract requirements",
+        description:
+          "Landlords, general contractors, shippers, and lenders often ask for certificates with minimum limits, additional insured status, or waiver wording. Those are contractual requests reviewed against what your policies can actually provide — a certificate does not expand coverage beyond the policy.",
+      },
+      {
+        title: "Personal vs commercial lines",
+        description:
+          "Personal auto, home, and umbrella policies are not designed for business activity. Using personal coverage for company vehicles, home-based production, or client-facing operations can create gaps when a claim involves work — keep commercial and personal programs separate.",
+      },
+      {
+        title: "Specialty routes when ordinary categories are not enough",
+        description:
+          "Pollution, product recall expense, crime and fidelity, cyber, directors and officers, and surety bonding address exposures that base liability or property policies may restrict. Follow the specialty links when your operations, contracts, or supply chain make those topics material — not every business needs them on day one.",
+      },
+    ],
+    considerationsPresentation: "expandable",
     brokerSteps: commercialBrokerSteps,
-    relatedProducts: [],
+    relatedProducts: relatedLinksToProducts([
+      { label: "Small Business Insurance", href: "/small-business-insurance/" },
+      { label: "Manufacturing Insurance", href: "/manufacturing-insurance/" },
+      { label: "Product Recall", href: "/product-recall-insurance/" },
+      { label: "Pollution Liability", href: "/pollution-liability-insurance/" },
+      { label: "Crime & Fidelity", href: "/crime-fidelity-insurance/" },
+      { label: "Directors & Officers", href: "/directors-officers-insurance/" },
+    ]),
+    relatedHeading: "Specialty & program routes",
+    relatedIntro:
+      "When core categories are not enough — or you already know your industry — explore specialty coverage and program pages without assuming one quote covers everything.",
     faqTitle: "Commercial insurance FAQ",
-    faqIntro: "Straight answers to common commercial insurance questions.",
+    faqIntro: "Orientation answers for Windsor–Essex business owners navigating commercial coverage.",
     faqItems: commercialHubFaqs,
-    ctaHeading: "Ready to protect your business?",
+    ctaHeading: "Ready to review your business insurance?",
     ctaSubhead:
-      "Tell us about your operations — we'll compare commercial markets and explain what fits.",
+      "Tell us about your operations — we will compare commercial markets and explain what may fit, subject to policy terms.",
     serviceName: "Commercial Insurance",
   }),
   "bonding-insurance": buildPilotProductConfig({

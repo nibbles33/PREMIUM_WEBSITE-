@@ -1,5 +1,6 @@
 "use client";
 
+import CommercialHubCategorySection from "@/components/CommercialHubCategorySection";
 import CommercialIndustryGrid from "@/components/CommercialIndustryGrid";
 import Header from "@/components/Header";
 import ProductBrokerStory from "@/components/pilot/product/ProductBrokerStory";
@@ -42,7 +43,20 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
           </section>
         ) : null}
 
-        {isCommercialHub ? <CommercialIndustryGrid /> : null}
+        {isCommercialHub ? (
+          <>
+            {config.coverageItems.length > 0 ? (
+              <CommercialHubCategorySection
+                intro={
+                  config.coverageIntro ||
+                  "Most businesses review a handful of coverage categories first — then add industry-specific and specialty lines where operations require them. None of the categories below are automatic in every policy."
+                }
+                categories={config.coverageItems}
+              />
+            ) : null}
+            <CommercialIndustryGrid />
+          </>
+        ) : null}
         {!isCommercialHub && hasCoverage ? (
           <ProductCoverageExplorer
             config={{
