@@ -94,7 +94,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       {
         title: "Commodity, valuation, and limits",
         description:
-          "Insurers schedule commodities — general freight, electronics, alcohol, pharmaceuticals, metals, and others — with different rates and exclusions. Valuation may be actual cash value, invoice cost, or agreed value depending on wording. Maximum per-load limits and annual aggregates must align with your largest contracts — underinsuring high-value lanes creates balance-bill exposure.",
+          "Insurers evaluate commodities — such as general freight, electronics, alcohol, pharmaceuticals, and metals — using different underwriting rules, rates, restrictions, sublimits, and exclusions. Valuation provisions, per-load limits, sublimits, and aggregates — where applicable in your policy — depend on policy wording and form. Confirm that your stated limits align with your largest contracts — underinsuring high-value lanes can create balance-bill exposure.",
       },
       {
         title: "Theft, security, and unattended vehicles",

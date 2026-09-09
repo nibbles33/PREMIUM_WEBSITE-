@@ -259,8 +259,8 @@ export const industryPages: IndustryPageContent[] = [
         title: "Cross-Border Coverage",
         shortLabel: "U.S. Territory",
         description:
-          "Operating in the United States may require specific territory extensions, higher limits, and insurer filings or endorsements — where available and subject to underwriting — beyond a Canada-only commercial automobile policy.",
-        detailTitle: "U.S. lanes change territory, limits, and filings — not a generic add-on label",
+          "Operating in the United States may require specific policy territory extensions, higher liability limits, and endorsements where applicable — subject to underwriting and policy wording — beyond a Canada-only commercial automobile policy.",
+        detailTitle: "U.S. lanes change territory, limits, and underwriting requirements — not a generic add-on label",
         detailDescription:
           "Cross-border hauling is not a single universal product name — it reflects how your Ontario commercial automobile program extends territory, limits, and insurer requirements for U.S. operations. Shippers and brokers may require proof of U.S.-adequate limits or specific insurer ratings contractually. Cargo policies may also contain territorial limits. Disclose every state or region you enter, how often, and whether loads originate or terminate in the U.S. so your broker can coordinate automobile and cargo wording — do not assume a Canada-only policy automatically follows the truck south of the border.",
         icon: Route,
@@ -318,7 +318,7 @@ export const industryPages: IndustryPageContent[] = [
       {
         question: "Does operating in the U.S. change my insurance?",
         answer:
-          "It can. U.S. operations may require territory extensions, higher automobile liability limits, and specific insurer filings or endorsements — depending on your carrier, policy wording, and contracts. Cargo policies may also limit or exclude certain territories. Tell your broker which states you enter, how often, and what shippers require before assuming a Canada-only policy covers southbound loads.",
+          "It can. U.S. operations may require territory extensions, higher automobile liability limits, and specific policy endorsements — depending on your carrier, policy wording, and shipper or broker contracts. Cargo policies may also limit or exclude certain territories. Tell your broker which states you enter, how often, and what shippers require before assuming a Canada-only policy covers southbound loads.",
       },
       {
         question: "Are trailers automatically covered with the tractor?",
@@ -1126,7 +1126,7 @@ export const industryPages: IndustryPageContent[] = [
           "Ontario commercial automobile third-party liability may help respond to certain bodily injury or property-damage claims arising from the use of your dump truck on public roads — subject to FSRA-regulated policy terms, limits, and exclusions.",
         detailTitle: "On the highway is automobile liability — jobsites may be different",
         detailDescription:
-          "Collisions, property damage, and injury claims arising while your dump truck travels on public roads are typically evaluated under commercial automobile liability — regulated separately from commercial general liability. Loading zones, active construction sites, tipping operations, or debris spills may involve different policy triggers depending on whether the loss arises from automobile use, completed operations, or pollution exclusions. Do not assume automobile liability automatically covers every incident that happens while dumping or entering a jobsite — confirm how your policies define covered automobile use and operations.",
+          "Collisions, property damage, and injury claims arising while your dump truck travels on public roads are typically evaluated under commercial automobile liability — regulated separately from commercial general liability. Loading zones, active construction sites, tipping operations, or debris spills may involve different policy triggers depending on whether the loss arises from automobile use, CGL or operations liability, or pollution exclusions — where applicable under policy wording. Do not assume automobile liability automatically covers every incident that happens while dumping or entering a jobsite — confirm how your policies define covered automobile use and operations.",
         icon: Briefcase,
       },
       {
@@ -1140,7 +1140,8 @@ export const industryPages: IndustryPageContent[] = [
         icon: Truck,
       },
       {
-        title: "Cargo & Debris Coverage",
+        id: "cargo-debris-coverage",
+        title: "Load & Debris Exposure",
         shortLabel: "Load / Debris",
         description:
           "May help address certain loss to aggregate, soil, asphalt, or other material you haul — or debris falling from the vehicle — where purchased and subject to policy terms, commodities, and whether you haul for others or your own material.",
@@ -1169,7 +1170,7 @@ export const industryPages: IndustryPageContent[] = [
       {
         title: "Road exposure vs. jobsite and dumping operations",
         description:
-          "Public-road collisions are automobile exposures. Tipping on uneven ground, contact with utilities, or property damage while maneuvering on a construction site may implicate different policy sections or exclusions — including completed operations under CGL where applicable. Loading and unloading at quarries, asphalt plants, and demolition sites each carry distinct third-party property and injury exposure.",
+          "Public-road collisions are automobile exposures. Tipping on uneven ground, contact with utilities, or property damage while maneuvering on a construction site may implicate different policy sections or exclusions — including CGL or operations liability where applicable under policy wording. Loading and unloading at quarries, asphalt plants, and demolition sites each carry distinct third-party property and injury exposure.",
       },
       {
         title: "Material type and seasonal operations",

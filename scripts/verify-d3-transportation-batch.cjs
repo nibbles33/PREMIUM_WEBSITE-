@@ -15,7 +15,7 @@ const ROUTES = [
       "Shippers' freight is a separate exposure from your tractor on the highway",
       "Highway liability is regulated automobile coverage — not cargo or CGL",
       "Tractors and trailers are scheduled values — trailers are not automatic",
-      "U.S. lanes change territory, limits, and filings — not a generic add-on label",
+      "U.S. lanes change territory, limits, and underwriting requirements — not a generic add-on label",
     ],
     heroSnippet: "Motor carriers and for-hire trucking",
     trustSnippet: "Windsor–Essex motor carriers",

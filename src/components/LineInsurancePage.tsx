@@ -15,6 +15,8 @@ export type CoverageCard = {
   title: string;
   description: string;
   icon: LucideIcon;
+  /** Optional stable Explorer tab id; defaults to slugified title when omitted. */
+  id?: string;
   /** Optional compact label for Coverage Explorer selector tabs. */
   shortLabel?: string;
   /** Optional richer title for Coverage Explorer detail panel (left under image). */

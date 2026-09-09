@@ -34,6 +34,7 @@ type CoverageInput = CoverageCard & {
   shortLabel?: string;
   detailTitle?: string;
   detailDescription?: string;
+  id?: string;
 };
 
 type BuildPilotProductConfigInput = {
@@ -84,7 +85,7 @@ function slugify(value: string): string {
 
 function toCoverageItems(items: CoverageInput[]): ProductCoverageItem[] {
   return items.map((item) => {
-    const id = slugify(item.title);
+    const id = item.id ?? slugify(item.title);
     const shortLabel = item.shortLabel ?? item.title.split(" ")[0] ?? item.title;
     const detail = item.detail ?? item.description;
     return {

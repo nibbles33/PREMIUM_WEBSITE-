@@ -329,6 +329,128 @@ Explorer UX v2 regression (daycare, restaurant, contractors): **pass**
 
 ---
 
+## Precision fix addendum — 2026-09-09
+
+**Branch:** `cursor/coverage-explorer-ux-v2-2026-09-07`  
+**Baseline commit:** `af2e96d`  
+**Precision fix commit:** `d79ae94`
+**Isolated worktree:** `/tmp/PREMIUM_WEBSITE-d3-transportation`  
+**Primary worktree untouched:** `cursor/carrier-logos-7402` @ `90f5bbf` (unrelated uncommitted changes preserved)
+
+### Scope
+
+Minimum copy corrections on three transportation routes only. No carrier/Partners/Claims work. No Explorer architecture change beyond optional stable `id` override on coverage cards (preserves `cargo-debris-coverage` when visitor-facing title changes).
+
+### Fixes applied
+
+| # | Route | Fix |
+|---|-------|-----|
+| 1 | Trucking | Removed vague "insurer filings" from U.S./cross-border copy; softened to territory, limits, endorsements, underwriting requirements |
+| 2 | Dump Truck | Replaced "completed operations" in active tipping/jobsite passages with "CGL or operations liability" |
+| 3 | Dump Truck Explorer | Title `Cargo & Debris Coverage` → **`Load & Debris Exposure`**; id `cargo-debris-coverage` preserved |
+| 4 | Cargo/Freight | Commodity/valuation/limits consideration hedged — no universal scheduling or annual aggregate implication |
+
+### Route grades (post-fix)
+
+| Route | Grade | HIGH | MEDIUM | LOW |
+|-------|-------|------|--------|-----|
+| Trucking | **A** | 0 | 0 | 0 |
+| Dump Truck | **A** | 0 | 0 | 0 |
+| Cargo/Freight | **A** | 0 | 0 | 0 |
+
+**Site total:** A **16** · B **16** · C **18** · D **8** (unchanged from post-D3 batch)
+
+### Validation
+
+| Check | Result |
+|-------|--------|
+| BUILD | **PASS** |
+| TSC (`npx tsc --noEmit`) | **PASS** |
+| CONTENT AUDIT | **PASS** |
+| EXPLORER V2 REGRESSION | **PASS** |
+| D3 TRANSPORTATION VERIFIER | **PASS** |
+| FROZEN ROUTES UNCHANGED | **YES** |
+
+### Explorer integrity
+
+| Route | States before → after | IDs changed | Image mappings changed |
+|-------|----------------------|-------------|------------------------|
+| Trucking | 4 → 4 | No | No |
+| Dump Truck | 4 → 4 | No | No |
+| Cargo/Freight | 4 → 4 | No | No |
+
+**State IDs (unchanged):**
+
+- Trucking: `cargo-insurance`, `liability-coverage`, `physical-damage`, `cross-border-coverage`
+- Dump Truck: `commercial-auto-liability`, `physical-damage`, `cargo-debris-coverage`, `non-trucking-liability`
+- Cargo/Freight: `motor-truck-cargo`, `carrier-liability`, `refrigerated-cargo`, `contingent-cargo`
+
+| Check | Result |
+|-------|--------|
+| Dump Truck ID `cargo-debris-coverage` unchanged | **YES** |
+| Dump Truck title now "Load & Debris Exposure" | **YES** |
+| Restaurant custom behavior touched | **NO** |
+| Contractors custom behavior touched | **NO** |
+
+### Literal post-fix factual gate
+
+#### 1. TRUCKING — changed U.S./cross-border field(s)
+
+**FIELD PATH:** `commercial-industries.ts` → `trucking-insurance` → `coverageTypes[3].description`  
+**COMPLETE CURRENT VALUE:**  
+Operating in the United States may require specific policy territory extensions, higher liability limits, and endorsements where applicable — subject to underwriting and policy wording — beyond a Canada-only commercial automobile policy.
+
+**FIELD PATH:** `commercial-industries.ts` → `trucking-insurance` → `coverageTypes[3].detailTitle`  
+**COMPLETE CURRENT VALUE:**  
+U.S. lanes change territory, limits, and underwriting requirements — not a generic add-on label
+
+**FIELD PATH:** `commercial-industries.ts` → `trucking-insurance` → `faqItems[2].answer`  
+**COMPLETE CURRENT VALUE:**  
+It can. U.S. operations may require territory extensions, higher automobile liability limits, and specific policy endorsements — depending on your carrier, policy wording, and shipper or broker contracts. Cargo policies may also limit or exclude certain territories. Tell your broker which states you enter, how often, and what shippers require before assuming a Canada-only policy covers southbound loads.
+
+#### 2. DUMP TRUCK — road/jobsite consideration
+
+**FIELD PATH:** `commercial-industries.ts` → `dump-truck-insurance` → `considerations[1].description`  
+**COMPLETE CURRENT VALUE:**  
+Public-road collisions are automobile exposures. Tipping on uneven ground, contact with utilities, or property damage while maneuvering on a construction site may implicate different policy sections or exclusions — including CGL or operations liability where applicable under policy wording. Loading and unloading at quarries, asphalt plants, and demolition sites each carry distinct third-party property and injury exposure.
+
+#### 3. DUMP TRUCK — Explorer detail (commercial auto liability state)
+
+**FIELD PATH:** `commercial-industries.ts` → `dump-truck-insurance` → `coverageTypes[0].detailDescription`  
+**COMPLETE CURRENT VALUE:**  
+Collisions, property damage, and injury claims arising while your dump truck travels on public roads are typically evaluated under commercial automobile liability — regulated separately from commercial general liability. Loading zones, active construction sites, tipping operations, or debris spills may involve different policy triggers depending on whether the loss arises from automobile use, CGL or operations liability, or pollution exclusions — where applicable under policy wording. Do not assume automobile liability automatically covers every incident that happens while dumping or entering a jobsite — confirm how your policies define covered automobile use and operations.
+
+#### 4. DUMP TRUCK — Explorer title
+
+**FIELD PATH:** `commercial-industries.ts` → `dump-truck-insurance` → `coverageTypes[2].id`  
+**COMPLETE CURRENT VALUE:**  
+cargo-debris-coverage
+
+**FIELD PATH:** `commercial-industries.ts` → `dump-truck-insurance` → `coverageTypes[2].title`  
+**COMPLETE CURRENT VALUE:**  
+Load & Debris Exposure
+
+**FIELD PATH:** `commercial-industries.ts` → `dump-truck-insurance` → `coverageTypes[2].shortLabel`  
+**COMPLETE CURRENT VALUE:**  
+Load / Debris
+
+#### 5. CARGO/FREIGHT — commodity/valuation/limits field
+
+**FIELD PATH:** `commercial-products-industry.ts` → `cargo-freight-insurance` → `considerations[2].description`  
+**COMPLETE CURRENT VALUE:**  
+Insurers evaluate commodities — such as general freight, electronics, alcohol, pharmaceuticals, and metals — using different underwriting rules, rates, restrictions, sublimits, and exclusions. Valuation provisions, per-load limits, sublimits, and aggregates — where applicable in your policy — depend on policy wording and form. Confirm that your stated limits align with your largest contracts — underinsuring high-value lanes can create balance-bill exposure.
+
+### Prohibited-term scan (three routes)
+
+| Term | Present |
+|------|---------|
+| MCS-90 anywhere in the 3 routes | **NO** |
+| BMC-91 anywhere in the 3 routes | **NO** |
+| "insurer filings" in trucking visitor copy | **NO** |
+| "completed operations" in corrected active tipping/jobsite passages | **NO** |
+
+---
+
 ## Stop gates (repeat)
 
 - **NO MERGE · NO DEPLOY · NO VERCEL PROMOTION**

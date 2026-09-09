@@ -34,8 +34,8 @@
         {
           "index": 3,
           "id": "cross-border-coverage",
-          "tabDesc": "Operating in the United States may require specific territory extensions, higher limits, and insurer filings or endorsements — where available and subject to underwriting — beyond a Canada-only commercial automobile policy.",
-          "detailTitle": "U.S. lanes change territory, limits, and filings — not a generic add-on label",
+          "tabDesc": "Operating in the United States may require specific policy territory extensions, higher liability limits, and endorsements where applicable — subject to underwriting and policy wording — beyond a Canada-only commercial automobile policy.",
+          "detailTitle": "U.S. lanes change territory, limits, and underwriting requirements — not a generic add-on label",
           "detailDescription": "Cross-border hauling is not a single universal product name — it reflects how your Ontario commercial automobile program extends territory, limits, and insurer requirements for U.S. operations. Shippers and brokers may require proof of U.S.-adequate limits or specific insurer ratings contractually. Cargo policies may also contain territorial limits. Disclose every state or region you enter, how often, and whether loads originate or terminate in the U.S. so your broker can coordinate automobile and cargo wording — do not assume a Canada-only policy automatically follows the truck south of the border.",
           "duplicateDesc": false,
           "hasImage": true
@@ -66,7 +66,7 @@
           "id": "commercial-auto-liability",
           "tabDesc": "Ontario commercial automobile third-party liability may help respond to certain bodily injury or property-damage claims arising from the use of your dump truck on public roads — subject to FSRA-regulated policy terms, limits, and exclusions.",
           "detailTitle": "On the highway is automobile liability — jobsites may be different",
-          "detailDescription": "Collisions, property damage, and injury claims arising while your dump truck travels on public roads are typically evaluated under commercial automobile liability — regulated separately from commercial general liability. Loading zones, active construction sites, tipping operations, or debris spills may involve different policy triggers depending on whether the loss arises from automobile use, completed operations, or pollution exclusions. Do not assume automobile liability automatically covers every incident that happens while dumping or entering a jobsite — confirm how your policies define covered automobile use and operations.",
+          "detailDescription": "Collisions, property damage, and injury claims arising while your dump truck travels on public roads are typically evaluated under commercial automobile liability — regulated separately from commercial general liability. Loading zones, active construction sites, tipping operations, or debris spills may involve different policy triggers depending on whether the loss arises from automobile use, CGL or operations liability, or pollution exclusions — where applicable under policy wording. Do not assume automobile liability automatically covers every incident that happens while dumping or entering a jobsite — confirm how your policies define covered automobile use and operations.",
           "duplicateDesc": false,
           "hasImage": true
         },

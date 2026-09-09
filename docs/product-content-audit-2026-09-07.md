@@ -43,7 +43,7 @@
 | /builders-developers-insurance/ | 380 | 4 / specific (good) | No | 5 | Yes | 1 | Windsor-Essex-primary | **D** |
 | /builders-risk-insurance/ | 292 | 4 / specific/hedged (strong) | No | 4 | Yes | 2 | Windsor-Essex-primary | **D** |
 | /business-interruption-insurance/ | 395 | 4 / specific/hedged (strong) | Yes (66w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
-| /cargo-freight-insurance/ | 1117 | 4 / specific/hedged (strong) | Yes (376w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
+| /cargo-freight-insurance/ | 1127 | 4 / specific/hedged (strong) | Yes (386w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /commercial-auto-insurance/ | 323 | 4 / specific/hedged (strong) | No | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
 | /commercial-insurance/ | 283 | 0 / none | No | 5 | No — Shares 2+ FAQ pattern with auto-insurance | 0 | Windsor-Essex-primary | **C** |
 | /commercial-property-insurance/ | 367 | 4 / specific (good) | No | 6 | No — Shares 2+ FAQ pattern with auto-insurance | 0 | Windsor-Essex-primary | **C** |
@@ -56,7 +56,7 @@
 | /cyber-insurance/ | 409 | 4 / specific/hedged (strong) | Yes (67w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /daycare-private-school-insurance/ | 956 | 6 / specific/hedged (strong) | Yes (186w, moderate) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /directors-officers-insurance/ | 331 | 4 / specific/hedged (strong) | Yes (70w, moderate) | 4 | Yes | 1 | Windsor-Essex-primary | **D** |
-| /dump-truck-insurance/ | 1072 | 4 / specific/hedged (strong) | Yes (319w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
+| /dump-truck-insurance/ | 1075 | 4 / specific/hedged (strong) | Yes (322w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /employment-practices-liability-insurance/ | 227 | 4 / specific (good) | No | 4 | Yes | 1 | Windsor-Essex-primary | **D** |
 | /event-liability-insurance/ | 1094 | 4 / specific/hedged (strong) | Yes (329w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /farm-insurance/ | 332 | 4 / specific (good) | No | 4 | Yes | 0 | Windsor-Essex-primary (local) | **C** |
@@ -93,7 +93,7 @@
 | /small-business-insurance/ | 399 | 4 / specific/hedged (strong) | Yes (63w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **C** |
 | /tenant-insurance/ | 519 | 4 / specific (good) | Yes (81w, moderate) | 4 | Yes | 0 | Windsor-Essex + Ontario | **B** |
 | /travel-insurance/ | 540 | 4 / specific/hedged (strong) | Yes (109w, specific/useful) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
-| /trucking-insurance/ | 1241 | 4 / specific/hedged (strong) | Yes (440w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
+| /trucking-insurance/ | 1244 | 4 / specific/hedged (strong) | Yes (440w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /warehousing-insurance/ | 1034 | 4 / specific/hedged (strong) | Yes (306w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 
 **Word count scope:** Hero/intro (`heroLead`, `heroSupporting`, trust band), coverage intro + card descriptions/details, practical considerations, FAQ Q&A. Excludes nav, footer, broker-story boilerplate, related-products rail, and final CTA chrome.
