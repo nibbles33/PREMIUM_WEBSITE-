@@ -12,7 +12,7 @@ metaTitle (page title):
 Professional Liability (E&O) Insurance in Windsor-Essex | Premium Insurance Brokers
 
 metaDescription:
-Professional liability and E&O insurance for accountants, consultants, engineers, architects, financial advisors, and IT professionals in Windsor-Essex — claims-made coverage, retroactive dates, and contract coordination.
+Professional liability and E&O insurance for Windsor-Essex businesses and professionals — most commercial E&O is claims-made, so retroactive dates, reporting, and contract coordination matter.
 
 eyebrow:
 Commercial Insurance
@@ -1311,4 +1311,4 @@ Medical & Dental Office Insurance
 Routes: 4
 Total FAQs: 20
 Total considerations: 32
-Total characters: 85852
+Total characters: 85823

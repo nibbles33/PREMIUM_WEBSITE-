@@ -528,7 +528,7 @@ export const commercialProductPages: ProductPageContent[] = [
     metaTitle:
       "Professional Liability (E&O) Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Professional liability and E&O insurance for accountants, consultants, engineers, architects, financial advisors, and IT professionals in Windsor-Essex — claims-made coverage, retroactive dates, and contract coordination.",
+      "Professional liability and E&O insurance for Windsor-Essex businesses and professionals — most commercial E&O is claims-made, so retroactive dates, reporting, and contract coordination matter.",
     headline: "Professional Liability (E&O) Insurance",
     subhead:
       "When a client alleges your professional advice, design, analysis, or service caused them a financial loss, professional liability — also called errors and omissions (E&O) — may help with defence costs and certain settlements or judgments, subject to the policy you purchase. That is a different risk from slip-and-fall general liability, office property, cyber breach response, or directors and officers coverage. Most commercial E&O forms are claims-made, meaning when and how a claim is reported, your retroactive date, and any extended reporting period matter as much as the limit on the declarations page. Premium Insurance Brokers can help Windsor–Essex professionals compare markets for how you actually practise — including contract requirements, subcontractor use, and any regulator or association standards that apply to your occupation.",

@@ -218,3 +218,34 @@ All four Batch A routes: **A**
 ## STOP FOR OWNER REVIEW
 
 Do not merge. Do not deploy. Do not promote Vercel preview to production.
+
+---
+
+## FINAL PRECISION FIX
+
+**PRECISION BASE:** `67f7738`  
+**ROUTE:** `professional-liability-insurance`  
+**FIELD:** `metaDescription`
+
+**OLD:**
+Professional liability and E&O insurance for accountants, consultants, engineers, architects, financial advisors, and IT professionals in Windsor-Essex — claims-made coverage, retroactive dates, and contract coordination.
+
+**NEW:**
+Professional liability and E&O insurance for Windsor-Essex businesses and professionals — most commercial E&O is claims-made, so retroactive dates, reporting, and contract coordination matter.
+
+| Check | Result |
+|-------|--------|
+| **BUILD** | PASS (`npm run build`) |
+| **TSC** | PASS (`npx tsc --noEmit`) |
+| **CONTENT AUDIT** | PASS — A28 / B16 / C14 / D0 |
+| **EXPLORER REGRESSION** | PASS — 228/228 checks, 0 failures |
+| **BATCH VERIFIER** | PASS — `node scripts/verify-grade-c-batch-a.cjs` |
+
+**SITE TOTAL:** A28 / B16 / C14 / D0
+
+**Professional Liability:** A / 0 HIGH / 0 MEDIUM  
+**Professional Offices:** A / unchanged  
+**Real Estate:** A / unchanged  
+**Medical & Dental:** A / unchanged  
+
+**BATCH A READY TO FREEZE:** **YES**
