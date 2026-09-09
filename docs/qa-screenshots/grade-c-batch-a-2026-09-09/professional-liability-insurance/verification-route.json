@@ -1,0 +1,74 @@
+{
+  "slug": "professional-liability-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "accountants-bookkeepers",
+      "tabLabel": "AccountingMay help respond to certain claims alleging errors in tax preparation,",
+      "tabDesc": "May help respond to certain claims alleging errors in tax preparation, audits, compilations, financial statements, or advisory work that caused a client financial loss — subject to policy terms, limits, and whether the services are within the policy's professional-services definition.",
+      "detailTitle": "A reporting mistake can become a client loss claim",
+      "detailDescription": "Clients may allege missed deadlines, calculation errors, or flawed advice caused tax penalties, audit costs, or lost financing. For CPA Ontario firms engaged in public accounting or providing accounting services to the public, Regulation 14-1 sets minimum professional liability limits by firm size — separate from what any single client contract requires. Bookkeepers and non-public accounting firms may still face contractual E&O requirements even when CPA firm rules do not apply. Confirm which services you perform are disclosed and covered under your policy wording.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "accountants-bookkeepers"
+    },
+    {
+      "index": 1,
+      "id": "consultants-advisors",
+      "tabLabel": "ConsultingMay help respond to certain claims alleging that management, HR, marke",
+      "tabDesc": "May help respond to certain claims alleging that management, HR, marketing, strategy, or business recommendations caused measurable client financial harm — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A strategy recommendation can outlive the engagement",
+      "detailDescription": "Consultants are often sued for lost profits, failed implementations, or advice a client says they relied on months after delivery. General liability may address premises injury at a client site, but financial-loss allegations from your recommendations typically fall under professional liability — not CGL. Claims-made reporting means a dispute that surfaces after a project ends may still need to be reported during an active policy period unless prior acts or tail coverage applies.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "consultants-advisors"
+    },
+    {
+      "index": 2,
+      "id": "engineers-architects",
+      "tabLabel": "DesignMay help respond to certain claims alleging design, specification, inspect",
+      "tabDesc": "May help respond to certain claims alleging design, specification, inspection, or professional engineering errors — including some allegations tied to project delays or third-party property damage arising from professional services — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A specification error can ripple through an entire project",
+      "detailDescription": "Design professionals face allegations that drawings, calculations, or site observations were wrong — sometimes framed as economic loss, sometimes as property damage or delay. Holders of a PEO Certificate of Authorization offering engineering services to the public must meet Ontario's minimum professional liability requirements under Regulation 941, s. 74, unless a permitted exemption applies. OAA Certificate of Practice holders face separate mandatory professional liability rules through Pro-Demnity. Bodily injury or property damage from construction operations may implicate other policies — coordinate project contracts, CGL, and professional liability with your broker rather than assuming one label covers every allegation.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "engineers-architects"
+    },
+    {
+      "index": 3,
+      "id": "financial-advisors-it-consultants",
+      "tabLabel": "Finance / ITMay help respond to certain claims alleging investment or financial ",
+      "tabDesc": "May help respond to certain claims alleging investment or financial advice errors, software implementation failures, security advice, or technology project management caused client loss — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "Implementation failure and advice errors are different from a data breach bill",
+      "detailDescription": "Licensed Ontario life insurance agents must maintain FSRA-approved errors and omissions coverage with at least $1 million per occurrence and extended coverage for fraudulent acts under O. Reg. 347/04 — a regulatory requirement specific to that licence class, not every financial advisor. IT consultants may face allegations that a failed migration, security recommendation, or project delay caused business interruption — professional liability may address certain advice and service errors, while ransomware response, notification, and forensic costs often require separate cyber coverage. Disclose whether you give regulated financial advice, write code, manage projects, or perform security assessments so underwriting matches your actual services.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "financial-advisors-it-consultants"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "When a client alleges your professional advice, design, analysis, or service caused them a financial loss, professional liability — also called errors and omiss"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

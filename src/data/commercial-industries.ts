@@ -132,6 +132,8 @@ export type IndustryPageContent = {
   metaDescription: string;
   headline: string;
   subhead: string;
+  /** Optional trust-band copy — when set, used instead of subhead for the trust statement. */
+  whoItIsFor?: string;
   quoteHref: string;
   quoteLabel: string;
   coverageIntro: string;
@@ -767,133 +769,260 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Professional Offices Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Professional offices insurance through an independent Windsor-Essex broker — general liability, errors & omissions, commercial property, and cyber liability.",
+      "Professional offices insurance through an independent Windsor-Essex broker — general liability, commercial property, professional liability where applicable, and cyber/privacy for client-facing offices.",
     headline: "Professional Offices Insurance",
     subhead:
-      "Coverage for professional service businesses — from liability to the equipment that keeps your office running.",
+      "Professional offices combine premises where clients visit, equipment and records that keep the practice running, and — for many firms — advice or design services that create a separate professional liability exposure. Depending on your operation, that can mean commercial general liability for visitor injury, commercial property for contents and leasehold improvements, professional liability or E&O where you deliver professional services to clients, and cyber or privacy coverage where you store sensitive data — each subject to the policies you purchase. This page focuses on coordinating the office's commercial program; deep E&O mechanics for standalone professional liability are covered on our Professional Liability page.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Professional Offices Quote",
     coverageIntro:
-      "Coverages that address client-facing liability, advice risk, office property, and digital exposures.",
+      "Office insurance usually separates physical premises and property exposure from professional advice risk and digital records — not every professional office needs every coverage line, but most need clarity on how these pieces fit together.",
     coverageTypes: [
       {
         title: "General Liability",
+        shortLabel: "GL",
         description:
-          "Helps protect against third-party injury or property damage claims at your office or in the course of business.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from your office premises or business operations — such as a client injury in reception or a property-damage allegation tied to your operations — subject to policy terms, exclusions, and limits.",
+        detailTitle: "A client visit creates premises exposure separate from your advice",
+        detailDescription:
+          "Waiting areas, conference rooms, washrooms, and parking access generate slip-and-fall and property-damage exposure when clients, couriers, or vendors come to you. General liability may address certain operational and premises claims, but allegations that your professional advice caused a financial loss are typically evaluated under professional liability — not ordinary CGL. Disclose whether staff also work at client sites or host off-site meetings.",
         icon: Briefcase,
       },
       {
         title: "Professional Liability (Errors & Omissions)",
+        shortLabel: "E&O",
         description:
-          "Addresses claims that a client suffered a financial loss because of your professional advice or services.",
+          "May help respond to certain claims alleging a client suffered financial loss because of your professional advice, design, analysis, or services — where purchased and subject to policy terms, limits, and whether coverage is claims-made or occurrence-based.",
+        detailTitle: "Bad advice is not a slip-and-fall claim",
+        detailDescription:
+          "If your office bills for consulting, design, accounting, engineering, financial, or technical advice, clients may allege errors caused tax penalties, project delays, or lost revenue. That is professional liability exposure — separate from premises injury covered by general liability. Some offices purchase E&O as part of a package; others carry a standalone professional liability policy with its own retroactive date and limits. See our Professional Liability page for claims-made, contract, and profession-specific depth.",
         icon: Shield,
       },
       {
         title: "Commercial Property",
+        shortLabel: "Property",
         description:
-          "Covers office contents, equipment, and improvements against covered theft, fire, or other insured losses.",
+          "May help cover office contents, computers, furniture, and tenant improvements against covered causes of loss such as fire, theft, or water damage — subject to policy terms, reported values, and limits.",
+        detailTitle: "Your landlord's policy does not automatically cover your contents",
+        detailDescription:
+          "Leased professional suites typically leave the building shell to the landlord while you insure contents, computers, phones, and leasehold improvements you paid for. Owned offices may need building coverage on the structure plus contents inside. Accurate values matter — underinsuring equipment or buildout creates co-insurance penalties on some policies. Business interruption, where purchased, responds only after a covered direct physical loss to insured property and subject to waiting periods.",
         icon: Building2,
       },
       {
         title: "Cyber Liability",
+        shortLabel: "Cyber",
         description:
-          "Can help with costs tied to data breaches, ransomware, and certain network security incidents.",
+          "May help address certain costs arising from data breaches, ransomware, or network security incidents affecting client records, billing systems, or cloud platforms — where purchased and subject to policy terms — distinct from ordinary general liability.",
+        detailTitle: "Client files on your server create exposure GL may exclude",
+        detailDescription:
+          "Professional offices store contracts, financial records, personnel files, and client credentials — making them targets for phishing, ransomware, and unauthorized access. Standard general liability and many E&O policies exclude or limit cyber events. Cyber or privacy coverage, where available, may help with certain forensic, notification, and business-interruption costs depending on wording, but it does not replace sound access controls, backups, or vendor management.",
         icon: Laptop,
+      },
+    ],
+    considerations: [
+      {
+        title: "Leased premises, tenant improvements, and landlord requirements",
+        description:
+          "Commercial leases often require the tenant to insure contents, glass, tenant improvements, and legal liability — and to name the landlord as additional insured on general liability. Confirm who insures the building, what improvements you funded, and whether your lease imposes minimum limits or certificate deadlines before move-in.",
+      },
+      {
+        title: "Client visits, open meetings, and off-site work",
+        description:
+          "Premises exposure concentrates where clients enter your space — reception, boardrooms, and shared building corridors. If staff attend client locations or host seminars off-site, disclose those activities during underwriting. General liability may respond to certain premises and operations claims, but scope depends on policy definitions and disclosed operations.",
+      },
+      {
+        title: "When the office still needs professional liability",
+        description:
+          "Administrative or back-office functions with no client-facing professional services may not need E&O. Any office that designs, advises, certifies, or analyzes for a fee typically does — whether packaged with property and GL or written as a standalone policy. Do not assume a generic office package automatically includes professional liability without reviewing declarations and exclusions.",
+      },
+      {
+        title: "Computers, mobile equipment, and records",
+        description:
+          "Laptops, monitors, servers, and phone systems represent concentrated value vulnerable to theft and power events. Property schedules should reflect replacement cost for equipment you own or are responsible for under lease. Off-premises equipment may need specific coverage or sublimits depending on policy wording.",
+      },
+      {
+        title: "Cyber and privacy for client data",
+        description:
+          "Cloud CRM, accounting platforms, and email archiving store client information outside filing cabinets. Cyber coverage, where purchased, may address certain incident response costs — but exclusions, sublimits, and social-engineering fraud treatment vary widely. Multi-factor authentication, backups, and vendor contracts support underwriting but do not replace coverage review.",
+      },
+      {
+        title: "Business interruption after a covered property loss",
+        description:
+          "If fire, water, or theft shuts your office, business interruption coverage — where purchased — may help with certain continuing expenses and lost income after a covered direct physical loss, subject to waiting periods and policy wording. A licence suspension, cyber event, or non-covered equipment failure may not trigger the same coverage.",
+      },
+      {
+        title: "Crime, client funds, and payment fraud",
+        description:
+          "Offices that hold client retainers, trust balances, or process wire transfers face theft and fraud exposure that standard property forms may not fully address. Crime or fidelity endorsements, where available, may respond to certain employee dishonesty or social-engineering losses subject to limits and security conditions — disclose whether client funds flow through your accounts.",
+      },
+      {
+        title: "Contractual insurance certificates and MSAs",
+        description:
+          "Clients, landlords, and lenders often require certificates showing general liability, professional liability, and sometimes cyber limits before engagement. Gather contract insurance schedules early — increasing limits or adding additional insureds after a loss is reported is generally not possible retroactively.",
       },
     ],
     faqTitle: "Professional offices FAQ",
     faqItems: [
       {
-        question:
-          "What's the difference between general liability and professional liability?",
+        question: "What does professional office insurance include?",
         answer:
-          "General liability typically covers bodily injury and property damage to others. Professional liability (E&O) responds when a client claims your advice, design, or service caused a financial loss. Many offices need both.",
+          "There is no single standard package — most programs combine commercial general liability and commercial property for the premises and contents, then add professional liability and cyber coverage where the firm's services and data exposures warrant them. A purely administrative office with no professional services to clients may need GL and property only; a consulting or design office typically needs E&O as well. Your broker structures coverage to your lease, services, and contract requirements rather than selling every line to every office.",
       },
       {
-        question: "Do I need cyber liability coverage?",
+        question: "Do I still need separate E&O if I have office insurance?",
         answer:
-          "If you store client data, process payments online, or rely on cloud systems, cyber coverage is worth a serious look. Standard liability policies often exclude or limit cyber events.",
+          "If your office provides professional advice, design, analysis, or regulated services to clients, you generally need professional liability coverage — either included in your office program or written as a standalone policy with its own limits and retroactive date. Office general liability does not replace E&O for financial-loss allegations tied to your work product. If you only perform internal administration with no client-facing professional services, E&O may not apply — confirm with your broker based on what you actually do for clients.",
       },
       {
-        question: "Does my policy cover client data breaches?",
+        question: "What about leased equipment and premises?",
         answer:
-          "Only if cyber or privacy coverage is included. A general liability or E&O policy alone may not cover notification costs, forensic investigation, or regulatory expenses after a breach.",
+          "Leases typically require tenants to carry general liability and to insure contents, improvements, and sometimes plate glass or HVAC equipment you are responsible for maintaining. Equipment leased from a vendor may need to be scheduled or covered under a property endorsement depending on who bears loss risk under the lease. Provide your lease insurance clause to your broker before binding coverage.",
       },
       {
-        question: "What information do I need for a quote?",
+        question: "Do professional offices need cyber insurance?",
         answer:
-          "Your profession, services offered, revenue, number of staff, whether you hold client funds or sensitive data, current coverage, and any claims history. Contract insurance requirements help too.",
+          "Offices that store client financial records, personnel files, credentials, or payment data on networked systems face cyber and privacy exposure that standard GL often excludes. Cyber coverage is worth reviewing when you rely on cloud platforms, email, or remote access — especially if clients or contracts require it. It is not a universal mandate for every office, but the exposure is common for professional service firms.",
+      },
+      {
+        question: "What information is needed for a quote?",
+        answer:
+          "Profession and services offered, revenue and staff count, whether you own or lease the premises, values for contents and tenant improvements, whether you hold client funds, data and cloud systems used, current policies and retroactive dates for any E&O, prior claims, and any lease or client contract insurance requirements. Photos or a statement of values help for larger offices.",
       },
     ],
     ctaHeading: "Ready to cover your professional practice?",
     ctaSubhead:
-      "Tell us about your services and exposures — we'll compare options that fit.",
+      "Tell us about your office, services, lease, and contract requirements — we'll compare options that fit how your practice actually operates.",
     serviceName: "Professional Offices Insurance",
   },
   {
     slug: "real-estate-insurance",
     metaTitle: "Real Estate Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Real estate insurance through an independent Windsor-Essex broker — errors & omissions, commercial property, general liability, and landlord coverage.",
+      "Real estate brokerage insurance through an independent Windsor-Essex broker — RECO registrant program coordination, office general liability, commercial property, and cyber/privacy for brokerage operations.",
     headline: "Real Estate Insurance",
     subhead:
-      "Coverage for real estate professionals and property portfolios — from brokerages to rental properties.",
+      "Ontario real estate brokerages and office operations face a layered insurance picture: registrants must participate in RECO's mandatory professional liability insurance program under the Trust in Real Estate Services Act, 2002, which includes errors and omissions, commission protection, and consumer deposit coverage on defined terms — separate from the brokerage's own commercial general liability, office property, and cyber exposures. Premium Insurance Brokers helps Windsor–Essex brokerages coordinate commercial lines for the office entity — premises liability, contents, and data — without replacing or administering RECO's registrant program. If you own rental properties or manage portfolios for others, those are different insurance conversations — see our Landlord Insurance and Property Management pages.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Real Estate Quote",
     coverageIntro:
-      "Coverages for brokerage liability, owned property, and landlord exposures.",
+      "Coverage for a real estate brokerage office is organized around registrant professional protection through RECO's program, then the commercial policies that protect the office itself — premises, property, and client data.",
     coverageTypes: [
       {
-        title: "Errors & Omissions (E&O)",
+        id: "errors-omissions-e-o",
+        title: "Registrant E&O (RECO Program)",
+        shortLabel: "E&O",
         description:
-          "Helps protect agents and brokerages against claims arising from professional real estate services.",
+          "Ontario registrants must participate in RECO's mandatory professional liability insurance program, which includes errors and omissions coverage for certain professional real estate services allegations — subject to the program's terms, limits, and deductibles. Premium Insurance Brokers does not replace or sell this program.",
+        detailTitle: "Transaction errors and deposit disputes follow RECO's program rules",
+        detailDescription:
+          "RECO's program includes errors and omissions coverage with a $2,000,000 limit per claim and $4,000,000 annual aggregate for the E&O component, plus separate commission protection and consumer deposit coverage on defined terms for the 2026–2027 policy period — each subject to program wording. Allegations such as missed APS clauses, form errors, or commission disputes are evaluated under that program, not a generic commercial E&O policy placed for the brokerage office. Registrants renew through RECO's process; commercial brokers help with the brokerage entity's separate GL, property, and cyber needs.",
         icon: Shield,
       },
       {
         title: "Commercial Property",
+        shortLabel: "Property",
         description:
-          "Covers office premises, contents, and improvements for brokerages and property businesses.",
+          "May help cover brokerage office contents, furniture, IT equipment, and tenant improvements against covered causes of loss such as fire, theft, or water damage — subject to policy terms, reported values, and limits.",
+        detailTitle: "Boardroom equipment and MLS workstations are your contents exposure",
+        detailDescription:
+          "Whether the brokerage leases or owns its office, the landlord's building policy typically does not cover your desks, servers, signage, or leasehold improvements. Property values should reflect computers, printers, furniture, and any buildout you funded. If the brokerage owns the building, building coverage on the structure is separate from contents — disclose ownership, square footage, and alarm or sprinkler details during underwriting.",
         icon: Building2,
       },
       {
         title: "General Liability",
+        shortLabel: "GL",
         description:
-          "Addresses third-party injury or property damage claims tied to your premises or operations.",
+          "May help respond to certain third-party bodily injury or property-damage claims arising from brokerage premises or operations — such as open-house visitors, office walk-ins, or parking-lot incidents — subject to policy terms, exclusions, and limits.",
+        detailTitle: "An open-house visitor injury is a premises claim — not a transaction E&O claim",
+        detailDescription:
+          "Brokerages host clients, other agents, and the public at the office and at showings. Slip-and-fall, trip hazards, and property-damage allegations tied to premises control may fall under general liability — distinct from professional errors covered through RECO's registrant program. Disclose how often you host open houses, whether agents use personal vehicles for showings, and any property-management or rental activities performed outside core brokerage operations.",
         icon: Briefcase,
       },
       {
-        title: "Landlord Coverage",
+        id: "landlord-coverage",
+        title: "Cyber & Privacy",
+        shortLabel: "Cyber",
         description:
-          "Protects rental property owners for building damage, liability to tenants or guests, and related risks.",
-        icon: KeyRound,
+          "May help address certain costs arising from privacy breaches, ransomware, or unauthorized access affecting client contact information, transaction files, or brokerage email and payment systems — where purchased and subject to policy terms.",
+        detailTitle: "Client contact lists and deal files are brokerage cyber exposure",
+        detailDescription:
+          "Brokerages store offers, identification copies, financial pre-qualification data, and correspondence — making phishing, wire-fraud schemes, and ransomware relevant operational risks. Standard general liability often excludes cyber events. Cyber or privacy coverage, where available, may help with certain forensic, notification, and business-interruption costs depending on policy wording, but it does not replace secure email, verification procedures for wire instructions, or staff training on social-engineering fraud.",
+        icon: Laptop,
+      },
+    ],
+    considerations: [
+      {
+        title: "RECO's mandatory program vs the brokerage's commercial insurance",
+        description:
+          "Every Ontario registrant must participate in RECO's professional liability insurance program as a condition of registration under TRESA. That program covers defined registrant professional exposures — not the brokerage's office furniture, landlord slip-and-fall claims, or cyber incidents on office systems. Premium Insurance Brokers coordinates commercial GL, property, and cyber for the office entity; registrants renew RECO program coverage through RECO's own process.",
+      },
+      {
+        title: "Office premises, showings, and client visits",
+        description:
+          "Premises exposure arises at the brokerage office, open houses, and showings. General liability may respond to certain third-party injury claims subject to policy wording. Automobile exposure when agents drive to showings involves Ontario auto coverage separately from office GL — disclose whether agents use personal vehicles and how often.",
+      },
+      {
+        title: "Brokerage contents, IT, and tenant improvements",
+        description:
+          "Accurate property schedules for computers, signage, furniture, and leasehold improvements support proper claims payment. Backup systems and off-site data storage may affect cyber underwriting but do not replace property coverage for physical equipment.",
+      },
+      {
+        title: "Wire fraud, email compromise, and transaction data",
+        description:
+          "Real estate transactions are frequent targets for fraudulent wire instructions and impersonation emails. Cyber coverage, where purchased, may address certain incident costs subject to exclusions and sublimits — but verification protocols for deposit transfers are operational controls, not insurance substitutes. Train staff on RECO and brokerage procedures for handling trust funds.",
+      },
+      {
+        title: "Property-management or rental activities",
+        description:
+          "If the brokerage or its principals also manage rental properties or own investment real estate, those activities create exposures outside core registrant E&O — property management E&O, landlord property, and lessor's liability are separate products. See our Property Management Insurance page for management firms and Landlord Insurance for owned rental properties.",
+      },
+      {
+        title: "Owned rental real estate is a different page",
+        description:
+          "Insurance for buildings you rent out to tenants — landlord property, rental income, and lessor liability — is not the focus of this brokerage page. Owned investment properties should be reviewed under a landlord or commercial property program with accurate occupancy and vacancy disclosures.",
+      },
+      {
+        title: "Certificates, franchise, and board requirements",
+        description:
+          "Franchise networks, commercial landlords, and lender clients may require certificates for general liability, property, and cyber limits on the brokerage entity. Gather schedule requirements before lease signing or franchise onboarding — RECO program certificates are separate from commercial policy certificates.",
+      },
+      {
+        title: "Personal real estate corporations (PRECs) and entity structure",
+        description:
+          "How the brokerage, PREC, and individual registrants are structured affects who needs commercial coverage versus registrant program participation. Disclose entity names, ownership, and which operations each entity performs so policies and certificates match the named insured on contracts.",
       },
     ],
     faqTitle: "Real estate insurance FAQ",
     faqItems: [
       {
-        question: "Do real estate agents need E&O insurance?",
+        question: "Is real estate brokerage insurance the same as landlord insurance?",
         answer:
-          "Yes in practice — and many brokerages and boards require it. E&O responds when a client claims a professional error in a transaction caused them a financial loss.",
+          "No. Real estate brokerage insurance for office operations addresses the brokerage entity's commercial general liability, office property, and cyber exposures — while Ontario registrants must separately participate in RECO's mandatory professional liability insurance program for defined transaction-related professional exposures. Landlord insurance protects owners of rental property — buildings, landlord liability, and sometimes rental income — and is a different customer need. If you own rental units, see our Landlord Insurance page; this page focuses on brokerage and office operations.",
       },
       {
-        question: "What's covered under landlord insurance?",
+        question: "What insurance does a real estate brokerage need beyond RECO's program?",
         answer:
-          "Landlord policies typically cover the rental building, landlord liability, and sometimes loss of rental income after a covered property loss. Tenant belongings are usually the tenant's responsibility.",
+          "RECO's program satisfies registrants' mandatory professional liability insurance requirement under TRESA — it is not a substitute for insuring the brokerage office itself. Most brokerages still review commercial general liability for premises and operations, commercial property for contents and improvements, and cyber or privacy coverage where client data and transaction systems create exposure. The exact package depends on whether you lease or own the office, staff count, and contract requirements from landlords or franchise systems.",
       },
       {
-        question: "Do I need separate coverage for vacant properties?",
+        question: "What if the brokerage owns its office building?",
         answer:
-          "Often yes. Vacancy can restrict or void standard coverage after a set period. Tell your broker about vacant or under-renovation units so the policy wording matches the risk.",
+          "You may need building property coverage on the structure plus contents coverage for furniture and equipment inside, alongside general liability for premises exposure. RECO's registrant program does not insure the building. Vacancy, maintenance, and tenant-occupied portions of a mixed-use building should be disclosed separately. Your broker can help coordinate building and contents values with lease and mortgage requirements.",
       },
       {
-        question: "What information do I need for a quote?",
+        question: "What about property management services?",
         answer:
-          "Whether you're an agent, brokerage, or landlord; property addresses and values; occupancy; claims history; and any association or lender insurance requirements.",
+          "Managing properties for owners — coordinating maintenance, tenant relations, and leases — creates management E&O and operational liability distinct from selling real estate as a registrant. If your firm performs property management, review our Property Management Insurance page. RECO registrant coverage and property-management coverage serve different roles and should not be assumed interchangeable.",
+      },
+      {
+        question: "What information is needed for a quote?",
+        answer:
+          "Brokerage legal name and entity structure, office address and whether leased or owned, staff and registrant count, property values for contents and improvements, description of any property-management or rental activities, current commercial policies, prior claims, and any franchise or landlord certificate requirements. RECO program participation is confirmed through RECO directly — we coordinate the brokerage's commercial lines.",
       },
     ],
     ctaHeading: "Ready to cover your real estate work?",
     ctaSubhead:
-      "Tell us about your brokerage or portfolio — we'll compare options that fit.",
+      "Tell us about your brokerage office, operations, and commercial certificate needs — we'll compare options that fit alongside RECO's registrant program.",
     serviceName: "Real Estate Insurance",
   },
   {

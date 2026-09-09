@@ -240,7 +240,9 @@ export function adaptCommercialProductContent(
       content.slug === "crime-fidelity-insurance" ||
       content.slug === "directors-officers-insurance" ||
       content.slug === "employment-practices-liability-insurance" ||
-      content.slug === "product-recall-insurance"
+      content.slug === "product-recall-insurance" ||
+      content.slug === "professional-liability-insurance" ||
+      content.slug === "medical-dental-insurance"
         ? "expandable"
         : "grid",
   });
@@ -275,7 +277,7 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
   "real-estate-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     { label: "Property Management", href: "/property-management-insurance/" },
-    { label: "Condominium Corporation", href: "/condominium-corporation-insurance/" },
+    { label: "Landlord Insurance", href: "/landlord-insurance/" },
   ],
   "builders-developers-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
@@ -341,7 +343,11 @@ export function adaptCommercialIndustryContent(
               ? "For Windsor–Essex general contractors and trade contractors — reviewed through an independent broker who can align liability, tools, certificates, and project participation with how you actually build."
               : content.slug === "builders-developers-insurance"
                 ? "For Windsor–Essex builders and developers coordinating projects and ownership entities — reviewed through an independent broker who can structure project property, liability, and wrap-up strategy across your pipeline."
-                : content.subhead,
+                : content.slug === "professional-offices-insurance"
+                  ? "For Windsor–Essex professional service firms operating from commercial offices — reviewed through an independent broker who can coordinate general liability, property, professional liability, and cyber coverage for how your office actually runs."
+                  : content.slug === "real-estate-insurance"
+                    ? "For Windsor–Essex real estate brokerages and office operations — reviewed through an independent broker who can coordinate commercial general liability, property, and cyber alongside RECO's registrant program."
+                    : content.whoItIsFor ?? content.subhead,
     showTrustBand: content.slug !== "restaurant-insurance",
     considerationsPresentation:
       content.slug === "restaurant-insurance" ||
@@ -349,7 +355,9 @@ export function adaptCommercialIndustryContent(
       content.slug === "trucking-insurance" ||
       content.slug === "dump-truck-insurance" ||
       content.slug === "contractors-insurance" ||
-      content.slug === "builders-developers-insurance"
+      content.slug === "builders-developers-insurance" ||
+      content.slug === "professional-offices-insurance" ||
+      content.slug === "real-estate-insurance"
         ? "expandable"
         : "grid",
     coverageHeading: "What's covered",

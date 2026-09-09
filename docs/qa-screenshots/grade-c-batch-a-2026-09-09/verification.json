@@ -1,0 +1,94 @@
+{
+  "consoleErrors": [],
+  "routes": [
+    {
+      "slug": "professional-liability-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "A reporting mistake can become a client loss claim",
+        "A strategy recommendation can outlive the engagement",
+        "A specification error can ripple through an entire project",
+        "Implementation failure and advice errors are different from a data breach bill"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "professional-offices-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "A client visit creates premises exposure separate from your advice",
+        "Bad advice is not a slip-and-fall claim",
+        "Your landlord's policy does not automatically cover your contents",
+        "Client files on your server create exposure GL may exclude"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "real-estate-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Transaction errors and deposit disputes follow RECO's program rules",
+        "Boardroom equipment and MLS workstations are your contents exposure",
+        "An open-house visitor injury is a premises claim — not a transaction E&O claim",
+        "Client contact lists and deal files are brokerage cyber exposure"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "medical-dental-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "A waiting-room fall is not a treatment-error claim",
+        "Operatory equipment drives property values beyond desks and chairs",
+        "Patient records create cyber exposure PHIPA does not insure away",
+        "The clinic entity and each practitioner carry different protection"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    }
+  ],
+  "pass": true
+}

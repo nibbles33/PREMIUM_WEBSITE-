@@ -39,7 +39,7 @@
         }
       ],
       "faqUnique": false,
-      "faqTemplateNotes": "Shares 2+ FAQ pattern with professional-offices-insurance",
+      "faqTemplateNotes": "Shares 2+ FAQ pattern with commercial-property-insurance",
       "geoTargeting": "Ontario-wide",
       "geoNotes": "Ontario without Windsor-Essex in body",
       "classification": "B",
@@ -915,24 +915,32 @@
       "route": "/medical-dental-insurance/",
       "slug": "medical-dental-insurance",
       "category": "commercial",
-      "heroWords": 17,
-      "heroSpecific": false,
+      "heroWords": 116,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 23.5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 66,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 242,
-      "safetyFlags": [],
+      "considerationsPresent": true,
+      "considerationsWords": 472,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1301,
+      "safetyFlags": [
+        {
+          "page": "/medical-dental-insurance/",
+          "field": "considerations",
+          "quote": "College by-law requirements establish minimum limits of $2,000,000 per occurrence and $6,000,000 annual aggregate for the current program framework, plus unlimited investigative and defence cost coverage as defined under the program.",
+          "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+          "severity": "low"
+        }
+      ],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex + Ontario",
       "geoNotes": "Both Windsor-Essex and Ontario referenced",
-      "classification": "C",
-      "classificationReason": "Shallow depth (242w total, cards avg 23.5w, considerations absent)"
+      "classification": "A",
+      "classificationReason": "Substantive (1301w), 4 cards avg 66w, considerations yes, FAQ unique"
     },
     {
       "route": "/mobile-home-insurance/",
@@ -1123,55 +1131,47 @@
       "route": "/professional-liability-insurance/",
       "slug": "professional-liability-insurance",
       "category": "commercial",
-      "heroWords": 18,
-      "heroSpecific": false,
+      "heroWords": 124,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 31,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 69,
       "thinCardCount": 0,
       "considerationsPresent": true,
-      "considerationsWords": 66,
-      "considerationsQuality": "moderate",
-      "faqCount": 4,
-      "totalSubstantiveWords": 391,
-      "safetyFlags": [
-        {
-          "page": "/professional-liability-insurance/",
-          "field": "faq",
-          "quote": "Contract requirements vary — $1M to $5M per occurrence is common for mid-size engagements.",
-          "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
-          "severity": "low"
-        }
-      ],
+      "considerationsWords": 463,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1371,
+      "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "C",
-      "classificationReason": "Shallow depth (391w total, cards avg 31w, considerations present but thin overall)"
+      "classification": "A",
+      "classificationReason": "Substantive (1371w), 4 cards avg 69w, considerations yes, FAQ unique"
     },
     {
       "route": "/professional-offices-insurance/",
       "slug": "professional-offices-insurance",
       "category": "commercial",
-      "heroWords": 16,
-      "heroSpecific": false,
+      "heroWords": 104,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 31,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 73.5,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 325,
+      "considerationsPresent": true,
+      "considerationsWords": 437,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1299,
       "safetyFlags": [],
-      "faqUnique": false,
-      "faqTemplateNotes": "Shares 2+ FAQ pattern with auto-insurance",
+      "faqUnique": true,
+      "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
-      "classification": "C",
-      "classificationReason": "Shallow depth (325w total, cards avg 31w, considerations absent)"
+      "classification": "A",
+      "classificationReason": "Substantive (1299w), 4 cards avg 73.5w, considerations yes, FAQ unique"
     },
     {
       "route": "/property-management-insurance/",
@@ -1200,24 +1200,39 @@
       "route": "/real-estate-insurance/",
       "slug": "real-estate-insurance",
       "category": "commercial",
-      "heroWords": 14,
-      "heroSpecific": false,
+      "heroWords": 110,
+      "heroSpecific": true,
       "coverageCount": 4,
-      "coverageCardQuality": "specific (good)",
-      "avgCardWords": 26,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 72,
       "thinCardCount": 0,
-      "considerationsPresent": false,
-      "considerationsWords": 0,
-      "considerationsQuality": "absent",
-      "faqCount": 4,
-      "totalSubstantiveWords": 283,
-      "safetyFlags": [],
-      "faqUnique": false,
-      "faqTemplateNotes": "Shares 2+ FAQ pattern with home-insurance",
-      "geoTargeting": "Windsor-Essex-primary",
-      "geoNotes": "Windsor-Essex in copy",
-      "classification": "C",
-      "classificationReason": "Shallow depth (283w total, cards avg 26w, considerations absent)"
+      "considerationsPresent": true,
+      "considerationsWords": 420,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1250,
+      "safetyFlags": [
+        {
+          "page": "/real-estate-insurance/",
+          "field": "considerations",
+          "quote": "RECO's mandatory program vs the brokerage's commercial insurance.",
+          "issue": "Mandatory coverage stated — verify regulatory basis",
+          "severity": "low"
+        },
+        {
+          "page": "/real-estate-insurance/",
+          "field": "faq",
+          "quote": "RECO's program satisfies registrants' mandatory professional liability insurance requirement under TRESA — it is not a substitute for insuring the brokerage office itself.",
+          "issue": "Mandatory coverage stated — verify regulatory basis",
+          "severity": "low"
+        }
+      ],
+      "faqUnique": true,
+      "faqTemplateNotes": "Product-specific questions",
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (1250w), 4 cards avg 72w, considerations yes, FAQ unique"
     },
     {
       "route": "/religious-organizations-insurance/",
@@ -1428,9 +1443,9 @@
     }
   ],
   "counts": {
-    "A": 24,
+    "A": 28,
     "B": 16,
-    "C": 18,
+    "C": 14,
     "D": 0
   },
   "allFlags": [
@@ -1491,6 +1506,13 @@
       "severity": "low"
     },
     {
+      "page": "/medical-dental-insurance/",
+      "field": "considerations",
+      "quote": "College by-law requirements establish minimum limits of $2,000,000 per occurrence and $6,000,000 annual aggregate for the current program framework, plus unlimited investigative and defence cost coverage as defined under the program.",
+      "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+      "severity": "low"
+    },
+    {
       "page": "/motorcycle-insurance/",
       "field": "coverage:Third-Party Liability",
       "quote": "FSRA specifies minimum third-party liability coverage of at least $200,000.",
@@ -1512,10 +1534,17 @@
       "severity": "low"
     },
     {
-      "page": "/professional-liability-insurance/",
+      "page": "/real-estate-insurance/",
+      "field": "considerations",
+      "quote": "RECO's mandatory program vs the brokerage's commercial insurance.",
+      "issue": "Mandatory coverage stated — verify regulatory basis",
+      "severity": "low"
+    },
+    {
+      "page": "/real-estate-insurance/",
       "field": "faq",
-      "quote": "Contract requirements vary — $1M to $5M per occurrence is common for mid-size engagements.",
-      "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+      "quote": "RECO's program satisfies registrants' mandatory professional liability insurance requirement under TRESA — it is not a substitute for insuring the brokerage office itself.",
+      "issue": "Mandatory coverage stated — verify regulatory basis",
       "severity": "low"
     }
   ]

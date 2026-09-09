@@ -528,57 +528,98 @@ export const commercialProductPages: ProductPageContent[] = [
     metaTitle:
       "Professional Liability (E&O) Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Professional liability and E&O insurance for accountants, consultants, engineers, financial advisors, and IT professionals in Windsor-Essex.",
+      "Professional liability and E&O insurance for accountants, consultants, engineers, architects, financial advisors, and IT professionals in Windsor-Essex — claims-made coverage, retroactive dates, and contract coordination.",
     headline: "Professional Liability (E&O) Insurance",
     subhead:
-      "Errors and omissions coverage when clients claim your professional advice, design, or service caused them a financial loss.",
+      "When a client alleges your professional advice, design, analysis, or service caused them a financial loss, professional liability — also called errors and omissions (E&O) — may help with defence costs and certain settlements or judgments, subject to the policy you purchase. That is a different risk from slip-and-fall general liability, office property, cyber breach response, or directors and officers coverage. Most commercial E&O forms are claims-made, meaning when and how a claim is reported, your retroactive date, and any extended reporting period matter as much as the limit on the declarations page. Premium Insurance Brokers can help Windsor–Essex professionals compare markets for how you actually practise — including contract requirements, subcontractor use, and any regulator or association standards that apply to your occupation.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=professional`,
     quoteLabel: "Get an E&O Quote",
     coverageIntro:
-      "Professional liability responds when clients allege negligent advice or services — distinct from slip-and-fall general liability.",
+      "Professional liability is organized here by the type of work you perform — because the allegation, the contract, and any regulatory context differ by profession. Each coverage responds to financial-loss claims tied to professional services, not ordinary premises injury or property damage.",
     coverageTypes: [
       {
         title: "Accountants & Bookkeepers",
+        shortLabel: "Accounting",
         description:
-          "Addresses claims alleging errors in tax preparation, audits, financial statements, or advisory work that caused client loss.",
+          "May help respond to certain claims alleging errors in tax preparation, audits, compilations, financial statements, or advisory work that caused a client financial loss — subject to policy terms, limits, and whether the services are within the policy's professional-services definition.",
+        detailTitle: "A reporting mistake can become a client loss claim",
+        detailDescription:
+          "Clients may allege missed deadlines, calculation errors, or flawed advice caused tax penalties, audit costs, or lost financing. For CPA Ontario firms engaged in public accounting or providing accounting services to the public, Regulation 14-1 sets minimum professional liability limits by firm size — separate from what any single client contract requires. Bookkeepers and non-public accounting firms may still face contractual E&O requirements even when CPA firm rules do not apply. Confirm which services you perform are disclosed and covered under your policy wording.",
         icon: FileCheck,
       },
       {
         title: "Consultants & Advisors",
+        shortLabel: "Consulting",
         description:
-          "Covers management, HR, marketing, and business consultants when clients claim recommendations led to financial harm.",
+          "May help respond to certain claims alleging that management, HR, marketing, strategy, or business recommendations caused measurable client financial harm — subject to policy terms, exclusions, and limits.",
+        detailTitle: "A strategy recommendation can outlive the engagement",
+        detailDescription:
+          "Consultants are often sued for lost profits, failed implementations, or advice a client says they relied on months after delivery. General liability may address premises injury at a client site, but financial-loss allegations from your recommendations typically fall under professional liability — not CGL. Claims-made reporting means a dispute that surfaces after a project ends may still need to be reported during an active policy period unless prior acts or tail coverage applies.",
         icon: Briefcase,
       },
       {
         title: "Engineers & Architects",
+        shortLabel: "Design",
         description:
-          "Responds to design, specification, or inspection errors alleged to have caused property damage or project delays.",
+          "May help respond to certain claims alleging design, specification, inspection, or professional engineering errors — including some allegations tied to project delays or third-party property damage arising from professional services — subject to policy terms, exclusions, and limits.",
+        detailTitle: "A specification error can ripple through an entire project",
+        detailDescription:
+          "Design professionals face allegations that drawings, calculations, or site observations were wrong — sometimes framed as economic loss, sometimes as property damage or delay. Holders of a PEO Certificate of Authorization offering engineering services to the public must meet Ontario's minimum professional liability requirements under Regulation 941, s. 74, unless a permitted exemption applies. OAA Certificate of Practice holders face separate mandatory professional liability rules through Pro-Demnity. Bodily injury or property damage from construction operations may implicate other policies — coordinate project contracts, CGL, and professional liability with your broker rather than assuming one label covers every allegation.",
         icon: HardHat,
       },
       {
         title: "Financial Advisors & IT Consultants",
+        shortLabel: "Finance / IT",
         description:
-          "Covers investment advice errors and technology implementation failures that clients claim caused measurable loss.",
+          "May help respond to certain claims alleging investment or financial advice errors, software implementation failures, security advice, or technology project management caused client loss — subject to policy terms, exclusions, and limits.",
+        detailTitle: "Implementation failure and advice errors are different from a data breach bill",
+        detailDescription:
+          "Licensed Ontario life insurance agents must maintain FSRA-approved errors and omissions coverage with at least $1 million per occurrence and extended coverage for fraudulent acts under O. Reg. 347/04 — a regulatory requirement specific to that licence class, not every financial advisor. IT consultants may face allegations that a failed migration, security recommendation, or project delay caused business interruption — professional liability may address certain advice and service errors, while ransomware response, notification, and forensic costs often require separate cyber coverage. Disclose whether you give regulated financial advice, write code, manage projects, or perform security assessments so underwriting matches your actual services.",
         icon: Laptop,
       },
     ],
     whoItIsFor:
-      "Professional liability insurance is for Windsor-Essex professionals who charge for advice, design, or specialized services — including accountants, consultants, engineers, architects, financial advisors, IT consultants, and other regulated or credentialed occupations.",
+      "For Windsor–Essex professionals and firms that charge for advice, design, analysis, or specialized services — including accountants, consultants, engineers, architects, financial advisors, IT consultants, and other regulated or credentialed occupations — reviewed through an independent broker who can compare claims-made E&O markets, retroactive dates, and contract certificate requirements for how you actually work.",
     considerations: [
       {
-        title: "Claims-made vs. occurrence",
+        title: "Professional services definition and scope of practice",
         description:
-          "Most E&O policies are claims-made — coverage applies when the claim is reported during the policy period. Retroactive dates and tail coverage matter when changing carriers.",
+          "Policies define which services qualify as covered professional services. Work outside that definition — investment advice from an IT firm, construction supervision from a designer, or services not disclosed at application — may fall outside coverage. Match your application, proposal, and contract descriptions to the policy wording rather than assuming every activity you perform is included.",
       },
       {
-        title: "Contractual liability",
+        title: "Claims-made reporting and the policy trigger",
         description:
-          "Contracts may impose liability beyond standard negligence. Review indemnity clauses with your broker before signing.",
+          "Most commercial E&O policies respond when a claim is first made against you and reported during the policy period, subject to the retroactive date and policy conditions. Late reporting can prejudice coverage. Understand your insurer's notice requirements and who at the firm is responsible for forwarding demand letters, regulatory complaints, or client threats of suit.",
       },
       {
-        title: "Regulatory and association requirements",
+        title: "Retroactive date and prior acts",
         description:
-          "Professional bodies and provincial regulators may mandate minimum E&O limits. Confirm your coverage meets those standards.",
+          "The retroactive date is the earliest date from which covered professional services are eligible for coverage. Work performed before that date may be excluded unless prior acts coverage or a full retroactive date is purchased. When changing insurers, compare retro dates and consider an extended reporting period from the departing carrier for work already performed.",
+      },
+      {
+        title: "Prior knowledge and circumstances",
+        description:
+          "Known circumstances, pending disputes, or facts that a reasonable person would expect to give rise to a claim before policy inception are often excluded. Do not assume a new policy erases an existing client complaint — disclose prior incidents and circumstances during underwriting and when renewing.",
+      },
+      {
+        title: "Contracts, indemnities, and assumed liability",
+        description:
+          "Client contracts may require specific limits, additional insured status, or broad indemnities beyond what standard negligence would impose at law. Professional liability may not cover all contractual undertakings — especially promises of a specific result or indemnities broader than your legal liability. Review contract insurance clauses with your broker before signing and before issuing certificates.",
+      },
+      {
+        title: "Subcontractors and delegated professional work",
+        description:
+          "If subcontractors, freelancers, or associate professionals perform part of the engagement, vicarious exposure may remain with your firm. Disclose subcontractor use during underwriting and confirm whether your policy covers work performed by others on your behalf, subject to wording and any sub-limits.",
+      },
+      {
+        title: "Defence costs and limit erosion",
+        description:
+          "Defence costs may be payable inside the policy limit — reducing funds available for settlement or judgment — or outside the limit, depending on form and carrier. For professions with expensive litigation, defence-cost treatment can materially change effective capacity even when the stated limit appears adequate on paper.",
+      },
+      {
+        title: "Cyber overlap and adjacent coverages",
+        description:
+          "Allegations that your security advice or system design failed may implicate professional liability, while breach response, notification, and regulatory investigation costs after a cyber event often require separate cyber or privacy coverage. Professional liability does not replace commercial general liability for premises injury, directors and officers coverage for governance claims, or office property insurance for equipment and contents — each addresses a different allegation.",
       },
     ],
     relatedLinks: [
@@ -587,31 +628,38 @@ export const commercialProductPages: ProductPageContent[] = [
       { label: "Directors & Officers", href: "/directors-officers-insurance/" },
     ],
     faqTitle: "Professional liability FAQ",
+    faqIntro:
+      "Straight answers on how E&O differs from other commercial coverages and what matters when contracts or regulators ask for proof.",
     faqItems: [
       {
-        question: "What's the difference between GL and professional liability?",
+        question: "What's the difference between general liability and professional liability?",
         answer:
-          "General liability covers bodily injury and property damage to others. E&O covers financial loss claims arising from your professional services or advice.",
+          "Commercial general liability typically addresses certain third-party bodily injury and property-damage claims arising from your premises or operations. Professional liability or E&O may address certain claims alleging financial loss caused by your professional services, advice, design, or analysis — subject to policy terms and exclusions. A client slip-and-fall at your office is a different allegation from a client alleging your report caused them a tax penalty or project loss. Many professionals need both coverages when they operate from premises and deliver advice.",
       },
       {
-        question: "Do IT consultants need E&O?",
+        question: "Is professional liability insurance claims-made?",
         answer:
-          "Yes — clients may claim your software implementation, security advice, or project management caused business interruption or data loss. Cyber and E&O often complement each other.",
+          "Most commercial professional liability and E&O policies in Canada are written on a claims-made basis — coverage depends on when the claim is made and reported, your retroactive date, and policy conditions. Occurrence-based professional forms exist in some contexts but are less common for the professions described on this page. Confirm whether your policy is claims-made or occurrence-based, what retroactive date applies, and what happens if you change carriers or retire.",
       },
       {
-        question: "Are prior acts covered when I switch insurers?",
+        question: "What is a retroactive date and why does it matter?",
         answer:
-          "Claims-made policies use a retroactive date. Work done before that date may be excluded unless tail coverage is purchased from the prior insurer.",
+          "The retroactive date is the earliest date from which professional services are eligible for coverage under a claims-made policy. Services performed before that date may be excluded unless you purchase prior acts coverage or maintain continuous coverage with a full retroactive date. When switching insurers, compare retro dates carefully and ask about an extended reporting period — sometimes called tail coverage — from your prior insurer for work already completed.",
       },
       {
-        question: "What limits do clients typically require?",
+        question: "Does professional liability cover work performed by subcontractors?",
         answer:
-          "Contract requirements vary — $1M to $5M per occurrence is common for mid-size engagements. Your broker can issue certificates once limits are in place.",
+          "Whether allegations tied to a subcontractor's work are covered depends on policy wording, how the subcontractor relationship is disclosed, and the facts alleged. Your firm may still face a claim even when a subcontractor performed part of the work. Disclose subcontractor and freelancer use during underwriting and review indemnity clauses in client and subcontracts with your broker — assumed liability beyond standard negligence may not be insured.",
+      },
+      {
+        question: "How should I handle contract-required limits and certificates?",
+        answer:
+          "Contracts, RFPs, and client onboarding packets often specify minimum professional liability limits, additional insured requirements, or tail coverage on termination. Those requirements are contract-specific — compare each clause to your current declarations, retroactive date, and exclusions before signing. Your broker can help issue certificates once coverage is in place, but increasing limits or adding endorsements typically must be arranged before the contract effective date, not after a claim arises.",
       },
     ],
     ctaHeading: "Provide professional advice or design?",
     ctaSubhead:
-      "Tell us your profession, services, and typical contract size — we will compare E&O markets that understand your work.",
+      "Tell us your profession, services, revenue, contract requirements, retroactive date, and claims history — we will compare E&O markets that understand your work.",
     serviceName: "Professional Liability Insurance",
   },
 ];
