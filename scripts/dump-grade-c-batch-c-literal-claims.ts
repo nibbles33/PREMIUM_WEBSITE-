@@ -1,6 +1,6 @@
 #!/usr/bin/env npx tsx
 /**
- * QA-only: Grade C Batch B literal claim dump from SOURCE product data.
+ * QA-only: Grade C Batch C literal claim dump from SOURCE product data.
  * Reads resolved pilot commercial config (same strings rendered on live pages).
  * Does not modify production copy.
  */
@@ -10,14 +10,14 @@ import { getPilotCommercialConfig } from "../src/data/pilot-commercial-registry"
 
 const OUT = path.join(
   __dirname,
-  "../docs/qa-screenshots/grade-c-batch-b-property-income-2026-09-09/literal-claim-dump.txt",
+  "../docs/qa-screenshots/grade-c-batch-c-2026-09-09/literal-claim-dump.txt",
 );
 
 const SLUGS = [
-  "commercial-property-insurance",
-  "business-interruption-insurance",
-  "small-business-insurance",
-  "condominium-corporation-insurance",
+  "commercial-auto-insurance",
+  "garage-dealership-insurance",
+  "pollution-liability-insurance",
+  "farm-insurance",
 ] as const;
 
 function emitBlock(label: string, value: string | undefined | null): string {
@@ -102,11 +102,11 @@ function dumpRoute(slug: string): string {
 }
 
 function main() {
-  let out = `GRADE C BATCH B — LITERAL CLAIM DUMP (SOURCE DATA)
+  let out = `GRADE C BATCH C — LITERAL CLAIM DUMP (SOURCE DATA)
 Date: 2026-09-09
 Branch: cursor/coverage-explorer-ux-v2-2026-09-07
-Implementation commit: 3b6366e
-Research commit: 927f447
+Implementation commit: 1e61c5d
+Research commit: b96c774
 Extraction: getPilotCommercialConfig() — resolved source data, not DOM scrape
 NOTE: Values are complete current source strings. Do NOT paraphrase.
 FAQ entries include full Q and A. Considerations include full title and body.
