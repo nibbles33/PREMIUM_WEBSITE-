@@ -152,66 +152,135 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Commercial Auto & Fleet Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Commercial auto and fleet insurance through an independent Windsor-Essex broker — liability, physical damage, hired & non-owned auto, and multi-vehicle coverage.",
+      "Commercial auto insurance through an independent Windsor-Essex broker — Ontario third-party liability, accident benefits, uninsured automobile, DCPD, optional physical damage, and hired & non-owned auto for business fleets and company vehicles.",
     headline: "Commercial Auto & Fleet Insurance",
     subhead:
-      "Coverage for the vehicles that keep your business moving — from a single work truck to a full fleet.",
+      "Commercial auto insurance addresses Ontario-regulated automobile coverage for vehicles your business owns, leases, or puts on the road for work — service vans, contractor pickups, delivery units, sales fleets, and other ordinary commercial automobile risks. That is different from for-hire motor carrier programs on our trucking page or cargo-only coverage for freight in transit. Ontario automobile policies must include third-party liability of at least $200,000 per accident, uninsured automobile coverage, and — unless the named insured opts out using OPCF 49 — Direct Compensation Property Damage (DCPD). As of July 1, 2026, standard medical, rehabilitation, and attendant care accident benefits remain mandatory; other statutory accident benefits may be optional where your policy form allows. Collision, comprehensive, and hired/non-owned auto are not automatic on every commercial policy — each must be confirmed with your broker. Premium Insurance Brokers can help Windsor–Essex businesses compare automobile programs for how your team actually uses vehicles.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
     quoteLabel: "Get a Fleet Quote",
     coverageIntro:
-      "Core coverages that protect business vehicles and the liability that comes with putting them on the road.",
+      "Ontario business automobile coverage is organized here by regulated liability and accident benefits, optional physical damage, hired and non-owned exposure, and multi-vehicle fleet structure — because mandatory coverages, endorsements, and underwriting differ from personal auto and from for-hire trucking programs.",
     coverageTypes: [
       {
-        title: "Liability Coverage",
+        id: "liability-coverage",
+        title: "Third-Party Auto Liability",
+        shortLabel: "Auto Liability",
         description:
-          "Helps protect your business if a company vehicle causes injury or damage to others.",
+          "Ontario commercial automobile third-party liability — regulated under FSRA — may help respond to certain bodily injury or property-damage claims arising from the use of insured business vehicles on public roads, subject to policy terms, limits, and exclusions.",
+        detailTitle: "Statutory minimums exist — adequate limits are a business decision",
+        detailDescription:
+          "Every Ontario motor vehicle liability policy must insure at least $200,000 per accident for third-party bodily injury and property damage — but serious highway claims can exceed that quickly. Many Windsor–Essex businesses purchase $1 million or $2 million limits, and contracts with landlords, municipalities, or general contractors may require higher certificates. As of July 1, 2026, optional accident benefits apply only to named insureds, spouses, dependants, and listed drivers — pedestrians, cyclists, and some passengers may rely more on third-party liability when optional benefits do not apply to them. Review limits at renewal, especially after the 2026 accident-benefit changes.",
         icon: Briefcase,
       },
       {
-        title: "Physical Damage Coverage",
+        id: "physical-damage-coverage",
+        title: "Collision & Comprehensive (Optional)",
+        shortLabel: "Phys. Damage",
         description:
-          "Helps repair or replace your business vehicles after collision or comprehensive losses.",
+          "Optional collision, comprehensive, and specified perils coverage — where purchased — may help repair or replace owned or leased business vehicles after covered losses, subject to deductibles, stated values, and policy wording.",
+        detailTitle: "Physical damage is optional — lenders and lessors may require it",
+        detailDescription:
+          "Ontario does not require collision or comprehensive coverage by law. Many businesses still purchase physical damage to protect company trucks and vans against collision, theft, vandalism, and other insured perils — but triggers, deductibles, and valuation methods vary. DCPD covers not-at-fault damage to your vehicle through your insurer when you retain DCPD; collision covers at-fault or unidentified losses where purchased. Signing OPCF 49 to opt out of DCPD also affects how not-at-fault damage can be recovered — an uncommon choice for most business fleets. Accurate vehicle values support proper limits at renewal.",
         icon: Truck,
       },
       {
+        id: "hired-non-owned-auto",
         title: "Hired & Non-Owned Auto",
+        shortLabel: "HNOA",
         description:
-          "Can cover liability when employees drive rented, borrowed, or personal vehicles for work.",
+          "Hired and non-owned automobile coverage — where purchased by endorsement such as OPCF 27 or through a commercial general liability extension — may address certain liability when employees or representatives drive rented, borrowed, or personal vehicles for business, subject to policy terms.",
+        detailTitle: "Employee errands create liability your base auto policy may not cover",
+        detailDescription:
+          "When staff pick up parts, visit clients, or run errands in personal vehicles or rentals, your company's owned-vehicle automobile policy may not respond to third-party claims from that trip. Hired and non-owned auto — where added — is designed for that gap in business liability, not for physical damage to the employee's car. Personal auto policies often exclude or restrict business use; relying on an employee's personal coverage without review creates exposure. Disclose every regular non-owned vehicle use pattern when quoting.",
         icon: Route,
       },
       {
-        title: "Fleet Discounts & Multi-Vehicle Management",
+        id: "fleet-discounts-multi-vehicle-management",
+        title: "Fleet & Multi-Vehicle Programs",
+        shortLabel: "Fleet",
         description:
-          "Structured coverage for multiple vehicles, with options that can simplify renewals and certificates.",
+          "Multiple company vehicles may be scheduled on one commercial automobile program — with certificates, driver eligibility rules, and experience-rated pricing on some fleet arrangements — subject to insurer underwriting and policy structure.",
+        detailTitle: "More vehicles means more data — and more certificate requests",
+        detailDescription:
+          "Whether you operate three service vans or thirty mixed units, insurers review vehicle lists, driver abstracts, radius, use class, and loss history together. Some markets experience-rate larger fleets; others rate each unit individually. Fleet reporting endorsements such as OPCF 21A may apply where purchased. This is broad commercial auto for business-owned fleets — not the same as for-hire trucking insurance, which adds motor truck cargo, CVOR context, and shipper contract requirements on a separate route.",
         icon: Container,
+      },
+    ],
+    whoItIsFor:
+      "For Windsor–Essex service businesses, contractors, trades, local delivery operations, and companies with vans, pickups, or business-owned passenger vehicles — reviewed through an independent broker who can coordinate Ontario automobile coverage, optional physical damage, and hired/non-owned auto without treating every risk like a for-hire motor carrier.",
+    considerations: [
+      {
+        title: "Vehicle type, weight, and business use class",
+        description:
+          "Insurers classify vehicles by use — service, delivery, sales, or contractor pickup — and by weight and registration. A half-ton pickup used to haul tools between job sites is rated differently from a for-hire freight tractor. Accurate use descriptions support proper eligibility; misclassification can affect claims. Heavy for-hire hauling belongs on trucking or dump-truck routes — not here.",
+      },
+      {
+        title: "Drivers, abstracts, and licence class",
+        description:
+          "Commercial automobile underwriting typically reviews every regular driver: licence class, experience, convictions, and at-fault history. Young or occasional drivers may need to be listed. Driver eligibility conditions in the policy can affect coverage if an unlisted driver operates a company vehicle.",
+      },
+      {
+        title: "Radius and territory of operation",
+        description:
+          "Local Windsor–Essex service routes present different exposure from regular interprovincial trips or U.S. crossings. Territory extensions, filings, and higher limits may be required for out-of-province or U.S. operation — confirm with your broker before lanes expand. Insurer programs vary; residual-market manuals may apply surcharges in specific markets that do not represent universal insurer practice.",
+      },
+      {
+        title: "U.S. and out-of-province exposure",
+        description:
+          "Operating in Michigan or other U.S. states may require policy territory extensions, proof-of-insurance filings, and limits beyond a Canada-only program. Disclose every state entered and how often. Cross-border for-hire freight has additional contract and cargo considerations on our trucking and cargo pages.",
+      },
+      {
+        title: "Fleet size and experience rating",
+        description:
+          "Some insurers treat ten or more power units as fleet business with experience-rated premiums and consolidated reporting — thresholds and formulas vary by market and are not universal rules. Smaller businesses may still schedule multiple vans on one policy with individual unit rating. Either way, current vehicle and driver lists support renewals.",
+      },
+      {
+        title: "Vehicle values and physical damage choices",
+        description:
+          "Optional collision and comprehensive coverage depends on accurate stated values or actual cash value methods, chosen deductibles, and whether leased units require lender-compliant physical damage. OPCF 49 DCPD opt-out is optional and uncommon for business fleets — understand the trade-off before signing.",
+      },
+      {
+        title: "Hired and non-owned auto exposure",
+        description:
+          "Employees using personal vehicles for deliveries, client visits, or errands may create liability gaps. Hired/non-owned coverage is not automatic — confirm whether OPCF 27 or a CGL auto extension is included. Personal auto business-use exclusions can leave the company exposed without it.",
+      },
+      {
+        title: "Cargo and equipment — not the automobile policy",
+        description:
+          "Tools in a service van, stock for delivery, or freight hauled for others may need inland marine, cargo, or separate property coverage — Ontario automobile liability does not replace motor truck cargo for customers' goods. See our cargo and freight page when you haul property belonging to others for hire.",
       },
     ],
     faqTitle: "Commercial auto FAQ",
     faqItems: [
       {
-        question: "How is commercial auto different from personal auto?",
+        question: "What makes a vehicle commercial for insurance purposes?",
         answer:
-          "Personal auto is for private use. Commercial auto is rated and worded for business use — work trucks, deliveries, client visits, and fleet exposures that personal policies often exclude or limit.",
+          "Insurers look at how the vehicle is registered and used — business deliveries, client visits, carrying tools or stock, fleet scheduling, and commercial plates or weight class all point toward commercial automobile rating. A personally owned truck used only for commuting is usually personal auto; the same truck used daily between job sites for your company is typically commercial. If your operation involves for-hire freight, heavy motor-carrier units, or CVOR-regulated hauling, our trucking or dump-truck pages may be the better starting point.",
       },
       {
-        question: "Do I need coverage for vehicles I don't own?",
+        question: "What automobile coverage is mandatory in Ontario?",
         answer:
-          "Often yes. Hired and non-owned auto can address liability when staff drive rentals, borrowed units, or personal vehicles on company business. Exact needs depend on how your team uses vehicles.",
+          "Ontario requires third-party liability of at least $200,000 per accident, uninsured automobile coverage, and Direct Compensation Property Damage (DCPD) unless the named insured opts out using OPCF 49. As of July 1, 2026, standard medical, rehabilitation, and attendant care accident benefits remain mandatory on Ontario automobile policies; other statutory accident benefits may be optional where your policy form allows. Collision and comprehensive physical damage are not compulsory by law — though lenders may require them contractually.",
       },
       {
-        question: "Can I insure a mixed fleet?",
+        question: "Are collision and comprehensive mandatory?",
         answer:
-          "Yes. Many businesses insure a mix of light trucks, vans, and heavier units under one commercial auto structure. Your broker will match vehicles, drivers, and use to the right market.",
+          "No. Collision, comprehensive, and specified perils are optional coverages in Ontario — purchased where you choose to insure physical damage to your vehicles. Many businesses add them to protect company trucks and vans, but the law does not require them. Finance and lease agreements often require physical damage coverage as a contract condition separate from statutory minimums.",
       },
       {
-        question: "What information do I need for a fleet quote?",
+        question: "What about employees using personal vehicles for work?",
         answer:
-          "Vehicle lists (year, make, model, VIN), driver details, how each unit is used, radius of operation, and current coverage or claims history. That helps carriers price accurately.",
+          "Company-owned vehicle policies cover scheduled business autos — not every trip an employee takes in their personal car. Hired and non-owned automobile coverage, where purchased by endorsement such as OPCF 27, may address certain business liability from those trips. Personal auto policies frequently exclude or restrict business use, so assuming an employee's personal coverage protects the company creates gap risk. Tell your broker how often staff drive personal or rented vehicles for work.",
+      },
+      {
+        question: "What information do I need for a commercial auto quote?",
+        answer:
+          "Expect to provide vehicle details (year, make, model, VIN), ownership or lease status, how each unit is used, annual distance or radius, driver information with licence class and abstracts, desired liability limits, and current policy or claims history. If any vehicles cross into the U.S. or operate outside Ontario regularly, disclose that territory up front so filings and extensions can be quoted accurately.",
       },
     ],
     ctaHeading: "Ready to cover your fleet?",
     ctaSubhead:
-      "Tell us about your vehicles and drivers — we'll compare options and explain what fits.",
+      "Tell us about your vehicles, drivers, and territory — we'll compare Ontario commercial automobile options and explain what fits your operation.",
     serviceName: "Commercial Auto & Fleet Insurance",
   },
   {

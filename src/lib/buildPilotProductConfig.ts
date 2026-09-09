@@ -245,7 +245,9 @@ export function adaptCommercialProductContent(
       content.slug === "medical-dental-insurance" ||
       content.slug === "small-business-insurance" ||
       content.slug === "business-interruption-insurance" ||
-      content.slug === "condominium-corporation-insurance"
+      content.slug === "condominium-corporation-insurance" ||
+      content.slug === "garage-dealership-insurance" ||
+      content.slug === "pollution-liability-insurance"
         ? "expandable"
         : "grid",
   });
@@ -305,7 +307,8 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
   "commercial-auto-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     { label: "Trucking", href: "/trucking-insurance/" },
-    { label: "Dump Trucks", href: "/dump-truck-insurance/" },
+    { label: "Dump Truck", href: "/dump-truck-insurance/" },
+    { label: "Cargo & Freight", href: "/cargo-freight-insurance/" },
   ],
   "dump-truck-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
@@ -352,7 +355,9 @@ export function adaptCommercialIndustryContent(
                     ? "For Windsor–Essex real estate brokerages and office operations — reviewed through an independent broker who can coordinate commercial general liability, property, and cyber alongside RECO's registrant program."
                     : content.slug === "commercial-property-insurance"
                       ? "For Windsor–Essex businesses and commercial property owners insuring buildings, contents, inventory, and leasehold interests — reviewed through an independent broker who can coordinate property limits, optional endorsements, and business interruption where a covered loss would interrupt operations."
-                      : content.whoItIsFor ?? content.subhead,
+                      : content.slug === "commercial-auto-insurance"
+                        ? "For Windsor–Essex service businesses, contractors, trades, local delivery operations, and companies with vans, pickups, or business-owned passenger vehicles — reviewed through an independent broker who can coordinate Ontario automobile coverage, optional physical damage, and hired/non-owned auto without treating every risk like a for-hire motor carrier."
+                        : content.whoItIsFor ?? content.subhead,
     showTrustBand: content.slug !== "restaurant-insurance",
     considerationsPresentation:
       content.slug === "restaurant-insurance" ||
@@ -363,7 +368,8 @@ export function adaptCommercialIndustryContent(
       content.slug === "builders-developers-insurance" ||
       content.slug === "professional-offices-insurance" ||
       content.slug === "real-estate-insurance" ||
-      content.slug === "commercial-property-insurance"
+      content.slug === "commercial-property-insurance" ||
+      content.slug === "commercial-auto-insurance"
         ? "expandable"
         : "grid",
     coverageHeading: "What's covered",

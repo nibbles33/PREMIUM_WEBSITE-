@@ -203,79 +203,148 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     slug: "farm-insurance",
     metaTitle: "Farm Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Farm insurance through an independent Windsor-Essex broker — farm property, equipment & machinery, farm liability, and livestock coverage for Essex County farms.",
+      "Farm insurance through an independent Windsor-Essex broker — farm property, machinery, farm liability, and livestock coverage for working Essex County farms, distinct from greenhouse agribusiness and government crop programs.",
     eyebrow: "Farm Insurance",
     headline: "Farm Insurance",
     heroLead:
-      "Coverage built for Essex County's working farms — from the farmhouse to the equipment in the field.",
+      "Farm insurance packages address working agricultural property in Essex County — barns, machinery, farm liability, and livestock — where purchased and subject to causes of loss, limits, and endorsements on your policy. That is different from a standard homeowner policy for a rural residence, from greenhouse and controlled-environment agribusiness on a separate route, and from Agricorp Production Insurance or other government AgriInsurance programs for crop yield loss. Licensed trucks and passenger vehicles used on public roads still require Ontario automobile insurance. Premium Insurance Brokers can help family and commercial farms compare private farm property and liability programs for how you actually farm.",
     photographySlug: "farm-insurance",
     accentColor: "#7A8B5C",
     quoteHref: "/get-a-quote?type=farm",
     quoteLabel: "Get a Farm Quote",
     trustStatement:
-      "Farm insurance through an independent Windsor-Essex broker — farm property, equipment, liability, and livestock coverage for Essex County farms.",
+      "For Windsor–Essex working farms — family, mixed, crop, and livestock operations — reviewed through an independent broker who can coordinate farm property, liability, machinery, and livestock coverage without duplicating greenhouse agribusiness or government crop programs.",
+    considerationsPresentation: "expandable",
     coverageIntro:
-      "Core coverages that protect farm buildings, machinery, liability, and livestock.",
+      "Farm insurance is organized here by farm property and buildings, machinery and equipment, farm liability, and livestock — because each insuring agreement uses different perils, schedules, and limits on most Ontario farm packages.",
     coverageItems: [
       {
-        title: "Farm Property Coverage",
+        id: "farm-property-coverage",
+        title: "Farm Property & Buildings",
+        shortLabel: "Property",
         description:
-          "Protects farmhouses, barns, and other structures on your property.",
+          "May help address direct physical loss or damage to farm dwellings where scheduled, barns, outbuildings, silos, and other farm structures — subject to named or broad-form perils, replacement cost or actual cash value basis, limits, deductibles, and policy terms.",
+        detailTitle: "Barns and outbuildings are farm assets — not ordinary home attachments",
+        detailDescription:
+          "Working farms carry values in barns, machine sheds, grain storage, and fencing that exceed what a typical homeowner policy contemplates. Farm property sections schedule structures and may use different peril packages for dwellings versus outbuildings. Vacant barns, seasonal occupancy, and wood-frame construction affect underwriting. Accurate building values support proper limits after expansions or new construction — underinsurance reduces partial-loss payments on many forms.",
         icon: Warehouse,
       },
       {
-        title: "Equipment & Machinery",
+        id: "equipment-machinery",
+        title: "Farm Machinery & Equipment",
+        shortLabel: "Equipment",
         description:
-          "Covers tractors, implements, and other farm equipment against damage or loss.",
+          "Tractors, combines, implements, and portable farm equipment — where scheduled — may be insured against covered perils subject to location limits, in-transit extensions, and deductibles defined in the policy.",
+        detailTitle: "Field equipment and licensed road vehicles follow different rules",
+        detailDescription:
+          "Unlicensed tractors and implements used on the farm are typically scheduled on the farm property policy. Pickup trucks, grain trucks, and other licensed vehicles driven on public roads require Ontario commercial or personal automobile insurance — not automatic inclusion as farm machinery. Custom farming off your premises, equipment loaned to neighbours, and peak-season values should be disclosed so transit and off-farm use extensions match reality.",
         icon: Tractor,
       },
       {
+        id: "farm-liability",
         title: "Farm Liability",
+        shortLabel: "Liability",
         description:
-          "Protects you if someone is injured on your property or by your farm operations.",
+          "Farm liability coverage may address certain third-party bodily injury or property-damage claims arising from farming operations and premises — subject to policy definitions, exclusions for employers liability, and endorsements for direct sales or agritourism where purchased.",
+        detailTitle: "Visitors, custom work, and roadside stands change liability exposure",
+        detailDescription:
+          "Farm liability forms differ from generic commercial general liability labels — they are tailored to agricultural operations but still contain exclusions. Livestock escaping onto roads, custom spraying for neighbours, farm-stand sales, and pick-your-own activities may need endorsements or separate limits. Products liability for produce sold off-farm, pollution from fuel tanks, and agritourism events should be flagged at application — not assumed covered by a base farm liability limit.",
         icon: Shield,
       },
       {
+        id: "livestock-coverage",
         title: "Livestock Coverage",
+        shortLabel: "Livestock",
         description:
-          "Coverage for livestock against specified perils, where applicable.",
+          "Livestock may be insured against specified perils such as fire, lightning, windstorm, or collision — or through optional mortality programs where available — subject to scheduling, valuation methods, and disease exclusions on the policy.",
+        detailTitle: "Herd loss can mean lost income — not just lost animals",
+        detailDescription:
+          "Dairy, beef, swine, and poultry operations may schedule livestock values separately from barn coverage. Named-peril livestock sections differ from optional mortality or disease programs that may be available in some markets. Government programs and veterinary disease management are separate from private livestock insurance — confirm what your policy actually covers before assuming disease or epidemic losses are insured.",
         icon: Beef,
+      },
+    ],
+    considerations: [
+      {
+        title: "Acreage, operation type, and mixed farming",
+        description:
+          "Crop-only, livestock-only, and mixed farms present different property and liability profiles. Insurers review total acreage, farming income sources, and whether operations are full-time or hobby scale. Accurate descriptions support eligibility in farm markets versus standard commercial programs.",
+      },
+      {
+        title: "Buildings, construction, and seasonal use",
+        description:
+          "Barn age, construction type, heating sources, and seasonal vacancy affect property underwriting. Detached outbuildings need scheduled values; assuming one blanket limit covers every structure without review can leave gaps after a partial loss.",
+      },
+      {
+        title: "Machinery values and seasonal peaks",
+        description:
+          "Equipment lists should reflect current market values for tractors, combines, and attachments — especially before planting and harvest when more machinery is active. Peak-season inventory of fuel, chemicals, and feed may need separate contents limits.",
+      },
+      {
+        title: "Livestock type and valuation",
+        description:
+          "Schedule herds by type and value; update after purchases or sales. Optional mortality coverage differs from named-peril livestock sections — disease and epidemic exclusions are common. Verify valuation basis (actual cash value versus agreed value) at renewal.",
+      },
+      {
+        title: "Direct sales, farm stands, and agritourism",
+        description:
+          "Roadside stands, pick-your-own, corn mazes, and farm tours bring the public onto the farm — exposures that base farm liability may restrict. Endorsements or separate liability limits may be required; flag revenue from public-facing activities when quoting.",
+      },
+      {
+        title: "Licensed farm vehicles vs field machinery",
+        description:
+          "Automobile insurance under Ontario's compulsory framework applies to licensed vehicles on public roads. Farm machinery in the field is typically property coverage. Coordinate automobile policies for farm trucks with your farm package — do not assume one policy covers both without confirmation.",
+      },
+      {
+        title: "Pollution and fuel storage",
+        description:
+          "Bulk fuel, propane, and chemical storage create environmental exposure that farm liability may limit. See our pollution liability page when tanks or waste handling exceed base farm form comfort levels.",
+      },
+      {
+        title: "Custom farming and contractor use",
+        description:
+          "Performing custom harvest, spraying, or trucking for neighbours extends equipment and liability beyond own-farm use. Disclose custom-work revenue and whether employees or subcontractors are used — certificates of insurance may be requested by customers.",
       },
     ],
     brokerSteps: commercialBrokerSteps,
     relatedProducts: relatedLinksToProducts([
       { label: "Greenhouse & Agribusiness", href: "/greenhouse-agribusiness-insurance/" },
+      { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
       { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     ]),
     relatedIntro:
-      "One policy is rarely the whole picture. Explore other coverage from Premium.",
+      "Greenhouse operations, farm trucks, and broader commercial coverage may need separate routes — explore related products from Premium.",
     faqTitle: "Farm insurance FAQ",
     faqIntro: "Straight answers to common farm insurance questions.",
     faqItems: [
       {
-        question: "Is farm insurance different from regular home insurance?",
+        question: "What does farm insurance cover?",
         answer:
-          "Yes. A standard home policy is built for residential risk. Farm insurance is designed for working agricultural property — barns, outbuildings, equipment, livestock, and liability tied to farming operations that personal home policies often exclude or limit.",
+          "Farm insurance packages typically combine farm property (dwellings where scheduled, barns, outbuildings), scheduled machinery and equipment, farm liability for operations and premises, and livestock coverage against specified perils where purchased — each subject to causes of loss, limits, deductibles, and endorsements on your policy. Not every farm program covers every item or peril automatically; optional extensions may address equipment breakdown, loss of farm income, or agritourism where available.",
       },
       {
-        question: "Does my policy cover farm equipment away from the property?",
+        question: "Are barns and machinery insured on the same policy?",
         answer:
-          "It depends on the wording. Some farm policies extend equipment coverage while machinery is in transit or working off-site; others limit coverage to the scheduled location. Tell your broker how and where equipment is used so limits and endorsements match.",
+          "Most Ontario farm packages schedule buildings and machinery on one policy with separate limits and peril structures for each category — but the wording matters. Barns may be insured on a broad-form or named-peril basis while equipment uses its own deductibles and transit extensions. Licensed vehicles on roads generally need automobile insurance in addition to farm property scheduling for implements.",
       },
       {
-        question:
-          "Do I need separate liability coverage for agritourism or farm-stand sales?",
+        question: "What about livestock — is mortality covered?",
         answer:
-          "Often yes, or at least a specific endorsement. Activities that bring the public onto the farm — pick-your-own, farm stands, tours, or events — can fall outside a basic farm liability form. Flag those operations so coverage keeps up with how you earn income.",
+          "Livestock is often insured against specified perils such as fire, lightning, windstorm, or collision on a scheduled basis. Separate mortality or disease programs may be available in some markets with different exclusions — government programs for disease control are not the same as private livestock insurance. Confirm perils, valuation, and epidemic exclusions with your broker.",
+      },
+      {
+        question: "Are farm vehicles included in a farm policy?",
+        answer:
+          "Unlicensed farm machinery and implements used on the farm are typically scheduled on the farm property policy. Licensed trucks, passenger vehicles, and farm plates used on public roads require Ontario automobile insurance — commercial or personal depending on use — coordinated alongside your farm package. One farm policy does not replace compulsory automobile coverage for road vehicles.",
       },
       {
         question: "What information do I need for a farm quote?",
         answer:
-          "Expect questions about acreage, buildings and construction, equipment lists and values, livestock, farming activities, any public-facing sales or events, and your current coverage or claims history. That helps carriers price the risk accurately.",
+          "Expect questions about farm type and acreage, building descriptions and values, equipment lists, livestock counts and values, farming and side-income activities (including farm stands or agritourism), custom farming, fuel storage, prior claims, and current coverage. If you participate in Agricorp Production Insurance or other programs, note those separately — they are government crop programs, not substitutes for private farm property insurance.",
       },
     ],
     ctaHeading: "Ready to cover your farm?",
-    ctaSubhead: "Tell us about your operation — we'll compare options and explain what fits.",
+    ctaSubhead:
+      "Tell us about your buildings, equipment, livestock, and sales activities — we'll compare farm programs and explain what fits.",
     serviceName: "Farm Insurance",
   }),
   "greenhouse-agribusiness-insurance": buildPilotProductConfig({

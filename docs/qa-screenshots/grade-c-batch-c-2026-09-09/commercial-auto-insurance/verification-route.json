@@ -1,0 +1,74 @@
+{
+  "slug": "commercial-auto-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "liability-coverage",
+      "tabLabel": "Auto LiabilityOntario commercial automobile third-party liability — regulated un",
+      "tabDesc": "Ontario commercial automobile third-party liability — regulated under FSRA — may help respond to certain bodily injury or property-damage claims arising from the use of insured business vehicles on public roads, subject to policy terms, limits, and exclusions.",
+      "detailTitle": "Statutory minimums exist — adequate limits are a business decision",
+      "detailDescription": "Every Ontario motor vehicle liability policy must insure at least $200,000 per accident for third-party bodily injury and property damage — but serious highway claims can exceed that quickly. Many Windsor–Essex businesses purchase $1 million or $2 million limits, and contracts with landlords, municipalities, or general contractors may require higher certificates. As of July 1, 2026, optional accident benefits apply only to named insureds, spouses, dependants, and listed drivers — pedestrians, cyclists, and some passengers may rely more on third-party liability when optional benefits do not apply to them. Review limits at renewal, especially after the 2026 accident-benefit changes.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "liability-coverage"
+    },
+    {
+      "index": 1,
+      "id": "physical-damage-coverage",
+      "tabLabel": "Phys. DamageOptional collision, comprehensive, and specified perils coverage — w",
+      "tabDesc": "Optional collision, comprehensive, and specified perils coverage — where purchased — may help repair or replace owned or leased business vehicles after covered losses, subject to deductibles, stated values, and policy wording.",
+      "detailTitle": "Physical damage is optional — lenders and lessors may require it",
+      "detailDescription": "Ontario does not require collision or comprehensive coverage by law. Many businesses still purchase physical damage to protect company trucks and vans against collision, theft, vandalism, and other insured perils — but triggers, deductibles, and valuation methods vary. DCPD covers not-at-fault damage to your vehicle through your insurer when you retain DCPD; collision covers at-fault or unidentified losses where purchased. Signing OPCF 49 to opt out of DCPD also affects how not-at-fault damage can be recovered — an uncommon choice for most business fleets. Accurate vehicle values support proper limits at renewal.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "physical-damage-coverage"
+    },
+    {
+      "index": 2,
+      "id": "hired-non-owned-auto",
+      "tabLabel": "HNOAHired and non-owned automobile coverage — where purchased by endorsement suc",
+      "tabDesc": "Hired and non-owned automobile coverage — where purchased by endorsement such as OPCF 27 or through a commercial general liability extension — may address certain liability when employees or representatives drive rented, borrowed, or personal vehicles for business, subject to policy terms.",
+      "detailTitle": "Employee errands create liability your base auto policy may not cover",
+      "detailDescription": "When staff pick up parts, visit clients, or run errands in personal vehicles or rentals, your company's owned-vehicle automobile policy may not respond to third-party claims from that trip. Hired and non-owned auto — where added — is designed for that gap in business liability, not for physical damage to the employee's car. Personal auto policies often exclude or restrict business use; relying on an employee's personal coverage without review creates exposure. Disclose every regular non-owned vehicle use pattern when quoting.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "hired-non-owned-auto"
+    },
+    {
+      "index": 3,
+      "id": "fleet-discounts-multi-vehicle-management",
+      "tabLabel": "FleetMultiple company vehicles may be scheduled on one commercial automobile pro",
+      "tabDesc": "Multiple company vehicles may be scheduled on one commercial automobile program — with certificates, driver eligibility rules, and experience-rated pricing on some fleet arrangements — subject to insurer underwriting and policy structure.",
+      "detailTitle": "More vehicles means more data — and more certificate requests",
+      "detailDescription": "Whether you operate three service vans or thirty mixed units, insurers review vehicle lists, driver abstracts, radius, use class, and loss history together. Some markets experience-rate larger fleets; others rate each unit individually. Fleet reporting endorsements such as OPCF 21A may apply where purchased. This is broad commercial auto for business-owned fleets — not the same as for-hire trucking insurance, which adds motor truck cargo, CVOR context, and shipper contract requirements on a separate route.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "fleet-discounts-multi-vehicle-management"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Commercial auto insurance addresses Ontario-regulated automobile coverage for vehicles your business owns, leases, or puts on the road for work — service vans, "
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

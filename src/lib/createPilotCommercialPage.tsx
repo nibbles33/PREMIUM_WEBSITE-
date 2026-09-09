@@ -20,7 +20,7 @@ const bondingMetadata: Metadata = {
 const farmMetadata: Metadata = {
   title: "Farm Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
-    "Farm insurance through an independent Windsor-Essex broker — farm property, equipment & machinery, farm liability, and livestock coverage for Essex County farms.",
+    "Farm insurance through an independent Windsor-Essex broker — farm property, machinery, farm liability, and livestock coverage for working Essex County farms, distinct from greenhouse agribusiness and government crop programs.",
   alternates: { canonical: "/farm-insurance/" },
 };
 

@@ -161,72 +161,140 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Garage & Dealership Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Garage and auto dealership insurance — garagekeepers liability, lot coverage, test drives, and repair operations for Windsor-Essex dealers and shops.",
+      "Garage and dealership insurance through an independent Windsor-Essex broker — Ontario OAP 4 garage automobile, customer-vehicle legal liability, dealer inventory, operations liability, and property for repair shops and dealers.",
     headline: "Garage & Dealership Insurance",
     subhead:
-      "Coverage for dealers, repair shops, and service garages — from customer vehicles on your lot to test drives and completed repairs.",
+      "Garage and dealership insurance in Ontario usually layers the regulated Ontario Garage Automobile Policy (OAP 4) with commercial property and commercial general liability — because repair garages and vehicle dealers face different automobile, inventory, and premises exposures. OAP 4 addresses third-party automobile liability, statutory accident benefits, uninsured automobile, DCPD, optional physical damage on owned units, and legal liability for customer vehicles in your care, custody, or control — subject to sections purchased and policy wording. That is not interchangeable with a standard CGL policy alone or with ordinary commercial auto for a contractor's pickup. Dealers add open-lot inventory values, test drives, and floorplan interests; repair shops emphasize hoists, customer vehicles during service, and completed-operations liability. Licensed garage operations in Ontario typically must evidence a standard garage automobile policy as part of MTO licensing — separate from OMVIC's broader expectation that dealers maintain appropriate insurance without prescribing a specific limit in every case. Premium Insurance Brokers can help Windsor–Essex shops and dealers align OAP 4, property, and liability for how you actually operate.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
     quoteLabel: "Get a Garage Quote",
     coverageIntro:
-      "Garage policies combine property, liability, and garagekeepers coverage for vehicles you do not own but have in your care.",
+      "Coverage for Ontario garage and dealership operations is organized here by garage automobile (OAP 4), customer-vehicle legal liability, dealer inventory and open lot, and operations liability — because dealers and repair shops share OAP 4 concepts but differ on inventory, test drives, and property exposures.",
     coverageTypes: [
       {
-        title: "Garagekeepers Liability",
+        id: "garagekeepers-liability",
+        title: "Customer Vehicles (Legal Liability)",
+        shortLabel: "Customer Autos",
         description:
-          "Covers customer vehicles in your care for storage, service, or parking against covered damage or theft.",
+          "Legal liability coverage under the applicable Ontario garage automobile form (OAP 4 Section 6) may respond to certain insured damage involving customer vehicles in the business's care, custody, or control during service, storage, or parking — subject to limits, deductibles, and policy wording.",
+        detailTitle: "Customer cars are insured elsewhere first — your legal liability still matters",
+        detailDescription:
+          "When a customer's vehicle is damaged in your bay, their own automobile insurer may pay first; your garage policy responds to your legal liability for the loss when the policy trigger and facts support it — not as a blanket guarantee on every scratch or lot incident. Legal-liability and direct-primary forms treat fault and payment order differently; confirm which structure your program uses. Limits, per-vehicle deductibles, and maximum values per occurrence are scheduled — inadequate limits leave the shop exposed after a total loss or multi-vehicle event.",
         icon: Car,
       },
       {
-        title: "Dealer Open Lot",
+        id: "dealer-open-lot",
+        title: "Dealer Inventory & Open Lot",
+        shortLabel: "Open Lot",
         description:
-          "Protects inventory vehicles on your lot against covered perils such as hail, fire, or vandalism.",
+          "Physical damage coverage on dealer-owned inventory — including units on open lot, show floor, or in transit between locations where the policy extends — may respond to covered perils such as hail, fire, theft, or vandalism, subject to causes of loss, stated values, and reporting methods.",
+        detailTitle: "Inventory values move daily — static limits go stale",
+        detailDescription:
+          "New and used dealers carry high aggregate values across rows of units exposed to weather, theft, and vandalism. Open-lot coverage depends on accurate stated amounts or reporting procedures — not every service-only garage needs this section, but dealers cannot rely on a customer's-auto legal-liability limit to protect owned inventory. Floorplan lenders may require specific loss-payee and physical-damage provisions. Seasonal swings and auction purchases should trigger limit reviews.",
         icon: Store,
       },
       {
-        title: "Garage Liability",
+        id: "garage-liability",
+        title: "Garage Operations Liability",
+        shortLabel: "Operations",
         description:
-          "Addresses operations liability — faulty repairs, test drive accidents, and premises injuries.",
+          "Commercial general liability or garage liability package coverage may address certain premises injuries, property damage from shop operations, and completed-operations claims such as alleged faulty repairs — distinct from OAP 4 automobile sections and subject to automotive operations exclusions on standard CGL forms.",
+        detailTitle: "CGL does not replace OAP 4 — each policy has a different job",
+        detailDescription:
+          "Slip-and-fall claims in the customer lounge, damage from a hoist failure, or allegations that a completed repair caused a downstream accident may fall under general liability or garage liability programs — not under the automobile policy's third-party liability section for scheduled vehicles. Standard CGL forms often exclude or restrict automotive garage operations; that is why Ontario shops carry OAP 4 alongside liability and property. Test-drive bodily injury may involve OAP 4 automobile liability; botched workmanship may implicate completed operations — your broker maps exposures to the correct form.",
         icon: Briefcase,
       },
       {
-        title: "Physical Damage on Inventory",
+        id: "physical-damage-on-inventory",
+        title: "Owned-Unit Physical Damage",
+        shortLabel: "Inventory PD",
         description:
-          "Comprehensive and collision coverage for owned and consigned units held for sale.",
+          "Optional collision, comprehensive, or specified perils on OAP 4 Section 5 — where purchased — may address physical damage to owned dealer vehicles, shop trucks, and tow/service units used in garage operations, subject to deductibles and scheduled values.",
+        detailTitle: "Your tow truck and lot shuttle are owned autos — not customer cars",
+        detailDescription:
+          "Dealer plate programs, service loaners, tow trucks, and parts runners are owned automobiles on the garage policy — separate from customer-vehicle legal-liability coverage. Physical damage is optional under Ontario law but often purchased to protect high-value units and lender interests. Consigned inventory may require confirmation of who holds insurable interest. Accurate VIN schedules and values support renewals after acquisitions or disposals.",
         icon: Shield,
       },
     ],
     whoItIsFor:
-      "Garage and dealership insurance is for Windsor-Essex new and used auto dealers, repair garages, body shops, detailers, and tire centres that hold customer vehicles.",
+      "For Windsor–Essex repair garages, mechanics, body shops, tire and quick-lube centres, detailers, and new or used auto dealers that hold customer vehicles or inventory — reviewed through an independent broker who can distinguish OAP 4 garage automobile, property for tools and buildings, and operations liability for each operation type.",
+    considerations: [
+      {
+        title: "Customer vehicles in care, custody, and control",
+        description:
+          "Every vehicle left for service, storage, valet, or parking creates a legal-liability exposure under OAP 4 Section 6 when that section is purchased. Limits, deductibles, and maximum per-vehicle values must match the types of units you service — exotics, heavy trucks, and fleet accounts may need higher caps than a general repair bay assumes.",
+      },
+      {
+        title: "Dealer inventory and open-lot values",
+        description:
+          "Dealers carrying owned inventory on open lots need physical damage coverage aligned with rolling stock values and lender requirements. Repair-only shops without owned inventory for sale may not need open-lot limits — do not over-insure or under-insure relative to actual stock levels and reporting methods.",
+      },
+      {
+        title: "Test drives and dealer plates",
+        description:
+          "Sales test drives and dealer-plate use involve OAP 4 automobile liability and driver eligibility rules — disclose sales processes, who drives, and minimum licence requirements. Incidents during test drives are not generic CGL premises claims alone; automobile sections and limits must respond.",
+      },
+      {
+        title: "Employee drivers and shop vehicles",
+        description:
+          "Staff moving customer cars on the lot, road-testing repairs, or driving owned service units must be reflected in driver schedules and eligibility conditions. Unlisted drivers or undisclosed convictions can affect coverage on automobile sections.",
+      },
+      {
+        title: "Tools, hoists, and diagnostic equipment",
+        description:
+          "Building, tools, and equipment belong on commercial property coverage — not on OAP 4. Hoists, scan tools, and spray-booth equipment represent significant values; business interruption may be worth reviewing if a fire or equipment breakdown would halt revenue.",
+      },
+      {
+        title: "Parts inventory and stock",
+        description:
+          "Tire, parts, and accessory stock stored on premises may need property limits separate from vehicle inventory. Theft, fire, and water damage to parts bins are property claims — coordinate contents limits with peak stocking periods.",
+      },
+      {
+        title: "Environmental and spray-booth exposure",
+        description:
+          "Paint shops, fluid storage, and waste-oil handling create pollution exposures that OAP 4 and CGL may restrict. See our pollution liability page when solvents, underground storage, or waste handling raise environmental questions beyond base garage forms.",
+      },
+      {
+        title: "Business interruption and equipment breakdown",
+        description:
+          "Extended shop closure after fire, major water loss, or critical equipment failure can interrupt revenue. Business interruption and equipment breakdown are optional endorsements on property programs — not automatic inclusions on garage automobile policies.",
+      },
+    ],
     relatedLinks: [
       { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
-      { label: "Cargo & Freight", href: "/cargo-freight-insurance/" },
+      { label: "Commercial Property", href: "/commercial-property-insurance/" },
+      { label: "Pollution Liability", href: "/pollution-liability-insurance/" },
     ],
     faqTitle: "Garage & dealership FAQ",
     faqItems: [
       {
-        question: "What is garagekeepers coverage?",
+        question: "What insurance does a repair garage need in Ontario?",
         answer:
-          "It covers damage to customer vehicles in your custody — during repairs, storage, or valet — when you may be held responsible.",
+          "Most repair and service garages need the Ontario Garage Automobile Policy (OAP 4) for automobile liability, statutory benefits, and — where purchased — legal liability for customer vehicles in care, custody, or control. Commercial property for the building, tools, and equipment, plus commercial general liability or a garage liability package for premises and completed-operations exposures, typically sit alongside OAP 4 — one policy does not replace the others. MTO garage licensing expects evidence of a standard garage automobile policy.",
       },
       {
-        question: "Are test drives covered?",
+        question: "How are customer vehicles insured while in the shop?",
         answer:
-          "Dealer policies typically include provisions for test drives, but limits and driver requirements vary. Disclose your sales process.",
+          "OAP 4 Section 6 — often described in broker language as garagekeepers legal liability — may respond to your legal liability for damage to customer vehicles in your care during repairs or storage, subject to limits, deductibles, and policy wording. The customer's own automobile insurer may pay first on some losses; your policy addresses your responsibility when covered. Confirm whether your program uses legal-liability or direct-primary form wording with your broker.",
       },
       {
-        question: "Do I need separate coverage for a body shop?",
+        question: "How is dealership inventory insured?",
         answer:
-          "Body shops need garage liability and garagekeepers at minimum, plus property for equipment and spray booth exposures.",
+          "Dealer-owned units held for sale — on the lot, in showrooms, or in transit where the policy extends — are typically insured under OAP 4 physical damage sections with stated values or reporting methods for open-lot exposure. Values should track inventory levels as units are bought and sold. Floorplan lenders may require specific loss-payee and coverage provisions.",
       },
       {
-        question: "How is lot inventory valued?",
+        question: "Is commercial general liability enough on its own for a garage or dealership?",
         answer:
-          "Open lot coverage uses stated values or reporting methods. Keep inventory records current as units move in and out.",
+          "Generally not. Commercial general liability may address certain premises and operations claims, but standard CGL forms often exclude or restrict automotive garage operations and do not provide Ontario-regulated automobile third-party liability, accident benefits, or customer-vehicle legal-liability sections that OAP 4 is designed to cover. Dealers and garages usually need OAP 4 plus property and liability programs working together.",
+      },
+      {
+        question: "What information is needed for a garage or dealership quote?",
+        answer:
+          "Expect questions about operation type (dealer, repair, body, tire, detail), annual customer-vehicle counts, inventory values, open-lot size, services performed, test-drive practices, owned shop vehicles, building and equipment values, current OAP 4 limits and deductibles, and loss history. Licensing status and lender requirements help your broker structure certificates correctly.",
       },
     ],
     ctaHeading: "Run a garage or dealership?",
     ctaSubhead:
-      "Tell us about your lot size, services, and inventory values — we will compare garage programs that fit.",
+      "Tell us whether you repair, sell, or both — we will compare OAP 4, property, and liability programs for your operation.",
     serviceName: "Garage & Dealership Insurance",
   },
   {
@@ -770,73 +838,140 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Pollution Liability Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Pollution liability insurance for Windsor-Essex — gradual and sudden environmental releases for contractors, manufacturers, and property owners.",
+      "Pollution liability insurance through an independent Windsor-Essex broker — contractors pollution, site and premises environmental impairment, transportation releases, and cleanup/defence costs subject to policy triggers and wording.",
     headline: "Pollution Liability Insurance",
     subhead:
-      "Coverage for environmental releases — sudden spills and gradual pollution conditions that standard liability policies often exclude.",
+      "Pollution liability insurance addresses environmental contamination exposures that commercial general liability and property policies may exclude or restrict — sudden spills, gradual leaks, cleanup costs, third-party injury or property damage, and defence expenses — where purchased and subject to claims-made or occurrence triggers, retroactive dates, known-condition exclusions, and policy limits. Contractors pollution liability (CPL), site or premises environmental impairment, transportation pollution extensions, and emergency response coverage are separate insuring agreements on many programs — not one universal pollution product. Ontario law can require spill reporting, mitigation, and remediation regardless of insurance; regulatory fines and penalties are generally not insurable. Premium Insurance Brokers can help Windsor–Essex contractors, manufacturers, property owners, fuel and storage operations, waste handlers, and other businesses compare pollution forms against site history and operations.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Pollution Quote",
     coverageIntro:
-      "Pollution liability addresses cleanup costs and third-party claims from environmental contamination tied to your operations.",
+      "Pollution coverage is organized here by contracting operations, owned or operated sites, transportation-related releases, and cleanup/defence cost insuring agreements — because triggers, retroactive dates, and exclusions differ between CPL, site environmental impairment, and transportation extensions on each policy.",
     coverageTypes: [
       {
+        id: "contractors-pollution-liability",
         title: "Contractors Pollution Liability",
+        shortLabel: "CPL",
         description:
-          "Covers pollution conditions caused during construction — fuel spills, asbestos disturbance, and soil contamination.",
+          "Contractors pollution liability — typically on a claims-made basis — may address certain pollution conditions arising from contracting operations such as excavation, utility work, remediation, or disturbance of contaminated materials, subject to policy definitions, exclusions, retroactive dates, and limits.",
+        detailTitle: "Bid specs often require CPL — even when CGL is already in place",
+        detailDescription:
+          "General contractors, excavators, pipeline installers, and remediation subcontractors increasingly face contract requirements for contractors pollution liability separate from commercial general liability. CPL may respond to third-party cleanup costs, bodily injury, and property damage from pollution conditions caused by your work — but asbestos, mould, silica, and known subsurface conditions may be excluded or sublimited. Claims-made triggers mean the claim must be made during the policy period; retroactive dates limit how far back coverage reaches. Match CPL to project types and owner specifications.",
         icon: HardHat,
       },
       {
-        title: "Site Pollution",
+        id: "site-pollution",
+        title: "Site / Premises Pollution",
+        shortLabel: "Site Pollution",
         description:
-          "Addresses gradual leaks from storage tanks, pipelines, and waste handling at owned or operated sites.",
+          "Site or premises environmental impairment coverage — where purchased — may address gradual or sudden pollution conditions at owned or operated locations, including storage tanks, waste handling areas, and industrial processes, subject to known-condition exclusions, discovery reporting requirements, and policy limits.",
+        detailTitle: "Underground tanks and slow leaks outlive standard GL policy periods",
+        detailDescription:
+          "Gas stations, warehouses with bulk storage, manufacturing plants, and commercial property owners can face gradual soil or groundwater contamination that standard CGL absolute pollution exclusions restrict. Site pollution or environmental impairment forms — often claims-made — may fund investigation and remediation and third-party claims when triggers and retroactive dates align. Pre-existing contamination discovered before inception is typically excluded; Phase I/II history affects underwriting. Ownership changes and legacy operations require disclosure — insurance cannot retroactively erase known conditions.",
         icon: Factory,
       },
       {
-        title: "Transportation Pollution",
+        id: "transportation-pollution",
+        title: "Transportation Pollution (Where Included)",
+        shortLabel: "Trans. Pollution",
         description:
-          "Covers releases during transit of hazardous materials or waste.",
+          "Transportation pollution coverage — where included on a pollution program — may address certain releases during transit of waste, fuel, chemicals, or other pollutants in owned or non-owned vehicles, subject to vehicle schedules, territorial limits, and policy wording distinct from commercial automobile liability.",
+        detailTitle: "A highway spill is not automatically covered by auto liability alone",
+        detailDescription:
+          "Commercial automobile policies address third-party injury and property damage from automobile accidents — not necessarily cleanup of pollutants released from cargo or tanks in transit. Transportation pollution extensions, where purchased, may respond to certain environmental cleanup and third-party claims from covered releases during hauling. Waste haulers, fuel delivery, and chemical transporters should confirm whether pollution transit coverage sits on a pollution policy, an automobile endorsement, or a motor carrier package — forms differ and territorial limits apply.",
         icon: Truck,
       },
       {
+        id: "cleanup-defence-costs",
         title: "Cleanup & Defence Costs",
+        shortLabel: "Cleanup",
         description:
-          "Can help with regulatory-mandated remediation and legal defence for covered pollution claims.",
+          "Pollution policies may allocate limits to emergency response, investigation, remediation, and legal defence for covered pollution claims — subject to insuring agreements, sublimits, deductibles, and exclusions for fines, penalties, and known conditions.",
+        detailTitle: "Cleanup costs erode limits — defence may be inside the same bucket",
+        detailDescription:
+          "When a covered pollution event occurs, costs can include emergency response, environmental consultants, soil and groundwater remediation, and third-party bodily injury or property-damage claims. Defence costs often reduce the same policy limit rather than sitting outside it. Ontario's Environmental Protection Act imposes duties to report spills and mitigate harm — those statutory obligations apply whether or not insurance responds. Regulatory fines and penalties are generally excluded or uninsurable; do not assume a cleanup order automatically creates insured coverage without reading the trigger and exclusions.",
         icon: Shield,
       },
     ],
     whoItIsFor:
-      "Pollution liability is for Windsor-Essex contractors doing environmental work, manufacturers handling chemicals, gas stations, warehouses with refrigerants, and property owners with underground storage tanks.",
+      "For Windsor–Essex contractors, manufacturers, commercial property owners, fuel and storage operations, automotive and waste businesses, transporters, developers, and environmental consultants with meaningful contamination exposure — reviewed through an independent broker who can compare pollution triggers against CGL exclusions and site history.",
+    considerations: [
+      {
+        title: "Site history and environmental assessments",
+        description:
+          "Known or suspected contamination from prior owners, underground tanks, or industrial use affects eligibility and pricing. Phase I and Phase II environmental site assessments support underwriting; undisclosed history can void coverage or trigger rescission. New purchasers should review historical use before assuming a pollution policy will respond to legacy conditions.",
+      },
+      {
+        title: "Operations and materials handled",
+        description:
+          "Chemicals, solvents, refrigerants, fuels, paints, and process waste each carry different exclusion and sublimit patterns. Manufacturing, printing, metal finishing, and food processing may need pollution review even when day-to-day operations seem routine — CGL pollution exclusions still apply.",
+      },
+      {
+        title: "Storage tanks — UST and AST",
+        description:
+          "Underground and above-ground storage tanks require registration, maintenance, and often specific tank schedules on pollution or property programs. Tank age, lining, and leak-detection history drive underwriting. Tank-only policies differ from full site environmental impairment forms.",
+      },
+      {
+        title: "Contractual requirements for contractors",
+        description:
+          "Project owners, municipalities, and prime contractors may mandate contractors pollution liability with minimum limits and additional-insured status. Match certificates to actual policy triggers — a CGL certificate does not substitute for CPL when the contract specifies pollution.",
+      },
+      {
+        title: "Transportation and waste disposal paths",
+        description:
+          "Hauling waste, recyclables, or chemicals off-site may need transportation pollution coverage or non-owned disposal site extensions where available. Confirm territorial limits for cross-border hauls and whether automobile liability alone addresses environmental cleanup from cargo release.",
+      },
+      {
+        title: "Known pollution conditions and disclosure",
+        description:
+          "Pollution discovered before policy inception — or known to the insured and not disclosed — is typically excluded. Insurance is not a mechanism to transfer already-identified remediation obligations after the fact. Retroactive dates on claims-made policies define how far back coverage reaches for unknown pre-policy events.",
+      },
+      {
+        title: "Claims-made triggers and retroactive dates",
+        description:
+          "Many pollution policies are claims-made: the claim must be reported during the policy period (or extended reporting period if purchased). Occurrence-based pollution forms exist but are less common in some markets. Lapses in continuity can eliminate coverage for past work — maintain uninterrupted terms or buy tail coverage when retiring or selling.",
+      },
+      {
+        title: "Regulatory cleanup vs insurable remediation",
+        description:
+          "Ontario law may require spill reporting, mitigation, and remediation under the Environmental Protection Act — independent of insurance. Policies may fund certain insured remediation and third-party claims subject to wording; regulatory fines and penalties are generally not covered. Coordinate legal counsel, environmental consultants, and your broker after an incident.",
+      },
+    ],
     relatedLinks: [
       { label: "Contractors Insurance", href: "/contractors-insurance/" },
       { label: "Manufacturing Insurance", href: "/manufacturing-insurance/" },
-      { label: "Convenience Store Insurance", href: "/convenience-store-insurance/" },
+      { label: "Commercial Property", href: "/commercial-property-insurance/" },
     ],
     faqTitle: "Pollution liability FAQ",
     faqItems: [
       {
-        question: "Does general liability cover pollution?",
+        question: "Doesn't commercial general liability already cover pollution?",
         answer:
-          "Standard GL policies typically exclude pollution unless sudden and accidental within a short time window. Dedicated pollution coverage fills that gap.",
+          "Commercial general liability may address certain third-party injury or property-damage claims, but most CGL forms contain pollution exclusions — from legacy sudden-and-accidental wording to modern absolute or total pollution exclusions that restrict gradual contamination and many cleanup costs. Whether a specific loss falls inside or outside CGL depends on policy wording and how the claim is framed — not on a simple rule that GL never covers pollution or always covers sudden spills. Pollution liability or environmental impairment coverage may be arranged where operations and exclusions create a gap.",
       },
       {
-        question: "Do contractors need pollution coverage?",
+        question: "Can pollution insurance address gradual contamination?",
         answer:
-          "Excavation, remediation, and utility contractors often face contract requirements for contractors pollution liability.",
+          "Site pollution and environmental impairment forms — where purchased on a claims-made or occurrence basis depending on market — are designed for gradual leaks and long-term contamination that CGL exclusions often restrict. Triggers, retroactive dates, and known-condition exclusions still apply; gradual does not mean automatic or unlimited. Contractors pollution liability may address pollution conditions caused during your operations, subject to the same policy constraints.",
       },
       {
-        question: "What is gradual vs. sudden pollution?",
+        question: "What cleanup costs may be covered?",
         answer:
-          "Sudden spills may have limited GL coverage. Gradual leaks over time usually require a pollution policy.",
+          "Insured cleanup and remediation costs — investigation, emergency response, soil and groundwater remediation, and related third-party claims — may be covered when the pollution policy trigger is satisfied and exclusions do not apply, subject to limits and deductibles. Defence costs often share the same limit. Statutory duties under Ontario environmental law continue regardless of insurance; fines and penalties are generally not insurable.",
       },
       {
-        question: "Are historical site conditions covered?",
+        question: "Can existing contamination be insured after it is discovered?",
         answer:
-          "Known contamination discovered before policy inception is typically excluded. Disclose site history during application.",
+          "Known pollution conditions identified before policy inception are typically excluded — insurers do not accept transfer of existing remediation obligations through a new policy after discovery. Undisclosed pre-existing conditions can jeopardize coverage. Some programs may offer limited coverage for unknown historical conditions with appropriate retroactive dates and environmental assessments, but already-identified contamination requires remediation planning outside standard new-policy placement.",
+      },
+      {
+        question: "Who should consider pollution liability insurance?",
+        answer:
+          "Businesses with meaningful environmental exposure — contractors doing excavation or remediation, manufacturers using chemicals, property owners with storage tanks, fuel operations, waste handlers, transporters of pollutants, and developers on former industrial sites — may need pollution coverage when contracts or CGL exclusions create gap risk. Not every business requires a pollution policy; a broker review of operations, site history, and existing liability wording clarifies whether specialized coverage is warranted.",
       },
     ],
     ctaHeading: "Face environmental exposure?",
     ctaSubhead:
-      "Describe your operations, materials handled, and site history — we will compare pollution markets.",
+      "Share operations, materials, site history, and contract requirements — we will compare pollution programs against your CGL and property policies.",
     serviceName: "Pollution Liability Insurance",
   },
   {

@@ -1,0 +1,94 @@
+{
+  "consoleErrors": [],
+  "routes": [
+    {
+      "slug": "commercial-auto-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Statutory minimums exist — adequate limits are a business decision",
+        "Physical damage is optional — lenders and lessors may require it",
+        "Employee errands create liability your base auto policy may not cover",
+        "More vehicles means more data — and more certificate requests"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "garage-dealership-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Customer cars are insured elsewhere first — your legal liability still matters",
+        "Inventory values move daily — static limits go stale",
+        "CGL does not replace OAP 4 — each policy has a different job",
+        "Your tow truck and lot shuttle are owned autos — not customer cars"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "pollution-liability-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Bid specs often require CPL — even when CGL is already in place",
+        "Underground tanks and slow leaks outlive standard GL policy periods",
+        "A highway spill is not automatically covered by auto liability alone",
+        "Cleanup costs erode limits — defence may be inside the same bucket"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "farm-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Barns and outbuildings are farm assets — not ordinary home attachments",
+        "Field equipment and licensed road vehicles follow different rules",
+        "Visitors, custom work, and roadside stands change liability exposure",
+        "Herd loss can mean lost income — not just lost animals"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    }
+  ],
+  "pass": true
+}
