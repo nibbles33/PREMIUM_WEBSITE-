@@ -243,7 +243,7 @@ Artifact: `docs/qa-screenshots/prelaunch-batch-2-5-2026-09-10/homepage-partners-
 | Navigation verifier | PASS — 60 routes, zero-discovery 0 |
 | Homepage completeness | **10/10** |
 | Cannabis verifier | PASS |
-| Explorer | Running / expected **236/236** (no Explorer code changes) |
+| Explorer | **236/236** PASS (no Explorer code changes) |
 | Claims / Talk to Broker | Untouched this batch |
 
 ---
