@@ -7,7 +7,7 @@
 **Gate date:** 2026-09-10  
 **Site at gate:** A42 / B16 / C0 / D0  
 
-**Status:** **STOP FOR OWNER REVIEW** — Manufacturing clean; Commercial Hub condensation recommended before freeze; Fitness Explorer failure is a QA flake (not a production regression).
+**Status:** **SUPERSEDED BY OWNER FREEZE (2026-09-10)** — Manufacturing was clean at gate; hub condensation completed in `c045d3c`; Fitness Explorer failure diagnosed as QA flake (requery-click fixed in precision commit). See freeze record.
 
 ---
 
@@ -310,13 +310,16 @@ No production wording issues requiring a precision fix before freeze.
 
 ## O. Freeze decision
 
-| Item | Decision |
-|------|----------|
-| **MANUFACTURING** | **FREEZE** (factually clean; 5/5 Explorer clean) |
-| **COMMERCIAL HUB** | **CONDENSE** before freeze (architecture OK; density over approved target) |
-| **BATCH E READY TO FREEZE** | **NO** |
-| **GRADE C BACKLOG FULLY CLOSED** | **NO** — hub condensation pass remains |
-| **SITE** | **A42 / B16 / C0 / D0** |
+> **Superseded 2026-09-10:** Owner approved FREEZE after hub condensation (`c045d3c`) + QA requery-click.  
+> Authoritative record: `docs/grade-c-batch-e-manufacturing-commercial-hub-freeze-2026-09-10.md`.
+
+| Item | Decision (at gate) | Decision (after owner freeze) |
+|------|--------------------|-------------------------------|
+| **MANUFACTURING** | FREEZE | **FROZEN** |
+| **COMMERCIAL HUB** | CONDENSE before freeze | **FROZEN** (~804w Grade A) |
+| **BATCH E READY TO FREEZE** | NO | **YES → FROZEN** |
+| **GRADE C BACKLOG FULLY CLOSED** | NO — hub condensation remained | **YES** |
+| **SITE** | A42 / B16 / C0 / D0 | **A42 / B16 / C0 / D0** |
 
 ---
 
@@ -346,4 +349,4 @@ No production wording issues requiring a precision fix before freeze.
 
 ---
 
-**STOP FOR OWNER REVIEW.**
+**Gate historical note:** STOP FOR OWNER REVIEW applied at gate time. **Owner FREEZE recorded 2026-09-10** — see freeze record.

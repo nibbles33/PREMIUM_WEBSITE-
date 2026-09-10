@@ -105,7 +105,11 @@ Artifacts:
 
 | Question | Answer |
 |----------|--------|
-| **BATCH E READY TO FREEZE** | **YES** (pending owner review — do not merge/deploy) |
+| **BATCH E READY TO FREEZE** | **YES** |
+| **OWNER APPROVAL** | **YES — FREEZE recorded 2026-09-10** |
+| **BATCH E FROZEN** | **YES** — see `docs/grade-c-batch-e-manufacturing-commercial-hub-freeze-2026-09-10.md` |
+| **MANUFACTURING** | **FROZEN** |
+| **COMMERCIAL HUB** | **FROZEN** |
 | **GRADE C BACKLOG FULLY CLOSED** | **YES** (product Grade C routes remediated; site C0 / D0) |
 
 ---
@@ -122,6 +126,8 @@ Artifacts:
 
 ---
 
-## STOP FOR OWNER REVIEW
+## POST-FREEZE SAFETY
 
-DO NOT MERGE. DO NOT DEPLOY. DO NOT PROMOTE VERCEL. DO NOT PUSH DIRECTLY TO MAIN. DO NOT MODIFY PRODUCTION ALIASES.
+Freeze locks Batch E content on the feature branch.
+
+DO NOT MERGE. DO NOT DEPLOY. DO NOT PROMOTE VERCEL. DO NOT PUSH DIRECTLY TO MAIN. DO NOT MODIFY PRODUCTION ALIASES — unless the owner issues a separate promotion order.
