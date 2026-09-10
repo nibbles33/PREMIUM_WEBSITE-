@@ -3095,25 +3095,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 429.765625,
+            "top": 430.765625,
             "right": 447,
-            "bottom": 642.5
+            "bottom": 643.5
           },
           "stageRect": {
             "width": 452,
             "height": 642.234375,
             "left": 32,
-            "top": 392.765625,
+            "top": 393.765625,
             "right": 484,
-            "bottom": 1035
+            "bottom": 1036
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 430.765625,
+            "top": 431.765625,
             "right": 446,
-            "bottom": 641.5
+            "bottom": 642.5
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -3122,9 +3122,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 430.765625,
+            "top": 431.765625,
             "right": 445.5804388933121,
-            "bottom": 641.5
+            "bottom": 642.5
           },
           "activeCoverageId": "builder-s-risk",
           "caption": "",
@@ -4639,25 +4639,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 413.015625,
+            "top": 412.015625,
             "right": 447,
-            "bottom": 625.75
+            "bottom": 624.75
           },
           "stageRect": {
             "width": 452,
             "height": 687.734375,
             "left": 32,
-            "top": 376.015625,
+            "top": 375.015625,
             "right": 484,
-            "bottom": 1063.75
+            "bottom": 1062.75
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 414.015625,
+            "top": 413.015625,
             "right": 446,
-            "bottom": 624.75
+            "bottom": 623.75
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -4666,9 +4666,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 414.015625,
+            "top": 413.015625,
             "right": 445.5804388933121,
-            "bottom": 624.75
+            "bottom": 623.75
           },
           "activeCoverageId": "lost-income",
           "caption": "",
@@ -7121,25 +7121,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 430.71875,
+            "top": 429.71875,
             "right": 653,
-            "bottom": 713.234375
+            "bottom": 712.234375
           },
           "stageRect": {
             "width": 576,
             "height": 689.265625,
             "left": 114,
-            "top": 393.71875,
+            "top": 392.71875,
             "right": 690,
-            "bottom": 1082.984375
+            "bottom": 1081.984375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 431.71875,
+            "top": 430.71875,
             "right": 652,
-            "bottom": 712.234375
+            "bottom": 711.234375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -7148,9 +7148,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 431.71875,
+            "top": 430.71875,
             "right": 651.6946407245223,
-            "bottom": 712.234375
+            "bottom": 711.234375
           },
           "activeCoverageId": "motor-truck-cargo",
           "caption": "",
@@ -8685,25 +8685,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 430.46875,
+            "top": 429.46875,
             "right": 653,
-            "bottom": 712.984375
+            "bottom": 711.984375
           },
           "stageRect": {
             "width": 576,
             "height": 684.015625,
             "left": 114,
-            "top": 393.46875,
+            "top": 392.46875,
             "right": 690,
-            "bottom": 1077.484375
+            "bottom": 1076.484375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 652,
-            "bottom": 711.984375
+            "bottom": 710.984375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -8712,9 +8712,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 651.6946407245223,
-            "bottom": 711.984375
+            "bottom": 710.984375
           },
           "activeCoverageId": "building-coverage",
           "caption": "",
@@ -11194,25 +11194,25 @@
             "width": 506,
             "height": 284.765625,
             "left": 69,
-            "top": 430.796875,
+            "top": 429.796875,
             "right": 575,
-            "bottom": 715.5625
+            "bottom": 714.5625
           },
           "stageRect": {
             "width": 580,
             "height": 600.515625,
             "left": 32,
-            "top": 393.796875,
+            "top": 392.796875,
             "right": 612,
-            "bottom": 994.3125
+            "bottom": 993.3125
           },
           "imgRect": {
             "width": 504,
             "height": 282.765625,
             "left": 70,
-            "top": 431.796875,
+            "top": 430.796875,
             "right": 574,
-            "bottom": 714.5625
+            "bottom": 713.5625
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -11221,9 +11221,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.6527777777778,
-            "top": 431.796875,
+            "top": 430.796875,
             "right": 573.3472222222222,
-            "bottom": 714.5625
+            "bottom": 713.5625
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -11387,25 +11387,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 430.59375,
+            "top": 429.59375,
             "right": 447,
-            "bottom": 643.328125
+            "bottom": 642.328125
           },
           "stageRect": {
             "width": 452,
             "height": 624.734375,
             "left": 32,
-            "top": 393.59375,
+            "top": 392.59375,
             "right": 484,
-            "bottom": 1018.328125
+            "bottom": 1017.328125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 431.59375,
+            "top": 430.59375,
             "right": 446,
-            "bottom": 642.328125
+            "bottom": 641.328125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -11414,9 +11414,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.68055555555557,
-            "top": 431.59375,
+            "top": 430.59375,
             "right": 445.31944444444446,
-            "bottom": 642.328125
+            "bottom": 641.328125
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -13124,25 +13124,25 @@
             "width": 316,
             "height": 177.84375,
             "left": 37,
-            "top": -56.09375,
+            "top": -55.09375,
             "right": 353,
-            "bottom": 121.75
+            "bottom": 122.75
           },
           "stageRect": {
             "width": 358,
             "height": 402.84375,
             "left": 16,
-            "top": -77.09375,
+            "top": -76.09375,
             "right": 374,
-            "bottom": 325.75
+            "bottom": 326.75
           },
           "imgRect": {
             "width": 314,
             "height": 175.84375,
             "left": 38,
-            "top": -55.09375,
+            "top": -54.09375,
             "right": 352,
-            "bottom": 120.75
+            "bottom": 121.75
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -13151,9 +13151,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 38.30754950495049,
-            "top": -55.09375,
+            "top": -54.09375,
             "right": 351.6924504950495,
-            "bottom": 120.75
+            "bottom": 121.75
           },
           "activeCoverageId": "seasonal-dwelling-coverage",
           "caption": "",
@@ -14861,25 +14861,25 @@
             "width": 502,
             "height": 458.75,
             "left": 151,
-            "top": 429.84375,
+            "top": 430.84375,
             "right": 653,
-            "bottom": 888.59375
+            "bottom": 889.59375
           },
           "stageRect": {
             "width": 576,
             "height": 746.5,
             "left": 114,
-            "top": 392.84375,
+            "top": 393.84375,
             "right": 690,
-            "bottom": 1139.34375
+            "bottom": 1140.34375
           },
           "imgRect": {
             "width": 500,
             "height": 456.75,
             "left": 152,
-            "top": 430.84375,
+            "top": 431.84375,
             "right": 652,
-            "bottom": 887.59375
+            "bottom": 888.59375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -14888,9 +14888,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.24743150684935,
-            "top": 430.84375,
+            "top": 431.84375,
             "right": 651.7525684931506,
-            "bottom": 887.59375
+            "bottom": 888.59375
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -16194,25 +16194,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 429.71875,
+            "top": 430.71875,
             "right": 573,
-            "bottom": 712.234375
+            "bottom": 713.234375
           },
           "stageRect": {
             "width": 576,
             "height": 575.515625,
             "left": 34,
-            "top": 392.71875,
+            "top": 393.71875,
             "right": 610,
-            "bottom": 968.234375
+            "bottom": 969.234375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 430.71875,
+            "top": 431.71875,
             "right": 572,
-            "bottom": 711.234375
+            "bottom": 712.234375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -16221,9 +16221,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 430.71875,
+            "top": 431.71875,
             "right": 571.6946407245223,
-            "bottom": 711.234375
+            "bottom": 712.234375
           },
           "activeCoverageId": "side-a-individual-coverage",
           "caption": "",
@@ -17159,25 +17159,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 411.71875,
+            "top": 412.71875,
             "right": 447,
-            "bottom": 624.453125
+            "bottom": 625.453125
           },
           "stageRect": {
             "width": 452,
             "height": 778.734375,
             "left": 32,
-            "top": 374.71875,
+            "top": 375.71875,
             "right": 484,
-            "bottom": 1153.453125
+            "bottom": 1154.453125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 412.71875,
+            "top": 413.71875,
             "right": 446,
-            "bottom": 623.453125
+            "bottom": 624.453125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -17186,9 +17186,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 412.71875,
+            "top": 413.71875,
             "right": 445.5804388933121,
-            "bottom": 623.453125
+            "bottom": 624.453125
           },
           "activeCoverageId": "commercial-auto-liability",
           "caption": "",
@@ -17545,25 +17545,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 438.71875,
+            "top": 439.71875,
             "right": 653,
-            "bottom": 721.234375
+            "bottom": 722.234375
           },
           "stageRect": {
             "width": 576,
             "height": 621.015625,
             "left": 114,
-            "top": 401.71875,
+            "top": 402.71875,
             "right": 690,
-            "bottom": 1022.734375
+            "bottom": 1023.734375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 439.71875,
+            "top": 440.71875,
             "right": 652,
-            "bottom": 720.234375
+            "bottom": 721.234375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -17572,9 +17572,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 439.71875,
+            "top": 440.71875,
             "right": 651.6946407245223,
-            "bottom": 720.234375
+            "bottom": 721.234375
           },
           "activeCoverageId": "wrongful-termination",
           "caption": "",
@@ -18703,25 +18703,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 420.96875,
+            "top": 421.96875,
             "right": 447,
-            "bottom": 633.703125
+            "bottom": 634.703125
           },
           "stageRect": {
             "width": 452,
             "height": 733.234375,
             "left": 32,
-            "top": 383.96875,
+            "top": 384.96875,
             "right": 484,
-            "bottom": 1117.203125
+            "bottom": 1118.203125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 421.96875,
+            "top": 422.96875,
             "right": 446,
-            "bottom": 632.703125
+            "bottom": 633.703125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -18730,9 +18730,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 421.96875,
+            "top": 422.96875,
             "right": 445.5804388933121,
-            "bottom": 632.703125
+            "bottom": 633.703125
           },
           "activeCoverageId": "third-party-bodily-injury",
           "caption": "",
@@ -24668,25 +24668,25 @@
             "width": 316,
             "height": 177.84375,
             "left": 37,
-            "top": -75.4375,
+            "top": -74.4375,
             "right": 353,
-            "bottom": 102.40625
+            "bottom": 103.40625
           },
           "stageRect": {
             "width": 358,
             "height": 430.84375,
             "left": 16,
-            "top": -96.4375,
+            "top": -95.4375,
             "right": 374,
-            "bottom": 334.40625
+            "bottom": 335.40625
           },
           "imgRect": {
             "width": 314,
             "height": 175.84375,
             "left": 38,
-            "top": -74.4375,
+            "top": -73.4375,
             "right": 352,
-            "bottom": 101.40625
+            "bottom": 102.40625
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -24695,9 +24695,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 38.30754950495049,
-            "top": -74.4375,
+            "top": -73.4375,
             "right": 351.6924504950495,
-            "bottom": 101.40625
+            "bottom": 102.40625
           },
           "activeCoverageId": "employer-sponsored-programs",
           "caption": "",
@@ -26975,25 +26975,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 420.84375,
+            "top": 421.84375,
             "right": 447,
-            "bottom": 633.578125
+            "bottom": 634.578125
           },
           "stageRect": {
             "width": 452,
             "height": 801.484375,
             "left": 32,
-            "top": 383.84375,
+            "top": 384.84375,
             "right": 484,
-            "bottom": 1185.328125
+            "bottom": 1186.328125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 421.84375,
+            "top": 422.84375,
             "right": 446,
-            "bottom": 632.578125
+            "bottom": 633.578125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -27002,9 +27002,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 421.84375,
+            "top": 422.84375,
             "right": 445.5804388933121,
-            "bottom": 632.578125
+            "bottom": 633.578125
           },
           "activeCoverageId": "commercial-property",
           "caption": "",
@@ -32563,25 +32563,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 430.890625,
+            "top": 429.890625,
             "right": 447,
-            "bottom": 643.625
+            "bottom": 642.625
           },
           "stageRect": {
             "width": 452,
             "height": 477.734375,
             "left": 32,
-            "top": 393.890625,
+            "top": 392.890625,
             "right": 484,
-            "bottom": 871.625
+            "bottom": 870.625
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 431.890625,
+            "top": 430.890625,
             "right": 446,
-            "bottom": 642.625
+            "bottom": 641.625
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -32590,9 +32590,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 431.890625,
+            "top": 430.890625,
             "right": 445.5804388933121,
-            "bottom": 642.625
+            "bottom": 641.625
           },
           "activeCoverageId": "dwelling-coverage",
           "caption": "",
@@ -34107,25 +34107,25 @@
             "width": 378,
             "height": 345.4375,
             "left": 69,
-            "top": 421.96875,
+            "top": 420.96875,
             "right": 447,
-            "bottom": 767.40625
+            "bottom": 766.40625
           },
           "stageRect": {
             "width": 452,
             "height": 820.4375,
             "left": 32,
-            "top": 384.96875,
+            "top": 383.96875,
             "right": 484,
-            "bottom": 1205.40625
+            "bottom": 1204.40625
           },
           "imgRect": {
             "width": 376,
             "height": 343.4375,
             "left": 70,
-            "top": 422.96875,
+            "top": 421.96875,
             "right": 446,
-            "bottom": 766.40625
+            "bottom": 765.40625
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -34134,9 +34134,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.20712043378995,
-            "top": 422.96875,
+            "top": 421.96875,
             "right": 445.79287956621005,
-            "bottom": 766.40625
+            "bottom": 765.40625
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -35458,25 +35458,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 429.546875,
+            "top": 430.546875,
             "right": 573,
-            "bottom": 712.0625
+            "bottom": 713.0625
           },
           "stageRect": {
             "width": 576,
             "height": 734.765625,
             "left": 34,
-            "top": 392.546875,
+            "top": 393.546875,
             "right": 610,
-            "bottom": 1127.3125
+            "bottom": 1128.3125
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 430.546875,
+            "top": 431.546875,
             "right": 572,
-            "bottom": 711.0625
+            "bottom": 712.0625
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -35485,9 +35485,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 430.546875,
+            "top": 431.546875,
             "right": 571.6946407245223,
-            "bottom": 711.0625
+            "bottom": 712.0625
           },
           "activeCoverageId": "commercial-property",
           "caption": "",
@@ -36423,25 +36423,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 403.09375,
+            "top": 404.09375,
             "right": 447,
-            "bottom": 615.828125
+            "bottom": 616.828125
           },
           "stageRect": {
             "width": 452,
             "height": 733.234375,
             "left": 32,
-            "top": 366.09375,
+            "top": 367.09375,
             "right": 484,
-            "bottom": 1099.328125
+            "bottom": 1100.328125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 404.09375,
+            "top": 405.09375,
             "right": 446,
-            "bottom": 614.828125
+            "bottom": 615.828125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -36450,9 +36450,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 404.09375,
+            "top": 405.09375,
             "right": 445.5804388933121,
-            "bottom": 614.828125
+            "bottom": 615.828125
           },
           "activeCoverageId": "contractors-pollution-liability",
           "caption": "",
@@ -38353,25 +38353,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 421.46875,
+            "top": 420.46875,
             "right": 653,
-            "bottom": 703.984375
+            "bottom": 702.984375
           },
           "stageRect": {
             "width": 576,
             "height": 666.515625,
             "left": 114,
-            "top": 384.46875,
+            "top": 383.46875,
             "right": 690,
-            "bottom": 1050.984375
+            "bottom": 1049.984375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 422.46875,
+            "top": 421.46875,
             "right": 652,
-            "bottom": 702.984375
+            "bottom": 701.984375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -38380,9 +38380,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 422.46875,
+            "top": 421.46875,
             "right": 651.6946407245223,
-            "bottom": 702.984375
+            "bottom": 701.984375
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -38546,25 +38546,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 421.46875,
+            "top": 420.46875,
             "right": 573,
-            "bottom": 703.984375
+            "bottom": 702.984375
           },
           "stageRect": {
             "width": 576,
             "height": 666.515625,
             "left": 34,
-            "top": 384.46875,
+            "top": 383.46875,
             "right": 610,
-            "bottom": 1050.984375
+            "bottom": 1049.984375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 422.46875,
+            "top": 421.46875,
             "right": 572,
-            "bottom": 702.984375
+            "bottom": 701.984375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -38573,9 +38573,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 422.46875,
+            "top": 421.46875,
             "right": 571.6946407245223,
-            "bottom": 702.984375
+            "bottom": 701.984375
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -40283,25 +40283,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 403.71875,
+            "top": 402.71875,
             "right": 447,
-            "bottom": 616.453125
+            "bottom": 615.453125
           },
           "stageRect": {
             "width": 452,
             "height": 783.984375,
             "left": 32,
-            "top": 366.71875,
+            "top": 365.71875,
             "right": 484,
-            "bottom": 1150.703125
+            "bottom": 1149.703125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 404.71875,
+            "top": 403.71875,
             "right": 446,
-            "bottom": 615.453125
+            "bottom": 614.453125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -40310,9 +40310,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 404.71875,
+            "top": 403.71875,
             "right": 445.5804388933121,
-            "bottom": 615.453125
+            "bottom": 614.453125
           },
           "activeCoverageId": "errors-omissions-e-o",
           "caption": "",
@@ -40522,25 +40522,25 @@
             "width": 316,
             "height": 177.84375,
             "left": 37,
-            "top": -668.09375,
+            "top": -669.09375,
             "right": 353,
-            "bottom": -490.25
+            "bottom": -491.25
           },
           "stageRect": {
             "width": 358,
             "height": 663.59375,
             "left": 16,
-            "top": -689.09375,
+            "top": -690.09375,
             "right": 374,
-            "bottom": -25.5
+            "bottom": -26.5
           },
           "imgRect": {
             "width": 314,
             "height": 175.84375,
             "left": 38,
-            "top": -667.09375,
+            "top": -668.09375,
             "right": 352,
-            "bottom": -491.25
+            "bottom": -492.25
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -40549,9 +40549,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 38.30754950495049,
-            "top": -667.09375,
+            "top": -668.09375,
             "right": 351.6924504950495,
-            "bottom": -491.25
+            "bottom": -492.25
           },
           "activeCoverageId": "commercial-property",
           "caption": "",
@@ -40669,25 +40669,25 @@
             "width": 502,
             "height": 458.75,
             "left": 151,
-            "top": 430.46875,
+            "top": 429.46875,
             "right": 653,
-            "bottom": 889.21875
+            "bottom": 888.21875
           },
           "stageRect": {
             "width": 576,
             "height": 842.75,
             "left": 114,
-            "top": 393.46875,
+            "top": 392.46875,
             "right": 690,
-            "bottom": 1236.21875
+            "bottom": 1235.21875
           },
           "imgRect": {
             "width": 500,
             "height": 456.75,
             "left": 152,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 652,
-            "bottom": 888.21875
+            "bottom": 887.21875
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -40696,9 +40696,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.24743150684935,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 651.7525684931506,
-            "bottom": 888.21875
+            "bottom": 887.21875
           },
           "activeCoverageId": "commercial-property",
           "caption": "",
@@ -42985,25 +42985,25 @@
             "width": 502,
             "height": 458.75,
             "left": 151,
-            "top": 429.71875,
+            "top": 430.71875,
             "right": 653,
-            "bottom": 888.46875
+            "bottom": 889.46875
           },
           "stageRect": {
             "width": 576,
             "height": 820,
             "left": 114,
-            "top": 392.71875,
+            "top": 393.71875,
             "right": 690,
-            "bottom": 1212.71875
+            "bottom": 1213.71875
           },
           "imgRect": {
             "width": 500,
             "height": 456.75,
             "left": 152,
-            "top": 430.71875,
+            "top": 431.71875,
             "right": 652,
-            "bottom": 887.46875
+            "bottom": 888.46875
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -43012,9 +43012,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.24743150684935,
-            "top": 430.71875,
+            "top": 431.71875,
             "right": 651.7525684931506,
-            "bottom": 887.46875
+            "bottom": 888.46875
           },
           "activeCoverageId": "general-liability",
           "caption": "",

@@ -105,10 +105,13 @@ async function main() {
     }
   }
 
-  for (const p of ["/pool-and-spa/", "/faqs/"]) {
-    const r = await head(p, "manual");
-    if (r.status === 410 || [301, 308].includes(r.status)) {
-      errors.push(`${p}: must remain untouched this batch, got ${r.status}`);
+  // Batch 4C — pool/faqs are now confirmed gone (also covered by gone loop above)
+  for (const p of ["/pool-and-spa/", "/faqs/", "/pool-and-spa", "/faqs"]) {
+    const r = await head(p.endsWith("/") ? p : `${p}/`, "manual");
+    // normalized slash form is authoritative; no-slash may 410 directly via middleware normalize
+    const r2 = await head(p, "manual");
+    if (r2.status !== 410) {
+      errors.push(`${p}: expected 410 after Batch 4C, got ${r2.status}`);
     }
   }
 

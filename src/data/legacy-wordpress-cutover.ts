@@ -25,6 +25,10 @@ export const LEGACY_GONE_PATHS: ReadonlySet<string> = new Set([
   // Empty blog archive (0 posts; "Nothing Found")
   "/blog/",
 
+  // Batch 4C — owner-approved removals
+  "/pool-and-spa/", // title Pool & Spa; body is mismatched auto content
+  "/faqs/", // generic theme insurance-101 FAQ filler (not Premium-specific)
+
   // Theme layout / demo pages
   "/2-columns/",
   "/3-columns/",
@@ -78,11 +82,8 @@ export const LEGACY_GONE_PATHS: ReadonlySet<string> = new Set([
   "/service/whole-life/",
 ]);
 
-/** Intentionally untouched this batch (owner review / ambiguous). */
-export const LEGACY_PENDING_OWNER_REVIEW_PATHS: readonly string[] = [
-  "/pool-and-spa/",
-  "/faqs/",
-];
+/** Intentionally open items (non-URL-removal). Batch 4C closed pool/faqs removals. */
+export const LEGACY_PENDING_OWNER_REVIEW_PATHS: readonly string[] = [];
 
 export function normalizeLegacyPath(pathname: string): string {
   if (!pathname || pathname === "/") return "/";
