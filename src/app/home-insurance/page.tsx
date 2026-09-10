@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {
+  Gem,
   Home,
   Package,
   Shield,
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: "Home Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
     "Home insurance through an independent Windsor-Essex broker — dwelling, contents, liability, and additional living expenses explained in plain language.",
+  alternates: { canonical: "/home-insurance/" },
 };
 
 const coverageTypes = [
@@ -40,6 +42,12 @@ const coverageTypes = [
     description:
       "Covers temporary housing and costs if your home becomes uninhabitable after a covered loss.",
     icon: Package,
+  },
+  {
+    title: "High-Value Home Considerations",
+    description:
+      "Custom builds, high-end finishes, and specialty assets may need agreed-value scheduling and higher contents limits beyond standard policy defaults.",
+    icon: Gem,
   },
 ];
 
@@ -70,6 +78,11 @@ const faqItems = [
     answer:
       "Have your property details ready (address, year built, approximate square footage, and construction basics), plus information about any current coverage. That helps your broker compare options accurately.",
   },
+  {
+    question: "Do high-value homes need different coverage?",
+    answer:
+      "Homes with custom construction, high-end finishes, art, jewellery, or wine collections often exceed standard contents and dwelling defaults. A broker can discuss agreed-value scheduling, replacement cost approaches, and liability limits that reflect the full property — without assuming a single carrier threshold applies to every home.",
+  },
 ];
 
 const jsonLd = {
@@ -99,6 +112,29 @@ export default function HomeInsurancePage() {
       coverageIntro="Standard home insurance building blocks, explained without the jargon."
       coverageAccent="#B37A5A"
       coverageTypes={coverageTypes}
+      whoItIsFor="Home insurance is for Windsor-Essex homeowners, including those with custom or high-value properties where standard dwelling and contents defaults may not reflect true replacement costs for finishes, collections, or outbuildings."
+      considerations={[
+        {
+          title: "High-value and custom homes",
+          description:
+            "Unique architecture, imported materials, and specialty rooms (wine cellars, home theatres) may need itemized schedules and higher limits. Document upgrades so dwelling and contents values stay current.",
+        },
+        {
+          title: "Scheduled valuables",
+          description:
+            "Jewellery, art, and collectibles often carry sub-limits under standard policies. Scheduling high-value items separately can provide clearer protection.",
+        },
+        {
+          title: "Liability limits",
+          description:
+            "Properties with pools, trampolines, or frequent entertaining may warrant higher personal liability limits or an umbrella policy.",
+        },
+      ]}
+      relatedLinks={[
+        { label: "Condo Insurance", href: "/condo-insurance/" },
+        { label: "Personal Umbrella", href: "/personal-umbrella-insurance/" },
+        { label: "Cottage Insurance", href: "/cottage-insurance/" },
+      ]}
       brokerCopy={sharedBrokerCopy}
       faqTitle="Home insurance FAQ"
       faqIntro="Straight answers to common home insurance questions."
