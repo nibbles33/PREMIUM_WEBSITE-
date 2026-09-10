@@ -1,9 +1,9 @@
 import { Resend } from "resend";
+import { getResendFrom } from "@/lib/email/resendConfig";
 import type { ValidatedJobApplication } from "./validate";
 import { getJobBySlug } from "@/data/jobs";
 
 const DEFAULT_NOTIFY_TO = "info@premiumib.com";
-const NOTIFY_FROM = "PremiumIB Careers <onboarding@resend.dev>";
 
 export async function sendJobApplicationNotification(
   application: ValidatedJobApplication,
@@ -45,7 +45,7 @@ export async function sendJobApplicationNotification(
   try {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
-      from: NOTIFY_FROM,
+      from: getResendFrom("PremiumIB Careers"),
       to: [notifyTo],
       replyTo: application.email,
       subject,

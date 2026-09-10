@@ -1,8 +1,8 @@
 import { Resend } from "resend";
+import { getResendFrom } from "@/lib/email/resendConfig";
 import type { ValidatedContactMessage } from "./validate";
 
 const DEFAULT_NOTIFY_TO = "info@premiumib.com";
-const NOTIFY_FROM = "PremiumIB Contact <onboarding@resend.dev>";
 
 export async function sendContactNotification(
   message: ValidatedContactMessage,
@@ -36,7 +36,7 @@ export async function sendContactNotification(
   try {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
-      from: NOTIFY_FROM,
+      from: getResendFrom("PremiumIB Contact"),
       to: [notifyTo],
       replyTo: message.email,
       subject,

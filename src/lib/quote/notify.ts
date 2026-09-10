@@ -1,9 +1,9 @@
 import { Resend } from "resend";
+import { getResendFrom } from "@/lib/email/resendConfig";
 import type { NormalizedLead } from "./validate";
 import { CATEGORY_LABELS } from "./types";
 
 const NOTIFY_TO = "info@premiumib.com";
-const NOTIFY_FROM = "PremiumIB Quotes <onboarding@resend.dev>";
 
 function formatAnswers(answers: Record<string, string>): string {
   const skip = new Set([
@@ -57,7 +57,7 @@ export async function sendLeadNotification(
     ].join("\n");
 
     const { error } = await resend.emails.send({
-      from: NOTIFY_FROM,
+      from: getResendFrom("PremiumIB Quotes"),
       to: [NOTIFY_TO],
       replyTo: lead.email,
       subject,
