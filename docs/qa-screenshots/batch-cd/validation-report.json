@@ -1,0 +1,103 @@
+{
+  "base": "http://localhost:3010",
+  "timestamp": "2026-09-03T20:44:34.140Z",
+  "results": [
+    {
+      "route": "/farm-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3010/farm-insurance/"
+    },
+    {
+      "route": "/food-truck-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3010/food-truck-insurance/"
+    },
+    {
+      "route": "/trucking-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3010/trucking-insurance/"
+    },
+    {
+      "route": "/commercial-auto-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3010/commercial-auto-insurance/"
+    },
+    {
+      "route": "/dump-truck-insurance/",
+      "status": 200,
+      "overflow": false,
+      "hasHero": true,
+      "hasHeroPhoto": true,
+      "hasExplorer": true,
+      "url": "http://localhost:3010/dump-truck-insurance/"
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "url": "http://localhost:3010/"
+    },
+    {
+      "route": "/auto-insurance/",
+      "status": 200,
+      "url": "http://localhost:3010/auto-insurance/"
+    },
+    {
+      "route": "/commercial-insurance/",
+      "status": 200,
+      "url": "http://localhost:3010/commercial-insurance/"
+    },
+    {
+      "route": "/contractors-insurance/",
+      "status": 200,
+      "url": "http://localhost:3010/contractors-insurance/"
+    },
+    {
+      "route": "/claims/",
+      "status": 200,
+      "url": "http://localhost:3010/claims/"
+    },
+    {
+      "route": "/get-a-quote/",
+      "status": 200,
+      "url": "http://localhost:3010/get-a-quote/"
+    }
+  ],
+  "coverageTests": [
+    {
+      "route": "/farm-insurance/",
+      "ok": true,
+      "states": 4,
+      "failed": []
+    },
+    {
+      "route": "/food-truck-insurance/",
+      "ok": true,
+      "states": 4,
+      "failed": []
+    },
+    {
+      "route": "/trucking-insurance/",
+      "ok": true,
+      "states": 4,
+      "failed": []
+    }
+  ],
+  "batchCDRoutes": 5,
+  "screenshotsDir": "/workspace/docs/qa-screenshots/batch-cd"
+}
