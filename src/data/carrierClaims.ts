@@ -138,9 +138,12 @@ const verifiedInsuranceCompanies: CarrierClaimEntry[] = [
     group: "insurance-companies",
     verified: true,
     isDirectInsurer: true,
-    claimsPhones: [phone("1-877-844-8460", "Claims")],
+    claimsPhones: [phone("1-800-361-2622", "Coachman claims (24/7)")],
+    claimsUrl: "https://www.coachmaninsurance.ca/report/index.html",
+    availability: "24/7",
     notes: [
-      "Coachman Insurance is SGI CANADA's Ontario high-risk division and uses this same claims number.",
+      "Coachman Insurance is SGI CANADA's Ontario high-risk division.",
+      "Contact your broker first when possible; use this line if your broker is unavailable.",
     ],
   },
   {
@@ -151,9 +154,16 @@ const verifiedInsuranceCompanies: CarrierClaimEntry[] = [
     group: "insurance-companies",
     verified: true,
     isDirectInsurer: true,
-    claimsPhones: [phone("(800) 324-3566", "Claims")],
+    claimsPhones: [
+      phone("1-866-252-2854", "ON / AB / Atlantic emergency"),
+      phone("1-866-923-5666", "Quebec emergency"),
+      phone("1-888-547-9229", "BC emergency"),
+    ],
+    claimsUrl: "https://echeloninsurance.ca/sp/filingClaim",
+    availability: "24-hour emergency",
     notes: [
-      "After-hours/emergency number could not be confirmed from official sources.",
+      "Contact your broker or agent first when available.",
+      "(800) 324-3566 is head office — not the claims reporting line.",
     ],
   },
   {
@@ -164,8 +174,18 @@ const verifiedInsuranceCompanies: CarrierClaimEntry[] = [
     group: "insurance-companies",
     verified: true,
     isDirectInsurer: true,
-    claimsPhones: [phone("1-877-736-2743", "Claims")],
-    availability: "24-hour claims assistance",
+    claimsPhones: [
+      phone("1-800-387-0462", "Ontario Promise Line"),
+      phone("1-800-661-1577", "Alberta Promise Line"),
+      phone("1-800-561-7222", "Atlantic Promise Line"),
+      phone("1-877-463-2727", "Quebec Promise Line"),
+    ],
+    claimsUrl: "https://www.pembridge.com/?eid=1627",
+    availability: "24/7",
+    notes: [
+      "Contact your broker first when possible.",
+      "1-877-736-2743 is the general company line, not claims.",
+    ],
   },
   {
     id: "chubb",
@@ -230,8 +250,12 @@ const verifiedInsuranceCompanies: CarrierClaimEntry[] = [
     group: "insurance-companies",
     verified: true,
     isDirectInsurer: true,
-    claimsPhones: [phone("1-866-864-1112", "Claims")],
-    availability: "24/7",
+    claimsEmails: [email("claimsreporting@jevco.ca", "Claims reporting")],
+    claimsUrl: "https://www.jevco.ca/en/insurance-claims",
+    availability: "24 hours",
+    notes: [
+      "Official claims page publishes email reporting; no dedicated claims phone listed on jevco.ca.",
+    ],
   },
   {
     id: "optimum",
@@ -240,7 +264,18 @@ const verifiedInsuranceCompanies: CarrierClaimEntry[] = [
     group: "insurance-companies",
     verified: true,
     isDirectInsurer: true,
-    claimsPhones: [phone("1-877-806-8023", "Claims / Service")],
+    claimsPhones: [
+      phone("1-800-663-0355", "After-hours — Ontario / MB / SK"),
+      phone("1-800-364-2575", "After-hours — BC"),
+      phone("1-888-474-2744", "After-hours — AB"),
+      phone("1-800-361-7653", "After-hours — Quebec"),
+    ],
+    claimsUrl:
+      "https://www.optimum-general.com/en/policyholder-resources/in-the-event-of-a-loss",
+    notes: [
+      "Contact your broker during regular business hours.",
+      "After-hours numbers are for new claim emergencies only.",
+    ],
   },
   {
     id: "aig",
@@ -280,9 +315,12 @@ const verifiedSpecialtyMgas: CarrierClaimEntry[] = [
     group: "specialty-mgas",
     verified: true,
     isDirectInsurer: false,
-    claimsPhones: [phone("1-888-868-8367", "General")],
+    claimsEmails: [email("claims@specialtyclaims.ca", "Business hours")],
+    claimsPhones: [phone("1-855-535-0554", "After-hours (Coast to Coast Claims)")],
+    claimsUrl: "https://cansure.com/policyholder/claims/",
     notes: [
-      "Claims for Totten and Cansure are handled by Specialty Claims, a dedicated claims administrator.",
+      "Claims handled by Specialty Claims on behalf of Totten, Cansure, and related brands.",
+      "1-888-868-8367 is Totten new-business line, not claims.",
     ],
   },
   {
@@ -305,9 +343,10 @@ const verifiedSpecialtyMgas: CarrierClaimEntry[] = [
     group: "specialty-mgas",
     verified: true,
     isDirectInsurer: false,
+    claimsEmails: [email("claims@trinityunderwriting.ca", "Claims")],
+    claimsUrl: "https://www.trinityunderwriting.ca/claims/",
     notes: [
-      "Claims method: website claims form / email.",
-      "No claims phone published — submit via their online claims form or email.",
+      "Report via online claims form or email — no claims phone published.",
     ],
   },
   {
@@ -318,9 +357,11 @@ const verifiedSpecialtyMgas: CarrierClaimEntry[] = [
     group: "specialty-mgas",
     verified: true,
     isDirectInsurer: false,
-    claimsPhones: [phone("604-888-0050", "General")],
+    claimsEmails: [email("claims@srim.ca", "Claims reporting")],
+    claimsPhones: [phone("1-866-347-6128", "24/7 emergency")],
+    claimsUrl: "https://srim.ca/claims-reporting/",
     notes: [
-      "Claims are handled by Royal Claims Services Ltd. on SRIM's behalf; no separate direct number is published.",
+      "604-888-0050 appears on incident forms; official reporting is via email and after-hours hotline.",
     ],
   },
   {
@@ -355,8 +396,10 @@ const verifiedSpecialtyMgas: CarrierClaimEntry[] = [
     group: "specialty-mgas",
     verified: true,
     isDirectInsurer: false,
+    claimsEmails: [email("claims@lionsgateuw.com", "Claims")],
+    claimsUrl: "https://www.lionsgateuw.com/canada/contact-us.html",
     notes: [
-      "No dedicated claims contact published — contact Premium and we'll help connect you with the right team.",
+      "Report claims by email; no dedicated claims phone published on lionsgateuw.com.",
     ],
   },
 ];
