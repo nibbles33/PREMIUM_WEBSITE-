@@ -2,35 +2,36 @@ import type { Metadata } from "next";
 import PilotCommercialPage from "@/components/pilot/product/PilotCommercialPage";
 import { industryPages } from "@/data/commercial-industries";
 import { getProductPage } from "@/data/product-pages";
+import { buildPageMetadata } from "@/lib/seo";
 
-const hubMetadata: Metadata = {
+const hubMetadata: Metadata = buildPageMetadata({
   title: "Commercial Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
     "Commercial insurance for Windsor-Essex manufacturers, trucking fleets, contractors, restaurants, and more — industry-specific coverage through an independent broker.",
-  alternates: { canonical: "/commercial-insurance/" },
-};
+  path: "/commercial-insurance/",
+});
 
-const bondingMetadata: Metadata = {
+const bondingMetadata: Metadata = buildPageMetadata({
   title: "Surety Bonds in Windsor-Essex | Premium Insurance Brokers",
   description:
     "Surety bonds through an independent Windsor-Essex broker — bid bonds, performance bonds, labour and material payment bonds, and licence and permit bonds.",
-  alternates: { canonical: "/bonding-insurance/" },
-};
+  path: "/bonding-insurance/",
+});
 
-const farmMetadata: Metadata = {
+const farmMetadata: Metadata = buildPageMetadata({
   title: "Farm Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
     "Farm insurance through an independent Windsor-Essex broker — farm property, machinery, farm liability, and livestock coverage for working Essex County farms, distinct from greenhouse agribusiness and government crop programs.",
-  alternates: { canonical: "/farm-insurance/" },
-};
+  path: "/farm-insurance/",
+});
 
-const greenhouseMetadata: Metadata = {
+const greenhouseMetadata: Metadata = buildPageMetadata({
   title:
     "Greenhouse & Agribusiness Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
     "Greenhouse and agribusiness operations in Leamington, Essex County, and Windsor-Essex — reviewed through an independent broker.",
-  alternates: { canonical: "/greenhouse-agribusiness-insurance/" },
-};
+  path: "/greenhouse-agribusiness-insurance/",
+});
 
 function metadataForSlug(slug: string): Metadata {
   if (slug === "commercial-insurance") return hubMetadata;
@@ -40,20 +41,20 @@ function metadataForSlug(slug: string): Metadata {
 
   const industry = industryPages.find((page) => page.slug === slug);
   if (industry) {
-    return {
+    return buildPageMetadata({
       title: industry.metaTitle,
       description: industry.metaDescription,
-      alternates: { canonical: `/${slug}/` },
-    };
+      path: `/${slug}/`,
+    });
   }
 
   const product = getProductPage(slug);
   if (product) {
-    return {
+    return buildPageMetadata({
       title: product.metaTitle,
       description: product.metaDescription,
-      alternates: { canonical: `/${slug}/` },
-    };
+      path: `/${slug}/`,
+    });
   }
 
   throw new Error(`Unknown pilot commercial page slug: ${slug}`);

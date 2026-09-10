@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import Header from "@/components/Header";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getJobsByDepartment, ORGANIZATION_NAME } from "@/data/jobs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Careers | Premium Insurance Brokers",
   description:
     "Join Premium Insurance Brokers in Windsor, Ontario. View open positions and apply to grow your insurance career with a RIBO-licensed brokerage.",
-};
+  path: "/careers/",
+});
 
 export default function CareersPage() {
   const byDepartment = getJobsByDepartment();

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
@@ -8,11 +9,12 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import { getPageHeroPhotography } from "@/data/photography";
 import { teamMembers } from "@/data/team";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Meet the Team | Premium Insurance Brokers",
   description:
     "Meet the licensed brokers and staff behind Premium Insurance Brokers in Windsor-Essex.",
-};
+  path: "/team/",
+});
 
 const QUOTE_HREF = "/get-a-quote/";
 const BROKER_HREF = "/talk-to-a-broker/";

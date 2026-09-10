@@ -1,6 +1,11 @@
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
+import {
+  DEFAULT_OG_IMAGE_PATH,
+  SITE_NAME,
+  SITE_ORIGIN,
+} from "@/lib/seo";
 import "@/styles/pilot.css";
 import "./globals.css";
 
@@ -12,9 +17,26 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "PremiumIB | Windsor-Essex Insurance Brokers",
+  metadataBase: new URL(SITE_ORIGIN),
+  title: {
+    default: `${SITE_NAME} | Personal & Business Insurance in Windsor-Essex`,
+    template: `%s`,
+  },
   description:
-    "Compare insurance options with help from a real broker — not a call centre.",
+    "Independent insurance brokerage in Windsor-Essex. Personal and business coverage through a licensed local broker — not a call centre.",
+  openGraph: {
+    type: "website",
+    locale: "en_CA",
+    siteName: SITE_NAME,
+    images: [{ url: DEFAULT_OG_IMAGE_PATH }],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

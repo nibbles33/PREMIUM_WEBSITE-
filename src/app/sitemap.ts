@@ -68,7 +68,6 @@ const staticRoutes = [
   "/crime-fidelity-insurance/",
   "/employment-practices-liability-insurance/",
   "/get-a-quote/",
-  "/talk-to-a-broker/",
   "/contact/",
   "/team/",
   "/partners/",

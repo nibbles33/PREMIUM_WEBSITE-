@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
@@ -9,11 +10,12 @@ import {
   complianceLinks,
 } from "@/data/compliance";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Compliance | Premium Insurance Brokers",
   description:
     "Broker compensation disclosure for Premium Insurance Brokers — commission schedule by insurer and product class, plus RIBO and industry conduct links.",
-};
+  path: "/compliance/",
+});
 
 export default function CompliancePage() {
   return (

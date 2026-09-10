@@ -416,5 +416,9 @@ export function insuranceAgencyProvider() {
       addressCountry: "CA",
     },
     url: "https://premiumib.com/",
+    parentOrganization: {
+      "@type": "Organization",
+      name: "Oracle RMS",
+    },
   };
 }

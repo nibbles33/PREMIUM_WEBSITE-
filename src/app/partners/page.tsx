@@ -4,12 +4,14 @@ import Header from "@/components/Header";
 import PartnerLogoCard from "@/components/PartnerLogoCard";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getPublicPartners } from "@/data/partners";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Partners | PremiumIB",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Our Partners | Premium Insurance Brokers",
   description:
     "Premium Insurance Brokers works with major personal and commercial insurers, specialty underwriters, and program partners across Ontario.",
-};
+  path: "/partners/",
+});
 
 export default function PartnersPage() {
   const partners = getPublicPartners();

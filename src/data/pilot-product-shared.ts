@@ -1,6 +1,6 @@
 import type { ProductBrokerStep } from "@/types/pilot-product";
 
-export const PILOT_BROKER_HREF = "/contact?intent=broker";
+export const PILOT_BROKER_HREF = "/contact/?intent=broker";
 
 export const personalBrokerSteps: ProductBrokerStep[] = [
   {

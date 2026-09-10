@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Align served URLs with existing internal hrefs, sitemap entries, and
+  // canonical metadata (all prefer trailing slashes). Without this, Next
+  // defaults to strip-slash and emits avoidable internal 308 hops.
+  trailingSlash: true,
   images: {
     // Next.js 16 defaults to qualities: [75] only — allow premium photography tiers.
     qualities: [75, 82, 85, 88, 90, 92],

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import Header from "@/components/Header";
 import CarrierClaimsDirectory from "@/components/claims/CarrierClaimsDirectory";
@@ -14,11 +15,12 @@ import {
   claimsPreparednessItems,
 } from "@/data/claimsContent";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Claims Guidance | Premium Insurance Brokers",
   description:
     "Need to report a claim? Premium Insurance Brokers helps Windsor-Essex clients understand first steps, connect with carrier claims contacts, and navigate the process.",
-};
+  path: "/claims/",
+});
 
 export default function ClaimsPage() {
   return (

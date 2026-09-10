@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
@@ -7,11 +8,12 @@ import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getPageHeroPhotography } from "@/data/photography";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Contact Us | Premium Insurance Brokers",
   description:
     "Contact Premium Insurance Brokers at 3063 Dougall Ave, Windsor — call 226-782-6000 or email info@premiumib.com.",
-};
+  path: "/contact/",
+});
 
 const QUOTE_HREF = "/get-a-quote/";
 
@@ -176,7 +178,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     </a>
                   ) : (
                     <Link
-                      href="/contact?intent=broker"
+                      href="/contact/?intent=broker"
                       className="inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md border border-white/25 bg-transparent px-6 text-[15px] font-medium text-white transition-colors hover:border-gold hover:text-gold sm:w-auto sm:min-w-[200px]"
                     >
                       Talk to a Broker

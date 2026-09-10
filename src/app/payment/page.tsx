@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
@@ -6,11 +7,12 @@ import Header from "@/components/Header";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { paymentCarriers } from "@/data/payment-carriers";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Make a Payment | Premium Insurance Brokers",
   description:
     "Pay your premium directly through your insurance carrier using the secure payment portals listed below.",
-};
+  path: "/payment/",
+});
 
 const QUOTE_HREF = "/get-a-quote/";
 const BROKER_HREF = "/talk-to-a-broker/";

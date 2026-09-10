@@ -1,15 +1,17 @@
 // Privacy policy content ported from premiumib.com — recommend legal review before this is treated as final for the new domain/site.
 
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import Header from "@/components/Header";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Privacy Policy | Premium Insurance Brokers",
   description:
     "Privacy Policy for Premium Insurance Brokers — how we collect, use, and protect your personal information.",
-};
+  path: "/privacy-policy/",
+});
 
 export default function PrivacyPolicyPage() {
   return (

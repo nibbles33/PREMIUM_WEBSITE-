@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import Header from "@/components/Header";
 import QuoteFlowClient from "@/components/quote/QuoteFlowClient";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Get a Quote | PremiumIB",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Get a Quote | Premium Insurance Brokers",
   description:
     "Answer a few quick questions and a licensed Premium Insurance Brokers broker will follow up with options for you.",
-};
+  path: "/get-a-quote/",
+});
 
 export default function GetAQuotePage() {
   return (

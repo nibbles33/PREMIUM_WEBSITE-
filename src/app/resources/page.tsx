@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -13,11 +14,12 @@ import {
 import Header from "@/components/Header";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Resources | Premium Insurance Brokers",
   description:
     "Insurance resources for Premium Insurance Brokers clients — claims guidance, payments, compliance, privacy, newsletter, and broker contact.",
-};
+  path: "/resources/",
+});
 
 const resourceCards = [
   {

@@ -10,6 +10,7 @@ import {
   ORGANIZATION_URL,
   type JobPosting,
 } from "@/data/jobs";
+import { buildPageMetadata } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -23,12 +24,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const job = getJobBySlug(slug);
   if (!job || !job.isOpen) {
-    return { title: "Careers | Premium Insurance Brokers", robots: { index: false } };
+    return {
+      ...buildPageMetadata({
+        title: "Careers | Premium Insurance Brokers",
+        description:
+          "Join Premium Insurance Brokers in Windsor, Ontario.",
+        path: "/careers/",
+        noIndex: true,
+      }),
+    };
   }
-  return {
+  return buildPageMetadata({
     title: `${job.title} | Careers | Premium Insurance Brokers`,
     description: job.summary,
-  };
+    path: `/careers/${job.slug}/`,
+  });
 }
 
 function jobPostingJsonLd(job: JobPosting) {

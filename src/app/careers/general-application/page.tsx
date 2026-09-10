@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Header from "@/components/Header";
 import JobApplicationForm from "@/components/careers/JobApplicationForm";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "General Application | Careers | Premium Insurance Brokers",
   description:
-    "Submit a general career application to Premium Insurance Brokers in Windsor, Ontario.",
-};
+    "Submit a general employment application to Premium Insurance Brokers in Windsor, Ontario.",
+  path: "/careers/general-application/",
+});
 
 export default function GeneralApplicationPage() {
   return (

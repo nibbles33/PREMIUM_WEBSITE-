@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Header from "@/components/Header";
 import NewsletterSignup from "@/components/newsletter/NewsletterSignup";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Newsletter | Premium Insurance Brokers",
   description:
     "Subscribe to insurance updates from Premium Insurance Brokers — Ontario coverage changes, client education, and practical risk-management information.",
-};
+  path: "/newsletter/",
+});
 
 const topics = [
   "Ontario insurance regulatory and market updates",

@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 export const AUTO_QUOTE_HREF = "/get-a-quote?type=vehicle";
-export const AUTO_BROKER_HREF = "/contact?intent=broker";
+export const AUTO_BROKER_HREF = "/contact/?intent=broker";
 export const AUTO_ACCENT = "#5B7A99";
 
 export type AutoCoverageItem = {
