@@ -5,14 +5,14 @@
 **Recorded:** 2026-09-10  
 **Branch:** `cursor/coverage-explorer-ux-v2-2026-09-07`  
 **Worktree:** `/tmp/PREMIUM_WEBSITE-d3-transportation`  
-**Baseline tip at freeze:** `ed4ecd6` (includes Batch E owner FREEZE `0b63866`)
+**Baseline tip at freeze:** `ed4ecd6` (includes Batch E owner FREEZE `0b63866`)  
+**This record commit:** `caf33c0`
 
 ---
 
 ## Directive (literal)
 
-> CONTENT BASELINE FROZEN: All 58 existing routes are approved at A42/B16/C0/D0.  
-> Do not modify existing product content unless specifically authorized or a verified defect requires it.
+> CONTENT BASELINE FROZEN: All 58 existing routes are approved at A42/B16/C0/D0. Do not modify existing product content unless specifically authorized or a verified defect requires it.
 
 ---
 
@@ -67,7 +67,7 @@ Unauthorized “improvements,” density padding, SEO rewrites, tone passes, or 
 
 | Record | Scope |
 |--------|-------|
-| `docs/grade-c-batch-e-manufacturing-commercial-hub-freeze-2026-09-10.md` | Manufacturing + Commercial Hub |
+| `docs/grade-c-batch-e-manufacturing-commercial-hub-freeze-2026-09-10.md` | Batch E — Manufacturing + Commercial Hub |
 | Batch A–D factual-gate / implementation docs | Prior Grade C remediation freezes |
 | This document | **Site-wide 58-route content baseline** |
 
