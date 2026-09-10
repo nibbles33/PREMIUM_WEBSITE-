@@ -1,18 +1,15 @@
-import PlaceholderPage from "@/components/PlaceholderPage";
 import type { Metadata } from "next";
+import { permanentRedirect } from "next/navigation";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Talk to a Broker | PremiumIB",
-  description: "Speak with a Premium Insurance Brokers advisor.",
-};
+export const metadata: Metadata = buildPageMetadata({
+  title: "Talk to a Broker | Premium Insurance Brokers",
+  description:
+    "Speak with a licensed Premium Insurance Brokers advisor in Windsor-Essex.",
+  path: "/talk-to-a-broker/",
+  noIndex: true,
+});
 
 export default function TalkToABrokerPage() {
-  return (
-    <PlaceholderPage
-      title="Talk to a Broker"
-      description="Full contact form coming soon. Call us at 226-782-6000 in the meantime."
-      primaryCta={{ label: "Call 226-782-6000", href: "tel:+12267826000" }}
-      secondaryCta={{ label: "Get a Quote", href: "/get-a-quote/" }}
-    />
-  );
+  permanentRedirect("/contact/?intent=broker");
 }

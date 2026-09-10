@@ -161,7 +161,9 @@ export const complianceLinks = [
   },
   {
     label: "Disclosure Form",
-    href: "https://premiumib.com/wp-content/uploads/2025/05/disclosure.pdf",
+    // Same public path as legacy WP uploads; served from rebuild /public after cutover.
+    href: "/wp-content/uploads/2025/05/disclosure.pdf",
+    internal: true,
   },
   {
     label: "Privacy Policy",

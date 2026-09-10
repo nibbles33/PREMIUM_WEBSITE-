@@ -1,0 +1,66 @@
+{
+  "slug": "employment-practices-liability-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "wrongful-termination",
+      "tabDesc": "May help respond to certain claims alleging wrongful dismissal, termination, or constructive dismissal — subject to policy definitions and exclusions.",
+      "detailTitle": "Termination disputes are common — insurance is not severance pay",
+      "detailDescription": "Ontario employers may owe ESA termination pay or severance as statutory obligations regardless of insurance. EPL, where purchased, addresses certain claims or allegations under policy wording — it does not automatically fund statutory wages or every common-law package. Documented process and counsel still matter for risk management.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "wrongful-termination"
+    },
+    {
+      "index": 1,
+      "id": "harassment-discrimination",
+      "tabDesc": "May help respond to certain harassment or discrimination allegations in employment — subject to policy wording and exclusions.",
+      "detailTitle": "Human rights and workplace allegations create defence exposure",
+      "detailDescription": "The Ontario Human Rights Code protects equal treatment and freedom from workplace harassment. Allegations may lead to tribunal or court proceedings. Whether EPL defends or indemnifies depends on the policy — not on the allegation alone. Not every complaint or award is insurable.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "harassment-discrimination"
+    },
+    {
+      "index": 2,
+      "id": "retaliation-claims",
+      "tabDesc": "May help respond to certain allegations that an employer retaliated after a protected complaint or report — subject to policy wording.",
+      "detailTitle": "Reporting misconduct can precede a second claim",
+      "detailDescription": "Retaliation or reprisal allegations often follow harassment, safety, or human-rights complaints. Documented investigation and non-retaliation practices matter for both risk management and underwriting. Coverage still turns on definitions, exclusions, and whether the matter is a covered claim under the form.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "retaliation-claims"
+    },
+    {
+      "index": 3,
+      "id": "defence-costs",
+      "tabDesc": "May help with defence costs for covered employment claims — often on a claims-made basis, subject to limits, retentions, reporting conditions, and exclusions.",
+      "detailTitle": "Defence can dominate the cost of an employment claim",
+      "detailDescription": "Even disputed claims generate legal expense. Confirm reporting conditions after a claim or circumstance, whether human-rights proceedings are treated as covered claims, and how defence interacts with indemnity and shared limits. Defence is not an unlimited benefit irrespective of wording.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "defence-costs"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Employment practices liability insurance may respond to certain employment-related claims or allegations — such as wrongful dismissal, discr",
+    "trustPreview": "For Windsor–Essex employers with staff — from small teams to growing organizations — reviewed through an independent broker who can compare "
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "headline": "Employment Practices Liability (EPL)",
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

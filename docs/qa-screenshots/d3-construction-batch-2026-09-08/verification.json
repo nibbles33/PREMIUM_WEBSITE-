@@ -1,0 +1,344 @@
+{
+  "consoleErrors": [],
+  "bondingStateCount": 4,
+  "fidelityStateRemoved": true,
+  "contractorsStatic": {
+    "hasStateImageStage": true,
+    "uniqueStateImages": 4,
+    "stateSrcs": [
+      "/images/contractors-insurance-state-liability.png",
+      "/images/contractors-insurance-state-tools-equipment.png",
+      "/images/contractors-insurance-state-property.png",
+      "/images/contractors-insurance-state-installation-work.png"
+    ],
+    "expectedSrcs": [
+      "/images/contractors-insurance-state-liability.png",
+      "/images/contractors-insurance-state-tools-equipment.png",
+      "/images/contractors-insurance-state-property.png",
+      "/images/contractors-insurance-state-installation-work.png"
+    ],
+    "mappingsMatch": true,
+    "motionClasses": false
+  },
+  "routes": [
+    {
+      "slug": "builders-risk-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "work-in-progress",
+          "tabDesc": "May help address certain physical loss or damage to the structure and installed work during construction — where purchased and subject to policy causes of loss, exclusions, and limits.",
+          "detailTitle": "Hard costs stop when fire or wind hits mid-build",
+          "detailDescription": "Builder's risk insures the project itself — not your contractor's everyday liability policy. Covered causes of loss, deductibles, and whether temporary works are included depend on form and endorsements. Accurate completed value and construction timeline support proper limits.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        },
+        {
+          "index": 1,
+          "id": "materials-on-site-in-transit",
+          "tabDesc": "May address building materials awaiting installation on site — and, where policy wording or endorsements apply, materials in transit or at temporary storage — subject to limits, territory, and conditions.",
+          "detailTitle": "Materials off-site are not automatic",
+          "detailDescription": "Lumber, fixtures, and equipment awaiting installation can represent a large share of project value. Transit and off-site storage are common endorsement items — confirm distance limits, security conditions, and who owns materials (owner vs sub). Do not assume a base course-of-construction form automatically follows materials away from the job site.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        },
+        {
+          "index": 2,
+          "id": "soft-costs",
+          "tabDesc": "May address certain delay-related expenses after a covered loss — where delay-in-completion or soft-cost endorsements are purchased and subject to policy wording.",
+          "detailTitle": "Delay expenses need their own line item",
+          "detailDescription": "Interest, taxes, professional fees, and extended site overhead may require specific soft-cost coverage, limits, or endorsements depending on the policy form. Document and value soft costs explicitly — formula-only limits can understate exposure when a covered peril extends the construction period.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        },
+        {
+          "index": 3,
+          "id": "existing-structure",
+          "tabDesc": "Renovation projects may need scheduled coverage for the existing building while work proceeds — subject to underwriting and policy wording.",
+          "detailTitle": "Occupied renovations change the property picture",
+          "detailDescription": "Standard homeowner or commercial property policies may not respond once renovation scale or vacancy triggers exclusions. Existing structure values, demolition scope, occupancy during work, and who retains property insurance should be resolved before demolition starts.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true,
+        "heroSnippetFound": "course-of-construction",
+        "trustSnippetFound": "Windsor–Essex owners, developers, and contractors",
+        "heroPreview": "Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it ",
+        "trustPreview": "For Windsor–Essex owners, developers, and contractors named in the contract to insure project property — reviewed throug"
+      },
+      "considerations": {
+        "count": 8,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "fidelityStateAbsent": true,
+      "headline": "Builder's Risk Insurance",
+      "overflow_390": 0,
+      "overflow_768": 0,
+      "overflow_1024": 0,
+      "overflow_1440": 0
+    },
+    {
+      "slug": "bonding-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "bid-bonds",
+          "tabDesc": "May be required with a tender — provides assurance to the project owner that a selected bidder will enter the contract and furnish required bonds if awarded, subject to bond terms.",
+          "detailTitle": "Tender security is about commitment — not project completion",
+          "detailDescription": "Bid bonds and consents of surety are tender-phase instruments. They protect the owner if the low bidder withdraws — the surety's obligation is defined in the bond, and the principal typically indemnifies the surety for amounts paid. Bid bonds are generally tender or contractual requirements — not a universal statutory rule for every Ontario construction project.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        },
+        {
+          "index": 1,
+          "id": "performance-bonds",
+          "tabDesc": "A three-party surety bond that may respond if the contractor defaults on performance obligations under the bonded contract — subject to bond conditions and surety remedies.",
+          "detailTitle": "Default triggers a process — not an automatic insurance payout",
+          "detailDescription": "Performance bonds protect the obligee (project owner), not the contractor. If a default is declared, the surety may arrange completion, tender for a replacement contractor, or other remedies per the bond — then seek recovery from the principal under indemnity.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        },
+        {
+          "index": 2,
+          "id": "labour-material-payment-bonds",
+          "tabDesc": "May help ensure certain direct subcontractors and suppliers on the bonded project receive payment for approved work and materials — subject to bond form, notice periods, and claim documentation.",
+          "detailTitle": "Subs and suppliers claim here — not on the performance bond",
+          "detailDescription": "Payment bonds address upstream payment failure on the bonded job. Claimants generally must follow bond notice and documentation requirements. This process is separate from the owner's performance bond claim path.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        },
+        {
+          "index": 3,
+          "id": "licence-permit-bonds",
+          "tabDesc": "May satisfy licensing or permit bonding requirements for regulated trades or municipal licences — where required by the authority having jurisdiction.",
+          "detailTitle": "Regulatory bonds are not project performance bonds",
+          "detailDescription": "Licence and permit bonds guarantee compliance with licence obligations to a government or municipal obligee — different purpose, amount, and underwriting from construction performance programs.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true,
+        "heroSnippetFound": "three-party obligation",
+        "trustSnippetFound": "Windsor–Essex contractors and vendors",
+        "heroPreview": "Surety bonding is structurally different from conventional insurance. A surety bond is a three-party obligation among th",
+        "trustPreview": "For Windsor–Essex contractors and vendors who must post surety for tenders, contracts, or licences — reviewed through an"
+      },
+      "considerations": {
+        "count": 8,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "fidelityStateAbsent": true,
+      "headline": "Surety Bonds",
+      "overflow_390": 0,
+      "overflow_768": 0,
+      "overflow_1024": 0,
+      "overflow_1440": 0
+    },
+    {
+      "slug": "contractors-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "general-liability",
+          "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from your contracting operations — subject to policy terms, exclusions, and limits.",
+          "detailTitle": "Job-site injury claims follow your operations — not the owner's property policy",
+          "detailDescription": "CGL addresses third-party claims from your work — slips, property damage, and certain completed-operations allegations depending on wording. It does not insure your tools, your vehicles, or the building under construction. Contractual additional-insured and waiver requests must match actual policy capabilities.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 1,
+          "hasStateImageStage": true,
+          "currentStateSrc": "http://127.0.0.1:3018/_next/image?url=%2Fimages%2Fcontractors-insurance-state-liability.png&w=1920&q=90"
+        },
+        {
+          "index": 1,
+          "id": "tools-equipment-coverage",
+          "tabDesc": "May help cover owned tools and mobile equipment against covered theft or damage — where purchased and subject to scheduling, locations, and deductibles.",
+          "detailTitle": "Stolen tools are rarely covered by liability alone",
+          "detailDescription": "Tool and equipment policies or inland marine floaters schedule items, job-site limits, and overnight storage rules. A theft from a trailer may be excluded without proper coverage and security compliance.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 1,
+          "hasStateImageStage": true,
+          "currentStateSrc": "/_next/image?url=%2Fimages%2Fcontractors-insurance-state-tools-equipment.png&w=1920&q=90"
+        },
+        {
+          "index": 2,
+          "id": "builder-s-risk",
+          "tabDesc": "Project property coverage for work in progress — usually arranged per project when your contract requires it; separate from ongoing commercial general liability.",
+          "detailTitle": "When the contract names you to insure the build",
+          "detailDescription": "Contractors may be required to place or be named on a builder's risk policy for specific projects. That coverage insures the project structure and materials — not your commercial liability for injury claims. Confirm per contract; do not assume your GL replaces builder's risk.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 1,
+          "hasStateImageStage": true,
+          "currentStateSrc": "/_next/image?url=%2Fimages%2Fcontractors-insurance-state-property.png&w=1920&q=90"
+        },
+        {
+          "index": 3,
+          "id": "wrap-up-liability",
+          "tabDesc": "A wrap-up or OCIP may provide certain project-site liability coverage for enrolled trades — subject to program wording, enrollment, exclusions, and limits.",
+          "detailTitle": "OCIP changes whose policy responds on site",
+          "detailDescription": "Large projects may use an owner- or contractor-controlled wrap-up. A wrap-up may provide certain project-site liability coverage for enrolled trades, subject to program wording, enrollment, exclusions, and limits. Their own insurance program may still be needed for exposures outside the wrap — including off-site operations, auto, tools, and non-enrolled work.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 1,
+          "hasStateImageStage": true,
+          "currentStateSrc": "/_next/image?url=%2Fimages%2Fcontractors-insurance-state-installation-work.png&w=1920&q=90"
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true,
+        "heroSnippetFound": "operating contracting business",
+        "trustSnippetFound": "Windsor–Essex general contractors and trade contractors",
+        "heroPreview": "Contractors insurance is about the operating contracting business — the trade or general contractor that bids work, mana",
+        "trustPreview": "For Windsor–Essex general contractors and trade contractors — reviewed through an independent broker who can align liabi"
+      },
+      "considerations": {
+        "count": 8,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "fidelityStateAbsent": true,
+      "headline": "Contractors Insurance",
+      "staticArchitecture": {
+        "hasStateImageStage": true,
+        "uniqueStateImages": 4,
+        "stateSrcs": [
+          "/images/contractors-insurance-state-liability.png",
+          "/images/contractors-insurance-state-tools-equipment.png",
+          "/images/contractors-insurance-state-property.png",
+          "/images/contractors-insurance-state-installation-work.png"
+        ],
+        "expectedSrcs": [
+          "/images/contractors-insurance-state-liability.png",
+          "/images/contractors-insurance-state-tools-equipment.png",
+          "/images/contractors-insurance-state-property.png",
+          "/images/contractors-insurance-state-installation-work.png"
+        ],
+        "mappingsMatch": true,
+        "motionClasses": false
+      },
+      "overflow_390": 0,
+      "overflow_768": 0,
+      "overflow_1024": 0,
+      "overflow_1440": 0
+    },
+    {
+      "slug": "builders-developers-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "builder-s-risk",
+          "tabDesc": "May help address certain physical loss or damage to each project during construction — where a course-of-construction policy is purchased for that project.",
+          "detailTitle": "Each project needs its own property schedule",
+          "detailDescription": "Developers typically arrange builder's risk per project (or via a master program) covering hard costs and endorsed extensions. Construction financing agreements may require evidence of builder's risk and other specified insurance before advances are released — including lender interests where the documents require them. Soft costs, transit, and existing structures remain endorsement-dependent.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        },
+        {
+          "index": 1,
+          "id": "general-liability",
+          "tabDesc": "May help respond to certain third-party injury or property-damage claims arising from development operations — subject to policy terms.",
+          "detailTitle": "Sales centres and site supervision create liability",
+          "detailDescription": "Development entities face premises and operations exposure at sales offices, model homes, and active sites. Project-specific wrap-up programs may alter how onsite claims are handled — entity GL still matters for non-enrolled activities.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        },
+        {
+          "index": 2,
+          "id": "wrap-up-liability",
+          "tabDesc": "May consolidate liability for enrolled parties on a project under an owner- or sponsor-controlled program — where purchased and subject to enrollment terms.",
+          "detailTitle": "OCIP reduces gaps between trades — at a cost",
+          "detailDescription": "Wrap-ups can centralize certain project liability coverage for enrolled parties, subject to program wording, enrollment, exclusions, and limits. Administration and certificates can be discussed separately. They do not automatically replace every contractor's own CGL for off-site work, auto, or tools. Developers sponsoring OCIPs should coordinate insurance with counsel and any surety requirements separately.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        },
+        {
+          "index": 3,
+          "id": "completed-operations",
+          "tabDesc": "May address certain liability claims alleging injury or damage after handover — where products-completed operations coverage applies under policy wording.",
+          "detailTitle": "Defect claims can surface after occupancy",
+          "detailDescription": "Latent defect and completed-operations claims may arise months or years after sale or lease-up. Policy limits, exclusions, and how long completed-operations coverage applies should be reviewed with your broker — coverage is not open-ended.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "stateImageCount": 0,
+          "hasStateImageStage": false,
+          "currentStateSrc": null
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true,
+        "heroSnippetFound": "ownership or development entity",
+        "trustSnippetFound": "Windsor–Essex builders and developers",
+        "heroPreview": "Builders and developers insurance focuses on the ownership or development entity that acquires sites, finances projects,",
+        "trustPreview": "For Windsor–Essex builders and developers coordinating projects and ownership entities — reviewed through an independent"
+      },
+      "considerations": {
+        "count": 8,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "fidelityStateAbsent": true,
+      "headline": "Builders & Developers Insurance",
+      "overflow_390": 0,
+      "overflow_768": 0,
+      "overflow_1024": 0,
+      "overflow_1440": 0
+    }
+  ],
+  "pass": true
+}

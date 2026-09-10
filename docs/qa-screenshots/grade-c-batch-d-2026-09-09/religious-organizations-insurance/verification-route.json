@@ -1,0 +1,74 @@
+{
+  "slug": "religious-organizations-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "commercial-property",
+      "tabLabel": "PropertyMay help cover sanctuaries, fellowship halls, offices, kitchens, and con",
+      "tabDesc": "May help cover sanctuaries, fellowship halls, offices, kitchens, and contents including audio-visual equipment against covered direct physical loss — subject to policy causes of loss, limits, deductibles, and valuation.",
+      "detailTitle": "Stained glass and AV can exceed ordinary contents limits",
+      "detailDescription": "Houses of worship often hold specialty property — stained glass, organs, historic finishes, and production-grade AV — that may need agreed values or scheduling beyond generic contents limits. Heritage buildings may have restoration requirements that differ from standard replacement-cost assumptions. Kitchens, community halls, and office wings add property values separate from the sanctuary itself. Confirm what your organization owns versus what a landlord or denomination carries on a master policy.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "commercial-property"
+    },
+    {
+      "index": 1,
+      "id": "general-liability",
+      "tabLabel": "LiabilityMay help respond to certain third-party bodily injury or property-damag",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from visitor incidents on premises, parking areas, and congregational activities — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A winter parking-lot fall reaches the organization",
+      "detailDescription": "Congregation and visitor exposure includes services, fellowship events, food preparation in church kitchens, and parking-lot injuries — especially in winter. Hall rentals to third parties may create premises exposure and certificate requirements; renters often need their own event liability depending on the contract. Off-site mission trips and community programs may extend beyond the primary address depending on policy wording and what was disclosed during underwriting — not every activity is automatically covered.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "general-liability"
+    },
+    {
+      "index": 2,
+      "id": "pastoral-counselling-liability",
+      "tabLabel": "CounsellingWhere included in the program, may help address certain claims arisin",
+      "tabDesc": "Where included in the program, may help address certain claims arising from pastoral or spiritual counselling services — subject to policy definitions, qualifications, credentials, and exclusions. Distinct from general premises liability.",
+      "detailTitle": "Counselling allegations need the right policy part",
+      "detailDescription": "Pastoral counselling, spiritual direction, and marriage support offered by clergy or lay counsellors may create professional liability exposure separate from a slip in the nave. Whether coverage responds depends on policy wording, counsellor credentials, and whether services were disclosed during underwriting. Licensed mental-health practitioners may need different professional coverage than informal pastoral care — disclose all counselling programs to your broker.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "pastoral-counselling-liability"
+    },
+    {
+      "index": 3,
+      "id": "abuse-molestation",
+      "tabLabel": "AbuseWhere available as a specialized coverage, may help address certain claims ",
+      "tabDesc": "Where available as a specialized coverage, may help address certain claims alleging abuse or misconduct involving youth or vulnerable persons — subject to policy wording, limits, exclusions, and underwriting review. Not automatic on general liability.",
+      "detailTitle": "Youth ministry deserves its own coverage review",
+      "detailDescription": "Youth ministries, childcare rooms, and programs serving vulnerable persons may need abuse or molestation liability reviewed separately — many general liability forms contain abuse exclusions. Specialized coverage, where offered, is policy-dependent and may review screening, supervision, and safeguarding policies. Coverage may address organizational response to allegations subject to wording — not indemnification of intentional criminal conduct by a perpetrator. Safeguarding practices support safer programs but do not replace appropriate coverage review.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "abuse-molestation"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Churches, mosques, synagogues, temples, and faith-based community centres combine worship premises, congregation activities, hall rentals, pastoral counselling,"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

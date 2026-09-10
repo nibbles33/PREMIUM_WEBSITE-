@@ -1,0 +1,74 @@
+{
+  "slug": "pollution-liability-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "contractors-pollution-liability",
+      "tabLabel": "CPLContractors pollution liability — typically on a claims-made basis — may addr",
+      "tabDesc": "Contractors pollution liability — typically on a claims-made basis — may address certain pollution conditions arising from contracting operations such as excavation, utility work, remediation, or disturbance of contaminated materials, subject to policy definitions, exclusions, retroactive dates, and limits.",
+      "detailTitle": "Bid specs often require CPL — even when CGL is already in place",
+      "detailDescription": "General contractors, excavators, pipeline installers, and remediation subcontractors increasingly face contract requirements for contractors pollution liability separate from commercial general liability. CPL may respond to third-party cleanup costs, bodily injury, and property damage from pollution conditions caused by your work — but asbestos, mould, silica, and known subsurface conditions may be excluded or sublimited. Claims-made triggers mean the claim must be made during the policy period; retroactive dates limit how far back coverage reaches. Match CPL to project types and owner specifications.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "contractors-pollution-liability"
+    },
+    {
+      "index": 1,
+      "id": "site-pollution",
+      "tabLabel": "Site PollutionSite or premises environmental impairment coverage — where purchas",
+      "tabDesc": "Site or premises environmental impairment coverage — where purchased — may address gradual or sudden pollution conditions at owned or operated locations, including storage tanks, waste handling areas, and industrial processes, subject to known-condition exclusions, discovery reporting requirements, and policy limits.",
+      "detailTitle": "Underground tanks and slow leaks outlive standard GL policy periods",
+      "detailDescription": "Gas stations, warehouses with bulk storage, manufacturing plants, and commercial property owners can face gradual soil or groundwater contamination that standard CGL absolute pollution exclusions restrict. Site pollution or environmental impairment forms — often claims-made — may fund investigation and remediation and third-party claims when triggers and retroactive dates align. Pre-existing contamination discovered before inception is typically excluded; Phase I/II history affects underwriting. Ownership changes and legacy operations require disclosure — insurance cannot retroactively erase known conditions.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "site-pollution"
+    },
+    {
+      "index": 2,
+      "id": "transportation-pollution",
+      "tabLabel": "Trans. PollutionTransportation pollution coverage — where included on a pollutio",
+      "tabDesc": "Transportation pollution coverage — where included on a pollution program — may address certain releases during transit of waste, fuel, chemicals, or other pollutants in owned or non-owned vehicles, subject to vehicle schedules, territorial limits, and policy wording distinct from commercial automobile liability.",
+      "detailTitle": "A highway spill is not automatically covered by auto liability alone",
+      "detailDescription": "Commercial automobile policies address third-party injury and property damage from automobile accidents — not necessarily cleanup of pollutants released from cargo or tanks in transit. Transportation pollution extensions, where purchased, may respond to certain environmental cleanup and third-party claims from covered releases during hauling. Waste haulers, fuel delivery, and chemical transporters should confirm whether pollution transit coverage sits on a pollution policy, an automobile endorsement, or a motor carrier package — forms differ and territorial limits apply.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "transportation-pollution"
+    },
+    {
+      "index": 3,
+      "id": "cleanup-defence-costs",
+      "tabLabel": "CleanupPollution policies may allocate limits to emergency response, investigati",
+      "tabDesc": "Pollution policies may allocate limits to emergency response, investigation, remediation, and legal defence for covered pollution claims — subject to insuring agreements, sublimits, deductibles, and exclusions for fines, penalties, and known conditions.",
+      "detailTitle": "Cleanup costs erode limits — defence may be inside the same bucket",
+      "detailDescription": "When a covered pollution event occurs, costs can include emergency response, environmental consultants, soil and groundwater remediation, and third-party bodily injury or property-damage claims. Defence costs often reduce the same policy limit rather than sitting outside it. Ontario's Environmental Protection Act imposes duties to report spills and mitigate harm — those statutory obligations apply whether or not insurance responds. Regulatory fines and penalties are generally excluded or uninsurable; do not assume a cleanup order automatically creates insured coverage without reading the trigger and exclusions.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "cleanup-defence-costs"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Pollution liability insurance addresses environmental contamination exposures that commercial general liability and property policies may exclude or restrict — "
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

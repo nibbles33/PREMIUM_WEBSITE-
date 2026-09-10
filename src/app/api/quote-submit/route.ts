@@ -110,9 +110,10 @@ export async function POST(request: Request) {
     );
   }
 
+  let notified = false;
   try {
-    const emailed = await sendLeadNotification(validated.data, leadId);
-    if (emailed) {
+    notified = await sendLeadNotification(validated.data, leadId);
+    if (notified) {
       try {
         await markLeadEmailSent(leadId);
       } catch (err) {
@@ -121,6 +122,13 @@ export async function POST(request: Request) {
           { leadId, err },
         );
       }
+    } else {
+      // Persist-first: do not fail the request or delete the lead.
+      // Distinguish stored vs notified for operators without exposing internals to visitors.
+      console.error(
+        "[quote-submit] Lead saved but broker email notification did not send",
+        { leadId, notified: false },
+      );
     }
   } catch (err) {
     console.error(
@@ -129,5 +137,5 @@ export async function POST(request: Request) {
     );
   }
 
-  return NextResponse.json({ ok: true, id: leadId });
+  return NextResponse.json({ ok: true, id: leadId, notified });
 }

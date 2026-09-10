@@ -1,0 +1,74 @@
+{
+  "slug": "professional-offices-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "general-liability",
+      "tabLabel": "GLMay help respond to certain third-party bodily injury or property-damage claim",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from your office premises or business operations — such as a client injury in reception or a property-damage allegation tied to your operations — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A client visit creates premises exposure separate from your advice",
+      "detailDescription": "Waiting areas, conference rooms, washrooms, and parking access generate slip-and-fall and property-damage exposure when clients, couriers, or vendors come to you. General liability may address certain operational and premises claims, but allegations that your professional advice caused a financial loss are typically evaluated under professional liability — not ordinary CGL. Disclose whether staff also work at client sites or host off-site meetings.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "general-liability"
+    },
+    {
+      "index": 1,
+      "id": "professional-liability-errors-omissions",
+      "tabLabel": "E&OMay help respond to certain claims alleging a client suffered financial loss ",
+      "tabDesc": "May help respond to certain claims alleging a client suffered financial loss because of your professional advice, design, analysis, or services — where purchased and subject to policy terms, limits, and whether coverage is claims-made or occurrence-based.",
+      "detailTitle": "Bad advice is not a slip-and-fall claim",
+      "detailDescription": "If your office bills for consulting, design, accounting, engineering, financial, or technical advice, clients may allege errors caused tax penalties, project delays, or lost revenue. That is professional liability exposure — separate from premises injury covered by general liability. Some offices purchase E&O as part of a package; others carry a standalone professional liability policy with its own retroactive date and limits. See our Professional Liability page for claims-made, contract, and profession-specific depth.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "professional-liability-errors-omissions"
+    },
+    {
+      "index": 2,
+      "id": "commercial-property",
+      "tabLabel": "PropertyMay help cover office contents, computers, furniture, and tenant improve",
+      "tabDesc": "May help cover office contents, computers, furniture, and tenant improvements against covered causes of loss such as fire, theft, or water damage — subject to policy terms, reported values, and limits.",
+      "detailTitle": "Your landlord's policy does not automatically cover your contents",
+      "detailDescription": "Leased professional suites typically leave the building shell to the landlord while you insure contents, computers, phones, and leasehold improvements you paid for. Owned offices may need building coverage on the structure plus contents inside. Accurate values matter — underinsuring equipment or buildout creates co-insurance penalties on some policies. Business interruption, where purchased, responds only after a covered direct physical loss to insured property and subject to waiting periods.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "commercial-property"
+    },
+    {
+      "index": 3,
+      "id": "cyber-liability",
+      "tabLabel": "CyberMay help address certain costs arising from data breaches, ransomware, or n",
+      "tabDesc": "May help address certain costs arising from data breaches, ransomware, or network security incidents affecting client records, billing systems, or cloud platforms — where purchased and subject to policy terms — distinct from ordinary general liability.",
+      "detailTitle": "Client files on your server create exposure GL may exclude",
+      "detailDescription": "Professional offices store contracts, financial records, personnel files, and client credentials — making them targets for phishing, ransomware, and unauthorized access. Standard general liability and many E&O policies exclude or limit cyber events. Cyber or privacy coverage, where available, may help with certain forensic, notification, and business-interruption costs depending on wording, but it does not replace sound access controls, backups, or vendor management.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "cyber-liability"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Professional offices combine premises where clients visit, equipment and records that keep the practice running, and — for many firms — advice or design service"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

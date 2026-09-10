@@ -1,0 +1,98 @@
+{
+  "consoleErrors": [],
+  "explorer": [
+    {
+      "index": 0,
+      "tabTitle": "Patron Claims",
+      "tabDesc": "May help respond to certain claims alleging that a patron served alcohol at your licensed premises or permitted event caused bodily injury or property damage to a third party, subject to policy terms, exclusions, and limits.",
+      "detailTitle": "When service at the bar becomes a third-party claim",
+      "detailDescription": "Claims that a patron was overserved, or that alcohol contributed to a crash, assault, or other harm after leaving, are a core civil exposure AGCO's licensing guides describe separately from administrative licence penalties. Depending on the policy, alcohol-related third-party injury and property-damage claims may be excluded, sub-limited, or addressed through liquor liability coverage purchased alongside general liability. What triggers coverage, who qualifies as an insured, and whether the claim arose from on-premises service versus a permitted off-site event depend on policy wording — confirm scope with your broker.",
+      "duplicateTitle": false,
+      "duplicateDesc": false,
+      "hasImage": true,
+      "objectFit": "contain",
+      "overflow": 0,
+      "hasJackOs": false,
+      "hasDutyToDefend": false
+    },
+    {
+      "index": 1,
+      "tabTitle": "Altercations",
+      "tabDesc": "May address certain altercation or security-incident claims linked to alcohol service at your premises or event, where included in the policy. Insurance policies commonly refer to this exposure as \"assault and battery\" — confirm whether it is covered, capped, or excluded in your wording.",
+      "detailTitle": "When an altercation leads to a liability claim",
+      "detailDescription": "Late-night service, crowded patios, and special events can generate altercation or security-response allegations tied to intoxicated patrons — losses carriers often treat differently from a simple slip-and-fall. Depending on the policy, assault-and-battery coverage may be included, sub-limited, or excluded, particularly where security or crowd-control exposures are involved. Your broker should review whether your expected crowd-control and service hours are reflected in the coverage you are purchasing.",
+      "duplicateTitle": false,
+      "duplicateDesc": false,
+      "hasImage": true,
+      "objectFit": "contain",
+      "overflow": 0,
+      "hasJackOs": false,
+      "hasDutyToDefend": false
+    },
+    {
+      "index": 2,
+      "tabTitle": "Defence Costs",
+      "tabDesc": "May help with legal defence costs for covered liquor liability claims, subject to policy terms, deductibles or retentions, and whether the underlying allegation falls within the insuring agreement.",
+      "detailTitle": "Defence costs can accrue before fault is determined",
+      "detailDescription": "Civil claims alleging overservice or alcohol-related harm can require immediate legal response — even when you believe service was responsible. Where defence coverage applies, how legal costs are handled depends on the policy wording, including applicable deductibles, retentions, limits and exclusions. Treatment of punitive damages, regulatory fines, and administrative proceedings also depends on policy wording — do not assume they are covered or excluded without review. AGCO licence suspension or revocation is a regulatory enforcement action, separate from a third-party civil lawsuit.",
+      "duplicateTitle": false,
+      "duplicateDesc": false,
+      "hasImage": true,
+      "objectFit": "contain",
+      "overflow": 0,
+      "hasJackOs": false,
+      "hasDutyToDefend": false
+    },
+    {
+      "index": 3,
+      "tabTitle": "Host / Event",
+      "tabDesc": "May address certain alcohol-related liability for temporary events, bring-your-own functions, or service under a Special Occasion Permit or caterer's authorization — distinct from ongoing premises liquor liability under a Liquor Sales Licence, subject to policy terms.",
+      "detailTitle": "A one-night event is not the same risk profile as a licensed bar",
+      "detailDescription": "Weddings, fundraisers, corporate functions, and catered off-site service often rely on Special Occasion Permits, Caterer's Endorsements, or host-liquor arrangements rather than a standing Liquor Sales Licence at a fixed address. LCBO's Special Occasion Permit FAQ states provincial regulations do not require permit holders to carry party liability insurance — but venues, municipalities, and rental contracts frequently do. Host liquor or event liquor coverage, where available, is often underwritten separately from premises liquor liability; service model, permit type, attendance, and whether you control service must be disclosed to your broker.",
+      "duplicateTitle": false,
+      "duplicateDesc": false,
+      "hasImage": true,
+      "objectFit": "contain",
+      "overflow": 0,
+      "hasJackOs": false,
+      "hasDutyToDefend": false
+    }
+  ],
+  "viewports": [
+    {
+      "viewport": "390",
+      "overflow": 0,
+      "pass": true
+    },
+    {
+      "viewport": "768",
+      "overflow": 0,
+      "pass": true
+    },
+    {
+      "viewport": "1024",
+      "overflow": 0,
+      "pass": true
+    },
+    {
+      "viewport": "1440",
+      "overflow": 0,
+      "pass": true
+    }
+  ],
+  "considerations": {
+    "count": 9,
+    "collapsedByDefault": true,
+    "singleOpen": true,
+    "noAgcoAppDocsClaim": true
+  },
+  "explorerTabCount": 4,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "faqCount": 8,
+  "faqQuestions": [],
+  "pass": false
+}

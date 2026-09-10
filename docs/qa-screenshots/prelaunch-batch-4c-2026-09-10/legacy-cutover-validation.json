@@ -1,0 +1,478 @@
+{
+  "summary": {
+    "ok": true,
+    "redirectsConfigured": 10,
+    "redirectVariantChecks": 20,
+    "redirectPass": 20,
+    "goneConfigured": 49,
+    "gonePass": 49,
+    "loops": 0,
+    "chains": 0,
+    "destination404s": 0,
+    "errors": [],
+    "talkToBroker": {
+      "status": 308,
+      "location": "/contact/?intent=broker",
+      "url": "http://localhost:3000/talk-to-a-broker/"
+    },
+    "disclosureStatus": 200
+  },
+  "redirectResults": [
+    {
+      "path": "/about-us/",
+      "status": 308,
+      "location": "/about/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/about-us",
+      "status": 308,
+      "location": "/about/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/contact-02/",
+      "status": 308,
+      "location": "/contact/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/contact-02",
+      "status": 308,
+      "location": "/contact/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/contractor-construction-insurance/",
+      "status": 308,
+      "location": "/contractors-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/contractor-construction-insurance",
+      "status": 308,
+      "location": "/contractors-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/landscaping-insurance/",
+      "status": 308,
+      "location": "/landscaping-snow-removal-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/landscaping-insurance",
+      "status": 308,
+      "location": "/landscaping-snow-removal-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/manufacturer-insurance/",
+      "status": 308,
+      "location": "/manufacturing-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/manufacturer-insurance",
+      "status": 308,
+      "location": "/manufacturing-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/rented-dwelling-insurance/",
+      "status": 308,
+      "location": "/landlord-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/rented-dwelling-insurance",
+      "status": 308,
+      "location": "/landlord-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/request-quote/",
+      "status": 308,
+      "location": "/get-a-quote/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/request-quote",
+      "status": 308,
+      "location": "/get-a-quote/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/snow-removal-insurance/",
+      "status": 308,
+      "location": "/landscaping-snow-removal-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/snow-removal-insurance",
+      "status": 308,
+      "location": "/landscaping-snow-removal-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/watercraft-insurance/",
+      "status": 308,
+      "location": "/boat-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/watercraft-insurance",
+      "status": 308,
+      "location": "/boat-insurance/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/insurance/",
+      "status": 308,
+      "location": "/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    },
+    {
+      "path": "/insurance",
+      "status": 308,
+      "location": "/",
+      "finalStatus": 200,
+      "hops": 1,
+      "ok": true
+    }
+  ],
+  "goneResults": [
+    {
+      "path": "/blog/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/pool-and-spa/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/faqs/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/2-columns/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/3-columns/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/blog-grid/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/book-a-appointment/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/portfolio/wellness-program/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/project-single/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/services-01/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/services-02/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/single-left-sidebar/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/single-right-sidebar/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/team-single/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/testimonials/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/footer-01/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/footer-02/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/footer-03/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/footer-04/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/header-01-dark/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/header-01/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/header-02/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/header-03-dark/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/header-03/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/header-04-dark/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/header-04/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/header-2-dark/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/offcanvas-sidebar-home-02/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/offcanvas-sidebar-home-03/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/offcanvas-sidebar/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/price-table-year/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/noxiy_builder/price-table/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/car-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/cyber-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/dental-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/disability-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/farm-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/final-expense/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/fire-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/health-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/home-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/liability-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/life-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/marine-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/medical-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/term-life/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/travels-insurance/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/universal-life/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    },
+    {
+      "path": "/service/whole-life/",
+      "status": 410,
+      "location": null,
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "directors-officers-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "side-a-individual-coverage",
+      "tabDesc": "May help respond to certain covered loss that insured directors or officers must bear personally when the organization cannot or does not indemnify them — subject to policy terms.",
+      "detailTitle": "Personal assets are exposed when indemnification fails",
+      "detailDescription": "Side A matters most in insolvency or non-indemnifiable situations. It does not erase every personal exposure — conduct exclusions and final-adjudication language still apply. Confirm who qualifies as an insured person under the form.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "side-a-individual-coverage"
+    },
+    {
+      "index": 1,
+      "id": "side-b-corporate-reimbursement",
+      "tabDesc": "May reimburse the organization when it indemnifies directors or officers for covered claims — typically subject to a retention.",
+      "detailTitle": "The company’s indemnity promise needs balance-sheet backup",
+      "detailDescription": "Side B protects the entity’s cash after it advances defence or settlement for individuals under corporate law and by-laws. Deductibles or retentions usually attach here rather than on Side A. Indemnification capacity and insurance response remain separate questions.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "side-b-corporate-reimbursement"
+    },
+    {
+      "index": 2,
+      "id": "side-c-entity-coverage",
+      "tabDesc": "May extend to certain claims against the organization itself — scope varies materially by form and whether the insured is public, private, or nonprofit.",
+      "detailTitle": "Entity coverage is not one-size-fits-all",
+      "detailDescription": "Public-company Side C is often limited to securities claims. Private and nonprofit forms may be broader or packaged differently. Do not assume Side C covers every lawsuit naming the company — many operational claims belong in general liability, professional liability, or EPL instead.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "side-c-entity-coverage"
+    },
+    {
+      "index": 3,
+      "id": "defence-costs",
+      "tabDesc": "May help with legal defence costs for covered claims — often on a claims-made basis. Defence costs frequently erode shared policy limits unless the form provides otherwise.",
+      "detailTitle": "Legal bills can consume the limit before settlement",
+      "detailDescription": "Management liability disputes are expensive. Confirm whether defence is inside or outside limits, how advancement works, and reporting deadlines after a claim or circumstance. Defence is not an automatic unlimited benefit irrespective of outcome or wording.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "activeId": "defence-costs"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Directors and officers liability insurance may help respond to certain claims alleging wrongful acts by directors, officers, or other insure",
+    "trustPreview": "For Windsor–Essex corporations, nonprofit boards, startups with investors, and private companies whose directors and officers need managemen"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "headline": "Directors & Officers (D&O) Insurance",
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

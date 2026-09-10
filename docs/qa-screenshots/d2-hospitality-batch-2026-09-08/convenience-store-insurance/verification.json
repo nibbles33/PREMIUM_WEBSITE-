@@ -1,0 +1,59 @@
+{
+  "slug": "convenience-store-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "commercial-property",
+      "tabDesc": "May help cover the building, coolers, shelving, inventory, and point-of-sale equipment against covered causes of loss such as fire, theft, or equipment breakdown — subject to policy terms, theft-security conditions, and limits.",
+      "detailTitle": "Coolers, inventory, and late-night theft drive property values",
+      "detailDescription": "C-stores concentrate value in refrigerated and frozen inventory, general merchandise, and store fixtures — with higher theft exposure during extended or 24-hour hours. Inventory coverage depends on reported values, security requirements in the policy, and scheduled causes of loss. Stores that sell lottery products, tobacco, prepared food, or AGCO-authorized retail alcohol create additional underwriting questions separate from a generic retail property form — disclose your actual product mix to your broker.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 1,
+      "id": "general-liability",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from customer incidents on your premises — slips at entrances, pump islands, or parking areas — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A slip at the pump island is a premises liability claim",
+      "detailDescription": "Convenience and gas-bar operations combine indoor retail traffic with outdoor pump islands, propane exchange, and parking-lot exposure — especially in winter conditions. Product liability for prepared food or retail goods may arise separately from a simple premises injury depending on what you sell and how the policy is structured. Franchise, landlord, or fuel-supplier agreements may require specific limits or additional-insured certificates — contractual requirements reviewed against your policy.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 2,
+      "id": "pollution-liability",
+      "tabDesc": "May help address certain pollution liability claims arising from underground storage tanks, fuel dispensing equipment, or gradual contamination — where purchased and subject to policy terms — distinct from standard commercial property forms.",
+      "detailTitle": "Fuel tanks create environmental exposure property policies may not fully address",
+      "detailDescription": "Stores with gasoline or diesel dispensing and underground storage tanks face environmental contamination exposure regulated under technical standards for fuel equipment. Standard property policies may not fully address gradual pollution or third-party cleanup costs — pollution liability coverage, where available, is typically reviewed separately from building and inventory limits. Retail-only c-stores without fuel operations may not need this component — disclose whether you own, lease, or operate tanks to your broker.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 3,
+      "id": "crime-hold-up",
+      "tabDesc": "May help address certain losses from robbery, theft, burglary, or employee dishonesty — where purchased — subject to policy limits, deductibles, and security conditions such as alarms, cameras, and safe practices.",
+      "detailTitle": "Cash-heavy operations face crime exposure standard property may not cover",
+      "detailDescription": "Late-night convenience and gas-bar operations face robbery, burglary, and internal theft exposure that standard property forms treat differently from liability claims. Crime endorsements, where available, may address money and securities loss, safe burglary, and employee dishonesty — subject to underwriting review of drop schedules, camera coverage, panic alarms, and prior loss history. Insurers often tie crime terms to documented security practices rather than assuming every theft scenario is covered.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "considerations": {
+    "count": 7,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "overflow_390": 0,
+  "overflow_1440": 0
+}

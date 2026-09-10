@@ -1,0 +1,42 @@
+{
+  "tools": {
+    "stackedVsCompositeProof": {
+      "mean": 0.007,
+      "max": 178.333,
+      "pixels": 1573352,
+      "confidence": "low"
+    },
+    "stackedVsFinalState": {
+      "mean": 0.007,
+      "max": 178.333,
+      "pixels": 1573352,
+      "confidence": "low"
+    },
+    "compositeProofVsFinalState": {
+      "mean": 0.0,
+      "max": 0.0,
+      "pixels": 1573352,
+      "confidence": "high"
+    }
+  },
+  "builders": {
+    "stackedVsCompositeProof": {
+      "mean": 0.0,
+      "max": 0.0,
+      "pixels": 1573352,
+      "confidence": "high"
+    },
+    "stackedVsFinalState": {
+      "mean": 0.0,
+      "max": 0.0,
+      "pixels": 1573352,
+      "confidence": "high"
+    },
+    "compositeProofVsFinalState": {
+      "mean": 0.0,
+      "max": 0.0,
+      "pixels": 1573352,
+      "confidence": "high"
+    }
+  }
+}

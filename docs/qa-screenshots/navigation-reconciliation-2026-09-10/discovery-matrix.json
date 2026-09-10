@@ -1,0 +1,630 @@
+{
+  "totalRoutes": 60,
+  "zeroDiscoveryCount": 0,
+  "zeroDiscovery": [],
+  "cannabisRetail": {
+    "route": "/cannabis-retail-insurance/",
+    "mega": true,
+    "mobile": true,
+    "homepage": true,
+    "hub": true,
+    "relatedInbound": true,
+    "footerOther": false,
+    "discoverable": true
+  },
+  "cannabisProducer": {
+    "route": "/cannabis-producer-insurance/",
+    "mega": true,
+    "mobile": true,
+    "homepage": true,
+    "hub": true,
+    "relatedInbound": true,
+    "footerOther": false,
+    "discoverable": true
+  },
+  "errors": [],
+  "warnings": [],
+  "matrix": [
+    {
+      "route": "/auto-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/boat-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/bonding-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/builders-developers-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/builders-risk-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/business-interruption-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/cannabis-producer-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": true,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/cannabis-retail-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": true,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/cargo-freight-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/commercial-auto-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/commercial-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/commercial-property-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/condo-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/condominium-corporation-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/contractors-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/convenience-store-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/cottage-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/crime-fidelity-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/cyber-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/daycare-private-school-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/directors-officers-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/dump-truck-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/employment-practices-liability-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/event-liability-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/farm-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/fitness-gym-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/food-truck-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/garage-dealership-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/greenhouse-agribusiness-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/grocery-specialty-food-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/group-home-auto-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/home-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/home-sharing-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/hotel-motel-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/landlord-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/landscaping-snow-removal-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/life-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/liquor-liability-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/manufacturing-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/medical-dental-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/mobile-home-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/motorcycle-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/non-profit-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/personal-umbrella-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/pharmacy-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/pollution-liability-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/product-recall-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/professional-liability-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/professional-offices-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/property-management-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/real-estate-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/religious-organizations-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/restaurant-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/retail-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/salon-barber-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/small-business-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": false,
+      "discoverable": true
+    },
+    {
+      "route": "/tenant-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/travel-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": false,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/trucking-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": true,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    },
+    {
+      "route": "/warehousing-insurance/",
+      "mega": true,
+      "mobile": true,
+      "homepage": true,
+      "hub": false,
+      "relatedInbound": false,
+      "footerOther": true,
+      "discoverable": true
+    }
+  ],
+  "ok": true
+}

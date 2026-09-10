@@ -11,7 +11,7 @@ import type { BusinessQuoteMeta } from "@/components/HeroBusinessFlow";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
-const BROKER_HREF = "/talk-to-a-broker/";
+const BROKER_HREF = "/contact/?intent=broker";
 
 export default function Hero() {
   const [activeId, setActiveId] = useState<HeroCategoryId>("auto");

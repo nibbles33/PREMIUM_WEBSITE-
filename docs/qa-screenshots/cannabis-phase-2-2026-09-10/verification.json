@@ -1,0 +1,178 @@
+{
+  "pass": true,
+  "navigationChanged": false,
+  "staticNavCannabisReferences": false,
+  "retail": {
+    "slug": "cannabis-retail-insurance",
+    "pass": true,
+    "errors": [],
+    "explorer": [
+      {
+        "id": "general-liability",
+        "selected": true,
+        "detailTitle": "A slip at the entrance is a premises claim — not a licensing issue",
+        "detailBodyLen": 522,
+        "hasV2Pair": true
+      },
+      {
+        "id": "cannabis-property-stock",
+        "selected": true,
+        "detailTitle": "Packaged cannabis stock is not ordinary boutique inventory",
+        "detailBodyLen": 443,
+        "hasV2Pair": true
+      },
+      {
+        "id": "cannabis-product-liability",
+        "selected": true,
+        "detailTitle": "Selling sealed product can still put your store on a claim",
+        "detailBodyLen": 424,
+        "hasV2Pair": true
+      },
+      {
+        "id": "cannabis-crime-theft",
+        "selected": true,
+        "detailTitle": "Burglary, employee theft, and social engineering are different coverages",
+        "detailBodyLen": 420,
+        "hasV2Pair": true
+      },
+      {
+        "id": "business-interruption",
+        "selected": true,
+        "detailTitle": "Rent continues when a covered loss closes the doors",
+        "detailBodyLen": 444,
+        "hasV2Pair": true
+      }
+    ],
+    "responsive": [
+      {
+        "viewport": "390",
+        "overflowX": false,
+        "hasH1": true,
+        "hasExplorer": true,
+        "hasCta": true
+      },
+      {
+        "viewport": "768",
+        "overflowX": false,
+        "hasH1": true,
+        "hasExplorer": true,
+        "hasCta": true
+      },
+      {
+        "viewport": "1024",
+        "overflowX": false,
+        "hasH1": true,
+        "hasExplorer": true,
+        "hasCta": true
+      },
+      {
+        "viewport": "1440",
+        "overflowX": false,
+        "hasH1": true,
+        "hasExplorer": true,
+        "hasCta": true
+      }
+    ],
+    "counts": {
+      "considerationNodes": 0,
+      "faqNodes": 13,
+      "h1": "Cannabis Retail Insurance",
+      "explorerPresent": true,
+      "overflowX": false
+    }
+  },
+  "producer": {
+    "slug": "cannabis-producer-insurance",
+    "pass": true,
+    "errors": [],
+    "explorer": [
+      {
+        "id": "cannabis-property-infrastructure",
+        "selected": true,
+        "detailTitle": "The grow room is a production asset — not just a warehouse bay",
+        "detailBodyLen": 394,
+        "hasV2Pair": true
+      },
+      {
+        "id": "cannabis-crop-stock",
+        "selected": true,
+        "detailTitle": "Living plants are not finished packaged inventory",
+        "detailBodyLen": 471,
+        "hasV2Pair": true
+      },
+      {
+        "id": "equipment-breakdown",
+        "selected": true,
+        "detailTitle": "A failed HVAC motor is not the same claim as a fire",
+        "detailBodyLen": 412,
+        "hasV2Pair": true
+      },
+      {
+        "id": "cannabis-product-liability",
+        "selected": true,
+        "detailTitle": "Finished goods can generate claims long after release",
+        "detailBodyLen": 400,
+        "hasV2Pair": true
+      },
+      {
+        "id": "cannabis-product-recall",
+        "selected": true,
+        "detailTitle": "A regulatory recall duty is not an insurance cheque",
+        "detailBodyLen": 424,
+        "hasV2Pair": true
+      },
+      {
+        "id": "business-interruption",
+        "selected": true,
+        "detailTitle": "Payroll and fixed costs continue when a covered loss stops production",
+        "detailBodyLen": 477,
+        "hasV2Pair": true
+      }
+    ],
+    "responsive": [
+      {
+        "viewport": "390",
+        "overflowX": false,
+        "hasH1": true,
+        "hasExplorer": true,
+        "hasCta": true
+      },
+      {
+        "viewport": "768",
+        "overflowX": false,
+        "hasH1": true,
+        "hasExplorer": true,
+        "hasCta": true
+      },
+      {
+        "viewport": "1024",
+        "overflowX": false,
+        "hasH1": true,
+        "hasExplorer": true,
+        "hasCta": true
+      },
+      {
+        "viewport": "1440",
+        "overflowX": false,
+        "hasH1": true,
+        "hasExplorer": true,
+        "hasCta": true
+      }
+    ],
+    "counts": {
+      "considerationNodes": 0,
+      "faqNodes": 14,
+      "h1": "Cannabis Producer Insurance",
+      "explorerPresent": true,
+      "overflowX": false
+    }
+  },
+  "notes": [
+    "Navigation intentionally NOT modified in Phase 2.",
+    "Retail explorer image: cannabis-retail-insurance-interactive-master.png (Phase-2 stand-in on disk; dedicated final art still required before launch).",
+    "Producer explorer image: TEMPORARILY reuses manufacturing-insurance-interactive-master.png.",
+    "Hero photography: TEMPORARY stand-ins (retail-insurance.webp / manufacturing-insurance.webp).",
+    "CANNABIS RETAIL EXPLORER IMAGE: DEDICATED IMAGE REQUIRED BEFORE LAUNCH",
+    "CANNABIS PRODUCER EXPLORER IMAGE: DEDICATED IMAGE REQUIRED BEFORE LAUNCH"
+  ]
+}

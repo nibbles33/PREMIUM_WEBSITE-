@@ -1,0 +1,59 @@
+{
+  "slug": "salon-barber-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "general-liability",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from premises incidents in reception, waiting, and service areas — such as slip-and-fall — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "When a wet floor in reception becomes a premises claim",
+      "detailDescription": "Salons and barbershops concentrate clients in reception areas, walkways, and wash stations where wet floors, cords, and product spills create slip-and-fall exposure distinct from a treatment-gone-wrong claim. General liability may address certain premises and operations claims, but scope depends on policy wording and how your location, chair-rental model, and any mobile services are disclosed during underwriting.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 1,
+      "id": "professional-treatment-liability",
+      "tabDesc": "May help respond to certain claims alleging injury, burns, scarring, or allergic reaction from professional services you perform — such as cuts, colour, chemical treatments, or waxing — subject to policy terms and how services are scheduled.",
+      "detailTitle": "A colour reaction is a professional claim, not a slip-and-fall",
+      "detailDescription": "Claims alleging a cut, chemical burn, scalp reaction, or injury from a treatment you performed are typically evaluated as professional or treatment liability — separate from a simple premises injury. Insurers often ask for your full service menu; waxing, advanced esthetics, laser, injections, or medical-aesthetic procedures may need specific disclosure and may not be included under standard salon wording. Do not assume every treatment type is automatically covered without review.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 2,
+      "id": "commercial-property",
+      "tabDesc": "May help cover styling stations, dryers, chairs, product inventory, leasehold improvements, and other business property against covered causes of loss — subject to policy terms, causes of loss, and limits.",
+      "detailTitle": "Stations, tools, and retail inventory add up quickly",
+      "detailDescription": "Salon property value sits in styling stations, equipment, back-bar inventory, and tenant improvements — with theft and water damage among common loss scenarios. Tools used off-premises or by mobile stylists may be underwritten differently from fixed shop equipment. Confirm what is owned by the salon versus booth renters, and whether gear removed from the premises needs separate scheduling.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 3,
+      "id": "product-liability",
+      "tabDesc": "May help respond to certain claims alleging illness, allergic reaction, or injury from retail products you sell or recommend — often as products liability within a general liability policy or by endorsement — subject to policy terms.",
+      "detailTitle": "Retail product claims are separate from a bad haircut",
+      "detailDescription": "Selling shampoo, colour care, or skin products in-salon can generate product liability allegations distinct from a professional treatment claim. What triggers coverage, how completed products are defined, and whether professional-use-only products sold to clients are included depend on policy wording — confirm scope with your broker rather than assuming retail shelves are automatically fully covered.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "considerations": {
+    "count": 6,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "overflow_390": 0,
+  "overflow_1440": 0
+}

@@ -1,0 +1,99 @@
+{
+  "categoriesPass": 10,
+  "categoriesTotal": 10,
+  "totalHomepageProductLinks": 54,
+  "results": [
+    {
+      "category": "transportation",
+      "found": 5,
+      "expected": 5,
+      "missing": [],
+      "extra": [],
+      "duplicatesWithinCategory": false,
+      "status": "PASS"
+    },
+    {
+      "category": "construction",
+      "found": 7,
+      "expected": 7,
+      "missing": [],
+      "extra": [],
+      "duplicatesWithinCategory": false,
+      "status": "PASS"
+    },
+    {
+      "category": "property",
+      "found": 6,
+      "expected": 6,
+      "missing": [],
+      "extra": [],
+      "duplicatesWithinCategory": false,
+      "status": "PASS"
+    },
+    {
+      "category": "manufacturing",
+      "found": 4,
+      "expected": 4,
+      "missing": [],
+      "extra": [],
+      "duplicatesWithinCategory": false,
+      "status": "PASS"
+    },
+    {
+      "category": "hospitality",
+      "found": 5,
+      "expected": 5,
+      "missing": [],
+      "extra": [],
+      "duplicatesWithinCategory": false,
+      "status": "PASS"
+    },
+    {
+      "category": "professional",
+      "found": 5,
+      "expected": 5,
+      "missing": [],
+      "extra": [],
+      "duplicatesWithinCategory": false,
+      "status": "PASS"
+    },
+    {
+      "category": "retail",
+      "found": 6,
+      "expected": 6,
+      "missing": [],
+      "extra": [],
+      "duplicatesWithinCategory": false,
+      "status": "PASS"
+    },
+    {
+      "category": "health",
+      "found": 4,
+      "expected": 4,
+      "missing": [],
+      "extra": [],
+      "duplicatesWithinCategory": false,
+      "status": "PASS"
+    },
+    {
+      "category": "community",
+      "found": 6,
+      "expected": 6,
+      "missing": [],
+      "extra": [],
+      "duplicatesWithinCategory": false,
+      "status": "PASS"
+    },
+    {
+      "category": "specialty",
+      "found": 6,
+      "expected": 6,
+      "missing": [],
+      "extra": [],
+      "duplicatesWithinCategory": false,
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "ok": true
+}

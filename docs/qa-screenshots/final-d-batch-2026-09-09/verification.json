@@ -1,0 +1,118 @@
+{
+  "consoleErrors": [],
+  "routes": [
+    {
+      "slug": "crime-fidelity-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Many property forms exclude or restrict insider theft",
+        "A forged instrument can drain an account before anyone notices",
+        "Cash and negotiable instruments need their own crime agreements",
+        "A convincing email is not the same as a computer takeover"
+      ],
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true,
+        "heroPreview": "Crime & Fidelity Insurance can address specified first-party losses involving employee dishonesty, theft, forgery, fraud, money and securiti",
+        "trustPreview": "For Windsor–Essex businesses handling cash, payroll, client funds, retail inventory, or payment instructions — reviewed through an independe"
+      },
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "directors-officers-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Personal assets are exposed when indemnification fails",
+        "The company’s indemnity promise needs balance-sheet backup",
+        "Entity coverage is not one-size-fits-all",
+        "Legal bills can consume the limit before settlement"
+      ],
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true,
+        "heroPreview": "Directors and officers liability insurance may help respond to certain claims alleging wrongful acts by directors, officers, or other insure",
+        "trustPreview": "For Windsor–Essex corporations, nonprofit boards, startups with investors, and private companies whose directors and officers need managemen"
+      },
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "employment-practices-liability-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Termination disputes are common — insurance is not severance pay",
+        "Human rights and workplace allegations create defence exposure",
+        "Reporting misconduct can precede a second claim",
+        "Defence can dominate the cost of an employment claim"
+      ],
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true,
+        "heroPreview": "Employment practices liability insurance may respond to certain employment-related claims or allegations — such as wrongful dismissal, discr",
+        "trustPreview": "For Windsor–Essex employers with staff — from small teams to growing organizations — reviewed through an independent broker who can compare "
+      },
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "product-recall-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Pulling product is an operations problem before it is a liability lawsuit",
+        "Replacement is a separate expense category — not automatic",
+        "Finding the source and scope drives both cost and credibility",
+        "Reputation spend is optional coverage, not a free add-on"
+      ],
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true,
+        "heroPreview": "Product recall insurance addresses specified first-party recall or withdrawal costs — and other scheduled expenses — only where the policy t",
+        "trustPreview": "For Windsor–Essex food manufacturers, consumer-goods producers, importers, and distributors whose products could face a voluntary or regulat"
+      },
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    }
+  ],
+  "pass": true
+}

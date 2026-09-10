@@ -1,0 +1,1275 @@
+{
+  "summary": {
+    "total": 125,
+    "high": 2,
+    "medium": 40,
+    "low": 83,
+    "highRiskFiles": [
+      {
+        "file": "/images/partners/partner-coast-underwriters.png",
+        "w": 170,
+        "h": 170,
+        "reason": "Logo under 180px — soft when enlarged"
+      },
+      {
+        "file": "/images/partners/partner-forward.png",
+        "w": 150,
+        "h": 93,
+        "reason": "Logo under 180px — soft when enlarged"
+      }
+    ],
+    "mediumRiskPhotos": []
+  },
+  "results": [
+    {
+      "file": "/images/photography/commercial/bonding-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/builders-developers-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/builders-risk-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/business-interruption-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/cargo-freight-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/commercial-auto-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/commercial-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/commercial-property-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/condo-property-management.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/contractors-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/convenience-store-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/crime-fidelity-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/cyber-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/daycare-private-school-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/dump-truck-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/event-venue.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/executive-leadership.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/farm-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/fitness-gym-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/food-truck-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/garage-dealership-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/greenhouse.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/grocery-specialty-food-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/hotel-motel-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/landscaping-snow-removal-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/manufacturing-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/medical-dental-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/non-profit-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/pharmacy-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/professional-offices-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/real-estate-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/religious-organizations-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/restaurant-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/retail-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/salon-barber-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/small-business-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/trucking-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/commercial/warehousing-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/auto-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/boat.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/condo.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/cottage.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/group-home-auto-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/home-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/home-sharing-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/landlord.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/life-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/mobile-home-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/motorcycle.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/personal-umbrella-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/tenant.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/personal/travel-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/special/about.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/special/contact.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/special/homepage-hero.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/photography/special/team.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-abex.png",
+      "type": "png",
+      "intrinsicWidth": 191,
+      "intrinsicHeight": 158,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-aig.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-am-fredericks.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 200,
+      "intrinsicHeight": 200,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-apollo.png",
+      "type": "png",
+      "intrinsicWidth": 1200,
+      "intrinsicHeight": 628,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-april.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 200,
+      "intrinsicHeight": 200,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-aviva.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-beazley.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 525,
+      "intrinsicHeight": 440,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-burns-wilcox.png",
+      "type": "png",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-caa.png",
+      "type": "png",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-cansure.png",
+      "type": "png",
+      "intrinsicWidth": 286,
+      "intrinsicHeight": 288,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-ches-special-risk.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 200,
+      "intrinsicHeight": 200,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-chubb.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-coachman.png",
+      "type": "png",
+      "intrinsicWidth": 250,
+      "intrinsicHeight": 250,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-coast-underwriters.png",
+      "type": "png",
+      "intrinsicWidth": 170,
+      "intrinsicHeight": 170,
+      "visibleQualityRisk": "HIGH",
+      "reason": "Logo under 180px — soft when enlarged",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": true
+    },
+    {
+      "file": "/images/partners/partner-definity.png",
+      "type": "png",
+      "intrinsicWidth": 600,
+      "intrinsicHeight": 600,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-ecclesiastical.png",
+      "type": "png",
+      "intrinsicWidth": 200,
+      "intrinsicHeight": 200,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-echelon.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-facility-association.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 384,
+      "intrinsicHeight": 307,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-forward.png",
+      "type": "png",
+      "intrinsicWidth": 150,
+      "intrinsicHeight": 93,
+      "visibleQualityRisk": "HIGH",
+      "reason": "Logo under 180px — soft when enlarged",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": true
+    },
+    {
+      "file": "/images/partners/partner-gore.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-groupone.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 200,
+      "intrinsicHeight": 200,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-intact.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-jevco.png",
+      "type": "png",
+      "intrinsicWidth": 480,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-lions-gate.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 200,
+      "intrinsicHeight": 200,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-milnco.jpeg",
+      "type": "jpeg",
+      "intrinsicWidth": 400,
+      "intrinsicHeight": 400,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-northbridge.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-optimum.png",
+      "type": "png",
+      "intrinsicWidth": 400,
+      "intrinsicHeight": 600,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-pafco.png",
+      "type": "png",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-pal.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 480,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-pembridge.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-premier.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 200,
+      "intrinsicHeight": 200,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-sgi.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-sovereign.png",
+      "type": "png",
+      "intrinsicWidth": 1920,
+      "intrinsicHeight": 1080,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-special-risk.png",
+      "type": "png",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-sum.png",
+      "type": "png",
+      "intrinsicWidth": 1920,
+      "intrinsicHeight": 1080,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-swg.png",
+      "type": "png",
+      "intrinsicWidth": 1920,
+      "intrinsicHeight": 1080,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-the-guarantee.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-totten-group.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 200,
+      "intrinsicHeight": 200,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-travelers.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-trinity-underwriting.png",
+      "type": "png",
+      "intrinsicWidth": 1920,
+      "intrinsicHeight": 1080,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-unica.png",
+      "type": "png",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-unique-risk.png",
+      "type": "png",
+      "intrinsicWidth": 1920,
+      "intrinsicHeight": 1080,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-victor.png",
+      "type": "png",
+      "intrinsicWidth": 600,
+      "intrinsicHeight": 600,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/partners/partner-wawanesa.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-aviva.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-caa.png",
+      "type": "png",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-chubb.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-echelon.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-gore.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-intact.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-northbridge.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-pafco.png",
+      "type": "png",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-pembridge.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-sgi.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-unica.png",
+      "type": "png",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/carriers/carrier-wawanesa.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 300,
+      "intrinsicHeight": 300,
+      "visibleQualityRisk": "MEDIUM",
+      "reason": "Logo modest resolution for retina cards",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/awards/award-5star-brokerage-2021.png",
+      "type": "png",
+      "intrinsicWidth": 1126,
+      "intrinsicHeight": 1125,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/awards/award-5star-brokerage-ontario-2022.png",
+      "type": "png",
+      "intrinsicWidth": 2048,
+      "intrinsicHeight": 2048,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/awards/award-fast-brokerages-2024.png",
+      "type": "png",
+      "intrinsicWidth": 2048,
+      "intrinsicHeight": 2048,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/awards/award-windsor-gold-2026.png",
+      "type": "png",
+      "intrinsicWidth": 685,
+      "intrinsicHeight": 685,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/awards/award-windsor-platinum-2021.png",
+      "type": "png",
+      "intrinsicWidth": 685,
+      "intrinsicHeight": 685,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/awards/award-windsor-platinum-2022.png",
+      "type": "png",
+      "intrinsicWidth": 685,
+      "intrinsicHeight": 685,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/awards/award-windsor-platinum-2023.png",
+      "type": "png",
+      "intrinsicWidth": 685,
+      "intrinsicHeight": 685,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/awards/award-windsor-platinum-2024.png",
+      "type": "png",
+      "intrinsicWidth": 685,
+      "intrinsicHeight": 685,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/awards/event-golf-sponsorship.jpg",
+      "type": "jpg",
+      "intrinsicWidth": 4032,
+      "intrinsicHeight": 3024,
+      "visibleQualityRisk": "LOW",
+      "reason": "Logo resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/CANNABIS/cannabis-producer-insurance-interactive-master.png",
+      "type": "png",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/CANNABIS/cannabis-producer-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/CANNABIS/cannabis-retail-insurance-interactive-master.png",
+      "type": "png",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    },
+    {
+      "file": "/images/CANNABIS/cannabis-retail-insurance.webp",
+      "type": "webp",
+      "intrinsicWidth": 1672,
+      "intrinsicHeight": 941,
+      "visibleQualityRisk": "LOW",
+      "reason": "Intrinsic resolution adequate",
+      "likelyUpscaledDesktop": false,
+      "replacementAssetRequired": false
+    }
+  ]
+}

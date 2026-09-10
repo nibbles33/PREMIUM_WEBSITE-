@@ -1,0 +1,76 @@
+[
+  {
+    "slug": "auto-insurance",
+    "route": "/auto-insurance/",
+    "cardMatch": "Accident Benefits",
+    "faqQuestion": "Is auto insurance mandatory in Ontario?",
+    "useAutoExplorer": true,
+    "explorerPath": "/workspace/docs/qa-screenshots/d1-implementation-pass-1-2026-09-07/auto-insurance-coverage-explorer.png",
+    "faqPath": "/workspace/docs/qa-screenshots/d1-implementation-pass-1-2026-09-07/auto-insurance-faq-mandatory.png",
+    "copyCheck": {
+      "detailText": "For policies entered into on or after July 1, 2026, statutory accident benefits include mandatory medical, rehabilitation, and attendant care benefits. Other accident benefits — such as income replacement and caregiver benefits — are optional and must be added to your policy if you want them, subject to policy terms and who is covered under your policy.",
+      "cardDesc": "Accident BenefitsMandatory medical, rehabilitation, and attendant care benefits for Ontario policies entered into on or after July 1, 2026 — with other accident benefits available to add.",
+      "cardMatch": "Accident Benefits"
+    }
+  },
+  {
+    "slug": "motorcycle-insurance",
+    "route": "/motorcycle-insurance/",
+    "cardMatch": "Required in Ontario when riding on public roads",
+    "explorerPath": "/workspace/docs/qa-screenshots/d1-implementation-pass-1-2026-09-07/motorcycle-insurance-coverage-explorer.png",
+    "faqPath": null,
+    "copyCheck": {
+      "detailText": "Required in Ontario when riding on public roads (not when the motorcycle is used on private property only). FSRA specifies minimum third-party liability coverage of at least $200,000. This coverage is intended to respond when you are legally liable for injury or property damage to others — subject to your policy limits, exclusions, and terms.",
+      "cardDesc": "Third-PartyRequired in Ontario when riding on public roads (not when the motorcycle is used on private property only). FSRA specifies minimum third-party liability coverage of at least $200,000. This coverage is intended to respond when you are legally liable for injury or property damage to others — subject to your policy limits, exclusions, and terms.",
+      "cardMatch": "Required in Ontario when riding on public roads"
+    }
+  },
+  {
+    "slug": "condo-insurance",
+    "route": "/condo-insurance/",
+    "cardMatch": "Intended to insure your belongings and upgrades",
+    "explorerPath": "/workspace/docs/qa-screenshots/d1-implementation-pass-1-2026-09-07/condo-insurance-coverage-explorer.png",
+    "faqPath": null,
+    "copyCheck": {
+      "detailText": "Intended to insure your belongings and upgrades inside the unit — finishes, fixtures, and betterments beyond what the corporation's master policy includes — subject to your policy limits, definitions, and exclusions.",
+      "cardDesc": "UnitIntended to insure your belongings and upgrades inside the unit — finishes, fixtures, and betterments beyond what the corporation's master policy includes — subject to your policy limits, definitions, and exclusions.",
+      "cardMatch": "Intended to insure your belongings and upgrades"
+    }
+  },
+  {
+    "slug": "cottage-insurance",
+    "route": "/cottage-insurance/",
+    "cardMatch": "Personal liability coverage is intended to respond",
+    "explorerPath": "/workspace/docs/qa-screenshots/d1-implementation-pass-1-2026-09-07/cottage-insurance-coverage-explorer.png",
+    "faqPath": null,
+    "copyCheck": {
+      "detailText": "Personal liability coverage is intended to respond to certain injury or property-damage claims arising from your ownership or use of the cottage property, including some guest and recreational exposures — subject to policy limits, definitions, and exclusions.",
+      "cardDesc": "LiabilityPersonal liability coverage is intended to respond to certain injury or property-damage claims arising from your ownership or use of the cottage property, including some guest and recreational exposures — subject to policy limits, definitions, and exclusions.",
+      "cardMatch": "Personal liability coverage is intended to respond"
+    }
+  },
+  {
+    "slug": "small-business-insurance",
+    "route": "/small-business-insurance/",
+    "cardMatch": "Intended to insure your equipment, inventory",
+    "explorerPath": "/workspace/docs/qa-screenshots/d1-implementation-pass-1-2026-09-07/small-business-insurance-coverage-explorer.png",
+    "faqPath": null,
+    "copyCheck": {
+      "detailText": "Intended to insure your equipment, inventory, and leasehold improvements for theft, fire, and other insured perils — subject to causes of loss, limits, deductibles, and policy terms.",
+      "cardDesc": "CommercialIntended to insure your equipment, inventory, and leasehold improvements for theft, fire, and other insured perils — subject to causes of loss, limits, deductibles, and policy terms.",
+      "cardMatch": "Intended to insure your equipment, inventory"
+    }
+  },
+  {
+    "slug": "travel-insurance",
+    "route": "/travel-insurance/",
+    "cardMatch": "Can pay toward loss, theft, or damage to luggage",
+    "explorerPath": "/workspace/docs/qa-screenshots/d1-implementation-pass-1-2026-09-07/travel-insurance-coverage-explorer.png",
+    "faqPath": null,
+    "copyCheck": {
+      "detailText": "Can pay toward loss, theft, or damage to luggage and personal belongings during your trip, within stated limits, deductibles, and policy exclusions.",
+      "cardDesc": "BaggageCan pay toward loss, theft, or damage to luggage and personal belongings during your trip, within stated limits, deductibles, and policy exclusions.",
+      "cardMatch": "Can pay toward loss, theft, or damage to luggage"
+    }
+  }
+]

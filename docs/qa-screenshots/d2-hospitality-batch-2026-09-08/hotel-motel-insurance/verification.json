@@ -1,0 +1,59 @@
+{
+  "slug": "hotel-motel-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "commercial-property",
+      "tabDesc": "May help cover the building, furnishings, linens, kitchen equipment, and other business property against covered causes of loss such as fire, water damage, or theft — subject to policy terms, causes of loss, and limits.",
+      "detailTitle": "Guest rooms and back-of-house equipment drive property values",
+      "detailDescription": "Hotels concentrate insurable value in guest rooms, lobbies, commercial laundry, HVAC, kitchen equipment, and furnishings — often across multiple floors and outbuildings. Fire, water escape from suppression systems, theft of linens or equipment, and seasonal occupancy swings affect how carriers structure property limits and deductibles. Guest personal belongings are typically excluded from the operator's property policy; the Innkeepers Act addresses statutory limits on operator liability for guest goods in specific circumstances — separate from insuring your own property.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 1,
+      "id": "general-liability",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from guest and visitor incidents on your premises — such as slip-and-fall in lobbies, parking areas, pools, or fitness facilities — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "When a guest injury in your lobby becomes a liability claim",
+      "detailDescription": "Hotels concentrate people in high-traffic common areas — lobbies, elevators, parking lots, pools, spas, and fitness rooms — where wet floors, icy walkways, and amenity use create premises liability exposure. Whether pool or spa areas, conference facilities, or valet operations are covered depends on policy wording and how activities are disclosed during underwriting. Corporate clients or event organizers renting meeting space may require certificates with specific limits or additional-insured status — those are contractual requirements separate from what any single policy automatically includes.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 2,
+      "id": "business-interruption",
+      "tabDesc": "May help replace lost business income and certain continuing expenses when a covered direct physical loss to insured property interrupts room sales or on-site operations — subject to waiting periods, policy terms, and how income is measured.",
+      "detailTitle": "Room revenue does not pause automatically when repairs begin",
+      "detailDescription": "A fire, major water loss, or equipment failure that closes guest rooms or a licensed restaurant can interrupt daily revenue while fixed costs continue — mortgage, payroll, utilities, and marketing. Business interruption coverage, where purchased, responds only after a covered direct physical loss to insured property and subject to waiting periods and policy wording. Seasonal tourism patterns in Windsor–Essex affect how income should be projected; a licence suspension, weather downturn, or other non-covered event may not trigger the same coverage — confirm triggers with your broker.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 3,
+      "id": "liquor-liability",
+      "tabDesc": "Where you sell or serve alcohol under an AGCO Liquor Sales Licence at an on-site bar, restaurant, or event space, liquor liability may address certain claims tied to alcohol service — distinct from general liability, which often excludes or limits liquor-related claims — subject to policy terms.",
+      "detailTitle": "A hotel bar is not the same coverage question as guest-room liability",
+      "detailDescription": "Properties with licensed on-site alcohol service can face civil liability if alcohol contributes to patron injury or property damage — separately from AGCO administrative penalties such as suspension or revocation. Holding a Liquor Sales Licence authorizes legal sale and service; it does not include insurance, and the Liquor Licence and Control Act does not mandate liquor liability insurance as a statutory condition of holding a licence. Liquor liability coverage, where purchased, may help respond to certain alcohol-related claims standard general liability excludes or limits. Hotels without licensed alcohol service do not need this coverage component — disclose your actual service model to your broker.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "considerations": {
+    "count": 6,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "overflow_390": 0,
+  "overflow_1440": 0
+}

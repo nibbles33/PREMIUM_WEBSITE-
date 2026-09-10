@@ -1,0 +1,615 @@
+{
+  "summary": {
+    "slug": "fitness-gym-insurance",
+    "runs": [
+      {
+        "run": 1,
+        "results": [
+          {
+            "viewport": "mobile-390",
+            "strategy": "stale-handle",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          },
+          {
+            "viewport": "mobile-390",
+            "strategy": "requery-click",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          },
+          {
+            "viewport": "desktop-1440",
+            "strategy": "stale-handle",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          },
+          {
+            "viewport": "desktop-1440",
+            "strategy": "requery-click",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          }
+        ]
+      },
+      {
+        "run": 2,
+        "results": [
+          {
+            "viewport": "mobile-390",
+            "strategy": "stale-handle",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          },
+          {
+            "viewport": "mobile-390",
+            "strategy": "requery-click",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          },
+          {
+            "viewport": "desktop-1440",
+            "strategy": "stale-handle",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          },
+          {
+            "viewport": "desktop-1440",
+            "strategy": "requery-click",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          }
+        ]
+      },
+      {
+        "run": 3,
+        "results": [
+          {
+            "viewport": "mobile-390",
+            "strategy": "stale-handle",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          },
+          {
+            "viewport": "mobile-390",
+            "strategy": "requery-click",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          },
+          {
+            "viewport": "desktop-1440",
+            "strategy": "stale-handle",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          },
+          {
+            "viewport": "desktop-1440",
+            "strategy": "requery-click",
+            "pass": true,
+            "error": null,
+            "tabCount": 4,
+            "stateCount": 4,
+            "anyClip": false
+          }
+        ]
+      }
+    ]
+  },
+  "runs": [
+    {
+      "run": 1,
+      "results": [
+        {
+          "viewport": "mobile-390",
+          "strategy": "stale-handle",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        },
+        {
+          "viewport": "mobile-390",
+          "strategy": "requery-click",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        },
+        {
+          "viewport": "desktop-1440",
+          "strategy": "stale-handle",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        },
+        {
+          "viewport": "desktop-1440",
+          "strategy": "requery-click",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "results": [
+        {
+          "viewport": "mobile-390",
+          "strategy": "stale-handle",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        },
+        {
+          "viewport": "mobile-390",
+          "strategy": "requery-click",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        },
+        {
+          "viewport": "desktop-1440",
+          "strategy": "stale-handle",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        },
+        {
+          "viewport": "desktop-1440",
+          "strategy": "requery-click",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "results": [
+        {
+          "viewport": "mobile-390",
+          "strategy": "stale-handle",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        },
+        {
+          "viewport": "mobile-390",
+          "strategy": "requery-click",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        },
+        {
+          "viewport": "desktop-1440",
+          "strategy": "stale-handle",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        },
+        {
+          "viewport": "desktop-1440",
+          "strategy": "requery-click",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "states": [
+            {
+              "index": 0,
+              "activeId": "_R_175esndlb_-tab-general-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A loose cable on the gym floor is a premises claim"
+            },
+            {
+              "index": 1,
+              "activeId": "_R_175esndlb_-tab-professional-liability",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Bad programming allegations aren't ordinary slip-and-falls"
+            },
+            {
+              "index": 2,
+              "activeId": "_R_175esndlb_-tab-commercial-property",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "A treadmill fleet is a capital exposure"
+            },
+            {
+              "index": 3,
+              "activeId": "_R_175esndlb_-tab-sexual-abuse-misconduct",
+              "hasImage": true,
+              "containedInStage": true,
+              "detailTitle": "Youth classes change the coverage conversation"
+            }
+          ],
+          "pass": true,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

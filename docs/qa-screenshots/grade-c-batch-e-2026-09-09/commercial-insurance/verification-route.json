@@ -1,0 +1,24 @@
+{
+  "slug": "commercial-insurance",
+  "type": "commercial-hub",
+  "pass": true,
+  "hubStructure": {
+    "hasCategorySection": true,
+    "hasIndustryGrid": true,
+    "hasRelatedSection": true,
+    "explorerAbsent": true,
+    "categoryLinks": 10,
+    "industryTiles": 12
+  },
+  "ctaHeading": "Core commercial coverage categories",
+  "considerations": {
+    "count": 4
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

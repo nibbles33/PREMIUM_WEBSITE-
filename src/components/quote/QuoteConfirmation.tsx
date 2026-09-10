@@ -31,6 +31,16 @@ export default function QuoteConfirmation() {
         </a>
         .
       </p>
+      <p className="mt-4 text-[14px] leading-relaxed text-secondary">
+        Already a client and need to make a claim?{" "}
+        <a
+          href="/claims/"
+          className="font-medium text-gold-dark underline-offset-4 hover:underline"
+        >
+          Visit our Claims page
+        </a>
+        .
+      </p>
     </div>
   );
 }

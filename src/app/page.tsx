@@ -1,29 +1,18 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import GoldTicker from "@/components/GoldTicker";
-import TrustBar from "@/components/TrustBar";
-import HowItWorks from "@/components/HowItWorks";
-import PersonalInsurance from "@/components/PersonalInsurance";
-import CommercialSpotlight from "@/components/CommercialSpotlight";
-import CarrierStrip from "@/components/CarrierStrip";
-import Differentiator from "@/components/Differentiator";
-import AwardsSection from "@/components/AwardsSection";
+import type { Metadata } from "next";
+import PilotHomePage from "@/components/pilot/PilotHomePage";
+import { buildPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildPageMetadata({
+  title:
+    "Premium Insurance Brokers | Personal & Business Insurance in Windsor-Essex",
+  description:
+    "Independent insurance brokerage in Windsor-Essex. Personal auto, home, and commercial coverage through a licensed local broker — not a call centre.",
+  path: "/",
+  ogTitle: "Premium Insurance Brokers | Windsor-Essex",
+  ogDescription:
+    "Personal and business insurance advice from an independent Windsor-Essex brokerage.",
+});
 
 export default function Home() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <GoldTicker />
-        <TrustBar />
-        <CarrierStrip />
-        <HowItWorks />
-        <PersonalInsurance />
-        <CommercialSpotlight />
-        <Differentiator />
-        <AwardsSection />
-      </main>
-    </>
-  );
+  return <PilotHomePage />;
 }

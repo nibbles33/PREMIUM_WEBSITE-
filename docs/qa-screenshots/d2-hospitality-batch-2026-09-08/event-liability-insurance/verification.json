@@ -1,0 +1,59 @@
+{
+  "slug": "event-liability-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "third-party-bodily-injury",
+      "tabDesc": "May help respond to certain claims alleging attendee or guest bodily injury during your event — trips, falls, crowd incidents, or setup-related injuries — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A wedding reception trip-and-fall is an event-host exposure",
+      "detailDescription": "Temporary events concentrate people in unfamiliar layouts — tents, dance floors, vendor aisles, staging, and parking areas — where trips, falls, and crowd incidents can generate third-party injury claims against the event host. Event liability policies are written for defined dates, locations, and attendance; whether a specific activity, amusement device, or sporting element is covered depends on policy wording and what you disclosed during underwriting. This coverage addresses host liability — not the venue owner's own policy, which protects the venue's interests.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 1,
+      "id": "property-damage",
+      "tabDesc": "May help respond to certain claims for damage to rented venues, neighbouring property, or third-party equipment caused during your event setup, operation, or teardown — subject to policy terms and limits.",
+      "detailTitle": "Damage to a rented hall is a different claim than an injury",
+      "detailDescription": "Event setup and teardown can damage rented floors, walls, landscaping, or neighbouring property — claims distinct from bodily injury. Coverage for damage to premises you rent or borrow depends on policy wording, deductibles, and whether the rental contract assigns repair responsibility. Your broker should review lease or venue agreements alongside the policy to confirm what must be insured and what certificates the venue requires.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 2,
+      "id": "liquor-liability-events",
+      "tabDesc": "May address certain alcohol-related liability when you serve or permit alcohol at your event under a Special Occasion Permit, host-liquor arrangement, or licensed venue service — distinct from ongoing premises liquor liability, subject to policy terms.",
+      "detailTitle": "Serving alcohol at a one-night event is not the same as running a bar",
+      "detailDescription": "Weddings, fundraisers, and corporate functions often involve alcohol service under a Special Occasion Permit, bring-your-own arrangements, or service at a licensed venue — each with different AGCO rules and responsibilities. LCBO's Special Occasion Permit FAQ states provincial regulations do not require permit holders to carry party liability insurance — but venues, municipalities, and rental contracts frequently do. Host liquor or event liquor coverage, where available, is underwritten separately from premises liquor liability; service model, permit type, attendance, and whether you control service must be disclosed to your broker. A Special Occasion Permit authorizes legal alcohol service; it is not insurance.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 3,
+      "id": "vendor-exhibitor-coverage",
+      "tabDesc": "May extend certain liability coverage to participating vendors or exhibitors under one event policy where purchased — subject to how the policy schedules vendors, limits, and additional-insured requirements.",
+      "detailTitle": "Market organizers may need to address vendor exposure",
+      "detailDescription": "Farmers' markets, trade shows, and festival organizers sometimes need coverage structures that address participating vendors — whether through a master event policy with vendor extensions or by requiring each vendor to carry their own certificate. Contractual additional-insured and waiver-of-subrogation wording from venues or municipalities must be matched to what your policy can actually provide. Confirm vendor limits, setup/teardown periods, and whether amusement operators need separate coverage before the event date.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "considerations": {
+    "count": 6,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "overflow_390": 0,
+  "overflow_1440": 0
+}

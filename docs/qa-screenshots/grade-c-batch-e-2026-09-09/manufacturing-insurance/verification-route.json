@@ -1,0 +1,81 @@
+{
+  "slug": "manufacturing-insurance",
+  "type": "manufacturing",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "product-liability",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims alleging a product you manufacture, assemble, or distribute caused harm — subject to products-completed operations wording, exclusions, limits, and policy terms.",
+      "detailTitle": "A defective part can follow your product long after it leaves the dock",
+      "detailDescription": "Manufacturers and assemblers face products-completed operations exposure when a customer or downstream user alleges injury or damage from a part, component, or finished good you produced — including precision work to customer specifications on many programs. Commercial general liability may address certain covered claims subject to policy wording, but it does not automatically pay product recall or withdrawal expenses, warranty rework, or every contractual quality dispute. Product recall insurance is a separate first-party discussion on our product recall page.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "product-liability"
+    },
+    {
+      "index": 1,
+      "id": "commercial-property",
+      "tabDesc": "May help address direct physical loss or damage to buildings, production machinery, tools, raw materials, work-in-progress, and finished goods you own or are required to insure — subject to causes of loss, valuation basis, limits, deductibles, and policy terms.",
+      "detailTitle": "Your landlord's policy doesn't cover your CNC line",
+      "detailDescription": "When you lease industrial space, the landlord typically insures the building while you may need contents, inventory, leasehold improvements, and scheduled machinery values. Raw materials, packaging, WIP, and finished stock may be valued on different bases — cost, replacement cost, or selling price depending on form and endorsements — and peak production seasons may need higher reported values. Coinsurance on many commercial property programs can reduce recovery if values are understated. Internal mechanical breakdown of production equipment is often treated differently from fire or theft — see equipment breakdown below.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "commercial-property"
+    },
+    {
+      "index": 2,
+      "id": "business-interruption",
+      "tabDesc": "Where purchased with commercial property, may help replace certain lost income and pay qualifying continuing expenses when a covered direct physical loss to insured property forces a necessary production suspension — subject to waiting periods, indemnity or restoration periods, and policy terms.",
+      "detailTitle": "Rent and payroll don't pause when the line stops",
+      "detailDescription": "A covered fire, major water loss, or other insured property damage can idle presses, CNC cells, or assembly lines while fixed costs continue. Business interruption coverage, where included, addresses that income gap — not market slowdowns, utility outages without physical damage, or supplier delays unless a specific contingent business interruption endorsement applies to a named dependent property that suffers covered damage. Waiting periods and restoration limits vary — coordinate BI values with realistic rebuild and ramp-up timelines on our business interruption page.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "business-interruption"
+    },
+    {
+      "index": 3,
+      "id": "equipment-breakdown",
+      "tabDesc": "Where purchased as an endorsement or separate coverage — not automatic on standard property forms — may help address certain sudden and accidental internal mechanical, electrical, or pressure-system failures of production equipment, subject to policy terms and exclusions.",
+      "detailTitle": "Fire insurance and breakdown insurance respond to different failures",
+      "detailDescription": "Commercial property may respond when a fire or external insured peril damages machinery, but many standard property forms exclude or restrict loss from internal mechanical breakdown, electrical arcing, motor burnout, or pressure-system failure. Equipment breakdown coverage, where added, is designed for that gap — it is not automatic on every property policy. Wear and tear, lack of maintenance, and every resulting business income loss may still be excluded unless your form specifically includes EB-linked business interruption or spoilage extensions. Confirm what your property program includes before assuming breakdown is already insured.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "equipment-breakdown"
+    },
+    {
+      "index": 4,
+      "id": "machine-shop-tool-die",
+      "tabDesc": "Precision machining, custom tooling, and job-shop operations often carry higher equipment values, customer-owned materials, and work-in-progress that should be disclosed separately from commodity finished-goods manufacturing.",
+      "detailTitle": "Custom work-in-progress is hard to replace overnight",
+      "detailDescription": "Job shops and tool-and-die operations frequently work to customer drawings, hold specialized dies and fixtures, and carry WIP with values that spike mid-job. Product liability for precision components, property limits for specialized equipment, and accurate WIP reporting all affect underwriting. This is an exposure segment to disclose clearly — not a separate policy name on every program — so limits reflect materials, processes, and whether you rework customer-supplied parts.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "machine-shop-tool-die"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "considerations": {
+    "count": 8,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "noExplorerOnHub": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

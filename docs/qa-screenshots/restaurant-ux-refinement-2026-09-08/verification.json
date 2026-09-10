@@ -1,0 +1,77 @@
+{
+  "consoleErrors": [],
+  "restaurant": {
+    "initial": {
+      "heroLead": "Restaurants in Windsor–Essex combine busy dining rooms, commercial kitchens, and",
+      "heroLeadPresent": true,
+      "trustBandCount": 0,
+      "trustBandDuplicate": false,
+      "considerationCount": 11,
+      "expandableButtons": 11,
+      "overflow": 0
+    },
+    "trustBandRemoved": true,
+    "considerationCount": 11,
+    "collapsedByDefault": true,
+    "firstExpandedText": "Cuisine type, seating capacity, cooking methods (deep fryer, open flame, wood-fired oven), hours, delivery or catering model, and whether you hold an AGCO Liquor Sales Licence.",
+    "firstExpandedMatches": true,
+    "singleOpen": true,
+    "keyboardOk": true,
+    "titles": [
+      "Disclosures your broker typically needs",
+      "Food safety is regulatory — not an insurance substitute",
+      "Product Liability / Food Illness",
+      "Liquor licensing, civil liability, and insurance are three different things",
+      "Delivery and app-based orders",
+      "Kitchen fire and suppression maintenance",
+      "Patio and seasonal operations",
+      "Business Interruption",
+      "Lease and franchisor requirements",
+      "WSIB and kitchen employee injuries",
+      "Did you know?"
+    ],
+    "allTitlesPresent": true,
+    "viewports": [
+      {
+        "viewport": "390",
+        "overflow": 0,
+        "pass": true
+      },
+      {
+        "viewport": "768",
+        "overflow": 0,
+        "pass": true
+      },
+      {
+        "viewport": "1024",
+        "overflow": 0,
+        "pass": true
+      },
+      {
+        "viewport": "1440",
+        "overflow": 0,
+        "pass": true
+      }
+    ],
+    "pass": true
+  },
+  "crossRoute": [
+    {
+      "route": "/daycare-private-school-insurance",
+      "label": "daycare",
+      "hasExpandable": false,
+      "staticCardCount": 9,
+      "hasVisibleDescription": true,
+      "pass": true
+    },
+    {
+      "route": "/greenhouse-agribusiness-insurance",
+      "label": "greenhouse",
+      "hasExpandable": false,
+      "staticCardCount": 6,
+      "hasVisibleDescription": true,
+      "pass": true
+    }
+  ],
+  "pass": true
+}
