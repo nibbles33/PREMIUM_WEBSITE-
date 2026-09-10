@@ -1,0 +1,197 @@
+{
+  "timestamp": "2026-09-03T23:37:21.422Z",
+  "base": "http://localhost:3015",
+  "routes": [
+    {
+      "route": "/garage-dealership-insurance/",
+      "expected": "garage-dealership-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/garage-dealership-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/builders-risk-insurance/",
+      "expected": "builders-risk-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/builders-risk-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/cargo-freight-insurance/",
+      "expected": "cargo-freight-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/cargo-freight-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/condominium-corporation-insurance/",
+      "expected": "condo-property-management.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/condo-property-management.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/property-management-insurance/",
+      "expected": "condo-property-management.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/condo-property-management.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/convenience-store-insurance/",
+      "expected": "convenience-store-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/convenience-store-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/daycare-private-school-insurance/",
+      "expected": "daycare-private-school-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/daycare-private-school-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/grocery-specialty-food-insurance/",
+      "expected": "grocery-specialty-food-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/grocery-specialty-food-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/group-home-auto-insurance/",
+      "expected": "group-home-auto-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/personal/group-home-auto-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/fitness-gym-insurance/",
+      "expected": "fitness-gym-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/fitness-gym-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/hotel-motel-insurance/",
+      "expected": "hotel-motel-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/hotel-motel-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/landscaping-snow-removal-insurance/",
+      "expected": "landscaping-snow-removal-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/landscaping-snow-removal-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/life-insurance/",
+      "expected": "life-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/personal/life-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/medical-dental-insurance/",
+      "expected": "medical-dental-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/medical-dental-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/mobile-home-insurance/",
+      "expected": "mobile-home-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/personal/mobile-home-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/personal-umbrella-insurance/",
+      "expected": "personal-umbrella-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/personal/personal-umbrella-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/pharmacy-insurance/",
+      "expected": "pharmacy-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/pharmacy-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/religious-organizations-insurance/",
+      "expected": "religious-organizations-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/religious-organizations-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/salon-barber-insurance/",
+      "expected": "salon-barber-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/salon-barber-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    },
+    {
+      "route": "/warehousing-insurance/",
+      "expected": "warehousing-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/warehousing-insurance.webp",
+      "ok": true,
+      "usesFallback": false,
+      "usesOldReuse": false
+    }
+  ],
+  "allOk": true,
+  "regression": [
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/auto-insurance/",
+      "status": 200
+    }
+  ]
+}
