@@ -120,7 +120,7 @@ export const cannabisIndustryPages: CannabisIndustryPage[] = [
       {
         title: "OCS contractual insurance vs statutory insurance",
         description:
-          "Research for this site found no AGCO / Cannabis Licence Act / O. Reg. 468/18 statutory minimum insurance limit. Separately, OCS retailer agreements commonly require commercial general liability of at least $5 million per occurrence, with specified coverages and OCS named as an additional insured, before wholesale ordering — confirm the current agreement and certificate form rather than assuming every policy automatically matches.",
+          "The Cannabis Licence Act and O. Reg. 468/18 do not impose a statutory minimum insurance dollar limit. Separately, OCS retailer agreements commonly require commercial general liability of at least $5 million per occurrence, with specified coverages and OCS named as an additional insured, before wholesale ordering — confirm the current agreement and certificate form rather than assuming every policy automatically matches.",
       },
       {
         title: "Security systems and underwriting conditions",
@@ -150,7 +150,7 @@ export const cannabisIndustryPages: CannabisIndustryPage[] = [
       {
         title: "Product recall is separate from product liability",
         description:
-          "Product liability may address certain third-party injury claims. First-party recall or withdrawal expense — notice, retrieval, disposal — is typically a different coverage. Authorized retailers should still understand recall/return procedures; insurance response depends on the forms purchased. Cross-link our product recall page when expense coverage is in scope.",
+          "Product liability may address certain third-party injury claims. First-party recall or withdrawal expense — notice, retrieval, disposal — is typically a different coverage. Authorized retailers should still understand recall/return procedures; insurance response depends on the forms purchased. See our product recall insurance page when expense coverage is in scope.",
       },
     ],
     faqTitle: "Cannabis retail insurance FAQ",
@@ -163,7 +163,7 @@ export const cannabisIndustryPages: CannabisIndustryPage[] = [
       {
         question: "Does AGCO require a minimum insurance limit?",
         answer:
-          "AGCO licensing and Registrar’s Standards regulate retail operations (including security and storage). This implementation’s research did not locate a statutory AGCO / Cannabis Licence Act / O. Reg. 468/18 minimum insurance dollar limit. Treat licensing separately from insurance contracts and confirm any insurer or counterparty requirements with your broker.",
+          "AGCO licensing and Registrar’s Standards regulate retail operations (including security and storage). The Cannabis Licence Act and O. Reg. 468/18 do not impose a statutory minimum insurance dollar limit. Treat licensing separately from insurance contracts and confirm any insurer or counterparty requirements with your broker.",
       },
       {
         question: "What is the OCS insurance requirement?",
@@ -298,7 +298,7 @@ export const cannabisIndustryPages: CannabisIndustryPage[] = [
       {
         title: "Pollution and environmental handling",
         description:
-          "Fertilizers, pesticides, solvents, wastewater, and extraction processes can create pollution exposure that CGL forms often restrict. Pollution liability may be reviewed as a supporting coverage — not every producer needs a dedicated Explorer state, but chemical and waste handling should be disclosed. See our pollution liability page.",
+          "Fertilizers, pesticides, solvents, wastewater, and extraction processes can create pollution exposure that CGL forms often restrict. Pollution liability may be reviewed as a supporting coverage when chemical and waste handling is material. See our pollution liability page.",
       },
       {
         title: "Crime and site security",

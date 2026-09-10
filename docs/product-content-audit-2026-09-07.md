@@ -43,8 +43,8 @@
 | /builders-developers-insurance/ | 1022 | 4 / specific/hedged (strong) | Yes (355w, specific/useful) | 5 | Yes | 1 (low only) | Windsor-Essex-primary | **A** |
 | /builders-risk-insurance/ | 1071 | 4 / specific/hedged (strong) | Yes (393w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /business-interruption-insurance/ | 1320 | 4 / specific/hedged (strong) | Yes (400w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
-| /cannabis-producer-insurance/ | 1275 | 6 / specific/hedged (strong) | Yes (378w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
-| /cannabis-retail-insurance/ | 1205 | 5 / specific/hedged (strong) | Yes (392w, specific/useful) | 5 | Yes | 4 (low only) | Windsor-Essex + Ontario | **A** |
+| /cannabis-producer-insurance/ | 1265 | 6 / specific/hedged (strong) | Yes (368w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
+| /cannabis-retail-insurance/ | 1200 | 5 / specific/hedged (strong) | Yes (391w, specific/useful) | 5 | Yes | 4 (low only) | Windsor-Essex + Ontario | **A** |
 | /cargo-freight-insurance/ | 1127 | 4 / specific/hedged (strong) | Yes (386w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /commercial-auto-insurance/ | 1354 | 4 / specific/hedged (strong) | Yes (426w, specific/useful) | 5 | Yes | 3 (low only) | Windsor-Essex + Ontario | **A** |
 | /commercial-insurance/ | 804 | 10 / specific/hedged (strong) | Yes (150w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |

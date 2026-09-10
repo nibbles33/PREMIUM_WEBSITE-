@@ -1,0 +1,1017 @@
+CANNABIS INSURANCE — LITERAL FACTUAL DUMP (RESOLVED VISITOR-FACING SOURCE)
+Date: 2026-09-10
+Branch: cursor/coverage-explorer-ux-v2-2026-09-07
+Implementation commit: 382b6d9
+Research commit: 5b1b3d2
+Phase 3 precision fixes applied before freeze dump (see factual-gate report §P).
+Extraction: getPilotCommercialConfig() + photography placements + cannabisIndustryPages whoItIsFor
+NOTE: Values are complete current source strings. Do NOT paraphrase.
+FAQ entries include full Q and A. Considerations include full title and body.
+Hero eyebrow is dumped both as config and as composed visitor text ("eyebrow · Windsor-Essex").
+
+======== ROUTE: /cannabis-retail-insurance/ ========
+
+layout: standard
+
+metaTitle (page title):
+Cannabis Retail Insurance in Windsor-Essex | Premium Insurance Brokers
+
+metaDescription:
+Cannabis retail insurance for Ontario authorized cannabis stores — premises liability, property and cannabis stock, product liability, crime, and business interruption through an independent Windsor-Essex broker.
+
+eyebrow (config):
+Commercial Insurance
+
+eyebrow (composed visitor text: eyebrow · Windsor-Essex):
+Commercial Insurance · Windsor-Essex
+
+headline (H1):
+Cannabis Retail Insurance
+
+heroLead (hero description):
+Ontario authorized cannabis retail stores combine storefront liability, high-value packaged inventory, landlord and Ontario Cannabis Store (OCS) contract requirements, and theft exposure in a way that differs from ordinary retail. Coverage is organized around how your store actually operates — premises and general liability, property and cannabis stock, product liability, crime, and business interruption where purchased — each subject to the policies and wording you buy. AGCO licensing regulates the store; it is not the same thing as an insurance policy. Premium Insurance Brokers can help Windsor–Essex cannabis retailers review programs against lease, security, and wholesale-contract expectations.
+
+heroSupporting:
+(empty)
+
+quoteLabel (hero CTA):
+Get a Cannabis Retail Quote
+
+secondaryCta / talk-to-a-broker label:
+Talk to a Broker
+
+trustStatement (whoItIsFor / trust band — visitor-facing):
+For Windsor–Essex and Ontario operators of AGCO-authorized cannabis retail stores — reviewed through an independent broker who can coordinate liability, property and stock, product liability, crime, and business interruption against lease and OCS contract expectations.
+
+source whoItIsFor (industry data; unused on page when trustStatement override exists):
+For Windsor–Essex and Ontario operators of AGCO-authorized cannabis retail stores — reviewed through an independent broker who can coordinate liability, property and stock, product liability, crime, and business interruption against lease and OCS contract expectations without treating every cannabis business like a cultivator.
+
+coverageHeading:
+What's covered
+
+coverageIntro (introductory copy):
+Cannabis retail insurance is grouped here around five storefront exposures Ontario operators commonly review first — premises liability, property and stock, product liability, crime, and income after a covered physical loss — because each agreement has different triggers, limits, and exclusions.
+
+coverageExplorerLabel:
+Coverage types
+
+--- Coverage / Explorer [0] ---
+id:
+general-liability
+
+title:
+Premises & General Liability
+
+shortLabel:
+Liability
+
+description (RIGHT / WHAT):
+May help respond to certain third-party bodily injury or property-damage claims arising from customer or visitor incidents at your authorized store — subject to commercial general liability terms, exclusions, and limits.
+
+detailTitle (LEFT V2):
+A slip at the entrance is a premises claim — not a licensing issue
+
+detailDescription (LEFT V2 / WHY):
+Authorized cannabis stores still face ordinary retail premises exposure: winter entrances, sales-floor traffic, ID-check queues, and parking areas. Commercial general liability may address certain covered third-party injury or property-damage claims subject to wording — it does not replace AGCO compliance, and it does not automatically satisfy every landlord or OCS contractual insurance schedule. Additional-insured requests and limit requirements should be compared to the certificate your policy can actually support.
+
+visualEyebrow:
+Liability
+
+visualCaption:
+Premises & General Liability
+
+visualSubcaption:
+May help respond to certain third-party bodily injury or property-damage claims arising from customer or visitor incidents at your authorized store — subject to commercial general liability terms, exclusions, and limits.
+
+--- Coverage / Explorer [1] ---
+id:
+cannabis-property-stock
+
+title:
+Property & Cannabis Stock
+
+shortLabel:
+Property
+
+description (RIGHT / WHAT):
+May help address direct physical loss to tenant improvements, fixtures, equipment, security systems, and packaged cannabis inventory you own or must insure — where the form and cannabis appetite allow, subject to valuation, limits, and conditions.
+
+detailTitle (LEFT V2):
+Packaged cannabis stock is not ordinary boutique inventory
+
+detailDescription (LEFT V2 / WHY):
+Store build-outs, display fixtures, safes, surveillance equipment, and sealed cannabis SKUs often drive the property conversation. Ordinary commercial property does not automatically treat cannabis inventory the same as general merchandise — specialty appetite, sublimits, security warranties, and valuation basis can all apply. Confirm how packaged stock is scheduled or limited rather than assuming a generic retail contents limit is enough.
+
+visualEyebrow:
+Property
+
+visualCaption:
+Property & Cannabis Stock
+
+visualSubcaption:
+May help address direct physical loss to tenant improvements, fixtures, equipment, security systems, and packaged cannabis inventory you own or must insure — where the form and cannabis appetite allow, subject to valuation, limits, and conditions.
+
+--- Coverage / Explorer [2] ---
+id:
+cannabis-product-liability
+
+title:
+Cannabis Product Liability
+
+shortLabel:
+Products
+
+description (RIGHT / WHAT):
+May help respond to certain bodily injury or property-damage claims alleging harm from cannabis products sold or distributed at your store — subject to products-completed operations wording, cannabis restrictions, and limits.
+
+detailTitle (LEFT V2):
+Selling sealed product can still put your store on a claim
+
+detailDescription (LEFT V2 / WHY):
+Even when products arrive through OCS in sealed packaging, retailers can be named in allegations involving contamination, labelling, potency, or injury tied to a purchased product. Products-completed operations coverage on a CGL program may address certain covered claims subject to exclusions — it is not a guarantee every allegation responds, and it is not the same as product recall expense coverage for withdrawal costs.
+
+visualEyebrow:
+Products
+
+visualCaption:
+Cannabis Product Liability
+
+visualSubcaption:
+May help respond to certain bodily injury or property-damage claims alleging harm from cannabis products sold or distributed at your store — subject to products-completed operations wording, cannabis restrictions, and limits.
+
+--- Coverage / Explorer [3] ---
+id:
+cannabis-crime-theft
+
+title:
+Crime, Theft & Cash
+
+shortLabel:
+Crime
+
+description (RIGHT / WHAT):
+Property theft, robbery, employee dishonesty, and funds-transfer fraud are related but not identical exposures — cannabis retail often needs a deliberate crime and property review rather than one assumption that “theft is covered.”
+
+detailTitle (LEFT V2):
+Burglary, employee theft, and social engineering are different coverages
+
+detailDescription (LEFT V2 / WHY):
+External break-in or robbery of stock may sit under property terms with security conditions. Employee dishonesty and certain internal inventory losses typically need crime/fidelity coverage. Social engineering or funds-transfer fraud is another conversation again. High-value portable inventory and cash handling make these distinctions material for authorized cannabis stores — do not treat them as one automatic grant.
+
+visualEyebrow:
+Crime
+
+visualCaption:
+Crime, Theft & Cash
+
+visualSubcaption:
+Property theft, robbery, employee dishonesty, and funds-transfer fraud are related but not identical exposures — cannabis retail often needs a deliberate crime and property review rather than one assumption that “theft is covered.”
+
+--- Coverage / Explorer [4] ---
+id:
+business-interruption
+
+title:
+Business Interruption
+
+shortLabel:
+BI
+
+description (RIGHT / WHAT):
+Where purchased with property, may help replace certain lost income and continuing expenses after a covered direct physical loss forces a necessary suspension of store operations — subject to waiting periods and policy terms.
+
+detailTitle (LEFT V2):
+Rent continues when a covered loss closes the doors
+
+detailDescription (LEFT V2 / WHY):
+A covered fire, major water loss, or other insured physical damage can idle an authorized store while lease and payroll obligations continue. Business interruption, where added, is built around that covered physical-loss trigger — not AGCO licence suspension, regulatory shutdown alone, OCS supply delay, or every security incident without insured property damage. Coordinate BI values with realistic rebuild time for a cannabis retail fit-out.
+
+visualEyebrow:
+BI
+
+visualCaption:
+Business Interruption
+
+visualSubcaption:
+Where purchased with property, may help replace certain lost income and continuing expenses after a covered direct physical loss forces a necessary suspension of store operations — subject to waiting periods and policy terms.
+
+--- Consideration [0] ---
+title:
+AGCO licensing is not an insurance policy
+
+description (complete body):
+Retail Operator Licences, Retail Store Authorizations, and Cannabis Retail Manager Licences (where required) regulate who may operate a store and how. Those rules address security, storage, advertising, and age controls — they are not the same as commercial insurance wording, limits, or claims response.
+
+TITLE+BODY COMBINED:
+TITLE:
+AGCO licensing is not an insurance policy
+
+BODY:
+Retail Operator Licences, Retail Store Authorizations, and Cannabis Retail Manager Licences (where required) regulate who may operate a store and how. Those rules address security, storage, advertising, and age controls — they are not the same as commercial insurance wording, limits, or claims response.
+
+--- Consideration [1] ---
+title:
+OCS contractual insurance vs statutory insurance
+
+description (complete body):
+The Cannabis Licence Act and O. Reg. 468/18 do not impose a statutory minimum insurance dollar limit. Separately, OCS retailer agreements commonly require commercial general liability of at least $5 million per occurrence, with specified coverages and OCS named as an additional insured, before wholesale ordering — confirm the current agreement and certificate form rather than assuming every policy automatically matches.
+
+TITLE+BODY COMBINED:
+TITLE:
+OCS contractual insurance vs statutory insurance
+
+BODY:
+The Cannabis Licence Act and O. Reg. 468/18 do not impose a statutory minimum insurance dollar limit. Separately, OCS retailer agreements commonly require commercial general liability of at least $5 million per occurrence, with specified coverages and OCS named as an additional insured, before wholesale ordering — confirm the current agreement and certificate form rather than assuming every policy automatically matches.
+
+--- Consideration [2] ---
+title:
+Security systems and underwriting conditions
+
+description (complete body):
+Surveillance, secure storage, and access controls matter for AGCO Registrar’s Standards and for property or crime underwriting. Alarm warranties, safe requirements, and after-hours procedures can affect whether a theft claim responds — disclose the systems you actually operate.
+
+TITLE+BODY COMBINED:
+TITLE:
+Security systems and underwriting conditions
+
+BODY:
+Surveillance, secure storage, and access controls matter for AGCO Registrar’s Standards and for property or crime underwriting. Alarm warranties, safe requirements, and after-hours procedures can affect whether a theft claim responds — disclose the systems you actually operate.
+
+--- Consideration [3] ---
+title:
+Landlord certificates and additional insured requests
+
+description (complete body):
+Leases often demand specific CGL limits, waiver wording, or additional-insured status. Compare certificate requests to what your insurer will endorse — a certificate does not expand coverage beyond the policy.
+
+TITLE+BODY COMBINED:
+TITLE:
+Landlord certificates and additional insured requests
+
+BODY:
+Leases often demand specific CGL limits, waiver wording, or additional-insured status. Compare certificate requests to what your insurer will endorse — a certificate does not expand coverage beyond the policy.
+
+--- Consideration [4] ---
+title:
+Packaged stock valuation and peak inventory
+
+description (complete body):
+Cannabis SKU mix and on-hand values change with assortment and receiving schedules. Report realistic inventory values and ask how cannabis stock is limited or valued on the form — underinsurance and coinsurance can reduce recovery after a partial loss on many commercial property programs.
+
+TITLE+BODY COMBINED:
+TITLE:
+Packaged stock valuation and peak inventory
+
+BODY:
+Cannabis SKU mix and on-hand values change with assortment and receiving schedules. Report realistic inventory values and ask how cannabis stock is limited or valued on the form — underinsurance and coinsurance can reduce recovery after a partial loss on many commercial property programs.
+
+--- Consideration [5] ---
+title:
+Cyber, POS, and customer data
+
+description (complete body):
+Age-gate platforms, payment systems, and customer records create privacy and ransomware exposure that property and CGL typically do not fully address. Cyber coverage, where purchased, is a separate review — see our cyber insurance page when card data or online ordering is material.
+
+TITLE+BODY COMBINED:
+TITLE:
+Cyber, POS, and customer data
+
+BODY:
+Age-gate platforms, payment systems, and customer records create privacy and ransomware exposure that property and CGL typically do not fully address. Cyber coverage, where purchased, is a separate review — see our cyber insurance page when card data or online ordering is material.
+
+--- Consideration [6] ---
+title:
+Delivery and commercial auto
+
+description (complete body):
+Where lawful delivery or staff vehicle use is part of operations, commercial auto or hired/non-owned auto may be needed. Do not assume premises liability covers cannabis delivery on public roads — disclose delivery practices when quoting.
+
+TITLE+BODY COMBINED:
+TITLE:
+Delivery and commercial auto
+
+BODY:
+Where lawful delivery or staff vehicle use is part of operations, commercial auto or hired/non-owned auto may be needed. Do not assume premises liability covers cannabis delivery on public roads — disclose delivery practices when quoting.
+
+--- Consideration [7] ---
+title:
+Product recall is separate from product liability
+
+description (complete body):
+Product liability may address certain third-party injury claims. First-party recall or withdrawal expense — notice, retrieval, disposal — is typically a different coverage. Authorized retailers should still understand recall/return procedures; insurance response depends on the forms purchased. See our product recall insurance page when expense coverage is in scope.
+
+TITLE+BODY COMBINED:
+TITLE:
+Product recall is separate from product liability
+
+BODY:
+Product liability may address certain third-party injury claims. First-party recall or withdrawal expense — notice, retrieval, disposal — is typically a different coverage. Authorized retailers should still understand recall/return procedures; insurance response depends on the forms purchased. See our product recall insurance page when expense coverage is in scope.
+
+--- Broker / process steps ---
+[0] label: Your operation
+    detail: Your industry, locations, and how the business actually runs day to day.
+[1] label: Multiple insurance markets
+    detail: Independent access to commercial carriers — options compared side by side.
+[2] label: Premium broker
+    detail: Windsor-Essex guidance that translates policy wording into decisions.
+[3] label: Right-fit coverage
+    detail: Protection aligned to your operations — not generic off-the-shelf limits.
+
+relatedHeading:
+A lot to protect? Good thing we have options.
+
+relatedIntro:
+One policy is rarely the whole picture. Explore other commercial coverage from Premium.
+
+--- Related products ---
+[0] label: Retail
+    href: /retail-insurance/
+[1] label: Commercial Property
+    href: /commercial-property-insurance/
+[2] label: Crime / Fidelity
+    href: /crime-fidelity-insurance/
+[3] label: Product Recall
+    href: /product-recall-insurance/
+[4] label: Business Interruption
+    href: /business-interruption-insurance/
+
+faqTitle:
+Cannabis retail insurance FAQ
+
+faqIntro:
+Straight answers to common questions for this industry.
+
+--- FAQ [0] ---
+question:
+What insurance does an Ontario cannabis store typically need?
+
+answer (complete):
+Most authorized stores review commercial general liability, commercial property for improvements and stock, product liability, crime, and business interruption where income protection is needed after a covered physical loss. Landlord and OCS contract schedules may add specific limit or additional-insured requirements. Exact components depend on the policies you purchase — there is no single automatic cannabis retail package.
+
+Q+A COMBINED:
+Q: What insurance does an Ontario cannabis store typically need?
+A: Most authorized stores review commercial general liability, commercial property for improvements and stock, product liability, crime, and business interruption where income protection is needed after a covered physical loss. Landlord and OCS contract schedules may add specific limit or additional-insured requirements. Exact components depend on the policies you purchase — there is no single automatic cannabis retail package.
+
+--- FAQ [1] ---
+question:
+Does AGCO require a minimum insurance limit?
+
+answer (complete):
+AGCO licensing and Registrar’s Standards regulate retail operations (including security and storage). The Cannabis Licence Act and O. Reg. 468/18 do not impose a statutory minimum insurance dollar limit. Treat licensing separately from insurance contracts and confirm any insurer or counterparty requirements with your broker.
+
+Q+A COMBINED:
+Q: Does AGCO require a minimum insurance limit?
+A: AGCO licensing and Registrar’s Standards regulate retail operations (including security and storage). The Cannabis Licence Act and O. Reg. 468/18 do not impose a statutory minimum insurance dollar limit. Treat licensing separately from insurance contracts and confirm any insurer or counterparty requirements with your broker.
+
+--- FAQ [2] ---
+question:
+What is the OCS insurance requirement?
+
+answer (complete):
+OCS retailer agreements are contractual. Current OCS retailer handbook materials describe commercial general liability of not less than $5 million per occurrence, including specified coverages such as non-owned automobile and products/completed operations, with OCS named as an additional insured / certificate holder before ordering. Confirm the live agreement and COI form — meeting OCS paperwork is not the same as proving every cannabis claim is covered.
+
+Q+A COMBINED:
+Q: What is the OCS insurance requirement?
+A: OCS retailer agreements are contractual. Current OCS retailer handbook materials describe commercial general liability of not less than $5 million per occurrence, including specified coverages such as non-owned automobile and products/completed operations, with OCS named as an additional insured / certificate holder before ordering. Confirm the live agreement and COI form — meeting OCS paperwork is not the same as proving every cannabis claim is covered.
+
+--- FAQ [3] ---
+question:
+Does ordinary property insurance treat cannabis inventory like general merchandise?
+
+answer (complete):
+Not necessarily. Packaged cannabis stock may require specialty appetite, explicit scheduling, sublimits, or security conditions. Ordinary retail contents wording should not be assumed to treat cannabis inventory like general merchandise — disclose values, storage, and security when placing coverage.
+
+Q+A COMBINED:
+Q: Does ordinary property insurance treat cannabis inventory like general merchandise?
+A: Not necessarily. Packaged cannabis stock may require specialty appetite, explicit scheduling, sublimits, or security conditions. Ordinary retail contents wording should not be assumed to treat cannabis inventory like general merchandise — disclose values, storage, and security when placing coverage.
+
+--- FAQ [4] ---
+question:
+Does product liability include product recall expenses?
+
+answer (complete):
+Generally no. Product liability under a CGL program may address certain third-party injury or property-damage claims subject to wording. Recall or withdrawal expenses are typically first-party costs under a separate product recall coverage. See our product recall insurance page for expense-oriented discussion.
+
+Q+A COMBINED:
+Q: Does product liability include product recall expenses?
+A: Generally no. Product liability under a CGL program may address certain third-party injury or property-damage claims subject to wording. Recall or withdrawal expenses are typically first-party costs under a separate product recall coverage. See our product recall insurance page for expense-oriented discussion.
+
+ctaEyebrow:
+Ready when you are
+
+ctaHeading:
+Ready to review cannabis retail coverage?
+
+ctaSubhead (CTA body):
+Share your store authorization status, lease insurance schedule, security controls, and inventory profile — we will compare markets and explain what may fit, subject to underwriting.
+
+ctaQuoteLabel:
+Get a Cannabis Retail Quote
+
+serviceName:
+Cannabis Retail Insurance
+
+--- Structured data (jsonLd, generated from route content) ---
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Cannabis Retail Insurance",
+  "description": "Cannabis retail insurance for Ontario authorized cannabis stores — premises liability, property and cannabis stock, product liability, crime, and business interruption through an independent Windsor-Essex broker.",
+  "provider": {
+    "@type": "InsuranceAgency",
+    "name": "Premium Insurance Brokers",
+    "telephone": "+1-226-782-6000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3063 Dougall Ave",
+      "addressLocality": "Windsor",
+      "addressRegion": "ON",
+      "postalCode": "N9E 1S7",
+      "addressCountry": "CA"
+    },
+    "url": "https://premiumib.com/"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Windsor-Essex"
+  },
+  "serviceType": "Cannabis Retail Insurance"
+}
+
+--- Photography / accessible image text ---
+hero photography src:
+/images/photography/commercial/retail-insurance.webp
+
+hero photography alt (visitor-facing):
+Temporary stand-in hero — dedicated cannabis retail photography required before launch
+
+hero photography temporaryNote (source documentation; not displayed as body copy):
+TEMPORARY: reuses retail-insurance hero photography. Dedicated Cannabis Retail Explorer/hero photography required before launch.
+
+hero photography isTemporary:
+true
+
+======== ROUTE: /cannabis-producer-insurance/ ========
+
+layout: standard
+
+metaTitle (page title):
+Cannabis Producer Insurance in Windsor-Essex | Premium Insurance Brokers
+
+metaDescription:
+Cannabis producer insurance for Health Canada–licensed cultivation, nursery, and processing operations — property, living plants and stock, equipment breakdown, product liability, recall expense, and business interruption through an independent Windsor-Essex broker.
+
+eyebrow (config):
+Commercial Insurance
+
+eyebrow (composed visitor text: eyebrow · Windsor-Essex):
+Commercial Insurance · Windsor-Essex
+
+headline (H1):
+Cannabis Producer Insurance
+
+heroLead (hero description):
+Federally licensed cannabis cultivation, nursery, and processing operations combine production infrastructure, living plant and stock values, environmental controls, product liability, and recall-ready quality systems in a risk profile that differs from retail stores and from ordinary manufacturing. Depending on your licence class — including standard or micro cultivation, nursery, and standard or micro processing — that can mean commercial property for buildings and grow infrastructure, specialized treatment of living plants and cannabis stock, equipment breakdown where purchased, products liability, product recall expense coverage, and business interruption after a covered physical loss. Health Canada licensing and Good Production Practices set compliance duties; they do not replace insurance wording. Premium Insurance Brokers can help licensed operators in and around Windsor–Essex review programs against how you actually cultivate, process, and ship.
+
+heroSupporting:
+(empty)
+
+quoteLabel (hero CTA):
+Get a Cannabis Producer Quote
+
+secondaryCta / talk-to-a-broker label:
+Talk to a Broker
+
+trustStatement (whoItIsFor / trust band — visitor-facing):
+For Health Canada–licensed cultivators, nursery operators, and processors — including micro classes where applicable — reviewed through an independent broker who can coordinate infrastructure property, living plant and stock treatment, equipment breakdown, products liability, recall expense, and business interruption.
+
+source whoItIsFor (industry data; unused on page when trustStatement override exists):
+For Health Canada–licensed cultivators, nursery operators, and processors — including micro-cultivation and micro-processing where that licence class applies — reviewed through an independent broker who can coordinate infrastructure property, living plant and stock treatment, equipment breakdown, products liability, recall expense, and business interruption without treating your site like a retail storefront.
+
+coverageHeading:
+What's covered
+
+coverageIntro (introductory copy):
+Cannabis producer insurance is organized here around six production exposures cultivators and processors commonly review — infrastructure property, living plants and stock, equipment breakdown, product liability, recall expense, and business interruption — because triggers and valuations differ sharply across those agreements.
+
+coverageExplorerLabel:
+Coverage types
+
+--- Coverage / Explorer [0] ---
+id:
+cannabis-property-infrastructure
+
+title:
+Property & Production Infrastructure
+
+shortLabel:
+Infrastructure
+
+description (RIGHT / WHAT):
+May help address direct physical loss to buildings, tenant improvements, grow rooms, HVAC, lighting, irrigation, environmental controls, security systems, processing equipment, and certain materials — subject to cannabis property appetite, causes of loss, and limits.
+
+detailTitle (LEFT V2):
+The grow room is a production asset — not just a warehouse bay
+
+detailDescription (LEFT V2 / WHY):
+Licensed sites concentrate value in specialized rooms, sealed environments, electrical capacity, climate systems, and processing lines. One property form does not automatically insure every fixture, control system, or outdoor area the same way. Disclose construction, occupancy, and equipment schedules so limits match the infrastructure you would actually have to rebuild after a covered loss.
+
+visualEyebrow:
+Infrastructure
+
+visualCaption:
+Property & Production Infrastructure
+
+visualSubcaption:
+May help address direct physical loss to buildings, tenant improvements, grow rooms, HVAC, lighting, irrigation, environmental controls, security systems, processing equipment, and certain materials — subject to cannabis property appetite, causes of loss, and limits.
+
+--- Coverage / Explorer [1] ---
+id:
+cannabis-crop-stock
+
+title:
+Living Plants, Crop & Stock
+
+shortLabel:
+Crop & Stock
+
+description (RIGHT / WHAT):
+Living plants, seedlings, harvested cannabis, work-in-progress, and finished goods are often treated differently from ordinary commercial stock — coverage, if available, depends on specialty wording, stage definitions, and limits rather than a universal property grant.
+
+detailTitle (LEFT V2):
+Living plants are not finished packaged inventory
+
+detailDescription (LEFT V2 / WHY):
+Cultivation exposure moves through living plants and crop stages into harvested material, WIP, and finished products. Ordinary commercial property should not be assumed to automatically cover living cannabis plants or every crop loss scenario. Specialty cannabis or crop-oriented terms — where offered — may define stages, valuation, and exclusions differently by insurer. Do not rely on a single valuation rule; disclose canopy, stages, and storage methods when quoting.
+
+visualEyebrow:
+Crop & Stock
+
+visualCaption:
+Living Plants, Crop & Stock
+
+visualSubcaption:
+Living plants, seedlings, harvested cannabis, work-in-progress, and finished goods are often treated differently from ordinary commercial stock — coverage, if available, depends on specialty wording, stage definitions, and limits rather than a universal property grant.
+
+--- Coverage / Explorer [2] ---
+id:
+equipment-breakdown
+
+title:
+Equipment Breakdown
+
+shortLabel:
+Breakdown
+
+description (RIGHT / WHAT):
+Where purchased — typically not automatic on standard property forms — may help address certain sudden and accidental internal mechanical or electrical failures of HVAC, lighting, irrigation, environmental controls, or processing equipment, subject to policy terms.
+
+detailTitle (LEFT V2):
+A failed HVAC motor is not the same claim as a fire
+
+detailDescription (LEFT V2 / WHY):
+Climate and lighting failures can threaten crop health quickly, but equipment breakdown coverage (where added) responds to defined breakdown events — not wear and tear, poor maintenance, or every consequential crop loss. Spoilage, crop damage, or business interruption after breakdown often need explicit extensions. Confirm what is included before assuming property insurance already handles mechanical failure.
+
+visualEyebrow:
+Breakdown
+
+visualCaption:
+Equipment Breakdown
+
+visualSubcaption:
+Where purchased — typically not automatic on standard property forms — may help address certain sudden and accidental internal mechanical or electrical failures of HVAC, lighting, irrigation, environmental controls, or processing equipment, subject to policy terms.
+
+--- Coverage / Explorer [3] ---
+id:
+cannabis-product-liability
+
+title:
+Product Liability
+
+shortLabel:
+Products
+
+description (RIGHT / WHAT):
+May help respond to certain third-party bodily injury or property-damage claims alleging harm from cannabis you cultivate, process, package, or distribute — subject to products-completed operations wording, cannabis restrictions, and limits.
+
+detailTitle (LEFT V2):
+Finished goods can generate claims long after release
+
+detailDescription (LEFT V2 / WHY):
+Contamination, labelling, potency, processing defects, and completed-product allegations are central for licensed processors and many cultivators selling into the supply chain. CGL products coverage may address certain covered claims subject to exclusions — extracts, edibles, and other product types can face tighter appetite. Product liability is not the same as paying first-party recall expenses.
+
+visualEyebrow:
+Products
+
+visualCaption:
+Product Liability
+
+visualSubcaption:
+May help respond to certain third-party bodily injury or property-damage claims alleging harm from cannabis you cultivate, process, package, or distribute — subject to products-completed operations wording, cannabis restrictions, and limits.
+
+--- Coverage / Explorer [4] ---
+id:
+cannabis-product-recall
+
+title:
+Product Recall Expense
+
+shortLabel:
+Recall
+
+description (RIGHT / WHAT):
+Where purchased, product recall insurance may help with certain first-party costs of a covered withdrawal — such as notification, retrieval, or disposal — distinct from Health Canada recall obligations and distinct from product liability claims.
+
+detailTitle (LEFT V2):
+A regulatory recall duty is not an insurance cheque
+
+detailDescription (LEFT V2 / WHY):
+Cannabis Regulations require licence holders to maintain recall control systems and run recall simulations; the Minister may also order a recall. Those duties exist whether or not insurance responds. Product recall coverage, where bought, is typically aimed at defined first-party expense — not automatic CGL payment for withdrawal, replacement, or disposal. Deep specialty detail lives on our product recall insurance page.
+
+visualEyebrow:
+Recall
+
+visualCaption:
+Product Recall Expense
+
+visualSubcaption:
+Where purchased, product recall insurance may help with certain first-party costs of a covered withdrawal — such as notification, retrieval, or disposal — distinct from Health Canada recall obligations and distinct from product liability claims.
+
+--- Coverage / Explorer [5] ---
+id:
+business-interruption
+
+title:
+Business Interruption
+
+shortLabel:
+BI
+
+description (RIGHT / WHAT):
+Where purchased with property, may help replace certain lost income and continuing expenses when a covered direct physical loss to insured property necessarily suspends production — subject to waiting periods, indemnity limits, and form wording.
+
+detailTitle (LEFT V2):
+Payroll and fixed costs continue when a covered loss stops production
+
+detailDescription (LEFT V2 / WHY):
+Rebuilding sealed rooms and re-establishing canopy can take longer than a typical retail repair. BI generally follows a covered physical-loss trigger — it does not automatically respond to licence suspension, regulatory shutdown alone, contamination without insured property damage, recall decisions, equipment failure without the right forms, or supplier interruption unless a specific contingent endorsement applies. See our business interruption page for trigger principles.
+
+visualEyebrow:
+BI
+
+visualCaption:
+Business Interruption
+
+visualSubcaption:
+Where purchased with property, may help replace certain lost income and continuing expenses when a covered direct physical loss to insured property necessarily suspends production — subject to waiting periods, indemnity limits, and form wording.
+
+--- Consideration [0] ---
+title:
+Licence class changes the compliance picture
+
+description (complete body):
+Standard cultivation/processing and micro or nursery classes do not share identical physical-security matrices under Health Canada guidance. Describe your actual licence class, site layout, and activities so underwriting and risk engineering questions match operations — do not assume every producer is underwritten alike.
+
+TITLE+BODY COMBINED:
+TITLE:
+Licence class changes the compliance picture
+
+BODY:
+Standard cultivation/processing and micro or nursery classes do not share identical physical-security matrices under Health Canada guidance. Describe your actual licence class, site layout, and activities so underwriting and risk engineering questions match operations — do not assume every producer is underwritten alike.
+
+--- Consideration [1] ---
+title:
+Good Production Practices are compliance — not coverage
+
+description (complete body):
+Quality systems, sanitation, recordkeeping, and release controls support regulatory compliance and may influence underwriting questions. They do not by themselves create insurance coverage for product claims or recall expense.
+
+TITLE+BODY COMBINED:
+TITLE:
+Good Production Practices are compliance — not coverage
+
+BODY:
+Quality systems, sanitation, recordkeeping, and release controls support regulatory compliance and may influence underwriting questions. They do not by themselves create insurance coverage for product claims or recall expense.
+
+--- Consideration [2] ---
+title:
+Living plants vs harvested stock vs finished goods
+
+description (complete body):
+Ask how each stage is defined and limited on proposed wording. A policy that addresses finished goods may still restrict living plants or crop. Avoid universal valuation assumptions — stage, market price, and input cost methods vary by insurer and form.
+
+TITLE+BODY COMBINED:
+TITLE:
+Living plants vs harvested stock vs finished goods
+
+BODY:
+Ask how each stage is defined and limited on proposed wording. A policy that addresses finished goods may still restrict living plants or crop. Avoid universal valuation assumptions — stage, market price, and input cost methods vary by insurer and form.
+
+--- Consideration [3] ---
+title:
+Equipment breakdown and consequential crop loss
+
+description (complete body):
+HVAC, lighting, irrigation, and processing equipment failures can cascade into crop damage. Breakdown coverage, spoilage extensions, and BI after breakdown are often separate purchases — confirm the chain rather than assuming one endorsement solves all consequential loss.
+
+TITLE+BODY COMBINED:
+TITLE:
+Equipment breakdown and consequential crop loss
+
+BODY:
+HVAC, lighting, irrigation, and processing equipment failures can cascade into crop damage. Breakdown coverage, spoilage extensions, and BI after breakdown are often separate purchases — confirm the chain rather than assuming one endorsement solves all consequential loss.
+
+--- Consideration [4] ---
+title:
+Product liability vs product recall expense
+
+description (complete body):
+Third-party injury lawsuits and first-party recall costs are different problems. Keep both in the program conversation when you release products into the supply chain, and use our product recall page for expense-oriented depth.
+
+TITLE+BODY COMBINED:
+TITLE:
+Product liability vs product recall expense
+
+BODY:
+Third-party injury lawsuits and first-party recall costs are different problems. Keep both in the program conversation when you release products into the supply chain, and use our product recall page for expense-oriented depth.
+
+--- Consideration [5] ---
+title:
+Pollution and environmental handling
+
+description (complete body):
+Fertilizers, pesticides, solvents, wastewater, and extraction processes can create pollution exposure that CGL forms often restrict. Pollution liability may be reviewed as a supporting coverage when chemical and waste handling is material. See our pollution liability page.
+
+TITLE+BODY COMBINED:
+TITLE:
+Pollution and environmental handling
+
+BODY:
+Fertilizers, pesticides, solvents, wastewater, and extraction processes can create pollution exposure that CGL forms often restrict. Pollution liability may be reviewed as a supporting coverage when chemical and waste handling is material. See our pollution liability page.
+
+--- Consideration [6] ---
+title:
+Crime and site security
+
+description (complete body):
+High-value plant material and finished stock attract theft. Property theft conditions and employee dishonesty/crime coverage should be reviewed against your physical security plan — especially where Health Canada security expectations already shape site design.
+
+TITLE+BODY COMBINED:
+TITLE:
+Crime and site security
+
+BODY:
+High-value plant material and finished stock attract theft. Property theft conditions and employee dishonesty/crime coverage should be reviewed against your physical security plan — especially where Health Canada security expectations already shape site design.
+
+--- Consideration [7] ---
+title:
+Cyber and operational technology
+
+description (complete body):
+Environmental control systems, production software, and business networks can be ransomware targets. Cyber coverage is separate from property and CGL — review when OT/IT downtime would halt cultivation or processing.
+
+TITLE+BODY COMBINED:
+TITLE:
+Cyber and operational technology
+
+BODY:
+Environmental control systems, production software, and business networks can be ransomware targets. Cyber coverage is separate from property and CGL — review when OT/IT downtime would halt cultivation or processing.
+
+--- Consideration [8] ---
+title:
+Transit between licensed sites
+
+description (complete body):
+Movement of cannabis between licensed locations or to wholesale channels can create cargo or stock-in-transit questions. Do not assume CGL or building property automatically covers goods in transit — disclose shipping patterns when relevant.
+
+TITLE+BODY COMBINED:
+TITLE:
+Transit between licensed sites
+
+BODY:
+Movement of cannabis between licensed locations or to wholesale channels can create cargo or stock-in-transit questions. Do not assume CGL or building property automatically covers goods in transit — disclose shipping patterns when relevant.
+
+--- Broker / process steps ---
+[0] label: Your operation
+    detail: Your industry, locations, and how the business actually runs day to day.
+[1] label: Multiple insurance markets
+    detail: Independent access to commercial carriers — options compared side by side.
+[2] label: Premium broker
+    detail: Windsor-Essex guidance that translates policy wording into decisions.
+[3] label: Right-fit coverage
+    detail: Protection aligned to your operations — not generic off-the-shelf limits.
+
+relatedHeading:
+A lot to protect? Good thing we have options.
+
+relatedIntro:
+One policy is rarely the whole picture. Explore other commercial coverage from Premium.
+
+--- Related products ---
+[0] label: Manufacturing
+    href: /manufacturing-insurance/
+[1] label: Greenhouse & Agribusiness
+    href: /greenhouse-agribusiness-insurance/
+[2] label: Product Recall
+    href: /product-recall-insurance/
+[3] label: Pollution Liability
+    href: /pollution-liability-insurance/
+[4] label: Business Interruption
+    href: /business-interruption-insurance/
+
+faqTitle:
+Cannabis producer insurance FAQ
+
+faqIntro:
+Straight answers to common questions for this industry.
+
+--- FAQ [0] ---
+question:
+What insurance may a cannabis cultivator or processor need?
+
+answer (complete):
+Licensed producers commonly review commercial property for infrastructure, specialty treatment of living plants and cannabis stock, equipment breakdown, commercial general liability including products, product recall expense, and business interruption after covered physical loss. Crime, cyber, pollution, and cargo may be added when exposures warrant. Needs vary by licence class and activities — micro sites and standard processors are not identical.
+
+Q+A COMBINED:
+Q: What insurance may a cannabis cultivator or processor need?
+A: Licensed producers commonly review commercial property for infrastructure, specialty treatment of living plants and cannabis stock, equipment breakdown, commercial general liability including products, product recall expense, and business interruption after covered physical loss. Crime, cyber, pollution, and cargo may be added when exposures warrant. Needs vary by licence class and activities — micro sites and standard processors are not identical.
+
+--- FAQ [1] ---
+question:
+Do living cannabis plants need specialty treatment on property forms?
+
+answer (complete):
+Yes — living plants and crop are frequently distinguished from ordinary stock and may require specialty wording, stage definitions, and separate limits. Do not assume a standard commercial property form insures living cannabis plants the same way as finished goods.
+
+Q+A COMBINED:
+Q: Do living cannabis plants need specialty treatment on property forms?
+A: Yes — living plants and crop are frequently distinguished from ordinary stock and may require specialty wording, stage definitions, and separate limits. Do not assume a standard commercial property form insures living cannabis plants the same way as finished goods.
+
+--- FAQ [2] ---
+question:
+Does property insurance include equipment breakdown?
+
+answer (complete):
+Often not automatically. Many property forms restrict internal mechanical or electrical breakdown. Equipment breakdown coverage, where purchased, may address certain sudden failures of HVAC, lighting, or production equipment subject to exclusions — consequential crop or spoilage loss may need additional terms.
+
+Q+A COMBINED:
+Q: Does property insurance include equipment breakdown?
+A: Often not automatically. Many property forms restrict internal mechanical or electrical breakdown. Equipment breakdown coverage, where purchased, may address certain sudden failures of HVAC, lighting, or production equipment subject to exclusions — consequential crop or spoilage loss may need additional terms.
+
+--- FAQ [3] ---
+question:
+Is product recall included with product liability?
+
+answer (complete):
+Usually not. Product liability may respond to certain third-party injury or property-damage claims. Product recall insurance, where purchased, targets defined first-party withdrawal expenses. Regulatory recall obligations under the Cannabis Regulations exist independently of either coverage.
+
+Q+A COMBINED:
+Q: Is product recall included with product liability?
+A: Usually not. Product liability may respond to certain third-party injury or property-damage claims. Product recall insurance, where purchased, targets defined first-party withdrawal expenses. Regulatory recall obligations under the Cannabis Regulations exist independently of either coverage.
+
+--- FAQ [4] ---
+question:
+What information helps quote a cannabis producer?
+
+answer (complete):
+Expect questions about licence class and activities, site diagrams, security measures, building and equipment values, canopy or production capacity, plant/stock stage values, products manufactured, quality/recall systems, prior losses, and contract insurance requirements. Accurate stage values and equipment lists improve specialty market submissions.
+
+Q+A COMBINED:
+Q: What information helps quote a cannabis producer?
+A: Expect questions about licence class and activities, site diagrams, security measures, building and equipment values, canopy or production capacity, plant/stock stage values, products manufactured, quality/recall systems, prior losses, and contract insurance requirements. Accurate stage values and equipment lists improve specialty market submissions.
+
+ctaEyebrow:
+Ready when you are
+
+ctaHeading:
+Ready to review cannabis producer coverage?
+
+ctaSubhead (CTA body):
+Share your licence class, site profile, plant and stock values, and processing activities — we will compare specialty markets and explain what may fit, subject to underwriting.
+
+ctaQuoteLabel:
+Get a Cannabis Producer Quote
+
+serviceName:
+Cannabis Producer Insurance
+
+--- Structured data (jsonLd, generated from route content) ---
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Cannabis Producer Insurance",
+  "description": "Cannabis producer insurance for Health Canada–licensed cultivation, nursery, and processing operations — property, living plants and stock, equipment breakdown, product liability, recall expense, and business interruption through an independent Windsor-Essex broker.",
+  "provider": {
+    "@type": "InsuranceAgency",
+    "name": "Premium Insurance Brokers",
+    "telephone": "+1-226-782-6000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3063 Dougall Ave",
+      "addressLocality": "Windsor",
+      "addressRegion": "ON",
+      "postalCode": "N9E 1S7",
+      "addressCountry": "CA"
+    },
+    "url": "https://premiumib.com/"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Windsor-Essex"
+  },
+  "serviceType": "Cannabis Producer Insurance"
+}
+
+--- Photography / accessible image text ---
+hero photography src:
+/images/photography/commercial/manufacturing-insurance.webp
+
+hero photography alt (visitor-facing):
+Temporary stand-in hero — dedicated cannabis producer photography required before launch
+
+hero photography temporaryNote (source documentation; not displayed as body copy):
+TEMPORARY: reuses manufacturing-insurance hero photography. Dedicated Cannabis Producer Explorer/hero photography required before launch. Not final cannabis artwork.
+
+hero photography isTemporary:
+true
+
+
+======== DUMP STATS ========
+CHAR COUNT (body dump text): 47040
+ROUTES: 2
+RETAIL FAQ COUNT: 5
+RETAIL CONSIDERATION COUNT: 8
+RETAIL EXPLORER STATE COUNT: 5
+PRODUCER FAQ COUNT: 5
+PRODUCER CONSIDERATION COUNT: 9
+PRODUCER EXPLORER STATE COUNT: 6
+TRUNCATION: NO (full source strings)
+BLANK CONTENT: NONE
+
+SECTION WORD BREAKDOWN (JSON):
+{
+  "cannabis-retail-insurance": {
+    "faqCount": 5,
+    "considerationCount": 8,
+    "explorerCount": 5,
+    "sectionWords": {
+      "hero": 100,
+      "trust": 35,
+      "coverageIntro": 41,
+      "coverage_general-liability": 118,
+      "coverage_cannabis-property-stock": 108,
+      "coverage_cannabis-product-liability": 109,
+      "coverage_cannabis-crime-theft": 103,
+      "coverage_business-interruption": 109,
+      "consideration_0": 51,
+      "consideration_1": 67,
+      "consideration_2": 43,
+      "consideration_3": 36,
+      "consideration_4": 50,
+      "consideration_5": 48,
+      "consideration_6": 40,
+      "consideration_7": 56,
+      "brokerSteps": 50,
+      "faq_0": 67,
+      "faq_1": 52,
+      "faq_2": 72,
+      "faq_3": 49,
+      "faq_4": 49,
+      "cta": 32
+    },
+    "sectionWordSum": 1485
+  },
+  "cannabis-producer-insurance": {
+    "faqCount": 5,
+    "considerationCount": 9,
+    "explorerCount": 6,
+    "sectionWords": {
+      "hero": 131,
+      "trust": 39,
+      "coverageIntro": 41,
+      "coverage_cannabis-property-infrastructure": 106,
+      "coverage_cannabis-crop-stock": 115,
+      "coverage_equipment-breakdown": 106,
+      "coverage_cannabis-product-liability": 95,
+      "coverage_cannabis-product-recall": 108,
+      "coverage_business-interruption": 111,
+      "consideration_0": 49,
+      "consideration_1": 37,
+      "consideration_2": 49,
+      "consideration_3": 43,
+      "consideration_4": 39,
+      "consideration_5": 41,
+      "consideration_6": 38,
+      "consideration_7": 34,
+      "consideration_8": 38,
+      "brokerSteps": 50,
+      "faq_0": 69,
+      "faq_1": 50,
+      "faq_2": 47,
+      "faq_3": 42,
+      "faq_4": 49,
+      "cta": 33
+    },
+    "sectionWordSum": 1560
+  }
+}

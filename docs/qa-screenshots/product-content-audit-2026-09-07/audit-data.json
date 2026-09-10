@@ -201,17 +201,17 @@
       "avgCardWords": 69,
       "thinCardCount": 0,
       "considerationsPresent": true,
-      "considerationsWords": 378,
+      "considerationsWords": 368,
       "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 1275,
+      "totalSubstantiveWords": 1265,
       "safetyFlags": [],
       "faqUnique": true,
       "faqTemplateNotes": "Product-specific questions",
       "geoTargeting": "Windsor-Essex-primary",
       "geoNotes": "Windsor-Essex in copy",
       "classification": "A",
-      "classificationReason": "Substantive (1275w), 6 cards avg 69w, considerations yes, FAQ unique"
+      "classificationReason": "Substantive (1265w), 6 cards avg 69w, considerations yes, FAQ unique"
     },
     {
       "route": "/cannabis-retail-insurance/",
@@ -224,10 +224,10 @@
       "avgCardWords": 66,
       "thinCardCount": 0,
       "considerationsPresent": true,
-      "considerationsWords": 392,
+      "considerationsWords": 391,
       "considerationsQuality": "specific/useful",
       "faqCount": 5,
-      "totalSubstantiveWords": 1205,
+      "totalSubstantiveWords": 1200,
       "safetyFlags": [
         {
           "page": "/cannabis-retail-insurance/",
@@ -263,7 +263,7 @@
       "geoTargeting": "Windsor-Essex + Ontario",
       "geoNotes": "Both Windsor-Essex and Ontario referenced",
       "classification": "A",
-      "classificationReason": "Substantive (1205w), 5 cards avg 66w, considerations yes, FAQ unique"
+      "classificationReason": "Substantive (1200w), 5 cards avg 66w, considerations yes, FAQ unique"
     },
     {
       "route": "/cargo-freight-insurance/",
