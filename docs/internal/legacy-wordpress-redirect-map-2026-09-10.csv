@@ -1,0 +1,74 @@
+old_path,old_url,old_status,old_title,indexable,new_path,action,confidence,reason,owner_review,source,page_type,technical_excluded
+/about-us/,https://premiumib.com/about-us/,,,True,/about/,301,HIGH,About page path renamed in rebuild,NO,sitemap,UTILITY_OR_HUB,False
+/contact-02/,https://premiumib.com/contact-02/,,,True,/contact/,301,HIGH,Contact page path renamed in rebuild (contact-02 → contact),NO,sitemap,UTILITY_OR_HUB,False
+/contractor-construction-insurance/,https://premiumib.com/contractor-construction-insurance/,,,True,/contractors-insurance/,301,HIGH,Same contractors/construction product intent,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/insurance/,https://premiumib.com/insurance/,,,True,/,301,MEDIUM,Legacy personal+commercial directory hub; rebuild uses homepage discovery — confirm with owner,YES,sitemap,PRODUCT_OR_INDUSTRY,False
+/landscaping-insurance/,https://premiumib.com/landscaping-insurance/,,,True,/landscaping-snow-removal-insurance/,301,HIGH,Landscaping product consolidated with snow removal in rebuild,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/manufacturer-insurance/,https://premiumib.com/manufacturer-insurance/,,,True,/manufacturing-insurance/,301,HIGH,Manufacturer → Manufacturing product slug,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/rented-dwelling-insurance/,https://premiumib.com/rented-dwelling-insurance/,,,True,/landlord-insurance/,301,HIGH,Rented dwelling landlord/rental dwelling intent,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/request-quote/,https://premiumib.com/request-quote/,,,True,/get-a-quote/,301,HIGH,Quote request flow equivalent,NO,sitemap,UTILITY_OR_HUB,False
+/snow-removal-insurance/,https://premiumib.com/snow-removal-insurance/,,,True,/landscaping-snow-removal-insurance/,301,HIGH,Snow removal product consolidated with landscaping in rebuild,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/watercraft-insurance/,https://premiumib.com/watercraft-insurance/,,,True,/boat-insurance/,301,HIGH,Watercraft → Boat insurance product,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/2-columns/,https://premiumib.com/2-columns/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/3-columns/,https://premiumib.com/3-columns/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/blog-grid/,https://premiumib.com/blog-grid/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/book-a-appointment/,https://premiumib.com/book-a-appointment/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/faqs/,https://premiumib.com/faqs/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/noxiy_builder/footer-01/,https://premiumib.com/noxiy_builder/footer-01/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/footer-02/,https://premiumib.com/noxiy_builder/footer-02/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/footer-03/,https://premiumib.com/noxiy_builder/footer-03/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/footer-04/,https://premiumib.com/noxiy_builder/footer-04/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/header-01-dark/,https://premiumib.com/noxiy_builder/header-01-dark/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/header-01/,https://premiumib.com/noxiy_builder/header-01/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/header-02/,https://premiumib.com/noxiy_builder/header-02/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/header-03-dark/,https://premiumib.com/noxiy_builder/header-03-dark/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/header-03/,https://premiumib.com/noxiy_builder/header-03/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/header-04-dark/,https://premiumib.com/noxiy_builder/header-04-dark/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/header-04/,https://premiumib.com/noxiy_builder/header-04/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/header-2-dark/,https://premiumib.com/noxiy_builder/header-2-dark/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/offcanvas-sidebar-home-02/,https://premiumib.com/noxiy_builder/offcanvas-sidebar-home-02/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/offcanvas-sidebar-home-03/,https://premiumib.com/noxiy_builder/offcanvas-sidebar-home-03/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/offcanvas-sidebar/,https://premiumib.com/noxiy_builder/offcanvas-sidebar/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/price-table-year/,https://premiumib.com/noxiy_builder/price-table-year/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/noxiy_builder/price-table/,https://premiumib.com/noxiy_builder/price-table/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,TECHNICAL_THEME,True
+/portfolio/wellness-program/,https://premiumib.com/portfolio/wellness-program/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/project-single/,https://premiumib.com/project-single/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/service/dental-insurance/,https://premiumib.com/service/dental-insurance/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_SERVICE_DEMO,True
+/service/disability-insurance/,https://premiumib.com/service/disability-insurance/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_SERVICE_DEMO,True
+/service/final-expense/,https://premiumib.com/service/final-expense/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_SERVICE_DEMO,True
+/service/fire-insurance/,https://premiumib.com/service/fire-insurance/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_SERVICE_DEMO,True
+/service/health-insurance/,https://premiumib.com/service/health-insurance/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_SERVICE_DEMO,True
+/service/liability-insurance/,https://premiumib.com/service/liability-insurance/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_SERVICE_DEMO,True
+/service/medical-insurance/,https://premiumib.com/service/medical-insurance/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_SERVICE_DEMO,True
+/service/term-life/,https://premiumib.com/service/term-life/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_SERVICE_DEMO,True
+/service/universal-life/,https://premiumib.com/service/universal-life/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_SERVICE_DEMO,True
+/service/whole-life/,https://premiumib.com/service/whole-life/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_SERVICE_DEMO,True
+/services-01/,https://premiumib.com/services-01/,,,False,,410,HIGH,Already 404 on WordPress; not meaningful,NO,crawl/extra,OTHER,False
+/services-02/,https://premiumib.com/services-02/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/single-left-sidebar/,https://premiumib.com/single-left-sidebar/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/single-right-sidebar/,https://premiumib.com/single-right-sidebar/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/team-single/,https://premiumib.com/team-single/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/testimonials/,https://premiumib.com/testimonials/,,,True,,410,HIGH,Theme builder/demo/service template URL — not Premium content; exclude from migration,NO,sitemap,THEME_DEMO,True
+/,https://premiumib.com/,,,True,/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,HOME,False
+/auto-insurance/,https://premiumib.com/auto-insurance/,,,True,/auto-insurance/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/bonding-insurance/,https://premiumib.com/bonding-insurance/,,,True,/bonding-insurance/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/commercial-insurance/,https://premiumib.com/commercial-insurance/,,,True,/commercial-insurance/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/compliance/,https://premiumib.com/compliance/,,,True,/compliance/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,UTILITY_OR_HUB,False
+/farm-insurance/,https://premiumib.com/farm-insurance/,,,True,/farm-insurance/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/home-insurance/,https://premiumib.com/home-insurance/,,,True,/home-insurance/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/motorcycle-insurance/,https://premiumib.com/motorcycle-insurance/,,,True,/motorcycle-insurance/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/partners/,https://premiumib.com/partners/,,,True,/partners/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,UTILITY_OR_HUB,False
+/payment/,https://premiumib.com/payment/,,,True,/payment/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,UTILITY_OR_HUB,False
+/privacy-policy/,https://premiumib.com/privacy-policy/,,,True,/privacy-policy/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,UTILITY_OR_HUB,False
+/small-business-insurance/,https://premiumib.com/small-business-insurance/,,,True,/small-business-insurance/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/team/,https://premiumib.com/team/,,,True,/team/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,UTILITY_OR_HUB,False
+/tenant-insurance/,https://premiumib.com/tenant-insurance/,,,True,/tenant-insurance/,KEEP,HIGH,Same path exists as indexable rebuild route,NO,sitemap,PRODUCT_OR_INDUSTRY,False
+/blog/,https://premiumib.com/blog/,,,True,,REVIEW,MEDIUM,Blog index exists on WP with minimal/no posts in post-sitemap; no blog in rebuild,YES,crawl/extra,BLOG,False
+/pool-and-spa/,https://premiumib.com/pool-and-spa/,,,True,,REVIEW,LOW,No dedicated Pool & Spa product route in rebuild; decide preserve/migrate/redirect,YES,sitemap,PRODUCT_OR_INDUSTRY,False
+/service/car-insurance/,https://premiumib.com/service/car-insurance/,,,True,/auto-insurance/,REVIEW,LOW,Theme /service/ template with product-like slug; may be demo content — confirm whether to 301 to rebuild product or 410,YES,sitemap,THEME_SERVICE_DEMO,True
+/service/cyber-insurance/,https://premiumib.com/service/cyber-insurance/,,,True,/cyber-insurance/,REVIEW,LOW,Theme /service/ template with product-like slug; may be demo content — confirm whether to 301 to rebuild product or 410,YES,sitemap,THEME_SERVICE_DEMO,True
+/service/farm-insurance/,https://premiumib.com/service/farm-insurance/,,,True,/farm-insurance/,REVIEW,LOW,Theme /service/ template with product-like slug; may be demo content — confirm whether to 301 to rebuild product or 410,YES,sitemap,THEME_SERVICE_DEMO,True
+/service/home-insurance/,https://premiumib.com/service/home-insurance/,,,True,/home-insurance/,REVIEW,LOW,Theme /service/ template with product-like slug; may be demo content — confirm whether to 301 to rebuild product or 410,YES,sitemap,THEME_SERVICE_DEMO,True
+/service/life-insurance/,https://premiumib.com/service/life-insurance/,,,True,/life-insurance/,REVIEW,LOW,Theme /service/ template with product-like slug; may be demo content — confirm whether to 301 to rebuild product or 410,YES,sitemap,THEME_SERVICE_DEMO,True
+/service/marine-insurance/,https://premiumib.com/service/marine-insurance/,,,True,/boat-insurance/,REVIEW,LOW,Theme /service/ template with product-like slug; may be demo content — confirm whether to 301 to rebuild product or 410,YES,sitemap,THEME_SERVICE_DEMO,True
+/service/travels-insurance/,https://premiumib.com/service/travels-insurance/,,,True,/travel-insurance/,REVIEW,LOW,Theme /service/ template with product-like slug; may be demo content — confirm whether to 301 to rebuild product or 410,YES,sitemap,THEME_SERVICE_DEMO,True
