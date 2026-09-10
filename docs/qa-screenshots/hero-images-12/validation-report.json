@@ -1,0 +1,509 @@
+{
+  "timestamp": "2026-09-04T00:54:16.085Z",
+  "base": "http://localhost:3017",
+  "touchedRoutes": [
+    {
+      "route": "/directors-officers-insurance/",
+      "expected": "executive-leadership.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/executive-leadership.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/employment-practices-liability-insurance/",
+      "expected": "executive-leadership.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/executive-leadership.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/cyber-insurance/",
+      "expected": "cyber-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/cyber-insurance.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/small-business-insurance/",
+      "expected": "small-business-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/small-business-insurance.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/non-profit-insurance/",
+      "expected": "non-profit-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/non-profit-insurance.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/event-liability-insurance/",
+      "expected": "event-venue.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/event-venue.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/liquor-liability-insurance/",
+      "expected": "event-venue.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/event-venue.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/business-interruption-insurance/",
+      "expected": "business-interruption-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/business-interruption-insurance.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/crime-fidelity-insurance/",
+      "expected": "crime-fidelity-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/crime-fidelity-insurance.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/professional-liability-insurance/",
+      "expected": "professional-offices-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/professional-offices-insurance.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/pollution-liability-insurance/",
+      "expected": "manufacturing-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/manufacturing-insurance.webp",
+      "ok": true,
+      "usesFallback": false
+    },
+    {
+      "route": "/product-recall-insurance/",
+      "expected": "manufacturing-insurance.webp",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/manufacturing-insurance.webp",
+      "ok": true,
+      "usesFallback": false
+    }
+  ],
+  "allTouchedOk": true,
+  "commercialAudit": [
+    {
+      "route": "/commercial-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/commercial-insurance.webp",
+      "usesCommercialFallback": true,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/small-business-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/small-business-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/landscaping-snow-removal-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/landscaping-snow-removal-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/cyber-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/cyber-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/directors-officers-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/executive-leadership.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/business-interruption-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/business-interruption-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/professional-liability-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/professional-offices-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/cargo-freight-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/cargo-freight-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/garage-dealership-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/garage-dealership-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/builders-risk-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/builders-risk-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/warehousing-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/warehousing-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/property-management-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/condo-property-management.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/condominium-corporation-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/condo-property-management.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/pollution-liability-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/manufacturing-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/product-recall-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/manufacturing-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/hotel-motel-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/hotel-motel-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/convenience-store-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/convenience-store-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/grocery-specialty-food-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/grocery-specialty-food-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/medical-dental-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/medical-dental-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/pharmacy-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/pharmacy-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/fitness-gym-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/fitness-gym-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/salon-barber-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/salon-barber-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/non-profit-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/non-profit-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/religious-organizations-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/religious-organizations-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/daycare-private-school-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/daycare-private-school-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/event-liability-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/event-venue.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/liquor-liability-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/event-venue.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/crime-fidelity-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/crime-fidelity-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/employment-practices-liability-insurance/",
+      "status": 304,
+      "heroSrc": "/images/photography/commercial/executive-leadership.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": false
+    },
+    {
+      "route": "/contractors-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/contractors-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/manufacturing-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/manufacturing-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/commercial-property-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/commercial-property-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/restaurant-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/restaurant-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/professional-offices-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/professional-offices-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/real-estate-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/real-estate-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/builders-developers-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/builders-developers-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/retail-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/retail-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/farm-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/farm-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/food-truck-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/food-truck-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/trucking-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/trucking-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/commercial-auto-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/commercial-auto-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/dump-truck-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/dump-truck-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/greenhouse-agribusiness-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/greenhouse.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    },
+    {
+      "route": "/bonding-insurance/",
+      "status": 200,
+      "heroSrc": "/images/photography/commercial/bonding-insurance.webp",
+      "usesCommercialFallback": false,
+      "unintentionalFallback": false,
+      "ok": true
+    }
+  ],
+  "zeroUnintentionalFallback": true,
+  "unintentionalFallbacks": [],
+  "sharedPairs": {
+    "executiveLeadership": [
+      {
+        "route": "/directors-officers-insurance/",
+        "expected": "executive-leadership.webp",
+        "status": 200,
+        "heroSrc": "/images/photography/commercial/executive-leadership.webp",
+        "ok": true,
+        "usesFallback": false
+      },
+      {
+        "route": "/employment-practices-liability-insurance/",
+        "expected": "executive-leadership.webp",
+        "status": 200,
+        "heroSrc": "/images/photography/commercial/executive-leadership.webp",
+        "ok": true,
+        "usesFallback": false
+      }
+    ],
+    "eventVenue": [
+      {
+        "route": "/event-liability-insurance/",
+        "expected": "event-venue.webp",
+        "status": 200,
+        "heroSrc": "/images/photography/commercial/event-venue.webp",
+        "ok": true,
+        "usesFallback": false
+      },
+      {
+        "route": "/liquor-liability-insurance/",
+        "expected": "event-venue.webp",
+        "status": 200,
+        "heroSrc": "/images/photography/commercial/event-venue.webp",
+        "ok": true,
+        "usesFallback": false
+      }
+    ]
+  },
+  "regression": [
+    {
+      "route": "/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "route": "/auto-insurance/",
+      "status": 200,
+      "ok": true
+    }
+  ]
+}
