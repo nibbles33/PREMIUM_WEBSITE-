@@ -1,6 +1,6 @@
 # Grade C Batch E — Final Precision Fix (Commercial Hub Condensation Only)
 
-**PRECISION-FIX COMMIT:** `0b99f89` (`0b99f89486dd9001715f99927f05775ac91469ef`)
+**PRECISION-FIX COMMIT:** `c045d3c` (`c045d3cd1e1bc69287970910129a2b93b84f7b05`)
 **BRANCH:** `cursor/coverage-explorer-ux-v2-2026-09-07`  
 **WORKTREE:** `/tmp/PREMIUM_WEBSITE-d3-transportation`  
 
