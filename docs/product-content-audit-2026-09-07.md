@@ -45,7 +45,7 @@
 | /business-interruption-insurance/ | 1320 | 4 / specific/hedged (strong) | Yes (400w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /cargo-freight-insurance/ | 1127 | 4 / specific/hedged (strong) | Yes (386w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /commercial-auto-insurance/ | 1354 | 4 / specific/hedged (strong) | Yes (426w, specific/useful) | 5 | Yes | 3 (low only) | Windsor-Essex + Ontario | **A** |
-| /commercial-insurance/ | 1292 | 10 / specific/hedged (strong) | Yes (194w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
+| /commercial-insurance/ | 804 | 10 / specific/hedged (strong) | Yes (150w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /commercial-property-insurance/ | 1306 | 4 / specific/hedged (strong) | Yes (489w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
 | /condo-insurance/ | 565 | 4 / specific/hedged (strong) | Yes (83w, moderate) | 4 | Yes | 0 | Windsor-Essex-primary | **B** |
 | /condominium-corporation-insurance/ | 1551 | 4 / specific/hedged (strong) | Yes (511w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |

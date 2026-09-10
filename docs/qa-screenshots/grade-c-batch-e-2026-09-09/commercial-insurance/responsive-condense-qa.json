@@ -1,0 +1,54 @@
+[
+  {
+    "viewport": "390",
+    "overflowX": false,
+    "bodyScrollWidth": 390,
+    "clientWidth": 390,
+    "hasCategoryHeading": true,
+    "hasIndustryHeading": true,
+    "hasSpecialtyHeading": true,
+    "hasCta": true,
+    "explorerPresent": false,
+    "uniqueInsuranceHrefs": 27,
+    "screenshot": "docs/qa-screenshots/grade-c-batch-e-2026-09-09/commercial-insurance/hub_condensed_390.png"
+  },
+  {
+    "viewport": "768",
+    "overflowX": false,
+    "bodyScrollWidth": 768,
+    "clientWidth": 768,
+    "hasCategoryHeading": true,
+    "hasIndustryHeading": true,
+    "hasSpecialtyHeading": true,
+    "hasCta": true,
+    "explorerPresent": false,
+    "uniqueInsuranceHrefs": 27,
+    "screenshot": "docs/qa-screenshots/grade-c-batch-e-2026-09-09/commercial-insurance/hub_condensed_768.png"
+  },
+  {
+    "viewport": "1024",
+    "overflowX": false,
+    "bodyScrollWidth": 1024,
+    "clientWidth": 1024,
+    "hasCategoryHeading": true,
+    "hasIndustryHeading": true,
+    "hasSpecialtyHeading": true,
+    "hasCta": true,
+    "explorerPresent": false,
+    "uniqueInsuranceHrefs": 27,
+    "screenshot": "docs/qa-screenshots/grade-c-batch-e-2026-09-09/commercial-insurance/hub_condensed_1024.png"
+  },
+  {
+    "viewport": "1440",
+    "overflowX": false,
+    "bodyScrollWidth": 1440,
+    "clientWidth": 1440,
+    "hasCategoryHeading": true,
+    "hasIndustryHeading": true,
+    "hasSpecialtyHeading": true,
+    "hasCta": true,
+    "explorerPresent": false,
+    "uniqueInsuranceHrefs": 27,
+    "screenshot": "docs/qa-screenshots/grade-c-batch-e-2026-09-09/commercial-insurance/hub_condensed_1440.png"
+  }
+]

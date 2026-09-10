@@ -101,15 +101,23 @@ async function auditRouteViewport(page, slug, vp) {
   );
   await new Promise((r) => setTimeout(r, 400));
 
+  // Re-query + evaluate-click each iteration — avoids stale ElementHandle after React re-render
+  // (confirmed Fitness flake on desktop-1024 when capturing page.$$ once then clicking retained handles).
   const tabClass = slug === "auto-insurance" ? "pilot-auto-coverage-card" : "pilot-product-coverage-card";
-  const tabs = await page.$$(`.${tabClass}`);
+  const tabCount = await page.evaluate((cls) => document.querySelectorAll(`.${cls}`).length, tabClass);
   const states = [];
 
-  for (let i = 0; i < Math.max(tabs.length, 1); i++) {
-    if (tabs[i]) {
-      await tabs[i].click();
-      await new Promise((r) => setTimeout(r, 450));
-    }
+  for (let i = 0; i < Math.max(tabCount, 1); i++) {
+    await page.evaluate(
+      (cls, idx) => {
+        const tabs = document.querySelectorAll(`.${cls}`);
+        tabs[idx]?.scrollIntoView({ block: "center" });
+        tabs[idx]?.click();
+      },
+      tabClass,
+      i,
+    );
+    await new Promise((r) => setTimeout(r, 450));
     const m = await measureExplorer(page);
     states.push({ index: i, ...m });
   }

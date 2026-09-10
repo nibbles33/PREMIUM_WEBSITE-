@@ -110,70 +110,70 @@ export const commercialHubCategories: CommercialHubCategory[] = [
     label: "Commercial Property",
     href: "/commercial-property-insurance/",
     description:
-      "May help address direct physical loss or damage to buildings, contents, machinery, inventory, and tenant improvements — subject to causes of loss, limits, and endorsements on your policy.",
+      "Orientation for buildings, contents, equipment, and inventory your business owns or must insure — details live on the property page.",
     icon: Building2,
   },
   {
     label: "General Liability",
     href: "/small-business-insurance/",
     description:
-      "May help respond to certain third-party bodily injury or property-damage claims arising from your operations or products — subject to policy terms, exclusions, and limits. Often reviewed first, but not a universal bundle with property or auto.",
+      "A common starting point for certain third-party injury or property-damage claims tied to everyday operations or products.",
     icon: Briefcase,
   },
   {
     label: "Commercial Auto & Fleet",
     href: "/commercial-auto-insurance/",
     description:
-      "Ontario-regulated automobile coverage when your business owns, leases, or regularly uses vehicles for deliveries, service calls, or sales routes — separate from general liability for premises operations.",
+      "For company vehicles used in deliveries, service calls, or sales work — reviewed separately from premises liability.",
     icon: Truck,
   },
   {
     label: "Business Interruption",
     href: "/business-interruption-insurance/",
     description:
-      "Where purchased with property, may help with lost income and certain continuing expenses after a covered direct physical loss interrupts operations — not protection against every shutdown or supply delay.",
+      "Where purchased with property, may help replace income after a covered physical loss stops operations.",
     icon: Factory,
   },
   {
     label: "Professional Liability / E&O",
     href: "/professional-liability-insurance/",
     description:
-      "May address certain claims alleging negligent professional services, design, or advice — distinct from general liability for premises and product injury claims when those services are material to your business.",
+      "For claims alleging mistakes in professional advice, design, or services — distinct from general liability.",
     icon: Laptop,
   },
   {
     label: "Cyber Insurance",
     href: "/cyber-insurance/",
     description:
-      "May help with certain privacy, ransomware, and network interruption events that standard property and liability forms often restrict — reviewed when you store customer data or depend on systems to operate.",
+      "For certain privacy, ransomware, and system-interruption events that ordinary property forms often restrict.",
     icon: Shield,
   },
   {
     label: "Crime & Fidelity",
     href: "/crime-fidelity-insurance/",
     description:
-      "May address specified employee dishonesty, forgery, and certain computer-fraud losses — separate from ordinary property coverage, which often excludes or restricts insider theft.",
+      "For specified employee theft, forgery, and related fraud — usually separate from ordinary property coverage.",
     icon: KeyRound,
   },
   {
     label: "Pollution Liability",
     href: "/pollution-liability-insurance/",
     description:
-      "May help when environmental contamination exposures exceed what commercial general liability typically addresses — relevant for some manufacturers, contractors, and storage operations subject to policy triggers.",
+      "For environmental contamination exposures that general liability may restrict — when your operations warrant review.",
     icon: HardHat,
   },
   {
     label: "Equipment Breakdown",
     href: "/commercial-property-insurance/",
     description:
-      "Where purchased, may address certain sudden internal mechanical or electrical failures of boilers, compressors, and production equipment — often an endorsement separate from standard property perils such as fire or theft.",
+      "Where purchased, may address sudden internal mechanical or electrical failures — often separate from fire coverage.",
     icon: Wrench,
   },
   {
     label: "Directors & Officers",
     href: "/directors-officers-insurance/",
     description:
-      "May help with certain management and governance liability claims against directors and officers — distinct from general liability for premises and operations when leadership exposure is material.",
+      "For certain management and governance claims against directors and officers — distinct from premises liability.",
     icon: Gavel,
   },
 ];
@@ -182,32 +182,32 @@ export const commercialHubFaqs: FaqItem[] = [
   {
     question: "What's the difference between commercial and personal insurance?",
     answer:
-      "Personal policies are built around you, your home, and personal vehicles. Commercial insurance addresses business risks — liability tied to operations, commercial property and inventory, fleet or delivery vehicles, employees, and income interruption after certain covered losses. Using personal coverage for business activity can leave gaps when a claim involves work — your broker can help separate what belongs on each side.",
+      "Personal policies cover you, your home, and personal vehicles. Commercial insurance addresses business liability, property, fleets, employees, and income interruption after certain covered losses. Using personal coverage for work activity can leave gaps — a broker can help keep the two separate.",
   },
   {
     question: "Do I need every type of commercial coverage?",
     answer:
-      "No. Windsor–Essex businesses typically assemble a program from the categories that match their operations — liability, property, auto if you have vehicles, and specialty coverages such as cyber, crime, or pollution only when exposures warrant them. There is no single universal commercial policy that automatically includes every category; each part is subject to the policies and endorsements you purchase.",
+      "No. Most Windsor–Essex businesses assemble liability, property, and auto only where needed, then add specialty lines such as cyber or pollution when exposures warrant them. Nothing here is an automatic bundle.",
   },
   {
     question: "How is this page different from small business insurance?",
     answer:
-      "This hub orients you to industries and coverage categories across our commercial site. Small business insurance explains how liability, property, auto, and business interruption may be assembled for owner-operators and growing teams in more detail. Start here for route discovery; follow the industry or product links that match how you actually operate.",
+      "This hub helps you find industry and coverage routes across the commercial site. Small business insurance explains how to assemble a program for owner-operators in more detail. Start here for navigation; follow the links that match your operations.",
   },
   {
     question: "How is commercial insurance priced?",
     answer:
-      "Carriers review your industry classification, revenue or payroll, locations, property and equipment values, fleet details, products, claims history, limits, and deductibles. Contract requirements — certificates, additional insureds, minimum limits — also shape what must be quoted. Two similar businesses can price differently when operations, values, or loss history differ.",
+      "Carriers look at industry, revenue or payroll, locations, property and fleet values, products, claims history, limits, and contract requirements. Similar businesses can still price differently.",
   },
   {
     question: "What information helps start a commercial quote?",
     answer:
-      "Expect questions about business activities, years in operation, revenue or payroll, premises and occupancy, vehicles and equipment, inventory or work-in-progress values, current coverage, recent claims, and any contract insurance requirements. The more accurately you describe operations, the better a broker can compare markets — a quote conversation is not a guarantee every coverage type will be available until underwriting confirms.",
+      "Share what you do, revenue or payroll, locations, vehicles and equipment, inventory values, current coverage, claims history, and any certificate requirements. Accurate details help a broker compare markets — availability still depends on underwriting.",
   },
 ];
 
 export const commercialBrokerCopy =
-  "Independent advice across multiple commercial carriers — not one company's product shelf. Coverage explained in plain language, and real support if a claim happens.";
+  "Independent advice across multiple commercial carriers — not one company's product shelf. Plain-language guidance, and real support if a claim happens.";
 
 export type IndustryPageContent = {
   slug: string;
