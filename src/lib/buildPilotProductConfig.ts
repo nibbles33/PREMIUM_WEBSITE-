@@ -269,6 +269,7 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "Commercial Property", href: "/commercial-property-insurance/" },
     { label: "Business Interruption", href: "/business-interruption-insurance/" },
     { label: "Product Recall", href: "/product-recall-insurance/" },
+    { label: "Cannabis Producer", href: "/cannabis-producer-insurance/" },
   ],
   "commercial-property-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
@@ -301,6 +302,7 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "Grocery & Specialty Food", href: "/grocery-specialty-food-insurance/" },
     { label: "Convenience Store", href: "/convenience-store-insurance/" },
     { label: "Pharmacy", href: "/pharmacy-insurance/" },
+    { label: "Cannabis Retail", href: "/cannabis-retail-insurance/" },
   ],
   "food-truck-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },

@@ -26,11 +26,6 @@ export const personalNavGroups: NavGroup[] = [
         href: "/travel-insurance/",
         description: "Emergency medical and trip protection for travellers.",
       },
-      {
-        label: "Ride / Car / Home Sharing",
-        href: "/home-sharing-insurance/",
-        description: "Sharing-economy and platform-use coverage.",
-      },
     ],
   },
   {
@@ -69,6 +64,11 @@ export const personalNavGroups: NavGroup[] = [
         label: "Group Home & Auto",
         href: "/group-home-auto-insurance/",
         description: "Employer and association group program inquiries.",
+      },
+      {
+        label: "Home & Ride Sharing",
+        href: "/home-sharing-insurance/",
+        description: "Sharing-economy coverage for home hosting and ride or vehicle sharing.",
       },
     ],
   },

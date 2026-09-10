@@ -93,6 +93,8 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
       { label: "Pollution Liability", href: "/pollution-liability-insurance/" },
       { label: "Crime & Fidelity", href: "/crime-fidelity-insurance/" },
       { label: "Directors & Officers", href: "/directors-officers-insurance/" },
+      { label: "Cannabis Retail", href: "/cannabis-retail-insurance/" },
+      { label: "Cannabis Producer", href: "/cannabis-producer-insurance/" },
     ]),
     relatedHeading: "Specialty & program routes",
     relatedIntro:
@@ -512,6 +514,7 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     relatedProducts: relatedLinksToProducts([
       { label: "Farm Insurance", href: "/farm-insurance/" },
       { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+      { label: "Cannabis Producer", href: "/cannabis-producer-insurance/" },
     ]),
     relatedIntro:
       "One policy is rarely the whole picture. Explore other coverage from Premium.",

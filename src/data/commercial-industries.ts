@@ -37,7 +37,7 @@ export type CommercialIndustryTile = {
 /** All 12 commercial industry tiles (hub grid + cluster spotlight). */
 export const commercialIndustryTiles: CommercialIndustryTile[] = [
   {
-    label: "Commercial Auto & Fleets",
+    label: "Commercial Auto / Fleet",
     href: "/commercial-auto-insurance/",
     icon: Truck,
   },
@@ -87,12 +87,12 @@ export const commercialIndustryTiles: CommercialIndustryTile[] = [
     icon: Store,
   },
   {
-    label: "Food Trucks & Trailers",
+    label: "Food Truck / Trailer",
     href: "/food-truck-insurance/",
     icon: UtensilsCrossed,
   },
   {
-    label: "Dump Trucks",
+    label: "Dump Truck",
     href: "/dump-truck-insurance/",
     icon: Container,
   },
@@ -115,10 +115,10 @@ export const commercialHubCategories: CommercialHubCategory[] = [
     icon: Building2,
   },
   {
-    label: "General Liability",
+    label: "Small Business",
     href: "/small-business-insurance/",
     description:
-      "A common starting point for certain third-party injury or property-damage claims tied to everyday operations or products.",
+      "A starting point for assembling everyday commercial coverage — including liability, property, and other lines that fit how the business actually operates.",
     icon: Briefcase,
   },
   {
@@ -164,10 +164,10 @@ export const commercialHubCategories: CommercialHubCategory[] = [
     icon: HardHat,
   },
   {
-    label: "Equipment Breakdown",
+    label: "Equipment on Commercial Property",
     href: "/commercial-property-insurance/",
     description:
-      "Where purchased, may address sudden internal mechanical or electrical failures — often separate from fire coverage.",
+      "Equipment breakdown is reviewed on the Commercial Property page — there is no separate equipment-breakdown product route.",
     icon: Wrench,
   },
   {

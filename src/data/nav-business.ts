@@ -42,16 +42,18 @@ export const businessNavClusters: BusinessNavCluster[] = [
     links: [
       { label: "Contractors", href: "/contractors-insurance/" },
       { label: "Builders & Developers", href: "/builders-developers-insurance/" },
-      { label: "Builders Risk", href: "/builders-risk-insurance/" },
+      { label: "Builder's Risk", href: "/builders-risk-insurance/" },
+      { label: "Landscaping & Snow Removal", href: "/landscaping-snow-removal-insurance/" },
       { label: "Warehousing", href: "/warehousing-insurance/" },
       { label: "Property Management", href: "/property-management-insurance/" },
-      { label: "Condominium Corporation", href: "/condominium-corporation-insurance/" },
+      { label: "Condo Corporation", href: "/condominium-corporation-insurance/" },
     ],
   },
   {
     title: "Manufacturing & Industry",
     links: [
       { label: "Manufacturing", href: "/manufacturing-insurance/" },
+      { label: "Cannabis Producer", href: "/cannabis-producer-insurance/" },
       { label: "Pollution Liability", href: "/pollution-liability-insurance/" },
       { label: "Product Recall", href: "/product-recall-insurance/" },
     ],
@@ -61,10 +63,11 @@ export const businessNavClusters: BusinessNavCluster[] = [
     links: [
       { label: "Restaurants", href: "/restaurant-insurance/" },
       { label: "Food Truck / Trailer", href: "/food-truck-insurance/" },
-      { label: "Retail", href: "/retail-insurance/" },
       { label: "Hotel / Motel", href: "/hotel-motel-insurance/" },
+      { label: "Retail", href: "/retail-insurance/" },
       { label: "Convenience / Gas", href: "/convenience-store-insurance/" },
-      { label: "Grocery / Food / Bakery", href: "/grocery-specialty-food-insurance/" },
+      { label: "Grocery / Specialty Food & Bakery", href: "/grocery-specialty-food-insurance/" },
+      { label: "Cannabis Retail", href: "/cannabis-retail-insurance/" },
     ],
   },
   {
@@ -75,7 +78,6 @@ export const businessNavClusters: BusinessNavCluster[] = [
       { label: "D&O", href: "/directors-officers-insurance/" },
       { label: "Cyber", href: "/cyber-insurance/" },
       { label: "Professional Liability / E&O", href: "/professional-liability-insurance/" },
-      { label: "Landscaping & Snow Removal", href: "/landscaping-snow-removal-insurance/" },
     ],
   },
   {

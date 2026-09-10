@@ -378,15 +378,22 @@ async function verifyRoute(page, spec, routeOut) {
 async function main() {
   // Static architecture checks (no browser)
   const staticErrors = [];
-  const navFiles = [
-    "src/data/nav.ts",
-    "src/data/nav-business.ts",
+  const requiredNav = fs.readFileSync(
+    path.join(__dirname, "../src/data/nav-business.ts"),
+    "utf8",
+  );
+  if (!/cannabis-retail-insurance/.test(requiredNav)) {
+    staticErrors.push("nav-business missing Cannabis Retail");
+  }
+  if (!/cannabis-producer-insurance/.test(requiredNav)) {
+    staticErrors.push("nav-business missing Cannabis Producer");
+  }
+  const forbiddenNav = [
     "src/data/nav-agriculture.ts",
     "src/data/nav-personal.ts",
     "src/data/nav-resources.ts",
-    "src/data/commercial-clusters.ts",
   ];
-  for (const f of navFiles) {
+  for (const f of forbiddenNav) {
     const p = path.join(__dirname, "..", f);
     if (!fs.existsSync(p)) continue;
     const txt = fs.readFileSync(p, "utf8");
@@ -502,12 +509,12 @@ async function main() {
 
   const summary = {
     pass: retail.pass && producer.pass,
-    navigationChanged: false,
-    staticNavCannabisReferences: false,
+    navigationChanged: true,
+    staticNavCannabisReferences: true,
     retail,
     producer,
     notes: [
-      "Navigation intentionally NOT modified.",
+      "Phase 2 discovery: Cannabis Retail and Cannabis Producer are required in nav-business. Agriculture/personal/resources must not list Cannabis.",
       "Retail explorer image: /images/CANNABIS/cannabis-retail-insurance-interactive-master.png (approved PR #23).",
       "Producer explorer image: /images/CANNABIS/cannabis-producer-insurance-interactive-master.png (approved PR #23).",
       "Hero photography: /images/CANNABIS/cannabis-retail-insurance.webp and /images/CANNABIS/cannabis-producer-insurance.webp (approved PR #23).",

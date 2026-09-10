@@ -1076,7 +1076,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     ],
     relatedLinks: [
       { label: "Manufacturing Insurance", href: "/manufacturing-insurance/" },
-      { label: "Product Liability (Retail)", href: "/retail-insurance/" },
+      { label: "Retail Insurance", href: "/retail-insurance/" },
       { label: "Grocery & Specialty Food", href: "/grocery-specialty-food-insurance/" },
     ],
     faqTitle: "Product recall FAQ",

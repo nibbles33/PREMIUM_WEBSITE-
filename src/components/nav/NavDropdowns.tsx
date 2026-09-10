@@ -331,7 +331,7 @@ export function MobileNavSection({
               <li key={link.href + link.label}>
                 <Link
                   href={link.href}
-                  className="block py-2 text-[15px] text-secondary hover:text-charcoal"
+                  className="block py-2.5 text-[15px] text-secondary hover:text-charcoal"
                   onClick={onNavigate}
                 >
                   {link.label}
@@ -386,7 +386,7 @@ export function MobileNavGroupSection({
                   <li key={link.href + link.label}>
                     <Link
                       href={link.href}
-                      className="block py-1.5 text-[15px] text-secondary hover:text-charcoal"
+                      className="block py-2.5 text-[15px] text-secondary hover:text-charcoal"
                       onClick={onNavigate}
                     >
                       {link.label}
@@ -443,7 +443,7 @@ export function MobileNavClusterSection({
                   <li key={link.href + link.label}>
                     <Link
                       href={link.href}
-                      className="block py-1.5 text-[15px] text-secondary hover:text-charcoal"
+                      className="block py-2.5 text-[15px] text-secondary hover:text-charcoal"
                       onClick={onNavigate}
                     >
                       {link.label}
