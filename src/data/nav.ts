@@ -21,7 +21,7 @@ export type NavItem = {
 
 /** Primary header navigation — dropdown behaviour implemented in Header. */
 export const navItems: NavItem[] = [
-  { kind: "personal", label: "Personal", href: "/auto-insurance/" },
+  { kind: "personal", label: "Personal", href: "/personal/" },
   { kind: "business", label: "Business", href: "/commercial-insurance/" },
   { kind: "agriculture", label: "Agriculture", href: "/farm-insurance/" },
   { kind: "link", label: "About", href: "/about/" },

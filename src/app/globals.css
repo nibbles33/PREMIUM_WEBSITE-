@@ -716,6 +716,13 @@ th {
   animation: pilot-rail-scroll-ltr var(--pilot-rail-duration, 110s) linear infinite;
 }
 
+/* Measured one-sequence shift (carrier ultrawide coverage). */
+.pilot-infinite-rail--measured .pilot-infinite-rail-track {
+  --pilot-rail-shift: 0px;
+  transform: translate3d(calc(-1 * var(--pilot-rail-shift)), 0, 0);
+  animation-name: pilot-rail-scroll-ltr-shift;
+}
+
 .pilot-infinite-rail:hover .pilot-infinite-rail-track,
 .pilot-infinite-rail:focus-within .pilot-infinite-rail-track {
   animation-play-state: paused;
@@ -724,6 +731,15 @@ th {
 @keyframes pilot-rail-scroll-ltr {
   from {
     transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pilot-rail-scroll-ltr-shift {
+  from {
+    transform: translate3d(calc(-1 * var(--pilot-rail-shift)), 0, 0);
   }
   to {
     transform: translate3d(0, 0, 0);

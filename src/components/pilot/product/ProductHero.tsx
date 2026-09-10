@@ -111,7 +111,7 @@ export default function ProductHero({ config }: ProductHeroProps) {
                   {config.quoteLabel}
                 </PremiumGoldCTA>
                 <PremiumPilotButton
-                  href={config.secondaryCta?.href ?? config.brokerHref ?? "/talk-to-a-broker/"}
+                  href={config.secondaryCta?.href ?? config.brokerHref ?? "/contact/?intent=broker"}
                   variant="secondary"
                   showArrow={false}
                 >

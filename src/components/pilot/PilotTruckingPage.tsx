@@ -14,7 +14,7 @@ import {
 } from "@/data/commercial-industries";
 import { getPageHeroPhotography } from "@/data/photography";
 
-const BROKER_HREF = "/talk-to-a-broker/";
+const BROKER_HREF = "/contact/?intent=broker";
 const TRUCKING_ACCENT = "#5A8A73";
 
 const content = industryPages.find((page) => page.slug === "trucking-insurance")!;

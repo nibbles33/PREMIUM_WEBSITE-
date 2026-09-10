@@ -24,7 +24,7 @@ export default function PilotFinalCta() {
               Get a Quote
             </PremiumPilotButton>
             <PremiumPilotButton
-              href="/talk-to-a-broker/"
+              href="/contact/?intent=broker"
               variant="secondary"
               showArrow={false}
               className="pilot-charcoal-secondary-btn"

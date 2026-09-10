@@ -7,6 +7,7 @@ const BASE_URL = "https://premiumib.com";
 const staticRoutes = [
   "/",
   "/about/",
+  "/personal/",
   "/auto-insurance/",
   "/home-insurance/",
   "/condo-insurance/",

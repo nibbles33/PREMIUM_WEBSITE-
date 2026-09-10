@@ -101,7 +101,7 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
           subhead={config.ctaSubhead}
           quoteHref={config.quoteHref}
           quoteLabel={config.ctaQuoteLabel ?? config.quoteLabel}
-          brokerHref={config.brokerHref ?? "/talk-to-a-broker/"}
+          brokerHref={config.brokerHref ?? "/contact/?intent=broker"}
           secondaryCta={config.secondaryCta}
         />
       </main>

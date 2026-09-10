@@ -10,15 +10,38 @@ export type FilmstripItem = {
   slug: string;
 };
 
+/** All approved Personal products — homepage Personal rail (data-only completeness). */
 export const personalFilmstripItems: FilmstripItem[] = [
   { label: "Auto", href: "/auto-insurance/", slug: "auto-insurance" },
   { label: "Home", href: "/home-insurance/", slug: "home-insurance" },
   { label: "Condo", href: "/condo-insurance/", slug: "condo" },
   { label: "Tenant", href: "/tenant-insurance/", slug: "tenant" },
+  { label: "Landlord", href: "/landlord-insurance/", slug: "landlord" },
   { label: "Motorcycle", href: "/motorcycle-insurance/", slug: "motorcycle" },
   { label: "Boat", href: "/boat-insurance/", slug: "boat" },
   { label: "Cottage", href: "/cottage-insurance/", slug: "cottage" },
   { label: "Travel", href: "/travel-insurance/", slug: "travel-insurance" },
+  {
+    label: "Mobile Home",
+    href: "/mobile-home-insurance/",
+    slug: "mobile-home-insurance",
+  },
+  {
+    label: "Umbrella",
+    href: "/personal-umbrella-insurance/",
+    slug: "personal-umbrella-insurance",
+  },
+  {
+    label: "Home Sharing",
+    href: "/home-sharing-insurance/",
+    slug: "home-sharing-insurance",
+  },
+  { label: "Life", href: "/life-insurance/", slug: "life-insurance" },
+  {
+    label: "Group Home & Auto",
+    href: "/group-home-auto-insurance/",
+    slug: "group-home-auto-insurance",
+  },
 ];
 
 export function getFilmstripPhoto(slug: string) {

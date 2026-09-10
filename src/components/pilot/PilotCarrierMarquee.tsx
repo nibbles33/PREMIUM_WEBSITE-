@@ -1,15 +1,22 @@
+"use client";
+
 import Link from "next/link";
 import PartnerLogoCard from "@/components/PartnerLogoCard";
 import PilotInfiniteRail from "@/components/pilot/PilotInfiniteRail";
 import { homepageCarriers } from "@/data/partners";
 import { PILOT_RAIL_DURATIONS } from "@/data/pilot-rail-durations";
 
+/** Enough identical sequences so (N-1)×sequenceWidth covers ultrawide viewports (≤3840). */
+const SEQUENCE_COPIES = 4;
+
 function MarqueeSegment({
   focusable,
   ariaHidden,
+  copyIndex,
 }: {
   focusable: boolean;
   ariaHidden?: boolean;
+  copyIndex: number;
 }) {
   return (
     <ul
@@ -17,7 +24,7 @@ function MarqueeSegment({
       aria-hidden={ariaHidden || undefined}
     >
       {homepageCarriers.map((carrier) => (
-        <li key={`${ariaHidden ? "dup" : "a"}-${carrier.name}`}>
+        <li key={`c${copyIndex}-${carrier.name}`}>
           <PartnerLogoCard
             partner={carrier}
             size="marquee"
@@ -71,9 +78,16 @@ export default function PilotCarrierMarquee() {
           reducedDurationSeconds={reduced}
           ariaLabel="Insurance carrier partners"
           trackClassName="gap-5 sm:gap-6"
+          measureFirstChildShift
         >
-          <MarqueeSegment focusable />
-          <MarqueeSegment focusable={false} ariaHidden />
+          {Array.from({ length: SEQUENCE_COPIES }, (_, i) => (
+            <MarqueeSegment
+              key={`seq-${i}`}
+              copyIndex={i}
+              focusable={i === 0}
+              ariaHidden={i > 0}
+            />
+          ))}
         </PilotInfiniteRail>
       </div>
     </section>

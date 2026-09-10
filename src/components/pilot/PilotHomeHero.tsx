@@ -11,7 +11,7 @@ import {
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const QUOTE_HREF = "/get-a-quote/";
-const BROKER_HREF = "/talk-to-a-broker/";
+const BROKER_HREF = "/contact/?intent=broker";
 
 type CarPhase = "idle" | "entering" | "settling" | "parked";
 

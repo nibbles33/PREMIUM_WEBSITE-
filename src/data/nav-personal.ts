@@ -11,7 +11,7 @@ export type NavGroup = {
 
 export const personalNavHub = {
   label: "Personal",
-  href: "/auto-insurance/",
+  href: "/personal/",
 };
 
 export const personalNavGroups: NavGroup[] = [

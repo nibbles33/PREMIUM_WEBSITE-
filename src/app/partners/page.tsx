@@ -84,7 +84,7 @@ export default function PartnersPage() {
                     </span>
                   </Link>
                   <Link
-                    href="/talk-to-a-broker/"
+                    href="/contact/?intent=broker"
                     className="btn-secondary inline-flex h-12 min-w-[200px] items-center justify-center rounded-md border border-border px-6 text-sm font-medium text-gold-dark hover:border-gold-dark"
                   >
                     Talk to a Broker

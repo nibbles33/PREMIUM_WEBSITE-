@@ -55,7 +55,7 @@ const resourceCards = [
   {
     title: "Talk to a Broker",
     description: "Speak with a licensed broker about coverage, renewals, or policy questions.",
-    href: "/talk-to-a-broker/",
+    href: "/contact/?intent=broker",
     icon: Phone,
   },
   {

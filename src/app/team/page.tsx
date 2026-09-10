@@ -17,7 +17,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const QUOTE_HREF = "/get-a-quote/";
-const BROKER_HREF = "/talk-to-a-broker/";
+const BROKER_HREF = "/contact/?intent=broker";
 const TEAM_EMAIL = "mailto:info@premiumib.com";
 const TEAM_PHONE = "tel:+12267826000";
 

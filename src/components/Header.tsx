@@ -19,7 +19,7 @@ import { resourcesNavLinks } from "@/data/nav-resources";
 import { navItems } from "@/data/nav";
 
 const QUOTE_HREF = "/get-a-quote/";
-const BROKER_HREF = "/talk-to-a-broker/";
+const BROKER_HREF = "/contact/?intent=broker";
 
 function LogoMark({ className = "" }: { className?: string }) {
   return (

@@ -122,7 +122,7 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     subhead:
       "An extra layer of liability protection above your home and auto policies — for when a serious claim exceeds your underlying limits.",
     photographySlug: "personal-umbrella-insurance",
-    quoteHref: "/talk-to-a-broker/",
+    quoteHref: "/contact/?intent=broker",
     quoteLabel: "Talk to a Broker About Umbrella Coverage",
     coverageIntro:
       "Umbrella policies extend personal liability limits when a claim exceeds what your home or auto policy will pay.",
@@ -223,7 +223,7 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     subhead:
       "Using your home or vehicle on a sharing platform creates coverage questions personal policies were not always designed to answer.",
     photographySlug: "home-sharing-insurance",
-    quoteHref: "/talk-to-a-broker/",
+    quoteHref: "/contact/?intent=broker",
     quoteLabel: "Talk to a Broker About Sharing Coverage",
     secondaryCta: { label: "Contact Us", href: CONTACT },
     coverageIntro:
@@ -328,7 +328,7 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     photographySlug: "life-insurance",
     quoteHref: `${CONTACT}?inquiry=life`,
     quoteLabel: "Start a Life Inquiry",
-    secondaryCta: { label: "Talk to a Broker", href: "/talk-to-a-broker/" },
+    secondaryCta: { label: "Talk to a Broker", href: "/contact/?intent=broker" },
     coverageIntro:
       "Life insurance addresses income replacement, debt protection, and legacy planning — a different discipline from home and auto coverage under RIBO-licensed property and casualty advice.",
     coverageTypes: [
@@ -433,7 +433,7 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     photographySlug: "group-home-auto-insurance",
     quoteHref: `${CONTACT}?inquiry=group`,
     quoteLabel: "Start a Group Inquiry",
-    secondaryCta: { label: "Talk to a Broker", href: "/talk-to-a-broker/" },
+    secondaryCta: { label: "Talk to a Broker", href: "/contact/?intent=broker" },
     coverageIntro:
       "Group programs can offer members a coordinated way to access home and auto coverage — but structure, eligibility, and availability depend on the sponsoring organization and participating markets.",
     coverageTypes: [

@@ -17,5 +17,5 @@ export const resourcesNavLinks: NavLink[] = [
   { label: "Resources & Articles", href: "/resources/" },
   { label: "Newsletter", href: "/newsletter/" },
   { label: "Contact Us", href: "/contact/" },
-  { label: "Talk to a Broker", href: "/talk-to-a-broker/" },
+  { label: "Talk to a Broker", href: "/contact/?intent=broker" },
 ];

@@ -732,7 +732,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
       "Medical emergency and trip protection for travellers — explained clearly so you know what is covered before you leave Windsor-Essex.",
     photographySlug: "travel-insurance",
     accentColor: "#6A7A8A",
-    quoteHref: "/talk-to-a-broker/",
+    quoteHref: "/contact/?intent=broker",
     quoteLabel: "Talk to a Broker About Travel Coverage",
     secondaryCta: { label: "Contact Us", href: "/contact/" },
     trustStatement:

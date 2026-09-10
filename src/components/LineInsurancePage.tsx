@@ -7,7 +7,7 @@ import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getPageHeroPhotography } from "@/data/photography";
 
-const BROKER_HREF = "/talk-to-a-broker/";
+const BROKER_HREF = "/contact/?intent=broker";
 const PHONE_DISPLAY = "226-782-6000";
 const PHONE_HREF = "tel:+12267826000";
 

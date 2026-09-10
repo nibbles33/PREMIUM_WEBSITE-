@@ -113,7 +113,7 @@ export default function PilotPersonalFilmstrip() {
               </p>
             </div>
             <PremiumPilotButton
-              href="/home-insurance/"
+              href="/personal/"
               variant="secondary"
               showArrow={false}
               className="shrink-0 self-start text-[13px] sm:self-auto"

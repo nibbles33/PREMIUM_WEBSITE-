@@ -16,7 +16,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const QUOTE_HREF = "/get-a-quote/";
-const BROKER_HREF = "/talk-to-a-broker/";
+const BROKER_HREF = "/contact/?intent=broker";
 
 const jsonLd = {
   "@context": "https://schema.org",
