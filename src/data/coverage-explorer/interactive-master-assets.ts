@@ -109,15 +109,10 @@ export const ROUTE_TO_INTERACTIVE_MASTER_FILE: Record<string, string> = {
   "pollution-liability-insurance": "pollution-liability-interactive-master.png",
   "product-recall-insurance":
     "product-recall-insurance-interactive-master.png",
-  // Cannabis Phase 2 — TEMPORARY visual strategy until dedicated Cannabis Explorer art ships.
-  // TODO BEFORE LAUNCH: CANNABIS RETAIL EXPLORER IMAGE — DEDICATED IMAGE REQUIRED BEFORE LAUNCH
-  //   (on-disk cannabis-retail master is a Phase-2 stand-in; not approved final artwork)
-  // TODO BEFORE LAUNCH: CANNABIS PRODUCER EXPLORER IMAGE — DEDICATED IMAGE REQUIRED BEFORE LAUNCH
-  //   (currently reuses manufacturing-insurance interactive master; not cannabis artwork)
   "cannabis-retail-insurance":
-    "cannabis-retail-insurance-interactive-master.png", // TEMPORARY stand-in pending final art
+    "CANNABIS/cannabis-retail-insurance-interactive-master.png",
   "cannabis-producer-insurance":
-    "manufacturing-insurance-interactive-master.png", // TEMPORARY — not cannabis artwork
+    "CANNABIS/cannabis-producer-insurance-interactive-master.png",
 };
 
 /** Asset files on disk without a live product route (extras beyond the live route set). */
@@ -127,6 +122,8 @@ export const EXCLUDED_EXTRA_ASSETS = [
   "nonprofit-church-insurance-interactive-master.png",
   "wholesale-distribution-insurance-interactive-master.png",
   "winery-brewery-insurance-interactive-master.png",
+  // Phase-2 stand-in superseded by public/images/CANNABIS/ approved master.
+  "cannabis-retail-insurance-interactive-master.png",
 ] as const;
 
 /** Reverse lookup: filename slug → route slug (only entries that differ). */

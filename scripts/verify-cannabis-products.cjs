@@ -10,7 +10,7 @@ const path = require("path");
 const BASE = process.env.BASE_URL || "http://localhost:3018";
 const OUT = path.join(
   __dirname,
-  "../docs/qa-screenshots/cannabis-phase-2-2026-09-10",
+  "../docs/qa-screenshots/cannabis-visual-wiring-2026-09-10",
 );
 
 const RETAIL = {
@@ -156,11 +156,26 @@ async function verifyRoute(page, spec, routeOut) {
     const faqs = document.querySelectorAll(
       "[data-faq-item], .faq-item, details.faq-item, .pilot-faq-item",
     );
-    // fallbacks: count consideration headings / faq questions in main
     const main = document.querySelector("main") || document.body;
     const faqButtons = main.querySelectorAll(
       'button[aria-expanded], [class*="faq"] button, [class*="Faq"] button',
     );
+    const heroImg = document.querySelector(".pilot-product-hero-photo img");
+    const explorerImg = document.querySelector(
+      ".pilot-ce-scene-interactive-master-image",
+    );
+    const heroSrc =
+      (heroImg && (heroImg.getAttribute("src") || heroImg.currentSrc)) || "";
+    const explorerSrc =
+      (explorerImg &&
+        (explorerImg.getAttribute("src") || explorerImg.currentSrc)) ||
+      "";
+    const explorerFit = explorerImg
+      ? getComputedStyle(explorerImg).objectFit
+      : null;
+    const explorerPos = explorerImg
+      ? getComputedStyle(explorerImg).objectPosition
+      : null;
     return {
       considerationNodes: considerations.length,
       faqNodes: Math.max(faqs.length, faqButtons.length),
@@ -173,11 +188,33 @@ async function verifyRoute(page, spec, routeOut) {
       overflowX:
         document.documentElement.scrollWidth >
         document.documentElement.clientWidth + 1,
+      heroSrc,
+      explorerSrc,
+      explorerFit,
+      explorerPos,
     };
   });
 
   assert(counts.explorerPresent, "Coverage Explorer stage missing", errors);
   assert(!counts.overflowX, "horizontal overflow at 1440", errors);
+  assert(
+    /CANNABIS/.test(counts.heroSrc),
+    `hero not using CANNABIS asset (src=${counts.heroSrc})`,
+    errors,
+  );
+  assert(
+    /CANNABIS/.test(counts.explorerSrc) ||
+      /cannabis-(retail|producer)-insurance-interactive-master/.test(
+        counts.explorerSrc,
+      ),
+    `explorer not using approved CANNABIS master (src=${counts.explorerSrc})`,
+    errors,
+  );
+  assert(
+    counts.explorerFit === "contain",
+    `explorer object-fit is ${counts.explorerFit}, expected contain`,
+    errors,
+  );
 
   // Click each explorer tab by id suffix
   await page.evaluate(() =>
@@ -234,6 +271,48 @@ async function verifyRoute(page, spec, routeOut) {
     errors,
   );
 
+  const keyboard = await page.evaluate((firstId) => {
+    const tab = document.querySelector(
+      `.pilot-product-coverage-list [id$="-tab-${firstId}"], [id$="-tab-${firstId}"]`,
+    );
+    if (!tab) return { ok: false, reason: "missing-first-tab" };
+    tab.focus();
+    tab.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "ArrowDown", bubbles: true }),
+    );
+    const active = document.querySelector(
+      ".pilot-product-coverage-card.is-active, [aria-selected='true']",
+    );
+    return {
+      ok: Boolean(active),
+      activeId: active?.id || null,
+    };
+  }, spec.tabs[0]);
+  assert(keyboard.ok, `keyboard interaction failed: ${JSON.stringify(keyboard)}`, errors);
+  result.keyboard = keyboard;
+
+  await page.emulateMediaFeatures([
+    { name: "prefers-reduced-motion", value: "reduce" },
+  ]);
+  const reduced = await page.evaluate(() => ({
+    hasH1: Boolean(document.querySelector("h1")),
+    hasExplorer: Boolean(
+      document.querySelector(
+        ".pilot-product-explorer-stage, .pilot-ce-stage-frame",
+      ),
+    ),
+    explorerSrc:
+      document.querySelector(".pilot-ce-scene-interactive-master-image")
+        ?.currentSrc ||
+      document
+        .querySelector(".pilot-ce-scene-interactive-master-image")
+        ?.getAttribute("src") ||
+      "",
+  }));
+  assert(reduced.hasExplorer, "explorer missing under reduced motion", errors);
+  result.reducedMotion = reduced;
+  await page.emulateMediaFeatures([]);
+
   // Considerations / FAQ soft checks via text markers
   const considerationHits = (
     bodyText.match(/\n[A-Z][^\n]{8,80}\n/g) || []
@@ -261,7 +340,6 @@ async function verifyRoute(page, spec, routeOut) {
     await page.setViewport({
       width: vp.width,
       height: vp.height,
-      isMobile: !!vp.isMobile,
     });
     await page.goto(`${BASE}/${spec.slug}/`, {
       waitUntil: "domcontentloaded",
@@ -334,13 +412,66 @@ async function main() {
     staticErrors,
   );
   assert(
-    /TODO BEFORE LAUNCH: CANNABIS RETAIL EXPLORER IMAGE/.test(masterAssets),
-    "missing retail dedicated-image TODO marker",
+    /CANNABIS\/cannabis-retail-insurance-interactive-master\.png/.test(
+      masterAssets,
+    ),
+    "retail explorer not wired to approved CANNABIS master",
     staticErrors,
   );
   assert(
-    /TODO BEFORE LAUNCH: CANNABIS PRODUCER EXPLORER IMAGE/.test(masterAssets),
-    "missing producer dedicated-image TODO marker",
+    /CANNABIS\/cannabis-producer-insurance-interactive-master\.png/.test(
+      masterAssets,
+    ),
+    "producer explorer not wired to approved CANNABIS master",
+    staticErrors,
+  );
+  assert(
+    !/TODO BEFORE LAUNCH: CANNABIS/.test(masterAssets),
+    "cannabis dedicated-image TODO still present after approved assets wired",
+    staticErrors,
+  );
+  const producerMap = masterAssets.match(
+    /"cannabis-producer-insurance":\s*"([^"]+)"/,
+  );
+  assert(
+    producerMap && !/manufacturing-insurance-interactive-master/.test(producerMap[1]),
+    "producer still mapped to manufacturing explorer master",
+    staticErrors,
+  );
+
+  const placements = fs.readFileSync(
+    path.join(__dirname, "../src/data/photography/placements.ts"),
+    "utf8",
+  );
+  const retailHero = placements.match(
+    /slug: "cannabis-retail-insurance"[\s\S]*?src: "([^"]+)"/,
+  );
+  const producerHero = placements.match(
+    /slug: "cannabis-producer-insurance"[\s\S]*?src: "([^"]+)"/,
+  );
+  assert(
+    retailHero && retailHero[1] === "/images/CANNABIS/cannabis-retail-insurance.webp",
+    "retail hero not wired to approved CANNABIS webp",
+    staticErrors,
+  );
+  assert(
+    producerHero &&
+      producerHero[1] === "/images/CANNABIS/cannabis-producer-insurance.webp",
+    "producer hero not wired to approved CANNABIS webp",
+    staticErrors,
+  );
+  assert(
+    retailHero &&
+      !/photography\/commercial\/retail-insurance\.webp/.test(retailHero[1]),
+    "retail still references photography/commercial/retail-insurance.webp hero",
+    staticErrors,
+  );
+  assert(
+    producerHero &&
+      !/photography\/commercial\/manufacturing-insurance\.webp/.test(
+        producerHero[1],
+      ),
+    "producer still references photography/commercial/manufacturing-insurance.webp hero",
     staticErrors,
   );
 
@@ -376,12 +507,10 @@ async function main() {
     retail,
     producer,
     notes: [
-      "Navigation intentionally NOT modified in Phase 2.",
-      "Retail explorer image: cannabis-retail-insurance-interactive-master.png (Phase-2 stand-in on disk; dedicated final art still required before launch).",
-      "Producer explorer image: TEMPORARILY reuses manufacturing-insurance-interactive-master.png.",
-      "Hero photography: TEMPORARY stand-ins (retail-insurance.webp / manufacturing-insurance.webp).",
-      "CANNABIS RETAIL EXPLORER IMAGE: DEDICATED IMAGE REQUIRED BEFORE LAUNCH",
-      "CANNABIS PRODUCER EXPLORER IMAGE: DEDICATED IMAGE REQUIRED BEFORE LAUNCH",
+      "Navigation intentionally NOT modified.",
+      "Retail explorer image: /images/CANNABIS/cannabis-retail-insurance-interactive-master.png (approved PR #23).",
+      "Producer explorer image: /images/CANNABIS/cannabis-producer-insurance-interactive-master.png (approved PR #23).",
+      "Hero photography: /images/CANNABIS/cannabis-retail-insurance.webp and /images/CANNABIS/cannabis-producer-insurance.webp (approved PR #23).",
     ],
   };
 
