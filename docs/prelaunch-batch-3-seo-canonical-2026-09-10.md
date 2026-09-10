@@ -285,7 +285,7 @@ Checks: trailingSlash config, metadataBase, homepage brand, sitemap/robots hosts
 | Partners | **44** unified (no Core/Our Markets) |
 | Claims / Quote observability | Retained |
 | Cannabis verifier | PASS |
-| Explorer | **236/236** (expected; no Explorer edits — confirm in CI log) |
+| Explorer | **236/236** PASS (re-run after trailingSlash on clean server) |
 | Working rails | Not redesigned |
 
 ---
