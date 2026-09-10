@@ -1,16 +1,5 @@
-import type { Metadata } from "next";
-import CommercialIndustryPage from "@/components/CommercialIndustryPage";
-import { industryPages } from "@/data/commercial-industries";
+import { createPilotCommercialPageExports } from "@/lib/createPilotCommercialPage";
 
-const content = industryPages.find(
-  (page) => page.slug === "professional-offices-insurance",
-)!;
-
-export const metadata: Metadata = {
-  title: content.metaTitle,
-  description: content.metaDescription,
-};
-
-export default function ProfessionalOfficesInsurancePage() {
-  return <CommercialIndustryPage content={content} />;
-}
+const page = createPilotCommercialPageExports("professional-offices-insurance");
+export const metadata = page.metadata;
+export default page.default;

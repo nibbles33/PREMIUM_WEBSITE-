@@ -1,0 +1,74 @@
+{
+  "slug": "medical-dental-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "commercial-general-liability",
+      "tabLabel": "GLMay help respond to certain third-party bodily injury or property-damage claim",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from premises incidents — such as slip-and-fall in waiting or reception areas — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A waiting-room fall is not a treatment-error claim",
+      "detailDescription": "Patient or visitor injury in corridors, waiting areas, washrooms, or parking lots generates premises liability exposure distinct from allegations that treatment, diagnosis, or procedure was negligent. Commercial general liability may address certain operational and premises claims, but professional services allegations are evaluated under malpractice or professional liability programs — not ordinary CGL. Scope depends on policy wording and disclosed clinic activities.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "commercial-general-liability"
+    },
+    {
+      "index": 1,
+      "id": "commercial-property",
+      "tabLabel": "PropertyMay help cover medical and dental equipment, furniture, and leasehold im",
+      "tabDesc": "May help cover medical and dental equipment, furniture, and leasehold improvements against covered causes of loss such as fire, theft, or water damage — subject to policy terms, reported values, and limits.",
+      "detailTitle": "Operatory equipment drives property values beyond desks and chairs",
+      "detailDescription": "Dental chairs, sterilizers, imaging systems, and leasehold buildouts can represent concentrated insurable value. Leased clinics typically require the tenant to insure contents and improvements while the landlord insures the building shell. Equipment breakdown or utility-related losses may be treated differently from fire or theft — confirm causes of loss and endorsements with your broker rather than assuming every equipment failure is covered under base property wording.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "commercial-property"
+    },
+    {
+      "index": 2,
+      "id": "cyber-privacy",
+      "tabLabel": "CyberMay help address certain costs arising from privacy breaches, ransomware, o",
+      "tabDesc": "May help address certain costs arising from privacy breaches, ransomware, or system disruptions affecting electronic medical or dental records and billing systems — where purchased and subject to policy terms — distinct from PHIPA compliance obligations.",
+      "detailTitle": "Patient records create cyber exposure PHIPA does not insure away",
+      "detailDescription": "Clinics are health information custodians under Ontario's Personal Health Information Protection Act (PHIPA) and must implement reasonable safeguards for personal health information — a regulatory obligation separate from purchasing insurance. Cyber or privacy coverage, where available, may help with certain breach-response, notification, or business-interruption costs tied to cyber events depending on policy wording, but it does not satisfy PHIPA compliance programs and does not mean every privacy incident is covered. Insurers may ask about EMR vendors, backups, access controls, and staff training during underwriting.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "cyber-privacy"
+    },
+    {
+      "index": 3,
+      "id": "malpractice-coordination",
+      "tabLabel": "MalpracticePremium Insurance Brokers coordinates the clinic's commercial propert",
+      "tabDesc": "Premium Insurance Brokers coordinates the clinic's commercial property, general liability, and cyber lines; individual professional malpractice or professional liability for regulated practitioners is maintained separately through the appropriate college programs and markets.",
+      "detailTitle": "The clinic entity and each practitioner carry different protection",
+      "detailDescription": "For physicians: CPSO requires registrants to maintain appropriate professional liability coverage — typically through CMPA membership, which is medico-legal assistance from a mutual defence organization, not a standard insurance policy. CMPA may extend conditional assistance to eligible clinic entities when all physician owners are members and other principles apply — but members are urged to arrange commercial liability protection where clinic structures fall outside those principles. For dentists: RCDSO requires each member to maintain professional liability coverage for professional dental services — currently a minimum of $2,000,000 per occurrence and $6,000,000 annual aggregate under college by-law requirements for the 2026 program transition. Non-physician practitioners who treat patients independently must maintain their own adequate professional liability protection. Do not assume one certificate covers every person and entity in the clinic.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "malpractice-coordination"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Medical and dental clinics carry two distinct insurance layers: commercial coverage for the office entity — premises, property, equipment, and patient-data inci"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

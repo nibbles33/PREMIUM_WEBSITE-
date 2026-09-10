@@ -1,0 +1,177 @@
+{
+  "consoleErrors": [],
+  "routes": [
+    {
+      "slug": "trucking-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "cargo-insurance",
+          "tabDesc": "May help address certain loss or damage to freight you carry for hire while in your care, custody, or control during transit — where purchased and subject to policy terms, commodity exclusions, limits, and valuation.",
+          "detailTitle": "Shippers' freight is a separate exposure from your tractor on the highway",
+          "detailDescription": "When you haul another party's goods, motor truck cargo coverage — where purchased — may respond to certain physical loss or damage to that freight subject to causes of loss, exclusions, and limits in the policy. Ontario automobile liability does not replace cargo coverage for customers' goods. Shippers, brokers, and 3PL contracts often specify minimum cargo limits, deductibles, or insurer requirements — those are contractual obligations separate from what any base automobile policy includes. Commodity type, packaging, maximum load value, and security practices affect underwriting.",
+          "duplicateDesc": false,
+          "hasImage": true
+        },
+        {
+          "index": 1,
+          "id": "liability-coverage",
+          "tabDesc": "Ontario commercial automobile third-party liability — regulated under FSRA — may help respond to certain bodily injury or property-damage claims arising from the use of insured trucks and trailers on public roads, subject to policy terms, limits, and exclusions.",
+          "detailTitle": "Highway liability is regulated automobile coverage — not cargo or CGL",
+          "detailDescription": "Third-party automobile liability for commercial trucks is part of Ontario's regulated commercial automobile insurance framework — distinct from motor truck cargo, commercial general liability, or warehouse legal liability. Minimum statutory liability limits apply to Ontario automobile policies; higher limits are commonly purchased and often required contractually by shippers or terminals. Driver abstracts, fleet safety programs, and an operator's CVOR safety rating may influence underwriting, but maintaining CVOR registration does not substitute for automobile insurance and does not guarantee coverage.",
+          "duplicateDesc": false,
+          "hasImage": true
+        },
+        {
+          "index": 2,
+          "id": "physical-damage",
+          "tabDesc": "Collision and comprehensive coverage for tractors and trailers, where purchased, may help repair or replace insured units after covered losses — subject to deductibles, stated values, and policy wording.",
+          "detailTitle": "Tractors and trailers are scheduled values — trailers are not automatic",
+          "detailDescription": "Physical damage coverage applies to insured power units and listed trailers subject to how each unit is scheduled and the deductibles you choose. A trailer you pull under contract may need to be listed or covered under a separate agreement. Equipment such as tarps, chains, or onboard technology may be treated differently from the truck itself depending on policy structure. Accurate vehicle values, lienholder interests, and lease terms should be disclosed during quoting.",
+          "duplicateDesc": false,
+          "hasImage": true
+        },
+        {
+          "index": 3,
+          "id": "cross-border-coverage",
+          "tabDesc": "Operating in the United States may require specific policy territory extensions, higher liability limits, and endorsements where applicable — subject to underwriting and policy wording — beyond a Canada-only commercial automobile policy.",
+          "detailTitle": "U.S. lanes change territory, limits, and underwriting requirements — not a generic add-on label",
+          "detailDescription": "Cross-border hauling is not a single universal product name — it reflects how your Ontario commercial automobile program extends territory, limits, and insurer requirements for U.S. operations. Shippers and brokers may require proof of U.S.-adequate limits or specific insurer ratings contractually. Cargo policies may also contain territorial limits. Disclose every state or region you enter, how often, and whether loads originate or terminate in the U.S. so your broker can coordinate automobile and cargo wording — do not assume a Canada-only policy automatically follows the truck south of the border.",
+          "duplicateDesc": false,
+          "hasImage": true
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true
+      },
+      "considerations": {
+        "count": 7,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "overflow_390": 0,
+      "overflow_768": 0,
+      "overflow_1024": 0,
+      "overflow_1440": 0
+    },
+    {
+      "slug": "dump-truck-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "commercial-auto-liability",
+          "tabDesc": "Ontario commercial automobile third-party liability may help respond to certain bodily injury or property-damage claims arising from the use of your dump truck on public roads — subject to FSRA-regulated policy terms, limits, and exclusions.",
+          "detailTitle": "On the highway is automobile liability — jobsites may be different",
+          "detailDescription": "Collisions, property damage, and injury claims arising while your dump truck travels on public roads are typically evaluated under commercial automobile liability — regulated separately from commercial general liability. Loading zones, active construction sites, tipping operations, or debris spills may involve different policy triggers depending on whether the loss arises from automobile use, CGL or operations liability, or pollution exclusions — where applicable under policy wording. Do not assume automobile liability automatically covers every incident that happens while dumping or entering a jobsite — confirm how your policies define covered automobile use and operations.",
+          "duplicateDesc": false,
+          "hasImage": true
+        },
+        {
+          "index": 1,
+          "id": "physical-damage",
+          "tabDesc": "Collision and comprehensive coverage for your dump truck, where purchased, may help repair or replace the unit after covered losses — subject to stated values, deductibles, and policy wording.",
+          "detailTitle": "Heavy units, bodies, and hydraulics drive values and deductibles",
+          "detailDescription": "Dump bodies, hydraulics, tailgates, and reinforcement add to insurable value beyond a standard straight truck. Rollover, overturn, and contact with overhead structures on jobsites are loss scenarios insurers evaluate. Physical damage responds only to covered causes of loss under the automobile policy — mechanical breakdown of hydraulics or wear items may be excluded unless specific endorsements apply. Accurate GVW, body type, and equipment values support proper limits.",
+          "duplicateDesc": false,
+          "hasImage": true
+        },
+        {
+          "index": 2,
+          "id": "cargo-debris-coverage",
+          "tabDesc": "May help address certain loss to aggregate, soil, asphalt, or other material you haul — or debris falling from the vehicle — where purchased and subject to policy terms, commodities, and whether you haul for others or your own material.",
+          "detailTitle": "Own material hauling is not the same as for-hire freight",
+          "detailDescription": "Many dump operators haul their own excavation, aggregate, or demolition material rather than customers' freight — underwriting and available coverage differ from motor-carrier cargo policies. When you do haul for others, contracts may specify load limits. Spills, unsecured loads, and debris striking other vehicles create distinct exposure that may be addressed under automobile liability, load coverage endorsements, or pollution-related forms depending on cause and policy wording — not automatically under one label. Disclose whether hauling is for-hire, contract-based, or solely for your own jobs.",
+          "duplicateDesc": false,
+          "hasImage": true
+        },
+        {
+          "index": 3,
+          "id": "non-trucking-liability",
+          "tabDesc": "May provide certain automobile liability coverage when a leased or contracted unit is used outside motor-carrier dispatch — where purchased and subject to lease terms and policy definitions.",
+          "detailTitle": "Bobtail and non-dispatched use need explicit lease review",
+          "detailDescription": "Operators leased to a motor carrier or running under another party's dispatch may need non-trucking liability — sometimes called bobtail coverage — for trips without a load or outside dispatch, depending on lease language. This is not a substitute for commercial automobile liability while operating under dispatch, and it does not cover cargo or physical damage to the unit unless separately arranged. Lease agreements often specify minimum insurance — contractual requirements separate from Ontario statutory automobile rules.",
+          "duplicateDesc": false,
+          "hasImage": true
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true
+      },
+      "considerations": {
+        "count": 6,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "overflow_390": 0,
+      "overflow_768": 0,
+      "overflow_1024": 0,
+      "overflow_1440": 0
+    },
+    {
+      "slug": "cargo-freight-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "motor-truck-cargo",
+          "tabDesc": "May help address certain physical loss or damage to freight you carry for hire while in your care, custody, or control during transit — where purchased and subject to causes of loss, exclusions, commodity restrictions, limits, and valuation.",
+          "detailTitle": "Customers' goods in the trailer — not the tractor's highway liability",
+          "detailDescription": "Motor truck cargo coverage, where purchased, insures the shipper's freight against covered physical loss or damage during transit subject to policy triggers — fire, collision, theft, and other named perils depending on wording. It does not replace commercial automobile liability for third-party injury or damage caused by the truck on the road. High-value, restricted, or temperature-sensitive commodities may need endorsements or may be excluded. Maximum value per load, average load values, and packaging standards affect underwriting and claims.",
+          "duplicateDesc": false,
+          "hasImage": true
+        },
+        {
+          "index": 1,
+          "id": "carrier-liability",
+          "tabDesc": "May help respond to certain claims alleging the carrier failed in its legal duty to deliver freight safely — where policy wording provides carrier legal liability coverage and subject to limits, exclusions, and contractual terms.",
+          "detailTitle": "Legal responsibility to the shipper is not the same as insuring the goods directly",
+          "detailDescription": "Carrier legal liability coverage addresses the motor carrier's legal liability to the cargo owner for loss or damage while the freight is in the carrier's care — a different insuring agreement from direct motor truck cargo coverage on some policy forms. Which arrangement applies depends on policy edition, endorsements, and contracts of carriage. A bill of lading or shipper contract may limit or define liability separately from insurance — contractual terms and policy wording must be reviewed together.",
+          "duplicateDesc": false,
+          "hasImage": true
+        },
+        {
+          "index": 2,
+          "id": "refrigerated-cargo",
+          "tabDesc": "May address certain loss to temperature-controlled freight from covered causes — including refrigeration breakdown or temperature excursion where endorsements apply — subject to policy triggers, maintenance requirements, and sublimits.",
+          "detailTitle": "Reefer freight needs cause-of-loss precision — not automatic spoilage coverage",
+          "detailDescription": "Produce, pharmaceuticals, and other refrigerated loads can spoil from equipment failure, driver error, or delay. Standard motor truck cargo may treat temperature loss differently from collision damage — reefer breakdown endorsements, where available, depend on causes of loss, alarm systems, and maintenance records disclosed during underwriting. Do not assume every temperature excursion is covered without reviewing triggers and exclusions.",
+          "duplicateDesc": false,
+          "hasImage": true
+        },
+        {
+          "index": 3,
+          "id": "contingent-cargo",
+          "tabDesc": "For freight brokers and intermediaries — may provide certain coverage when a contracted carrier's cargo policy fails to respond on a load you arranged, subject to policy terms and secondary-position wording.",
+          "detailTitle": "Brokers need a backup layer — not a substitute for carrier coverage",
+          "detailDescription": "Freight brokers who arrange transportation but do not physically haul goods may purchase contingent cargo to address gaps when a motor carrier's insurance does not respond on a brokered load — subject to policy conditions and limits. This is secondary coverage, not a replacement for proper carrier cargo insurance or broker contractual liability programs. Broker operations should verify carrier certificates and limits before dispatch.",
+          "duplicateDesc": false,
+          "hasImage": true
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true
+      },
+      "considerations": {
+        "count": 7,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "overflow_390": 0,
+      "overflow_768": 0,
+      "overflow_1024": 0,
+      "overflow_1440": 0
+    }
+  ],
+  "pass": true
+}

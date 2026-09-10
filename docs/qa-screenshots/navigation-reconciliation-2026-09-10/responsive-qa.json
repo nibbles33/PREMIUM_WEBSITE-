@@ -1,0 +1,207 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "viewport": "390",
+      "checks": [
+        {
+          "name": "home-overflow",
+          "overflow": 0
+        },
+        {
+          "name": "homepage-tabs",
+          "count": 10
+        },
+        {
+          "name": "homepage-Retail",
+          "found": true,
+          "href": "/cannabis-retail-insurance/"
+        },
+        {
+          "name": "homepage-Manufacturing",
+          "found": true,
+          "href": "/cannabis-producer-insurance/"
+        },
+        {
+          "name": "homepage-Specialty Risks",
+          "found": true,
+          "href": "/cannabis-retail-insurance/"
+        },
+        {
+          "name": "retail-no-garage",
+          "ok": true
+        },
+        {
+          "name": "mobile-cannabis",
+          "hasRetail": true,
+          "hasProducer": true,
+          "tapHeight": 42.5
+        },
+        {
+          "name": "hub",
+          "overflow": 0,
+          "hasRetail": true,
+          "hasProducer": true,
+          "hasOldGL": false,
+          "hasOldEB": false
+        },
+        {
+          "name": "footer-business-in-personal",
+          "present": false
+        }
+      ],
+      "ok": true
+    },
+    {
+      "viewport": "768",
+      "checks": [
+        {
+          "name": "home-overflow",
+          "overflow": 0
+        },
+        {
+          "name": "homepage-tabs",
+          "count": 10
+        },
+        {
+          "name": "homepage-Retail",
+          "found": true,
+          "href": "/cannabis-retail-insurance/"
+        },
+        {
+          "name": "homepage-Manufacturing",
+          "found": true,
+          "href": "/cannabis-producer-insurance/"
+        },
+        {
+          "name": "homepage-Specialty Risks",
+          "found": true,
+          "href": "/cannabis-retail-insurance/"
+        },
+        {
+          "name": "retail-no-garage",
+          "ok": true
+        },
+        {
+          "name": "mobile-cannabis",
+          "hasRetail": true,
+          "hasProducer": true,
+          "tapHeight": 42.5
+        },
+        {
+          "name": "hub",
+          "overflow": 0,
+          "hasRetail": true,
+          "hasProducer": true,
+          "hasOldGL": false,
+          "hasOldEB": false
+        },
+        {
+          "name": "footer-business-in-personal",
+          "present": false
+        }
+      ],
+      "ok": true
+    },
+    {
+      "viewport": "1024",
+      "checks": [
+        {
+          "name": "home-overflow",
+          "overflow": 0
+        },
+        {
+          "name": "homepage-tabs",
+          "count": 10
+        },
+        {
+          "name": "homepage-Retail",
+          "found": true,
+          "href": "/cannabis-retail-insurance/"
+        },
+        {
+          "name": "homepage-Manufacturing",
+          "found": true,
+          "href": "/cannabis-producer-insurance/"
+        },
+        {
+          "name": "homepage-Specialty Risks",
+          "found": true,
+          "href": "/cannabis-retail-insurance/"
+        },
+        {
+          "name": "retail-no-garage",
+          "ok": true
+        },
+        {
+          "name": "mega-cannabis",
+          "hasRetail": true,
+          "hasProducer": true
+        },
+        {
+          "name": "hub",
+          "overflow": 0,
+          "hasRetail": true,
+          "hasProducer": true,
+          "hasOldGL": false,
+          "hasOldEB": false
+        },
+        {
+          "name": "footer-business-in-personal",
+          "present": false
+        }
+      ],
+      "ok": true
+    },
+    {
+      "viewport": "1440",
+      "checks": [
+        {
+          "name": "home-overflow",
+          "overflow": 0
+        },
+        {
+          "name": "homepage-tabs",
+          "count": 10
+        },
+        {
+          "name": "homepage-Retail",
+          "found": true,
+          "href": "/cannabis-retail-insurance/"
+        },
+        {
+          "name": "homepage-Manufacturing",
+          "found": true,
+          "href": "/cannabis-producer-insurance/"
+        },
+        {
+          "name": "homepage-Specialty Risks",
+          "found": true,
+          "href": "/cannabis-retail-insurance/"
+        },
+        {
+          "name": "retail-no-garage",
+          "ok": true
+        },
+        {
+          "name": "mega-cannabis",
+          "hasRetail": true,
+          "hasProducer": true
+        },
+        {
+          "name": "hub",
+          "overflow": 0,
+          "hasRetail": true,
+          "hasProducer": true,
+          "hasOldGL": false,
+          "hasOldEB": false
+        },
+        {
+          "name": "footer-business-in-personal",
+          "present": false
+        }
+      ],
+      "ok": true
+    }
+  ]
+}

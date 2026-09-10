@@ -1,0 +1,75 @@
+{
+  "slug": "builders-developers-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "builder-s-risk",
+      "tabDesc": "May help address certain physical loss or damage to each project during construction — where a course-of-construction policy is purchased for that project.",
+      "detailTitle": "Each project needs its own property schedule",
+      "detailDescription": "Developers typically arrange builder's risk per project (or via a master program) covering hard costs and endorsed extensions. Construction financing agreements may require evidence of builder's risk and other specified insurance before advances are released — including lender interests where the documents require them. Soft costs, transit, and existing structures remain endorsement-dependent.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    },
+    {
+      "index": 1,
+      "id": "general-liability",
+      "tabDesc": "May help respond to certain third-party injury or property-damage claims arising from development operations — subject to policy terms.",
+      "detailTitle": "Sales centres and site supervision create liability",
+      "detailDescription": "Development entities face premises and operations exposure at sales offices, model homes, and active sites. Project-specific wrap-up programs may alter how onsite claims are handled — entity GL still matters for non-enrolled activities.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    },
+    {
+      "index": 2,
+      "id": "wrap-up-liability",
+      "tabDesc": "May consolidate liability for enrolled parties on a project under an owner- or sponsor-controlled program — where purchased and subject to enrollment terms.",
+      "detailTitle": "OCIP reduces gaps between trades — at a cost",
+      "detailDescription": "Wrap-ups can centralize certain project liability coverage for enrolled parties, subject to program wording, enrollment, exclusions, and limits. Administration and certificates can be discussed separately. They do not automatically replace every contractor's own CGL for off-site work, auto, or tools. Developers sponsoring OCIPs should coordinate insurance with counsel and any surety requirements separately.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    },
+    {
+      "index": 3,
+      "id": "completed-operations",
+      "tabDesc": "May address certain liability claims alleging injury or damage after handover — where products-completed operations coverage applies under policy wording.",
+      "detailTitle": "Defect claims can surface after occupancy",
+      "detailDescription": "Latent defect and completed-operations claims may arise months or years after sale or lease-up. Policy limits, exclusions, and how long completed-operations coverage applies should be reviewed with your broker — coverage is not open-ended.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroSnippetFound": "ownership or development entity",
+    "trustSnippetFound": "Windsor–Essex builders and developers",
+    "heroPreview": "Builders and developers insurance focuses on the ownership or development entity that acquires sites, finances projects,",
+    "trustPreview": "For Windsor–Essex builders and developers coordinating projects and ownership entities — reviewed through an independent"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "fidelityStateAbsent": true,
+  "headline": "Builders & Developers Insurance",
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

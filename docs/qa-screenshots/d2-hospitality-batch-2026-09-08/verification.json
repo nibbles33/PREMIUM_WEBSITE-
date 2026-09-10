@@ -1,0 +1,183 @@
+{
+  "consoleErrors": [],
+  "routes": [
+    {
+      "slug": "hotel-motel-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "commercial-property",
+          "tabDesc": "May help cover the building, furnishings, linens, kitchen equipment, and other business property against covered causes of loss such as fire, water damage, or theft — subject to policy terms, causes of loss, and limits.",
+          "detailTitle": "Guest rooms and back-of-house equipment drive property values",
+          "detailDescription": "Hotels concentrate insurable value in guest rooms, lobbies, commercial laundry, HVAC, kitchen equipment, and furnishings — often across multiple floors and outbuildings. Fire, water escape from suppression systems, theft of linens or equipment, and seasonal occupancy swings affect how carriers structure property limits and deductibles. Guest personal belongings are typically excluded from the operator's property policy; the Innkeepers Act addresses statutory limits on operator liability for guest goods in specific circumstances — separate from insuring your own property.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 1,
+          "id": "general-liability",
+          "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from guest and visitor incidents on your premises — such as slip-and-fall in lobbies, parking areas, pools, or fitness facilities — subject to policy terms, exclusions, and limits.",
+          "detailTitle": "When a guest injury in your lobby becomes a liability claim",
+          "detailDescription": "Hotels concentrate people in high-traffic common areas — lobbies, elevators, parking lots, pools, spas, and fitness rooms — where wet floors, icy walkways, and amenity use create premises liability exposure. Whether pool or spa areas, conference facilities, or valet operations are covered depends on policy wording and how activities are disclosed during underwriting. Corporate clients or event organizers renting meeting space may require certificates with specific limits or additional-insured status — those are contractual requirements separate from what any single policy automatically includes.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 2,
+          "id": "business-interruption",
+          "tabDesc": "May help replace lost business income and certain continuing expenses when a covered direct physical loss to insured property interrupts room sales or on-site operations — subject to waiting periods, policy terms, and how income is measured.",
+          "detailTitle": "Room revenue does not pause automatically when repairs begin",
+          "detailDescription": "A fire, major water loss, or equipment failure that closes guest rooms or a licensed restaurant can interrupt daily revenue while fixed costs continue — mortgage, payroll, utilities, and marketing. Business interruption coverage, where purchased, responds only after a covered direct physical loss to insured property and subject to waiting periods and policy wording. Seasonal tourism patterns in Windsor–Essex affect how income should be projected; a licence suspension, weather downturn, or other non-covered event may not trigger the same coverage — confirm triggers with your broker.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 3,
+          "id": "liquor-liability",
+          "tabDesc": "Where you sell or serve alcohol under an AGCO Liquor Sales Licence at an on-site bar, restaurant, or event space, liquor liability may address certain claims tied to alcohol service — distinct from general liability, which often excludes or limits liquor-related claims — subject to policy terms.",
+          "detailTitle": "A hotel bar is not the same coverage question as guest-room liability",
+          "detailDescription": "Properties with licensed on-site alcohol service can face civil liability if alcohol contributes to patron injury or property damage — separately from AGCO administrative penalties such as suspension or revocation. Holding a Liquor Sales Licence authorizes legal sale and service; it does not include insurance, and the Liquor Licence and Control Act does not mandate liquor liability insurance as a statutory condition of holding a licence. Liquor liability coverage, where purchased, may help respond to certain alcohol-related claims standard general liability excludes or limits. Hotels without licensed alcohol service do not need this coverage component — disclose your actual service model to your broker.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true
+      },
+      "considerations": {
+        "count": 6,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "overflow_390": 0,
+      "overflow_1440": 0
+    },
+    {
+      "slug": "event-liability-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "third-party-bodily-injury",
+          "tabDesc": "May help respond to certain claims alleging attendee or guest bodily injury during your event — trips, falls, crowd incidents, or setup-related injuries — subject to policy terms, exclusions, and limits.",
+          "detailTitle": "A wedding reception trip-and-fall is an event-host exposure",
+          "detailDescription": "Temporary events concentrate people in unfamiliar layouts — tents, dance floors, vendor aisles, staging, and parking areas — where trips, falls, and crowd incidents can generate third-party injury claims against the event host. Event liability policies are written for defined dates, locations, and attendance; whether a specific activity, amusement device, or sporting element is covered depends on policy wording and what you disclosed during underwriting. This coverage addresses host liability — not the venue owner's own policy, which protects the venue's interests.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 1,
+          "id": "property-damage",
+          "tabDesc": "May help respond to certain claims for damage to rented venues, neighbouring property, or third-party equipment caused during your event setup, operation, or teardown — subject to policy terms and limits.",
+          "detailTitle": "Damage to a rented hall is a different claim than an injury",
+          "detailDescription": "Event setup and teardown can damage rented floors, walls, landscaping, or neighbouring property — claims distinct from bodily injury. Coverage for damage to premises you rent or borrow depends on policy wording, deductibles, and whether the rental contract assigns repair responsibility. Your broker should review lease or venue agreements alongside the policy to confirm what must be insured and what certificates the venue requires.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 2,
+          "id": "liquor-liability-events",
+          "tabDesc": "May address certain alcohol-related liability when you serve or permit alcohol at your event under a Special Occasion Permit, host-liquor arrangement, or licensed venue service — distinct from ongoing premises liquor liability, subject to policy terms.",
+          "detailTitle": "Serving alcohol at a one-night event is not the same as running a bar",
+          "detailDescription": "Weddings, fundraisers, and corporate functions often involve alcohol service under a Special Occasion Permit, bring-your-own arrangements, or service at a licensed venue — each with different AGCO rules and responsibilities. LCBO's Special Occasion Permit FAQ states provincial regulations do not require permit holders to carry party liability insurance — but venues, municipalities, and rental contracts frequently do. Host liquor or event liquor coverage, where available, is underwritten separately from premises liquor liability; service model, permit type, attendance, and whether you control service must be disclosed to your broker. A Special Occasion Permit authorizes legal alcohol service; it is not insurance.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 3,
+          "id": "vendor-exhibitor-coverage",
+          "tabDesc": "May extend certain liability coverage to participating vendors or exhibitors under one event policy where purchased — subject to how the policy schedules vendors, limits, and additional-insured requirements.",
+          "detailTitle": "Market organizers may need to address vendor exposure",
+          "detailDescription": "Farmers' markets, trade shows, and festival organizers sometimes need coverage structures that address participating vendors — whether through a master event policy with vendor extensions or by requiring each vendor to carry their own certificate. Contractual additional-insured and waiver-of-subrogation wording from venues or municipalities must be matched to what your policy can actually provide. Confirm vendor limits, setup/teardown periods, and whether amusement operators need separate coverage before the event date.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true
+      },
+      "considerations": {
+        "count": 6,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "overflow_390": 0,
+      "overflow_1440": 0
+    },
+    {
+      "slug": "convenience-store-insurance",
+      "explorer": [
+        {
+          "index": 0,
+          "id": "commercial-property",
+          "tabDesc": "May help cover the building, coolers, shelving, inventory, and point-of-sale equipment against covered causes of loss such as fire, theft, or equipment breakdown — subject to policy terms, theft-security conditions, and limits.",
+          "detailTitle": "Coolers, inventory, and late-night theft drive property values",
+          "detailDescription": "C-stores concentrate value in refrigerated and frozen inventory, general merchandise, and store fixtures — with higher theft exposure during extended or 24-hour hours. Inventory coverage depends on reported values, security requirements in the policy, and scheduled causes of loss. Stores that sell lottery products, tobacco, prepared food, or AGCO-authorized retail alcohol create additional underwriting questions separate from a generic retail property form — disclose your actual product mix to your broker.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 1,
+          "id": "general-liability",
+          "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from customer incidents on your premises — slips at entrances, pump islands, or parking areas — subject to policy terms, exclusions, and limits.",
+          "detailTitle": "A slip at the pump island is a premises liability claim",
+          "detailDescription": "Convenience and gas-bar operations combine indoor retail traffic with outdoor pump islands, propane exchange, and parking-lot exposure — especially in winter conditions. Product liability for prepared food or retail goods may arise separately from a simple premises injury depending on what you sell and how the policy is structured. Franchise, landlord, or fuel-supplier agreements may require specific limits or additional-insured certificates — contractual requirements reviewed against your policy.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 2,
+          "id": "pollution-liability",
+          "tabDesc": "May help address certain pollution liability claims arising from underground storage tanks, fuel dispensing equipment, or gradual contamination — where purchased and subject to policy terms — distinct from standard commercial property forms.",
+          "detailTitle": "Fuel tanks create environmental exposure property policies may not fully address",
+          "detailDescription": "Stores with gasoline or diesel dispensing and underground storage tanks face environmental contamination exposure regulated under technical standards for fuel equipment. Standard property policies may not fully address gradual pollution or third-party cleanup costs — pollution liability coverage, where available, is typically reviewed separately from building and inventory limits. Retail-only c-stores without fuel operations may not need this component — disclose whether you own, lease, or operate tanks to your broker.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        },
+        {
+          "index": 3,
+          "id": "crime-hold-up",
+          "tabDesc": "May help address certain losses from robbery, theft, burglary, or employee dishonesty — where purchased — subject to policy limits, deductibles, and security conditions such as alarms, cameras, and safe practices.",
+          "detailTitle": "Cash-heavy operations face crime exposure standard property may not cover",
+          "detailDescription": "Late-night convenience and gas-bar operations face robbery, burglary, and internal theft exposure that standard property forms treat differently from liability claims. Crime endorsements, where available, may address money and securities loss, safe burglary, and employee dishonesty — subject to underwriting review of drop schedules, camera coverage, panic alarms, and prior loss history. Insurers often tie crime terms to documented security practices rather than assuming every theft scenario is covered.",
+          "duplicateDesc": false,
+          "hasImage": true,
+          "overflow": 0
+        }
+      ],
+      "pass": true,
+      "trustBand": {
+        "heroPresent": true,
+        "trustPresent": true,
+        "distinct": true
+      },
+      "considerations": {
+        "count": 7,
+        "oneOpenAtATime": true
+      },
+      "faqCount": 5,
+      "forbidden": [],
+      "overflow_390": 0,
+      "overflow_1440": 0
+    }
+  ],
+  "pass": true
+}

@@ -17,7 +17,7 @@ export default function LinePlaceholderPage({
       primaryCta={{ label: "Get a Quote", href: quoteHref }}
       secondaryCta={{
         label: "Talk to a Broker",
-        href: "/talk-to-a-broker/",
+        href: "/contact/?intent=broker",
       }}
     />
   );

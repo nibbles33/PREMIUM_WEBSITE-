@@ -1,0 +1,103 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "productRouteCount": 60,
+  "appRouteCount": 76,
+  "live": {
+    "checked": true,
+    "samples": [
+      {
+        "route": "/",
+        "status": 200,
+        "title": "Premium Insurance Brokers | Personal &amp; Business Insurance in Windsor-Essex",
+        "canonical": "https://premiumib.com/",
+        "robotsMeta": "index, follow",
+        "h1": "One place.A lot of insurance.Surprisingly easy.",
+        "ogTitle": "Premium Insurance Brokers | Windsor-Essex",
+        "noSlashStatus": null
+      },
+      {
+        "route": "/commercial-insurance/",
+        "status": 200,
+        "title": "Commercial Insurance in Windsor-Essex | Premium Insurance Brokers",
+        "canonical": "https://premiumib.com/commercial-insurance/",
+        "robotsMeta": "index, follow",
+        "h1": "Commercial insurance, built for your industry",
+        "ogTitle": "Commercial Insurance in Windsor-Essex | Premium Insurance Brokers",
+        "noSlashStatus": 308
+      },
+      {
+        "route": "/auto-insurance/",
+        "status": 200,
+        "title": "Auto Insurance in Windsor-Essex | Premium Insurance Brokers",
+        "canonical": "https://premiumib.com/auto-insurance/",
+        "robotsMeta": "index, follow",
+        "h1": "Auto Insurance",
+        "ogTitle": "Auto Insurance in Windsor-Essex | Premium Insurance Brokers",
+        "noSlashStatus": 308
+      },
+      {
+        "route": "/cannabis-retail-insurance/",
+        "status": 200,
+        "title": "Cannabis Retail Insurance in Windsor-Essex | Premium Insurance Brokers",
+        "canonical": "https://premiumib.com/cannabis-retail-insurance/",
+        "robotsMeta": "index, follow",
+        "h1": "Cannabis Retail Insurance",
+        "ogTitle": "Cannabis Retail Insurance in Windsor-Essex | Premium Insurance Brokers",
+        "noSlashStatus": 308
+      },
+      {
+        "route": "/cannabis-producer-insurance/",
+        "status": 200,
+        "title": "Cannabis Producer Insurance in Windsor-Essex | Premium Insurance Brokers",
+        "canonical": "https://premiumib.com/cannabis-producer-insurance/",
+        "robotsMeta": "index, follow",
+        "h1": "Cannabis Producer Insurance",
+        "ogTitle": "Cannabis Producer Insurance in Windsor-Essex | Premium Insurance Brokers",
+        "noSlashStatus": 308
+      },
+      {
+        "route": "/claims/",
+        "status": 200,
+        "title": "Claims Guidance | Premium Insurance Brokers",
+        "canonical": "https://premiumib.com/claims/",
+        "robotsMeta": "index, follow",
+        "h1": "We&#x27;re here when you need to report a claim",
+        "ogTitle": "Claims Guidance | Premium Insurance Brokers",
+        "noSlashStatus": 308
+      },
+      {
+        "route": "/partners/",
+        "status": 200,
+        "title": "Our Partners | Premium Insurance Brokers",
+        "canonical": "https://premiumib.com/partners/",
+        "robotsMeta": "index, follow",
+        "h1": "Our Partners",
+        "ogTitle": "Our Partners | Premium Insurance Brokers",
+        "noSlashStatus": 308
+      },
+      {
+        "route": "/about/",
+        "status": 200,
+        "title": "About Us | Premium Insurance Brokers",
+        "canonical": "https://premiumib.com/about/",
+        "robotsMeta": "index, follow",
+        "h1": "Where premium and quality meet",
+        "ogTitle": "About Us | Premium Insurance Brokers",
+        "noSlashStatus": 308
+      },
+      {
+        "route": "/contact/",
+        "status": 200,
+        "title": "Contact Us | Premium Insurance Brokers",
+        "canonical": "https://premiumib.com/contact/",
+        "robotsMeta": "index, follow",
+        "h1": "Contact Us",
+        "ogTitle": "Contact Us | Premium Insurance Brokers",
+        "noSlashStatus": 308
+      }
+    ],
+    "sitemapUrlCount": 75
+  }
+}

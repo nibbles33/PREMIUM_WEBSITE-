@@ -1,0 +1,166 @@
+{
+  "slug": "fitness-gym-insurance",
+  "pattern": "page.$$ once then click (site-integration-explorer-regression)",
+  "runs": [
+    {
+      "run": 1,
+      "pass": false,
+      "failures": [
+        {
+          "viewport": "desktop-1024",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 1,
+          "pass": false,
+          "error": "Node is detached from document",
+          "anyClip": false
+        }
+      ],
+      "results": [
+        {
+          "viewport": "desktop-1440",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "pass": true,
+          "error": null,
+          "anyClip": false
+        },
+        {
+          "viewport": "desktop-1280",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "pass": true,
+          "error": null,
+          "anyClip": false
+        },
+        {
+          "viewport": "desktop-1024",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 1,
+          "pass": false,
+          "error": "Node is detached from document",
+          "anyClip": false
+        },
+        {
+          "viewport": "mobile-390",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "pass": true,
+          "error": null,
+          "anyClip": false
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "pass": false,
+      "failures": [
+        {
+          "viewport": "desktop-1024",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 1,
+          "pass": false,
+          "error": "Node is detached from document",
+          "anyClip": false
+        }
+      ],
+      "results": [
+        {
+          "viewport": "desktop-1440",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "pass": true,
+          "error": null,
+          "anyClip": false
+        },
+        {
+          "viewport": "desktop-1280",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "pass": true,
+          "error": null,
+          "anyClip": false
+        },
+        {
+          "viewport": "desktop-1024",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 1,
+          "pass": false,
+          "error": "Node is detached from document",
+          "anyClip": false
+        },
+        {
+          "viewport": "mobile-390",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "pass": true,
+          "error": null,
+          "anyClip": false
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "pass": false,
+      "failures": [
+        {
+          "viewport": "desktop-1024",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 1,
+          "pass": false,
+          "error": "Node is detached from document",
+          "anyClip": false
+        }
+      ],
+      "results": [
+        {
+          "viewport": "desktop-1440",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "pass": true,
+          "error": null,
+          "anyClip": false
+        },
+        {
+          "viewport": "desktop-1280",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "pass": true,
+          "error": null,
+          "anyClip": false
+        },
+        {
+          "viewport": "desktop-1024",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 1,
+          "pass": false,
+          "error": "Node is detached from document",
+          "anyClip": false
+        },
+        {
+          "viewport": "mobile-390",
+          "explorer": true,
+          "tabCount": 4,
+          "stateCount": 4,
+          "pass": true,
+          "error": null,
+          "anyClip": false
+        }
+      ]
+    }
+  ],
+  "allRunsPass": false
+}

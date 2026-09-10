@@ -1,0 +1,239 @@
+{
+  "homepage": [
+    {
+      "viewport": "1440",
+      "hero": true,
+      "heroCtaQuote": true,
+      "heroCtaBroker": true,
+      "carrierRail": true,
+      "carrierItems": 48,
+      "filmstripLinks": 16,
+      "commercialDiscovery": true,
+      "yepTiles": 32,
+      "awardsRail": true,
+      "finalCtaBroker": false,
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440
+    },
+    {
+      "viewport": "1280",
+      "hero": true,
+      "heroCtaQuote": true,
+      "heroCtaBroker": true,
+      "carrierRail": true,
+      "carrierItems": 48,
+      "filmstripLinks": 16,
+      "commercialDiscovery": true,
+      "yepTiles": 32,
+      "awardsRail": true,
+      "finalCtaBroker": false,
+      "horizontalOverflow": false,
+      "scrollWidth": 1280,
+      "clientWidth": 1280
+    },
+    {
+      "viewport": "1024",
+      "hero": true,
+      "heroCtaQuote": true,
+      "heroCtaBroker": true,
+      "carrierRail": true,
+      "carrierItems": 48,
+      "filmstripLinks": 16,
+      "commercialDiscovery": true,
+      "yepTiles": 32,
+      "awardsRail": true,
+      "finalCtaBroker": false,
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "clientWidth": 1024
+    },
+    {
+      "viewport": "768",
+      "hero": true,
+      "heroCtaQuote": true,
+      "heroCtaBroker": true,
+      "carrierRail": true,
+      "carrierItems": 48,
+      "filmstripLinks": 16,
+      "commercialDiscovery": true,
+      "yepTiles": 32,
+      "awardsRail": true,
+      "finalCtaBroker": false,
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "clientWidth": 768
+    },
+    {
+      "viewport": "390",
+      "hero": true,
+      "heroCtaQuote": true,
+      "heroCtaBroker": true,
+      "carrierRail": true,
+      "carrierItems": 48,
+      "filmstripLinks": 16,
+      "commercialDiscovery": true,
+      "yepTiles": 32,
+      "awardsRail": true,
+      "finalCtaBroker": false,
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390
+    }
+  ],
+  "responsive": [
+    {
+      "viewport": "1440",
+      "routes": [
+        {
+          "route": "/",
+          "overflow": false,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "route": "/cyber-insurance/",
+          "overflow": false,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "route": "/auto-insurance/",
+          "overflow": false,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "route": "/restaurant-insurance/",
+          "overflow": false,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        }
+      ]
+    },
+    {
+      "viewport": "1280",
+      "routes": [
+        {
+          "route": "/",
+          "overflow": false,
+          "scrollWidth": 1280,
+          "clientWidth": 1280
+        },
+        {
+          "route": "/cyber-insurance/",
+          "overflow": false,
+          "scrollWidth": 1280,
+          "clientWidth": 1280
+        },
+        {
+          "route": "/auto-insurance/",
+          "overflow": false,
+          "scrollWidth": 1280,
+          "clientWidth": 1280
+        },
+        {
+          "route": "/restaurant-insurance/",
+          "overflow": false,
+          "scrollWidth": 1280,
+          "clientWidth": 1280
+        }
+      ]
+    },
+    {
+      "viewport": "1024",
+      "routes": [
+        {
+          "route": "/",
+          "overflow": false,
+          "scrollWidth": 1024,
+          "clientWidth": 1024
+        },
+        {
+          "route": "/cyber-insurance/",
+          "overflow": true,
+          "scrollWidth": 1032,
+          "clientWidth": 1024
+        },
+        {
+          "route": "/auto-insurance/",
+          "overflow": false,
+          "scrollWidth": 1024,
+          "clientWidth": 1024
+        },
+        {
+          "route": "/restaurant-insurance/",
+          "overflow": true,
+          "scrollWidth": 1032,
+          "clientWidth": 1024
+        }
+      ]
+    },
+    {
+      "viewport": "768",
+      "routes": [
+        {
+          "route": "/",
+          "overflow": false,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        {
+          "route": "/cyber-insurance/",
+          "overflow": false,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        {
+          "route": "/auto-insurance/",
+          "overflow": false,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        },
+        {
+          "route": "/restaurant-insurance/",
+          "overflow": false,
+          "scrollWidth": 768,
+          "clientWidth": 768
+        }
+      ]
+    },
+    {
+      "viewport": "390",
+      "routes": [
+        {
+          "route": "/",
+          "overflow": false,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "route": "/cyber-insurance/",
+          "overflow": false,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "route": "/auto-insurance/",
+          "overflow": false,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "route": "/restaurant-insurance/",
+          "overflow": false,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      ]
+    }
+  ],
+  "consoleErrors": [],
+  "summary": {
+    "homepagePass": true,
+    "overflowFails": [
+      "/cyber-insurance/@1024",
+      "/restaurant-insurance/@1024"
+    ]
+  }
+}

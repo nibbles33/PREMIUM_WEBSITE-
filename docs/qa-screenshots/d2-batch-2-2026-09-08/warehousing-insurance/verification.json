@@ -1,0 +1,59 @@
+{
+  "slug": "warehousing-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "commercial-property",
+      "tabDesc": "May help cover the warehouse structure, racking, forklifts, material-handling equipment, and other owned business property against covered causes of loss — subject to policy terms, causes of loss, and limits.",
+      "detailTitle": "Your building and forklifts are not the same as customers' inventory",
+      "detailDescription": "Commercial property coverage addresses the warehouse you own or are required to insure under lease — structure, improvements, racking, dock equipment, and forklifts — subject to scheduled values and causes of loss. Customers' goods stored for others are a separate exposure typically addressed through warehouse legal liability or bailee coverage, not automatically included as part of your building limit. Confirm what your property policy schedules versus what your storage contracts make you responsible for.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 1,
+      "id": "warehouse-legal-liability",
+      "tabDesc": "May help address certain liability for loss or damage to customers' goods in your care, custody, or control — where purchased and subject to policy terms, contractual limits, and exclusions.",
+      "detailTitle": "Storage contracts define what you owe when customers' goods are damaged",
+      "detailDescription": "When you store goods belonging to others, your storage agreement and applicable law define the standard of care you owe — and warehouse legal liability coverage, where available, may respond to certain claims for loss or damage to those goods. Coverage limits, per-item caps, and excluded commodities vary by policy and contract. Ordinary commercial property does not automatically insure the full value of customers' inventory — review 3PL and bailment agreements alongside your broker before binding coverage.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 2,
+      "id": "general-liability",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from warehouse operations — such as loading-dock incidents or visitor injuries — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A loading-dock injury is premises liability, not a bailee claim",
+      "detailDescription": "Third-party injury on your premises — visitors, drivers, or contractors at the loading dock — generates general liability exposure distinct from damage to stored goods. Forklift operations, dock levellers, and truck traffic create injury and property-damage scenarios insurers evaluate during underwriting. Whether a specific operation or contractor activity is covered depends on policy wording and disclosure.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    },
+    {
+      "index": 3,
+      "id": "business-interruption",
+      "tabDesc": "May help replace lost business income and certain continuing expenses when a covered direct physical loss to insured property interrupts warehouse operations — subject to waiting periods, policy terms, and how income is measured.",
+      "detailTitle": "A fire that closes the dock interrupts revenue and customer obligations",
+      "detailDescription": "A covered property loss that shuts down receiving, storage, or shipping can interrupt revenue while fixed costs continue — and may affect your ability to meet storage contract obligations. Business interruption coverage, where purchased, responds only after a covered direct physical loss to insured property and subject to waiting periods and policy wording. Customer contract penalties or lost storage fees may be treated differently depending on policy structure — confirm triggers with your broker.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "overflow": 0
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "considerations": {
+    "count": 6,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "overflow_390": 0,
+  "overflow_1440": 0
+}

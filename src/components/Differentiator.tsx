@@ -16,7 +16,7 @@ import {
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
-const BROKER_HREF = "/talk-to-a-broker/";
+const BROKER_HREF = "/contact/?intent=broker";
 const QUOTE_HREF = "/get-a-quote/";
 const SPRING = "cubic-bezier(0.34, 1.56, 0.64, 1)";
 const SWAP_MS = 300;

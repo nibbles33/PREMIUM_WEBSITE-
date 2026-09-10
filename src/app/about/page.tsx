@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Header from "@/components/Header";
 import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import TrustBar from "@/components/TrustBar";
 import { insuranceAgencyProvider } from "@/components/LineInsurancePage";
 import { getPageHeroPhotography } from "@/data/photography";
+import { buildPageMetadata } from "@/lib/seo";
+import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "About Us | Premium Insurance Brokers",
   description:
     "Premium Insurance Brokers — a division of Oracle RMS — is an independent, RIBO-licensed brokerage serving Windsor-Essex County since July 2019.",
-};
+  path: "/about/",
+});
 
 const QUOTE_HREF = "/get-a-quote/";
-const BROKER_HREF = "/talk-to-a-broker/";
+const BROKER_HREF = "/contact/?intent=broker";
 
 const jsonLd = {
   "@context": "https://schema.org",

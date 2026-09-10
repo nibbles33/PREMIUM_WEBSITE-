@@ -1,0 +1,57 @@
+{
+  "slug": "cargo-freight-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "motor-truck-cargo",
+      "tabDesc": "May help address certain physical loss or damage to freight you carry for hire while in your care, custody, or control during transit — where purchased and subject to causes of loss, exclusions, commodity restrictions, limits, and valuation.",
+      "detailTitle": "Customers' goods in the trailer — not the tractor's highway liability",
+      "detailDescription": "Motor truck cargo coverage, where purchased, insures the shipper's freight against covered physical loss or damage during transit subject to policy triggers — fire, collision, theft, and other named perils depending on wording. It does not replace commercial automobile liability for third-party injury or damage caused by the truck on the road. High-value, restricted, or temperature-sensitive commodities may need endorsements or may be excluded. Maximum value per load, average load values, and packaging standards affect underwriting and claims.",
+      "duplicateDesc": false,
+      "hasImage": true
+    },
+    {
+      "index": 1,
+      "id": "carrier-liability",
+      "tabDesc": "May help respond to certain claims alleging the carrier failed in its legal duty to deliver freight safely — where policy wording provides carrier legal liability coverage and subject to limits, exclusions, and contractual terms.",
+      "detailTitle": "Legal responsibility to the shipper is not the same as insuring the goods directly",
+      "detailDescription": "Carrier legal liability coverage addresses the motor carrier's legal liability to the cargo owner for loss or damage while the freight is in the carrier's care — a different insuring agreement from direct motor truck cargo coverage on some policy forms. Which arrangement applies depends on policy edition, endorsements, and contracts of carriage. A bill of lading or shipper contract may limit or define liability separately from insurance — contractual terms and policy wording must be reviewed together.",
+      "duplicateDesc": false,
+      "hasImage": true
+    },
+    {
+      "index": 2,
+      "id": "refrigerated-cargo",
+      "tabDesc": "May address certain loss to temperature-controlled freight from covered causes — including refrigeration breakdown or temperature excursion where endorsements apply — subject to policy triggers, maintenance requirements, and sublimits.",
+      "detailTitle": "Reefer freight needs cause-of-loss precision — not automatic spoilage coverage",
+      "detailDescription": "Produce, pharmaceuticals, and other refrigerated loads can spoil from equipment failure, driver error, or delay. Standard motor truck cargo may treat temperature loss differently from collision damage — reefer breakdown endorsements, where available, depend on causes of loss, alarm systems, and maintenance records disclosed during underwriting. Do not assume every temperature excursion is covered without reviewing triggers and exclusions.",
+      "duplicateDesc": false,
+      "hasImage": true
+    },
+    {
+      "index": 3,
+      "id": "contingent-cargo",
+      "tabDesc": "For freight brokers and intermediaries — may provide certain coverage when a contracted carrier's cargo policy fails to respond on a load you arranged, subject to policy terms and secondary-position wording.",
+      "detailTitle": "Brokers need a backup layer — not a substitute for carrier coverage",
+      "detailDescription": "Freight brokers who arrange transportation but do not physically haul goods may purchase contingent cargo to address gaps when a motor carrier's insurance does not respond on a brokered load — subject to policy conditions and limits. This is secondary coverage, not a replacement for proper carrier cargo insurance or broker contractual liability programs. Broker operations should verify carrier certificates and limits before dispatch.",
+      "duplicateDesc": false,
+      "hasImage": true
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true
+  },
+  "considerations": {
+    "count": 7,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "bonding-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "bid-bonds",
+      "tabDesc": "May be required with a tender — provides assurance to the project owner that a selected bidder will enter the contract and furnish required bonds if awarded, subject to bond terms.",
+      "detailTitle": "Tender security is about commitment — not project completion",
+      "detailDescription": "Bid bonds and consents of surety are tender-phase instruments. They protect the owner if the low bidder withdraws — the surety's obligation is defined in the bond, and the principal typically indemnifies the surety for amounts paid. Bid bonds are generally tender or contractual requirements — not a universal statutory rule for every Ontario construction project.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    },
+    {
+      "index": 1,
+      "id": "performance-bonds",
+      "tabDesc": "A three-party surety bond that may respond if the contractor defaults on performance obligations under the bonded contract — subject to bond conditions and surety remedies.",
+      "detailTitle": "Default triggers a process — not an automatic insurance payout",
+      "detailDescription": "Performance bonds protect the obligee (project owner), not the contractor. If a default is declared, the surety may arrange completion, tender for a replacement contractor, or other remedies per the bond — then seek recovery from the principal under indemnity.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    },
+    {
+      "index": 2,
+      "id": "labour-material-payment-bonds",
+      "tabDesc": "May help ensure certain direct subcontractors and suppliers on the bonded project receive payment for approved work and materials — subject to bond form, notice periods, and claim documentation.",
+      "detailTitle": "Subs and suppliers claim here — not on the performance bond",
+      "detailDescription": "Payment bonds address upstream payment failure on the bonded job. Claimants generally must follow bond notice and documentation requirements. This process is separate from the owner's performance bond claim path.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    },
+    {
+      "index": 3,
+      "id": "licence-permit-bonds",
+      "tabDesc": "May satisfy licensing or permit bonding requirements for regulated trades or municipal licences — where required by the authority having jurisdiction.",
+      "detailTitle": "Regulatory bonds are not project performance bonds",
+      "detailDescription": "Licence and permit bonds guarantee compliance with licence obligations to a government or municipal obligee — different purpose, amount, and underwriting from construction performance programs.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroSnippetFound": "three-party obligation",
+    "trustSnippetFound": "Windsor–Essex contractors and vendors",
+    "heroPreview": "Surety bonding is structurally different from conventional insurance. A surety bond is a three-party obligation among th",
+    "trustPreview": "For Windsor–Essex contractors and vendors who must post surety for tenders, contracts, or licences — reviewed through an"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "fidelityStateAbsent": true,
+  "headline": "Surety Bonds",
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

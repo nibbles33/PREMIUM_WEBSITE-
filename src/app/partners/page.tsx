@@ -3,16 +3,18 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import PartnerLogoCard from "@/components/PartnerLogoCard";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import { getPartnerGroups } from "@/data/partners";
+import { getPublicPartners } from "@/data/partners";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Partners | PremiumIB",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Our Partners | Premium Insurance Brokers",
   description:
     "Premium Insurance Brokers works with major personal and commercial insurers, specialty underwriters, and program partners across Ontario.",
-};
+  path: "/partners/",
+});
 
 export default function PartnersPage() {
-  const groups = getPartnerGroups();
+  const partners = getPublicPartners();
 
   return (
     <>
@@ -42,35 +44,22 @@ export default function PartnersPage() {
               </div>
             </RevealOnScroll>
 
-            <div className="mt-10 space-y-12 sm:mt-12 sm:space-y-14 lg:space-y-16">
-              {groups.map((group) => (
-                <RevealOnScroll key={group.id}>
-                  <div>
-                    <div className="mx-auto max-w-3xl text-center sm:text-left">
-                      <h2 className="text-xl font-medium tracking-[-0.02em] text-charcoal sm:text-2xl">
-                        {group.title}
-                      </h2>
-                      {group.description ? (
-                        <p className="mt-2 text-[15px] leading-relaxed text-secondary">
-                          {group.description}
-                        </p>
-                      ) : null}
-                    </div>
-                    <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5 xl:gap-5">
-                      {group.partners.map((partner) => (
-                        <li key={partner.name}>
-                          <PartnerLogoCard
-                            partner={partner}
-                            size="directory"
-                            className="h-full w-full min-w-0"
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </RevealOnScroll>
-              ))}
-            </div>
+            <RevealOnScroll className="mt-10 sm:mt-12">
+              <ul
+                className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5 xl:gap-5"
+                aria-label="Insurance partners and markets"
+              >
+                {partners.map((partner) => (
+                  <li key={partner.name}>
+                    <PartnerLogoCard
+                      partner={partner}
+                      size="directory"
+                      className="h-full w-full min-w-0"
+                    />
+                  </li>
+                ))}
+              </ul>
+            </RevealOnScroll>
 
             <RevealOnScroll className="mt-12 sm:mt-14">
               <div className="rounded-2xl border border-border bg-white px-6 py-8 text-center shadow-[0_8px_28px_rgba(32,39,40,0.06)] sm:px-10 sm:py-10">
@@ -95,7 +84,7 @@ export default function PartnersPage() {
                     </span>
                   </Link>
                   <Link
-                    href="/talk-to-a-broker/"
+                    href="/contact/?intent=broker"
                     className="btn-secondary inline-flex h-12 min-w-[200px] items-center justify-center rounded-md border border-border px-6 text-sm font-medium text-gold-dark hover:border-gold-dark"
                   >
                     Talk to a Broker

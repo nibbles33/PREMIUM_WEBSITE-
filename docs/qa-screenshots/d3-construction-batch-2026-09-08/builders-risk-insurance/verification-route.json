@@ -1,0 +1,75 @@
+{
+  "slug": "builders-risk-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "work-in-progress",
+      "tabDesc": "May help address certain physical loss or damage to the structure and installed work during construction — where purchased and subject to policy causes of loss, exclusions, and limits.",
+      "detailTitle": "Hard costs stop when fire or wind hits mid-build",
+      "detailDescription": "Builder's risk insures the project itself — not your contractor's everyday liability policy. Covered causes of loss, deductibles, and whether temporary works are included depend on form and endorsements. Accurate completed value and construction timeline support proper limits.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    },
+    {
+      "index": 1,
+      "id": "materials-on-site-in-transit",
+      "tabDesc": "May address building materials awaiting installation on site — and, where policy wording or endorsements apply, materials in transit or at temporary storage — subject to limits, territory, and conditions.",
+      "detailTitle": "Materials off-site are not automatic",
+      "detailDescription": "Lumber, fixtures, and equipment awaiting installation can represent a large share of project value. Transit and off-site storage are common endorsement items — confirm distance limits, security conditions, and who owns materials (owner vs sub). Do not assume a base course-of-construction form automatically follows materials away from the job site.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    },
+    {
+      "index": 2,
+      "id": "soft-costs",
+      "tabDesc": "May address certain delay-related expenses after a covered loss — where delay-in-completion or soft-cost endorsements are purchased and subject to policy wording.",
+      "detailTitle": "Delay expenses need their own line item",
+      "detailDescription": "Interest, taxes, professional fees, and extended site overhead may require specific soft-cost coverage, limits, or endorsements depending on the policy form. Document and value soft costs explicitly — formula-only limits can understate exposure when a covered peril extends the construction period.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    },
+    {
+      "index": 3,
+      "id": "existing-structure",
+      "tabDesc": "Renovation projects may need scheduled coverage for the existing building while work proceeds — subject to underwriting and policy wording.",
+      "detailTitle": "Occupied renovations change the property picture",
+      "detailDescription": "Standard homeowner or commercial property policies may not respond once renovation scale or vacancy triggers exclusions. Existing structure values, demolition scope, occupancy during work, and who retains property insurance should be resolved before demolition starts.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "stateImageCount": 0,
+      "hasStateImageStage": false,
+      "currentStateSrc": null
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroSnippetFound": "course-of-construction",
+    "trustSnippetFound": "Windsor–Essex owners, developers, and contractors",
+    "heroPreview": "Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it ",
+    "trustPreview": "For Windsor–Essex owners, developers, and contractors named in the contract to insure project property — reviewed throug"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "fidelityStateAbsent": true,
+  "headline": "Builder's Risk Insurance",
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

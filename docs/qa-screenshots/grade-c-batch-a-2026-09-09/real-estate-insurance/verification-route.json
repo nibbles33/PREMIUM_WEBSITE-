@@ -1,0 +1,74 @@
+{
+  "slug": "real-estate-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "errors-omissions-e-o",
+      "tabLabel": "E&OOntario registrants must participate in RECO's mandatory professional liabili",
+      "tabDesc": "Ontario registrants must participate in RECO's mandatory professional liability insurance program, which includes errors and omissions coverage for certain professional real estate services allegations — subject to the program's terms, limits, and deductibles. Premium Insurance Brokers does not replace or sell this program.",
+      "detailTitle": "Transaction errors and deposit disputes follow RECO's program rules",
+      "detailDescription": "RECO's program includes errors and omissions coverage with a $2,000,000 limit per claim and $4,000,000 annual aggregate for the E&O component, plus separate commission protection and consumer deposit coverage on defined terms for the 2026–2027 policy period — each subject to program wording. Allegations such as missed APS clauses, form errors, or commission disputes are evaluated under that program, not a generic commercial E&O policy placed for the brokerage office. Registrants renew through RECO's process; commercial brokers help with the brokerage entity's separate GL, property, and cyber needs.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "errors-omissions-e-o"
+    },
+    {
+      "index": 1,
+      "id": "commercial-property",
+      "tabLabel": "PropertyMay help cover brokerage office contents, furniture, IT equipment, and t",
+      "tabDesc": "May help cover brokerage office contents, furniture, IT equipment, and tenant improvements against covered causes of loss such as fire, theft, or water damage — subject to policy terms, reported values, and limits.",
+      "detailTitle": "Boardroom equipment and MLS workstations are your contents exposure",
+      "detailDescription": "Whether the brokerage leases or owns its office, the landlord's building policy typically does not cover your desks, servers, signage, or leasehold improvements. Property values should reflect computers, printers, furniture, and any buildout you funded. If the brokerage owns the building, building coverage on the structure is separate from contents — disclose ownership, square footage, and alarm or sprinkler details during underwriting.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "commercial-property"
+    },
+    {
+      "index": 2,
+      "id": "general-liability",
+      "tabLabel": "GLMay help respond to certain third-party bodily injury or property-damage claim",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from brokerage premises or operations — such as open-house visitors, office walk-ins, or parking-lot incidents — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "An open-house visitor injury is a premises claim — not a transaction E&O claim",
+      "detailDescription": "Brokerages host clients, other agents, and the public at the office and at showings. Slip-and-fall, trip hazards, and property-damage allegations tied to premises control may fall under general liability — distinct from professional errors covered through RECO's registrant program. Disclose how often you host open houses, whether agents use personal vehicles for showings, and any property-management or rental activities performed outside core brokerage operations.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "general-liability"
+    },
+    {
+      "index": 3,
+      "id": "landlord-coverage",
+      "tabLabel": "CyberMay help address certain costs arising from privacy breaches, ransomware, o",
+      "tabDesc": "May help address certain costs arising from privacy breaches, ransomware, or unauthorized access affecting client contact information, transaction files, or brokerage email and payment systems — where purchased and subject to policy terms.",
+      "detailTitle": "Client contact lists and deal files are brokerage cyber exposure",
+      "detailDescription": "Brokerages store offers, identification copies, financial pre-qualification data, and correspondence — making phishing, wire-fraud schemes, and ransomware relevant operational risks. Standard general liability often excludes cyber events. Cyber or privacy coverage, where available, may help with certain forensic, notification, and business-interruption costs depending on policy wording, but it does not replace secure email, verification procedures for wire instructions, or staff training on social-engineering fraud.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "landlord-coverage"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Ontario real estate brokerages and office operations face a layered insurance picture: registrants must participate in RECO's mandatory professional liability i"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

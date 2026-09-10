@@ -1,0 +1,39 @@
+{
+  "consoleErrors": [],
+  "routes": [
+    {
+      "slug": "manufacturing-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "A defective part can follow your product long after it leaves the dock",
+        "Your landlord's policy doesn't cover your CNC line",
+        "Rent and payroll don't pause when the line stops",
+        "Fire insurance and breakdown insurance respond to different failures",
+        "Custom work-in-progress is hard to replace overnight"
+      ]
+    },
+    {
+      "slug": "commercial-insurance",
+      "pass": true,
+      "hubStructure": {
+        "hasCategorySection": true,
+        "hasIndustryGrid": true,
+        "hasRelatedSection": true,
+        "explorerAbsent": true,
+        "categoryLinks": 10,
+        "industryTiles": 12
+      },
+      "considerationCount": 4,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": []
+    }
+  ],
+  "pass": true
+}

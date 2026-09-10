@@ -1,0 +1,829 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "viewport": "390",
+      "ok": true,
+      "overflow": false,
+      "allCommercial": "/commercial-insurance",
+      "cats": [
+        {
+          "category": "transportation",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Commercial Auto",
+            "Trucking",
+            "Dump Truck",
+            "Cargo / Freight",
+            "Garage / Dealership"
+          ]
+        },
+        {
+          "category": "construction",
+          "activeMatches": true,
+          "productCount": 7,
+          "expected": 7,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Contractors",
+            "Builders & Developers",
+            "Builder's Risk",
+            "Landscaping & Snow Removal",
+            "Dump Truck",
+            "Surety Bonds",
+            "Pollution Liability"
+          ]
+        },
+        {
+          "category": "property",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Commercial Property",
+            "Property Management",
+            "Condo Corporation",
+            "Warehousing",
+            "Business Interruption",
+            "Real Estate"
+          ]
+        },
+        {
+          "category": "manufacturing",
+          "activeMatches": true,
+          "productCount": 4,
+          "expected": 4,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Manufacturing",
+            "Cannabis Producer",
+            "Product Recall",
+            "Pollution Liability"
+          ]
+        },
+        {
+          "category": "hospitality",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Restaurants",
+            "Food Truck / Trailer",
+            "Hotel / Motel",
+            "Liquor Liability",
+            "Grocery / Bakery"
+          ]
+        },
+        {
+          "category": "professional",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Professional Offices",
+            "Real Estate",
+            "Professional Liability",
+            "Directors & Officers",
+            "Cyber"
+          ]
+        },
+        {
+          "category": "retail",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Retail",
+            "Convenience / Gas",
+            "Grocery / Bakery",
+            "Cannabis Retail",
+            "Pharmacy",
+            "Salon / Barber"
+          ]
+        },
+        {
+          "category": "health",
+          "activeMatches": true,
+          "productCount": 4,
+          "expected": 4,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Medical & Dental",
+            "Pharmacy",
+            "Fitness / Gym",
+            "Salon / Barber"
+          ]
+        },
+        {
+          "category": "community",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Non-Profit",
+            "Religious Organizations",
+            "Daycare / School",
+            "Event Liability",
+            "Directors & Officers",
+            "Employment Practices Liability"
+          ]
+        },
+        {
+          "category": "specialty",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Cyber",
+            "Crime & Fidelity",
+            "Surety Bonds",
+            "Cannabis Retail",
+            "Cannabis Producer",
+            "Employment Practices Liability"
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": "430",
+      "ok": true,
+      "overflow": false,
+      "allCommercial": "/commercial-insurance",
+      "cats": [
+        {
+          "category": "transportation",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Commercial Auto",
+            "Trucking",
+            "Dump Truck",
+            "Cargo / Freight",
+            "Garage / Dealership"
+          ]
+        },
+        {
+          "category": "construction",
+          "activeMatches": true,
+          "productCount": 7,
+          "expected": 7,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Contractors",
+            "Builders & Developers",
+            "Builder's Risk",
+            "Landscaping & Snow Removal",
+            "Dump Truck",
+            "Surety Bonds",
+            "Pollution Liability"
+          ]
+        },
+        {
+          "category": "property",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Commercial Property",
+            "Property Management",
+            "Condo Corporation",
+            "Warehousing",
+            "Business Interruption",
+            "Real Estate"
+          ]
+        },
+        {
+          "category": "manufacturing",
+          "activeMatches": true,
+          "productCount": 4,
+          "expected": 4,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Manufacturing",
+            "Cannabis Producer",
+            "Product Recall",
+            "Pollution Liability"
+          ]
+        },
+        {
+          "category": "hospitality",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Restaurants",
+            "Food Truck / Trailer",
+            "Hotel / Motel",
+            "Liquor Liability",
+            "Grocery / Bakery"
+          ]
+        },
+        {
+          "category": "professional",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Professional Offices",
+            "Real Estate",
+            "Professional Liability",
+            "Directors & Officers",
+            "Cyber"
+          ]
+        },
+        {
+          "category": "retail",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Retail",
+            "Convenience / Gas",
+            "Grocery / Bakery",
+            "Cannabis Retail",
+            "Pharmacy",
+            "Salon / Barber"
+          ]
+        },
+        {
+          "category": "health",
+          "activeMatches": true,
+          "productCount": 4,
+          "expected": 4,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Medical & Dental",
+            "Pharmacy",
+            "Fitness / Gym",
+            "Salon / Barber"
+          ]
+        },
+        {
+          "category": "community",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Non-Profit",
+            "Religious Organizations",
+            "Daycare / School",
+            "Event Liability",
+            "Directors & Officers",
+            "Employment Practices Liability"
+          ]
+        },
+        {
+          "category": "specialty",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Cyber",
+            "Crime & Fidelity",
+            "Surety Bonds",
+            "Cannabis Retail",
+            "Cannabis Producer",
+            "Employment Practices Liability"
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": "768",
+      "ok": true,
+      "overflow": false,
+      "allCommercial": "/commercial-insurance",
+      "cats": [
+        {
+          "category": "transportation",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Commercial Auto",
+            "Trucking",
+            "Dump Truck",
+            "Cargo / Freight",
+            "Garage / Dealership"
+          ]
+        },
+        {
+          "category": "construction",
+          "activeMatches": true,
+          "productCount": 7,
+          "expected": 7,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Contractors",
+            "Builders & Developers",
+            "Builder's Risk",
+            "Landscaping & Snow Removal",
+            "Dump Truck",
+            "Surety Bonds",
+            "Pollution Liability"
+          ]
+        },
+        {
+          "category": "property",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Commercial Property",
+            "Property Management",
+            "Condo Corporation",
+            "Warehousing",
+            "Business Interruption",
+            "Real Estate"
+          ]
+        },
+        {
+          "category": "manufacturing",
+          "activeMatches": true,
+          "productCount": 4,
+          "expected": 4,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Manufacturing",
+            "Cannabis Producer",
+            "Product Recall",
+            "Pollution Liability"
+          ]
+        },
+        {
+          "category": "hospitality",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Restaurants",
+            "Food Truck / Trailer",
+            "Hotel / Motel",
+            "Liquor Liability",
+            "Grocery / Bakery"
+          ]
+        },
+        {
+          "category": "professional",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Professional Offices",
+            "Real Estate",
+            "Professional Liability",
+            "Directors & Officers",
+            "Cyber"
+          ]
+        },
+        {
+          "category": "retail",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Retail",
+            "Convenience / Gas",
+            "Grocery / Bakery",
+            "Cannabis Retail",
+            "Pharmacy",
+            "Salon / Barber"
+          ]
+        },
+        {
+          "category": "health",
+          "activeMatches": true,
+          "productCount": 4,
+          "expected": 4,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Medical & Dental",
+            "Pharmacy",
+            "Fitness / Gym",
+            "Salon / Barber"
+          ]
+        },
+        {
+          "category": "community",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Non-Profit",
+            "Religious Organizations",
+            "Daycare / School",
+            "Event Liability",
+            "Directors & Officers",
+            "Employment Practices Liability"
+          ]
+        },
+        {
+          "category": "specialty",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Cyber",
+            "Crime & Fidelity",
+            "Surety Bonds",
+            "Cannabis Retail",
+            "Cannabis Producer",
+            "Employment Practices Liability"
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": "1024",
+      "ok": true,
+      "overflow": false,
+      "allCommercial": "/commercial-insurance",
+      "cats": [
+        {
+          "category": "transportation",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Commercial Auto",
+            "Trucking",
+            "Dump Truck",
+            "Cargo / Freight",
+            "Garage / Dealership"
+          ]
+        },
+        {
+          "category": "construction",
+          "activeMatches": true,
+          "productCount": 7,
+          "expected": 7,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Contractors",
+            "Builders & Developers",
+            "Builder's Risk",
+            "Landscaping & Snow Removal",
+            "Dump Truck",
+            "Surety Bonds",
+            "Pollution Liability"
+          ]
+        },
+        {
+          "category": "property",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Commercial Property",
+            "Property Management",
+            "Condo Corporation",
+            "Warehousing",
+            "Business Interruption",
+            "Real Estate"
+          ]
+        },
+        {
+          "category": "manufacturing",
+          "activeMatches": true,
+          "productCount": 4,
+          "expected": 4,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Manufacturing",
+            "Cannabis Producer",
+            "Product Recall",
+            "Pollution Liability"
+          ]
+        },
+        {
+          "category": "hospitality",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Restaurants",
+            "Food Truck / Trailer",
+            "Hotel / Motel",
+            "Liquor Liability",
+            "Grocery / Bakery"
+          ]
+        },
+        {
+          "category": "professional",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Professional Offices",
+            "Real Estate",
+            "Professional Liability",
+            "Directors & Officers",
+            "Cyber"
+          ]
+        },
+        {
+          "category": "retail",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Retail",
+            "Convenience / Gas",
+            "Grocery / Bakery",
+            "Cannabis Retail",
+            "Pharmacy",
+            "Salon / Barber"
+          ]
+        },
+        {
+          "category": "health",
+          "activeMatches": true,
+          "productCount": 4,
+          "expected": 4,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Medical & Dental",
+            "Pharmacy",
+            "Fitness / Gym",
+            "Salon / Barber"
+          ]
+        },
+        {
+          "category": "community",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Non-Profit",
+            "Religious Organizations",
+            "Daycare / School",
+            "Event Liability",
+            "Directors & Officers",
+            "Employment Practices Liability"
+          ]
+        },
+        {
+          "category": "specialty",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Cyber",
+            "Crime & Fidelity",
+            "Surety Bonds",
+            "Cannabis Retail",
+            "Cannabis Producer",
+            "Employment Practices Liability"
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": "1440",
+      "ok": true,
+      "overflow": false,
+      "allCommercial": "/commercial-insurance",
+      "cats": [
+        {
+          "category": "transportation",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Commercial Auto",
+            "Trucking",
+            "Dump Truck",
+            "Cargo / Freight",
+            "Garage / Dealership"
+          ]
+        },
+        {
+          "category": "construction",
+          "activeMatches": true,
+          "productCount": 7,
+          "expected": 7,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Contractors",
+            "Builders & Developers",
+            "Builder's Risk",
+            "Landscaping & Snow Removal",
+            "Dump Truck",
+            "Surety Bonds",
+            "Pollution Liability"
+          ]
+        },
+        {
+          "category": "property",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Commercial Property",
+            "Property Management",
+            "Condo Corporation",
+            "Warehousing",
+            "Business Interruption",
+            "Real Estate"
+          ]
+        },
+        {
+          "category": "manufacturing",
+          "activeMatches": true,
+          "productCount": 4,
+          "expected": 4,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Manufacturing",
+            "Cannabis Producer",
+            "Product Recall",
+            "Pollution Liability"
+          ]
+        },
+        {
+          "category": "hospitality",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Restaurants",
+            "Food Truck / Trailer",
+            "Hotel / Motel",
+            "Liquor Liability",
+            "Grocery / Bakery"
+          ]
+        },
+        {
+          "category": "professional",
+          "activeMatches": true,
+          "productCount": 5,
+          "expected": 5,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Professional Offices",
+            "Real Estate",
+            "Professional Liability",
+            "Directors & Officers",
+            "Cyber"
+          ]
+        },
+        {
+          "category": "retail",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Retail",
+            "Convenience / Gas",
+            "Grocery / Bakery",
+            "Cannabis Retail",
+            "Pharmacy",
+            "Salon / Barber"
+          ]
+        },
+        {
+          "category": "health",
+          "activeMatches": true,
+          "productCount": 4,
+          "expected": 4,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Medical & Dental",
+            "Pharmacy",
+            "Fitness / Gym",
+            "Salon / Barber"
+          ]
+        },
+        {
+          "category": "community",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Non-Profit",
+            "Religious Organizations",
+            "Daycare / School",
+            "Event Liability",
+            "Directors & Officers",
+            "Employment Practices Liability"
+          ]
+        },
+        {
+          "category": "specialty",
+          "activeMatches": true,
+          "productCount": 6,
+          "expected": 6,
+          "dups": false,
+          "tiny": false,
+          "labels": [
+            "Cyber",
+            "Crime & Fidelity",
+            "Surety Bonds",
+            "Cannabis Retail",
+            "Cannabis Producer",
+            "Employment Practices Liability"
+          ]
+        }
+      ]
+    }
+  ],
+  "partners": {
+    "cards": 44,
+    "core": false,
+    "markets": false,
+    "avgImgH": 75.9950284090909,
+    "minImgH": 75.984375,
+    "overflow": false
+  },
+  "rails": {
+    "marquee": true,
+    "yep": true,
+    "awards": false,
+    "filmstrip": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "heroSnippetPresent": true,
+  "cardCount": 6,
+  "cardTitles": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "considerationCount": 9,
+  "faqCount": 5,
+  "dom": {
+    "heroPresent": true,
+    "cards": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "cardCount": 6,
+    "cardDescriptionsMatch": true,
+    "considerationTitles": [
+      "Broker disclosures Ontario licensing guidance expects",
+      "Transportation of children",
+      "Field trips",
+      "Volunteers",
+      "Contractual liability",
+      "Liability of board members/officers",
+      "Licensing status affects your insurance obligations directly",
+      "Abuse liability coverage typically comes with real conditions",
+      "Did you know?"
+    ],
+    "considerationCount": 9,
+    "faqCount": 5,
+    "overflow": 0,
+    "hasExplorerImage": true,
+    "hasDidYouKnow": true
+  },
+  "errors": [],
+  "pass": true
+}

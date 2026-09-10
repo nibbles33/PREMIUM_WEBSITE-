@@ -1,0 +1,74 @@
+{
+  "slug": "garage-dealership-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "garagekeepers-liability",
+      "tabLabel": "Customer AutosLegal liability coverage under the applicable Ontario garage autom",
+      "tabDesc": "Legal liability coverage under the applicable Ontario garage automobile form (OAP 4 Section 6) may respond to certain insured damage involving customer vehicles in the business's care, custody, or control during service, storage, or parking — subject to limits, deductibles, and policy wording.",
+      "detailTitle": "Customer cars are insured elsewhere first — your legal liability still matters",
+      "detailDescription": "When a customer's vehicle is damaged in your bay, their own automobile insurer may pay first; your garage policy responds to your legal liability for the loss when the policy trigger and facts support it — not as a blanket guarantee on every scratch or lot incident. Legal-liability and direct-primary forms treat fault and payment order differently; confirm which structure your program uses. Limits, per-vehicle deductibles, and maximum values per occurrence are scheduled — inadequate limits leave the shop exposed after a total loss or multi-vehicle event.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "garagekeepers-liability"
+    },
+    {
+      "index": 1,
+      "id": "dealer-open-lot",
+      "tabLabel": "Open LotPhysical damage coverage on dealer-owned inventory — including units on ",
+      "tabDesc": "Physical damage coverage on dealer-owned inventory — including units on open lot, show floor, or in transit between locations where the policy extends — may respond to covered perils such as hail, fire, theft, or vandalism, subject to causes of loss, stated values, and reporting methods.",
+      "detailTitle": "Inventory values move daily — static limits go stale",
+      "detailDescription": "New and used dealers carry high aggregate values across rows of units exposed to weather, theft, and vandalism. Open-lot coverage depends on accurate stated amounts or reporting procedures — not every service-only garage needs this section, but dealers cannot rely on a customer's-auto legal-liability limit to protect owned inventory. Floorplan lenders may require specific loss-payee and physical-damage provisions. Seasonal swings and auction purchases should trigger limit reviews.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "dealer-open-lot"
+    },
+    {
+      "index": 2,
+      "id": "garage-liability",
+      "tabLabel": "OperationsCommercial general liability or garage liability package coverage may ",
+      "tabDesc": "Commercial general liability or garage liability package coverage may address certain premises injuries, property damage from shop operations, and completed-operations claims such as alleged faulty repairs — distinct from OAP 4 automobile sections and subject to automotive operations exclusions on standard CGL forms.",
+      "detailTitle": "CGL does not replace OAP 4 — each policy has a different job",
+      "detailDescription": "Slip-and-fall claims in the customer lounge, damage from a hoist failure, or allegations that a completed repair caused a downstream accident may fall under general liability or garage liability programs — not under the automobile policy's third-party liability section for scheduled vehicles. Standard CGL forms often exclude or restrict automotive garage operations; that is why Ontario shops carry OAP 4 alongside liability and property. Test-drive bodily injury may involve OAP 4 automobile liability; botched workmanship may implicate completed operations — your broker maps exposures to the correct form.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "garage-liability"
+    },
+    {
+      "index": 3,
+      "id": "physical-damage-on-inventory",
+      "tabLabel": "Inventory PDOptional collision, comprehensive, or specified perils on OAP 4 Sect",
+      "tabDesc": "Optional collision, comprehensive, or specified perils on OAP 4 Section 5 — where purchased — may address physical damage to owned dealer vehicles, shop trucks, and tow/service units used in garage operations, subject to deductibles and scheduled values.",
+      "detailTitle": "Your tow truck and lot shuttle are owned autos — not customer cars",
+      "detailDescription": "Dealer plate programs, service loaners, tow trucks, and parts runners are owned automobiles on the garage policy — separate from customer-vehicle legal-liability coverage. Physical damage is optional under Ontario law but often purchased to protect high-value units and lender interests. Consigned inventory may require confirmation of who holds insurable interest. Accurate VIN schedules and values support renewals after acquisitions or disposals.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "physical-damage-on-inventory"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Garage and dealership insurance in Ontario usually layers the regulated Ontario Garage Automobile Policy (OAP 4) with commercial property and commercial general"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

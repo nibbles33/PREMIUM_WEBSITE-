@@ -1,0 +1,94 @@
+{
+  "consoleErrors": [],
+  "routes": [
+    {
+      "slug": "retail-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "A wet entrance isn't just housekeeping",
+        "Seasonal inventory can outgrow your limit",
+        "A fire doesn't pause your lease",
+        "A defective product claim can name the seller"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "grocery-specialty-food-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Coolers and peak holiday stock drive values",
+        "A compressor failure can empty the dairy case",
+        "One allergen label error can reach the whole chain",
+        "Spills and carts create premises exposure"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "fitness-gym-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "A loose cable on the gym floor is a premises claim",
+        "Bad programming allegations aren't ordinary slip-and-falls",
+        "A treadmill fleet is a capital exposure",
+        "Youth classes change the coverage conversation"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    },
+    {
+      "slug": "religious-organizations-insurance",
+      "pass": true,
+      "idsPreserved": true,
+      "allV2Detail": true,
+      "considerationCount": 8,
+      "faqCount": 5,
+      "forbidden": [],
+      "requiredMissing": [],
+      "explorerTitles": [
+        "Stained glass and AV can exceed ordinary contents limits",
+        "A winter parking-lot fall reaches the organization",
+        "Counselling allegations need the right policy part",
+        "Youth ministry deserves its own coverage review"
+      ],
+      "overflow": {
+        "390": 0,
+        "768": 0,
+        "1024": 0,
+        "1440": 0
+      }
+    }
+  ],
+  "pass": true
+}

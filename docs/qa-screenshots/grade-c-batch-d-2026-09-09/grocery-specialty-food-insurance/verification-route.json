@@ -1,0 +1,74 @@
+{
+  "slug": "grocery-specialty-food-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "commercial-property-inventory",
+      "tabLabel": "PropertyMay help cover stock, fixtures, coolers, and point-of-sale equipment aga",
+      "tabDesc": "May help cover stock, fixtures, coolers, and point-of-sale equipment against covered direct physical loss such as fire or theft — subject to policy causes of loss, limits, deductibles, and valuation. Mechanical refrigeration failure and spoilage typically require separate endorsements.",
+      "detailTitle": "Coolers and peak holiday stock drive values",
+      "detailDescription": "Food retailers concentrate value in refrigerated and frozen inventory, display cases, and back-room stock — with seasonal peaks around holidays and harvest periods. Base commercial property may address certain fire, theft, and water losses to stock and fixtures, but equipment breakdown of compressors and spoilage from temperature rise are separate coverage questions requiring their own endorsements where available. Report peak inventory and cooler values accurately — underinsurance can reduce recovery after a partial loss on many commercial property forms.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "commercial-property-inventory"
+    },
+    {
+      "index": 1,
+      "id": "spoilage-refrigeration-breakdown",
+      "tabLabel": "SpoilageWhere purchased as a spoilage or equipment-breakdown endorsement, may ad",
+      "tabDesc": "Where purchased as a spoilage or equipment-breakdown endorsement, may address certain loss of perishable stock from mechanical failure, contamination, or specified power interruption — subject to limits, deductibles, waiting periods, maintenance conditions, and cause-of-loss definitions in the endorsement.",
+      "detailTitle": "A compressor failure can empty the dairy case",
+      "detailDescription": "Perishable inventory loss does not automatically respond under base property because food became unusable. Spoilage endorsements — such as common CP 04 40 patterns — typically cover named perishable stock only, with their own limits and deductibles. Equipment breakdown addresses mechanical failure of refrigeration equipment; on-premises power interruption may be covered only where the spoilage endorsement schedules that cause. Off-premises utility failure often requires separate utility-services direct-damage or time-element endorsements working together with spoilage — not assumed in every food retail quote. Maintenance and inspection conditions may apply.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "spoilage-refrigeration-breakdown"
+    },
+    {
+      "index": 2,
+      "id": "product-liability",
+      "tabLabel": "ProductsMay help address certain claims alleging bodily injury from food product",
+      "tabDesc": "May help address certain claims alleging bodily injury from food products you sell or prepare for retail — including allergen and foodborne-illness allegations — subject to products-completed operations wording, exclusions, and limits.",
+      "detailTitle": "One allergen label error can reach the whole chain",
+      "detailDescription": "Bakeries, delis, and specialty food counters that prepare or repackage goods face product liability exposure when a customer alleges illness, allergic reaction, or contamination from food sold at the store. Products liability is distinct from premises slip-and-fall claims and from first-party product recall or withdrawal expense — recall costs are addressed on our product recall page, not automatically under general liability. Food safety compliance under Ontario food-premises rules supports operations but does not replace liability coverage.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "product-liability"
+    },
+    {
+      "index": 3,
+      "id": "general-liability",
+      "tabLabel": "LiabilityMay help respond to certain third-party bodily injury or property-damag",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from customer incidents on your premises — aisle spills, display hazards, or parking-area injuries — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "Spills and carts create premises exposure",
+      "detailDescription": "Food retail premises exposure concentrates in wet produce areas, busy aisles, loading zones, and winter parking lots — separate from foodborne illness claims that typically fall under products liability depending on how the loss is framed. If you hold an AGCO Grocery Store Licence for packaged retail alcohol, that creates underwriting questions distinct from on-premises liquor service at restaurants — AGCO does not prescribe a named liquor-liability insurance product in its public grocery guides. Delivery using company or employee vehicles may need commercial auto coverage separate from store liability.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "general-liability"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Grocery stores, specialty food markets, butcher shops, bakeries, and delis with limited in-store preparation face perishable inventory, refrigeration equipment,"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}

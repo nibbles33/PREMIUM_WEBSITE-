@@ -1,0 +1,673 @@
+
+========== builders-risk-insurance ==========
+Explorer states: work-in-progress, materials-on-site-in-transit, soft-costs, existing-structure
+
+KEYWORD: soft cost
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it is being built or renovated. It is project-specific property coverage for the structure and work in progress, not the contractor's everyday commercial general liability policy, not a surety bond, and not a developer's full enterprise insurance program. Policies are typically arranged for a defined construction period and completed value. What responds after fire, theft, vandalism, wind, water damage, or collapse depends on the policy form, causes of loss, deductibles, exclusions, and any endorsements purchased. Soft costs, delay-in-completion, flood, earthquake, materials in transit, off-site storage, and existing structures are not automatic — each must be reviewed against wording and underwriting. Premium Insurance Brokers can help align project value, timeline, and contract or lender requirements for Windsor-Essex builds.
+
+KEYWORD: soft cost
+FIELD PATH: coverageItems[2].title
+COMPLETE CURRENT VALUE: Soft Costs
+
+KEYWORD: soft cost
+FIELD PATH: coverageItems[2].detailDescription
+COMPLETE CURRENT VALUE: Interest, taxes, professional fees, and extended site overhead after an insured loss are not part of basic hard-cost coverage unless scheduled. Document and value soft costs explicitly — formula-only limits can understate exposure when a covered peril extends the construction period.
+
+KEYWORD: soft cost
+FIELD PATH: considerations[3].title
+COMPLETE CURRENT VALUE: Hard costs vs soft costs and delay endorsements
+
+KEYWORD: soft cost
+FIELD PATH: considerations[3].description
+COMPLETE CURRENT VALUE: Basic builder's risk typically focuses on hard costs — structure and installed work. Soft costs and delay-in-completion expenses after a covered loss are usually endorsement-dependent and should be itemized. Do not treat soft costs as automatic inclusions.
+
+KEYWORD: soft cost
+FIELD PATH: faqItems[2].question
+COMPLETE CURRENT VALUE: Does builder's risk include liability, soft costs, or materials away from the site?
+
+KEYWORD: soft cost
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Builder's risk is project property coverage — it does not replace commercial general liability or surety bonds. Soft costs, delay-in-completion, transit, and off-site storage may be available only where endorsed or expressly included. Flood, earthquake, equipment breakdown, and contractor tools are likewise not automatic. Review causes of loss and endorsements with your broker.
+
+KEYWORD: transit
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it is being built or renovated. It is project-specific property coverage for the structure and work in progress, not the contractor's everyday commercial general liability policy, not a surety bond, and not a developer's full enterprise insurance program. Policies are typically arranged for a defined construction period and completed value. What responds after fire, theft, vandalism, wind, water damage, or collapse depends on the policy form, causes of loss, deductibles, exclusions, and any endorsements purchased. Soft costs, delay-in-completion, flood, earthquake, materials in transit, off-site storage, and existing structures are not automatic — each must be reviewed against wording and underwriting. Premium Insurance Brokers can help align project value, timeline, and contract or lender requirements for Windsor-Essex builds.
+
+KEYWORD: transit
+FIELD PATH: coverageItems[1].title
+COMPLETE CURRENT VALUE: Materials On Site & In Transit
+
+KEYWORD: transit
+FIELD PATH: coverageItems[1].description
+COMPLETE CURRENT VALUE: May address building materials awaiting installation on site — and, where policy wording or endorsements apply, materials in transit or at temporary storage — subject to limits, territory, and conditions.
+
+KEYWORD: transit
+FIELD PATH: coverageItems[1].detailDescription
+COMPLETE CURRENT VALUE: Lumber, fixtures, and equipment awaiting installation can represent a large share of project value. Transit and off-site storage are common endorsement items — confirm distance limits, security conditions, and who owns materials (owner vs sub). Do not assume a base course-of-construction form automatically follows materials away from the job site.
+
+KEYWORD: transit
+FIELD PATH: considerations[4].title
+COMPLETE CURRENT VALUE: Materials, transit, and off-site storage
+
+KEYWORD: transit
+FIELD PATH: considerations[4].description
+COMPLETE CURRENT VALUE: Materials stored on site, in a yard, or moving to the project may need specific limits, territorial wording, or endorsements. Security conditions, distance from site, and ownership (owner-supplied vs subcontractor materials) affect underwriting and claims. Transit and off-site property are not universally included.
+
+KEYWORD: transit
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Builder's risk is project property coverage — it does not replace commercial general liability or surety bonds. Soft costs, delay-in-completion, transit, and off-site storage may be available only where endorsed or expressly included. Flood, earthquake, equipment breakdown, and contractor tools are likewise not automatic. Review causes of loss and endorsements with your broker.
+
+KEYWORD: off-site
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it is being built or renovated. It is project-specific property coverage for the structure and work in progress, not the contractor's everyday commercial general liability policy, not a surety bond, and not a developer's full enterprise insurance program. Policies are typically arranged for a defined construction period and completed value. What responds after fire, theft, vandalism, wind, water damage, or collapse depends on the policy form, causes of loss, deductibles, exclusions, and any endorsements purchased. Soft costs, delay-in-completion, flood, earthquake, materials in transit, off-site storage, and existing structures are not automatic — each must be reviewed against wording and underwriting. Premium Insurance Brokers can help align project value, timeline, and contract or lender requirements for Windsor-Essex builds.
+
+KEYWORD: off-site
+FIELD PATH: coverageItems[1].detailTitle
+COMPLETE CURRENT VALUE: Materials off-site are not automatic
+
+KEYWORD: off-site
+FIELD PATH: coverageItems[1].detailDescription
+COMPLETE CURRENT VALUE: Lumber, fixtures, and equipment awaiting installation can represent a large share of project value. Transit and off-site storage are common endorsement items — confirm distance limits, security conditions, and who owns materials (owner vs sub). Do not assume a base course-of-construction form automatically follows materials away from the job site.
+
+KEYWORD: off-site
+FIELD PATH: considerations[4].title
+COMPLETE CURRENT VALUE: Materials, transit, and off-site storage
+
+KEYWORD: off-site
+FIELD PATH: considerations[4].description
+COMPLETE CURRENT VALUE: Materials stored on site, in a yard, or moving to the project may need specific limits, territorial wording, or endorsements. Security conditions, distance from site, and ownership (owner-supplied vs subcontractor materials) affect underwriting and claims. Transit and off-site property are not universally included.
+
+KEYWORD: off-site
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Builder's risk is project property coverage — it does not replace commercial general liability or surety bonds. Soft costs, delay-in-completion, transit, and off-site storage may be available only where endorsed or expressly included. Flood, earthquake, equipment breakdown, and contractor tools are likewise not automatic. Review causes of loss and endorsements with your broker.
+
+KEYWORD: existing structure
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it is being built or renovated. It is project-specific property coverage for the structure and work in progress, not the contractor's everyday commercial general liability policy, not a surety bond, and not a developer's full enterprise insurance program. Policies are typically arranged for a defined construction period and completed value. What responds after fire, theft, vandalism, wind, water damage, or collapse depends on the policy form, causes of loss, deductibles, exclusions, and any endorsements purchased. Soft costs, delay-in-completion, flood, earthquake, materials in transit, off-site storage, and existing structures are not automatic — each must be reviewed against wording and underwriting. Premium Insurance Brokers can help align project value, timeline, and contract or lender requirements for Windsor-Essex builds.
+
+KEYWORD: existing structure
+FIELD PATH: coverageItems[3].title
+COMPLETE CURRENT VALUE: Existing Structure
+
+KEYWORD: existing structure
+FIELD PATH: coverageItems[3].detailDescription
+COMPLETE CURRENT VALUE: Standard homeowner or commercial property policies may not respond once renovation scale or vacancy triggers exclusions. Existing structure values, demolition scope, occupancy during work, and who retains property insurance should be resolved before demolition starts.
+
+KEYWORD: existing structure
+FIELD PATH: considerations[1].description
+COMPLETE CURRENT VALUE: New builds and renovations present different property questions. Renovations may need the existing structure scheduled on the builder's risk policy, coordination with any remaining permanent property insurance, and clarity on occupancy while work proceeds. Vacancy or partial occupancy can change how both policies respond.
+
+KEYWORD: existing structure
+FIELD PATH: faqItems[4].answer
+COMPLETE CURRENT VALUE: Expect questions about project address and type, new build versus renovation, completed value, construction period, construction methods, occupancy during work, existing structure values if renovating, security and water exposures, neighbouring properties, contractor experience, loss history, and contract or lender insurance requirements.
+
+KEYWORD: delay
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it is being built or renovated. It is project-specific property coverage for the structure and work in progress, not the contractor's everyday commercial general liability policy, not a surety bond, and not a developer's full enterprise insurance program. Policies are typically arranged for a defined construction period and completed value. What responds after fire, theft, vandalism, wind, water damage, or collapse depends on the policy form, causes of loss, deductibles, exclusions, and any endorsements purchased. Soft costs, delay-in-completion, flood, earthquake, materials in transit, off-site storage, and existing structures are not automatic — each must be reviewed against wording and underwriting. Premium Insurance Brokers can help align project value, timeline, and contract or lender requirements for Windsor-Essex builds.
+
+KEYWORD: delay
+FIELD PATH: coverageItems[2].description
+COMPLETE CURRENT VALUE: May address certain delay-related expenses after a covered loss — where delay-in-completion or soft-cost endorsements are purchased and subject to policy wording.
+
+KEYWORD: delay
+FIELD PATH: coverageItems[2].detailTitle
+COMPLETE CURRENT VALUE: Delay expenses need their own line item
+
+KEYWORD: delay
+FIELD PATH: considerations[2].description
+COMPLETE CURRENT VALUE: Limits are commonly based on completed project value for the construction period stated in the policy. Substantial completion, occupancy, or policy expiry can end coverage — whichever the form triggers first. Delayed projects may need extensions arranged before the policy expires.
+
+KEYWORD: delay
+FIELD PATH: considerations[3].title
+COMPLETE CURRENT VALUE: Hard costs vs soft costs and delay endorsements
+
+KEYWORD: delay
+FIELD PATH: considerations[3].description
+COMPLETE CURRENT VALUE: Basic builder's risk typically focuses on hard costs — structure and installed work. Soft costs and delay-in-completion expenses after a covered loss are usually endorsement-dependent and should be itemized. Do not treat soft costs as automatic inclusions.
+
+KEYWORD: delay
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Builder's risk is project property coverage — it does not replace commercial general liability or surety bonds. Soft costs, delay-in-completion, transit, and off-site storage may be available only where endorsed or expressly included. Flood, earthquake, equipment breakdown, and contractor tools are likewise not automatic. Review causes of loss and endorsements with your broker.
+
+KEYWORD: delay
+FIELD PATH: faqItems[3].answer
+COMPLETE CURRENT VALUE: Coverage typically applies for a defined construction period and ends at substantial completion, occupancy, policy expiry, or another trigger in the form — whichever applies first. Delayed projects may need extensions arranged before expiry. Occupancy during construction can change how the policy responds.
+
+KEYWORD: flood
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it is being built or renovated. It is project-specific property coverage for the structure and work in progress, not the contractor's everyday commercial general liability policy, not a surety bond, and not a developer's full enterprise insurance program. Policies are typically arranged for a defined construction period and completed value. What responds after fire, theft, vandalism, wind, water damage, or collapse depends on the policy form, causes of loss, deductibles, exclusions, and any endorsements purchased. Soft costs, delay-in-completion, flood, earthquake, materials in transit, off-site storage, and existing structures are not automatic — each must be reviewed against wording and underwriting. Premium Insurance Brokers can help align project value, timeline, and contract or lender requirements for Windsor-Essex builds.
+
+KEYWORD: flood
+FIELD PATH: considerations[6].title
+COMPLETE CURRENT VALUE: Exclusions: faulty workmanship, water, flood, and earthquake
+
+KEYWORD: flood
+FIELD PATH: considerations[6].description
+COMPLETE CURRENT VALUE: Faulty workmanship and defective materials are typically excluded from property recovery for the defective work itself — liability policies address certain claim types separately. Water damage, sewer backup, flood, and earthquake treatment vary by form and optional buy-backs. Do not assume catastrophic perils are included without reviewing wording.
+
+KEYWORD: flood
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Builder's risk is project property coverage — it does not replace commercial general liability or surety bonds. Soft costs, delay-in-completion, transit, and off-site storage may be available only where endorsed or expressly included. Flood, earthquake, equipment breakdown, and contractor tools are likewise not automatic. Review causes of loss and endorsements with your broker.
+
+KEYWORD: earthquake
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it is being built or renovated. It is project-specific property coverage for the structure and work in progress, not the contractor's everyday commercial general liability policy, not a surety bond, and not a developer's full enterprise insurance program. Policies are typically arranged for a defined construction period and completed value. What responds after fire, theft, vandalism, wind, water damage, or collapse depends on the policy form, causes of loss, deductibles, exclusions, and any endorsements purchased. Soft costs, delay-in-completion, flood, earthquake, materials in transit, off-site storage, and existing structures are not automatic — each must be reviewed against wording and underwriting. Premium Insurance Brokers can help align project value, timeline, and contract or lender requirements for Windsor-Essex builds.
+
+KEYWORD: earthquake
+FIELD PATH: considerations[6].title
+COMPLETE CURRENT VALUE: Exclusions: faulty workmanship, water, flood, and earthquake
+
+KEYWORD: earthquake
+FIELD PATH: considerations[6].description
+COMPLETE CURRENT VALUE: Faulty workmanship and defective materials are typically excluded from property recovery for the defective work itself — liability policies address certain claim types separately. Water damage, sewer backup, flood, and earthquake treatment vary by form and optional buy-backs. Do not assume catastrophic perils are included without reviewing wording.
+
+KEYWORD: earthquake
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Builder's risk is project property coverage — it does not replace commercial general liability or surety bonds. Soft costs, delay-in-completion, transit, and off-site storage may be available only where endorsed or expressly included. Flood, earthquake, equipment breakdown, and contractor tools are likewise not automatic. Review causes of loss and endorsements with your broker.
+
+========== bonding-insurance ==========
+Explorer states: bid-bonds, performance-bonds, labour-material-payment-bonds, licence-permit-bonds
+
+KEYWORD: principal
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Surety bonding is structurally different from conventional insurance. A surety bond is a three-party obligation among the principal (usually the contractor), the obligee (the project owner or authority that requires the bond), and the surety. The bond backs the principal's contractual or licence obligation to the obligee — it does not primarily protect the contractor the way a liability policy protects an insured. If the surety pays or arranges completion after a default, the principal typically remains responsible under an indemnity agreement. Common construction instruments include bid bonds, performance bonds, and labour and material payment bonds; licence and permit bonds serve separate regulatory purposes. Employee dishonesty or crime coverage is insurance — not a construction surety bond — and is addressed on a separate product page. Premium Insurance Brokers can help Windsor-Essex contractors navigate prequalification, capacity, and tender timelines.
+
+KEYWORD: principal
+FIELD PATH: trustStatement
+COMPLETE CURRENT VALUE: For Windsor–Essex contractors and vendors who must post surety for tenders, contracts, or licences — reviewed through an independent broker who can explain principal, obligee, and surety roles in plain language.
+
+KEYWORD: principal
+FIELD PATH: coverageItems[0].detailDescription
+COMPLETE CURRENT VALUE: Bid bonds and consents of surety are tender-phase instruments. They protect the owner if the low bidder withdraws — the surety's obligation is defined in the bond, and the principal typically indemnifies the surety for amounts paid. Bid bonds are generally tender or contractual requirements — not a universal statutory rule for every Ontario construction project.
+
+KEYWORD: principal
+FIELD PATH: coverageItems[1].detailDescription
+COMPLETE CURRENT VALUE: Performance bonds protect the obligee (project owner), not the contractor. If a default is declared, the surety may arrange completion, tender for a replacement contractor, or other remedies per the bond — then seek recovery from the principal under indemnity.
+
+KEYWORD: principal
+FIELD PATH: considerations[0].description
+COMPLETE CURRENT VALUE: Insurance transfers defined risk from an insured to an insurer. A surety bond guarantees the principal's obligation to an obligee. The surety may step in after a default, then look to the principal (and often personal or corporate indemnitors) for reimbursement. Do not treat a performance bond as coverage that protects the contractor like a CGL policy.
+
+KEYWORD: principal
+FIELD PATH: considerations[4].description
+COMPLETE CURRENT VALUE: When an obligee declares a contractor default under a performance bond, the surety evaluates options under the bond wording — which may include arranging completion, tendering for a replacement contractor, or other remedies. Remedies and timelines are bond-specific; this is not an automatic insurance payout to the principal.
+
+KEYWORD: principal
+FIELD PATH: faqItems[0].answer
+COMPLETE CURRENT VALUE: No. Conventional insurance protects an insured against covered losses under a two-party policy. A surety bond is a three-party instrument among principal, obligee, and surety that backs the principal's obligation to the obligee. If the surety pays or arranges completion, the principal typically remains liable under indemnity. Employee dishonesty (fidelity) insurance is a separate insurance product — not a construction surety bond.
+
+KEYWORD: principal
+FIELD PATH: faqItems[1].answer
+COMPLETE CURRENT VALUE: Primarily the obligee — usually the project owner or the authority requiring the bond. A labour and material payment bond may also allow certain direct subcontractors and suppliers to claim for unpaid work or materials on the bonded project, subject to the bond form. The bond does not primarily protect the contractor/principal like a liability policy.
+
+KEYWORD: obligee
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Surety bonding is structurally different from conventional insurance. A surety bond is a three-party obligation among the principal (usually the contractor), the obligee (the project owner or authority that requires the bond), and the surety. The bond backs the principal's contractual or licence obligation to the obligee — it does not primarily protect the contractor the way a liability policy protects an insured. If the surety pays or arranges completion after a default, the principal typically remains responsible under an indemnity agreement. Common construction instruments include bid bonds, performance bonds, and labour and material payment bonds; licence and permit bonds serve separate regulatory purposes. Employee dishonesty or crime coverage is insurance — not a construction surety bond — and is addressed on a separate product page. Premium Insurance Brokers can help Windsor-Essex contractors navigate prequalification, capacity, and tender timelines.
+
+KEYWORD: obligee
+FIELD PATH: trustStatement
+COMPLETE CURRENT VALUE: For Windsor–Essex contractors and vendors who must post surety for tenders, contracts, or licences — reviewed through an independent broker who can explain principal, obligee, and surety roles in plain language.
+
+KEYWORD: obligee
+FIELD PATH: coverageIntro
+COMPLETE CURRENT VALUE: Surety bonds back obligations to an obligee — bid security, performance after award, payment to certain subcontractors and suppliers, and licence or permit compliance where required.
+
+KEYWORD: obligee
+FIELD PATH: coverageItems[1].detailDescription
+COMPLETE CURRENT VALUE: Performance bonds protect the obligee (project owner), not the contractor. If a default is declared, the surety may arrange completion, tender for a replacement contractor, or other remedies per the bond — then seek recovery from the principal under indemnity.
+
+KEYWORD: obligee
+FIELD PATH: coverageItems[3].detailDescription
+COMPLETE CURRENT VALUE: Licence and permit bonds guarantee compliance with licence obligations to a government or municipal obligee — different purpose, amount, and underwriting from construction performance programs.
+
+KEYWORD: obligee
+FIELD PATH: considerations[0].description
+COMPLETE CURRENT VALUE: Insurance transfers defined risk from an insured to an insurer. A surety bond guarantees the principal's obligation to an obligee. The surety may step in after a default, then look to the principal (and often personal or corporate indemnitors) for reimbursement. Do not treat a performance bond as coverage that protects the contractor like a CGL policy.
+
+KEYWORD: obligee
+FIELD PATH: considerations[4].description
+COMPLETE CURRENT VALUE: When an obligee declares a contractor default under a performance bond, the surety evaluates options under the bond wording — which may include arranging completion, tendering for a replacement contractor, or other remedies. Remedies and timelines are bond-specific; this is not an automatic insurance payout to the principal.
+
+KEYWORD: obligee
+FIELD PATH: considerations[7].description
+COMPLETE CURRENT VALUE: Licence and permit bonds serve a regulatory or municipal obligee and are underwritten for licence compliance — separate from bid, performance, and payment bonds on a construction contract. Capacity used for licence bonds may interact with your overall surety program; ask how your surety treats them together.
+
+KEYWORD: obligee
+FIELD PATH: faqItems[0].answer
+COMPLETE CURRENT VALUE: No. Conventional insurance protects an insured against covered losses under a two-party policy. A surety bond is a three-party instrument among principal, obligee, and surety that backs the principal's obligation to the obligee. If the surety pays or arranges completion, the principal typically remains liable under indemnity. Employee dishonesty (fidelity) insurance is a separate insurance product — not a construction surety bond.
+
+KEYWORD: obligee
+FIELD PATH: faqItems[1].answer
+COMPLETE CURRENT VALUE: Primarily the obligee — usually the project owner or the authority requiring the bond. A labour and material payment bond may also allow certain direct subcontractors and suppliers to claim for unpaid work or materials on the bonded project, subject to the bond form. The bond does not primarily protect the contractor/principal like a liability policy.
+
+KEYWORD: surety
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Surety bonding is structurally different from conventional insurance. A surety bond is a three-party obligation among the principal (usually the contractor), the obligee (the project owner or authority that requires the bond), and the surety. The bond backs the principal's contractual or licence obligation to the obligee — it does not primarily protect the contractor the way a liability policy protects an insured. If the surety pays or arranges completion after a default, the principal typically remains responsible under an indemnity agreement. Common construction instruments include bid bonds, performance bonds, and labour and material payment bonds; licence and permit bonds serve separate regulatory purposes. Employee dishonesty or crime coverage is insurance — not a construction surety bond — and is addressed on a separate product page. Premium Insurance Brokers can help Windsor-Essex contractors navigate prequalification, capacity, and tender timelines.
+
+KEYWORD: surety
+FIELD PATH: trustStatement
+COMPLETE CURRENT VALUE: For Windsor–Essex contractors and vendors who must post surety for tenders, contracts, or licences — reviewed through an independent broker who can explain principal, obligee, and surety roles in plain language.
+
+KEYWORD: surety
+FIELD PATH: coverageIntro
+COMPLETE CURRENT VALUE: Surety bonds back obligations to an obligee — bid security, performance after award, payment to certain subcontractors and suppliers, and licence or permit compliance where required.
+
+KEYWORD: surety
+FIELD PATH: coverageItems[0].detailDescription
+COMPLETE CURRENT VALUE: Bid bonds and consents of surety are tender-phase instruments. They protect the owner if the low bidder withdraws — the surety's obligation is defined in the bond, and the principal typically indemnifies the surety for amounts paid. Bid bonds are generally tender or contractual requirements — not a universal statutory rule for every Ontario construction project.
+
+KEYWORD: surety
+FIELD PATH: coverageItems[1].description
+COMPLETE CURRENT VALUE: A three-party surety bond that may respond if the contractor defaults on performance obligations under the bonded contract — subject to bond conditions and surety remedies.
+
+KEYWORD: surety
+FIELD PATH: coverageItems[1].detailDescription
+COMPLETE CURRENT VALUE: Performance bonds protect the obligee (project owner), not the contractor. If a default is declared, the surety may arrange completion, tender for a replacement contractor, or other remedies per the bond — then seek recovery from the principal under indemnity.
+
+KEYWORD: surety
+FIELD PATH: considerations[0].title
+COMPLETE CURRENT VALUE: Surety is not insurance — three parties and indemnity
+
+KEYWORD: surety
+FIELD PATH: considerations[0].description
+COMPLETE CURRENT VALUE: Insurance transfers defined risk from an insured to an insurer. A surety bond guarantees the principal's obligation to an obligee. The surety may step in after a default, then look to the principal (and often personal or corporate indemnitors) for reimbursement. Do not treat a performance bond as coverage that protects the contractor like a CGL policy.
+
+KEYWORD: surety
+FIELD PATH: considerations[3].title
+COMPLETE CURRENT VALUE: Bid bonds vs consent of surety at tender
+
+KEYWORD: surety
+FIELD PATH: considerations[3].description
+COMPLETE CURRENT VALUE: A bid bond accompanies many tenders as security that the bidder will enter the contract and furnish required bonds if awarded. A consent of surety is a related tender-phase assurance that the surety is prepared to issue those bonds. Percentages and forms follow the tender — not a single Ontario-wide statutory bid-bond amount.
+
+KEYWORD: surety
+FIELD PATH: considerations[4].description
+COMPLETE CURRENT VALUE: When an obligee declares a contractor default under a performance bond, the surety evaluates options under the bond wording — which may include arranging completion, tendering for a replacement contractor, or other remedies. Remedies and timelines are bond-specific; this is not an automatic insurance payout to the principal.
+
+KEYWORD: surety
+FIELD PATH: considerations[7].description
+COMPLETE CURRENT VALUE: Licence and permit bonds serve a regulatory or municipal obligee and are underwritten for licence compliance — separate from bid, performance, and payment bonds on a construction contract. Capacity used for licence bonds may interact with your overall surety program; ask how your surety treats them together.
+
+KEYWORD: surety
+FIELD PATH: faqItems[0].question
+COMPLETE CURRENT VALUE: Is a surety bond the same as insurance?
+
+KEYWORD: surety
+FIELD PATH: faqItems[0].answer
+COMPLETE CURRENT VALUE: No. Conventional insurance protects an insured against covered losses under a two-party policy. A surety bond is a three-party instrument among principal, obligee, and surety that backs the principal's obligation to the obligee. If the surety pays or arranges completion, the principal typically remains liable under indemnity. Employee dishonesty (fidelity) insurance is a separate insurance product — not a construction surety bond.
+
+KEYWORD: surety
+FIELD PATH: faqItems[1].question
+COMPLETE CURRENT VALUE: Who does a construction surety bond protect?
+
+KEYWORD: surety
+FIELD PATH: faqItems[3].question
+COMPLETE CURRENT VALUE: What information does a surety review for bonding capacity?
+
+KEYWORD: surety
+FIELD PATH: faqItems[3].answer
+COMPLETE CURRENT VALUE: Sureties commonly review company (and often personal) financial statements, working capital and net worth, experience, backlog or work program, prior bonding history, and details of the contract or licence. They may set single-job and aggregate program limits. Exact documentation varies by surety and bond size — it is underwriting, not a published universal checklist.
+
+KEYWORD: surety
+FIELD PATH: faqItems[4].answer
+COMPLETE CURRENT VALUE: Common construction surety instruments include bid bonds, performance bonds, and labour and material payment bonds. Licence and permit bonds address separate regulatory requirements. Bid bonds are typically required by tender documents where the owner wants tender security — they are not the same as the Construction Act's statutory performance-and-payment bond rule for applicable public contracts.
+
+KEYWORD: indemnity
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Surety bonding is structurally different from conventional insurance. A surety bond is a three-party obligation among the principal (usually the contractor), the obligee (the project owner or authority that requires the bond), and the surety. The bond backs the principal's contractual or licence obligation to the obligee — it does not primarily protect the contractor the way a liability policy protects an insured. If the surety pays or arranges completion after a default, the principal typically remains responsible under an indemnity agreement. Common construction instruments include bid bonds, performance bonds, and labour and material payment bonds; licence and permit bonds serve separate regulatory purposes. Employee dishonesty or crime coverage is insurance — not a construction surety bond — and is addressed on a separate product page. Premium Insurance Brokers can help Windsor-Essex contractors navigate prequalification, capacity, and tender timelines.
+
+KEYWORD: indemnity
+FIELD PATH: coverageItems[1].detailDescription
+COMPLETE CURRENT VALUE: Performance bonds protect the obligee (project owner), not the contractor. If a default is declared, the surety may arrange completion, tender for a replacement contractor, or other remedies per the bond — then seek recovery from the principal under indemnity.
+
+KEYWORD: indemnity
+FIELD PATH: considerations[0].title
+COMPLETE CURRENT VALUE: Surety is not insurance — three parties and indemnity
+
+KEYWORD: indemnity
+FIELD PATH: faqItems[0].answer
+COMPLETE CURRENT VALUE: No. Conventional insurance protects an insured against covered losses under a two-party policy. A surety bond is a three-party instrument among principal, obligee, and surety that backs the principal's obligation to the obligee. If the surety pays or arranges completion, the principal typically remains liable under indemnity. Employee dishonesty (fidelity) insurance is a separate insurance product — not a construction surety bond.
+
+KEYWORD: 500,000
+FIELD PATH: considerations[2].description
+COMPLETE CURRENT VALUE: Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require the contractor to provide both a performance bond and a labour and material payment bond on entering the contract. The general regulatory minimum coverage limit for each bond is 50 per cent of the contract price — owners may require higher amounts. This regime applies to public contracts as defined in the Act and regulations — not to every private construction project in Ontario. Bid bonds are typically set by tender documents, not by that statutory performance-and-payment rule.
+
+KEYWORD: 500,000
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require both a performance bond and a labour and material payment bond when the contractor enters the contract. The general regulatory minimum coverage for each is 50 per cent of the contract price. This does not mean every private Ontario construction project is bonded by statute — private requirements follow the contract and tender.
+
+KEYWORD: 50 per cent
+FIELD PATH: considerations[2].description
+COMPLETE CURRENT VALUE: Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require the contractor to provide both a performance bond and a labour and material payment bond on entering the contract. The general regulatory minimum coverage limit for each bond is 50 per cent of the contract price — owners may require higher amounts. This regime applies to public contracts as defined in the Act and regulations — not to every private construction project in Ontario. Bid bonds are typically set by tender documents, not by that statutory performance-and-payment rule.
+
+KEYWORD: 50 per cent
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require both a performance bond and a labour and material payment bond when the contractor enters the contract. The general regulatory minimum coverage for each is 50 per cent of the contract price. This does not mean every private Ontario construction project is bonded by statute — private requirements follow the contract and tender.
+
+KEYWORD: bid bond
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Surety bonding is structurally different from conventional insurance. A surety bond is a three-party obligation among the principal (usually the contractor), the obligee (the project owner or authority that requires the bond), and the surety. The bond backs the principal's contractual or licence obligation to the obligee — it does not primarily protect the contractor the way a liability policy protects an insured. If the surety pays or arranges completion after a default, the principal typically remains responsible under an indemnity agreement. Common construction instruments include bid bonds, performance bonds, and labour and material payment bonds; licence and permit bonds serve separate regulatory purposes. Employee dishonesty or crime coverage is insurance — not a construction surety bond — and is addressed on a separate product page. Premium Insurance Brokers can help Windsor-Essex contractors navigate prequalification, capacity, and tender timelines.
+
+KEYWORD: bid bond
+FIELD PATH: coverageItems[0].title
+COMPLETE CURRENT VALUE: Bid Bonds
+
+KEYWORD: bid bond
+FIELD PATH: coverageItems[0].detailDescription
+COMPLETE CURRENT VALUE: Bid bonds and consents of surety are tender-phase instruments. They protect the owner if the low bidder withdraws — the surety's obligation is defined in the bond, and the principal typically indemnifies the surety for amounts paid. Bid bonds are generally tender or contractual requirements — not a universal statutory rule for every Ontario construction project.
+
+KEYWORD: bid bond
+FIELD PATH: considerations[2].description
+COMPLETE CURRENT VALUE: Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require the contractor to provide both a performance bond and a labour and material payment bond on entering the contract. The general regulatory minimum coverage limit for each bond is 50 per cent of the contract price — owners may require higher amounts. This regime applies to public contracts as defined in the Act and regulations — not to every private construction project in Ontario. Bid bonds are typically set by tender documents, not by that statutory performance-and-payment rule.
+
+KEYWORD: bid bond
+FIELD PATH: considerations[3].title
+COMPLETE CURRENT VALUE: Bid bonds vs consent of surety at tender
+
+KEYWORD: bid bond
+FIELD PATH: considerations[3].description
+COMPLETE CURRENT VALUE: A bid bond accompanies many tenders as security that the bidder will enter the contract and furnish required bonds if awarded. A consent of surety is a related tender-phase assurance that the surety is prepared to issue those bonds. Percentages and forms follow the tender — not a single Ontario-wide statutory bid-bond amount.
+
+KEYWORD: bid bond
+FIELD PATH: faqItems[4].question
+COMPLETE CURRENT VALUE: What are common construction bonds, and is a bid bond always required?
+
+KEYWORD: bid bond
+FIELD PATH: faqItems[4].answer
+COMPLETE CURRENT VALUE: Common construction surety instruments include bid bonds, performance bonds, and labour and material payment bonds. Licence and permit bonds address separate regulatory requirements. Bid bonds are typically required by tender documents where the owner wants tender security — they are not the same as the Construction Act's statutory performance-and-payment bond rule for applicable public contracts.
+
+========== contractors-insurance ==========
+Explorer states: general-liability, tools-equipment-coverage, builder-s-risk, wrap-up-liability
+
+KEYWORD: wrap-up
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Contractors insurance is about the operating contracting business — the trade or general contractor that bids work, manages crews and subcontractors, and moves between job sites. Commercial general liability addresses certain third-party injury and property-damage claims arising from your operations. Tools and contractors equipment coverage, where purchased, addresses owned tools and mobile equipment. Project property (builder's risk) and wrap-up or OCIP programs are usually project-specific overlays — not substitutes for ongoing business coverage. Needs differ across general contractors, electricians, plumbers and HVAC, roofers, excavation and concrete trades, renovators, and landscapers. Premium Insurance Brokers can help Windsor-Essex contractors align certificates, additional-insured requests, and trade exposures with how you actually work.
+
+KEYWORD: wrap-up
+FIELD PATH: coverageIntro
+COMPLETE CURRENT VALUE: Core coverages for the operating contractor — liability and tools for ongoing work, plus project property and wrap-up participation when a specific job requires them.
+
+KEYWORD: wrap-up
+FIELD PATH: coverageItems[3].title
+COMPLETE CURRENT VALUE: Wrap-Up Liability
+
+KEYWORD: wrap-up
+FIELD PATH: coverageItems[3].description
+COMPLETE CURRENT VALUE: On enrolled projects, wrap-up or OCIP programs may provide project-site liability coverage for participating trades — subject to enrollment and policy terms.
+
+KEYWORD: wrap-up
+FIELD PATH: coverageItems[3].detailDescription
+COMPLETE CURRENT VALUE: Large projects may use an owner- or contractor-controlled wrap-up. Enrolled trades may rely on the wrap for onsite liability but typically still need their own coverage for off-site operations, auto, tools, and non-enrolled work. Read enrollment and exclusion language carefully.
+
+KEYWORD: wrap-up
+FIELD PATH: faqItems[1].answer
+COMPLETE CURRENT VALUE: Usually yes. General contractors and owners typically require subs to carry their own liability insurance and provide certificates before starting. Your own policy and a project wrap-up (where enrolled) do not automatically replace every sub's obligation — confirm contract requirements for each tier.
+
+KEYWORD: wrap-up
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Completed-operations claims can arise after handover. Coverage depends on your CGL products-completed operations wording, exclusions, and limits — and on whether a project wrap-up or other program applies for that job. Defective work and resulting damage are often treated differently under policy forms.
+
+KEYWORD: wrap-up
+FIELD PATH: faqItems[3].question
+COMPLETE CURRENT VALUE: Do I need my own GL if the project has a wrap-up or OCIP?
+
+KEYWORD: wrap-up
+FIELD PATH: faqItems[3].answer
+COMPLETE CURRENT VALUE: Often yes for off-site work, non-enrolled projects, commercial auto, tools, and any periods before or after enrollment. Wrap-ups may address certain onsite liability for enrolled parties during the project — they rarely eliminate the need for an operating contractor program entirely. Read enrollment documents carefully.
+
+KEYWORD: wrap-up
+FIELD PATH: faqItems[4].answer
+COMPLETE CURRENT VALUE: Expect questions about your trade and operations, revenue and payroll, subcontracting percentage, tools and equipment values, vehicles, typical jobsite types (new build, renovation, occupied premises), contract insurance requirements, claims history, and whether you participate in wrap-up or OCIP projects. Trade-specific details matter — roofing is not underwritten like landscaping.
+
+KEYWORD: OCIP
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Contractors insurance is about the operating contracting business — the trade or general contractor that bids work, manages crews and subcontractors, and moves between job sites. Commercial general liability addresses certain third-party injury and property-damage claims arising from your operations. Tools and contractors equipment coverage, where purchased, addresses owned tools and mobile equipment. Project property (builder's risk) and wrap-up or OCIP programs are usually project-specific overlays — not substitutes for ongoing business coverage. Needs differ across general contractors, electricians, plumbers and HVAC, roofers, excavation and concrete trades, renovators, and landscapers. Premium Insurance Brokers can help Windsor-Essex contractors align certificates, additional-insured requests, and trade exposures with how you actually work.
+
+KEYWORD: OCIP
+FIELD PATH: coverageItems[3].description
+COMPLETE CURRENT VALUE: On enrolled projects, wrap-up or OCIP programs may provide project-site liability coverage for participating trades — subject to enrollment and policy terms.
+
+KEYWORD: OCIP
+FIELD PATH: coverageItems[3].detailTitle
+COMPLETE CURRENT VALUE: OCIP changes whose policy responds on site
+
+KEYWORD: OCIP
+FIELD PATH: considerations[2].title
+COMPLETE CURRENT VALUE: OCIP / wrap enrollment vs your own GL
+
+KEYWORD: OCIP
+FIELD PATH: faqItems[3].question
+COMPLETE CURRENT VALUE: Do I need my own GL if the project has a wrap-up or OCIP?
+
+KEYWORD: OCIP
+FIELD PATH: faqItems[4].answer
+COMPLETE CURRENT VALUE: Expect questions about your trade and operations, revenue and payroll, subcontracting percentage, tools and equipment values, vehicles, typical jobsite types (new build, renovation, occupied premises), contract insurance requirements, claims history, and whether you participate in wrap-up or OCIP projects. Trade-specific details matter — roofing is not underwritten like landscaping.
+
+KEYWORD: additional insured
+FIELD PATH: considerations[0].title
+COMPLETE CURRENT VALUE: Certificates, additional insured, and waiver wording
+
+KEYWORD: completed operation
+FIELD PATH: considerations[7].title
+COMPLETE CURRENT VALUE: Completed operations after you leave the site
+
+KEYWORD: completed operation
+FIELD PATH: considerations[7].description
+COMPLETE CURRENT VALUE: Claims alleging injury or damage from your completed work can surface after demobilization. Products-completed operations coverage under a CGL may respond subject to policy wording, exclusions, and limits — it is not open-ended. Defective work itself is often treated differently from resulting damage.
+
+KEYWORD: completed operation
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Completed-operations claims can arise after handover. Coverage depends on your CGL products-completed operations wording, exclusions, and limits — and on whether a project wrap-up or other program applies for that job. Defective work and resulting damage are often treated differently under policy forms.
+
+KEYWORD: subcontractor
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Contractors insurance is about the operating contracting business — the trade or general contractor that bids work, manages crews and subcontractors, and moves between job sites. Commercial general liability addresses certain third-party injury and property-damage claims arising from your operations. Tools and contractors equipment coverage, where purchased, addresses owned tools and mobile equipment. Project property (builder's risk) and wrap-up or OCIP programs are usually project-specific overlays — not substitutes for ongoing business coverage. Needs differ across general contractors, electricians, plumbers and HVAC, roofers, excavation and concrete trades, renovators, and landscapers. Premium Insurance Brokers can help Windsor-Essex contractors align certificates, additional-insured requests, and trade exposures with how you actually work.
+
+KEYWORD: subcontractor
+FIELD PATH: considerations[1].title
+COMPLETE CURRENT VALUE: Subcontractor insurance requirements and COI review
+
+KEYWORD: subcontractor
+FIELD PATH: faqItems[1].question
+COMPLETE CURRENT VALUE: Do subcontractors need their own insurance?
+
+KEYWORD: professional
+FIELD PATH: considerations[5].description
+COMPLETE CURRENT VALUE: Roofing, excavation, electrical, plumbing/HVAC, concrete, renovation, and landscaping present different height, underground, water, fire, and completed-operations patterns. Design-build or drafting responsibility may introduce professional liability questions. Pollution exposures can arise for excavation, fuel, or abatement work. Do not assume identical coverage across trades.
+
+KEYWORD: pollution
+FIELD PATH: considerations[5].description
+COMPLETE CURRENT VALUE: Roofing, excavation, electrical, plumbing/HVAC, concrete, renovation, and landscaping present different height, underground, water, fire, and completed-operations patterns. Design-build or drafting responsibility may introduce professional liability questions. Pollution exposures can arise for excavation, fuel, or abatement work. Do not assume identical coverage across trades.
+
+KEYWORD: design
+FIELD PATH: considerations[5].description
+COMPLETE CURRENT VALUE: Roofing, excavation, electrical, plumbing/HVAC, concrete, renovation, and landscaping present different height, underground, water, fire, and completed-operations patterns. Design-build or drafting responsibility may introduce professional liability questions. Pollution exposures can arise for excavation, fuel, or abatement work. Do not assume identical coverage across trades.
+
+========== builders-developers-insurance ==========
+Explorer states: builder-s-risk, general-liability, wrap-up-liability, completed-operations
+
+KEYWORD: wrap-up
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builders and developers insurance focuses on the ownership or development entity that acquires sites, finances projects, and coordinates multiple trades across one project or a pipeline. It is not a second copy of a single builder's risk page and not the same as an operating trade contractor's tools-and-GL program. Developers typically coordinate project-specific course-of-construction (builder's risk) policies, entity-level commercial general liability, and — on larger jobs — wrap-up or OCIP liability programs, then transition to permanent property or inventory coverage at occupancy. Lenders, joint-venture partners, and construction contracts drive named-insured, loss-payee, and certificate requirements. Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory.
+
+KEYWORD: wrap-up
+FIELD PATH: trustStatement
+COMPLETE CURRENT VALUE: For Windsor–Essex builders and developers coordinating projects and ownership entities — reviewed through an independent broker who can structure project property, liability, and wrap-up strategy across your pipeline.
+
+KEYWORD: wrap-up
+FIELD PATH: coverageIntro
+COMPLETE CURRENT VALUE: Coverage for the development entity and its projects — project property during construction, operations liability, coordinated wrap-ups where used, and post-handover completed-operations exposure.
+
+KEYWORD: wrap-up
+FIELD PATH: coverageItems[1].detailDescription
+COMPLETE CURRENT VALUE: Development entities face premises and operations exposure at sales offices, model homes, and active sites. Project-specific wrap-up programs may alter how onsite claims are handled — entity GL still matters for non-enrolled activities.
+
+KEYWORD: wrap-up
+FIELD PATH: coverageItems[2].title
+COMPLETE CURRENT VALUE: Wrap-Up Liability
+
+KEYWORD: wrap-up
+FIELD PATH: coverageItems[2].detailDescription
+COMPLETE CURRENT VALUE: Wrap-ups centralize certificates and limits for major projects but require active administration. They do not automatically replace every contractor's own CGL for off-site work, auto, or tools. Developers sponsoring OCIPs should coordinate insurance with counsel and any surety requirements separately.
+
+KEYWORD: wrap-up
+FIELD PATH: considerations[1].description
+COMPLETE CURRENT VALUE: Construction lenders commonly require evidence of builder's risk, liability limits, loss-payee or mortgage clauses, and sometimes wrap-up structures before releasing advances. Share loan insurance schedules early so certificates match lender conditions.
+
+KEYWORD: wrap-up
+FIELD PATH: considerations[2].description
+COMPLETE CURRENT VALUE: Owner- or contractor-controlled wrap-ups can simplify onsite liability for enrolled parties on large projects, but they need administration, enrollment discipline, and clarity on what remains outside the wrap. Sponsorship is a project strategy — not required for every development.
+
+KEYWORD: wrap-up
+FIELD PATH: considerations[6].description
+COMPLETE CURRENT VALUE: JV and co-development agreements should allocate who places builder's risk, who sponsors wrap-up liability, named-insured status, and how certificates flow to lenders. Ambiguity between partners is a common source of coverage gaps.
+
+KEYWORD: wrap-up
+FIELD PATH: faqItems[0].answer
+COMPLETE CURRENT VALUE: Usually no. Builder's risk addresses project property during construction for a specific site. Development entities also need liability for premises and operations, may sponsor or participate in wrap-ups on larger jobs, and must plan for completed-operations exposure and permanent property after handover. Tools coverage for trade contractors belongs on the contractors page — not as a substitute for developer enterprise coordination.
+
+KEYWORD: wrap-up
+FIELD PATH: faqItems[1].question
+COMPLETE CURRENT VALUE: What is a wrap-up or OCIP, and when do developers use one?
+
+KEYWORD: wrap-up
+FIELD PATH: faqItems[1].answer
+COMPLETE CURRENT VALUE: A wrap-up consolidates liability for enrolled parties on a project under one controlled program. An Owner Controlled Insurance Program (OCIP) is owner-sponsored; a Contractor Controlled Insurance Program (CCIP) is GC-led. Developers often consider wrap-ups on larger multi-trade projects to reduce certificate gaps — they do not automatically replace every contractor's own CGL for off-site work, auto, or tools.
+
+KEYWORD: wrap-up
+FIELD PATH: faqItems[4].answer
+COMPLETE CURRENT VALUE: Expect questions about ownership entities, project pipeline and values, construction types, contract structures, lender insurance schedules, wrap-up strategy, subcontracting approach, joint ventures, claims history, and how projects transition to occupancy. Professional or environmental exposures are reviewed where operations create them — not every developer needs every specialty line.
+
+KEYWORD: OCIP
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builders and developers insurance focuses on the ownership or development entity that acquires sites, finances projects, and coordinates multiple trades across one project or a pipeline. It is not a second copy of a single builder's risk page and not the same as an operating trade contractor's tools-and-GL program. Developers typically coordinate project-specific course-of-construction (builder's risk) policies, entity-level commercial general liability, and — on larger jobs — wrap-up or OCIP liability programs, then transition to permanent property or inventory coverage at occupancy. Lenders, joint-venture partners, and construction contracts drive named-insured, loss-payee, and certificate requirements. Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory.
+
+KEYWORD: OCIP
+FIELD PATH: coverageItems[2].detailTitle
+COMPLETE CURRENT VALUE: OCIP reduces gaps between trades — at a cost
+
+KEYWORD: OCIP
+FIELD PATH: coverageItems[2].detailDescription
+COMPLETE CURRENT VALUE: Wrap-ups centralize certificates and limits for major projects but require active administration. They do not automatically replace every contractor's own CGL for off-site work, auto, or tools. Developers sponsoring OCIPs should coordinate insurance with counsel and any surety requirements separately.
+
+KEYWORD: OCIP
+FIELD PATH: considerations[2].title
+COMPLETE CURRENT VALUE: OCIP / CCIP sponsorship decisions
+
+KEYWORD: OCIP
+FIELD PATH: faqItems[1].question
+COMPLETE CURRENT VALUE: What is a wrap-up or OCIP, and when do developers use one?
+
+KEYWORD: OCIP
+FIELD PATH: faqItems[1].answer
+COMPLETE CURRENT VALUE: A wrap-up consolidates liability for enrolled parties on a project under one controlled program. An Owner Controlled Insurance Program (OCIP) is owner-sponsored; a Contractor Controlled Insurance Program (CCIP) is GC-led. Developers often consider wrap-ups on larger multi-trade projects to reduce certificate gaps — they do not automatically replace every contractor's own CGL for off-site work, auto, or tools.
+
+KEYWORD: completed operation
+FIELD PATH: coverageItems[3].title
+COMPLETE CURRENT VALUE: Completed Operations
+
+KEYWORD: completed operation
+FIELD PATH: coverageItems[3].description
+COMPLETE CURRENT VALUE: May address certain liability claims alleging injury or damage after handover — where products-completed operations coverage applies under policy wording.
+
+KEYWORD: completed operation
+FIELD PATH: considerations[3].title
+COMPLETE CURRENT VALUE: Completed operations and post-handover exposure
+
+KEYWORD: builder
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builders and developers insurance focuses on the ownership or development entity that acquires sites, finances projects, and coordinates multiple trades across one project or a pipeline. It is not a second copy of a single builder's risk page and not the same as an operating trade contractor's tools-and-GL program. Developers typically coordinate project-specific course-of-construction (builder's risk) policies, entity-level commercial general liability, and — on larger jobs — wrap-up or OCIP liability programs, then transition to permanent property or inventory coverage at occupancy. Lenders, joint-venture partners, and construction contracts drive named-insured, loss-payee, and certificate requirements. Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory.
+
+KEYWORD: builder
+FIELD PATH: trustStatement
+COMPLETE CURRENT VALUE: For Windsor–Essex builders and developers coordinating projects and ownership entities — reviewed through an independent broker who can structure project property, liability, and wrap-up strategy across your pipeline.
+
+KEYWORD: builder
+FIELD PATH: coverageItems[0].title
+COMPLETE CURRENT VALUE: Builder's Risk
+
+KEYWORD: builder
+FIELD PATH: coverageItems[0].detailDescription
+COMPLETE CURRENT VALUE: Developers typically arrange builder's risk per project (or via a master program) covering hard costs and endorsed extensions. Lenders often require loss-payee status and evidence of coverage before draw releases. Soft costs, transit, and existing structures remain endorsement-dependent.
+
+KEYWORD: builder
+FIELD PATH: considerations[0].title
+COMPLETE CURRENT VALUE: Per-project builder's risk vs master programs
+
+KEYWORD: builder
+FIELD PATH: considerations[1].description
+COMPLETE CURRENT VALUE: Construction lenders commonly require evidence of builder's risk, liability limits, loss-payee or mortgage clauses, and sometimes wrap-up structures before releasing advances. Share loan insurance schedules early so certificates match lender conditions.
+
+KEYWORD: builder
+FIELD PATH: considerations[4].title
+COMPLETE CURRENT VALUE: Unsold inventory and spec buildings after builder's risk ends
+
+KEYWORD: builder
+FIELD PATH: considerations[5].description
+COMPLETE CURRENT VALUE: Owned vacant parcels and sites awaiting permits can create premises liability even before construction starts. Entity GL and site controls matter during the land-hold period — separate from the eventual builder's risk policy.
+
+KEYWORD: builder
+FIELD PATH: considerations[6].description
+COMPLETE CURRENT VALUE: JV and co-development agreements should allocate who places builder's risk, who sponsors wrap-up liability, named-insured status, and how certificates flow to lenders. Ambiguity between partners is a common source of coverage gaps.
+
+KEYWORD: builder
+FIELD PATH: considerations[7].description
+COMPLETE CURRENT VALUE: Substantial completion, occupancy, and ready-for-takeover often end builder's risk. Permanent property, condominium corporation, or habitational programs — as applicable — must be ready. Partial occupancy requires careful coordination so neither policy leaves the asset uninsured.
+
+KEYWORD: builder
+FIELD PATH: faqItems[0].question
+COMPLETE CURRENT VALUE: Is builder's risk enough for a development company?
+
+KEYWORD: builder
+FIELD PATH: faqItems[0].answer
+COMPLETE CURRENT VALUE: Usually no. Builder's risk addresses project property during construction for a specific site. Development entities also need liability for premises and operations, may sponsor or participate in wrap-ups on larger jobs, and must plan for completed-operations exposure and permanent property after handover. Tools coverage for trade contractors belongs on the contractors page — not as a substitute for developer enterprise coordination.
+
+KEYWORD: builder
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Each project typically needs its own builder's risk schedule (or clear reporting under a master program), while entity liability may sit at the corporate or development-company level. Pipeline size, JV structures, and lender conditions affect how programs are organized. Tell your broker about active and upcoming sites — not only the job starting next month.
+
+KEYWORD: builder
+FIELD PATH: faqItems[3].answer
+COMPLETE CURRENT VALUE: Builder's risk usually ends at substantial completion, occupancy, or another policy trigger. Permanent property or inventory coverage should be in force for completed assets. Liability for alleged post-handover injury or damage depends on completed-operations wording under the applicable GL or wrap program — review timing before units are sold or leased.
+
+KEYWORD: lender
+FIELD PATH: heroLead
+COMPLETE CURRENT VALUE: Builders and developers insurance focuses on the ownership or development entity that acquires sites, finances projects, and coordinates multiple trades across one project or a pipeline. It is not a second copy of a single builder's risk page and not the same as an operating trade contractor's tools-and-GL program. Developers typically coordinate project-specific course-of-construction (builder's risk) policies, entity-level commercial general liability, and — on larger jobs — wrap-up or OCIP liability programs, then transition to permanent property or inventory coverage at occupancy. Lenders, joint-venture partners, and construction contracts drive named-insured, loss-payee, and certificate requirements. Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory.
+
+KEYWORD: lender
+FIELD PATH: coverageItems[0].detailDescription
+COMPLETE CURRENT VALUE: Developers typically arrange builder's risk per project (or via a master program) covering hard costs and endorsed extensions. Lenders often require loss-payee status and evidence of coverage before draw releases. Soft costs, transit, and existing structures remain endorsement-dependent.
+
+KEYWORD: lender
+FIELD PATH: considerations[1].title
+COMPLETE CURRENT VALUE: Lender requirements and draw conditions
+
+KEYWORD: lender
+FIELD PATH: considerations[1].description
+COMPLETE CURRENT VALUE: Construction lenders commonly require evidence of builder's risk, liability limits, loss-payee or mortgage clauses, and sometimes wrap-up structures before releasing advances. Share loan insurance schedules early so certificates match lender conditions.
+
+KEYWORD: lender
+FIELD PATH: considerations[6].description
+COMPLETE CURRENT VALUE: JV and co-development agreements should allocate who places builder's risk, who sponsors wrap-up liability, named-insured status, and how certificates flow to lenders. Ambiguity between partners is a common source of coverage gaps.
+
+KEYWORD: lender
+FIELD PATH: faqItems[2].answer
+COMPLETE CURRENT VALUE: Each project typically needs its own builder's risk schedule (or clear reporting under a master program), while entity liability may sit at the corporate or development-company level. Pipeline size, JV structures, and lender conditions affect how programs are organized. Tell your broker about active and upcoming sites — not only the job starting next month.
+
+KEYWORD: lender
+FIELD PATH: faqItems[4].answer
+COMPLETE CURRENT VALUE: Expect questions about ownership entities, project pipeline and values, construction types, contract structures, lender insurance schedules, wrap-up strategy, subcontracting approach, joint ventures, claims history, and how projects transition to occupancy. Professional or environmental exposures are reviewed where operations create them — not every developer needs every specialty line.
+
+KEYWORD: professional
+FIELD PATH: faqItems[4].answer
+COMPLETE CURRENT VALUE: Expect questions about ownership entities, project pipeline and values, construction types, contract structures, lender insurance schedules, wrap-up strategy, subcontracting approach, joint ventures, claims history, and how projects transition to occupancy. Professional or environmental exposures are reviewed where operations create them — not every developer needs every specialty line.
+
+KEYWORD: environmental
+FIELD PATH: faqItems[4].answer
+COMPLETE CURRENT VALUE: Expect questions about ownership entities, project pipeline and values, construction types, contract structures, lender insurance schedules, wrap-up strategy, subcontracting approach, joint ventures, claims history, and how projects transition to occupancy. Professional or environmental exposures are reviewed where operations create them — not every developer needs every specialty line.
+npm notice
+npm notice New major version of npm available! 10.9.2 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice

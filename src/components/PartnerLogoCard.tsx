@@ -18,8 +18,9 @@ const sizeClasses = {
     img: "max-h-11 sm:max-h-[52px] max-w-[132px] sm:max-w-[152px]",
   },
   directory: {
-    shell: "h-[88px] px-5 sm:h-[96px] sm:px-6",
-    img: "max-h-12 sm:max-h-14 max-w-[160px] sm:max-w-[180px]",
+    // Keep white cards compact; enlarge the logo within existing box height.
+    shell: "h-[92px] px-3 sm:h-[100px] sm:px-4",
+    img: "max-h-[68px] sm:max-h-[76px] max-w-[175px] sm:max-w-[200px]",
   },
 } as const;
 
@@ -36,9 +37,10 @@ export default function PartnerLogoCard({
       <Image
         src={partner.src}
         alt={partner.alt}
-        width={200}
-        height={80}
-        className={`w-auto object-contain ${dims.img}`}
+        width={240}
+        height={96}
+        quality={90}
+        className={`h-auto w-auto object-contain ${dims.img}`}
       />
     </>
   );

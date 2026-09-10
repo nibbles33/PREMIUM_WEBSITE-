@@ -1,0 +1,74 @@
+{
+  "slug": "retail-insurance",
+  "explorer": [
+    {
+      "index": 0,
+      "id": "general-liability",
+      "tabLabel": "LiabilityMay help respond to certain third-party bodily injury or property-damag",
+      "tabDesc": "May help respond to certain third-party bodily injury or property-damage claims arising from customer incidents on your premises — slips at entrances, aisle hazards, or display-related injuries — subject to policy terms, exclusions, and limits.",
+      "detailTitle": "A wet entrance isn't just housekeeping",
+      "detailDescription": "Retail premises exposure concentrates at entrances, fitting rooms, stockrooms open to staff traffic, and parking areas — especially in winter when tracked-in moisture and salt create slip hazards. Tenant legal liability for damage to leased premises may be available where endorsed. Product-related injury claims from something you sold are typically addressed under products liability rather than premises coverage — the policy part depends on how the claim is framed and what was disclosed during underwriting.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "general-liability"
+    },
+    {
+      "index": 1,
+      "id": "property-inventory-coverage",
+      "tabLabel": "PropertyMay help cover fixtures, equipment, and stock against covered direct phy",
+      "tabDesc": "May help cover fixtures, equipment, and stock against covered direct physical loss such as fire, theft, or water damage — subject to policy causes of loss, limits, deductibles, valuation basis, and security conditions.",
+      "detailTitle": "Seasonal inventory can outgrow your limit",
+      "detailDescription": "Retail value sits in seasonal merchandise, display fixtures, POS equipment, and back-room stock — not just the building shell your landlord may insure separately. Inventory valuation basis varies by form: unsold stock may be valued on actual cash value or replacement cost depending on endorsements, and sold-but-undelivered stock may use selling price only where that valuation condition applies. Peak seasons such as holidays may need higher reported values or peak-season endorsements. External theft of stock differs from employee dishonesty, which typically requires a crime or fidelity endorsement rather than standard property coverage alone.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "property-inventory-coverage"
+    },
+    {
+      "index": 2,
+      "id": "business-interruption",
+      "tabLabel": "BIWhere purchased, may help address certain lost income and continuing expenses ",
+      "tabDesc": "Where purchased, may help address certain lost income and continuing expenses after a covered direct physical loss forces a temporary closure — subject to waiting periods, indemnity limits, and policy terms.",
+      "detailTitle": "A fire doesn't pause your lease",
+      "detailDescription": "When a covered fire, major water loss, or other insured property damage closes your store, rent, payroll, and supplier obligations may continue while revenue stops. Business interruption coverage, where added, is designed for that income gap — but it requires a covered physical property loss trigger on the policy, not every shutdown or supply-chain delay. Waiting periods, indemnity periods, and extra-expense provisions vary by insurer and form — confirm what your lease and lender expect if you carry financing.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "business-interruption"
+    },
+    {
+      "index": 3,
+      "id": "product-liability",
+      "tabLabel": "ProductsMay help address certain claims alleging bodily injury or property damag",
+      "tabDesc": "May help address certain claims alleging bodily injury or property damage arising from products you sell or distribute — including other manufacturers' brands in many cases — subject to products-completed operations wording, exclusions, and limits.",
+      "detailTitle": "A defective product claim can name the seller",
+      "detailDescription": "Retailers who sell or distribute goods — even when they did not manufacture them — can be drawn into product liability claims when a customer alleges injury or damage from a product purchased at the store. Vendor indemnity agreements and manufacturer warranties do not always replace your own coverage. Product recall or withdrawal expense is a separate first-party exposure addressed on our product recall page — general liability does not automatically pay recall costs.",
+      "duplicateDesc": false,
+      "hasImage": true,
+      "hasV2Detail": true,
+      "activeId": "product-liability"
+    }
+  ],
+  "pass": true,
+  "trustBand": {
+    "heroPresent": true,
+    "trustPresent": true,
+    "distinct": true,
+    "heroPreview": "Ordinary storefront retail — clothing boutiques, gift shops, electronics stores, furniture and home-goods shops, and specialty retailers — combines premises lia"
+  },
+  "considerations": {
+    "count": 8,
+    "oneOpenAtATime": true,
+    "expandWorks": true
+  },
+  "faqCount": 5,
+  "forbidden": [],
+  "requiredMissing": [],
+  "idsPreserved": true,
+  "allV2Detail": true,
+  "overflow_390": 0,
+  "overflow_768": 0,
+  "overflow_1024": 0,
+  "overflow_1440": 0
+}
