@@ -223,6 +223,27 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
       "product-liability": ["customer-walkway", "sales-floor", "storefront-glass"],
     },
   },
+  "cannabis-retail-insurance": {
+    archetype: "retail-cutaway",
+    coverageZones: {
+      "general-liability": ["customer-walkway", "sales-floor", "storefront-glass"],
+      "cannabis-property-stock": ["sales-floor", "stock-room", "loading-bay"],
+      "cannabis-product-liability": ["customer-walkway", "sales-floor", "storefront-glass"],
+      "cannabis-crime-theft": ["stock-room", "storefront-glass", "sales-floor"],
+      "business-interruption": ["sales-floor", "stock-room"],
+    },
+  },
+  "cannabis-producer-insurance": {
+    archetype: "industrial-warehouse",
+    coverageZones: {
+      "cannabis-property-infrastructure": ["factory-floor", "storage-racks", "loading-dock"],
+      "cannabis-crop-stock": ["production-line", "storage-racks", "factory-floor"],
+      "equipment-breakdown": ["production-line", "loading-dock", "storage-racks"],
+      "cannabis-product-liability": ["production-line", "factory-floor", "loading-dock"],
+      "cannabis-product-recall": ["storage-racks", "loading-dock", "office-wing"],
+      "business-interruption": ["production-line", "office-wing", "factory-floor"],
+    },
+  },
   "professional-offices-insurance": {
     archetype: "office-suite",
     coverageZones: {

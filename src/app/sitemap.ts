@@ -35,6 +35,8 @@ const staticRoutes = [
   "/real-estate-insurance/",
   "/builders-developers-insurance/",
   "/retail-insurance/",
+  "/cannabis-retail-insurance/",
+  "/cannabis-producer-insurance/",
   "/food-truck-insurance/",
   "/dump-truck-insurance/",
   "/small-business-insurance/",

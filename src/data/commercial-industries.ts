@@ -22,6 +22,7 @@ import type {
   CoverageCard,
 } from "@/components/LineInsurancePage";
 import type { FaqItem } from "@/components/FaqAccordion";
+import { cannabisIndustryPages } from "@/data/cannabis-industries";
 
 export const QUOTE_BUSINESS = "/get-a-quote?type=business";
 export const QUOTE_COMMERCIAL_VEHICLES = "/get-a-quote?type=commercial-vehicles";
@@ -1820,4 +1821,5 @@ export const industryPages: IndustryPageContent[] = [
       "Share your unit details, material hauled, jobsite work, and lease structure — we will compare dump truck coverage options.",
     serviceName: "Dump Truck Insurance",
   },
+  ...cannabisIndustryPages,
 ];

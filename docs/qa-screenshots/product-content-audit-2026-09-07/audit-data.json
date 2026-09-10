@@ -191,6 +191,81 @@
       "classificationReason": "Substantive (1320w), 4 cards avg 82w, considerations yes, FAQ unique"
     },
     {
+      "route": "/cannabis-producer-insurance/",
+      "slug": "cannabis-producer-insurance",
+      "category": "commercial",
+      "heroWords": 128,
+      "heroSpecific": true,
+      "coverageCount": 6,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 69,
+      "thinCardCount": 0,
+      "considerationsPresent": true,
+      "considerationsWords": 378,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1275,
+      "safetyFlags": [],
+      "faqUnique": true,
+      "faqTemplateNotes": "Product-specific questions",
+      "geoTargeting": "Windsor-Essex-primary",
+      "geoNotes": "Windsor-Essex in copy",
+      "classification": "A",
+      "classificationReason": "Substantive (1275w), 6 cards avg 69w, considerations yes, FAQ unique"
+    },
+    {
+      "route": "/cannabis-retail-insurance/",
+      "slug": "cannabis-retail-insurance",
+      "category": "commercial",
+      "heroWords": 97,
+      "heroSpecific": true,
+      "coverageCount": 5,
+      "coverageCardQuality": "specific/hedged (strong)",
+      "avgCardWords": 66,
+      "thinCardCount": 0,
+      "considerationsPresent": true,
+      "considerationsWords": 392,
+      "considerationsQuality": "specific/useful",
+      "faqCount": 5,
+      "totalSubstantiveWords": 1205,
+      "safetyFlags": [
+        {
+          "page": "/cannabis-retail-insurance/",
+          "field": "considerations",
+          "quote": "Separately, OCS retailer agreements commonly require commercial general liability of at least $5 million per occurrence, with specified coverages and OCS named as an additional insured, before wholesale ordering — confirm the current agreement and certificate form rather than assuming every policy automatically matches.",
+          "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+          "severity": "low"
+        },
+        {
+          "page": "/cannabis-retail-insurance/",
+          "field": "considerations",
+          "quote": "Separately, OCS retailer agreements commonly require commercial general liability of at least $5 million per occurrence, with specified coverages and OCS named as an additional insured, before wholesale ordering — confirm the current agreement and certificate form rather than assuming every policy automatically matches.",
+          "issue": "Specific numeric limit cited — verify basis if presented as fact",
+          "severity": "low"
+        },
+        {
+          "page": "/cannabis-retail-insurance/",
+          "field": "faq",
+          "quote": "Current OCS retailer handbook materials describe commercial general liability of not less than $5 million per occurrence, including specified coverages such as non-owned automobile and products/completed operations, with OCS named as an additional insured / certificate holder before ordering.",
+          "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+          "severity": "low"
+        },
+        {
+          "page": "/cannabis-retail-insurance/",
+          "field": "faq",
+          "quote": "Current OCS retailer handbook materials describe commercial general liability of not less than $5 million per occurrence, including specified coverages such as non-owned automobile and products/completed operations, with OCS named as an additional insured / certificate holder before ordering.",
+          "issue": "Specific numeric limit cited — verify basis if presented as fact",
+          "severity": "low"
+        }
+      ],
+      "faqUnique": true,
+      "faqTemplateNotes": "Product-specific questions",
+      "geoTargeting": "Windsor-Essex + Ontario",
+      "geoNotes": "Both Windsor-Essex and Ontario referenced",
+      "classification": "A",
+      "classificationReason": "Substantive (1205w), 5 cards avg 66w, considerations yes, FAQ unique"
+    },
+    {
       "route": "/cargo-freight-insurance/",
       "slug": "cargo-freight-insurance",
       "category": "commercial",
@@ -1473,7 +1548,7 @@
     }
   ],
   "counts": {
-    "A": 42,
+    "A": 44,
     "B": 16,
     "C": 0,
     "D": 0
@@ -1526,6 +1601,34 @@
       "field": "hero",
       "quote": "Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory.",
       "issue": "Mandatory coverage stated — verify regulatory basis",
+      "severity": "low"
+    },
+    {
+      "page": "/cannabis-retail-insurance/",
+      "field": "considerations",
+      "quote": "Separately, OCS retailer agreements commonly require commercial general liability of at least $5 million per occurrence, with specified coverages and OCS named as an additional insured, before wholesale ordering — confirm the current agreement and certificate form rather than assuming every policy automatically matches.",
+      "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+      "severity": "low"
+    },
+    {
+      "page": "/cannabis-retail-insurance/",
+      "field": "considerations",
+      "quote": "Separately, OCS retailer agreements commonly require commercial general liability of at least $5 million per occurrence, with specified coverages and OCS named as an additional insured, before wholesale ordering — confirm the current agreement and certificate form rather than assuming every policy automatically matches.",
+      "issue": "Specific numeric limit cited — verify basis if presented as fact",
+      "severity": "low"
+    },
+    {
+      "page": "/cannabis-retail-insurance/",
+      "field": "faq",
+      "quote": "Current OCS retailer handbook materials describe commercial general liability of not less than $5 million per occurrence, including specified coverages such as non-owned automobile and products/completed operations, with OCS named as an additional insured / certificate holder before ordering.",
+      "issue": "Specific dollar amount cited — verify limit, deductible, or regulatory basis",
+      "severity": "low"
+    },
+    {
+      "page": "/cannabis-retail-insurance/",
+      "field": "faq",
+      "quote": "Current OCS retailer handbook materials describe commercial general liability of not less than $5 million per occurrence, including specified coverages such as non-owned automobile and products/completed operations, with OCS named as an additional insured / certificate holder before ordering.",
+      "issue": "Specific numeric limit cited — verify basis if presented as fact",
       "severity": "low"
     },
     {

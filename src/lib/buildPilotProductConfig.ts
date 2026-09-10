@@ -323,6 +323,20 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "Trucking", href: "/trucking-insurance/" },
     { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
   ],
+  "cannabis-retail-insurance": [
+    { label: "Retail Insurance", href: "/retail-insurance/" },
+    { label: "Commercial Property", href: "/commercial-property-insurance/" },
+    { label: "Crime / Fidelity", href: "/crime-fidelity-insurance/" },
+    { label: "Product Recall", href: "/product-recall-insurance/" },
+    { label: "Business Interruption", href: "/business-interruption-insurance/" },
+  ],
+  "cannabis-producer-insurance": [
+    { label: "Manufacturing", href: "/manufacturing-insurance/" },
+    { label: "Greenhouse & Agribusiness", href: "/greenhouse-agribusiness-insurance/" },
+    { label: "Product Recall", href: "/product-recall-insurance/" },
+    { label: "Pollution Liability", href: "/pollution-liability-insurance/" },
+    { label: "Business Interruption", href: "/business-interruption-insurance/" },
+  ],
 };
 
 export function adaptCommercialIndustryContent(
@@ -369,6 +383,10 @@ export function adaptCommercialIndustryContent(
                           ? "For Windsor–Essex clothing stores, gift shops, electronics retailers, furniture and home-goods shops, and other ordinary storefront retailers — reviewed through an independent broker who can coordinate liability, property, inventory, and optional crime or cyber coverage for how you actually sell."
                           : content.slug === "manufacturing-insurance"
                             ? "For Windsor–Essex fabrication shops, machining and metalworking plants, plastics and assembly operations, and job-shop or tool-and-die producers — reviewed through an independent broker who can coordinate property, products liability, business interruption, equipment breakdown, and specialty coverages for how you actually manufacture."
+                            : content.slug === "cannabis-retail-insurance"
+                              ? "For Windsor–Essex and Ontario operators of AGCO-authorized cannabis retail stores — reviewed through an independent broker who can coordinate liability, property and stock, product liability, crime, and business interruption against lease and OCS contract expectations."
+                              : content.slug === "cannabis-producer-insurance"
+                                ? "For Health Canada–licensed cultivators, nursery operators, and processors — including micro classes where applicable — reviewed through an independent broker who can coordinate infrastructure property, living plant and stock treatment, equipment breakdown, products liability, recall expense, and business interruption."
                             : content.whoItIsFor ?? content.subhead,
     showTrustBand: content.slug !== "restaurant-insurance",
     considerationsPresentation:
@@ -383,7 +401,9 @@ export function adaptCommercialIndustryContent(
       content.slug === "commercial-property-insurance" ||
       content.slug === "commercial-auto-insurance" ||
       content.slug === "retail-insurance" ||
-      content.slug === "manufacturing-insurance"
+      content.slug === "manufacturing-insurance" ||
+      content.slug === "cannabis-retail-insurance" ||
+      content.slug === "cannabis-producer-insurance"
         ? "expandable"
         : "grid",
     coverageHeading: "What's covered",

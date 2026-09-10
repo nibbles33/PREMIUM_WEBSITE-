@@ -218,6 +218,28 @@ export const photographyPlacements: PhotographyPlacement[] = [
     confidence: "HIGH",
   },
   {
+    slug: "cannabis-retail-insurance",
+    category: "commercial",
+    route: "/cannabis-retail-insurance/",
+    src: "/images/photography/commercial/retail-insurance.webp",
+    alt: "Temporary stand-in hero — dedicated cannabis retail photography required before launch",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "TEMPORARY: reuses retail-insurance hero photography. Dedicated Cannabis Retail Explorer/hero photography required before launch.",
+  },
+  {
+    slug: "cannabis-producer-insurance",
+    category: "commercial",
+    route: "/cannabis-producer-insurance/",
+    src: "/images/photography/commercial/manufacturing-insurance.webp",
+    alt: "Temporary stand-in hero — dedicated cannabis producer photography required before launch",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "TEMPORARY: reuses manufacturing-insurance hero photography. Dedicated Cannabis Producer Explorer/hero photography required before launch. Not final cannabis artwork.",
+  },
+  {
     slug: "professional-offices-insurance",
     category: "commercial",
     route: "/professional-offices-insurance/",

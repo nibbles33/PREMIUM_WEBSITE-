@@ -1,0 +1,63 @@
+{
+  "note": "Phase 2 explorer regression baseline update",
+  "oldBaseline": "228/228 (frozen 58-route era)",
+  "newBaseline": "236/236",
+  "summary": {
+    "totalChecks": 240,
+    "explorerChecks": 236,
+    "pass": 236,
+    "fail": 0,
+    "noExplorer": 4,
+    "failures": []
+  },
+  "cannabis": [
+    {
+      "slug": "cannabis-producer-insurance",
+      "viewport": "desktop-1440",
+      "pass": true,
+      "stateCount": 6
+    },
+    {
+      "slug": "cannabis-producer-insurance",
+      "viewport": "desktop-1280",
+      "pass": true,
+      "stateCount": 6
+    },
+    {
+      "slug": "cannabis-producer-insurance",
+      "viewport": "desktop-1024",
+      "pass": true,
+      "stateCount": 6
+    },
+    {
+      "slug": "cannabis-producer-insurance",
+      "viewport": "mobile-390",
+      "pass": true,
+      "stateCount": 6
+    },
+    {
+      "slug": "cannabis-retail-insurance",
+      "viewport": "desktop-1440",
+      "pass": true,
+      "stateCount": 5
+    },
+    {
+      "slug": "cannabis-retail-insurance",
+      "viewport": "desktop-1280",
+      "pass": true,
+      "stateCount": 5
+    },
+    {
+      "slug": "cannabis-retail-insurance",
+      "viewport": "desktop-1024",
+      "pass": true,
+      "stateCount": 5
+    },
+    {
+      "slug": "cannabis-retail-insurance",
+      "viewport": "mobile-390",
+      "pass": true,
+      "stateCount": 5
+    }
+  ]
+}

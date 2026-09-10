@@ -61,6 +61,12 @@ export const BATCH_D_INDUSTRY_SLUGS = [
   "dump-truck-insurance",
 ] as const;
 
+/** Cannabis Phase 2 — NEW products (not part of the frozen 58-route baseline). */
+export const CANNABIS_INDUSTRY_SLUGS = [
+  "cannabis-retail-insurance",
+  "cannabis-producer-insurance",
+] as const;
+
 function buildRegistry(): Map<string, PilotProductPageConfig> {
   const map = new Map<string, PilotProductPageConfig>(
     Object.entries(pilotCommercialInlineConfigs),
@@ -70,6 +76,7 @@ function buildRegistry(): Map<string, PilotProductPageConfig> {
     ...BATCH_B_INDUSTRY_SLUGS,
     ...BATCH_C_INDUSTRY_SLUGS,
     ...BATCH_D_INDUSTRY_SLUGS,
+    ...CANNABIS_INDUSTRY_SLUGS,
   ];
 
   for (const slug of industrySlugs) {

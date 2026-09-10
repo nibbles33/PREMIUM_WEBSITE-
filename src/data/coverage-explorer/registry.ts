@@ -50,6 +50,8 @@ export const SLUG_TO_VISUAL_FAMILY: Record<string, CoverageVisualFamily> = {
   "product-recall-insurance": "factory-industrial",
   "warehousing-insurance": "factory-industrial",
   "retail-insurance": "retail",
+  "cannabis-retail-insurance": "retail",
+  "cannabis-producer-insurance": "factory-industrial",
 };
 
 const FAMILY_EXPLORERS: Partial<Record<CoverageVisualFamily, CoverageExplorerVisualConfig>> = {

@@ -1,8 +1,8 @@
 {
   "summary": {
-    "totalChecks": 232,
-    "explorerChecks": 228,
-    "pass": 228,
+    "totalChecks": 240,
+    "explorerChecks": 236,
+    "pass": 236,
     "fail": 0,
     "noExplorer": 4,
     "failures": []
@@ -4639,25 +4639,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 413.015625,
+            "top": 412.015625,
             "right": 447,
-            "bottom": 625.75
+            "bottom": 624.75
           },
           "stageRect": {
             "width": 452,
             "height": 687.734375,
             "left": 32,
-            "top": 376.015625,
+            "top": 375.015625,
             "right": 484,
-            "bottom": 1063.75
+            "bottom": 1062.75
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 414.015625,
+            "top": 413.015625,
             "right": 446,
-            "bottom": 624.75
+            "bottom": 623.75
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -4666,9 +4666,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 414.015625,
+            "top": 413.015625,
             "right": 445.5804388933121,
-            "bottom": 624.75
+            "bottom": 623.75
           },
           "activeCoverageId": "lost-income",
           "caption": "",
@@ -5002,6 +5002,2102 @@
             "bottom": -716.21875
           },
           "activeCoverageId": "contingent-business-interruption",
+          "caption": "",
+          "frameOverflowStage": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "slug": "cannabis-producer-insurance",
+      "viewport": "desktop-1440",
+      "explorer": true,
+      "stateCount": 6,
+      "states": [
+        {
+          "index": 0,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": 420.84375,
+            "right": 653,
+            "bottom": 703.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 643.765625,
+            "left": 114,
+            "top": 383.84375,
+            "right": 690,
+            "bottom": 1027.609375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": 421.84375,
+            "right": 652,
+            "bottom": 702.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": 421.84375,
+            "right": 651.6946407245223,
+            "bottom": 702.359375
+          },
+          "activeCoverageId": "cannabis-property-infrastructure",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 1,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": 279.84375,
+            "right": 653,
+            "bottom": 562.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 638.515625,
+            "left": 114,
+            "top": 242.84375,
+            "right": 690,
+            "bottom": 881.359375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": 280.84375,
+            "right": 652,
+            "bottom": 561.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": 280.84375,
+            "right": 651.6946407245223,
+            "bottom": 561.359375
+          },
+          "activeCoverageId": "cannabis-crop-stock",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 2,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": 137.84375,
+            "right": 653,
+            "bottom": 420.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 615.765625,
+            "left": 114,
+            "top": 100.84375,
+            "right": 690,
+            "bottom": 716.609375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": 138.84375,
+            "right": 652,
+            "bottom": 419.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": 138.84375,
+            "right": 651.6946407245223,
+            "bottom": 419.359375
+          },
+          "activeCoverageId": "equipment-breakdown",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 3,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": 4.84375,
+            "right": 653,
+            "bottom": 287.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 643.765625,
+            "left": 114,
+            "top": -32.15625,
+            "right": 690,
+            "bottom": 611.609375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": 5.84375,
+            "right": 652,
+            "bottom": 286.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": 5.84375,
+            "right": 651.6946407245223,
+            "bottom": 286.359375
+          },
+          "activeCoverageId": "cannabis-product-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 4,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": -119.15625,
+            "right": 653,
+            "bottom": 163.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 615.765625,
+            "left": 114,
+            "top": -156.15625,
+            "right": 690,
+            "bottom": 459.609375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": -118.15625,
+            "right": 652,
+            "bottom": 162.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": -118.15625,
+            "right": 651.6946407245223,
+            "bottom": 162.359375
+          },
+          "activeCoverageId": "cannabis-product-recall",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 5,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": -252.15625,
+            "right": 653,
+            "bottom": 30.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 666.515625,
+            "left": 114,
+            "top": -289.15625,
+            "right": 690,
+            "bottom": 377.359375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": -251.15625,
+            "right": 652,
+            "bottom": 29.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": -251.15625,
+            "right": 651.6946407245223,
+            "bottom": 29.359375
+          },
+          "activeCoverageId": "business-interruption",
+          "caption": "",
+          "frameOverflowStage": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "slug": "cannabis-producer-insurance",
+      "viewport": "desktop-1280",
+      "explorer": true,
+      "stateCount": 6,
+      "states": [
+        {
+          "index": 0,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": 420.84375,
+            "right": 573,
+            "bottom": 703.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 643.765625,
+            "left": 34,
+            "top": 383.84375,
+            "right": 610,
+            "bottom": 1027.609375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": 421.84375,
+            "right": 572,
+            "bottom": 702.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": 421.84375,
+            "right": 571.6946407245223,
+            "bottom": 702.359375
+          },
+          "activeCoverageId": "cannabis-property-infrastructure",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 1,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": 279.84375,
+            "right": 573,
+            "bottom": 562.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 638.515625,
+            "left": 34,
+            "top": 242.84375,
+            "right": 610,
+            "bottom": 881.359375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": 280.84375,
+            "right": 572,
+            "bottom": 561.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": 280.84375,
+            "right": 571.6946407245223,
+            "bottom": 561.359375
+          },
+          "activeCoverageId": "cannabis-crop-stock",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 2,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": 137.84375,
+            "right": 573,
+            "bottom": 420.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 615.765625,
+            "left": 34,
+            "top": 100.84375,
+            "right": 610,
+            "bottom": 716.609375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": 138.84375,
+            "right": 572,
+            "bottom": 419.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": 138.84375,
+            "right": 571.6946407245223,
+            "bottom": 419.359375
+          },
+          "activeCoverageId": "equipment-breakdown",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 3,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": 4.84375,
+            "right": 573,
+            "bottom": 287.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 643.765625,
+            "left": 34,
+            "top": -32.15625,
+            "right": 610,
+            "bottom": 611.609375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": 5.84375,
+            "right": 572,
+            "bottom": 286.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": 5.84375,
+            "right": 571.6946407245223,
+            "bottom": 286.359375
+          },
+          "activeCoverageId": "cannabis-product-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 4,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": -119.15625,
+            "right": 573,
+            "bottom": 163.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 615.765625,
+            "left": 34,
+            "top": -156.15625,
+            "right": 610,
+            "bottom": 459.609375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": -118.15625,
+            "right": 572,
+            "bottom": 162.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": -118.15625,
+            "right": 571.6946407245223,
+            "bottom": 162.359375
+          },
+          "activeCoverageId": "cannabis-product-recall",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 5,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": -252.15625,
+            "right": 573,
+            "bottom": 30.359375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 666.515625,
+            "left": 34,
+            "top": -289.15625,
+            "right": 610,
+            "bottom": 377.359375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": -251.15625,
+            "right": 572,
+            "bottom": 29.359375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": -251.15625,
+            "right": 571.6946407245223,
+            "bottom": 29.359375
+          },
+          "activeCoverageId": "business-interruption",
+          "caption": "",
+          "frameOverflowStage": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "slug": "cannabis-producer-insurance",
+      "viewport": "desktop-1024",
+      "explorer": true,
+      "stateCount": 6,
+      "states": [
+        {
+          "index": 0,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": 412.640625,
+            "right": 447,
+            "bottom": 625.375
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 642.234375,
+            "left": 32,
+            "top": 375.640625,
+            "right": 484,
+            "bottom": 1017.875
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": 413.640625,
+            "right": 446,
+            "bottom": 624.375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": 413.640625,
+            "right": 445.5804388933121,
+            "bottom": 624.375
+          },
+          "activeCoverageId": "cannabis-property-infrastructure",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 1,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": 253.640625,
+            "right": 447,
+            "bottom": 466.375
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 664.984375,
+            "left": 32,
+            "top": 216.640625,
+            "right": 484,
+            "bottom": 881.625
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": 254.640625,
+            "right": 446,
+            "bottom": 465.375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": 254.640625,
+            "right": 445.5804388933121,
+            "bottom": 465.375
+          },
+          "activeCoverageId": "cannabis-crop-stock",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 2,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": 93.640625,
+            "right": 447,
+            "bottom": 306.375
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 642.234375,
+            "left": 32,
+            "top": 56.640625,
+            "right": 484,
+            "bottom": 698.875
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": 94.640625,
+            "right": 446,
+            "bottom": 305.375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": 94.64062500000001,
+            "right": 445.5804388933121,
+            "bottom": 305.375
+          },
+          "activeCoverageId": "equipment-breakdown",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 3,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": -66.359375,
+            "right": 447,
+            "bottom": 146.375
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 619.484375,
+            "left": 32,
+            "top": -103.359375,
+            "right": 484,
+            "bottom": 516.125
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": -65.359375,
+            "right": 446,
+            "bottom": 145.375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": -65.35937499999999,
+            "right": 445.5804388933121,
+            "bottom": 145.375
+          },
+          "activeCoverageId": "cannabis-product-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 4,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": -226.359375,
+            "right": 447,
+            "bottom": -13.625
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 642.234375,
+            "left": 32,
+            "top": -263.359375,
+            "right": 484,
+            "bottom": 378.875
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": -225.359375,
+            "right": 446,
+            "bottom": -14.625
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": -225.359375,
+            "right": 445.5804388933121,
+            "bottom": -14.625000000000028
+          },
+          "activeCoverageId": "cannabis-product-recall",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 5,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": -414.359375,
+            "right": 447,
+            "bottom": -201.625
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 715.734375,
+            "left": 32,
+            "top": -451.359375,
+            "right": 484,
+            "bottom": 264.375
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": -413.359375,
+            "right": 446,
+            "bottom": -202.625
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": -413.359375,
+            "right": 445.5804388933121,
+            "bottom": -202.62500000000003
+          },
+          "activeCoverageId": "business-interruption",
+          "caption": "",
+          "frameOverflowStage": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "slug": "cannabis-producer-insurance",
+      "viewport": "mobile-390",
+      "explorer": true,
+      "stateCount": 6,
+      "states": [
+        {
+          "index": 0,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -333.9375,
+            "right": 353,
+            "bottom": -156.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 640.84375,
+            "left": 16,
+            "top": -354.9375,
+            "right": 374,
+            "bottom": 285.90625
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -332.9375,
+            "right": 352,
+            "bottom": -157.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -332.9375,
+            "right": 351.25719368811883,
+            "bottom": -157.09375
+          },
+          "activeCoverageId": "cannabis-property-infrastructure",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 1,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -499.9375,
+            "right": 353,
+            "bottom": -322.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 658.34375,
+            "left": 16,
+            "top": -520.9375,
+            "right": 374,
+            "bottom": 137.40625
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -498.9375,
+            "right": 352,
+            "bottom": -323.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -498.9375,
+            "right": 351.25719368811883,
+            "bottom": -323.09375
+          },
+          "activeCoverageId": "cannabis-crop-stock",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 2,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -689.9375,
+            "right": 353,
+            "bottom": -512.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 635.59375,
+            "left": 16,
+            "top": -710.9375,
+            "right": 374,
+            "bottom": -75.34375
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -688.9375,
+            "right": 352,
+            "bottom": -513.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -688.9375,
+            "right": 351.25719368811883,
+            "bottom": -513.09375
+          },
+          "activeCoverageId": "equipment-breakdown",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 3,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -838.9375,
+            "right": 353,
+            "bottom": -661.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 612.84375,
+            "left": 16,
+            "top": -859.9375,
+            "right": 374,
+            "bottom": -247.09375
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -837.9375,
+            "right": 352,
+            "bottom": -662.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -837.9375,
+            "right": 351.25719368811883,
+            "bottom": -662.09375
+          },
+          "activeCoverageId": "cannabis-product-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 4,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -987.9375,
+            "right": 353,
+            "bottom": -810.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 635.59375,
+            "left": 16,
+            "top": -1008.9375,
+            "right": 374,
+            "bottom": -373.34375
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -986.9375,
+            "right": 352,
+            "bottom": -811.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -986.9375,
+            "right": 351.25719368811883,
+            "bottom": -811.09375
+          },
+          "activeCoverageId": "cannabis-product-recall",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 5,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -1181.9375,
+            "right": 353,
+            "bottom": -1004.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 709.09375,
+            "left": 16,
+            "top": -1202.9375,
+            "right": 374,
+            "bottom": -493.84375
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -1180.9375,
+            "right": 352,
+            "bottom": -1005.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -1180.9375,
+            "right": 351.25719368811883,
+            "bottom": -1005.09375
+          },
+          "activeCoverageId": "business-interruption",
+          "caption": "",
+          "frameOverflowStage": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "slug": "cannabis-retail-insurance",
+      "viewport": "desktop-1440",
+      "explorer": true,
+      "stateCount": 5,
+      "states": [
+        {
+          "index": 0,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": 430.46875,
+            "right": 653,
+            "bottom": 712.984375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 689.265625,
+            "left": 114,
+            "top": 393.46875,
+            "right": 690,
+            "bottom": 1082.734375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": 431.46875,
+            "right": 652,
+            "bottom": 711.984375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": 431.46875,
+            "right": 651.6946407245223,
+            "bottom": 711.984375
+          },
+          "activeCoverageId": "general-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 1,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": 297.46875,
+            "right": 653,
+            "bottom": 579.984375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 643.765625,
+            "left": 114,
+            "top": 260.46875,
+            "right": 690,
+            "bottom": 904.234375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": 298.46875,
+            "right": 652,
+            "bottom": 578.984375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": 298.46875,
+            "right": 651.6946407245223,
+            "bottom": 578.984375
+          },
+          "activeCoverageId": "cannabis-property-stock",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 2,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": 164.46875,
+            "right": 653,
+            "bottom": 446.984375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 643.765625,
+            "left": 114,
+            "top": 127.46875,
+            "right": 690,
+            "bottom": 771.234375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": 165.46875,
+            "right": 652,
+            "bottom": 445.984375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": 165.46875,
+            "right": 651.6946407245223,
+            "bottom": 445.984375
+          },
+          "activeCoverageId": "cannabis-product-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 3,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": 40.46875,
+            "right": 653,
+            "bottom": 322.984375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 643.765625,
+            "left": 114,
+            "top": 3.46875,
+            "right": 690,
+            "bottom": 647.234375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": 41.46875,
+            "right": 652,
+            "bottom": 321.984375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": 41.46875,
+            "right": 651.6946407245223,
+            "bottom": 321.984375
+          },
+          "activeCoverageId": "cannabis-crime-theft",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 4,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 151,
+            "top": -83.53125,
+            "right": 653,
+            "bottom": 198.984375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 615.765625,
+            "left": 114,
+            "top": -120.53125,
+            "right": 690,
+            "bottom": 495.234375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 152,
+            "top": -82.53125,
+            "right": 652,
+            "bottom": 197.984375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 152.3053592754777,
+            "top": -82.53125,
+            "right": 651.6946407245223,
+            "bottom": 197.984375
+          },
+          "activeCoverageId": "business-interruption",
+          "caption": "",
+          "frameOverflowStage": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "slug": "cannabis-retail-insurance",
+      "viewport": "desktop-1280",
+      "explorer": true,
+      "stateCount": 5,
+      "states": [
+        {
+          "index": 0,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": 430.46875,
+            "right": 573,
+            "bottom": 712.984375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 689.265625,
+            "left": 34,
+            "top": 393.46875,
+            "right": 610,
+            "bottom": 1082.734375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": 431.46875,
+            "right": 572,
+            "bottom": 711.984375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": 431.46875,
+            "right": 571.6946407245223,
+            "bottom": 711.984375
+          },
+          "activeCoverageId": "general-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 1,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": 297.46875,
+            "right": 573,
+            "bottom": 579.984375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 643.765625,
+            "left": 34,
+            "top": 260.46875,
+            "right": 610,
+            "bottom": 904.234375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": 298.46875,
+            "right": 572,
+            "bottom": 578.984375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": 298.46875,
+            "right": 571.6946407245223,
+            "bottom": 578.984375
+          },
+          "activeCoverageId": "cannabis-property-stock",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 2,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": 164.46875,
+            "right": 573,
+            "bottom": 446.984375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 643.765625,
+            "left": 34,
+            "top": 127.46875,
+            "right": 610,
+            "bottom": 771.234375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": 165.46875,
+            "right": 572,
+            "bottom": 445.984375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": 165.46875,
+            "right": 571.6946407245223,
+            "bottom": 445.984375
+          },
+          "activeCoverageId": "cannabis-product-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 3,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": 40.46875,
+            "right": 573,
+            "bottom": 322.984375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 643.765625,
+            "left": 34,
+            "top": 3.46875,
+            "right": 610,
+            "bottom": 647.234375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": 41.46875,
+            "right": 572,
+            "bottom": 321.984375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": 41.46875,
+            "right": 571.6946407245223,
+            "bottom": 321.984375
+          },
+          "activeCoverageId": "cannabis-crime-theft",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 4,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 502,
+            "height": 282.515625,
+            "left": 71,
+            "top": -83.53125,
+            "right": 573,
+            "bottom": 198.984375
+          },
+          "stageRect": {
+            "width": 576,
+            "height": 615.765625,
+            "left": 34,
+            "top": -120.53125,
+            "right": 610,
+            "bottom": 495.234375
+          },
+          "imgRect": {
+            "width": 500,
+            "height": 280.515625,
+            "left": 72,
+            "top": -82.53125,
+            "right": 572,
+            "bottom": 197.984375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 72.30535927547771,
+            "top": -82.53125,
+            "right": 571.6946407245223,
+            "bottom": 197.984375
+          },
+          "activeCoverageId": "business-interruption",
+          "caption": "",
+          "frameOverflowStage": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "slug": "cannabis-retail-insurance",
+      "viewport": "desktop-1024",
+      "explorer": true,
+      "stateCount": 5,
+      "states": [
+        {
+          "index": 0,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": 421.21875,
+            "right": 447,
+            "bottom": 633.953125
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 687.734375,
+            "left": 32,
+            "top": 384.21875,
+            "right": 484,
+            "bottom": 1071.953125
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": 422.21875,
+            "right": 446,
+            "bottom": 632.953125
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": 422.21875,
+            "right": 445.5804388933121,
+            "bottom": 632.953125
+          },
+          "activeCoverageId": "general-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 1,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": 271.21875,
+            "right": 447,
+            "bottom": 483.953125
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 664.984375,
+            "left": 32,
+            "top": 234.21875,
+            "right": 484,
+            "bottom": 899.203125
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": 272.21875,
+            "right": 446,
+            "bottom": 482.953125
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": 272.21875,
+            "right": 445.5804388933121,
+            "bottom": 482.953125
+          },
+          "activeCoverageId": "cannabis-property-stock",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 2,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": 120.21875,
+            "right": 447,
+            "bottom": 332.953125
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 642.234375,
+            "left": 32,
+            "top": 83.21875,
+            "right": 484,
+            "bottom": 725.453125
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": 121.21875,
+            "right": 446,
+            "bottom": 331.953125
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": 121.21875000000001,
+            "right": 445.5804388933121,
+            "bottom": 331.953125
+          },
+          "activeCoverageId": "cannabis-product-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 3,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": -21.78125,
+            "right": 447,
+            "bottom": 190.953125
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 642.234375,
+            "left": 32,
+            "top": -58.78125,
+            "right": 484,
+            "bottom": 583.453125
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": -20.78125,
+            "right": 446,
+            "bottom": 189.953125
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": -20.781249999999986,
+            "right": 445.5804388933121,
+            "bottom": 189.953125
+          },
+          "activeCoverageId": "cannabis-crime-theft",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 4,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 559,
+            "height": 314
+          },
+          "frameRect": {
+            "width": 378,
+            "height": 212.734375,
+            "left": 69,
+            "top": -163.78125,
+            "right": 447,
+            "bottom": 48.953125
+          },
+          "stageRect": {
+            "width": 452,
+            "height": 664.984375,
+            "left": 32,
+            "top": -200.78125,
+            "right": 484,
+            "bottom": 464.203125
+          },
+          "imgRect": {
+            "width": 376,
+            "height": 210.734375,
+            "left": 70,
+            "top": -162.78125,
+            "right": 446,
+            "bottom": 47.953125
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 70.41956110668792,
+            "top": -162.78125,
+            "right": 445.5804388933121,
+            "bottom": 47.95312499999997
+          },
+          "activeCoverageId": "business-interruption",
+          "caption": "",
+          "frameOverflowStage": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "slug": "cannabis-retail-insurance",
+      "viewport": "mobile-390",
+      "explorer": true,
+      "stateCount": 5,
+      "states": [
+        {
+          "index": 0,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -406.9375,
+            "right": 353,
+            "bottom": -229.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 731.84375,
+            "left": 16,
+            "top": -427.9375,
+            "right": 374,
+            "bottom": 303.90625
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -405.9375,
+            "right": 352,
+            "bottom": -230.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -405.9375,
+            "right": 351.25719368811883,
+            "bottom": -230.09375
+          },
+          "activeCoverageId": "general-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 1,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -555.9375,
+            "right": 353,
+            "bottom": -378.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 686.34375,
+            "left": 16,
+            "top": -576.9375,
+            "right": 374,
+            "bottom": 109.40625
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -554.9375,
+            "right": 352,
+            "bottom": -379.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -554.9375,
+            "right": 351.25719368811883,
+            "bottom": -379.09375
+          },
+          "activeCoverageId": "cannabis-property-stock",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 2,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -681.9375,
+            "right": 353,
+            "bottom": -504.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 635.59375,
+            "left": 16,
+            "top": -702.9375,
+            "right": 374,
+            "bottom": -67.34375
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -680.9375,
+            "right": 352,
+            "bottom": -505.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -680.9375,
+            "right": 351.25719368811883,
+            "bottom": -505.09375
+          },
+          "activeCoverageId": "cannabis-product-liability",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 3,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -802.9375,
+            "right": 353,
+            "bottom": -625.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 663.59375,
+            "left": 16,
+            "top": -823.9375,
+            "right": 374,
+            "bottom": -160.34375
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -801.9375,
+            "right": 352,
+            "bottom": -626.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -801.9375,
+            "right": 351.25719368811883,
+            "bottom": -626.09375
+          },
+          "activeCoverageId": "cannabis-crime-theft",
+          "caption": "",
+          "frameOverflowStage": false
+        },
+        {
+          "index": 4,
+          "mode": "interactive-master",
+          "natural": {
+            "width": 359,
+            "height": 202
+          },
+          "frameRect": {
+            "width": 316,
+            "height": 177.84375,
+            "left": 37,
+            "top": -1002.9375,
+            "right": 353,
+            "bottom": -825.09375
+          },
+          "stageRect": {
+            "width": 358,
+            "height": 635.59375,
+            "left": 16,
+            "top": -1023.9375,
+            "right": 374,
+            "bottom": -388.34375
+          },
+          "imgRect": {
+            "width": 314,
+            "height": 175.84375,
+            "left": 38,
+            "top": -1001.9375,
+            "right": 352,
+            "bottom": -826.09375
+          },
+          "imgStyles": {
+            "objectFit": "contain",
+            "transform": "none"
+          },
+          "containedInStage": true,
+          "paintedContentRect": {
+            "left": 38.742806311881196,
+            "top": -1001.9375,
+            "right": 351.25719368811883,
+            "bottom": -826.09375
+          },
+          "activeCoverageId": "business-interruption",
           "caption": "",
           "frameOverflowStage": false
         }
@@ -6589,25 +8685,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 430.46875,
+            "top": 429.46875,
             "right": 653,
-            "bottom": 712.984375
+            "bottom": 711.984375
           },
           "stageRect": {
             "width": 576,
             "height": 684.015625,
             "left": 114,
-            "top": 393.46875,
+            "top": 392.46875,
             "right": 690,
-            "bottom": 1077.484375
+            "bottom": 1076.484375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 652,
-            "bottom": 711.984375
+            "bottom": 710.984375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -6616,9 +8712,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 651.6946407245223,
-            "bottom": 711.984375
+            "bottom": 710.984375
           },
           "activeCoverageId": "building-coverage",
           "caption": "",
@@ -6975,25 +9071,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 421.71875,
+            "top": 420.71875,
             "right": 447,
-            "bottom": 634.453125
+            "bottom": 633.453125
           },
           "stageRect": {
             "width": 452,
             "height": 705.234375,
             "left": 32,
-            "top": 384.71875,
+            "top": 383.71875,
             "right": 484,
-            "bottom": 1089.953125
+            "bottom": 1088.953125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 422.71875,
+            "top": 421.71875,
             "right": 446,
-            "bottom": 633.453125
+            "bottom": 632.453125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -7002,9 +9098,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 422.71875,
+            "top": 421.71875,
             "right": 445.5804388933121,
-            "bottom": 633.453125
+            "bottom": 632.453125
           },
           "activeCoverageId": "building-coverage",
           "caption": "",
@@ -9098,25 +11194,25 @@
             "width": 506,
             "height": 284.765625,
             "left": 69,
-            "top": 429.796875,
+            "top": 430.796875,
             "right": 575,
-            "bottom": 714.5625
+            "bottom": 715.5625
           },
           "stageRect": {
             "width": 580,
             "height": 600.515625,
             "left": 32,
-            "top": 392.796875,
+            "top": 393.796875,
             "right": 612,
-            "bottom": 993.3125
+            "bottom": 994.3125
           },
           "imgRect": {
             "width": 504,
             "height": 282.765625,
             "left": 70,
-            "top": 430.796875,
+            "top": 431.796875,
             "right": 574,
-            "bottom": 713.5625
+            "bottom": 714.5625
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -9125,9 +11221,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.6527777777778,
-            "top": 430.796875,
+            "top": 431.796875,
             "right": 573.3472222222222,
-            "bottom": 713.5625
+            "bottom": 714.5625
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -9291,25 +11387,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 429.59375,
+            "top": 430.59375,
             "right": 447,
-            "bottom": 642.328125
+            "bottom": 643.328125
           },
           "stageRect": {
             "width": 452,
             "height": 624.734375,
             "left": 32,
-            "top": 392.59375,
+            "top": 393.59375,
             "right": 484,
-            "bottom": 1017.328125
+            "bottom": 1018.328125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 430.59375,
+            "top": 431.59375,
             "right": 446,
-            "bottom": 641.328125
+            "bottom": 642.328125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -9318,9 +11414,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.68055555555557,
-            "top": 430.59375,
+            "top": 431.59375,
             "right": 445.31944444444446,
-            "bottom": 641.328125
+            "bottom": 642.328125
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -9677,25 +11773,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 429.46875,
+            "top": 430.46875,
             "right": 653,
-            "bottom": 711.984375
+            "bottom": 712.984375
           },
           "stageRect": {
             "width": 576,
             "height": 666.515625,
             "left": 114,
-            "top": 392.46875,
+            "top": 393.46875,
             "right": 690,
-            "bottom": 1058.984375
+            "bottom": 1059.984375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 430.46875,
+            "top": 431.46875,
             "right": 652,
-            "bottom": 710.984375
+            "bottom": 711.984375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -9704,9 +11800,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 430.46875,
+            "top": 431.46875,
             "right": 651.6946407245223,
-            "bottom": 710.984375
+            "bottom": 711.984375
           },
           "activeCoverageId": "commercial-property",
           "caption": "",
@@ -14098,25 +16194,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 429.71875,
+            "top": 430.71875,
             "right": 573,
-            "bottom": 712.234375
+            "bottom": 713.234375
           },
           "stageRect": {
             "width": 576,
             "height": 575.515625,
             "left": 34,
-            "top": 392.71875,
+            "top": 393.71875,
             "right": 610,
-            "bottom": 968.234375
+            "bottom": 969.234375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 430.71875,
+            "top": 431.71875,
             "right": 572,
-            "bottom": 711.234375
+            "bottom": 712.234375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -14125,9 +16221,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 430.71875,
+            "top": 431.71875,
             "right": 571.6946407245223,
-            "bottom": 711.234375
+            "bottom": 712.234375
           },
           "activeCoverageId": "side-a-individual-coverage",
           "caption": "",
@@ -15449,25 +17545,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 438.71875,
+            "top": 439.71875,
             "right": 653,
-            "bottom": 721.234375
+            "bottom": 722.234375
           },
           "stageRect": {
             "width": 576,
             "height": 621.015625,
             "left": 114,
-            "top": 401.71875,
+            "top": 402.71875,
             "right": 690,
-            "bottom": 1022.734375
+            "bottom": 1023.734375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 439.71875,
+            "top": 440.71875,
             "right": 652,
-            "bottom": 720.234375
+            "bottom": 721.234375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -15476,9 +17572,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 439.71875,
+            "top": 440.71875,
             "right": 651.6946407245223,
-            "bottom": 720.234375
+            "bottom": 721.234375
           },
           "activeCoverageId": "wrongful-termination",
           "caption": "",
@@ -15835,25 +17931,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 430.765625,
+            "top": 429.765625,
             "right": 447,
-            "bottom": 643.5
+            "bottom": 642.5
           },
           "stageRect": {
             "width": 452,
             "height": 596.734375,
             "left": 32,
-            "top": 393.765625,
+            "top": 392.765625,
             "right": 484,
-            "bottom": 990.5
+            "bottom": 989.5
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 431.765625,
+            "top": 430.765625,
             "right": 446,
-            "bottom": 642.5
+            "bottom": 641.5
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -15862,9 +17958,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 431.765625,
+            "top": 430.765625,
             "right": 445.5804388933121,
-            "bottom": 642.5
+            "bottom": 641.5
           },
           "activeCoverageId": "wrongful-termination",
           "caption": "",
@@ -16414,25 +18510,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 430.421875,
+            "top": 429.421875,
             "right": 573,
-            "bottom": 712.9375
+            "bottom": 711.9375
           },
           "stageRect": {
             "width": 576,
             "height": 689.265625,
             "left": 34,
-            "top": 393.421875,
+            "top": 392.421875,
             "right": 610,
-            "bottom": 1082.6875
+            "bottom": 1081.6875
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 431.421875,
+            "top": 430.421875,
             "right": 572,
-            "bottom": 711.9375
+            "bottom": 710.9375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -16441,9 +18537,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 431.421875,
+            "top": 430.421875,
             "right": 571.6946407245223,
-            "bottom": 711.9375
+            "bottom": 710.9375
           },
           "activeCoverageId": "third-party-bodily-injury",
           "caption": "",
@@ -16607,25 +18703,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 420.96875,
+            "top": 421.96875,
             "right": 447,
-            "bottom": 633.703125
+            "bottom": 634.703125
           },
           "stageRect": {
             "width": 452,
             "height": 733.234375,
             "left": 32,
-            "top": 383.96875,
+            "top": 384.96875,
             "right": 484,
-            "bottom": 1117.203125
+            "bottom": 1118.203125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 421.96875,
+            "top": 422.96875,
             "right": 446,
-            "bottom": 632.703125
+            "bottom": 633.703125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -16634,9 +18730,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 421.96875,
+            "top": 422.96875,
             "right": 445.5804388933121,
-            "bottom": 632.703125
+            "bottom": 633.703125
           },
           "activeCoverageId": "third-party-bodily-injury",
           "caption": "",
@@ -16993,25 +19089,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 421.671875,
+            "top": 420.671875,
             "right": 653,
-            "bottom": 704.1875
+            "bottom": 703.1875
           },
           "stageRect": {
             "width": 576,
             "height": 666.515625,
             "left": 114,
-            "top": 384.671875,
+            "top": 383.671875,
             "right": 690,
-            "bottom": 1051.1875
+            "bottom": 1050.1875
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 422.671875,
+            "top": 421.671875,
             "right": 652,
-            "bottom": 703.1875
+            "bottom": 702.1875
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -17020,9 +19116,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 422.671875,
+            "top": 421.671875,
             "right": 651.6946407245223,
-            "bottom": 703.1875
+            "bottom": 702.1875
           },
           "activeCoverageId": "farm-property-coverage",
           "caption": "",
@@ -17186,25 +19282,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 420.671875,
+            "top": 421.671875,
             "right": 573,
-            "bottom": 703.1875
+            "bottom": 704.1875
           },
           "stageRect": {
             "width": 576,
             "height": 666.515625,
             "left": 34,
-            "top": 383.671875,
+            "top": 384.671875,
             "right": 610,
-            "bottom": 1050.1875
+            "bottom": 1051.1875
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 421.671875,
+            "top": 422.671875,
             "right": 572,
-            "bottom": 702.1875
+            "bottom": 703.1875
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -17213,9 +19309,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 421.671875,
+            "top": 422.671875,
             "right": 571.6946407245223,
-            "bottom": 702.1875
+            "bottom": 703.1875
           },
           "activeCoverageId": "farm-property-coverage",
           "caption": "",
@@ -18537,25 +20633,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 429.59375,
+            "top": 430.59375,
             "right": 653,
-            "bottom": 712.109375
+            "bottom": 713.109375
           },
           "stageRect": {
             "width": 576,
             "height": 712.015625,
             "left": 114,
-            "top": 392.59375,
+            "top": 393.59375,
             "right": 690,
-            "bottom": 1104.609375
+            "bottom": 1105.609375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 430.59375,
+            "top": 431.59375,
             "right": 652,
-            "bottom": 711.109375
+            "bottom": 712.109375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -18564,9 +20660,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 430.59375,
+            "top": 431.59375,
             "right": 651.6946407245223,
-            "bottom": 711.109375
+            "bottom": 712.109375
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -19309,25 +21405,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 420.59375,
+            "top": 421.59375,
             "right": 653,
-            "bottom": 703.109375
+            "bottom": 704.109375
           },
           "stageRect": {
             "width": 576,
             "height": 689.265625,
             "left": 114,
-            "top": 383.59375,
+            "top": 384.59375,
             "right": 690,
-            "bottom": 1072.859375
+            "bottom": 1073.859375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 421.59375,
+            "top": 422.59375,
             "right": 652,
-            "bottom": 702.109375
+            "bottom": 703.109375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -19336,9 +21432,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 421.59375,
+            "top": 422.59375,
             "right": 651.6946407245223,
-            "bottom": 702.109375
+            "bottom": 703.109375
           },
           "activeCoverageId": "garagekeepers-liability",
           "caption": "",
@@ -19502,25 +21598,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 420.59375,
+            "top": 421.59375,
             "right": 573,
-            "bottom": 703.109375
+            "bottom": 704.109375
           },
           "stageRect": {
             "width": 576,
             "height": 689.265625,
             "left": 34,
-            "top": 383.59375,
+            "top": 384.59375,
             "right": 610,
-            "bottom": 1072.859375
+            "bottom": 1073.859375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 421.59375,
+            "top": 422.59375,
             "right": 572,
-            "bottom": 702.109375
+            "bottom": 703.109375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -19529,9 +21625,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 421.59375,
+            "top": 422.59375,
             "right": 571.6946407245223,
-            "bottom": 702.109375
+            "bottom": 703.109375
           },
           "activeCoverageId": "garagekeepers-liability",
           "caption": "",
@@ -26423,25 +28519,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 429.890625,
+            "top": 430.890625,
             "right": 447,
-            "bottom": 642.625
+            "bottom": 643.625
           },
           "stageRect": {
             "width": 452,
             "height": 477.734375,
             "left": 32,
-            "top": 392.890625,
+            "top": 393.890625,
             "right": 484,
-            "bottom": 870.625
+            "bottom": 871.625
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 430.890625,
+            "top": 431.890625,
             "right": 446,
-            "bottom": 641.625
+            "bottom": 642.625
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -26450,9 +28546,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 430.890625,
+            "top": 431.890625,
             "right": 445.5804388933121,
-            "bottom": 641.625
+            "bottom": 642.625
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -27581,25 +29677,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 429.71875,
+            "top": 430.71875,
             "right": 653,
-            "bottom": 712.234375
+            "bottom": 713.234375
           },
           "stageRect": {
             "width": 576,
             "height": 684.015625,
             "left": 114,
-            "top": 392.71875,
+            "top": 393.71875,
             "right": 690,
-            "bottom": 1076.734375
+            "bottom": 1077.734375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 430.71875,
+            "top": 431.71875,
             "right": 652,
-            "bottom": 711.234375
+            "bottom": 712.234375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -27608,9 +29704,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 430.71875,
+            "top": 431.71875,
             "right": 651.6946407245223,
-            "bottom": 711.234375
+            "bottom": 712.234375
           },
           "activeCoverageId": "patron-injury-property-damage",
           "caption": "",
@@ -33362,25 +35458,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 429.546875,
+            "top": 430.546875,
             "right": 573,
-            "bottom": 712.0625
+            "bottom": 713.0625
           },
           "stageRect": {
             "width": 576,
             "height": 734.765625,
             "left": 34,
-            "top": 392.546875,
+            "top": 393.546875,
             "right": 610,
-            "bottom": 1127.3125
+            "bottom": 1128.3125
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 430.546875,
+            "top": 431.546875,
             "right": 572,
-            "bottom": 711.0625
+            "bottom": 712.0625
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -33389,9 +35485,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 430.546875,
+            "top": 431.546875,
             "right": 571.6946407245223,
-            "bottom": 711.0625
+            "bottom": 712.0625
           },
           "activeCoverageId": "commercial-property",
           "caption": "",
@@ -33794,25 +35890,25 @@
             "width": 316,
             "height": 177.84375,
             "left": 37,
-            "top": -678.84375,
+            "top": -677.84375,
             "right": 353,
-            "bottom": -501
+            "bottom": -500
           },
           "stageRect": {
             "width": 358,
             "height": 749.34375,
             "left": 16,
-            "top": -699.84375,
+            "top": -698.84375,
             "right": 374,
-            "bottom": 49.5
+            "bottom": 50.5
           },
           "imgRect": {
             "width": 314,
             "height": 175.84375,
             "left": 38,
-            "top": -677.84375,
+            "top": -676.84375,
             "right": 352,
-            "bottom": -502
+            "bottom": -501
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -33821,9 +35917,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 38.742806311881196,
-            "top": -677.84375,
+            "top": -676.84375,
             "right": 351.25719368811883,
-            "bottom": -502
+            "bottom": -501
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -34327,25 +36423,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 403.09375,
+            "top": 404.09375,
             "right": 447,
-            "bottom": 615.828125
+            "bottom": 616.828125
           },
           "stageRect": {
             "width": 452,
             "height": 733.234375,
             "left": 32,
-            "top": 366.09375,
+            "top": 367.09375,
             "right": 484,
-            "bottom": 1099.328125
+            "bottom": 1100.328125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 404.09375,
+            "top": 405.09375,
             "right": 446,
-            "bottom": 614.828125
+            "bottom": 615.828125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -34354,9 +36450,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 404.09375,
+            "top": 405.09375,
             "right": 445.5804388933121,
-            "bottom": 614.828125
+            "bottom": 615.828125
           },
           "activeCoverageId": "contractors-pollution-liability",
           "caption": "",
@@ -34713,25 +36809,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 429.46875,
+            "top": 430.46875,
             "right": 653,
-            "bottom": 711.984375
+            "bottom": 712.984375
           },
           "stageRect": {
             "width": 576,
             "height": 689.265625,
             "left": 114,
-            "top": 392.46875,
+            "top": 393.46875,
             "right": 690,
-            "bottom": 1081.734375
+            "bottom": 1082.734375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 430.46875,
+            "top": 431.46875,
             "right": 652,
-            "bottom": 710.984375
+            "bottom": 711.984375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -34740,9 +36836,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 430.46875,
+            "top": 431.46875,
             "right": 651.6946407245223,
-            "bottom": 710.984375
+            "bottom": 711.984375
           },
           "activeCoverageId": "recall-expenses",
           "caption": "",
@@ -34906,25 +37002,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 429.46875,
+            "top": 430.46875,
             "right": 573,
-            "bottom": 711.984375
+            "bottom": 712.984375
           },
           "stageRect": {
             "width": 576,
             "height": 689.265625,
             "left": 34,
-            "top": 392.46875,
+            "top": 393.46875,
             "right": 610,
-            "bottom": 1081.734375
+            "bottom": 1082.734375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 430.46875,
+            "top": 431.46875,
             "right": 572,
-            "bottom": 710.984375
+            "bottom": 711.984375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -34933,9 +37029,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 430.46875,
+            "top": 431.46875,
             "right": 571.6946407245223,
-            "bottom": 710.984375
+            "bottom": 711.984375
           },
           "activeCoverageId": "recall-expenses",
           "caption": "",
@@ -35678,25 +37774,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 420.96875,
+            "top": 421.96875,
             "right": 573,
-            "bottom": 703.484375
+            "bottom": 704.484375
           },
           "stageRect": {
             "width": 576,
             "height": 661.265625,
             "left": 34,
-            "top": 383.96875,
+            "top": 384.96875,
             "right": 610,
-            "bottom": 1045.234375
+            "bottom": 1046.234375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 421.96875,
+            "top": 422.96875,
             "right": 572,
-            "bottom": 702.484375
+            "bottom": 703.484375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -35705,9 +37801,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 421.96875,
+            "top": 422.96875,
             "right": 571.6946407245223,
-            "bottom": 702.484375
+            "bottom": 703.484375
           },
           "activeCoverageId": "accountants-bookkeepers",
           "caption": "",
@@ -36257,25 +38353,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 421.46875,
+            "top": 420.46875,
             "right": 653,
-            "bottom": 703.984375
+            "bottom": 702.984375
           },
           "stageRect": {
             "width": 576,
             "height": 666.515625,
             "left": 114,
-            "top": 384.46875,
+            "top": 383.46875,
             "right": 690,
-            "bottom": 1050.984375
+            "bottom": 1049.984375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 422.46875,
+            "top": 421.46875,
             "right": 652,
-            "bottom": 702.984375
+            "bottom": 701.984375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -36284,9 +38380,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 422.46875,
+            "top": 421.46875,
             "right": 651.6946407245223,
-            "bottom": 702.984375
+            "bottom": 701.984375
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -38187,25 +40283,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 403.71875,
+            "top": 402.71875,
             "right": 447,
-            "bottom": 616.453125
+            "bottom": 615.453125
           },
           "stageRect": {
             "width": 452,
             "height": 783.984375,
             "left": 32,
-            "top": 366.71875,
+            "top": 365.71875,
             "right": 484,
-            "bottom": 1150.703125
+            "bottom": 1149.703125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 404.71875,
+            "top": 403.71875,
             "right": 446,
-            "bottom": 615.453125
+            "bottom": 614.453125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -38214,9 +40310,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 404.71875,
+            "top": 403.71875,
             "right": 445.5804388933121,
-            "bottom": 615.453125
+            "bottom": 614.453125
           },
           "activeCoverageId": "errors-omissions-e-o",
           "caption": "",
@@ -38426,25 +40522,25 @@
             "width": 316,
             "height": 177.84375,
             "left": 37,
-            "top": -669.09375,
+            "top": -668.09375,
             "right": 353,
-            "bottom": -491.25
+            "bottom": -490.25
           },
           "stageRect": {
             "width": 358,
             "height": 663.59375,
             "left": 16,
-            "top": -690.09375,
+            "top": -689.09375,
             "right": 374,
-            "bottom": -26.5
+            "bottom": -25.5
           },
           "imgRect": {
             "width": 314,
             "height": 175.84375,
             "left": 38,
-            "top": -668.09375,
+            "top": -667.09375,
             "right": 352,
-            "bottom": -492.25
+            "bottom": -491.25
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -38453,9 +40549,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 38.742806311881196,
-            "top": -668.09375,
+            "top": -667.09375,
             "right": 351.25719368811883,
-            "bottom": -492.25
+            "bottom": -491.25
           },
           "activeCoverageId": "commercial-property",
           "caption": "",
@@ -38766,25 +40862,25 @@
             "width": 502,
             "height": 458.75,
             "left": 71,
-            "top": 430.46875,
+            "top": 429.46875,
             "right": 573,
-            "bottom": 889.21875
+            "bottom": 888.21875
           },
           "stageRect": {
             "width": 576,
             "height": 842.75,
             "left": 34,
-            "top": 393.46875,
+            "top": 392.46875,
             "right": 610,
-            "bottom": 1236.21875
+            "bottom": 1235.21875
           },
           "imgRect": {
             "width": 500,
             "height": 456.75,
             "left": 72,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 572,
-            "bottom": 888.21875
+            "bottom": 887.21875
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -38793,9 +40889,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.24743150684935,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 571.7525684931506,
-            "bottom": 888.21875
+            "bottom": 887.21875
           },
           "activeCoverageId": "commercial-property",
           "caption": "",
@@ -38959,25 +41055,25 @@
             "width": 378,
             "height": 345.4375,
             "left": 69,
-            "top": 421.515625,
+            "top": 420.515625,
             "right": 447,
-            "bottom": 766.953125
+            "bottom": 765.953125
           },
           "stageRect": {
             "width": 452,
             "height": 820.4375,
             "left": 32,
-            "top": 384.515625,
+            "top": 383.515625,
             "right": 484,
-            "bottom": 1204.953125
+            "bottom": 1203.953125
           },
           "imgRect": {
             "width": 376,
             "height": 343.4375,
             "left": 70,
-            "top": 422.515625,
+            "top": 421.515625,
             "right": 446,
-            "bottom": 765.953125
+            "bottom": 764.953125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -38986,9 +41082,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.20712043378995,
-            "top": 422.515625,
+            "top": 421.515625,
             "right": 445.79287956621005,
-            "bottom": 765.953125
+            "bottom": 764.953125
           },
           "activeCoverageId": "commercial-property",
           "caption": "",
@@ -39518,25 +41614,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 421.921875,
+            "top": 420.921875,
             "right": 573,
-            "bottom": 704.4375
+            "bottom": 703.4375
           },
           "stageRect": {
             "width": 576,
             "height": 638.515625,
             "left": 34,
-            "top": 384.921875,
+            "top": 383.921875,
             "right": 610,
-            "bottom": 1023.4375
+            "bottom": 1022.4375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 422.921875,
+            "top": 421.921875,
             "right": 572,
-            "bottom": 703.4375
+            "bottom": 702.4375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -39545,9 +41641,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 422.921875,
+            "top": 421.921875,
             "right": 571.6946407245223,
-            "bottom": 703.4375
+            "bottom": 702.4375
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -41062,25 +43158,25 @@
             "width": 502,
             "height": 458.75,
             "left": 71,
-            "top": 430.71875,
+            "top": 429.71875,
             "right": 573,
-            "bottom": 889.46875
+            "bottom": 888.46875
           },
           "stageRect": {
             "width": 576,
             "height": 820,
             "left": 34,
-            "top": 393.71875,
+            "top": 392.71875,
             "right": 610,
-            "bottom": 1213.71875
+            "bottom": 1212.71875
           },
           "imgRect": {
             "width": 500,
             "height": 456.75,
             "left": 72,
-            "top": 431.71875,
+            "top": 430.71875,
             "right": 572,
-            "bottom": 888.46875
+            "bottom": 887.46875
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -41089,9 +43185,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.24743150684935,
-            "top": 431.71875,
+            "top": 430.71875,
             "right": 571.7525684931506,
-            "bottom": 888.46875
+            "bottom": 887.46875
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -41255,25 +43351,25 @@
             "width": 378,
             "height": 345.4375,
             "left": 69,
-            "top": 421.71875,
+            "top": 420.71875,
             "right": 447,
-            "bottom": 767.15625
+            "bottom": 766.15625
           },
           "stageRect": {
             "width": 452,
             "height": 774.9375,
             "left": 32,
-            "top": 384.71875,
+            "top": 383.71875,
             "right": 484,
-            "bottom": 1159.65625
+            "bottom": 1158.65625
           },
           "imgRect": {
             "width": 376,
             "height": 343.4375,
             "left": 70,
-            "top": 422.71875,
+            "top": 421.71875,
             "right": 446,
-            "bottom": 766.15625
+            "bottom": 765.15625
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -41282,9 +43378,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.20712043378995,
-            "top": 422.71875,
+            "top": 421.71875,
             "right": 445.79287956621005,
-            "bottom": 766.15625
+            "bottom": 765.15625
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -41641,25 +43737,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 430.46875,
+            "top": 429.46875,
             "right": 653,
-            "bottom": 712.984375
+            "bottom": 711.984375
           },
           "stageRect": {
             "width": 576,
             "height": 638.515625,
             "left": 114,
-            "top": 393.46875,
+            "top": 392.46875,
             "right": 690,
-            "bottom": 1031.984375
+            "bottom": 1030.984375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 652,
-            "bottom": 711.984375
+            "bottom": 710.984375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -41668,9 +43764,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 651.6946407245223,
-            "bottom": 711.984375
+            "bottom": 710.984375
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -41834,25 +43930,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 430.46875,
+            "top": 429.46875,
             "right": 573,
-            "bottom": 712.984375
+            "bottom": 711.984375
           },
           "stageRect": {
             "width": 576,
             "height": 638.515625,
             "left": 34,
-            "top": 393.46875,
+            "top": 392.46875,
             "right": 610,
-            "bottom": 1031.984375
+            "bottom": 1030.984375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 572,
-            "bottom": 711.984375
+            "bottom": 710.984375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -41861,9 +43957,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 431.46875,
+            "top": 430.46875,
             "right": 571.6946407245223,
-            "bottom": 711.984375
+            "bottom": 710.984375
           },
           "activeCoverageId": "general-liability",
           "caption": "",
@@ -42992,25 +45088,25 @@
             "width": 316,
             "height": 177.84375,
             "left": 37,
-            "top": -56.09375,
+            "top": -55.09375,
             "right": 353,
-            "bottom": 121.75
+            "bottom": 122.75
           },
           "stageRect": {
             "width": 358,
             "height": 402.84375,
             "left": 16,
-            "top": -77.09375,
+            "top": -76.09375,
             "right": 374,
-            "bottom": 325.75
+            "bottom": 326.75
           },
           "imgRect": {
             "width": 314,
             "height": 175.84375,
             "left": 38,
-            "top": -55.09375,
+            "top": -54.09375,
             "right": 352,
-            "bottom": 120.75
+            "bottom": 121.75
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -43019,9 +45115,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 38.742806311881196,
-            "top": -55.09375,
+            "top": -54.09375,
             "right": 351.25719368811883,
-            "bottom": 120.75
+            "bottom": 121.75
           },
           "activeCoverageId": "contents-coverage",
           "caption": "",
@@ -44343,25 +46439,25 @@
             "width": 378,
             "height": 212.734375,
             "left": 69,
-            "top": 421.71875,
+            "top": 420.71875,
             "right": 447,
-            "bottom": 634.453125
+            "bottom": 633.453125
           },
           "stageRect": {
             "width": 452,
             "height": 761.234375,
             "left": 32,
-            "top": 384.71875,
+            "top": 383.71875,
             "right": 484,
-            "bottom": 1145.953125
+            "bottom": 1144.953125
           },
           "imgRect": {
             "width": 376,
             "height": 210.734375,
             "left": 70,
-            "top": 422.71875,
+            "top": 421.71875,
             "right": 446,
-            "bottom": 633.453125
+            "bottom": 632.453125
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -44370,9 +46466,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 70.41956110668792,
-            "top": 422.71875,
+            "top": 421.71875,
             "right": 445.5804388933121,
-            "bottom": 633.453125
+            "bottom": 632.453125
           },
           "activeCoverageId": "cargo-insurance",
           "caption": "",
@@ -44729,25 +46825,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 151,
-            "top": 430.71875,
+            "top": 429.71875,
             "right": 653,
-            "bottom": 713.234375
+            "bottom": 712.234375
           },
           "stageRect": {
             "width": 576,
             "height": 666.515625,
             "left": 114,
-            "top": 393.71875,
+            "top": 392.71875,
             "right": 690,
-            "bottom": 1060.234375
+            "bottom": 1059.234375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 152,
-            "top": 431.71875,
+            "top": 430.71875,
             "right": 652,
-            "bottom": 712.234375
+            "bottom": 711.234375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -44756,9 +46852,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 152.3053592754777,
-            "top": 431.71875,
+            "top": 430.71875,
             "right": 651.6946407245223,
-            "bottom": 712.234375
+            "bottom": 711.234375
           },
           "activeCoverageId": "commercial-property",
           "caption": "",
@@ -44922,25 +47018,25 @@
             "width": 502,
             "height": 282.515625,
             "left": 71,
-            "top": 430.71875,
+            "top": 429.71875,
             "right": 573,
-            "bottom": 713.234375
+            "bottom": 712.234375
           },
           "stageRect": {
             "width": 576,
             "height": 666.515625,
             "left": 34,
-            "top": 393.71875,
+            "top": 392.71875,
             "right": 610,
-            "bottom": 1060.234375
+            "bottom": 1059.234375
           },
           "imgRect": {
             "width": 500,
             "height": 280.515625,
             "left": 72,
-            "top": 431.71875,
+            "top": 430.71875,
             "right": 572,
-            "bottom": 712.234375
+            "bottom": 711.234375
           },
           "imgStyles": {
             "objectFit": "contain",
@@ -44949,9 +47045,9 @@
           "containedInStage": true,
           "paintedContentRect": {
             "left": 72.30535927547771,
-            "top": 431.71875,
+            "top": 430.71875,
             "right": 571.6946407245223,
-            "bottom": 712.234375
+            "bottom": 711.234375
           },
           "activeCoverageId": "commercial-property",
           "caption": "",

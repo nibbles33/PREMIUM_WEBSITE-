@@ -20,7 +20,7 @@
 
 | Classification | Count | Meaning |
 |----------------|------:|---------|
-| **A — STRONG** | 42 | Genuinely substantive, specific, no high/medium content-safety concerns |
+| **A — STRONG** | 44 | Genuinely substantive, specific, no high/medium content-safety concerns |
 | **B — ADEQUATE** | 16 | Reasonable depth; could be deepened; no high/medium safety flags |
 | **C — THIN** | 0 | Noticeably shallow — similar pre-fix Greenhouse/Daycare pattern |
 | **D — CONTENT-SAFETY** | 0 | High/medium content-safety language flagged (regardless of visual depth) |
@@ -43,6 +43,8 @@
 | /builders-developers-insurance/ | 1022 | 4 / specific/hedged (strong) | Yes (355w, specific/useful) | 5 | Yes | 1 (low only) | Windsor-Essex-primary | **A** |
 | /builders-risk-insurance/ | 1071 | 4 / specific/hedged (strong) | Yes (393w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /business-interruption-insurance/ | 1320 | 4 / specific/hedged (strong) | Yes (400w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
+| /cannabis-producer-insurance/ | 1275 | 6 / specific/hedged (strong) | Yes (378w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
+| /cannabis-retail-insurance/ | 1205 | 5 / specific/hedged (strong) | Yes (392w, specific/useful) | 5 | Yes | 4 (low only) | Windsor-Essex + Ontario | **A** |
 | /cargo-freight-insurance/ | 1127 | 4 / specific/hedged (strong) | Yes (386w, specific/useful) | 5 | Yes | 0 | Windsor-Essex + Ontario | **A** |
 | /commercial-auto-insurance/ | 1354 | 4 / specific/hedged (strong) | Yes (426w, specific/useful) | 5 | Yes | 3 (low only) | Windsor-Essex + Ontario | **A** |
 | /commercial-insurance/ | 804 | 10 / specific/hedged (strong) | Yes (150w, specific/useful) | 5 | Yes | 0 | Windsor-Essex-primary | **A** |
@@ -105,7 +107,7 @@
 ## B. Content-safety flags (quoted, by page)
 
 **0 high/medium flags** across 0 pages.  
-**18 low-severity flags** (mostly surety/bond industry "guarantee" terminology) listed where present — informational, not auto-classified as D.
+**22 low-severity flags** (mostly surety/bond industry "guarantee" terminology) listed where present — informational, not auto-classified as D.
 
 ### /auto-insurance/
   - **[LOW]** `coverage:Accident Benefits`: "For policies entered into on or after July 1, 2026, statutory accident benefits include mandatory medical, rehabilitation, and attendant care benefits." — Mandatory coverage stated — verify regulatory basis
@@ -119,6 +121,12 @@
 
 ### /builders-developers-insurance/
   - **[LOW]** `hero`: "Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory." — Mandatory coverage stated — verify regulatory basis
+
+### /cannabis-retail-insurance/
+  - **[LOW]** `considerations`: "Separately, OCS retailer agreements commonly require commercial general liability of at least $5 million per occurrence, with specified coverages and OCS named as an additional insured, before wholesale ordering — confirm the current agreement and certificate form rather than assuming every policy automatically matches." — Specific dollar amount cited — verify limit, deductible, or regulatory basis
+  - **[LOW]** `considerations`: "Separately, OCS retailer agreements commonly require commercial general liability of at least $5 million per occurrence, with specified coverages and OCS named as an additional insured, before wholesale ordering — confirm the current agreement and certificate form rather than assuming every policy automatically matches." — Specific numeric limit cited — verify basis if presented as fact
+  - **[LOW]** `faq`: "Current OCS retailer handbook materials describe commercial general liability of not less than $5 million per occurrence, including specified coverages such as non-owned automobile and products/completed operations, with OCS named as an additional insured / certificate holder before ordering." — Specific dollar amount cited — verify limit, deductible, or regulatory basis
+  - **[LOW]** `faq`: "Current OCS retailer handbook materials describe commercial general liability of not less than $5 million per occurrence, including specified coverages such as non-owned automobile and products/completed operations, with OCS named as an additional insured / certificate holder before ordering." — Specific numeric limit cited — verify basis if presented as fact
 
 ### /commercial-auto-insurance/
   - **[LOW]** `hero`: "Ontario automobile policies must include third-party liability of at least $200,000 per accident, uninsured automobile coverage, and — unless the named insured opts out using OPCF 49 — Direct Compensation Property Damage (DCPD)." — Specific dollar amount cited — verify limit, deductible, or regulatory basis
@@ -153,7 +161,7 @@
 
 | Class | Count | Routes |
 |-------|------:|--------|
-| A | 42 | /bonding-insurance/, /builders-developers-insurance/, /builders-risk-insurance/, /business-interruption-insurance/, /cargo-freight-insurance/, /commercial-auto-insurance/, /commercial-insurance/, /commercial-property-insurance/, /condominium-corporation-insurance/, /contractors-insurance/, /convenience-store-insurance/, /crime-fidelity-insurance/, /daycare-private-school-insurance/, /directors-officers-insurance/, /dump-truck-insurance/, /employment-practices-liability-insurance/, /event-liability-insurance/, /farm-insurance/, /fitness-gym-insurance/, /food-truck-insurance/, /garage-dealership-insurance/, /greenhouse-agribusiness-insurance/, /grocery-specialty-food-insurance/, /hotel-motel-insurance/, /liquor-liability-insurance/, /manufacturing-insurance/, /medical-dental-insurance/, /non-profit-insurance/, /pharmacy-insurance/, /pollution-liability-insurance/, /product-recall-insurance/, /professional-liability-insurance/, /professional-offices-insurance/, /property-management-insurance/, /real-estate-insurance/, /religious-organizations-insurance/, /restaurant-insurance/, /retail-insurance/, /salon-barber-insurance/, /small-business-insurance/, /trucking-insurance/, /warehousing-insurance/ |
+| A | 44 | /bonding-insurance/, /builders-developers-insurance/, /builders-risk-insurance/, /business-interruption-insurance/, /cannabis-producer-insurance/, /cannabis-retail-insurance/, /cargo-freight-insurance/, /commercial-auto-insurance/, /commercial-insurance/, /commercial-property-insurance/, /condominium-corporation-insurance/, /contractors-insurance/, /convenience-store-insurance/, /crime-fidelity-insurance/, /daycare-private-school-insurance/, /directors-officers-insurance/, /dump-truck-insurance/, /employment-practices-liability-insurance/, /event-liability-insurance/, /farm-insurance/, /fitness-gym-insurance/, /food-truck-insurance/, /garage-dealership-insurance/, /greenhouse-agribusiness-insurance/, /grocery-specialty-food-insurance/, /hotel-motel-insurance/, /liquor-liability-insurance/, /manufacturing-insurance/, /medical-dental-insurance/, /non-profit-insurance/, /pharmacy-insurance/, /pollution-liability-insurance/, /product-recall-insurance/, /professional-liability-insurance/, /professional-offices-insurance/, /property-management-insurance/, /real-estate-insurance/, /religious-organizations-insurance/, /restaurant-insurance/, /retail-insurance/, /salon-barber-insurance/, /small-business-insurance/, /trucking-insurance/, /warehousing-insurance/ |
 | B | 16 | /auto-insurance/, /boat-insurance/, /condo-insurance/, /cottage-insurance/, /cyber-insurance/, /group-home-auto-insurance/, /home-insurance/, /home-sharing-insurance/, /landlord-insurance/, /landscaping-snow-removal-insurance/, /life-insurance/, /mobile-home-insurance/, /motorcycle-insurance/, /personal-umbrella-insurance/, /tenant-insurance/, /travel-insurance/ |
 | C | 0 |  |
 | D | 0 |  |
