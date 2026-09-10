@@ -8,25 +8,25 @@ export const PILOT_HERO_IMAGE = {
 } as const;
 
 export const PILOT_FILMSTRIP_IMAGE = {
-  quality: 85,
+  quality: 90,
   /** Card ~220px; 280px sizes hint pulls 384px+ srcset for crisp 1x/2x delivery. */
   sizes: "(max-width: 767px) 200px, 360px",
 } as const;
 
 export const PILOT_CHIP_IMAGE = {
-  quality: 85,
+  quality: 90,
   /** 44px chip thumbnail at 2x DPR. */
   sizes: "88px",
 } as const;
 
 export const PILOT_YEP_TILE_IMAGE = {
-  quality: 85,
+  quality: 90,
   /** ~96px photo at 2x DPR inside premium media tiles. */
   sizes: "192px",
 } as const;
 
 export const PILOT_COMMERCIAL_PANEL_IMAGE = {
-  quality: 85,
+  quality: 90,
   sizes: "(max-width: 1024px) 100vw, 720px",
 } as const;
 
@@ -36,7 +36,7 @@ export const PILOT_AUTO_HERO_IMAGE = {
 } as const;
 
 export const PILOT_AUTO_RELATED_IMAGE = {
-  quality: 85,
+  quality: 90,
   sizes: "(max-width: 767px) 240px, 400px",
 } as const;
 

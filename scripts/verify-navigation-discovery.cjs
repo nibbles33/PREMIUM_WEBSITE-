@@ -78,6 +78,7 @@ const businessSrc = read("src/data/nav-business.ts");
 const personalSrc = read("src/data/nav-personal.ts");
 const agricultureSrc = read("src/data/nav-agriculture.ts");
 const homeSrc = read("src/data/pilot-home.ts");
+const taxonomySrc = read("src/data/homepage-category-taxonomy.ts");
 const footerSrc = read("src/components/Footer.tsx");
 const hubSrc = read("src/data/commercial-industries.ts");
 const relatedSrc = read("src/lib/buildPilotProductConfig.ts");
@@ -94,11 +95,26 @@ const agricultureItems = extractLabeledHrefs(
   agricultureSrc.slice(agricultureSrc.indexOf("export const agricultureNavLinks")),
 );
 
+function extractTaxonomyHomeItems(source) {
+  const start = source.indexOf("export const HOMEPAGE_CATEGORY_ASSIGNMENTS");
+  const end = source.indexOf("export type HomepageCategoryProduct", start);
+  const block = source.slice(start, end);
+  const items = [];
+  const catRe = /(\w+):\s*\[([\s\S]*?)\],/g;
+  let catMatch;
+  while ((catMatch = catRe.exec(block))) {
+    for (const href of catMatch[2].matchAll(/"(\/[^"]+\/)"/g)) {
+      items.push({ label: href[1], href: href[1] });
+    }
+  }
+  return items;
+}
+
 const categoryBlock = homeSrc.slice(
   homeSrc.indexOf("export const commercialCategories"),
   homeSrc.indexOf("export type BreadthItem"),
 );
-const homeItems = extractLabeledHrefs(categoryBlock);
+const homeItems = extractTaxonomyHomeItems(taxonomySrc);
 const filmstripItems = extractLabeledHrefs(
   homeSrc.slice(
     homeSrc.indexOf("export const personalFilmstripItems"),
@@ -223,15 +239,26 @@ const categoryIds = [
   "community",
   "specialty",
 ];
+function extractTaxonomyCategoryItems(source, categoryId) {
+  const start = source.indexOf("export const HOMEPAGE_CATEGORY_ASSIGNMENTS");
+  const end = source.indexOf("export type HomepageCategoryProduct", start);
+  const block = source.slice(start, end);
+  const catStart = block.indexOf(`${categoryId}:`);
+  if (catStart < 0) return [];
+  const slice = block.slice(
+    catStart,
+    block.indexOf("],", catStart) + 2,
+  );
+  return [...slice.matchAll(/"(\/[^"]+\/)"/g)].map((m) => ({
+    label: m[1],
+    href: m[1],
+  }));
+}
+
 for (let i = 0; i < categoryIds.length; i += 1) {
-  const start = categoryBlock.indexOf(`id: "${categoryIds[i]}"`);
-  const end =
-    i + 1 < categoryIds.length
-      ? categoryBlock.indexOf(`id: "${categoryIds[i + 1]}"`)
-      : categoryBlock.length;
   collectSurface(
     `homepage-${categoryIds[i]}`,
-    extractLabeledHrefs(categoryBlock.slice(start, end)),
+    extractTaxonomyCategoryItems(taxonomySrc, categoryIds[i]),
   );
 }
 collectSurface("homepage-filmstrip", filmstripItems);

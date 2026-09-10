@@ -1,3 +1,7 @@
+import {
+  getHomepageCategoryProducts,
+  type HomepageCategoryId,
+} from "@/data/homepage-category-taxonomy";
 import { getPageHeroPhotography } from "@/data/photography";
 
 export type FilmstripItem = {
@@ -30,7 +34,7 @@ export type CommercialCategory = {
   products: { label: string; href: string }[];
 };
 
-export const commercialCategories: CommercialCategory[] = [
+const commercialCategoryMeta: Omit<CommercialCategory, "products">[] = [
   {
     id: "transportation",
     label: "Transportation",
@@ -38,13 +42,6 @@ export const commercialCategories: CommercialCategory[] = [
       "Trucking, commercial auto, cargo, and garage coverage for Windsor-Essex operators.",
     photoSlug: "trucking-insurance",
     href: "/commercial-auto-insurance/",
-    products: [
-      { label: "Trucking", href: "/trucking-insurance/" },
-      { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
-      { label: "Dump Truck", href: "/dump-truck-insurance/" },
-      { label: "Cargo / Freight", href: "/cargo-freight-insurance/" },
-      { label: "Garage / Dealership", href: "/garage-dealership-insurance/" },
-    ],
   },
   {
     id: "construction",
@@ -53,12 +50,6 @@ export const commercialCategories: CommercialCategory[] = [
       "General liability, tools, and project coverage for contractors and trades.",
     photoSlug: "contractors-insurance",
     href: "/contractors-insurance/",
-    products: [
-      { label: "Contractors", href: "/contractors-insurance/" },
-      { label: "Builders & Developers", href: "/builders-developers-insurance/" },
-      { label: "Builder's Risk", href: "/builders-risk-insurance/" },
-      { label: "Surety Bonds", href: "/bonding-insurance/" },
-    ],
   },
   {
     id: "property",
@@ -67,12 +58,6 @@ export const commercialCategories: CommercialCategory[] = [
       "Buildings, contents, and income protection for business property.",
     photoSlug: "commercial-property-insurance",
     href: "/commercial-property-insurance/",
-    products: [
-      { label: "Commercial Property", href: "/commercial-property-insurance/" },
-      { label: "Property Management", href: "/property-management-insurance/" },
-      { label: "Condo Corporation", href: "/condominium-corporation-insurance/" },
-      { label: "Warehousing", href: "/warehousing-insurance/" },
-    ],
   },
   {
     id: "manufacturing",
@@ -81,12 +66,6 @@ export const commercialCategories: CommercialCategory[] = [
       "Production facilities, licensed cannabis production, and industrial specialty coverage.",
     photoSlug: "manufacturing-insurance",
     href: "/manufacturing-insurance/",
-    products: [
-      { label: "Manufacturing", href: "/manufacturing-insurance/" },
-      { label: "Cannabis Producer", href: "/cannabis-producer-insurance/" },
-      { label: "Product Recall", href: "/product-recall-insurance/" },
-      { label: "Pollution Liability", href: "/pollution-liability-insurance/" },
-    ],
   },
   {
     id: "hospitality",
@@ -95,12 +74,6 @@ export const commercialCategories: CommercialCategory[] = [
       "Restaurants, hotels, food trucks, and food service operations.",
     photoSlug: "restaurant-insurance",
     href: "/restaurant-insurance/",
-    products: [
-      { label: "Restaurants", href: "/restaurant-insurance/" },
-      { label: "Food Truck / Trailer", href: "/food-truck-insurance/" },
-      { label: "Hotel / Motel", href: "/hotel-motel-insurance/" },
-      { label: "Liquor Liability", href: "/liquor-liability-insurance/" },
-    ],
   },
   {
     id: "professional",
@@ -109,12 +82,6 @@ export const commercialCategories: CommercialCategory[] = [
       "Offices, real estate, directors & officers, and professional liability coverage.",
     photoSlug: "professional-offices-insurance",
     href: "/professional-offices-insurance/",
-    products: [
-      { label: "Professional Offices", href: "/professional-offices-insurance/" },
-      { label: "Real Estate", href: "/real-estate-insurance/" },
-      { label: "Professional Liability", href: "/professional-liability-insurance/" },
-      { label: "Directors & Officers", href: "/directors-officers-insurance/" },
-    ],
   },
   {
     id: "retail",
@@ -123,12 +90,6 @@ export const commercialCategories: CommercialCategory[] = [
       "Storefronts, grocery, convenience, and licensed cannabis retail operations.",
     photoSlug: "retail-insurance",
     href: "/retail-insurance/",
-    products: [
-      { label: "Retail", href: "/retail-insurance/" },
-      { label: "Convenience / Gas", href: "/convenience-store-insurance/" },
-      { label: "Grocery / Bakery", href: "/grocery-specialty-food-insurance/" },
-      { label: "Cannabis Retail", href: "/cannabis-retail-insurance/" },
-    ],
   },
   {
     id: "health",
@@ -137,12 +98,6 @@ export const commercialCategories: CommercialCategory[] = [
       "Medical, dental, pharmacy, fitness, and salon operations.",
     photoSlug: "professional-offices-insurance",
     href: "/medical-dental-insurance/",
-    products: [
-      { label: "Medical & Dental", href: "/medical-dental-insurance/" },
-      { label: "Pharmacy", href: "/pharmacy-insurance/" },
-      { label: "Fitness / Gym", href: "/fitness-gym-insurance/" },
-      { label: "Salon / Barber", href: "/salon-barber-insurance/" },
-    ],
   },
   {
     id: "community",
@@ -151,11 +106,6 @@ export const commercialCategories: CommercialCategory[] = [
       "Non-profits, religious organizations, and community groups.",
     photoSlug: "commercial-insurance",
     href: "/non-profit-insurance/",
-    products: [
-      { label: "Non-Profit", href: "/non-profit-insurance/" },
-      { label: "Religious Organizations", href: "/religious-organizations-insurance/" },
-      { label: "Daycare / School", href: "/daycare-private-school-insurance/" },
-    ],
   },
   {
     id: "specialty",
@@ -164,15 +114,15 @@ export const commercialCategories: CommercialCategory[] = [
       "Cyber, crime, surety, and licensed cannabis specialty coverage.",
     photoSlug: "bonding-insurance",
     href: "/cyber-insurance/",
-    products: [
-      { label: "Cyber", href: "/cyber-insurance/" },
-      { label: "Crime & Fidelity", href: "/crime-fidelity-insurance/" },
-      { label: "Surety Bonds", href: "/bonding-insurance/" },
-      { label: "Cannabis Retail", href: "/cannabis-retail-insurance/" },
-      { label: "Cannabis Producer", href: "/cannabis-producer-insurance/" },
-    ],
   },
 ];
+
+export const commercialCategories: CommercialCategory[] = commercialCategoryMeta.map(
+  (category) => ({
+    ...category,
+    products: getHomepageCategoryProducts(category.id as HomepageCategoryId),
+  }),
+);
 
 export type BreadthItem = {
   slot: import("@/components/pilot/MiniatureObject").MiniatureSlot;

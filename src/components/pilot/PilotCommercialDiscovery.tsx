@@ -80,6 +80,11 @@ export default function PilotCommercialDiscovery() {
         transition: "opacity 280ms ease-out, transform 280ms cubic-bezier(0.22, 1, 0.36, 1)",
       };
 
+  const productGridClass =
+    active.products.length > 4
+      ? "grid grid-cols-1 gap-3 lg:grid-cols-2"
+      : "grid grid-cols-1 gap-3";
+
   return (
     <section
       className="bg-charcoal py-12 sm:py-14 lg:py-16"
@@ -143,14 +148,14 @@ export default function PilotCommercialDiscovery() {
             className="pilot-commercial-panel overflow-hidden rounded-2xl border border-white/10 bg-[#2a3132]"
           >
             <div
-              className={`grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] ${
+              className={`grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:items-stretch ${
                 panelVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-2 opacity-0"
               }`}
               style={panelStyle}
             >
-              <div className="relative aspect-[16/10] min-h-[220px] lg:aspect-auto lg:min-h-[320px]">
+              <div className="relative aspect-[16/10] min-h-[220px] overflow-hidden lg:aspect-auto lg:min-h-full lg:self-stretch">
                 {photo ? (
                   <Image
                     src={photo.src}
@@ -158,7 +163,7 @@ export default function PilotCommercialDiscovery() {
                     fill
                     sizes={PILOT_COMMERCIAL_PANEL_IMAGE.sizes}
                     quality={PILOT_COMMERCIAL_PANEL_IMAGE.quality}
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
                 ) : null}
                 <div className="absolute inset-0 bg-gradient-to-r from-charcoal/60 via-charcoal/20 to-transparent lg:from-charcoal/40" />
@@ -172,18 +177,18 @@ export default function PilotCommercialDiscovery() {
                 </div>
               </div>
 
-              <div className="flex flex-col justify-between p-6 sm:p-8">
-                <ul className="space-y-3">
+              <div className="flex min-w-0 flex-col p-6 sm:p-8">
+                <ul className={productGridClass}>
                   {active.products.map((product) => (
-                    <li key={product.href}>
+                    <li key={product.href} className="min-w-0">
                       <Link
                         href={product.href}
-                        className="group flex items-center justify-between rounded-lg border border-white/10 bg-charcoal/60 px-4 py-3 text-[14px] font-medium text-white transition-colors hover:border-gold/45 hover:bg-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-[15px]"
+                        className="group flex h-full min-h-[44px] items-center justify-between rounded-lg border border-white/10 bg-charcoal/60 px-4 py-3 text-[14px] font-medium text-white transition-colors hover:border-gold/45 hover:bg-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-[15px]"
                       >
-                        {product.label}
+                        <span className="min-w-0 pr-3">{product.label}</span>
                         <span
                           aria-hidden
-                          className="text-gold transition-transform duration-200 group-hover:translate-x-1"
+                          className="shrink-0 text-gold transition-transform duration-200 group-hover:translate-x-1"
                         >
                           →
                         </span>
@@ -191,7 +196,7 @@ export default function PilotCommercialDiscovery() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-6 flex shrink-0 flex-col gap-3 sm:flex-row">
                   <PremiumPilotButton
                     href={active.href}
                     className="w-full sm:w-auto"

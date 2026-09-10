@@ -1,9 +1,17 @@
 import { Resend } from "resend";
-import { getResendFrom } from "@/lib/email/resendConfig";
+import {
+  getResendFrom,
+  getResendFromEmail,
+  isUsingResendSandboxSender,
+} from "@/lib/email/resendConfig";
 import type { NormalizedLead } from "./validate";
 import { CATEGORY_LABELS } from "./types";
 
-const NOTIFY_TO = "info@premiumib.com";
+const DEFAULT_NOTIFY_TO = "info@premiumib.com";
+
+function getQuoteNotifyTo(): string {
+  return process.env.QUOTE_NOTIFY_TO?.trim() || DEFAULT_NOTIFY_TO;
+}
 
 function formatAnswers(answers: Record<string, string>): string {
   const skip = new Set([
@@ -29,12 +37,22 @@ export async function sendLeadNotification(
   leadId: string,
 ): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
+  const fromEmail = getResendFromEmail();
+  const notifyTo = getQuoteNotifyTo();
+
   if (!apiKey) {
     console.warn(
       "[quote-submit] RESEND_API_KEY is not set — skipping email notification. Lead was saved.",
-      { leadId, category: lead.category },
+      { leadId, category: lead.category, notifyTo, fromEmail },
     );
     return false;
+  }
+
+  if (isUsingResendSandboxSender()) {
+    console.warn(
+      "[quote-submit] Using Resend sandbox FROM (onboarding@resend.dev). Delivery to production inboxes is unreliable until RESEND_FROM_EMAIL is a verified domain address.",
+      { leadId, fromEmail, notifyTo },
+    );
   }
 
   try {
@@ -58,23 +76,27 @@ export async function sendLeadNotification(
 
     const { error } = await resend.emails.send({
       from: getResendFrom("PremiumIB Quotes"),
-      to: [NOTIFY_TO],
+      to: [notifyTo],
       replyTo: lead.email,
       subject,
       text,
     });
 
     if (error) {
-      console.error("[quote-submit] Resend API error", {
+      console.error("[quote-submit] Resend API error — lead remains saved", {
         leadId,
+        notifyTo,
+        fromEmail,
         error,
       });
       return false;
     }
     return true;
   } catch (err) {
-    console.error("[quote-submit] Resend send failed", {
+    console.error("[quote-submit] Resend send failed — lead remains saved", {
       leadId,
+      notifyTo,
+      fromEmail,
       err,
     });
     return false;

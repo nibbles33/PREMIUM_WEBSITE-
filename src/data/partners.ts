@@ -305,9 +305,23 @@ export const allPartners: PartnerLogo[] = [
 const coreMarketNames = new Set(homepageCarriers.map((p) => p.name));
 
 /**
- * Partners page groups — derived from repo data only (no inferred insurer taxonomy).
- * Core Markets = homepage marquee curation; everything else stays in Our Markets
- * until owner-supplied Personal / Commercial / Specialty / MGA classifications exist.
+ * Public Partners directory — one unified collection (no Core vs Markets split).
+ * Deduplicates by partner name while preserving allPartners order.
+ */
+export function getPublicPartners(): PartnerLogo[] {
+  const seen = new Set<string>();
+  const partners: PartnerLogo[] = [];
+  for (const partner of allPartners) {
+    if (seen.has(partner.name)) continue;
+    seen.add(partner.name);
+    partners.push(partner);
+  }
+  return partners;
+}
+
+/**
+ * @deprecated Prefer getPublicPartners() for visitor-facing UI.
+ * Kept for any internal tooling that still needs the curated/marquee split.
  */
 export function getPartnerGroups(): PartnerGroup[] {
   const core = allPartners.filter((p) => coreMarketNames.has(p.name));
