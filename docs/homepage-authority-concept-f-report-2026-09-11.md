@@ -3,7 +3,7 @@
 **Date:** 2026-09-11 (completed 2026-09-12 UTC)  
 **Branch:** `cursor/homepage-authority-concept-f`  
 **Base:** `origin/main` @ `f74d5d8afb635bd7a86dee08950d2551bee7d5e5`  
-**Commit SHA:** `fb0af74c76aec2e5d39514d66d7c9ea882146290`  
+**Commit SHA:** `687cf9e2dccb25683db91b326e24527e7ab1a988`
 **Worktree note:** branch tracks feature work only; not merged.
 
 ---
