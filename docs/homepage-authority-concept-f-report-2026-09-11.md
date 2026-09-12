@@ -3,7 +3,7 @@
 **Date:** 2026-09-11 (completed 2026-09-12 UTC)  
 **Branch:** `cursor/homepage-authority-concept-f`  
 **Base:** `origin/main` @ `f74d5d8afb635bd7a86dee08950d2551bee7d5e5`  
-**Commit SHA:** `32a06dfcdc6fe20f21c7747e588a6c176ab0753f`  
+**Commit SHA:** `fb0af74c76aec2e5d39514d66d7c9ea882146290`  
 **Worktree note:** branch tracks feature work only; not merged.
 
 ---
@@ -213,6 +213,16 @@ Artifacts: `docs/qa-screenshots/homepage-authority-concept-f-2026-09-11/`
 ---
 
 ## Preview
+
+## Preview URL
+
+**Vercel CLI / token not available in this agent environment.**  
+If the GitHub ↔ Vercel integration is connected, a Preview deployment should appear automatically for branch `cursor/homepage-authority-concept-f`.
+
+Branch push URL: `https://github.com/nibbles33/PREMIUM_WEBSITE-/tree/cursor/homepage-authority-concept-f`
+
+**Do not promote Preview to Production.**
+
 
 If Vercel Preview creation is authenticated after push, Preview URL will be recorded below / in PR tooling.
 
