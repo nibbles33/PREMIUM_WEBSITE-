@@ -97,10 +97,13 @@ export default function PilotCommercialDiscovery() {
               id={`${baseId}-heading`}
               className="text-[1.75rem] font-medium tracking-[-0.02em] text-white sm:text-3xl lg:text-4xl"
             >
-              Whatever kind of business you run
+              Serious insurance for serious businesses.
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/65 sm:text-base">
-              Business gets complicated. Insurance doesn&apos;t have to.
+              From contractors and manufacturers to transportation, hospitality,
+              real estate, healthcare and specialty risks, Premium helps
+              businesses understand their exposures and build coverage around how
+              they actually operate.
             </p>
           </div>
         </RevealOnScroll>

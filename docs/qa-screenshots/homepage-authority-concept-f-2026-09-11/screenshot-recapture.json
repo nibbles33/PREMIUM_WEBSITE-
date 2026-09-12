@@ -1,0 +1,121 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "type": "full",
+      "viewport": "390",
+      "ok": true
+    },
+    {
+      "type": "full",
+      "viewport": "1440",
+      "ok": true
+    },
+    {
+      "type": "full",
+      "viewport": "1920",
+      "ok": true
+    },
+    {
+      "type": "full",
+      "viewport": "2560",
+      "ok": true
+    },
+    {
+      "id": "hero-authority",
+      "ok": true,
+      "x": 0,
+      "y": 102.5,
+      "width": 1440,
+      "height": 720
+    },
+    {
+      "id": "authority-strip",
+      "ok": true,
+      "x": 0,
+      "y": 822.5,
+      "width": 1440,
+      "height": 141
+    },
+    {
+      "id": "carrier",
+      "ok": true,
+      "x": 0,
+      "y": 963.5,
+      "width": 1440,
+      "height": 280.375
+    },
+    {
+      "id": "personal",
+      "ok": true,
+      "x": 0,
+      "y": 1243.875,
+      "width": 1440,
+      "height": 628.84375
+    },
+    {
+      "id": "commercial",
+      "ok": true,
+      "x": 0,
+      "y": 1872.71875,
+      "width": 1440,
+      "height": 695.5
+    },
+    {
+      "id": "why-premium",
+      "ok": true,
+      "x": 0,
+      "y": 2568.21875,
+      "width": 1440,
+      "height": 750.40625
+    },
+    {
+      "id": "yep",
+      "ok": true,
+      "x": 0,
+      "y": 3318.625,
+      "width": 1440,
+      "height": 442.59375
+    },
+    {
+      "id": "google",
+      "ok": true,
+      "x": 0,
+      "y": 3761.21875,
+      "width": 1440,
+      "height": 502.625
+    },
+    {
+      "id": "awards",
+      "ok": true,
+      "x": 0,
+      "y": 4263.84375,
+      "width": 1440,
+      "height": 384.5
+    },
+    {
+      "id": "windsor",
+      "ok": true,
+      "x": 0,
+      "y": 4648.34375,
+      "width": 1440,
+      "height": 501
+    },
+    {
+      "id": "team",
+      "ok": true,
+      "x": 0,
+      "y": 5149.34375,
+      "width": 1440,
+      "height": 828.5
+    },
+    {
+      "id": "final-cta",
+      "ok": true,
+      "x": 0,
+      "y": 5977.84375,
+      "width": 1440,
+      "height": 331
+    }
+  ]
+}

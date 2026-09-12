@@ -157,7 +157,7 @@ export default function PilotHomeHero() {
       <div className="relative z-10 mx-auto flex min-h-[min(82vh,720px)] max-w-6xl flex-col justify-center px-4 pb-12 pt-20 sm:px-6 lg:px-8 xl:max-w-7xl">
         <div className="max-w-xl">
           <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold sm:text-xs">
-            Windsor-Essex · Personal & Commercial
+            Proudly serving Windsor-Essex · A Division of Oracle RMS
           </p>
           <h1
             id="pilot-hero-heading"
@@ -172,6 +172,9 @@ export default function PilotHomeHero() {
           <p className="mt-4 max-w-md text-base leading-relaxed text-white/80 sm:text-lg">
             Personal, commercial, and specialty coverage through real Windsor-Essex
             brokers — not a call centre.
+          </p>
+          <p className="mt-3 text-[13px] font-medium tracking-[0.02em] text-white/55">
+            Real brokers. Real advice.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <PremiumPilotButton href={QUOTE_HREF}>Get a Quote</PremiumPilotButton>

@@ -66,6 +66,7 @@ export default function PilotLocalProof() {
 
   return (
     <section
+      id="awards-heading"
       className="pilot-section-awards relative overflow-hidden border-t border-border bg-[#FBF5E5] py-10 sm:py-12"
       aria-labelledby="pilot-local-heading"
     >
@@ -76,11 +77,10 @@ export default function PilotLocalProof() {
               id="pilot-local-heading"
               className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
             >
-              Built here. Recognized here.
+              Recognized locally. Recognized nationally.
             </h2>
             <p className="mt-2 text-[14px] leading-relaxed text-secondary sm:text-[15px]">
-              Windsor-Essex since 2019 — community and industry recognition that
-              speaks for itself.
+              Recognition from our community and the Canadian insurance industry.
             </p>
           </div>
         </RevealOnScroll>

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { useTransformInfiniteRail } from "@/hooks/useTransformInfiniteRail";
+import { HOMEPAGE_AUTHORITY } from "@/data/homepage-authority";
 import {
   getFilmstripPhoto,
   personalFilmstripItems,
@@ -110,6 +111,10 @@ export default function PilotPersonalFilmstrip() {
               </h2>
               <p className="mt-1.5 text-[14px] leading-relaxed text-secondary">
                 A lot to protect? Good thing we have options.
+              </p>
+              <p className="mt-3 inline-flex items-center rounded-full border border-border/80 bg-white/70 px-3.5 py-1.5 text-[12px] font-medium tracking-[0.02em] text-charcoal/85 sm:text-[13px]">
+                <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-gold" aria-hidden />
+                {HOMEPAGE_AUTHORITY.homesCovered.annotation}
               </p>
             </div>
             <PremiumPilotButton

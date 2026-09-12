@@ -51,11 +51,11 @@ export default function PilotCarrierMarquee() {
             id="pilot-carriers-heading"
             className="text-xl font-medium tracking-[-0.02em] text-charcoal sm:text-2xl"
           >
-            One broker. Multiple markets.
+            More markets. More choice.
           </h2>
           <p className="mt-2 text-[14px] leading-relaxed text-secondary sm:text-[15px]">
-            Access major personal lines and specialty commercial programs through
-            one independent Windsor-Essex broker.
+            We work with leading Canadian insurers to compare coverage options for
+            your home, vehicles and business.
           </p>
           <Link
             href="/partners/"
