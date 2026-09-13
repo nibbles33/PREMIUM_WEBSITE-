@@ -292,13 +292,12 @@ PREMIUMIB.COM CHANGED: NO
 
 ## Preview URL
 
-**Vercel CLI / token not available in this agent environment.**  
-If the GitHub ↔ Vercel integration is connected, a Preview deployment should appear automatically for branch `cursor/homepage-authority-concept-f`.
+**Vercel Preview (Rev 2):** https://premium-website-3tyqkj6gx-nabil-g-s-projects.vercel.app  
 
-Branch push URL: `https://github.com/nibbles33/PREMIUM_WEBSITE-/tree/cursor/homepage-authority-concept-f`
+Deployment dashboard: https://vercel.com/nabil-g-s-projects/premium-website/ANcayf5McYK1FqP6y8rwTm5D8VFH  
+
+Branch: `cursor/homepage-authority-concept-f` @ `61d5c0d`
 
 **Do not promote Preview to Production.**
-
-If Vercel Preview creation is authenticated after push, Preview URL will be recorded below / in PR tooling.
 
 **Do not promote to Production. Do not merge to main without explicit owner approval.**
