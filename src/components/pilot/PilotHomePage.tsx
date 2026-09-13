@@ -8,14 +8,14 @@ import PilotGoogleReviews from "@/components/pilot/PilotGoogleReviews";
 import PilotHomeHero from "@/components/pilot/PilotHomeHero";
 import PilotLocalProof from "@/components/pilot/PilotLocalProof";
 import PilotPersonalFilmstrip from "@/components/pilot/PilotPersonalFilmstrip";
-import PilotTeamCredibility from "@/components/pilot/PilotTeamCredibility";
 import PilotWhyPremium from "@/components/pilot/PilotWhyPremium";
 import PilotWindsorOracle from "@/components/pilot/PilotWindsorOracle";
 import { fetchGooglePlaceRating } from "@/lib/google/places";
 
 /**
- * Homepage Authority Concept F — Premium Actual.
- * Preserves existing rails/interactions; adds institutional credibility layers.
+ * Homepage Authority Concept F — Revision 2 (Premium Actual).
+ * Stronger editorial composition; preserves working rails/products.
+ * Team directory intentionally omitted from homepage.
  */
 export default async function PilotHomePage() {
   const googleRating = await fetchGooglePlaceRating();
@@ -25,7 +25,7 @@ export default async function PilotHomePage() {
       <Header />
       <main>
         <PilotHomeHero />
-        <PilotAuthorityStrip />
+        <PilotAuthorityStrip googleRating={googleRating} />
         <PilotCarrierMarquee />
         <PilotPersonalFilmstrip />
         <PilotCommercialDiscovery />
@@ -34,7 +34,6 @@ export default async function PilotHomePage() {
         <PilotGoogleReviews ratingResult={googleRating} />
         <PilotLocalProof />
         <PilotWindsorOracle />
-        <PilotTeamCredibility />
         <PilotFinalCta />
       </main>
     </>

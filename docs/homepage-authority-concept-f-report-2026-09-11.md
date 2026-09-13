@@ -212,6 +212,82 @@ Artifacts: `docs/qa-screenshots/homepage-authority-concept-f-2026-09-11/`
 
 ---
 
+---
+
+## OWNER VISUAL REVISION 2 (2026-09-12 / 2026-09-13)
+
+Owner rejected Revision 1 as **too conservative**. Revision 2 strengthens Concept F editorial composition and removes three homepage elements.
+
+### Removals (homepage only)
+1. **Team section** removed from homepage (`PilotTeamCredibility` no longer mounted). `/team/` page and assets retained.
+2. **2,400+ homes pill** removed from Personal filmstrip.
+3. **Oversized Oracle RMS authority cell** removed. Oracle remains in hero proof line + Windsor/Oracle story section.
+
+### Authority strip (4 cells)
+`2,700+ Clients` · `31+ Years` · `9 Awards` · **live Google rating + review count** (fallback CTA when Places API key missing — never presents baseline 4.7/82 as live).
+
+### Personal — editorial, no autoplay
+- Replaced conveyor autoplay with intentional scroll-snap editorial rail.
+- Navigation: arrows / pointer drag / touch swipe / keyboard.
+- All **14** Personal products remain discoverable (`a.pilot-filmstrip-frame`).
+- Desktop drag: prevent HTML5 `dragstart` steal + commit past CSS snap-back on release so card-nav rail-advance passes.
+- Reduced-motion: no CSS autoplay animation (`animation-name: none`).
+
+### Google Reviews — major full-width section
+- Charcoal editorial block (~450–550px desktop `min-h`).
+- Live rating/count when Places returns data; optional review cards only if API returns text (never fabricated).
+- Share URL CTA preserved.
+
+### Homepage order (Rev 2)
+Hero → Authority (w/ Google) → Carriers → Personal editorial → Commercial → Why Premium → Yep → **Large Google** → Awards → Windsor/Oracle → Final CTA  
+**No** team section.
+
+### Files touched (Rev 2)
+- `src/components/pilot/PilotHomePage.tsx`
+- `src/components/pilot/PilotAuthorityStrip.tsx`
+- `src/components/pilot/PilotPersonalFilmstrip.tsx`
+- `src/components/pilot/PilotGoogleReviews.tsx`
+- `src/components/pilot/PilotHomeHero.tsx`
+- `src/components/pilot/PilotCommercialDiscovery.tsx`
+- `src/components/pilot/PilotWhyPremium.tsx`
+- `src/components/pilot/PilotLocalProof.tsx`
+- `src/components/pilot/PilotWindsorOracle.tsx`
+- `src/components/pilot/PilotFinalCta.tsx`
+- `src/lib/google/places.ts` (optional reviews field mask)
+- `src/styles/pilot.css` (`.pilot-personal-editorial-*`)
+- `scripts/concept-f-rev2-qa.cjs`
+- `scripts/card-navigation-validate.cjs` (scrollLeft rail metrics for editorial filmstrip)
+- Screenshots: `docs/qa-screenshots/homepage-authority-concept-f-rev2-2026-09-12/`
+
+### QA gates (Rev 2 re-run)
+| Gate | Result |
+|------|--------|
+| Personal discovery 14/14 | **PASS** |
+| Commercial 10/10 · 54/54 | **PASS** |
+| Grades A44 / B16 / C0 / D0 | **PASS** |
+| Explorer 236/236 | **PASS** |
+| Carrier ultrawide | **PASS** |
+| Card-nav clicks 231/231 | **PASS** |
+| Card-nav desktop drag | **PASS** (3/3) |
+| Card-nav mobile (incl. Personal swipe) | **PASS** (6/6, 0 fail) |
+| SEO / legacy cutover | **PASS** |
+| Concept F Rev2 viewport QA + screenshots | **PASS** (`qa-results.json` ok) |
+
+### Still pending owner
+1. **9th award** — still not invented; 8 badge assets in repo.
+2. **`GOOGLE_PLACES_API_KEY`** — not set in this environment; Google cells/sections use fallback CTA.
+3. **Visual approval** of Revision 2 on Preview → then STOP (no merge / no Production).
+
+### Explicit stop-gate status (unchanged)
+
+```
+MERGED TO MAIN: NO
+VERCEL PRODUCTION DEPLOYED: NO
+PREMIUMIB.COM CHANGED: NO
+```
+
+---
+
 ## Preview
 
 ## Preview URL
@@ -223,13 +299,6 @@ Branch push URL: `https://github.com/nibbles33/PREMIUM_WEBSITE-/tree/cursor/home
 
 **Do not promote Preview to Production.**
 
-
 If Vercel Preview creation is authenticated after push, Preview URL will be recorded below / in PR tooling.
 
 **Do not promote to Production. Do not merge to main without explicit owner approval.**
-
-```
-MERGED TO MAIN: NO
-VERCEL PRODUCTION DEPLOYED: NO
-PREMIUMIB.COM CHANGED: NO
-```

@@ -3514,3 +3514,89 @@
     animation: none;
   }
 }
+
+/* ============================================================
+   Concept F Revision 2 — editorial Personal discovery (no autoplay)
+   ============================================================ */
+.pilot-personal-editorial-scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: max(1rem, calc((100vw - 80rem) / 2 + 1rem));
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  scrollbar-width: none;
+  touch-action: pan-x;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pilot-personal-editorial-scroller .pilot-filmstrip-frame,
+.pilot-personal-editorial-scroller img {
+  -webkit-user-drag: none;
+
+}
+
+.pilot-personal-editorial-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.pilot-personal-editorial-scroller.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+.pilot-personal-editorial-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  padding-inline: max(1rem, calc((100vw - 80rem) / 2 + 1rem));
+  padding-block: 0.25rem 0.75rem;
+}
+
+.pilot-personal-editorial-card {
+  scroll-snap-align: center;
+  flex: 0 0 min(78vw, 280px);
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 320ms ease;
+  opacity: 0.72;
+  transform: scale(0.96);
+}
+
+.pilot-personal-editorial-card.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (min-width: 640px) {
+  .pilot-personal-editorial-card {
+    flex-basis: min(46vw, 320px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pilot-personal-editorial-track {
+    gap: 1.25rem;
+  }
+
+  .pilot-personal-editorial-card {
+    flex-basis: min(28vw, 360px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .pilot-personal-editorial-card {
+    flex-basis: 380px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pilot-personal-editorial-card {
+    transition: none;
+  }
+
+  .pilot-personal-editorial-scroller {
+    scroll-behavior: auto;
+  }
+}

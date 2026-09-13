@@ -1,14 +1,22 @@
 /**
- * Server-side Google Places (New) rating fetch for homepage social proof.
+ * Server-side Google Places (New) fetch for homepage social proof.
  * Credentials stay on the server — never ship unrestricted keys to the browser.
  */
 
 import { HOMEPAGE_AUTHORITY } from "@/data/homepage-authority";
 
+export type GooglePlaceReview = {
+  authorName: string;
+  rating: number;
+  text: string;
+  relativeTime?: string;
+};
+
 export type GooglePlaceRatingLive = {
   status: "live";
   rating: number;
   reviewCount: number;
+  reviews: GooglePlaceReview[];
   fetchedAt: string;
 };
 
@@ -22,10 +30,11 @@ export type GooglePlaceRatingResult =
   | GooglePlaceRatingUnavailable;
 
 const PLACE_ID = HOMEPAGE_AUTHORITY.google.placeId;
-const FIELD_MASK = "rating,userRatingCount";
+/** rating + count always; reviews only when API returns authentic text */
+const FIELD_MASK = "rating,userRatingCount,reviews";
 
 /**
- * Fetch live Place rating + review count.
+ * Fetch live Place rating, review count, and optional review excerpts.
  * Cached via Next.js fetch revalidation (6 hours).
  */
 export async function fetchGooglePlaceRating(): Promise<GooglePlaceRatingResult> {
@@ -56,6 +65,12 @@ export async function fetchGooglePlaceRating(): Promise<GooglePlaceRatingResult>
     const data = (await response.json()) as {
       rating?: number;
       userRatingCount?: number;
+      reviews?: Array<{
+        rating?: number;
+        text?: { text?: string };
+        authorAttribution?: { displayName?: string };
+        relativePublishTimeDescription?: string;
+      }>;
     };
 
     const rating = data.rating;
@@ -76,10 +91,30 @@ export async function fetchGooglePlaceRating(): Promise<GooglePlaceRatingResult>
       return { status: "unavailable", reason: "invalid_payload" };
     }
 
+    const reviews: GooglePlaceReview[] = [];
+    for (const review of data.reviews ?? []) {
+      const text = review.text?.text?.trim() ?? "";
+      const authorName =
+        review.authorAttribution?.displayName?.trim() || "Google user";
+      const reviewRating =
+        typeof review.rating === "number" && Number.isFinite(review.rating)
+          ? review.rating
+          : 0;
+      if (!text || reviewRating <= 0) continue;
+      reviews.push({
+        authorName,
+        rating: reviewRating,
+        text,
+        relativeTime: review.relativePublishTimeDescription,
+      });
+      if (reviews.length >= 3) break;
+    }
+
     return {
       status: "live",
       rating,
       reviewCount,
+      reviews,
       fetchedAt: new Date().toISOString(),
     };
   } catch (err) {

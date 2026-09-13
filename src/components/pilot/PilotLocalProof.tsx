@@ -67,20 +67,24 @@ export default function PilotLocalProof() {
   return (
     <section
       id="awards-heading"
-      className="pilot-section-awards relative overflow-hidden border-t border-border bg-[#FBF5E5] py-10 sm:py-12"
+      className="pilot-section-awards relative overflow-hidden border-t border-border bg-[#FBF5E5] py-14 sm:py-16 lg:py-20"
       aria-labelledby="pilot-local-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
           <div className="mx-auto max-w-2xl text-center">
+            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark">
+              Awards &amp; recognition
+            </p>
             <h2
               id="pilot-local-heading"
-              className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+              className="mt-3 text-[2rem] font-medium tracking-[-0.03em] text-charcoal sm:text-[2.4rem]"
             >
               Recognized locally. Recognized nationally.
             </h2>
-            <p className="mt-2 text-[14px] leading-relaxed text-secondary sm:text-[15px]">
+            <p className="mt-4 text-[15px] leading-relaxed text-secondary sm:text-base">
               Recognition from our community and the Canadian insurance industry.
+              Layout reserved for a ninth award asset pending owner delivery.
             </p>
           </div>
         </RevealOnScroll>

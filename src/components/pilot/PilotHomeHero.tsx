@@ -154,14 +154,14 @@ export default function PilotHomeHero() {
 
       <div className="pilot-hero-road-immersive" aria-hidden />
 
-      <div className="relative z-10 mx-auto flex min-h-[min(82vh,720px)] max-w-6xl flex-col justify-center px-4 pb-12 pt-20 sm:px-6 lg:px-8 xl:max-w-7xl">
-        <div className="max-w-xl">
-          <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold sm:text-xs">
+      <div className="relative z-10 mx-auto flex min-h-[min(86vh,780px)] max-w-6xl flex-col justify-center px-4 pb-14 pt-22 sm:px-6 lg:px-8 xl:max-w-7xl">
+        <div className="max-w-2xl">
+          <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-gold sm:text-xs">
             Proudly serving Windsor-Essex · A Division of Oracle RMS
           </p>
           <h1
             id="pilot-hero-heading"
-            className="mt-3 text-[2.35rem] font-medium leading-[1.06] tracking-[-0.025em] text-white sm:mt-4 sm:text-5xl lg:text-[3.5rem]"
+            className="mt-4 text-[2.55rem] font-medium leading-[1.04] tracking-[-0.03em] text-white sm:mt-5 sm:text-5xl lg:text-[3.75rem]"
           >
             One place.
             <br />
@@ -169,11 +169,11 @@ export default function PilotHomeHero() {
             <br />
             <span className="text-gold">Surprisingly easy.</span>
           </h1>
-          <p className="mt-4 max-w-md text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="mt-5 max-w-lg text-base leading-relaxed text-white/80 sm:text-lg">
             Personal, commercial, and specialty coverage through real Windsor-Essex
             brokers — not a call centre.
           </p>
-          <p className="mt-3 text-[13px] font-medium tracking-[0.02em] text-white/55">
+          <p className="mt-4 text-[13px] font-medium tracking-[0.04em] text-white/55">
             Real brokers. Real advice.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">

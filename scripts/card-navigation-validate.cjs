@@ -133,6 +133,29 @@ async function clickHrefOnPage(page, target) {
   };
 }
 
+/** Rail metrics for legacy transform rails + editorial scrollLeft filmstrip. */
+async function readFilmstripRailMetrics(page) {
+  return page.evaluate(() => {
+    const viewport = document.querySelector(".pilot-filmstrip-viewport");
+    return {
+      progress:
+        document.querySelector(".pilot-filmstrip-progress-fill")?.style.width ?? null,
+      transform:
+        document.querySelector(".pilot-filmstrip-inner")?.style.transform ?? null,
+      scrollLeft: viewport ? Math.round(viewport.scrollLeft) : null,
+    };
+  });
+}
+
+function didRailAdvance(beforeRail, afterRail) {
+  if (!beforeRail || !afterRail) return false;
+  return (
+    beforeRail.progress !== afterRail.progress ||
+    beforeRail.transform !== afterRail.transform ||
+    beforeRail.scrollLeft !== afterRail.scrollLeft
+  );
+}
+
 async function desktopDragTest(
   page,
   selector,
@@ -149,12 +172,7 @@ async function desktopDragTest(
   const el = await page.$(selector);
   if (!el) return { ok: false, error: "element-not-found", action, finalUrl: page.url() };
 
-  const beforeRail = verifyRailAdvance
-    ? await page.evaluate(() => ({
-        progress: document.querySelector(".pilot-filmstrip-progress-fill")?.style.width ?? null,
-        transform: document.querySelector(".pilot-filmstrip-inner")?.style.transform ?? null,
-      }))
-    : null;
+  const beforeRail = verifyRailAdvance ? await readFilmstripRailMetrics(page) : null;
 
   const box = await el.boundingBox();
   if (!box) return { ok: false, error: "no-bounding-box", action, finalUrl: page.url() };
@@ -167,18 +185,10 @@ async function desktopDragTest(
   await page.mouse.up();
   await new Promise((r) => setTimeout(r, 400));
 
-  const afterRail = verifyRailAdvance
-    ? await page.evaluate(() => ({
-        progress: document.querySelector(".pilot-filmstrip-progress-fill")?.style.width ?? null,
-        transform: document.querySelector(".pilot-filmstrip-inner")?.style.transform ?? null,
-      }))
-    : null;
+  const afterRail = verifyRailAdvance ? await readFilmstripRailMetrics(page) : null;
 
   const stayed = page.url().includes(stayPathFragment);
-  const railAdvanced =
-    !verifyRailAdvance ||
-    beforeRail?.progress !== afterRail?.progress ||
-    beforeRail?.transform !== afterRail?.transform;
+  const railAdvanced = !verifyRailAdvance || didRailAdvance(beforeRail, afterRail);
 
   return {
     ok: stayed && railAdvanced,
@@ -271,12 +281,7 @@ async function mobileSwipeTest(
   const el = await page.$(trackSelector);
   if (!el) return { ok: false, error: "track-not-found", finalUrl: page.url() };
 
-  const beforeRail = verifyRailAdvance
-    ? await page.evaluate(() => ({
-        progress: document.querySelector(".pilot-filmstrip-progress-fill")?.style.width ?? null,
-        transform: document.querySelector(".pilot-filmstrip-inner")?.style.transform ?? null,
-      }))
-    : null;
+  const beforeRail = verifyRailAdvance ? await readFilmstripRailMetrics(page) : null;
 
   const box = await el.boundingBox();
   if (!box) return { ok: false, error: "no-bounding-box", finalUrl: page.url() };
@@ -293,18 +298,10 @@ async function mobileSwipeTest(
   await page.touchscreen.touchEnd();
   await new Promise((r) => setTimeout(r, 400));
 
-  const afterRail = verifyRailAdvance
-    ? await page.evaluate(() => ({
-        progress: document.querySelector(".pilot-filmstrip-progress-fill")?.style.width ?? null,
-        transform: document.querySelector(".pilot-filmstrip-inner")?.style.transform ?? null,
-      }))
-    : null;
+  const afterRail = verifyRailAdvance ? await readFilmstripRailMetrics(page) : null;
 
   const stayed = page.url().includes(stayPathFragment);
-  const railAdvanced =
-    !verifyRailAdvance ||
-    beforeRail?.progress !== afterRail?.progress ||
-    beforeRail?.transform !== afterRail?.transform;
+  const railAdvanced = !verifyRailAdvance || didRailAdvance(beforeRail, afterRail);
 
   return {
     ok: stayed && railAdvanced,

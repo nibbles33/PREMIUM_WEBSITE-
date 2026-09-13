@@ -87,19 +87,22 @@ export default function PilotCommercialDiscovery() {
 
   return (
     <section
-      className="bg-charcoal py-12 sm:py-14 lg:py-16"
+      className="bg-charcoal py-16 sm:py-20 lg:py-24"
       aria-labelledby={`${baseId}-heading`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold">
+              Commercial capability
+            </p>
             <h2
               id={`${baseId}-heading`}
-              className="text-[1.75rem] font-medium tracking-[-0.02em] text-white sm:text-3xl lg:text-4xl"
+              className="mt-4 text-[2rem] font-medium tracking-[-0.03em] text-white sm:text-[2.5rem] lg:text-[3rem]"
             >
               Serious insurance for serious businesses.
             </h2>
-            <p className="mt-4 text-[15px] leading-relaxed text-white/65 sm:text-base">
+            <p className="mt-5 text-[15px] leading-relaxed text-white/65 sm:text-lg">
               From contractors and manufacturers to transportation, hospitality,
               real estate, healthcare and specialty risks, Premium helps
               businesses understand their exposures and build coverage around how
