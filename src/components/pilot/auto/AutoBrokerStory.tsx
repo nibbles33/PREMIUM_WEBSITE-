@@ -6,29 +6,29 @@ import { autoBrokerSteps } from "@/data/pilot-auto";
 export default function AutoBrokerStory() {
   return (
     <section
-      className="pilot-auto-broker-section border-b border-border bg-[#F3EBD4] py-16 sm:py-20 lg:py-24"
+      className="pilot-auto-broker-section border-b border-border bg-[#F3EBD4] py-12 sm:py-16 lg:py-[4.5rem]"
       aria-labelledby="pilot-auto-broker-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
-          <div className="mx-auto max-w-2xl text-center lg:max-w-3xl">
+          <div className="mx-auto max-w-3xl text-center lg:max-w-4xl">
             <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-gold-dark">
               The Premium difference
             </p>
             <h2
               id="pilot-auto-broker-heading"
-              className="mt-3 text-[1.75rem] font-medium leading-[1.08] tracking-[-0.03em] text-charcoal sm:text-4xl lg:text-[2.75rem]"
+              className="mt-3 text-[1.85rem] font-medium leading-[1.08] tracking-[-0.03em] text-charcoal sm:text-[2.35rem] lg:text-[2.75rem]"
             >
               Why a broker?
             </h2>
-            <p className="mt-4 text-[15px] leading-relaxed text-secondary sm:text-base lg:text-lg">
+            <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-secondary sm:text-base lg:text-lg">
               One relationship. Multiple markets. Coverage explained in plain
               language.
             </p>
           </div>
         </RevealOnScroll>
 
-        <div className="pilot-auto-broker-flow mt-12 lg:mt-14">
+        <div className="pilot-auto-broker-flow mt-10 lg:mt-12">
           <svg
             className="pilot-auto-broker-path"
             viewBox="0 0 1000 24"

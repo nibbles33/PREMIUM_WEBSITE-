@@ -24,19 +24,19 @@ export default function ProductRelatedProducts({
 }: ProductRelatedProductsProps) {
   return (
     <section
-      className="border-b border-border bg-[#FBF5E5] py-12 sm:py-14 lg:py-16"
+      className="border-b border-border bg-[#FBF5E5] py-11 sm:py-12 lg:py-14"
       aria-labelledby="pilot-product-related-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
-          <div className="max-w-xl lg:max-w-2xl">
+          <div className="max-w-2xl lg:max-w-3xl">
             <h2
               id="pilot-product-related-heading"
-              className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-[1.65rem] lg:text-3xl"
+              className="text-[1.65rem] font-medium tracking-[-0.025em] text-charcoal sm:text-[1.85rem] lg:text-[2.1rem]"
             >
               {heading}
             </h2>
-            <p className="mt-2 text-[14px] leading-relaxed text-secondary sm:text-[15px] lg:text-base">
+            <p className="mt-2 max-w-prose text-[14px] leading-relaxed text-secondary sm:text-[15px] lg:text-base">
               {intro}
             </p>
           </div>

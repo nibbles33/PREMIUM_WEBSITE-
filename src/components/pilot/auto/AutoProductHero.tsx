@@ -88,11 +88,11 @@ export default function AutoProductHero() {
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20 xl:max-w-7xl">
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-14">
+      <div className="relative mx-auto max-w-6xl px-4 py-11 sm:px-6 sm:py-14 lg:px-8 lg:py-[4.25rem] xl:max-w-7xl">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-14">
           <RevealOnScroll>
             <div
-              className="max-w-xl"
+              className="max-w-xl lg:max-w-[34rem]"
               style={{
                 transform: `translate3d(${copyShiftX}px, 0, 0)`,
               }}
@@ -102,15 +102,15 @@ export default function AutoProductHero() {
               </p>
               <h1
                 id="pilot-auto-hero-heading"
-                className="mt-3 text-[2.25rem] font-medium leading-[1.06] tracking-[-0.03em] text-charcoal sm:text-5xl lg:text-[3.35rem]"
+                className="mt-3 text-[2.4rem] font-medium leading-[1.05] tracking-[-0.032em] text-charcoal sm:text-[3rem] lg:text-[3.5rem]"
               >
                 Auto Insurance
               </h1>
-              <p className="mt-4 text-[15px] leading-relaxed text-secondary sm:text-base lg:text-lg">
+              <p className="mt-4 max-w-prose text-[15px] leading-relaxed text-secondary sm:text-base lg:text-[1.125rem] lg:leading-[1.65]">
                 Your car gets you everywhere. Let&apos;s make sure it&apos;s
                 properly protected — without the runaround.
               </p>
-              <p className="mt-3 text-[14px] leading-relaxed text-secondary/90">
+              <p className="mt-3 max-w-prose text-[14px] leading-relaxed text-secondary/90 sm:text-[15px]">
                 Compare Ontario auto options through an independent broker who
                 explains what you&apos;re actually buying.
               </p>

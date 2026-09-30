@@ -83,10 +83,10 @@ function FooterNavColumn({
 }) {
   return (
     <div>
-      <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+      <h2 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-gold">
         {title}
       </h2>
-      <ul className="mt-4 space-y-2.5">
+      <ul className="mt-4 space-y-3">
         {links.map((link) => (
           <li key={link.href + link.label}>
             {"external" in link && link.external ? (
@@ -94,14 +94,14 @@ function FooterNavColumn({
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-white/65 transition-colors hover:text-gold"
+                className="text-[14px] leading-snug text-white/70 transition-colors hover:text-gold"
               >
                 {link.label}
               </a>
             ) : (
               <Link
                 href={link.href}
-                className="text-sm text-white/65 transition-colors hover:text-gold"
+                className="text-[14px] leading-snug text-white/70 transition-colors hover:text-gold"
               >
                 {link.label}
               </Link>
@@ -118,8 +118,8 @@ export default function Footer() {
 
   return (
     <footer className="mt-auto bg-charcoal text-white" role="contentinfo">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16 xl:max-w-7xl">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-[4.25rem] xl:max-w-7xl">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link
               href="/"
@@ -134,9 +134,12 @@ export default function Footer() {
                 className="h-[42px] w-auto sm:h-[47px]"
               />
             </Link>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
-              Founded in July 2019, Premium Insurance Brokers — a division of
-              Oracle RMS — has served Windsor-Essex County ever since.
+            <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.14em] text-gold/90">
+              A Division of Oracle RMS
+            </p>
+            <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-white/60">
+              Founded in July 2019, Premium Insurance Brokers has served
+              Windsor-Essex County ever since.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
@@ -171,7 +174,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-[12px] leading-relaxed text-white/50 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6 lg:px-8 xl:max-w-7xl">
           <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
             <span>3063 Dougall Ave, Windsor, ON N9E 1S7</span>
             <span className="hidden text-white/25 sm:inline" aria-hidden>

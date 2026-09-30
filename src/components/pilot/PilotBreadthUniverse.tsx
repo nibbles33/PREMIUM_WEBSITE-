@@ -79,11 +79,12 @@ export default function PilotBreadthUniverse() {
         </RevealOnScroll>
       </div>
 
-      <RevealOnScroll className="pilot-yep-rail mt-8">
+      <RevealOnScroll className="pilot-yep-rail mt-8 w-full max-w-full overflow-hidden">
         <PilotInfiniteRail
           durationSeconds={normal}
           reducedDurationSeconds={reduced}
           ariaLabel="Insurance products and industries we cover"
+          className="w-full max-w-full"
           trackClassName="gap-3 sm:gap-3.5"
         >
           {doubled.map((item, i) => (

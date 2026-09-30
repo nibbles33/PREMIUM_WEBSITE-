@@ -133,10 +133,10 @@ export default function PilotCommercialDiscovery() {
                   tabIndex={isActive ? 0 : -1}
                   onClick={() => selectCategory(cat.id)}
                   onKeyDown={(e) => onKeyDown(e, index)}
-                  className={`pilot-commercial-cat shrink-0 rounded-full border px-4 py-2.5 text-[13px] font-medium sm:text-sm ${
+                  className={`pilot-commercial-cat shrink-0 rounded-full border px-4 py-2.5 text-[13px] font-medium transition-colors sm:text-sm ${
                     isActive
-                      ? "is-active border-gold bg-[#2a3132] text-white"
-                      : "border-white/15 bg-[#252b2c] text-white/70 hover:border-white/30"
+                      ? "is-active border-gold bg-[#2a3132] text-white shadow-[0_0_0_1px_rgba(208,173,38,0.35)]"
+                      : "border-white/15 bg-[#252b2c] text-white/70 hover:border-white/35 hover:text-white/90"
                   }`}
                 >
                   {cat.label}

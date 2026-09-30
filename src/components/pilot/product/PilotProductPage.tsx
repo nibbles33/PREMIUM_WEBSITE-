@@ -32,10 +32,10 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
         <ProductHero config={config} />
 
         {config.showTrustBand !== false && config.trustStatement ? (
-          <section className="border-b border-border bg-white py-8 sm:py-10">
-            <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+          <section className="border-b border-border bg-white py-6 sm:py-8">
+            <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:max-w-4xl">
               <RevealOnScroll>
-                <p className="text-[15px] leading-relaxed text-secondary sm:text-base">
+                <p className="text-[15px] leading-relaxed text-secondary sm:text-base lg:text-[1.0625rem]">
                   {config.trustStatement}
                 </p>
               </RevealOnScroll>

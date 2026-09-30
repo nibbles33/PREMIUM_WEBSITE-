@@ -27,7 +27,7 @@ export default function ProductFinalCta({
 }: ProductFinalCtaProps) {
   return (
     <section
-      className="relative overflow-hidden bg-charcoal py-14 sm:py-16 lg:py-20"
+      className="relative overflow-hidden bg-charcoal py-12 sm:py-14 lg:py-[4.25rem]"
       aria-labelledby={`pilot-product-final-${slug}`}
     >
       <div
@@ -38,18 +38,18 @@ export default function ProductFinalCta({
             "radial-gradient(ellipse at 50% 0%, rgba(208,173,38,0.18) 0%, transparent 60%)",
         }}
       />
-      <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
+      <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:max-w-4xl">
         <RevealOnScroll>
           <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-gold/80">
             {eyebrow}
           </p>
           <h2
             id={`pilot-product-final-${slug}`}
-            className="mt-3 text-[1.75rem] font-medium leading-[1.08] tracking-[-0.02em] text-white sm:text-4xl"
+            className="mt-3 text-[1.85rem] font-medium leading-[1.08] tracking-[-0.025em] text-white sm:text-[2.35rem] lg:text-[2.65rem]"
           >
             {heading}
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-white/65">
+          <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/65 sm:text-base">
             {subhead}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

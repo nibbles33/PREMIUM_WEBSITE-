@@ -31,8 +31,9 @@ type Props = {
 };
 
 /**
- * Concept F Revision 2 — major Google social-proof section.
- * Large editorial composition. Never fabricates review text or live ratings.
+ * Concept F — major Google social-proof section.
+ * Live rating/reviews when Places succeeds; polished customer fallback otherwise.
+ * Never fabricates rating, count, or review text. Never exposes API/dev messaging.
  */
 export default function PilotGoogleReviews({ ratingResult }: Props) {
   const { google } = HOMEPAGE_AUTHORITY;
@@ -72,12 +73,13 @@ export default function PilotGoogleReviews({ ratingResult }: Props) {
                   </div>
                 </div>
               ) : (
-                <div className="mt-8 max-w-md rounded-[14px] border border-dashed border-white/20 bg-white/[0.04] px-5 py-4">
-                  <p className="text-[14px] leading-relaxed text-white/70">
-                    Live Google rating and review count appear here once Places
-                    API credentials are configured server-side. Until then, open
-                    our Google Business Profile — we never present fallback
-                    figures as live data.
+                <div className="mt-8 max-w-md">
+                  <p className="text-[1.4rem] font-medium leading-snug tracking-[-0.025em] text-white sm:text-[1.55rem]">
+                    See what our clients are saying on Google.
+                  </p>
+                  <p className="mt-3 text-[14px] leading-relaxed text-white/60 sm:text-[15px]">
+                    Open our verified Google Business Profile for authentic
+                    ratings and reviews from Windsor-Essex clients.
                   </p>
                 </div>
               )}
@@ -93,7 +95,7 @@ export default function PilotGoogleReviews({ ratingResult }: Props) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-[14px] font-medium text-charcoal transition-colors hover:bg-gold/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
-                  Read all Google reviews
+                  {isLive ? "Read all Google reviews" : "View Google reviews"}
                   <span aria-hidden>→</span>
                 </Link>
               </div>
@@ -134,14 +136,14 @@ export default function PilotGoogleReviews({ ratingResult }: Props) {
                     {google.address}
                   </p>
                   <p className="mt-8 max-w-md text-[14px] leading-relaxed text-white/55">
-                    Authentic Google review excerpts appear here when available
-                    from Places API. Premium does not invent testimonials.
+                    Authentic client reviews from Google appear here when
+                    available. We never invent testimonials.
                   </p>
                   <Link
                     href={google.shareUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-6 inline-flex text-[14px] font-medium text-gold underline-offset-4 hover:underline"
+                    className="mt-6 inline-flex min-h-11 items-center text-[14px] font-medium text-gold underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     Open Google profile →
                   </Link>

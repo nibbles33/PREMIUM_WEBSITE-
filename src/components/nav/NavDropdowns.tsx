@@ -2,11 +2,22 @@
 
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-import { useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { personalNavGroups, type NavGroup } from "@/data/nav-personal";
 import { businessNavClusters, type BusinessNavCluster } from "@/data/nav-business";
 
 type SimpleLink = { label: string; href: string; description?: string };
+
+function useCloseOnEscape(open: boolean, onClose: () => void) {
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, onClose]);
+}
 
 function DropdownPanel({
   id,
@@ -51,10 +62,12 @@ function NavDropdownLink({
   return (
     <Link
       href={link.href}
-      className="block rounded-md px-3 py-2 transition-colors hover:bg-offwhite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+      className="block rounded-md px-3 py-2.5 transition-colors hover:bg-offwhite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
       onClick={onNavigate}
     >
-      <span className="block text-[13px] font-medium text-charcoal">{link.label}</span>
+      <span className="block text-[13px] font-medium leading-snug text-charcoal xl:text-[13.5px]">
+        {link.label}
+      </span>
       {link.description ? (
         <span className="mt-0.5 block text-[12px] leading-snug text-secondary">
           {link.description}
@@ -81,6 +94,8 @@ export function PersonalNavDropdown({ onNavigate }: { onNavigate?: () => void })
     clearCloseTimer();
     closeTimer.current = setTimeout(() => setOpen(false), 120);
   };
+
+  useCloseOnEscape(open, () => setOpen(false));
 
   return (
     <div
@@ -112,13 +127,13 @@ export function PersonalNavDropdown({ onNavigate }: { onNavigate?: () => void })
       </button>
       {open ? (
         <DropdownPanel id={panelId} labelledBy={buttonId}>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-3 sm:gap-4">
             {personalNavGroups.map((group: NavGroup) => (
-              <div key={group.title}>
-                <p className="px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-dark">
+              <div key={group.title} className="min-w-0">
+                <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-dark">
                   {group.title}
                 </p>
-                <ul className="mt-2 space-y-0.5">
+                <ul className="mt-1.5 space-y-0.5 border-t border-border/70 pt-2">
                   {group.links.map((link) => (
                     <li key={link.href + link.label}>
                       <NavDropdownLink link={link} onNavigate={onNavigate} />
@@ -152,6 +167,8 @@ export function BusinessNavDropdown({ onNavigate }: { onNavigate?: () => void })
     closeTimer.current = setTimeout(() => setOpen(false), 120);
   };
 
+  useCloseOnEscape(open, () => setOpen(false));
+
   return (
     <div
       className="relative"
@@ -182,13 +199,13 @@ export function BusinessNavDropdown({ onNavigate }: { onNavigate?: () => void })
       </button>
       {open ? (
         <DropdownPanel id={panelId} labelledBy={buttonId} wide scrollable>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 sm:gap-x-4 sm:gap-y-5 lg:grid-cols-3">
             {businessNavClusters.map((cluster: BusinessNavCluster) => (
-              <div key={cluster.title}>
-                <p className="px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-dark">
+              <div key={cluster.title} className="min-w-0">
+                <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-dark">
                   {cluster.title}
                 </p>
-                <ul className="mt-2 space-y-0.5">
+                <ul className="mt-1.5 space-y-0.5 border-t border-border/70 pt-2">
                   {cluster.links.map((link) => (
                     <li key={link.href + link.label}>
                       <NavDropdownLink link={link} onNavigate={onNavigate} />
@@ -198,10 +215,10 @@ export function BusinessNavDropdown({ onNavigate }: { onNavigate?: () => void })
               </div>
             ))}
           </div>
-          <div className="mt-4 border-t border-border pt-3">
+          <div className="mt-5 border-t border-border pt-3.5">
             <Link
               href="/commercial-insurance/"
-              className="inline-flex px-3 text-[13px] font-medium text-gold-dark hover:text-charcoal"
+              className="inline-flex min-h-10 items-center px-3 text-[13px] font-medium text-gold-dark hover:text-charcoal"
               onClick={onNavigate}
             >
               View commercial insurance hub →
@@ -240,6 +257,8 @@ export function SimpleNavDropdown({
     clearCloseTimer();
     closeTimer.current = setTimeout(() => setOpen(false), 120);
   };
+
+  useCloseOnEscape(open, () => setOpen(false));
 
   return (
     <div

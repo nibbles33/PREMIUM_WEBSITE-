@@ -84,25 +84,25 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
   return (
     <section
       ref={sectionRef}
-      className="border-b border-border bg-offwhite py-14 sm:py-16 lg:py-24"
+      className="border-b border-border bg-offwhite py-12 sm:py-14 lg:py-[4.5rem]"
       aria-labelledby={`${baseId}-heading`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <h2
               id={`${baseId}-heading`}
-              className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+              className="text-[1.65rem] font-medium tracking-[-0.025em] text-charcoal sm:text-[1.9rem] lg:text-[2.15rem]"
             >
               {config.coverageHeading}
             </h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-secondary">
+            <p className="mx-auto mt-3 max-w-2xl text-[15px] leading-relaxed text-secondary sm:text-base">
               {config.coverageIntro}
             </p>
           </div>
         </RevealOnScroll>
 
-        <div className="mt-10 grid gap-8 lg:mt-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-14 lg:items-start">
+        <div className="mt-8 grid gap-8 lg:mt-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12 lg:items-start">
           <RevealOnScroll className="min-w-0 w-full">
             <div
               id={`${baseId}-panel`}
