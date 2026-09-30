@@ -391,13 +391,13 @@ Project `yq7xu77cle`:
 
 ## 27. Exact Preview URL
 
-See status block after push (Vercel Preview for branch `cursor/homepage-authority-concept-f`).
+https://premium-website-git-cursor-homepage-a-6b58b4-nabil-g-s-projects.vercel.app
 
 ---
 
 ## 28. Commit SHA
 
-See status block after commit.
+`8790f5a` — feat: add consent-controlled analytics and event tracking
 
 ---
 
