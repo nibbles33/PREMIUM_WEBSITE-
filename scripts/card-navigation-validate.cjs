@@ -41,7 +41,8 @@ async function waitForPath(page, expectedHref, timeout = 10000) {
 
 async function gotoPage(page, route, viewport) {
   if (viewport) await page.setViewport(viewport);
-  await page.goto(`${BASE}${route}`, { waitUntil: "networkidle0", timeout: 90000 });
+  // domcontentloaded: networkidle0 can hang on continuous asset/analytics traffic.
+  await page.goto(`${BASE}${route}`, { waitUntil: "domcontentloaded", timeout: 90000 });
 }
 
 async function selectCommercialCategory(page, categoryId) {

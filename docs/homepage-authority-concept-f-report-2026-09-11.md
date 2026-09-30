@@ -288,15 +288,78 @@ PREMIUMIB.COM CHANGED: NO
 
 ---
 
+## OWNER VISUAL REVISION 3 — PRECISION POLISH (2026-09-30)
+
+Revision 2 directionally approved. This pass is **precision polish only** — no redesign, no restored removals, no inventory changes.
+
+### 1. Personal density (desktop)
+- Smaller editorial cards at ≥1024 so **~4–5 cards visible @1440** (measured **5** with next-card partial peek).
+- Ultrawide capped at **300px** card basis so cards do not grow enormous.
+- Still **no autoplay**; arrows / drag / swipe / keyboard preserved; **14/14** products.
+
+### 2. Duplicate Personal CTA removed
+- Single CTA: **Explore Personal →** in the Personal header controls.
+- Bottom mobile “Explore all →” removed.
+
+### 3. Typography scale (selective)
+Increased headline scale (desktop-forward) for:
+- Personal · Carriers (“More markets…”) · Commercial · Why Premium · Google · Awards · Windsor/Oracle · Final CTA  
+Supporting copy +1–2px where useful. Nav/buttons not globally enlarged.
+
+### 4. Authority Google cell
+- Shared value/label typography helpers so **live** rating matches `2,700+` / `31+` / `9` prominence.
+- Fallback shows “Google / Client reviews / Read on Google →” — **never** baseline 4.7/82 as live.
+
+### 5. Spacing
+Slightly tighter Personal / Awards vertical rhythm and section padding so whitespace reads deliberate, not empty. Premium breathing room retained.
+
+### Files touched (Rev 3)
+- `src/components/pilot/PilotPersonalFilmstrip.tsx`
+- `src/components/pilot/PilotAuthorityStrip.tsx`
+- `src/components/pilot/PilotCarrierMarquee.tsx`
+- `src/components/pilot/PilotCommercialDiscovery.tsx`
+- `src/components/pilot/PilotWhyPremium.tsx`
+- `src/components/pilot/PilotGoogleReviews.tsx`
+- `src/components/pilot/PilotLocalProof.tsx`
+- `src/components/pilot/PilotWindsorOracle.tsx`
+- `src/components/pilot/PilotFinalCta.tsx`
+- `src/styles/pilot.css`
+- `scripts/concept-f-rev3-qa.cjs`
+- Screenshots: `docs/qa-screenshots/homepage-authority-concept-f-rev3-2026-09-30/`
+
+### QA (Rev 3)
+| Gate | Result |
+|------|--------|
+| Personal discovery 14/14 | **PASS** |
+| Commercial 10/10 · 54/54 | **PASS** |
+| Carrier ultrawide coverage 390→3840 | **PASS** |
+| Homepage overflow (Rev3 viewports) | **PASS** |
+| Personal @1440 density (~5 + peek) | **PASS** |
+| Single Personal Explore CTA | **PASS** |
+| Personal click / drag / swipe | **PASS** (focused) |
+| No team / homes pill / Oracle authority cell | **PASS** |
+| Autoplay absent | **PASS** |
+| Screenshots 390 / 1440 / 1920 + Personal closeup | **PASS** |
+
+### Explicit stop-gate status
+
+```
+MERGED TO MAIN: NO
+VERCEL PRODUCTION DEPLOYED: NO
+PREMIUMIB.COM CHANGED: NO
+```
+
+---
+
 ## Preview
 
 ## Preview URL
 
 **Vercel Preview (Rev 2):** https://premium-website-3tyqkj6gx-nabil-g-s-projects.vercel.app  
 
-Deployment dashboard: https://vercel.com/nabil-g-s-projects/premium-website/ANcayf5McYK1FqP6y8rwTm5D8VFH  
+(Rev 3 Preview URL will refresh after push if GitHub↔Vercel integration is active.)
 
-Branch: `cursor/homepage-authority-concept-f` @ `61d5c0d`
+Branch: `cursor/homepage-authority-concept-f`
 
 **Do not promote Preview to Production.**
 

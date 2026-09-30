@@ -29,9 +29,10 @@ const ITEMS = personalFilmstripItems;
 const ITEM_COUNT = ITEMS.length;
 
 /**
- * Concept F Revision 2 — editorial Personal discovery.
+ * Concept F — editorial Personal discovery (Rev 2/3).
  * Intentional navigation only (arrows / drag / swipe / keyboard).
  * NO autoplay conveyor. All 14 products remain discoverable.
+ * Rev 3: denser desktop cards; single Explore CTA.
  */
 export default function PilotPersonalFilmstrip() {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -210,23 +211,23 @@ export default function PilotPersonalFilmstrip() {
 
   return (
     <section
-      className="pilot-section-personal relative overflow-hidden border-t border-border bg-[#F3EBD4] py-14 sm:py-16 lg:py-20"
+      className="pilot-section-personal relative overflow-hidden border-t border-border bg-[#F3EBD4] py-12 sm:py-14 lg:py-[4.25rem]"
       aria-labelledby="pilot-personal-filmstrip-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
-          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-8">
             <div className="max-w-2xl">
               <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark">
                 Personal coverage
               </p>
               <h2
                 id="pilot-personal-filmstrip-heading"
-                className="mt-3 text-[2rem] font-medium tracking-[-0.03em] text-charcoal sm:text-[2.35rem] lg:text-[2.75rem]"
+                className="mt-3 text-[2.15rem] font-medium tracking-[-0.035em] text-charcoal sm:text-[2.55rem] lg:text-[3.05rem]"
               >
                 Coverage for the life you actually live.
               </h2>
-              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:text-base">
+              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:text-[17px]">
                 Home, auto, condo, tenant, travel and specialty personal lines —
                 presented clearly, with a broker who can explain what matters.
               </p>
@@ -251,20 +252,21 @@ export default function PilotPersonalFilmstrip() {
               >
                 <ChevronRight className="h-5 w-5" aria-hidden />
               </button>
+              {/* Single Personal exploration CTA (Rev 3) */}
               <PremiumPilotButton
                 href="/personal/"
                 variant="secondary"
                 showArrow={false}
-                className="hidden text-[13px] sm:inline-flex"
+                className="text-[13px]"
               >
-                Explore all Personal →
+                Explore Personal →
               </PremiumPilotButton>
             </div>
           </div>
         </RevealOnScroll>
       </div>
 
-      <RevealOnScroll className="mt-8 sm:mt-10">
+      <RevealOnScroll className="mt-6 sm:mt-7 lg:mt-8">
         <div
           ref={scrollerRef}
           className={`pilot-filmstrip-viewport pilot-personal-editorial-scroller ${isDragging ? "is-dragging" : ""}`}
@@ -288,7 +290,7 @@ export default function PilotPersonalFilmstrip() {
                     href={item.href}
                     draggable={false}
                     onDragStart={(event) => event.preventDefault()}
-                    className="pilot-filmstrip-frame group relative block h-full overflow-hidden rounded-[18px] border border-border/70 bg-charcoal shadow-[0_12px_36px_rgba(32,39,40,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                    className="pilot-filmstrip-frame group relative block h-full overflow-hidden rounded-[16px] border border-border/70 bg-charcoal shadow-[0_12px_36px_rgba(32,39,40,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
                     aria-label={`${item.label} insurance`}
                     aria-current={isActive ? "true" : undefined}
                   >
@@ -300,20 +302,20 @@ export default function PilotPersonalFilmstrip() {
                           fill
                           sizes={PILOT_FILMSTRIP_IMAGE.sizes}
                           quality={PILOT_FILMSTRIP_IMAGE.quality}
-                          loading={index < 4 ? "eager" : "lazy"}
+                          loading={index < 5 ? "eager" : "lazy"}
                           className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                           draggable={false}
                         />
                       ) : null}
                       <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent" />
-                      <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
                         <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-gold">
                           Personal
                         </p>
-                        <p className="mt-2 text-[1.35rem] font-medium tracking-[-0.02em] text-white sm:text-[1.55rem]">
+                        <p className="mt-1.5 text-[1.25rem] font-medium tracking-[-0.02em] text-white sm:text-[1.4rem]">
                           {item.label}
                         </p>
-                        <p className="mt-2 text-[13px] text-white/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <p className="mt-1.5 text-[13px] text-white/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                           View coverage →
                         </p>
                       </div>
@@ -325,7 +327,7 @@ export default function PilotPersonalFilmstrip() {
           </ul>
         </div>
 
-        <div className="mx-auto mt-6 flex max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mt-5 flex max-w-6xl items-center px-4 sm:px-6 lg:px-8">
           <div
             className="flex flex-wrap gap-1.5"
             role="tablist"
@@ -347,14 +349,6 @@ export default function PilotPersonalFilmstrip() {
               />
             ))}
           </div>
-          <PremiumPilotButton
-            href="/personal/"
-            variant="secondary"
-            showArrow={false}
-            className="text-[13px] sm:hidden"
-          >
-            Explore all →
-          </PremiumPilotButton>
         </div>
       </RevealOnScroll>
     </section>

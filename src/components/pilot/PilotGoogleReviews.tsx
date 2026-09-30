@@ -41,7 +41,7 @@ export default function PilotGoogleReviews({ ratingResult }: Props) {
 
   return (
     <section
-      className="border-t border-border bg-charcoal py-16 sm:py-20 lg:py-[5.5rem]"
+      className="border-t border-border bg-charcoal py-14 sm:py-[4.5rem] lg:py-[5.25rem]"
       aria-labelledby="pilot-google-reviews-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
@@ -53,7 +53,7 @@ export default function PilotGoogleReviews({ ratingResult }: Props) {
               </p>
               <h2
                 id="pilot-google-reviews-heading"
-                className="mt-4 max-w-lg text-[2rem] font-medium tracking-[-0.03em] text-white sm:text-[2.5rem] lg:text-[2.85rem]"
+                className="mt-4 max-w-lg text-[2.15rem] font-medium tracking-[-0.035em] text-white sm:text-[2.7rem] lg:text-[3.2rem]"
               >
                 What our clients say about Premium.
               </h2>

@@ -9,11 +9,11 @@ import { WHY_PREMIUM_POINTS } from "@/data/homepage-authority";
 export default function PilotWhyPremium() {
   return (
     <section
-      className="border-t border-border bg-[#FBF7EF] py-16 sm:py-20 lg:py-24"
+      className="border-t border-border bg-[#FBF7EF] py-14 sm:py-[4.5rem] lg:py-[5.25rem]"
       aria-labelledby="pilot-why-premium-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
-        <div className="grid items-stretch gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-16">
+        <div className="grid items-stretch gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-14">
           <RevealOnScroll>
             <div className="relative min-h-[320px] overflow-hidden rounded-[20px] bg-charcoal sm:min-h-[420px] lg:min-h-full lg:min-h-[520px]">
               <Image
@@ -49,11 +49,11 @@ export default function PilotWhyPremium() {
               </p>
               <h2
                 id="pilot-why-premium-heading"
-                className="mt-3 text-[2rem] font-medium tracking-[-0.03em] text-charcoal sm:text-[2.4rem] lg:text-[2.7rem]"
+                className="mt-3 text-[2.15rem] font-medium tracking-[-0.035em] text-charcoal sm:text-[2.65rem] lg:text-[3.05rem]"
               >
                 A brokerage built around better advice.
               </h2>
-              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:text-base">
+              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:text-[17px]">
                 Technology can make insurance easier — but coverage decisions
                 still deserve a licensed broker who will explain the differences.
               </p>

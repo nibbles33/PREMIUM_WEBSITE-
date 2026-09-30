@@ -4,7 +4,7 @@ import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 export default function PilotFinalCta() {
   return (
     <section
-      className="border-t border-border bg-charcoal py-16 sm:py-20"
+      className="border-t border-border bg-charcoal py-14 sm:py-[4.5rem] lg:py-[5rem]"
       aria-labelledby="pilot-final-cta-heading"
     >
       <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8 xl:max-w-7xl">
@@ -14,11 +14,11 @@ export default function PilotFinalCta() {
           </p>
           <h2
             id="pilot-final-cta-heading"
-            className="mt-4 text-[2rem] font-medium tracking-[-0.03em] text-white sm:text-[2.5rem] lg:text-[3rem]"
+            className="mt-4 text-[2.2rem] font-medium tracking-[-0.035em] text-white sm:text-[2.75rem] lg:text-[3.35rem]"
           >
             Insurance should feel simpler from here.
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-white/65 sm:text-lg">
+          <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-white/65 sm:text-[18px]">
             Talk to a licensed broker who can compare options, explain the
             differences and help you choose coverage with confidence.
           </p>
