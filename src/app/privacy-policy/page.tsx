@@ -32,7 +32,7 @@ export default function PrivacyPolicyPage() {
                   Privacy Policy
                 </h1>
                 <p className="mt-4 text-[15px] text-secondary sm:text-base">
-                  Last updated: May 08, 2025
+                  Last updated: September 30, 2026
                 </p>
               </div>
             </RevealOnScroll>
@@ -207,123 +207,115 @@ export default function PrivacyPolicyPage() {
                     Usage Data
                   </h4>
                   <p className="mt-3">
-                    Usage Data is collected automatically when using the Service.
+                    When You allow Analytics cookies through our Cookie
+                    Preferences controls, Usage Data may be collected by Google
+                    Analytics 4 (configured through Google Tag Manager) to help
+                    Us understand aggregate site usage. Usage Data may include
+                    information such as approximate location derived from IP
+                    address, browser type, pages visited, referring URLs, device
+                    type, and similar diagnostic information. Optional experience
+                    analytics (Microsoft Clarity) may record interaction and
+                    layout behaviour when You allow Experience cookies. These
+                    optional tools do not run until You opt in, and You may
+                    reject them.
                   </p>
                   <p className="mt-3">
-                    Usage Data may include information such as Your Device&apos;s
-                    Internet Protocol address (e.g. IP address), browser type,
-                    browser version, the pages of our Service that You visit, the
-                    time and date of Your visit, the time spent on those pages,
-                    unique device identifiers and other diagnostic data.
-                  </p>
-                  <p className="mt-3">
-                    When You access the Service by or through a mobile device, We
-                    may collect certain information automatically, including, but
-                    not limited to, the type of mobile device You use, Your
-                    mobile device unique ID, the IP address of Your mobile
-                    device, Your mobile operating system, the type of mobile
-                    Internet browser You use, unique device identifiers and other
-                    diagnostic data.
-                  </p>
-                  <p className="mt-3">
-                    We may also collect information that Your browser sends
-                    whenever You visit our Service or when You access the Service
-                    by or through a mobile device.
+                    We configure our analytics instrumentation so that form
+                    fields such as names, email addresses, phone numbers,
+                    messages, quote answers, and resume uploads are not
+                    intentionally sent as analytics event parameters. Session
+                    recordings, where enabled, are configured with form masking;
+                    however, no website can guarantee that every third-party
+                    vendor behaviour is error-free, so You should not enter
+                    sensitive information outside the intended form fields.
                   </p>
 
-                  <h4 className="mt-6 text-base font-medium text-charcoal">
-                    Tracking Technologies and Cookies
+                  <h4
+                    id="cookies-and-preferences"
+                    className="mt-6 text-base font-medium text-charcoal"
+                  >
+                    Cookies, Local Storage, and Preferences
                   </h4>
                   <p className="mt-3">
-                    We use Cookies and similar tracking technologies to track the
-                    activity on Our Service and store certain information.
-                    Tracking technologies used are beacons, tags, and scripts to
-                    collect and track information and to improve and analyze Our
-                    Service. The technologies We use may include:
+                    We use first-party storage and optional third-party
+                    technologies as described below. Non-essential analytics and
+                    experience tools follow Your consent choices. You can Accept
+                    All, Reject Non-Essential, or set Preferences on first visit,
+                    and You can reopen{" "}
+                    <strong className="font-medium text-charcoal">
+                      Cookie Preferences
+                    </strong>{" "}
+                    from the website footer at any time. Rejecting non-essential
+                    technologies does not prevent You from browsing the site or
+                    using Contact, Quote, or Careers forms.
+                  </p>
+                  <p className="mt-3">
+                    This section describes the current website implementation and
+                    is provided for transparency. It is not legal advice. Owner /
+                    legal review is recommended before treating this as final
+                    regulatory disclosure.
                   </p>
                   <ul className="mt-3 list-disc space-y-3 pl-5">
                     <li>
                       <strong className="font-medium text-charcoal">
-                        Cookies or Browser Cookies.
-                      </strong>{" "}
-                      A cookie is a small file placed on Your Device. You can
-                      instruct Your browser to refuse all Cookies or to indicate
-                      when a Cookie is being sent. However, if You do not accept
-                      Cookies, You may not be able to use some parts of our
-                      Service. Unless you have adjusted Your browser setting so
-                      that it will refuse Cookies, our Service may use Cookies.
+                        Necessary / Functional storage
+                      </strong>
+                      <br />
+                      Administered by: Us
+                      <br />
+                      Purpose: Required for core site operation. Includes the
+                      first-party consent record (
+                      <code className="text-[13px]">pib_consent</code>
+                      ) that stores Your cookie preferences (version, analytics,
+                      experience, timestamp) for about 180 days, and Quote draft
+                      progress stored in browser{" "}
+                      <code className="text-[13px]">sessionStorage</code> under
+                      keys such as{" "}
+                      <code className="text-[13px]">quote-flow-{"{category}"}</code>{" "}
+                      so an in-progress Quote is not lost if You refresh or
+                      navigate briefly. Quote draft storage is functional, not
+                      analytics, and is cleared after a successful Quote
+                      submission. Necessary storage remains available regardless
+                      of Analytics or Experience consent.
                     </li>
                     <li>
                       <strong className="font-medium text-charcoal">
-                        Web Beacons.
-                      </strong>{" "}
-                      Certain sections of our Service and our emails may contain
-                      small electronic files known as web beacons (also referred
-                      to as clear gifs, pixel tags, and single-pixel gifs) that
-                      permit the Company, for example, to count users who have
-                      visited those pages or opened an email and for other related
-                      website statistics (for example, recording the popularity
-                      of a certain section and verifying system and server
-                      integrity).
+                        Analytics (optional)
+                      </strong>
+                      <br />
+                      Administered by: Google (Google Tag Manager and Google
+                      Analytics 4)
+                      <br />
+                      Purpose: Aggregate measurement of page views and selected
+                      interaction events (for example product discovery, quote
+                      funnel steps, and successful form submissions without form
+                      field contents). Loads only when Analytics consent is
+                      granted. Advertising / remarketing tags are not part of the
+                      current implementation. Google Consent Mode defaults keep
+                      analytics storage denied until You opt in.
+                    </li>
+                    <li>
+                      <strong className="font-medium text-charcoal">
+                        Experience / behaviour analytics (optional)
+                      </strong>
+                      <br />
+                      Administered by: Microsoft Clarity
+                      <br />
+                      Purpose: Helps Us understand layout and usability issues
+                      through session insights. Loads only when Experience
+                      consent is granted. Form inputs and sensitive application
+                      areas are configured for masking; we do not intentionally
+                      capture resume contents or free-text application answers in
+                      analytics events.
                     </li>
                   </ul>
                   <p className="mt-3">
-                    Cookies can be &quot;Persistent&quot; or &quot;Session&quot;
-                    Cookies. Persistent Cookies remain on Your personal computer
-                    or mobile device when You go offline, while Session Cookies
-                    are deleted as soon as You close Your web browser.
+                    We do not currently use a separate Marketing cookie category
+                    because advertising pixels and remarketing tags are not
+                    installed. If marketing technologies are added later, this
+                    policy and the preference controls should be updated before
+                    those tools are enabled.
                   </p>
-                  <p className="mt-3">
-                    We use both Session and Persistent Cookies for the purposes
-                    set out below:
-                  </p>
-                  <ul className="mt-3 list-disc space-y-3 pl-5">
-                    <li>
-                      <strong className="font-medium text-charcoal">
-                        Necessary / Essential Cookies
-                      </strong>
-                      <br />
-                      Type: Session Cookies
-                      <br />
-                      Administered by: Us
-                      <br />
-                      Purpose: These Cookies are essential to provide You with
-                      services available through the Website and to enable You to
-                      use some of its features. They help to authenticate users
-                      and prevent fraudulent use of user accounts. Without these
-                      Cookies, the services that You have asked for cannot be
-                      provided, and We only use these Cookies to provide You with
-                      those services.
-                    </li>
-                    <li>
-                      <strong className="font-medium text-charcoal">
-                        Cookies Policy / Notice Acceptance Cookies
-                      </strong>
-                      <br />
-                      Type: Persistent Cookies
-                      <br />
-                      Administered by: Us
-                      <br />
-                      Purpose: These Cookies identify if users have accepted the
-                      use of cookies on the Website.
-                    </li>
-                    <li>
-                      <strong className="font-medium text-charcoal">
-                        Functionality Cookies
-                      </strong>
-                      <br />
-                      Type: Persistent Cookies
-                      <br />
-                      Administered by: Us
-                      <br />
-                      Purpose: These Cookies allow us to remember choices You
-                      make when You use the Website, such as remembering your
-                      login details or language preference. The purpose of these
-                      Cookies is to provide You with a more personal experience
-                      and to avoid You having to re-enter your preferences every
-                      time You use the Website.
-                    </li>
-                  </ul>
                 </section>
 
                 <section aria-labelledby="privacy-use-heading">

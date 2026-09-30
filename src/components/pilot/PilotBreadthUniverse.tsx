@@ -20,6 +20,8 @@ function YepMediaTile({ item }: { item: CoverageStreamItem }) {
   return (
     <Link
       href={item.href}
+      data-track="yep_tile_click"
+      data-track-product-slug={getPhotographySlugFromHref(item.href) || item.href.replace(/^\/|\/$/g, "")}
       className="pilot-yep-tile group flex shrink-0 items-center gap-3.5 rounded-xl border border-white/15 bg-charcoal/85 py-2.5 pl-2.5 pr-5 backdrop-blur-sm transition-[border-color,box-shadow,transform] duration-200 hover:border-gold/50 hover:shadow-[0_10px_28px_rgba(208,173,38,0.18)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:gap-4 sm:py-3 sm:pl-3 sm:pr-6"
     >
       <span className="relative h-16 w-[5.5rem] shrink-0 overflow-hidden rounded-lg sm:h-[4.75rem] sm:w-24">

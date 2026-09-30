@@ -15,12 +15,14 @@ type ProductRelatedProductsProps = {
   heading: string;
   intro: string;
   products: ProductRelatedItem[];
+  fromSlug: string;
 };
 
 export default function ProductRelatedProducts({
   heading,
   intro,
   products,
+  fromSlug,
 }: ProductRelatedProductsProps) {
   return (
     <section
@@ -51,6 +53,9 @@ export default function ProductRelatedProducts({
                 <li key={item.href} className="shrink-0">
                   <Link
                     href={item.href}
+                    data-track="related_product_click"
+                    data-track-from-slug={fromSlug}
+                    data-track-to-slug={getPhotographySlugFromHref(item.href) || item.href.replace(/^\/|\/$/g, "")}
                     className="pilot-product-related-card group block w-[220px] overflow-hidden rounded-2xl border border-border/80 bg-white shadow-[0_10px_28px_rgba(32,39,40,0.08)] transition-[border-color,box-shadow,transform] duration-200 hover:border-gold/45 hover:shadow-[0_16px_36px_rgba(208,173,38,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:w-[260px] lg:w-[340px]"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden lg:aspect-[5/4]">

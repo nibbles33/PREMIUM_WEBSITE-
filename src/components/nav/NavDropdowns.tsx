@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 import { personalNavGroups, type NavGroup } from "@/data/nav-personal";
 import { businessNavClusters, type BusinessNavCluster } from "@/data/nav-business";
+import { track } from "@/lib/analytics";
 
 type SimpleLink = { label: string; href: string; description?: string };
 
@@ -55,13 +56,19 @@ function DropdownPanel({
 function NavDropdownLink({
   link,
   onNavigate,
+  menu,
 }: {
   link: SimpleLink;
   onNavigate?: () => void;
+  menu: string;
 }) {
+  const linkSlug = link.href.replace(/^\/|\/$/g, "") || "home";
   return (
     <Link
       href={link.href}
+      data-track="nav_link_click"
+      data-track-menu={menu}
+      data-track-link-slug={linkSlug}
       className="block rounded-md px-3 py-2.5 transition-colors hover:bg-offwhite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
       onClick={onNavigate}
     >
@@ -96,6 +103,10 @@ export function PersonalNavDropdown({ onNavigate }: { onNavigate?: () => void })
   };
 
   useCloseOnEscape(open, () => setOpen(false));
+
+  useEffect(() => {
+    if (open) track("nav_open", { menu: "personal" });
+  }, [open]);
 
   return (
     <div
@@ -136,7 +147,11 @@ export function PersonalNavDropdown({ onNavigate }: { onNavigate?: () => void })
                 <ul className="mt-1.5 space-y-0.5 border-t border-border/70 pt-2">
                   {group.links.map((link) => (
                     <li key={link.href + link.label}>
-                      <NavDropdownLink link={link} onNavigate={onNavigate} />
+                      <NavDropdownLink
+                        link={link}
+                        menu="personal"
+                        onNavigate={onNavigate}
+                      />
                     </li>
                   ))}
                 </ul>
@@ -168,6 +183,10 @@ export function BusinessNavDropdown({ onNavigate }: { onNavigate?: () => void })
   };
 
   useCloseOnEscape(open, () => setOpen(false));
+
+  useEffect(() => {
+    if (open) track("nav_open", { menu: "business" });
+  }, [open]);
 
   return (
     <div
@@ -208,7 +227,11 @@ export function BusinessNavDropdown({ onNavigate }: { onNavigate?: () => void })
                 <ul className="mt-1.5 space-y-0.5 border-t border-border/70 pt-2">
                   {cluster.links.map((link) => (
                     <li key={link.href + link.label}>
-                      <NavDropdownLink link={link} onNavigate={onNavigate} />
+                      <NavDropdownLink
+                        link={link}
+                        menu="business"
+                        onNavigate={onNavigate}
+                      />
                     </li>
                   ))}
                 </ul>
@@ -218,6 +241,9 @@ export function BusinessNavDropdown({ onNavigate }: { onNavigate?: () => void })
           <div className="mt-5 border-t border-border pt-3.5">
             <Link
               href="/commercial-insurance/"
+              data-track="nav_link_click"
+              data-track-menu="business"
+              data-track-link-slug="commercial-insurance"
               className="inline-flex min-h-10 items-center px-3 text-[13px] font-medium text-gold-dark hover:text-charcoal"
               onClick={onNavigate}
             >
@@ -260,6 +286,12 @@ export function SimpleNavDropdown({
 
   useCloseOnEscape(open, () => setOpen(false));
 
+  const menuId = label.toLowerCase().replace(/[^a-z0-9]+/g, "_") || "menu";
+
+  useEffect(() => {
+    if (open) track("nav_open", { menu: menuId });
+  }, [open, menuId]);
+
   return (
     <div
       className="relative"
@@ -293,13 +325,22 @@ export function SimpleNavDropdown({
           <ul className="space-y-0.5">
             {links.map((link) => (
               <li key={link.href + link.label}>
-                <NavDropdownLink link={link} onNavigate={onNavigate} />
+                <NavDropdownLink
+                  link={link}
+                  menu={menuId}
+                  onNavigate={onNavigate}
+                />
               </li>
             ))}
           </ul>
           <div className="mt-3 border-t border-border pt-3">
             <Link
               href={hubHref}
+              data-track="nav_link_click"
+              data-track-menu={menuId}
+              data-track-link-slug={
+                hubHref.replace(/^\/|\/$/g, "") || "home"
+              }
               className="inline-flex px-3 text-[13px] font-medium text-gold-dark hover:text-charcoal"
               onClick={onNavigate}
             >
@@ -326,6 +367,11 @@ export function MobileNavSection({
   const [open, setOpen] = useState(defaultOpen);
   const panelId = useId();
   const buttonId = useId();
+  const menuId = title.toLowerCase().replace(/[^a-z0-9]+/g, "_") || "menu";
+
+  useEffect(() => {
+    if (open) track("nav_open", { menu: `mobile_${menuId}` });
+  }, [open, menuId]);
 
   return (
     <div className="border-b border-border">
@@ -346,17 +392,23 @@ export function MobileNavSection({
       {open ? (
         <div id={panelId} role="region" aria-labelledby={buttonId} className="pb-3 pl-2">
           <ul className="space-y-1">
-            {links.map((link) => (
-              <li key={link.href + link.label}>
-                <Link
-                  href={link.href}
-                  className="block py-2.5 text-[15px] text-secondary hover:text-charcoal"
-                  onClick={onNavigate}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {links.map((link) => {
+              const linkSlug = link.href.replace(/^\/|\/$/g, "") || "home";
+              return (
+                <li key={link.href + link.label}>
+                  <Link
+                    href={link.href}
+                    data-track="nav_link_click"
+                    data-track-menu={`mobile_${menuId}`}
+                    data-track-link-slug={linkSlug}
+                    className="block py-2.5 text-[15px] text-secondary hover:text-charcoal"
+                    onClick={onNavigate}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       ) : null}
@@ -376,6 +428,11 @@ export function MobileNavGroupSection({
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const buttonId = useId();
+  const menuId = title.toLowerCase().replace(/[^a-z0-9]+/g, "_") || "menu";
+
+  useEffect(() => {
+    if (open) track("nav_open", { menu: `mobile_${menuId}` });
+  }, [open, menuId]);
 
   return (
     <div className="border-b border-border">
@@ -401,17 +458,23 @@ export function MobileNavGroupSection({
                 {group.title}
               </p>
               <ul className="mt-2 space-y-1">
-                {group.links.map((link) => (
-                  <li key={link.href + link.label}>
-                    <Link
-                      href={link.href}
-                      className="block py-2.5 text-[15px] text-secondary hover:text-charcoal"
-                      onClick={onNavigate}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {group.links.map((link) => {
+                  const linkSlug = link.href.replace(/^\/|\/$/g, "") || "home";
+                  return (
+                    <li key={link.href + link.label}>
+                      <Link
+                        href={link.href}
+                        data-track="nav_link_click"
+                        data-track-menu={`mobile_${menuId}`}
+                        data-track-link-slug={linkSlug}
+                        className="block py-2.5 text-[15px] text-secondary hover:text-charcoal"
+                        onClick={onNavigate}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
@@ -433,6 +496,11 @@ export function MobileNavClusterSection({
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const buttonId = useId();
+  const menuId = title.toLowerCase().replace(/[^a-z0-9]+/g, "_") || "menu";
+
+  useEffect(() => {
+    if (open) track("nav_open", { menu: `mobile_${menuId}` });
+  }, [open, menuId]);
 
   return (
     <div className="border-b border-border">
@@ -458,17 +526,23 @@ export function MobileNavClusterSection({
                 {cluster.title}
               </p>
               <ul className="mt-2 space-y-1">
-                {cluster.links.map((link) => (
-                  <li key={link.href + link.label}>
-                    <Link
-                      href={link.href}
-                      className="block py-2.5 text-[15px] text-secondary hover:text-charcoal"
-                      onClick={onNavigate}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {cluster.links.map((link) => {
+                  const linkSlug = link.href.replace(/^\/|\/$/g, "") || "home";
+                  return (
+                    <li key={link.href + link.label}>
+                      <Link
+                        href={link.href}
+                        data-track="nav_link_click"
+                        data-track-menu={`mobile_${menuId}`}
+                        data-track-link-slug={linkSlug}
+                        className="block py-2.5 text-[15px] text-secondary hover:text-charcoal"
+                        onClick={onNavigate}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

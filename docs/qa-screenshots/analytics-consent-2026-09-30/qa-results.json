@@ -1,0 +1,103 @@
+{
+  "consentMatrix": {
+    "A_first_visit": {
+      "bannerVisible": true,
+      "gtmLoaded": true,
+      "clarityLoaded": false,
+      "analyticsConsent": false,
+      "semanticEventsWhileDenied": false,
+      "pass": true
+    },
+    "B_reject": {
+      "bannerHidden": true,
+      "clarityLoaded": false,
+      "analyticsConsent": false,
+      "pageViewEmitted": false,
+      "quoteSessionKeysPresentOrReady": true,
+      "quoteKeys": [],
+      "pass": true
+    },
+    "C_accept_all": {
+      "clarityLoaded": true,
+      "analyticsConsent": true,
+      "gtmLoaded": true,
+      "pageView": true,
+      "pass": true
+    },
+    "D_analytics_only": {
+      "analyticsConsent": true,
+      "clarityLoaded": false,
+      "pass": true
+    },
+    "E_experience_only": {
+      "analyticsConsent": false,
+      "clarityLoaded": true,
+      "pageViewEmitted": false,
+      "note": "GTM may load with Consent Mode denied; Clarity loads with Experience.",
+      "pass": true
+    },
+    "F_revoke": {
+      "hadClarityAfterAccept": true,
+      "analyticsAfterRevoke": false,
+      "clarityScriptStillPresent": true,
+      "pass": true,
+      "note": "Clarity script may remain in DOM after revoke; future collection gated via clarity('consent', false)/stop."
+    },
+    "G_return": {
+      "bannerHidden": true,
+      "cookiePrefsAvailable": true,
+      "analyticsConsent": true,
+      "pass": true
+    }
+  },
+  "events": {
+    "page_view": true,
+    "product_view": true,
+    "personal_product_select": true,
+    "yep_tile_click": true,
+    "phone_click": true,
+    "get_quote_click": true,
+    "_debug": {
+      "filmFound": true,
+      "yepFound": true,
+      "quoteCtaFound": true
+    }
+  },
+  "pii": {
+    "clean": {
+      "intent": "general"
+    },
+    "markersFoundInDataLayer": [],
+    "formMasked": false,
+    "contactMasked": true,
+    "quoteMasked": true,
+    "pass": true
+  },
+  "notes": [],
+  "viewportOverflow": {
+    "390": {
+      "overflow": false,
+      "pass": true
+    },
+    "430": {
+      "overflow": false,
+      "pass": true
+    },
+    "768": {
+      "overflow": false,
+      "pass": true
+    },
+    "1024": {
+      "overflow": false,
+      "pass": true
+    },
+    "1440": {
+      "overflow": false,
+      "pass": true
+    },
+    "1920": {
+      "overflow": false,
+      "pass": true
+    }
+  }
+}

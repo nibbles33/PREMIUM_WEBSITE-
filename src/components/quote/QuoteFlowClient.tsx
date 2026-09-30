@@ -45,17 +45,22 @@ export default function QuoteFlowClient() {
 
   if (!category) {
     return (
-      <div className="rounded-[18px] border border-border bg-white/95 p-5 shadow-[0_12px_40px_rgba(32,39,40,0.08)] sm:p-8">
+      <div
+        className="rounded-[18px] border border-border bg-white/95 p-5 shadow-[0_12px_40px_rgba(32,39,40,0.08)] pib-clarity-mask sm:p-8"
+        data-clarity-mask="true"
+      >
         <QuoteCategoryPicker onSelect={onPick} />
       </div>
     );
   }
 
   return (
-    <QuoteFlowEngine
-      key={category}
-      category={category}
-      urlParams={parsed.urlParams}
-    />
+    <div className="pib-clarity-mask" data-clarity-mask="true">
+      <QuoteFlowEngine
+        key={category}
+        category={category}
+        urlParams={parsed.urlParams}
+      />
+    </div>
   );
 }

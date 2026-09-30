@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { openCookiePreferencesEvent } from "@/lib/consent/storage";
 
 const personalLinks = [
   { label: "Auto Insurance", href: "/auto-insurance/" },
@@ -182,10 +185,30 @@ export default function Footer() {
             </span>
             <a
               href="tel:+12267826000"
+              data-track-location="footer"
               className="transition-colors hover:text-gold"
             >
               226-782-6000
             </a>
+            <span className="hidden text-white/25 sm:inline" aria-hidden>
+              |
+            </span>
+            <button
+              type="button"
+              onClick={() => openCookiePreferencesEvent()}
+              className="text-left transition-colors hover:text-gold"
+            >
+              Cookie Preferences
+            </button>
+            <span className="hidden text-white/25 sm:inline" aria-hidden>
+              |
+            </span>
+            <Link
+              href="/privacy-policy/"
+              className="transition-colors hover:text-gold"
+            >
+              Privacy Policy
+            </Link>
           </p>
           <p className="sm:text-right">
             © {year} Premium Insurance Brokers — A Division of Oracle RMS. All

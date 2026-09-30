@@ -18,6 +18,11 @@ import {
   PILOT_COMMERCIAL_PANEL_IMAGE,
 } from "@/data/photography";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
+import { track } from "@/lib/analytics";
+
+function productSlugFromHref(href: string): string {
+  return href.replace(/^\/|\/$/g, "") || "unknown";
+}
 
 export default function PilotCommercialDiscovery() {
   const reduceMotion = usePrefersReducedMotion();
@@ -34,6 +39,10 @@ export default function PilotCommercialDiscovery() {
   const selectCategory = useCallback(
     (id: string) => {
       if (id === activeId) return;
+      track("commercial_category_select", {
+        category_id: id,
+        surface: "homepage",
+      });
       if (reduceMotion) {
         setActiveId(id);
         setPanelVisible(true);
@@ -189,6 +198,10 @@ export default function PilotCommercialDiscovery() {
                     <li key={product.href} className="min-w-0">
                       <Link
                         href={product.href}
+                        data-track="commercial_product_select"
+                        data-track-product-slug={productSlugFromHref(product.href)}
+                        data-track-category-id={active.id}
+                        data-track-surface="homepage"
                         className="group flex h-full min-h-[44px] items-center justify-between rounded-lg border border-white/10 bg-charcoal/60 px-4 py-3 text-[14px] font-medium text-white transition-colors hover:border-gold/45 hover:bg-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-[15px]"
                       >
                         <span className="min-w-0 pr-3">{product.label}</span>

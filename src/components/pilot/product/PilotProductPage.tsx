@@ -85,6 +85,7 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
             heading={config.relatedHeading}
             intro={config.relatedIntro}
             products={config.relatedProducts}
+            fromSlug={config.slug}
           />
         ) : null}
         {config.faqItems.length > 0 ? (

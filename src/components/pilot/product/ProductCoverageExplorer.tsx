@@ -9,6 +9,7 @@ import { getRestaurantStateImagePreloadUrls } from "@/data/coverage-explorer/res
 import { usePreloadCoverageStateImages } from "@/hooks/usePreloadCoverageStateImages";
 import { useCoverageTabKeyboard } from "@/hooks/useCoverageTabKeyboard";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
+import { track } from "@/lib/analytics";
 import type { PilotProductPageConfig } from "@/types/pilot-product";
 
 type ProductCoverageExplorerProps = {
@@ -64,8 +65,13 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
     (id: string) => {
       setActiveId(id);
       if (usesInteractionGate) setHasImageInteracted(true);
+      track("coverage_explorer_interact", {
+        product_slug: config.slug,
+        coverage_id: id,
+        action: "select",
+      });
     },
-    [usesInteractionGate],
+    [usesInteractionGate, config.slug],
   );
 
   const active =

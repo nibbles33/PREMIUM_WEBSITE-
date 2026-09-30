@@ -290,6 +290,9 @@ export default function PilotPersonalFilmstrip() {
                     href={item.href}
                     draggable={false}
                     onDragStart={(event) => event.preventDefault()}
+                    data-track="personal_product_select"
+                    data-track-product-slug={item.slug}
+                    data-track-surface="filmstrip"
                     className="pilot-filmstrip-frame group relative block h-full overflow-hidden rounded-[16px] border border-border/70 bg-charcoal shadow-[0_12px_36px_rgba(32,39,40,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
                     aria-label={`${item.label} insurance`}
                     aria-current={isActive ? "true" : undefined}
