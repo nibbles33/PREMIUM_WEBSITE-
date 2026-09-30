@@ -159,37 +159,64 @@ Optional (not required): add alias `BLOB_STORE_ID` = same value as `BLOB_READ_WR
 |---|---|
 | `npx tsc --noEmit` | **PASS** |
 | `npm run build` | **PASS** |
-| Contact / Quote source unchanged | **PASS** (not modified) |
+| Contact / Quote source unchanged | **PASS** (`git diff` vs pre-fix commit = 0 lines) |
+| Client bundle contains no Blob secrets / `@vercel/blob` | **PASS** — no matches under `.next/static` |
+| Job-apply compiled as server route | **PASS** — `.next/server/app/api/job-apply/route.js` |
+| Validation: oversize (>5 MB) rejected | **PASS** (unit) |
+| Validation: unsupported type rejected | **PASS** (unit) |
+| Validation: missing required fields rejected | **PASS** (unit) |
+| Validation: PDF / DOCX accepted | **PASS** (unit) |
+| Pathname sanitization (no applicant filename / no `..`) | **PASS** (unit) |
+
+---
+
+## Preview deployment
+
+| Field | Value |
+|---|---|
+| Commit | `8c219ed` |
+| GitHub deployment | `6750641706` |
+| Environment | **Preview** (not Production) |
+| Preview URL | https://premium-website-nr1fsa0jw-nabil-g-s-projects.vercel.app |
+| Deploy state | **success** |
+| Access | **Vercel Authentication / Deployment Protection** — unauthenticated HTTP returns protection page |
+
+Agent could not complete live Preview HTTP E2E in this environment:
+
+- `vercel` CLI: logged out
+- Vercel MCP `mcp_auth`: timed out (no owner interactive auth)
+- Raw `curl` correctly blocked by Deployment Protection (expected)
+
+Owner (or authenticated agent session) should run A/F/G/H/I/J/K against the Preview URL above, then confirm the uploaded object appears in **premium-website-blob** as **private**.
 
 ---
 
 ## Preview test checklist (A–M)
 
-*Filled after Preview deploy of this commit.*
-
 | ID | Test | Result |
 |---|---|---|
-| A | Valid PDF under 5 MB | PENDING |
-| B | Valid DOC/DOCX if supported | PENDING |
-| C | File over 5 MB rejected | PENDING |
-| D | Unsupported file type rejected | PENDING |
-| E | Missing required fields rejected | PENDING |
-| F | Blob upload succeeds as PRIVATE | PENDING |
-| G | Database application record succeeds | PENDING |
-| H | Careers email → `CAREERS_NOTIFY_TO` | PENDING |
-| I | Resume NOT anonymously publicly accessible | PENDING |
-| J | Contact still works | PENDING |
-| K | Quote still works | PENDING |
-| L | Production build PASS | **PASS** (local) |
-| M | Typecheck PASS | **PASS** (local); lint has pre-existing repo errors unrelated to this change |
+| A | Valid PDF under 5 MB | **BLOCKED** — Preview SSO; validation unit PASS |
+| B | Valid DOC/DOCX if supported | **BLOCKED** — Preview SSO; validation unit PASS |
+| C | File over 5 MB rejected | **PASS** (local unit — same validators used by route) |
+| D | Unsupported file type rejected | **PASS** (local unit) |
+| E | Missing required fields rejected | **PASS** (local unit) |
+| F | Blob upload succeeds as PRIVATE | **BLOCKED** — Preview SSO / Blob dashboard owner check |
+| G | Database application record succeeds | **BLOCKED** — Preview SSO |
+| H | Careers email → `CAREERS_NOTIFY_TO` | **BLOCKED** — Preview SSO |
+| I | Resume NOT anonymously publicly accessible | **CODE PASS** (`access:"private"`; no public URL / no public download route); live URL probe **BLOCKED** |
+| J | Contact still works | **CODE PASS** (untouched); live **BLOCKED** — Preview SSO |
+| K | Quote still works | **CODE PASS** (untouched); live **BLOCKED** — Preview SSO |
+| L | Production build PASS | **PASS** |
+| M | Typecheck PASS | **PASS**; lint has pre-existing repo errors unrelated to this change |
 
 ---
 
 ## Unresolved items
 
-1. Preview E2E results A–K / F–I dashboard confirmation pending post-push Preview deployment.
+1. **Owner Preview E2E** for A/B/F/G/H/I (and smoke J/K) while authenticated to Vercel — confirm private object in `premium-website-blob` dashboard.
 2. Production promotion explicitly **out of scope** — owner approval required later.
 3. Optional owner alias `BLOB_STORE_ID` — not required; code accepts existing prefixed store id.
+4. Vercel MCP / CLI auth for this agent session — timed out / logged out; does not block the code remediation.
 
 ---
 
