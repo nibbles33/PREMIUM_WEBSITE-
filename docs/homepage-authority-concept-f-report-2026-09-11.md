@@ -355,11 +355,9 @@ PREMIUMIB.COM CHANGED: NO
 
 ## Preview URL
 
-**Vercel Preview (Rev 2):** https://premium-website-3tyqkj6gx-nabil-g-s-projects.vercel.app  
+**Vercel Preview (Rev 3):** https://premium-website-5ex7tt3dw-nabil-g-s-projects.vercel.app  
 
-(Rev 3 Preview URL will refresh after push if GitHub↔Vercel integration is active.)
-
-Branch: `cursor/homepage-authority-concept-f`
+Branch: `cursor/homepage-authority-concept-f` @ `4af40fa`
 
 **Do not promote Preview to Production.**
 
