@@ -263,10 +263,78 @@ https://premium-website-git-cursor-homepage-a-6b58b4-nabil-g-s-projects.vercel.a
 2. Coverage item registry count is **241** vs historical doc baseline **236** — informational; not a reconciliation merge conflict.
 3. Privacy Policy cookie disclosure still flagged for owner/legal review (from analytics batch).
 4. Do not merge / Production-deploy until owner visual approval.
+5. **Provide higher-resolution homepage hero master** (≥2880×1620, preferred 3840×2160) — see §23.
 
 ---
 
-FINAL RELEASE CANDIDATE PREVIEW: <URL>
+## 23. Patch — image quality + authority count-up (2026-10-01)
+
+### Image-quality root causes
+
+1. **Legacy office thumbnails upscaled in large panels**  
+   - `office-1.jpg` = **255×325** used in Why Premium (~520px+ tall panel)  
+   - `office-2.jpg` = **353×454** used in Windsor/Oracle panel  
+   → Primary cause of visibly soft homepage editorial photography.
+
+2. **Production photography masters are 1672×941**  
+   All `/images/photography/**/*.webp` masters are **1672×941**.  
+   Full-bleed homepage hero on Retina desktops wants ~2880–3840 CSS×DPR pixels → source cannot support crisp Retina full-bleed. Delivery was already capped at native width (correct); cannot invent pixels in code.
+
+3. **Delivery settings**  
+   Quality was already ~90; some `sizes` hints under-requested vs available 1672px master for product/commercial panels. Adjusted without disabling Next optimization or forcing quality=100 globally.
+
+### Image audit table (prominent)
+
+| IMAGE | SOURCE FILE | SOURCE DIMENSIONS | MAX RENDERED (approx) | CURRENT DELIVERY ISSUE | FIX | REPLACEMENT REQUIRED |
+|---|---|---|---|---|---|---|
+| Homepage hero | `photography/special/homepage-hero.webp` | 1672×941 | Full viewport ~1440–1920 CSS (×2 Retina) | Source too small for Retina full-bleed | quality 92; sizes capped at 1672 | **YES** — ≥2880×1620 (pref 3840×2160) |
+| Why Premium panel | was `office-1.jpg` | 255×325 | ~534–720 CSS px | Thumbnail upscaled | Switched to `photography/special/team.webp` + q92 | No (until hero-class office shoot exists) |
+| Windsor/Oracle panel | was `office-2.jpg` | 353×454 | ~580–720 CSS px | Thumbnail upscaled | Switched to `photography/special/about.webp` + q92 | No (optional dedicated office master later) |
+| Personal filmstrip | `photography/personal/*.webp` | 1672×941 | ~220–280 CSS cards | Minor under-request | sizes/quality tuned (420px / q92) | Optional higher-res if cards grow |
+| Commercial panel | `photography/commercial/*.webp` | 1672×941 | ~720–960 CSS | sizes capped low | sizes → 960px / q92 | Optional |
+| Product page heroes | same 1672×941 webps | 1672×941 | ~540–960 CSS | sizes 640px underused source | sizes → 960px / q92 via PageHeroPhoto + PILOT_AUTO_HERO | Optional |
+| About/Team/Contact heroes | special/*.webp | 1672×941 | ~960 CSS | default quality 75 risk | PageHeroPhoto quality 92 | Optional |
+| Careers | (text hero, no photo) | n/a | n/a | n/a | unchanged | No |
+| Award badges | awards assets | often ≥1000px | 88–100 CSS | missing sizes/quality | width 200 + sizes 100px q90 | No |
+
+### Count-up implementation
+
+- New `CountUpStat` client component (no animation library)
+- Viewport IntersectionObserver (~35% visible), **once** per mount
+- Ease-out cubic, ~1.5s
+- Formats `2700 → 2,700+`, `31 → 31+`, `9 → 9`
+- `prefers-reduced-motion: reduce` → final values immediately
+- `tabular-nums`; SSR shows final values (no layout shift / hydration mismatch)
+- **50+ Insurance Carriers:** **HELD FOR OWNER CONFIRMATION**  
+  - `allPartners` in repo = **44 unique** names (featured rail remains exact 12)  
+  - Public site unchanged for this metric
+
+### Patch QA
+
+| Check | Result |
+|---|---|
+| tsc / production build | PASS |
+| Commercial 10/10 · 54/54 | PASS |
+| Personal 14/14 | PASS (unchanged) |
+| Featured carriers 12 | PASS (unchanged) |
+| office-1 / office-2 removed from homepage | PASS |
+| Count-up finals 2,700+ / 31+ / 9 | PASS |
+| 50+ not shown | PASS (held) |
+| Reduced motion | PASS |
+| Authority viewports 390–1920 no overflow | PASS |
+| Analytics / forms / GTM | untouched |
+
+Screenshots: `docs/qa-screenshots/rc-image-authority-patch-2026-10-01/`
+
+### Patch commit / Preview
+
+- **Patch commit:** `11073e9` — polish: sharpen imagery and animate authority metrics  
+- **Authoritative Preview (branch):** https://premium-website-git-cursor-homepage-a-6b58b4-nabil-g-s-projects.vercel.app  
+- Vercel deployment for `11073e9`: SUCCESS
+
+---
+
+FINAL RELEASE CANDIDATE PREVIEW: https://premium-website-git-cursor-homepage-a-6b58b4-nabil-g-s-projects.vercel.app
 
 MERGED TO MAIN: NO  
 VERCEL PRODUCTION DEPLOYED: NO  
