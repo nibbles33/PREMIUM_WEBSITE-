@@ -10,7 +10,7 @@ type CountUpStatProps = {
   /** Optional accessible label describing the metric. */
   ariaLabel?: string;
   className?: string;
-  /** Duration in ms. Default ~1500. */
+  /** Duration in ms. Default 1800 for a clearly visible count. */
   durationMs?: number;
 };
 
@@ -24,45 +24,43 @@ function easeOutCubic(t: number): number {
 
 /**
  * Viewport-triggered count-up for authority metrics.
- * Runs once per mount/session; respects prefers-reduced-motion.
- * Renders final formatted value immediately on the server to avoid layout shift.
+ *
+ * - Starts at 0 (not the final value).
+ * - Begins ONLY when the metric is meaningfully inside the viewport
+ *   (center band via rootMargin) — not merely mounted below the hero.
+ * - Runs once; does not restart on scroll away/back.
+ * - prefers-reduced-motion → final value immediately.
  */
 export default function CountUpStat({
   value,
   suffix = "",
   ariaLabel,
   className,
-  durationMs = 1500,
+  durationMs = 1800,
 }: CountUpStatProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const completedRef = useRef(false);
-  const [display, setDisplay] = useState(value);
-  const [reduceMotion, setReduceMotion] = useState(false);
+  const startedRef = useRef(false);
+  // Always start at 0 so the section does not show finished totals before trigger.
+  const [display, setDisplay] = useState(0);
 
   useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setReduceMotion(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
-
-  useEffect(() => {
-    if (reduceMotion) {
-      setDisplay(value);
-      completedRef.current = true;
-      return;
-    }
-
     const node = ref.current;
     if (!node || completedRef.current) return;
 
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mq.matches) {
+      setDisplay(value);
+      completedRef.current = true;
+      startedRef.current = true;
+      return;
+    }
+
     let frame = 0;
-    let started = false;
 
     const run = () => {
-      if (started || completedRef.current) return;
-      started = true;
+      if (startedRef.current || completedRef.current) return;
+      startedRef.current = true;
       const start = performance.now();
       setDisplay(0);
 
@@ -79,14 +77,22 @@ export default function CountUpStat({
       frame = requestAnimationFrame(tick);
     };
 
+    // Shrink the root so the strip must enter the central band of the viewport.
+    // Prevents firing while the user is still reading the hero and only a sliver
+    // of the authority strip peeks below the fold.
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries.some((e) => e.isIntersecting && e.intersectionRatio > 0.35)) {
-          run();
-          observer.disconnect();
-        }
+        const hit = entries.some(
+          (e) => e.isIntersecting && e.intersectionRatio >= 0.45,
+        );
+        if (!hit) return;
+        run();
+        observer.disconnect();
       },
-      { threshold: [0.35, 0.5] },
+      {
+        threshold: [0.45, 0.6, 0.75],
+        rootMargin: "-18% 0px -18% 0px",
+      },
     );
     observer.observe(node);
 
@@ -94,7 +100,7 @@ export default function CountUpStat({
       observer.disconnect();
       cancelAnimationFrame(frame);
     };
-  }, [value, durationMs, reduceMotion]);
+  }, [value, durationMs]);
 
   const finalText = `${formatNumber(value)}${suffix}`;
   const text = `${formatNumber(display)}${suffix}`;
@@ -105,9 +111,17 @@ export default function CountUpStat({
       className={className}
       aria-label={ariaLabel ?? finalText}
     >
-      {/* Reserve final-width with tabular nums to avoid layout shift mid-count. */}
-      <span aria-hidden="true" className="inline-block tabular-nums">
-        {text}
+      {/* Invisible final-width spacer prevents layout shift as digits grow. */}
+      <span className="relative inline-block tabular-nums">
+        <span className="invisible" aria-hidden="true">
+          {finalText}
+        </span>
+        <span
+          className="absolute inset-0 inline-flex items-baseline"
+          aria-hidden="true"
+        >
+          {text}
+        </span>
       </span>
     </span>
   );
