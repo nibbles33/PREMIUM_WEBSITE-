@@ -7,6 +7,10 @@ import Header from "@/components/Header";
 import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getPageHeroPhotography } from "@/data/photography";
+import {
+  normalizeContactInquiry,
+  type ContactInquiry,
+} from "@/lib/contact/validate";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Contact Us | Premium Insurance Brokers",
@@ -18,12 +22,58 @@ export const metadata: Metadata = buildPageMetadata({
 const QUOTE_HREF = "/get-a-quote/";
 
 type ContactPageProps = {
-  searchParams: Promise<{ intent?: string }>;
+  searchParams: Promise<{ intent?: string; inquiry?: string }>;
 };
 
+function resolveContactHero(intent?: string, inquiry: ContactInquiry = "general") {
+  if (inquiry === "life") {
+    return {
+      title: "Start a Life Inquiry",
+      lead:
+        "Tell us a bit about what you are exploring — Premium will coordinate your connection with a licensed life-insurance professional through Oracle/head office.",
+      formHeading: "Life insurance inquiry",
+      ctaHeading: "Prefer to speak with someone first?",
+      ctaLead: "Call our Windsor-Essex office and we will help start the life inquiry process.",
+      hideQuoteCta: true,
+    };
+  }
+  if (inquiry === "group") {
+    return {
+      title: "Start a Group Inquiry",
+      lead:
+        "Tell us whether you represent an employer, association, or member — Premium will coordinate specialist access through Oracle/head office.",
+      formHeading: "Group home & auto inquiry",
+      ctaHeading: "Prefer to speak with someone first?",
+      ctaLead: "Call our Windsor-Essex office and we will help start the group program conversation.",
+      hideQuoteCta: true,
+    };
+  }
+  if (intent === "broker") {
+    return {
+      title: "Talk to a Broker",
+      lead:
+        "Reach a licensed broker in Windsor-Essex — by phone, email, or the form below.",
+      formHeading: "Send a message to our team",
+      ctaHeading: "Need a quote instead?",
+      ctaLead: "Start a quote online or call us during business hours.",
+      hideQuoteCta: false,
+    };
+  }
+  return {
+    title: "Contact Us",
+    lead:
+      "Reach a real broker in Windsor-Essex — by phone, email, or the form below.",
+    formHeading: "Send a message",
+    ctaHeading: "Prefer to talk it through?",
+    ctaLead: "Get a quote online or speak with a broker who knows Windsor-Essex.",
+    hideQuoteCta: false,
+  };
+}
+
 export default async function ContactPage({ searchParams }: ContactPageProps) {
-  const { intent } = await searchParams;
-  const isBrokerIntent = intent === "broker";
+  const { intent, inquiry: rawInquiry } = await searchParams;
+  const inquiry = normalizeContactInquiry(rawInquiry);
+  const hero = resolveContactHero(intent, inquiry);
   const heroPhoto = getPageHeroPhotography("contact");
 
   return (
@@ -48,12 +98,10 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     id="contact-hero-heading"
                     className="text-[2.25rem] font-medium leading-[1.08] tracking-[-0.02em] text-charcoal sm:text-5xl sm:leading-[1.06]"
                   >
-                    {isBrokerIntent ? "Talk to a Broker" : "Contact Us"}
+                    {hero.title}
                   </h1>
                   <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:mt-5 sm:text-base">
-                    {isBrokerIntent
-                      ? "Reach a licensed broker in Windsor-Essex — by phone, email, or the form below."
-                      : "Reach a real broker in Windsor-Essex — by phone, email, or the form below."}
+                    {hero.lead}
                   </p>
                 </div>
                 {heroPhoto ? <PageHeroPhoto placement={heroPhoto} priority /> : null}
@@ -130,9 +178,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             <RevealOnScroll>
               <div>
                 <h2 className="mb-5 text-xl font-medium tracking-tight text-charcoal sm:text-2xl">
-                  {isBrokerIntent ? "Send a message to our team" : "Send a message"}
+                  {hero.formHeading}
                 </h2>
-                <ContactForm />
+                <ContactForm inquiry={inquiry} />
               </div>
             </RevealOnScroll>
           </div>
@@ -149,40 +197,55 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   id="contact-cta-heading"
                   className="text-2xl font-medium tracking-[-0.02em] text-white sm:text-3xl"
                 >
-                  {isBrokerIntent ? "Need a quote instead?" : "Prefer to talk it through?"}
+                  {hero.ctaHeading}
                 </h2>
                 <p className="mt-3 text-[15px] leading-relaxed text-white/65 sm:text-base">
-                  {isBrokerIntent
-                    ? "Start a quote online or call us during business hours."
-                    : "Get a quote online or speak with a broker who knows Windsor-Essex."}
+                  {hero.ctaLead}
                 </p>
                 <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
-                  <Link
-                    href={QUOTE_HREF}
-                    className="btn-primary btn-primary-gradient group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:min-w-[200px]"
-                  >
-                    Get a Quote
-                    <span
-                      aria-hidden
-                      className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
-                    >
-                      →
-                    </span>
-                  </Link>
-                  {isBrokerIntent ? (
+                  {hero.hideQuoteCta ? (
                     <a
                       href="tel:+12267826000"
-                      className="inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md border border-white/25 bg-transparent px-6 text-[15px] font-medium text-white transition-colors hover:border-gold hover:text-gold sm:w-auto sm:min-w-[200px]"
+                      className="btn-primary btn-primary-gradient group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:min-w-[200px]"
                     >
                       Call 226-782-6000
+                      <span
+                        aria-hidden
+                        className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
+                      >
+                        →
+                      </span>
                     </a>
                   ) : (
-                    <Link
-                      href="/contact/?intent=broker"
-                      className="inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md border border-white/25 bg-transparent px-6 text-[15px] font-medium text-white transition-colors hover:border-gold hover:text-gold sm:w-auto sm:min-w-[200px]"
-                    >
-                      Talk to a Broker
-                    </Link>
+                    <>
+                      <Link
+                        href={QUOTE_HREF}
+                        className="btn-primary btn-primary-gradient group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:min-w-[200px]"
+                      >
+                        Get a Quote
+                        <span
+                          aria-hidden
+                          className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
+                        >
+                          →
+                        </span>
+                      </Link>
+                      {intent === "broker" ? (
+                        <a
+                          href="tel:+12267826000"
+                          className="inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md border border-white/25 bg-transparent px-6 text-[15px] font-medium text-white transition-colors hover:border-gold hover:text-gold sm:w-auto sm:min-w-[200px]"
+                        >
+                          Call 226-782-6000
+                        </a>
+                      ) : (
+                        <Link
+                          href="/contact/?intent=broker"
+                          className="inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md border border-white/25 bg-transparent px-6 text-[15px] font-medium text-white transition-colors hover:border-gold hover:text-gold sm:w-auto sm:min-w-[200px]"
+                        >
+                          Talk to a Broker
+                        </Link>
+                      )}
+                    </>
                   )}
                 </div>
               </div>

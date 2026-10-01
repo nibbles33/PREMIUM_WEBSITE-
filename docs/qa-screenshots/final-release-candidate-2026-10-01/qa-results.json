@@ -1,0 +1,91 @@
+{
+  "analytics": {
+    "beforeConsentPageView": false,
+    "afterAcceptPageView": true,
+    "gtmIdAfterAccept": "GTM-P54WZ855",
+    "clarityAfterAccept": true,
+    "gaDirectTags": 1,
+    "staleMenu": {
+      "navOpenMenu": "resources",
+      "getQuoteMenu": "MISSING_KEY",
+      "getQuoteLocation": "header",
+      "getQuoteDestination": "get_a_quote",
+      "getQuotePageType": "MISSING_KEY",
+      "pass": true
+    },
+    "spaPageView": true,
+    "productView": true,
+    "rejectNoPageView": true,
+    "rejectNoClarity": true
+  },
+  "inventory": {
+    "personalUnique": 14,
+    "personalSlugs": [
+      "auto-insurance",
+      "home-insurance",
+      "condo",
+      "tenant",
+      "landlord",
+      "motorcycle",
+      "boat",
+      "cottage",
+      "travel-insurance",
+      "mobile-home-insurance",
+      "personal-umbrella-insurance",
+      "home-sharing-insurance",
+      "life-insurance",
+      "group-home-auto-insurance"
+    ],
+    "commercialTabCount": 24,
+    "carrierLabels": [
+      "Insurance carrier partners",
+      "CAA Insurance — see all partners",
+      "CAA Insurance Company logo",
+      "Intact Insurance — see all partners",
+      "Intact Insurance logo",
+      "SGI Canada — see all partners",
+      "SGI Canada logo",
+      "Wawanesa Insurance — see all partners",
+      "Wawanesa Insurance logo",
+      "Northbridge Insurance — see all partners",
+      "Northbridge Insurance logo",
+      "Aviva — see all partners",
+      "Aviva logo",
+      "Travelers — see all partners",
+      "Travelers logo",
+      "Chubb — see all partners",
+      "Chubb logo",
+      "Gore Mutual — see all partners",
+      "Gore Mutual logo",
+      "Echelon Insurance — see all partners"
+    ],
+    "hasTeamSection": false,
+    "hasHomesPill": false,
+    "hasDevPlacesCopy": false,
+    "hasOracleGiantCell": false,
+    "personalAutoplay": "none",
+    "gtmScripts": 1,
+    "gtmId": "GTM-P54WZ855",
+    "gaDirect": 1,
+    "clarityBeforeConsent": false
+  },
+  "viewports": {
+    "390": {
+      "overflow": false,
+      "pass": true
+    },
+    "430": {
+      "overflow": false,
+      "pass": true
+    },
+    "1440": {
+      "overflow": false,
+      "pass": true
+    },
+    "1920": {
+      "overflow": false,
+      "pass": true
+    }
+  },
+  "checks": {}
+}

@@ -1,6 +1,11 @@
 "use client";
 
 import { useId, useRef, useState, type FormEvent } from "react";
+import { track } from "@/lib/analytics";
+import {
+  normalizeContactInquiry,
+  type ContactInquiry,
+} from "@/lib/contact/validate";
 
 type FormState = {
   name: string;
@@ -18,7 +23,13 @@ const INITIAL: FormState = {
   message: "",
 };
 
-export default function ContactForm() {
+type ContactFormProps = {
+  /** Pre-normalized inquiry context from the contact page URL. */
+  inquiry?: ContactInquiry;
+};
+
+export default function ContactForm({ inquiry = "general" }: ContactFormProps) {
+  const inquiryContext = normalizeContactInquiry(inquiry);
   const [form, setForm] = useState<FormState>(INITIAL);
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
@@ -59,6 +70,7 @@ export default function ContactForm() {
           phone: fd.get("phone"),
           message: fd.get("message"),
           website: fd.get("website"),
+          inquiry: inquiryContext,
         }),
       });
 
@@ -76,6 +88,7 @@ export default function ContactForm() {
       }
 
       if (!res.ok || !data.ok) {
+        track("contact_submit_error", { error_code: "submit_rejected" });
         setStatus("error");
         setError(
           data.error ??
@@ -87,9 +100,11 @@ export default function ContactForm() {
         return;
       }
 
+      track("contact_submit_success", { intent: inquiryContext });
       setStatus("success");
       setForm(INITIAL);
     } catch {
+      track("contact_submit_error", { error_code: "network_error" });
       setStatus("error");
       setError(
         "Network error. Your message was not sent. Please try again or call 226-782-6000.",
@@ -133,7 +148,8 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-[14px] border border-border bg-white p-6 shadow-[0_10px_28px_rgba(32,39,40,0.06)] sm:p-8"
+      className="pib-clarity-mask rounded-[14px] border border-border bg-white p-6 shadow-[0_10px_28px_rgba(32,39,40,0.06)] sm:p-8"
+      data-clarity-mask="true"
       noValidate
     >
       <input

@@ -1,0 +1,121 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "viewport": "390",
+      "overflow": false,
+      "scrollWidth": 390,
+      "personal": 14,
+      "googleBad": false,
+      "googleFallback": true,
+      "homesPill": false,
+      "teamInMain": false,
+      "oracleFooter": true,
+      "yepRailScrollsInternally": false,
+      "bodyOverflowX": "clip",
+      "shot": {
+        "w": 390,
+        "h": 9527,
+        "sw": 390
+      }
+    },
+    {
+      "viewport": "430",
+      "overflow": false,
+      "scrollWidth": 430,
+      "personal": 14,
+      "googleBad": false,
+      "googleFallback": true,
+      "homesPill": false,
+      "teamInMain": false,
+      "oracleFooter": true,
+      "yepRailScrollsInternally": false,
+      "bodyOverflowX": "clip",
+      "shot": {
+        "w": 430,
+        "h": 9466,
+        "sw": 430
+      }
+    },
+    {
+      "viewport": "768",
+      "overflow": false,
+      "scrollWidth": 768,
+      "personal": 14,
+      "googleBad": false,
+      "googleFallback": true,
+      "homesPill": false,
+      "teamInMain": false,
+      "oracleFooter": true,
+      "yepRailScrollsInternally": false,
+      "bodyOverflowX": "clip",
+      "shot": {
+        "w": 768,
+        "h": 9382,
+        "sw": 768
+      }
+    },
+    {
+      "viewport": "1440",
+      "overflow": false,
+      "scrollWidth": 1440,
+      "personal": 14,
+      "googleBad": false,
+      "googleFallback": true,
+      "homesPill": false,
+      "teamInMain": false,
+      "oracleFooter": true,
+      "yepRailScrollsInternally": false,
+      "bodyOverflowX": "clip",
+      "shot": {
+        "w": 1440,
+        "h": 7372,
+        "sw": 1440
+      }
+    },
+    {
+      "viewport": "1920",
+      "overflow": false,
+      "scrollWidth": 1920,
+      "personal": 14,
+      "googleBad": false,
+      "googleFallback": true,
+      "homesPill": false,
+      "teamInMain": false,
+      "oracleFooter": true,
+      "yepRailScrollsInternally": false,
+      "bodyOverflowX": "clip",
+      "shot": {
+        "w": 1920,
+        "h": 7402,
+        "sw": 1920
+      }
+    },
+    {
+      "page": "auto",
+      "vp": "390",
+      "overflow": false
+    },
+    {
+      "page": "auto",
+      "vp": "1440",
+      "overflow": false
+    },
+    {
+      "megaEscapeCloses": true
+    },
+    {
+      "viewport": "2560",
+      "overflow": false,
+      "sw": 2560,
+      "personal": 14
+    },
+    {
+      "viewport": "3840",
+      "overflow": false,
+      "sw": 3840,
+      "personal": 14
+    }
+  ],
+  "consoleErrors": []
+}

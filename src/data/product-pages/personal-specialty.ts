@@ -3,6 +3,8 @@ import {
   Car,
   Heart,
   Home,
+  Package,
+  Share2,
   Shield,
   Umbrella,
   Users,
@@ -10,6 +12,8 @@ import {
 import type { ProductPageContent } from "@/data/product-pages/types";
 
 const CONTACT = "/contact/";
+const COVERAGE_QUALIFIER =
+  "Coverage, limits, and eligibility vary by insurer and policy. Your broker can help determine the options available for your situation.";
 
 export const personalSpecialtyPages: ProductPageContent[] = [
   {
@@ -24,33 +28,59 @@ export const personalSpecialtyPages: ProductPageContent[] = [
       "Coverage tailored to manufactured and mobile homes — from the structure and skirting to liability and personal belongings.",
     photographySlug: "mobile-home-insurance",
     quoteHref: "/get-a-quote?type=home",
-    quoteLabel: "Get a Home Quote",
+    quoteLabel: "Get a Manufactured Home Quote",
     coverageIntro:
-      "Mobile and manufactured home policies address risks that differ from site-built houses — anchoring, age, location, and how the unit is used.",
+      `Manufactured and mobile home policies address structure, belongings, outbuildings, and liability in ways that differ from ordinary site-built homeowners forms. ${COVERAGE_QUALIFIER}`,
     coverageTypes: [
       {
-        title: "Dwelling Coverage",
+        id: "dwelling-coverage",
+        title: "Manufactured / Mobile Dwelling",
+        shortLabel: "Dwelling",
         description:
-          "Protects the manufactured home structure against covered perils such as fire, wind, and vandalism, subject to policy terms and the home's age and condition.",
+          "Helps protect the manufactured or mobile home structure against covered perils such as fire, wind, and vandalism.",
+        detail:
+          "Dwelling coverage for a manufactured or mobile home is intended to respond to covered damage to the unit itself — subject to the home's age, condition, installation, and policy terms. These homes are built and often titled differently from site-built houses, so a conventional homeowner form may not apply without qualification.",
         icon: Home,
       },
       {
-        title: "Contents & Belongings",
+        id: "contents-belongings",
+        title: "Personal Property",
+        shortLabel: "Contents",
         description:
-          "Covers furniture, appliances, and personal property inside the unit against theft or covered damage.",
+          "Helps protect furniture, appliances, and personal belongings inside the unit.",
+        detail:
+          "Personal property coverage is intended to respond when belongings inside the manufactured home are stolen or damaged by a covered peril — subject to limits, deductibles, and exclusions. Special items may need scheduling beyond standard sub-limits.",
+        icon: Package,
+      },
+      {
+        id: "additional-structures",
+        title: "Detached Structures",
+        shortLabel: "Structures",
+        description:
+          "May extend to decks, sheds, carports, and skirting when scheduled or included.",
+        detail:
+          "Decks, sheds, carports, and skirting are common on manufactured-home properties and may need to be listed or scheduled. Detached structures coverage — where available — is intended to help protect those additions within policy limits.",
         icon: Building2,
       },
       {
+        id: "personal-liability",
         title: "Personal Liability",
+        shortLabel: "Liability",
         description:
-          "Helps if someone is injured on your property or you are responsible for damage to others — including incidents on the lot or adjacent areas.",
+          "May help if someone is injured on your property or you are responsible for damage to others.",
+        detail:
+          "Personal liability coverage is intended to respond to certain claims alleging bodily injury or property damage for which you are legally liable — including some incidents on the lot or adjacent areas — subject to policy terms. Owned land vs. a leased park pad can change how exposures are underwritten.",
         icon: Shield,
       },
       {
-        title: "Additional Structures",
+        id: "additional-living-expenses",
+        title: "Additional Living Expenses",
+        shortLabel: "ALE",
         description:
-          "May extend to decks, sheds, carports, and skirting when scheduled or included, depending on carrier wording.",
-        icon: Building2,
+          "May help with temporary lodging if a covered loss makes the home unlivable during repairs.",
+        detail:
+          "When a covered loss forces you out of a manufactured or mobile home, additional living expenses coverage — where included — is intended to help with reasonable extra costs of temporary accommodation while repairs or replacement are arranged, within policy limits. Settlement approaches can differ from site-built homes based on age, condition, and insurer guidelines.",
+        icon: Home,
       },
     ],
     whoItIsFor:
@@ -125,30 +155,46 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     quoteHref: "/contact/?intent=broker",
     quoteLabel: "Talk to a Broker About Umbrella Coverage",
     coverageIntro:
-      "Umbrella policies extend personal liability limits when a claim exceeds what your home or auto policy will pay.",
+      `An umbrella sits above your underlying personal liability limits — it is excess protection, not a replacement for home or auto coverage, and it does not cover every type of loss. ${COVERAGE_QUALIFIER}`,
     coverageTypes: [
       {
-        title: "Excess Liability Limits",
+        id: "excess-liability-limits",
+        title: "Excess Personal Liability",
+        shortLabel: "Excess Liability",
         description:
-          "Provides additional liability coverage above the limits on your underlying home, auto, or other eligible personal policies.",
+          "Adds liability limits above what your underlying home, auto, or other eligible personal policies provide.",
+        detail:
+          "Personal umbrella coverage is primarily excess liability protection. When a covered liability claim exceeds the limit on an underlying home, auto, or other eligible personal policy, the umbrella is intended to respond above that underlying limit — subject to umbrella terms, exclusions, and the requirement that underlying policies remain in force at required minimums.",
         icon: Umbrella,
       },
       {
-        title: "Broad Personal Liability",
+        id: "broad-personal-liability",
+        title: "Protection Above Underlying Limits",
+        shortLabel: "Above Limits",
         description:
-          "May respond to certain liability claims not fully covered by underlying policies, subject to policy definitions and exclusions.",
+          "Helps explain how an umbrella relates to the liability limits already on your home and auto policies.",
+        detail:
+          "Think of the umbrella as an additional layer: your home and auto policies respond first up to their liability limits; the umbrella may then respond for covered amounts above those limits. Increasing an auto liability limit alone is not the same as coordinating excess protection across multiple underlying policies.",
         icon: Shield,
       },
       {
-        title: "Legal Defence Costs",
+        id: "legal-defence-costs",
+        title: "Underlying Policy Requirements",
+        shortLabel: "Underlying",
         description:
-          "Can help with defence costs for covered liability claims, within policy terms and after underlying limits are involved.",
-        icon: Shield,
+          "Umbrella carriers typically require minimum liability limits on your home and auto before the umbrella attaches.",
+        detail:
+          "Most umbrella insurers require that eligible underlying home and auto policies carry minimum liability limits before the umbrella will attach. If an underlying policy lapses or drops below required limits, umbrella protection may not respond as expected. Your broker will confirm what a given umbrella market requires for your household.",
+        icon: Home,
       },
       {
-        title: "Worldwide Coverage",
+        id: "worldwide-coverage",
+        title: "Broader Liability Protection",
+        shortLabel: "Broader Liability",
         description:
-          "Many personal umbrella policies extend liability protection for incidents outside Canada, subject to exclusions.",
+          "May extend to certain liability situations beyond a single underlying policy — still subject to exclusions.",
+        detail:
+          "Some umbrella policies may respond to a broader set of personal liability exposures than a single underlying policy alone — and some extend personally while travelling — but umbrella insurance does not cover every type of loss. Business activities, intentional acts, professional liability, and many contractual obligations are commonly excluded. An umbrella is not a catch-all for every claim.",
         icon: Umbrella,
       },
     ],
@@ -227,31 +273,47 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     quoteLabel: "Talk to a Broker About Sharing Coverage",
     secondaryCta: { label: "Contact Us", href: CONTACT },
     coverageIntro:
-      "Sharing-economy use sits at the overlap of personal auto, home, and landlord coverage — and platform policies that may not replace your own.",
+      `Sharing your home or vehicle creates exposures personal policies were not always designed for — and platform protection does not automatically replace your own insurance. ${COVERAGE_QUALIFIER}`,
     coverageTypes: [
       {
-        title: "Short-Term Rental (Home)",
+        id: "short-term-rental-home",
+        title: "Personal Policy Limitations",
+        shortLabel: "Limitations",
         description:
-          "Renting all or part of your home on platforms like Airbnb can trigger exclusions or limits on a standard homeowner policy. Landlord or short-term rental endorsements may be needed.",
+          "Standard home and auto policies often limit or exclude paid sharing activity during active use.",
+        detail:
+          "Many personal home and auto policies restrict or exclude activity that looks like a business — including paid short-term hosting and vehicle rentals. Relying on a personal policy alone during sharing activity can leave gaps. Disclose how you share so your broker can identify whether endorsements, landlord forms, or specialty markets are needed.",
+        icon: Shield,
+      },
+      {
+        id: "peer-to-peer-vehicle-sharing",
+        title: "Home-Sharing Exposure",
+        shortLabel: "Home Sharing",
+        description:
+          "Hosting guests through Airbnb or similar platforms can change property and liability exposure overnight.",
+        detail:
+          "Renting all or part of your home to paying guests can trigger exclusions or limits on a standard homeowner or condo policy. Platform host guarantees are not a full substitute for your own insurance. Landlord or short-term rental endorsements — where available — may be needed depending on frequency and how the property is used.",
         icon: Home,
       },
       {
-        title: "Peer-to-Peer Vehicle Sharing",
+        id: "ride-share-driving",
+        title: "Ride-Sharing / Delivery Exposure",
+        shortLabel: "Ride Sharing",
         description:
-          "Lending your personal vehicle through Turo or similar services is often treated as commercial use. Personal auto policies may not respond the same way during paid rentals.",
+          "Driving for Uber, Lyft, or delivery apps creates periods when personal auto and platform coverage interact differently.",
+        detail:
+          "App-on periods, passenger trips, and delivery use are often treated differently from ordinary personal driving. Platform coverage may apply only in limited windows and may not replace physical damage or liability protection you expect from a personal auto policy. Some insurers offer ride-share endorsements; others require a different structure.",
         icon: Car,
       },
       {
-        title: "Ride-Share Driving",
+        id: "host-guest-liability",
+        title: "Liability & Property Gaps",
+        shortLabel: "Gaps",
         description:
-          "Driving for Uber, Lyft, or delivery apps creates periods when personal auto, platform coverage, and commercial auto may each apply differently.",
-        icon: Car,
-      },
-      {
-        title: "Host & Guest Liability",
-        description:
-          "Injuries to guests, damage to neighbouring units, or theft during a rental can raise liability questions that span home, condo, and landlord policies.",
-        icon: Shield,
+          "Guest injuries, neighbouring-unit damage, and vehicle damage during sharing can fall between personal and platform policies.",
+        detail:
+          "Injuries to guests, damage to neighbouring units, theft during a rental, or damage while a vehicle is rented out can raise liability and property questions that span home, condo, landlord, and auto policies. Platform protection does not automatically fill every gap — and not every insurer accepts every sharing activity.",
+        icon: Share2,
       },
     ],
     whoItIsFor:
@@ -330,31 +392,47 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     quoteLabel: "Start a Life Inquiry",
     secondaryCta: { label: "Talk to a Broker", href: "/contact/?intent=broker" },
     coverageIntro:
-      "Life insurance addresses income replacement, debt protection, and legacy planning — a different discipline from home and auto coverage under RIBO-licensed property and casualty advice.",
+      "Life insurance is informational and inquiry-focused here — Premium coordinates your connection with licensed life professionals through Oracle/head office. This is not individualized financial advice, and Premium does not underwrite life coverage itself.",
     coverageTypes: [
       {
+        id: "term-life",
         title: "Term Life",
+        shortLabel: "Term",
         description:
-          "Coverage for a defined period — often used to protect a mortgage, young family, or business loan while obligations are highest.",
+          "Coverage for a defined period — often used while a mortgage, young family, or major obligation is highest.",
+        detail:
+          "Term life provides a death benefit for a set term if premiums are maintained and the policy remains in force. It is commonly discussed for income protection during working years or while a mortgage is outstanding. Product availability, amounts, and underwriting depend on the life specialist and insurer — not on Premium's P&C quote tools.",
         icon: Heart,
       },
       {
+        id: "permanent-life",
         title: "Permanent Life",
+        shortLabel: "Permanent",
         description:
-          "Long-term structures that may include a cash value component, depending on product design and your planning goals.",
+          "Longer-term structures that may include cash-value features, depending on product design.",
+        detail:
+          "Permanent life products (where available) are designed for longer-term needs and may include a cash-value component depending on design. Suitability depends on goals, budget, and underwriting — recommendations come from licensed life professionals, not from a generic online quote.",
         icon: Shield,
       },
       {
-        title: "Mortgage & Debt Protection",
+        id: "family-income-protection",
+        title: "Family / Income Protection",
+        shortLabel: "Income",
         description:
-          "Life coverage aligned with outstanding loans so beneficiaries are not left carrying major debts after an unexpected loss.",
-        icon: Home,
+          "Life coverage can help protect household income for dependents after an unexpected loss.",
+        detail:
+          "Many families explore life coverage so dependents have resources to maintain housing, childcare, and living costs if a primary earner dies. Needs vary widely; a licensed life professional can discuss concepts — this page does not provide personalized financial advice.",
+        icon: Users,
       },
       {
-        title: "Business & Key Person",
+        id: "mortgage-debt-protection",
+        title: "Mortgage / Debt Considerations",
+        shortLabel: "Debt",
         description:
-          "Life structures that may support buy-sell agreements, key person continuity, or creditor requirements for business owners.",
-        icon: Users,
+          "Coverage aligned with outstanding loans so beneficiaries are not left carrying major debts alone.",
+        detail:
+          "Mortgage and debt-related life discussions often focus on whether survivors would want resources available to pay down loans. Business or estate considerations may also arise for some households. Premium coordinates the inquiry; licensed life specialists through Oracle/head office provide product guidance.",
+        icon: Home,
       },
     ],
     whoItIsFor:
@@ -435,31 +513,47 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     quoteLabel: "Start a Group Inquiry",
     secondaryCta: { label: "Talk to a Broker", href: "/contact/?intent=broker" },
     coverageIntro:
-      "Group programs can offer members a coordinated way to access home and auto coverage — but structure, eligibility, and availability depend on the sponsoring organization and participating markets.",
+      "Group home and auto programs are organizational arrangements — not a guarantee of savings, and not every employer or association qualifies. Premium coordinates inquiries and specialist access through Oracle/head office.",
     coverageTypes: [
       {
-        title: "Employer-Sponsored Programs",
+        id: "employer-sponsored-programs",
+        title: "Employer & Association Arrangements",
+        shortLabel: "Group Access",
         description:
-          "Workplace arrangements that give employees a dedicated path to discuss home and auto coverage through a group structure.",
+          "Employers, associations, and member organizations may sponsor a path to discuss home and auto coverage.",
+        detail:
+          "Group programs typically start with a sponsoring employer, union, professional association, or membership organization. Sponsorship rules and carrier participation determine who can inquire — not every organization qualifies, and eligibility is confirmed through the program process rather than assumed.",
         icon: Users,
       },
       {
-        title: "Association & Membership Groups",
+        id: "association-membership-groups",
+        title: "Home & Auto Access",
+        shortLabel: "Home & Auto",
         description:
-          "Professional associations, unions, and member organizations may sponsor group access for home and auto products.",
-        icon: Users,
-      },
-      {
-        title: "Home & Auto Coordination",
-        description:
-          "Group frameworks may bundle personal lines access so members can align home and auto policies under one program umbrella.",
+          "Members may access personal home and auto insurance discussions through the group's program pathway.",
+        detail:
+          "Where a group program exists, members can often discuss home and auto coverage through a defined pathway rather than shopping entirely alone. Individual underwriting still applies — location, claims history, and risk profile continue to matter for each member.",
         icon: Home,
       },
       {
-        title: "Dedicated Service Path",
+        id: "home-auto-coordination",
+        title: "Potential Program Advantages",
+        shortLabel: "Advantages",
         description:
-          "Members often receive a defined contact path for quotes, changes, and claims rather than navigating options alone.",
+          "Programs may offer convenience and coordinated service — pricing still depends on each member's risk.",
+        detail:
+          "Group arrangements may offer dedicated service paths or program features, but they do not guarantee lower premiums for every member. Advantages, if any, depend on the program, the participating markets, and the member's individual risk profile.",
         icon: Shield,
+      },
+      {
+        id: "dedicated-service-path",
+        title: "Broker Assistance & Inquiry Process",
+        shortLabel: "Inquiry",
+        description:
+          "Premium helps coordinate the inquiry — whether you represent an organization or a member seeking to join.",
+        detail:
+          "Start a group inquiry with your role (employer, association leader, or member), organization name, and what you are exploring. Premium coordinates the relationship and connects you with specialist resources through Oracle/head office without promising discounts or guaranteed acceptance.",
+        icon: Car,
       },
     ],
     whoItIsFor:

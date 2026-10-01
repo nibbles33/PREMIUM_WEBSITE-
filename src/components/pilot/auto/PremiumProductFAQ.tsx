@@ -22,21 +22,23 @@ export default function PremiumProductFAQ({
 
   return (
     <section
-      className="border-b border-border bg-offwhite py-14 sm:py-16 lg:py-20"
+      className="border-b border-border bg-offwhite py-12 sm:py-14 lg:py-[4.25rem]"
       aria-labelledby={`${baseId}-heading`}
     >
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-4xl lg:px-8">
         <div className="text-center">
           <h2
             id={`${baseId}-heading`}
-            className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+            className="text-[1.65rem] font-medium tracking-[-0.025em] text-charcoal sm:text-[1.9rem] lg:text-[2.15rem]"
           >
             {title}
           </h2>
-          <p className="mt-3 text-[15px] text-secondary">{intro}</p>
+          <p className="mx-auto mt-3 max-w-2xl text-[15px] leading-relaxed text-secondary">
+            {intro}
+          </p>
         </div>
 
-        <ul className="mt-8 space-y-3">
+        <ul className="mt-8 space-y-2.5 sm:mt-9 sm:space-y-3">
           {items.map((item, index) => {
             const isOpen = openIndex === index;
             const panelId = `${baseId}-panel-${index}`;

@@ -3,24 +3,26 @@
 import {
   Anchor,
   Building2,
+  CloudLightning,
   Compass,
   DollarSign,
   Droplets,
+  Fence,
   Gem,
-  Hammer,
   HardHat,
   HeartPulse,
   Home,
   KeyRound,
+  LifeBuoy,
   Luggage,
   Motorbike,
   Package,
+  Phone,
   Plane,
   Scale,
   Shield,
-  Snowflake,
   Sofa,
-  Sun,
+  Trees,
   Wrench,
 } from "lucide-react";
 import {
@@ -45,36 +47,56 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     trustStatement:
       "Home insurance is for Windsor-Essex homeowners, including those with custom or high-value properties where standard dwelling and contents defaults may not reflect true replacement costs for finishes, collections, or outbuildings.",
     coverageIntro:
-      "Standard home insurance building blocks, explained without the jargon.",
+      "Home insurance building blocks explained in plain language — what each part is meant to protect, and why it matters. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
       {
-        title: "Dwelling Coverage",
+        id: "dwelling-coverage",
+        title: "Dwelling",
+        shortLabel: "Dwelling",
         description:
-          "Repairs or rebuilds your home's structure after covered damage.",
+          "Helps repair or rebuild the physical structure of your home after a covered loss.",
+        detail:
+          "Dwelling coverage is intended to respond to damage to the house itself — walls, roof, and permanently attached components such as built-in cabinetry — subject to insured perils, deductibles, limits, and policy terms. Replacement cost vs. actual cash value, reconstruction costs in your area, and outbuildings may all affect how dwelling limits should be set.",
         icon: Home,
       },
       {
-        title: "Contents Coverage",
+        id: "contents-coverage",
+        title: "Contents / Personal Property",
+        shortLabel: "Contents",
         description:
-          "Protects your belongings — furniture, electronics, valuables — against theft or damage.",
+          "Helps protect belongings inside the home — furniture, electronics, clothing, and everyday items.",
+        detail:
+          "Contents coverage is intended to respond when personal belongings are stolen or damaged by a covered peril. Many policies apply special sub-limits to jewellery, bikes, cash, and collectibles. A room-by-room inventory helps your broker compare realistic contents limits rather than guessing.",
         icon: Sofa,
       },
       {
-        title: "Liability Protection",
+        id: "liability-protection",
+        title: "Personal Liability",
+        shortLabel: "Liability",
         description:
-          "Covers you if someone is injured on your property or you're responsible for damage to others.",
+          "May help if a visitor is injured or you are legally responsible for damage to someone else's property.",
+        detail:
+          "Personal liability coverage is intended to respond to certain claims alleging bodily injury or property damage for which you are legally liable — for example, a guest injured on your premises — subject to policy definitions, limits, and exclusions. Higher limits or an umbrella may be worth discussing for pools, trampolines, or frequent entertaining.",
         icon: Shield,
       },
       {
+        id: "additional-living-expenses",
         title: "Additional Living Expenses",
+        shortLabel: "ALE",
         description:
-          "Covers temporary housing and costs if your home becomes uninhabitable after a covered loss.",
+          "May help with temporary lodging and related costs if a covered loss makes your home unlivable.",
+        detail:
+          "When a covered loss forces you out of your home, additional living expenses coverage is intended to help with reasonable extra costs of temporary accommodation and related living arrangements while repairs are underway — within policy limits and conditions. It does not automatically pay every expense you incur.",
         icon: Package,
       },
       {
-        title: "High-Value Home Considerations",
+        id: "high-value-home-considerations",
+        title: "High-Value / Special Property",
+        shortLabel: "Special Property",
         description:
-          "Custom builds, high-end finishes, and specialty assets may need agreed-value scheduling and higher contents limits beyond standard policy defaults.",
+          "Jewellery, fine art, collectibles, and custom finishes may need scheduled limits beyond standard defaults.",
+        detail:
+          "Items such as jewellery, fine art, wine collections, and high-end electronics often carry special sub-limits under a standard home policy. Scheduling valuables separately — and confirming dwelling limits for custom construction or premium finishes — can help align coverage with what would actually be costly to replace, subject to insurer availability and policy terms.",
         icon: Gem,
       },
     ],
@@ -156,31 +178,67 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     trustStatement:
       "Condo insurance is for unit owners in Windsor-Essex — whether you live in the unit full time, use it as a secondary residence, or own it as an investment. It is designed around the split between the corporation's master policy and your personal interest in the unit.",
     coverageIntro:
-      "Condo policies focus on the gaps between your corporation's coverage and what you actually own inside the unit.",
+      "Condo unit-owner insurance fills gaps the corporation's master policy does not — your belongings, unit improvements, liability, and certain assessment exposures. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
       {
-        title: "Unit Contents & Improvements",
+        id: "contents-personal-property",
+        title: "Contents / Personal Property",
+        shortLabel: "Contents",
         description:
-          "Intended to insure your belongings and upgrades inside the unit — finishes, fixtures, and betterments beyond what the corporation's master policy includes — subject to your policy limits, definitions, and exclusions.",
+          "Helps protect furniture, electronics, clothing, and other belongings inside your unit.",
+        detail:
+          "The condominium corporation's insurance typically protects the building and common elements — not your personal belongings. Contents coverage on a condo unit-owner policy is intended to respond when your belongings are stolen or damaged by a covered peril, subject to limits, deductibles, and exclusions.",
         icon: Sofa,
       },
       {
-        title: "Personal Liability",
+        id: "unit-improvements-betterments",
+        title: "Unit Improvements & Betterments",
+        shortLabel: "Improvements",
         description:
-          "Protects you if someone is injured in your unit or you are responsible for damage to another unit or common areas.",
+          "Helps protect renovations and upgrades you paid for beyond the corporation's standard unit definition.",
+        detail:
+          "Kitchen renovations, upgraded flooring, custom built-ins, and other betterments may exceed what the master policy treats as a standard unit. Unit improvements coverage is intended to help protect your investment in those finishes — subject to policy definitions and limits. Documenting upgrades helps your broker set realistic values.",
+        icon: Home,
+      },
+      {
+        id: "personal-liability",
+        title: "Personal Liability",
+        shortLabel: "Liability",
+        description:
+          "May help if someone is injured in your unit or you are responsible for damage to another unit or common areas.",
+        detail:
+          "Personal liability coverage is intended to respond to certain claims alleging bodily injury or property damage for which you are legally liable as a unit owner — including some incidents involving guests or damage affecting neighbouring units — subject to policy terms. The corporation's liability coverage does not replace your own.",
         icon: Shield,
       },
       {
-        title: "Loss Assessment Coverage",
+        id: "loss-assessment-coverage",
+        title: "Loss Assessment",
+        shortLabel: "Assessment",
         description:
-          "Can help with your share of a special assessment if the condominium corporation's master policy limits are exceeded by a covered loss.",
+          "May help with your share of a special assessment after a covered building loss exceeds the master policy.",
+        detail:
+          "If a major insured loss hits the building and the corporation's master policy limits are exceeded, owners may be assessed for the shortfall. Loss assessment coverage on a unit-owner policy may help with your portion, subject to limits and conditions. It does not guarantee payment of every assessment a corporation may levy.",
         icon: Scale,
       },
       {
+        id: "additional-living-expenses",
         title: "Additional Living Expenses",
+        shortLabel: "ALE",
         description:
-          "May cover temporary housing and related costs if a covered loss makes your unit uninhabitable while repairs are underway.",
+          "May help with temporary housing if a covered loss makes your unit uninhabitable during repairs.",
+        detail:
+          "When a covered loss forces you out of your unit, additional living expenses coverage is intended to help with reasonable extra costs of temporary accommodation while repairs proceed — within policy limits. Availability and wording vary by insurer.",
         icon: KeyRound,
+      },
+      {
+        id: "condo-corporation-deductible",
+        title: "Condo Corporation Deductible Exposure",
+        shortLabel: "Deductible",
+        description:
+          "Some policies may respond if the corporation assesses owners for the master-policy deductible after a claim.",
+        detail:
+          "After certain claims, a condominium corporation may assess unit owners for the master policy deductible. Optional deductible assessment coverage — where available — may help with that exposure, subject to limits and eligibility. Not every condo policy includes this feature, and amounts can vary widely by corporation.",
+        icon: Building2,
       },
     ],
     considerations: [
@@ -251,30 +309,46 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     trustStatement:
       "Tenant insurance is for anyone renting an apartment, house, condo unit, or basement suite in Windsor-Essex. Whether you are a student, a young professional, or a long-term renter, a tenant policy protects your personal property and liability exposure.",
     coverageIntro:
-      "Tenant insurance focuses on what you own and your personal liability — not the building itself.",
+      "Tenant insurance focuses on what you own and your personal liability — the landlord's building policy generally does not replace either. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
       {
-        title: "Contents Coverage",
+        id: "contents-coverage",
+        title: "Contents / Personal Property",
+        shortLabel: "Contents",
         description:
-          "Protects your belongings — furniture, electronics, clothing, and personal items — against theft, fire, water damage, and other covered perils.",
+          "Helps protect furniture, electronics, clothing, and other belongings in your rental.",
+        detail:
+          "Your landlord's insurance typically protects the building — not your belongings. Contents coverage on a tenant policy is intended to respond when personal property is stolen or damaged by a covered peril such as fire, certain water damage, or theft, subject to limits, deductibles, and exclusions.",
         icon: Sofa,
       },
       {
+        id: "personal-liability",
         title: "Personal Liability",
+        shortLabel: "Liability",
         description:
-          "Covers you if you accidentally cause injury or property damage to others — including incidents inside your rental unit.",
+          "May help if you accidentally injure someone or cause damage to the rental or another unit.",
+        detail:
+          "Personal liability coverage is intended to respond to certain claims alleging bodily injury or property damage for which you are legally liable — including some incidents inside your rental unit — subject to policy terms. Many leases require minimum liability limits and proof of insurance.",
         icon: Shield,
       },
       {
+        id: "additional-living-expenses",
         title: "Additional Living Expenses",
+        shortLabel: "ALE",
         description:
-          "Helps with temporary housing and essential costs if a covered loss forces you out of your rental while repairs are made.",
+          "May help with temporary housing if a covered loss forces you out while the unit is repaired.",
+        detail:
+          "If a covered loss makes your rental unlivable, additional living expenses coverage is intended to help with reasonable extra costs of temporary accommodation and related living arrangements during repairs — within policy limits and conditions.",
         icon: Package,
       },
       {
-        title: "No Building Coverage",
+        id: "tenant-improvements",
+        title: "Tenant Improvements",
+        shortLabel: "Improvements",
         description:
-          "Tenant policies do not insure the building structure — that is the landlord's responsibility. Your policy focuses on what you own and your liability.",
+          "May help protect renovations or upgrades you paid for in a rental, where the policy allows.",
+        detail:
+          "Paint, fixtures, or other improvements you installed with the landlord's permission are not always covered the same way as ordinary contents. Where available, tenant improvements coverage is intended to help with those upgrades after a covered loss — subject to policy wording. Confirm what you have invested before assuming it is included.",
         icon: KeyRound,
       },
     ],
@@ -345,31 +419,57 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     trustStatement:
       "Landlord insurance is for Windsor-Essex property owners who rent out houses, duplexes, condo units, or other residential dwellings. Whether you have one rental or several, the right policy reflects how each property is occupied and maintained.",
     coverageIntro:
-      "Landlord policies address the risks that come with owning property someone else lives in.",
+      "Landlord policies address risks that come with owning property someone else lives in — different from an owner-occupied home policy. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
       {
-        title: "Rental Dwelling Coverage",
+        id: "rental-dwelling-coverage",
+        title: "Rental Dwelling / Building",
+        shortLabel: "Dwelling",
         description:
-          "Protects the building you rent out — structure, attached fixtures, and landlord-owned items on the premises — against covered perils.",
+          "Helps protect the rental building structure and attached fixtures you own as the landlord.",
+        detail:
+          "Rental dwelling coverage is intended to respond to covered damage to the building you lease to others — structure and permanently attached landlord-owned fixtures — subject to insured perils, deductibles, and policy terms. A standard owner-occupied home form is not designed for this occupancy risk.",
         icon: Building2,
       },
       {
-        title: "Landlord Liability",
+        id: "landlord-owned-contents",
+        title: "Landlord-Owned Contents",
+        shortLabel: "Contents",
         description:
-          "Covers injury or property damage claims tied to your role as a rental property owner, subject to policy terms.",
-        icon: Shield,
+          "May help protect appliances, furniture, and other items you supply for tenants.",
+        detail:
+          "Landlord-owned contents coverage is intended to respond to covered loss or damage to furniture, appliances, and other personal property you provide in the rental — not the tenant's belongings. Tenants generally need their own contents and liability coverage.",
+        icon: Sofa,
       },
       {
-        title: "Loss of Rental Income",
+        id: "loss-of-rental-income",
+        title: "Rental Income / Fair Rental Value",
+        shortLabel: "Rental Income",
         description:
-          "May replace lost rent if a covered loss makes the unit uninhabitable during repairs, within policy limits and waiting periods.",
+          "May help replace lost rent if a covered loss makes the unit uninhabitable during repairs.",
+        detail:
+          "Where included, fair rental value or loss-of-rents coverage is intended to help replace rental income you lose while a covered loss makes the unit unlivable — within waiting periods, limits, and conditions. It is not rent-default insurance and does not respond simply because a tenant stops paying.",
         icon: DollarSign,
       },
       {
-        title: "Tenant-Caused Damage",
+        id: "landlord-liability",
+        title: "Premises Liability",
+        shortLabel: "Liability",
         description:
-          "Optional coverage may respond when a tenant causes intentional or accidental damage beyond normal wear and tear — wording and limits vary.",
-        icon: Hammer,
+          "May help with injury or property-damage claims tied to your role as a rental property owner.",
+        detail:
+          "Premises liability coverage is intended to respond to certain claims alleging bodily injury or property damage arising from your ownership or maintenance of the rental premises — subject to policy definitions, limits, and exclusions. Maintenance expectations and occupancy details matter to how carriers view the risk.",
+        icon: Shield,
+      },
+      {
+        id: "water-additional-endorsements",
+        title: "Optional Water & Endorsements",
+        shortLabel: "Endorsements",
+        description:
+          "Optional water, sewer backup, and other endorsements may be available depending on the property and insurer.",
+        detail:
+          "Water damage, sewer backup, overland flooding, and similar exposures are often limited or optional on rental policies. Endorsements — where available — may broaden protection for specific risks, but tenant-caused damage is not universally covered and wording varies widely. Disclose how the property is occupied and maintained so your broker can review suitable options.",
+        icon: Droplets,
       },
     ],
     considerations: [
@@ -440,30 +540,56 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     trustStatement:
       "Motorcycle insurance is for Windsor-Essex riders with street bikes, cruisers, touring motorcycles, and other on-road machines — whether you commute occasionally or ride primarily on weekends during the season.",
     coverageIntro:
-      "Motorcycle policies address riding-specific liability, physical damage, and seasonal use patterns.",
+      "Motorcycle coverage is built around how you ride — on-road liability, accident benefits, physical damage for the bike, and gear — not a car policy with the word motorcycle swapped in. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
       {
+        id: "third-party-liability",
         title: "Third-Party Liability",
+        shortLabel: "Liability",
         description:
-          "Required in Ontario when riding on public roads (not when the motorcycle is used on private property only). FSRA specifies minimum third-party liability coverage of at least $200,000. This coverage is intended to respond when you are legally liable for injury or property damage to others — subject to your policy limits, exclusions, and terms.",
+          "Required for public-road riding in Ontario — responds when you are legally liable for injury or damage to others.",
+        detail:
+          "Third-party liability is required when riding on public roads in Ontario (not for private-property-only use). FSRA specifies minimum third-party liability of at least $200,000. This coverage is intended to respond when you are legally liable for injury or property damage to others — subject to your policy limits, exclusions, and terms. Many riders choose higher limits.",
         icon: Shield,
       },
       {
-        title: "Collision & Comprehensive",
-        description:
-          "Optional physical damage coverage for your motorcycle — collision for crashes and comprehensive for theft, vandalism, and non-collision events.",
-        icon: Motorbike,
-      },
-      {
+        id: "accident-benefits",
         title: "Accident Benefits",
+        shortLabel: "Accident Benefits",
         description:
-          "Ontario accident benefits apply to motorcycle policies — medical, rehabilitation, and income support after an accident, within policy terms.",
+          "Ontario accident benefits apply to motorcycle policies — medical and related support after an injury.",
+        detail:
+          "Accident benefits on an Ontario motorcycle policy are intended to help with medical, rehabilitation, and related support after an injury arising from the use or operation of the motorcycle — within the statutory framework and your policy terms. What is mandatory vs. optional can change by policy effective date; ask your broker what applies to your situation.",
         icon: HardHat,
       },
       {
-        title: "Accessories & Gear",
+        id: "collision-upset",
+        title: "Collision / Upset",
+        shortLabel: "Collision",
         description:
-          "Aftermarket parts, saddlebags, and riding gear may need scheduled coverage or higher limits — standard policies often cap accessory values.",
+          "Optional coverage that may help repair or replace your motorcycle after a crash or tip-over.",
+        detail:
+          "When purchased, collision or upset coverage is intended to respond to damage to your own motorcycle from a crash with another vehicle or object, or from tipping over — subject to deductibles, limits, and policy terms. It is separate from liability coverage for other people's injuries or property.",
+        icon: Motorbike,
+      },
+      {
+        id: "comprehensive",
+        title: "Comprehensive",
+        shortLabel: "Comprehensive",
+        description:
+          "Optional coverage intended for theft, vandalism, weather, and other non-collision motorcycle losses.",
+        detail:
+          "When purchased, comprehensive coverage is intended to address non-collision events such as theft, vandalism, hail, fire, or animal strikes affecting your motorcycle — subject to deductibles, limits, exclusions, and policy terms. Storage and security details can matter to how insurers view the risk.",
+        icon: CloudLightning,
+      },
+      {
+        id: "accessories-gear",
+        title: "Equipment & Accessories",
+        shortLabel: "Accessories",
+        description:
+          "Aftermarket parts, luggage systems, and riding gear may need scheduled limits beyond policy defaults.",
+        detail:
+          "Standard motorcycle policies often cap accessory and gear values. Aftermarket exhausts, luggage systems, custom parts, and high-value riding gear may need scheduled coverage or higher limits where available — so replacement values reflect what you actually ride with, subject to insurer options.",
         icon: Wrench,
       },
     ],
@@ -538,31 +664,57 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     trustStatement:
       "Boat insurance is for Windsor-Essex owners of powerboats, fishing boats, pontoons, and other pleasure craft on inland lakes, the Detroit River, and Lake St. Clair — whether you trailer to launches or keep a slip at a marina.",
     coverageIntro:
-      "Boat policies reflect hull value, where you navigate, and what you carry on board.",
+      "Boat policies reflect hull value, liability on the water, equipment you carry aboard, and optional assistance — not every feature is automatic. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
       {
-        title: "Hull & Machinery",
+        id: "hull-machinery",
+        title: "Physical Damage to the Watercraft",
+        shortLabel: "Hull",
         description:
-          "Covers physical damage to your boat, motor, and permanently attached equipment — often on an agreed value or actual cash value basis depending on the policy.",
+          "Helps repair or replace the boat, motor, and permanently attached equipment after a covered loss.",
+        detail:
+          "Physical damage coverage for the watercraft is intended to respond to covered damage to the hull, motor, and permanently attached equipment — often on an agreed-value or actual cash value basis depending on the policy. Age, upgrades, and how you would replace the boat all matter when setting values.",
         icon: Anchor,
       },
       {
-        title: "Liability Coverage",
+        id: "liability-coverage",
+        title: "Marine / Watercraft Liability",
+        shortLabel: "Liability",
         description:
-          "Protects you if your watercraft causes injury or property damage to others — including collisions with other vessels, docks, or swimmers.",
+          "May help if your watercraft causes injury or property damage to others on or near the water.",
+        detail:
+          "Watercraft liability coverage is intended to respond when you are legally liable for injury or property damage arising from the ownership or use of the boat — including some collisions with other vessels, docks, or swimmers — subject to policy limits, definitions, and exclusions. It does not replace every other liability policy you may need ashore.",
         icon: Shield,
       },
       {
-        title: "Equipment & Trailers",
+        id: "equipment-trailers",
+        title: "Equipment & Accessories",
+        shortLabel: "Equipment",
         description:
-          "Trolling motors, fish finders, life jackets, and boat trailers may need explicit coverage or scheduled limits beyond the base hull amount.",
+          "Trolling motors, electronics, safety gear, and trailers may need explicit limits beyond the hull amount.",
+        detail:
+          "Fish finders, trolling motors, life jackets, and trailers are not always fully included in the base hull amount. Equipment and accessory coverage — where scheduled or included — is intended to help protect those items within stated limits. List valuable additions so nothing important is left underinsured.",
         icon: Wrench,
       },
       {
-        title: "Navigation & Use Territory",
+        id: "personal-effects",
+        title: "Personal Effects",
+        shortLabel: "Effects",
         description:
-          "Policies define where you may operate — inland lakes, Great Lakes, coastal waters — and may restrict racing or commercial use.",
-        icon: Compass,
+          "May help with certain personal items carried aboard, where the policy includes this coverage.",
+        detail:
+          "Some boat policies offer limited personal effects coverage for clothing and personal items brought aboard. Limits are often modest and exclusions apply. High-value items may need separate scheduling or may belong on a home or specialty policy instead.",
+        icon: Package,
+      },
+      {
+        id: "emergency-assistance",
+        title: "Emergency Assistance / Towing",
+        shortLabel: "Assistance",
+        description:
+          "Optional on-water breakdown and towing assistance may be available depending on the insurer.",
+        detail:
+          "Emergency towing and assistance benefits — where purchased or included — are intended to help with on-water breakdown response within stated limits. Not every boat policy automatically includes towing. If you operate far from launch ramps, ask what assistance options are available for your waters.",
+        icon: LifeBuoy,
       },
     ],
     considerations: [
@@ -637,31 +789,57 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     trustStatement:
       "Cottage insurance is for Windsor-Essex owners of seasonal homes, lake properties, and secondary residences used part of the year — whether you visit on weekends, for the summer season, or eventually plan to retire there.",
     coverageIntro:
-      "Cottage policies account for how seasonal properties are used, maintained, and left unattended.",
+      "Cottage policies account for seasonal use, secondary occupancy, and properties that sit unattended — they do not always work like a primary-home policy. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
       {
-        title: "Seasonal Dwelling Coverage",
+        id: "seasonal-dwelling-coverage",
+        title: "Seasonal / Secondary Dwelling",
+        shortLabel: "Dwelling",
         description:
-          "Protects your cottage or seasonal home's structure and landlord-owned fixtures against covered perils while the property is used part of the year.",
+          "Helps protect the cottage structure against covered perils when the property is used part of the year.",
+        detail:
+          "Seasonal dwelling coverage is intended to respond to covered damage to the cottage or secondary home structure and permanently attached components — subject to insured perils, deductibles, and occupancy conditions. Part-year use, vacancy periods, and winterization requirements often differ from a primary residence policy.",
         icon: Home,
       },
       {
-        title: "Contents & Personal Property",
+        id: "detached-structures",
+        title: "Detached Structures",
+        shortLabel: "Structures",
         description:
-          "Covers belongings kept at the cottage — furniture, appliances, watercraft stored on site, and recreational equipment — within policy limits.",
-        icon: Sun,
+          "May help protect sheds, bunkies, garages, and other outbuildings when included or scheduled.",
+        detail:
+          "Cottages often include bunkies, sheds, docks, or detached garages that need to be listed or scheduled. Detached structures coverage — where available — is intended to help with those buildings within policy limits. Values and construction details should be disclosed so limits reflect what is actually on the property.",
+        icon: Fence,
       },
       {
-        title: "Liability Protection",
+        id: "contents-personal-property",
+        title: "Contents",
+        shortLabel: "Contents",
         description:
-          "Personal liability coverage is intended to respond to certain injury or property-damage claims arising from your ownership or use of the cottage property, including some guest and recreational exposures — subject to policy limits, definitions, and exclusions.",
-        icon: Droplets,
+          "Helps protect furniture, appliances, and recreational equipment kept at the cottage.",
+        detail:
+          "Contents coverage is intended to respond when belongings kept at the cottage are stolen or damaged by a covered peril — furniture, appliances, and recreational gear within policy limits. Watercraft and motors usually need separate watercraft coverage rather than relying on cottage contents alone.",
+        icon: Package,
       },
       {
-        title: "Additional Living Expenses",
+        id: "liability-protection",
+        title: "Personal Liability",
+        shortLabel: "Liability",
         description:
-          "May help with temporary accommodation if a covered loss makes the cottage uninhabitable during the season you planned to use it.",
-        icon: Snowflake,
+          "May help with certain injury or property-damage claims arising from ownership or use of the cottage.",
+        detail:
+          "Personal liability coverage is intended to respond to certain claims alleging bodily injury or property damage arising from your ownership or use of the cottage property — including some guest and recreational exposures — subject to policy limits, definitions, and exclusions.",
+        icon: Shield,
+      },
+      {
+        id: "seasonal-occupancy",
+        title: "Occupancy / Seasonal Use",
+        shortLabel: "Occupancy",
+        description:
+          "How often the cottage is occupied — and how it is secured when empty — can affect eligibility and conditions.",
+        detail:
+          "Seasonal and secondary properties are underwritten differently from primary homes. Occupancy months, caretaker checks, heat and plumbing shut-downs, and road access can all affect eligibility and policy conditions. Tell your broker how the property is actually used so wording matches reality — cottage policies do not always mirror primary-home forms.",
+        icon: Trees,
       },
     ],
     considerations: [
@@ -738,31 +916,57 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     trustStatement:
       "Travel insurance is for Windsor-Essex residents heading out of province or abroad — family vacations, snowbird stays, business travel, and students studying away from home. The right plan depends on your destination, health history, and trip cost.",
     coverageIntro:
-      "Travel policies address medical emergencies away from home and financial protection when plans change unexpectedly.",
+      "Travel plans vary widely by destination, trip cost, and provider — not every plan includes every benefit below. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
       {
+        id: "emergency-medical",
         title: "Emergency Medical",
+        shortLabel: "Medical",
         description:
-          "Covers unexpected medical treatment while travelling outside your home province — hospital visits, physician fees, and emergency services subject to policy limits and exclusions.",
+          "May help with unexpected medical treatment while travelling outside your home province.",
+        detail:
+          "Emergency medical coverage is intended to help with unexpected hospital, physician, and emergency treatment costs while you are away from your home province — subject to policy limits, stability requirements, and exclusions. Pre-existing conditions and destination medical costs (especially in the U.S.) should be reviewed carefully before you rely on a plan.",
         icon: HeartPulse,
       },
       {
-        title: "Trip Cancellation & Interruption",
+        id: "trip-cancellation",
+        title: "Trip Cancellation",
+        shortLabel: "Cancellation",
         description:
-          "May reimburse prepaid, non-refundable trip costs if you must cancel or cut a trip short for covered reasons defined in the policy.",
+          "May reimburse prepaid, non-refundable trip costs if you must cancel for a covered reason before departure.",
+        detail:
+          "Trip cancellation coverage — where purchased — is intended to help recover prepaid, non-refundable deposits and trip costs when you cancel for a reason defined in the policy before you leave. Covered reasons, documentation requirements, and purchase timing windows vary significantly by provider.",
         icon: Plane,
       },
       {
-        title: "Baggage & Personal Effects",
+        id: "trip-interruption",
+        title: "Trip Interruption",
+        shortLabel: "Interruption",
         description:
-          "Can pay toward loss, theft, or damage to luggage and personal belongings during your trip, within stated limits, deductibles, and policy exclusions.",
+          "May help if a covered reason forces you to cut a trip short after it has already begun.",
+        detail:
+          "Trip interruption coverage — where included — is intended to help with unused prepaid arrangements and certain extra costs when a covered reason forces you to return early or change plans mid-trip. It is not the same as cancellation before departure, and not every travel product packages both benefits.",
+        icon: Compass,
+      },
+      {
+        id: "baggage-personal-effects",
+        title: "Baggage / Personal Effects",
+        shortLabel: "Baggage",
+        description:
+          "May help toward loss, theft, or damage to luggage and personal belongings during travel.",
+        detail:
+          "Baggage and personal effects coverage — where included — is intended to help toward loss, theft, or damage to luggage and belongings during the trip, within stated limits, deductibles, and exclusions. High-value electronics and jewellery often have sub-limits.",
         icon: Luggage,
       },
       {
-        title: "Travel Liability",
+        id: "travel-assistance",
+        title: "Travel Assistance / Emergency Assistance",
+        shortLabel: "Assistance",
         description:
-          "Protects you if you accidentally cause injury or property damage to others while travelling abroad or within Canada.",
-        icon: Shield,
+          "Many plans offer 24-hour assistance for medical coordination, travel disruption, and emergency logistics.",
+        detail:
+          "Travel assistance services — where included — can help coordinate emergency medical referrals, communication, and certain travel logistics when something goes wrong abroad. Assistance is a service benefit, not a guarantee of payment for every expense; what is covered still depends on the underlying plan wording.",
+        icon: Phone,
       },
     ],
     considerations: [

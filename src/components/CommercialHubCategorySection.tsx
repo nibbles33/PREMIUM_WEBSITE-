@@ -42,6 +42,9 @@ export default function CommercialHubCategorySection({
                 <RevealOnScroll className="h-full">
                   <Link
                     href={href}
+                    data-track="commercial_category_select"
+                    data-track-category-id={category.id}
+                    data-track-surface="hub"
                     className="group flex h-full flex-col border border-border bg-white px-4 py-4 transition-[border-color,background-color,box-shadow] duration-200 ease-out hover:border-gold hover:shadow-[0_10px_28px_rgba(32,39,40,0.08)] sm:px-5 sm:py-5"
                   >
                     <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[color-mix(in_srgb,#5A8A73_14%,#FAFAF8)]">

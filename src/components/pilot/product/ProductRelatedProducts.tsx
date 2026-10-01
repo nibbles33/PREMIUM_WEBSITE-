@@ -15,28 +15,30 @@ type ProductRelatedProductsProps = {
   heading: string;
   intro: string;
   products: ProductRelatedItem[];
+  fromSlug: string;
 };
 
 export default function ProductRelatedProducts({
   heading,
   intro,
   products,
+  fromSlug,
 }: ProductRelatedProductsProps) {
   return (
     <section
-      className="border-b border-border bg-[#FBF5E5] py-12 sm:py-14 lg:py-16"
+      className="border-b border-border bg-[#FBF5E5] py-11 sm:py-12 lg:py-14"
       aria-labelledby="pilot-product-related-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
-          <div className="max-w-xl lg:max-w-2xl">
+          <div className="max-w-2xl lg:max-w-3xl">
             <h2
               id="pilot-product-related-heading"
-              className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-[1.65rem] lg:text-3xl"
+              className="text-[1.65rem] font-medium tracking-[-0.025em] text-charcoal sm:text-[1.85rem] lg:text-[2.1rem]"
             >
               {heading}
             </h2>
-            <p className="mt-2 text-[14px] leading-relaxed text-secondary sm:text-[15px] lg:text-base">
+            <p className="mt-2 max-w-prose text-[14px] leading-relaxed text-secondary sm:text-[15px] lg:text-base">
               {intro}
             </p>
           </div>
@@ -51,6 +53,9 @@ export default function ProductRelatedProducts({
                 <li key={item.href} className="shrink-0">
                   <Link
                     href={item.href}
+                    data-track="related_product_click"
+                    data-track-from-slug={fromSlug}
+                    data-track-to-slug={getPhotographySlugFromHref(item.href) || item.href.replace(/^\/|\/$/g, "")}
                     className="pilot-product-related-card group block w-[220px] overflow-hidden rounded-2xl border border-border/80 bg-white shadow-[0_10px_28px_rgba(32,39,40,0.08)] transition-[border-color,box-shadow,transform] duration-200 hover:border-gold/45 hover:shadow-[0_16px_36px_rgba(208,173,38,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:w-[260px] lg:w-[340px]"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden lg:aspect-[5/4]">

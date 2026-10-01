@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-09-08T01:14:18.382Z",
-  "base": "http://localhost:3018",
+  "timestamp": "2026-09-13T01:36:54.595Z",
+  "base": "http://localhost:3020",
   "summary": {
     "uniqueHrefCount": 56,
-    "clickTargetCount": 235,
-    "clickTestsRun": 235,
-    "clickTestsPassed": 235,
+    "clickTargetCount": 231,
+    "clickTestsRun": 231,
+    "clickTestsPassed": 231,
     "clickTestsFailed": 0,
     "hrefResultsPassed": 56,
     "hrefResultsFailed": 0,
-    "relatedFamilyTestsRun": 51,
-    "relatedFamilyTestsPassed": 51,
+    "relatedFamilyTestsRun": 58,
+    "relatedFamilyTestsPassed": 58,
     "relatedFamilyTestsFailed": 0,
     "brokenHrefs": 0,
     "desktopDragPassed": 3,
-    "mobileTestsPassed": 4,
-    "mobileTestsFailed": 2
+    "mobileTestsPassed": 6,
+    "mobileTestsFailed": 0
   },
   "hrefFetchAudit": [
     {
@@ -45,6 +45,16 @@
     },
     {
       "href": "/business-interruption-insurance/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/cannabis-producer-insurance/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/cannabis-retail-insurance/",
       "status": 200,
       "ok": true
     },
@@ -109,11 +119,6 @@
       "ok": true
     },
     {
-      "href": "/daycare-private-school-insurance/",
-      "status": 200,
-      "ok": true
-    },
-    {
       "href": "/directors-officers-insurance/",
       "status": 200,
       "ok": true
@@ -144,16 +149,6 @@
       "ok": true
     },
     {
-      "href": "/food-truck-insurance/",
-      "status": 200,
-      "ok": true
-    },
-    {
-      "href": "/garage-dealership-insurance/",
-      "status": 200,
-      "ok": true
-    },
-    {
       "href": "/greenhouse-agribusiness-insurance/",
       "status": 200,
       "ok": true
@@ -170,6 +165,11 @@
     },
     {
       "href": "/home-insurance/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/home-sharing-insurance/",
       "status": 200,
       "ok": true
     },
@@ -200,6 +200,11 @@
     },
     {
       "href": "/medical-dental-insurance/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "href": "/mobile-home-insurance/",
       "status": 200,
       "ok": true
     },
@@ -265,11 +270,6 @@
     },
     {
       "href": "/retail-insurance/",
-      "status": 200,
-      "ok": true
-    },
-    {
-      "href": "/salon-barber-insurance/",
       "status": 200,
       "ok": true
     },
@@ -331,9 +331,8 @@
     },
     {
       "href": "/bonding-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
       "clickAttempts": 3,
@@ -344,22 +343,20 @@
     },
     {
       "href": "/builders-developers-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 2,
-      "passCount": 2,
+      "clickAttempts": 1,
+      "passCount": 1,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/builders-risk-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
       "clickAttempts": 3,
@@ -374,6 +371,18 @@
       "surfaces": [
         "productRelatedRail"
       ],
+      "clickAttempts": 6,
+      "passCount": 6,
+      "failCount": 0,
+      "ok": true,
+      "failures": []
+    },
+    {
+      "href": "/cannabis-producer-insurance/",
+      "surfaceCount": 1,
+      "surfaces": [
+        "productRelatedRail"
+      ],
       "clickAttempts": 3,
       "passCount": 3,
       "failCount": 0,
@@ -381,28 +390,37 @@
       "failures": []
     },
     {
-      "href": "/cargo-freight-insurance/",
-      "surfaceCount": 2,
+      "href": "/cannabis-retail-insurance/",
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 4,
-      "passCount": 4,
+      "clickAttempts": 2,
+      "passCount": 2,
+      "failCount": 0,
+      "ok": true,
+      "failures": []
+    },
+    {
+      "href": "/cargo-freight-insurance/",
+      "surfaceCount": 1,
+      "surfaces": [
+        "productRelatedRail"
+      ],
+      "clickAttempts": 3,
+      "passCount": 3,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/commercial-auto-insurance/",
-      "surfaceCount": 3,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryCategory",
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 7,
-      "passCount": 7,
+      "clickAttempts": 6,
+      "passCount": 6,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -414,22 +432,20 @@
         "commercialDiscoveryHub",
         "productRelatedRail"
       ],
-      "clickAttempts": 15,
-      "passCount": 15,
+      "clickAttempts": 14,
+      "passCount": 14,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/commercial-property-insurance/",
-      "surfaceCount": 3,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryCategory",
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 8,
-      "passCount": 8,
+      "clickAttempts": 10,
+      "passCount": 10,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -450,13 +466,12 @@
     },
     {
       "href": "/condominium-corporation-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 3,
-      "passCount": 3,
+      "clickAttempts": 1,
+      "passCount": 1,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -475,28 +490,25 @@
     },
     {
       "href": "/contractors-insurance/",
-      "surfaceCount": 4,
+      "surfaceCount": 2,
       "surfaces": [
         "yepCarousel",
-        "commercialDiscoveryCategory",
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 7,
-      "passCount": 7,
+      "clickAttempts": 6,
+      "passCount": 6,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/convenience-store-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 2,
-      "passCount": 2,
+      "clickAttempts": 1,
+      "passCount": 1,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -518,66 +530,48 @@
     },
     {
       "href": "/crime-fidelity-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 4,
-      "passCount": 4,
+      "clickAttempts": 5,
+      "passCount": 5,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/cyber-insurance/",
-      "surfaceCount": 3,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryCategory",
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 8,
-      "passCount": 8,
-      "failCount": 0,
-      "ok": true,
-      "failures": []
-    },
-    {
-      "href": "/daycare-private-school-insurance/",
-      "surfaceCount": 2,
-      "surfaces": [
-        "commercialDiscoveryProduct",
-        "productRelatedRail"
-      ],
-      "clickAttempts": 2,
-      "passCount": 2,
+      "clickAttempts": 6,
+      "passCount": 6,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/directors-officers-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 4,
-      "passCount": 4,
+      "clickAttempts": 5,
+      "passCount": 5,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/dump-truck-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 3,
-      "passCount": 3,
+      "clickAttempts": 2,
+      "passCount": 2,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -622,34 +616,9 @@
     },
     {
       "href": "/fitness-gym-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
-      ],
-      "clickAttempts": 2,
-      "passCount": 2,
-      "failCount": 0,
-      "ok": true,
-      "failures": []
-    },
-    {
-      "href": "/food-truck-insurance/",
-      "surfaceCount": 1,
-      "surfaces": [
-        "commercialDiscoveryProduct"
-      ],
-      "clickAttempts": 1,
-      "passCount": 1,
-      "failCount": 0,
-      "ok": true,
-      "failures": []
-    },
-    {
-      "href": "/garage-dealership-insurance/",
-      "surfaceCount": 1,
-      "surfaces": [
-        "commercialDiscoveryProduct"
       ],
       "clickAttempts": 1,
       "passCount": 1,
@@ -664,8 +633,8 @@
         "yepCarousel",
         "productRelatedRail"
       ],
-      "clickAttempts": 2,
-      "passCount": 2,
+      "clickAttempts": 3,
+      "passCount": 3,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -676,20 +645,21 @@
       "surfaces": [
         "productRelatedRail"
       ],
-      "clickAttempts": 1,
-      "passCount": 1,
+      "clickAttempts": 2,
+      "passCount": 2,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/group-home-auto-insurance/",
-      "surfaceCount": 1,
+      "surfaceCount": 2,
       "surfaces": [
+        "personalFilmstrip",
         "productRelatedRail"
       ],
-      "clickAttempts": 1,
-      "passCount": 1,
+      "clickAttempts": 2,
+      "passCount": 2,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -710,32 +680,19 @@
       "failures": []
     },
     {
-      "href": "/hotel-motel-insurance/",
-      "surfaceCount": 2,
-      "surfaces": [
-        "commercialDiscoveryProduct",
-        "productRelatedRail"
-      ],
-      "clickAttempts": 2,
-      "passCount": 2,
-      "failCount": 0,
-      "ok": true,
-      "failures": []
-    },
-    {
-      "href": "/landlord-insurance/",
+      "href": "/home-sharing-insurance/",
       "surfaceCount": 1,
       "surfaces": [
-        "productRelatedRail"
+        "personalFilmstrip"
       ],
-      "clickAttempts": 6,
-      "passCount": 6,
+      "clickAttempts": 1,
+      "passCount": 1,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
-      "href": "/life-insurance/",
+      "href": "/hotel-motel-insurance/",
       "surfaceCount": 1,
       "surfaces": [
         "productRelatedRail"
@@ -747,25 +704,48 @@
       "failures": []
     },
     {
-      "href": "/liquor-liability-insurance/",
+      "href": "/landlord-insurance/",
       "surfaceCount": 2,
       "surfaces": [
-        "commercialDiscoveryProduct",
+        "personalFilmstrip",
         "productRelatedRail"
       ],
-      "clickAttempts": 5,
-      "passCount": 5,
+      "clickAttempts": 8,
+      "passCount": 8,
+      "failCount": 0,
+      "ok": true,
+      "failures": []
+    },
+    {
+      "href": "/life-insurance/",
+      "surfaceCount": 2,
+      "surfaces": [
+        "personalFilmstrip",
+        "productRelatedRail"
+      ],
+      "clickAttempts": 2,
+      "passCount": 2,
+      "failCount": 0,
+      "ok": true,
+      "failures": []
+    },
+    {
+      "href": "/liquor-liability-insurance/",
+      "surfaceCount": 1,
+      "surfaces": [
+        "productRelatedRail"
+      ],
+      "clickAttempts": 4,
+      "passCount": 4,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/manufacturing-insurance/",
-      "surfaceCount": 4,
+      "surfaceCount": 2,
       "surfaces": [
         "yepCarousel",
-        "commercialDiscoveryCategory",
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
       "clickAttempts": 6,
@@ -776,14 +756,24 @@
     },
     {
       "href": "/medical-dental-insurance/",
-      "surfaceCount": 3,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryCategory",
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 3,
-      "passCount": 3,
+      "clickAttempts": 1,
+      "passCount": 1,
+      "failCount": 0,
+      "ok": true,
+      "failures": []
+    },
+    {
+      "href": "/mobile-home-insurance/",
+      "surfaceCount": 1,
+      "surfaces": [
+        "personalFilmstrip"
+      ],
+      "clickAttempts": 1,
+      "passCount": 1,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -805,37 +795,35 @@
     },
     {
       "href": "/non-profit-insurance/",
-      "surfaceCount": 3,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryCategory",
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 6,
-      "passCount": 6,
+      "clickAttempts": 4,
+      "passCount": 4,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/personal-umbrella-insurance/",
-      "surfaceCount": 3,
+      "surfaceCount": 4,
       "surfaces": [
+        "personalFilmstrip",
         "yepCarousel",
         "autoRelatedRail",
         "productRelatedRail"
       ],
-      "clickAttempts": 3,
-      "passCount": 3,
+      "clickAttempts": 4,
+      "passCount": 4,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/pharmacy-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
       "clickAttempts": 2,
@@ -846,49 +834,8 @@
     },
     {
       "href": "/pollution-liability-insurance/",
-      "surfaceCount": 2,
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
-        "productRelatedRail"
-      ],
-      "clickAttempts": 2,
-      "passCount": 2,
-      "failCount": 0,
-      "ok": true,
-      "failures": []
-    },
-    {
-      "href": "/product-recall-insurance/",
-      "surfaceCount": 2,
-      "surfaces": [
-        "commercialDiscoveryProduct",
-        "productRelatedRail"
-      ],
-      "clickAttempts": 3,
-      "passCount": 3,
-      "failCount": 0,
-      "ok": true,
-      "failures": []
-    },
-    {
-      "href": "/professional-liability-insurance/",
-      "surfaceCount": 2,
-      "surfaces": [
-        "commercialDiscoveryProduct",
-        "productRelatedRail"
-      ],
-      "clickAttempts": 7,
-      "passCount": 7,
-      "failCount": 0,
-      "ok": true,
-      "failures": []
-    },
-    {
-      "href": "/professional-offices-insurance/",
-      "surfaceCount": 3,
-      "surfaces": [
-        "commercialDiscoveryCategory",
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
       "clickAttempts": 4,
@@ -898,14 +845,49 @@
       "failures": []
     },
     {
-      "href": "/property-management-insurance/",
-      "surfaceCount": 2,
+      "href": "/product-recall-insurance/",
+      "surfaceCount": 1,
       "surfaces": [
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 3,
-      "passCount": 3,
+      "clickAttempts": 5,
+      "passCount": 5,
+      "failCount": 0,
+      "ok": true,
+      "failures": []
+    },
+    {
+      "href": "/professional-liability-insurance/",
+      "surfaceCount": 1,
+      "surfaces": [
+        "productRelatedRail"
+      ],
+      "clickAttempts": 6,
+      "passCount": 6,
+      "failCount": 0,
+      "ok": true,
+      "failures": []
+    },
+    {
+      "href": "/professional-offices-insurance/",
+      "surfaceCount": 1,
+      "surfaces": [
+        "productRelatedRail"
+      ],
+      "clickAttempts": 2,
+      "passCount": 2,
+      "failCount": 0,
+      "ok": true,
+      "failures": []
+    },
+    {
+      "href": "/property-management-insurance/",
+      "surfaceCount": 1,
+      "surfaces": [
+        "productRelatedRail"
+      ],
+      "clickAttempts": 2,
+      "passCount": 2,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -924,49 +906,6 @@
     },
     {
       "href": "/religious-organizations-insurance/",
-      "surfaceCount": 2,
-      "surfaces": [
-        "commercialDiscoveryProduct",
-        "productRelatedRail"
-      ],
-      "clickAttempts": 2,
-      "passCount": 2,
-      "failCount": 0,
-      "ok": true,
-      "failures": []
-    },
-    {
-      "href": "/restaurant-insurance/",
-      "surfaceCount": 4,
-      "surfaces": [
-        "yepCarousel",
-        "commercialDiscoveryCategory",
-        "commercialDiscoveryProduct",
-        "productRelatedRail"
-      ],
-      "clickAttempts": 8,
-      "passCount": 8,
-      "failCount": 0,
-      "ok": true,
-      "failures": []
-    },
-    {
-      "href": "/retail-insurance/",
-      "surfaceCount": 4,
-      "surfaces": [
-        "yepCarousel",
-        "commercialDiscoveryCategory",
-        "commercialDiscoveryProduct",
-        "productRelatedRail"
-      ],
-      "clickAttempts": 9,
-      "passCount": 9,
-      "failCount": 0,
-      "ok": true,
-      "failures": []
-    },
-    {
-      "href": "/salon-barber-insurance/",
       "surfaceCount": 1,
       "surfaces": [
         "productRelatedRail"
@@ -978,13 +917,39 @@
       "failures": []
     },
     {
+      "href": "/restaurant-insurance/",
+      "surfaceCount": 2,
+      "surfaces": [
+        "yepCarousel",
+        "productRelatedRail"
+      ],
+      "clickAttempts": 6,
+      "passCount": 6,
+      "failCount": 0,
+      "ok": true,
+      "failures": []
+    },
+    {
+      "href": "/retail-insurance/",
+      "surfaceCount": 2,
+      "surfaces": [
+        "yepCarousel",
+        "productRelatedRail"
+      ],
+      "clickAttempts": 8,
+      "passCount": 8,
+      "failCount": 0,
+      "ok": true,
+      "failures": []
+    },
+    {
       "href": "/small-business-insurance/",
       "surfaceCount": 1,
       "surfaces": [
         "productRelatedRail"
       ],
-      "clickAttempts": 6,
-      "passCount": 6,
+      "clickAttempts": 8,
+      "passCount": 8,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -1018,26 +983,26 @@
     },
     {
       "href": "/trucking-insurance/",
-      "surfaceCount": 3,
+      "surfaceCount": 2,
       "surfaces": [
         "yepCarousel",
-        "commercialDiscoveryProduct",
         "productRelatedRail"
       ],
-      "clickAttempts": 5,
-      "passCount": 5,
+      "clickAttempts": 4,
+      "passCount": 4,
       "failCount": 0,
       "ok": true,
       "failures": []
     },
     {
       "href": "/warehousing-insurance/",
-      "surfaceCount": 1,
+      "surfaceCount": 2,
       "surfaces": [
-        "yepCarousel"
+        "yepCarousel",
+        "productRelatedRail"
       ],
-      "clickAttempts": 1,
-      "passCount": 1,
+      "clickAttempts": 2,
+      "passCount": 2,
       "failCount": 0,
       "ok": true,
       "failures": []
@@ -1053,7 +1018,7 @@
       "clicked": true,
       "method": "filmstrip-visible",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/auto-insurance",
+      "finalUrl": "http://localhost:3020/auto-insurance/",
       "ok": true
     },
     {
@@ -1065,7 +1030,7 @@
       "clicked": true,
       "method": "filmstrip-visible",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -1077,7 +1042,7 @@
       "clicked": true,
       "method": "filmstrip-visible",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condo-insurance",
+      "finalUrl": "http://localhost:3020/condo-insurance/",
       "ok": true
     },
     {
@@ -1089,7 +1054,19 @@
       "clicked": true,
       "method": "filmstrip-visible",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/tenant-insurance",
+      "finalUrl": "http://localhost:3020/tenant-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/landlord-insurance/",
+      "label": "Landlord",
+      "surface": "personalFilmstrip",
+      "page": "/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "filmstrip-visible",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/landlord-insurance/",
       "ok": true
     },
     {
@@ -1101,7 +1078,7 @@
       "clicked": true,
       "method": "filmstrip-visible",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/motorcycle-insurance",
+      "finalUrl": "http://localhost:3020/motorcycle-insurance/",
       "ok": true
     },
     {
@@ -1113,7 +1090,7 @@
       "clicked": true,
       "method": "filmstrip-visible",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/boat-insurance",
+      "finalUrl": "http://localhost:3020/boat-insurance/",
       "ok": true
     },
     {
@@ -1125,7 +1102,7 @@
       "clicked": true,
       "method": "filmstrip-visible",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cottage-insurance",
+      "finalUrl": "http://localhost:3020/cottage-insurance/",
       "ok": true
     },
     {
@@ -1137,7 +1114,67 @@
       "clicked": true,
       "method": "filmstrip-visible",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/travel-insurance",
+      "finalUrl": "http://localhost:3020/travel-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/mobile-home-insurance/",
+      "label": "Mobile Home",
+      "surface": "personalFilmstrip",
+      "page": "/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "filmstrip-visible",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/mobile-home-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/personal-umbrella-insurance/",
+      "label": "Umbrella",
+      "surface": "personalFilmstrip",
+      "page": "/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "filmstrip-visible",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/personal-umbrella-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/home-sharing-insurance/",
+      "label": "Home Sharing",
+      "surface": "personalFilmstrip",
+      "page": "/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "filmstrip-visible",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/home-sharing-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/life-insurance/",
+      "label": "Life",
+      "surface": "personalFilmstrip",
+      "page": "/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "filmstrip-visible",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/life-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/group-home-auto-insurance/",
+      "label": "Group Home & Auto",
+      "surface": "personalFilmstrip",
+      "page": "/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "filmstrip-visible",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/group-home-auto-insurance/",
       "ok": true
     },
     {
@@ -1149,7 +1186,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/auto-insurance",
+      "finalUrl": "http://localhost:3020/auto-insurance/",
       "ok": true
     },
     {
@@ -1161,7 +1198,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -1173,7 +1210,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/boat-insurance",
+      "finalUrl": "http://localhost:3020/boat-insurance/",
       "ok": true
     },
     {
@@ -1185,7 +1222,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/motorcycle-insurance",
+      "finalUrl": "http://localhost:3020/motorcycle-insurance/",
       "ok": true
     },
     {
@@ -1197,7 +1234,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cottage-insurance",
+      "finalUrl": "http://localhost:3020/cottage-insurance/",
       "ok": true
     },
     {
@@ -1209,7 +1246,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/tenant-insurance",
+      "finalUrl": "http://localhost:3020/tenant-insurance/",
       "ok": true
     },
     {
@@ -1221,7 +1258,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/event-liability-insurance",
+      "finalUrl": "http://localhost:3020/event-liability-insurance/",
       "ok": true
     },
     {
@@ -1233,7 +1270,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/personal-umbrella-insurance",
+      "finalUrl": "http://localhost:3020/personal-umbrella-insurance/",
       "ok": true
     },
     {
@@ -1245,7 +1282,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/trucking-insurance",
+      "finalUrl": "http://localhost:3020/trucking-insurance/",
       "ok": true
     },
     {
@@ -1257,7 +1294,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/contractors-insurance",
+      "finalUrl": "http://localhost:3020/contractors-insurance/",
       "ok": true
     },
     {
@@ -1269,7 +1306,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/restaurant-insurance",
+      "finalUrl": "http://localhost:3020/restaurant-insurance/",
       "ok": true
     },
     {
@@ -1281,7 +1318,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/manufacturing-insurance",
+      "finalUrl": "http://localhost:3020/manufacturing-insurance/",
       "ok": true
     },
     {
@@ -1293,7 +1330,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/warehousing-insurance",
+      "finalUrl": "http://localhost:3020/warehousing-insurance/",
       "ok": true
     },
     {
@@ -1305,7 +1342,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/farm-insurance",
+      "finalUrl": "http://localhost:3020/farm-insurance/",
       "ok": true
     },
     {
@@ -1317,7 +1354,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/greenhouse-agribusiness-insurance",
+      "finalUrl": "http://localhost:3020/greenhouse-agribusiness-insurance/",
       "ok": true
     },
     {
@@ -1329,511 +1366,7 @@
       "clicked": true,
       "method": "yep-tile",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/retail-insurance",
-      "ok": true
-    },
-    {
-      "href": "/commercial-auto-insurance/",
-      "label": "Explore transportation",
-      "surface": "commercialDiscoveryCategory",
-      "page": "/",
-      "categoryId": "transportation",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-auto-insurance",
-      "ok": true
-    },
-    {
-      "href": "/contractors-insurance/",
-      "label": "Explore construction",
-      "surface": "commercialDiscoveryCategory",
-      "page": "/",
-      "categoryId": "construction",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/contractors-insurance",
-      "ok": true
-    },
-    {
-      "href": "/commercial-property-insurance/",
-      "label": "Explore property",
-      "surface": "commercialDiscoveryCategory",
-      "page": "/",
-      "categoryId": "property",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance",
-      "ok": true
-    },
-    {
-      "href": "/manufacturing-insurance/",
-      "label": "Explore manufacturing",
-      "surface": "commercialDiscoveryCategory",
-      "page": "/",
-      "categoryId": "manufacturing",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/manufacturing-insurance",
-      "ok": true
-    },
-    {
-      "href": "/restaurant-insurance/",
-      "label": "Explore hospitality",
-      "surface": "commercialDiscoveryCategory",
-      "page": "/",
-      "categoryId": "hospitality",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/restaurant-insurance",
-      "ok": true
-    },
-    {
-      "href": "/professional-offices-insurance/",
-      "label": "Explore professional",
-      "surface": "commercialDiscoveryCategory",
-      "page": "/",
-      "categoryId": "professional",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-offices-insurance",
-      "ok": true
-    },
-    {
-      "href": "/retail-insurance/",
-      "label": "Explore retail",
-      "surface": "commercialDiscoveryCategory",
-      "page": "/",
-      "categoryId": "retail",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/retail-insurance",
-      "ok": true
-    },
-    {
-      "href": "/medical-dental-insurance/",
-      "label": "Explore health",
-      "surface": "commercialDiscoveryCategory",
-      "page": "/",
-      "categoryId": "health",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/medical-dental-insurance",
-      "ok": true
-    },
-    {
-      "href": "/non-profit-insurance/",
-      "label": "Explore community",
-      "surface": "commercialDiscoveryCategory",
-      "page": "/",
-      "categoryId": "community",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/non-profit-insurance",
-      "ok": true
-    },
-    {
-      "href": "/cyber-insurance/",
-      "label": "Explore specialty",
-      "surface": "commercialDiscoveryCategory",
-      "page": "/",
-      "categoryId": "specialty",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/cyber-insurance",
-      "ok": true
-    },
-    {
-      "href": "/trucking-insurance/",
-      "label": "Trucking",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "transportation",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/trucking-insurance",
-      "ok": true
-    },
-    {
-      "href": "/commercial-auto-insurance/",
-      "label": "Commercial Auto",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "transportation",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-auto-insurance",
-      "ok": true
-    },
-    {
-      "href": "/dump-truck-insurance/",
-      "label": "Dump Trucks",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "transportation",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/dump-truck-insurance",
-      "ok": true
-    },
-    {
-      "href": "/cargo-freight-insurance/",
-      "label": "Cargo & Freight",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "transportation",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/cargo-freight-insurance",
-      "ok": true
-    },
-    {
-      "href": "/contractors-insurance/",
-      "label": "Contractors",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "construction",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/contractors-insurance",
-      "ok": true
-    },
-    {
-      "href": "/builders-developers-insurance/",
-      "label": "Builders & Developers",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "construction",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/builders-developers-insurance",
-      "ok": true
-    },
-    {
-      "href": "/builders-risk-insurance/",
-      "label": "Builder's Risk",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "construction",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/builders-risk-insurance",
-      "ok": true
-    },
-    {
-      "href": "/commercial-property-insurance/",
-      "label": "Commercial Property",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "property",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance",
-      "ok": true
-    },
-    {
-      "href": "/property-management-insurance/",
-      "label": "Property Management",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "property",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/property-management-insurance",
-      "ok": true
-    },
-    {
-      "href": "/condominium-corporation-insurance/",
-      "label": "Condominium Corporations",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "property",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/condominium-corporation-insurance",
-      "ok": true
-    },
-    {
-      "href": "/manufacturing-insurance/",
-      "label": "Manufacturing",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "manufacturing",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/manufacturing-insurance",
-      "ok": true
-    },
-    {
-      "href": "/product-recall-insurance/",
-      "label": "Product Recall",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "manufacturing",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/product-recall-insurance",
-      "ok": true
-    },
-    {
-      "href": "/pollution-liability-insurance/",
-      "label": "Pollution Liability",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "manufacturing",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/pollution-liability-insurance",
-      "ok": true
-    },
-    {
-      "href": "/restaurant-insurance/",
-      "label": "Restaurants",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "hospitality",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/restaurant-insurance",
-      "ok": true
-    },
-    {
-      "href": "/food-truck-insurance/",
-      "label": "Food Trucks",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "hospitality",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/food-truck-insurance",
-      "ok": true
-    },
-    {
-      "href": "/hotel-motel-insurance/",
-      "label": "Hotels & Motels",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "hospitality",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/hotel-motel-insurance",
-      "ok": true
-    },
-    {
-      "href": "/liquor-liability-insurance/",
-      "label": "Liquor Liability",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "hospitality",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/liquor-liability-insurance",
-      "ok": true
-    },
-    {
-      "href": "/professional-offices-insurance/",
-      "label": "Professional Offices",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "professional",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-offices-insurance",
-      "ok": true
-    },
-    {
-      "href": "/directors-officers-insurance/",
-      "label": "Directors & Officers",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "professional",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/directors-officers-insurance",
-      "ok": true
-    },
-    {
-      "href": "/professional-liability-insurance/",
-      "label": "Professional Liability",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "professional",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-liability-insurance",
-      "ok": true
-    },
-    {
-      "href": "/retail-insurance/",
-      "label": "Retail",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "retail",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/retail-insurance",
-      "ok": true
-    },
-    {
-      "href": "/convenience-store-insurance/",
-      "label": "Convenience Stores",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "retail",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/convenience-store-insurance",
-      "ok": true
-    },
-    {
-      "href": "/garage-dealership-insurance/",
-      "label": "Garages & Dealerships",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "retail",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/garage-dealership-insurance",
-      "ok": true
-    },
-    {
-      "href": "/medical-dental-insurance/",
-      "label": "Medical & Dental",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "health",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/medical-dental-insurance",
-      "ok": true
-    },
-    {
-      "href": "/pharmacy-insurance/",
-      "label": "Pharmacy",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "health",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/pharmacy-insurance",
-      "ok": true
-    },
-    {
-      "href": "/fitness-gym-insurance/",
-      "label": "Fitness & Gyms",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "health",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/fitness-gym-insurance",
-      "ok": true
-    },
-    {
-      "href": "/non-profit-insurance/",
-      "label": "Non-Profits",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "community",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/non-profit-insurance",
-      "ok": true
-    },
-    {
-      "href": "/religious-organizations-insurance/",
-      "label": "Religious Organizations",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "community",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/religious-organizations-insurance",
-      "ok": true
-    },
-    {
-      "href": "/daycare-private-school-insurance/",
-      "label": "Daycare & Schools",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "community",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/daycare-private-school-insurance",
-      "ok": true
-    },
-    {
-      "href": "/cyber-insurance/",
-      "label": "Cyber",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "specialty",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/cyber-insurance",
-      "ok": true
-    },
-    {
-      "href": "/crime-fidelity-insurance/",
-      "label": "Crime & Fidelity",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "specialty",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/crime-fidelity-insurance",
-      "ok": true
-    },
-    {
-      "href": "/bonding-insurance/",
-      "label": "Bonding",
-      "surface": "commercialDiscoveryProduct",
-      "page": "/",
-      "categoryId": "specialty",
-      "clicked": true,
-      "method": "commercial-link",
-      "navigated": true,
-      "finalUrl": "http://localhost:3018/bonding-insurance",
+      "finalUrl": "http://localhost:3020/retail-insurance/",
       "ok": true
     },
     {
@@ -1845,7 +1378,7 @@
       "clicked": true,
       "method": "commercial-link",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -1858,7 +1391,7 @@
       "method": "related-card",
       "selector": "a.pilot-auto-related-card[href=\"/home-insurance/\"], a.pilot-auto-related-card[href=\"/home-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -1871,7 +1404,7 @@
       "method": "related-card",
       "selector": "a.pilot-auto-related-card[href=\"/condo-insurance/\"], a.pilot-auto-related-card[href=\"/condo-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condo-insurance",
+      "finalUrl": "http://localhost:3020/condo-insurance/",
       "ok": true
     },
     {
@@ -1884,7 +1417,7 @@
       "method": "related-card",
       "selector": "a.pilot-auto-related-card[href=\"/tenant-insurance/\"], a.pilot-auto-related-card[href=\"/tenant-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/tenant-insurance",
+      "finalUrl": "http://localhost:3020/tenant-insurance/",
       "ok": true
     },
     {
@@ -1897,7 +1430,7 @@
       "method": "related-card",
       "selector": "a.pilot-auto-related-card[href=\"/motorcycle-insurance/\"], a.pilot-auto-related-card[href=\"/motorcycle-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/motorcycle-insurance",
+      "finalUrl": "http://localhost:3020/motorcycle-insurance/",
       "ok": true
     },
     {
@@ -1910,7 +1443,7 @@
       "method": "related-card",
       "selector": "a.pilot-auto-related-card[href=\"/boat-insurance/\"], a.pilot-auto-related-card[href=\"/boat-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/boat-insurance",
+      "finalUrl": "http://localhost:3020/boat-insurance/",
       "ok": true
     },
     {
@@ -1923,7 +1456,7 @@
       "method": "related-card",
       "selector": "a.pilot-auto-related-card[href=\"/cottage-insurance/\"], a.pilot-auto-related-card[href=\"/cottage-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cottage-insurance",
+      "finalUrl": "http://localhost:3020/cottage-insurance/",
       "ok": true
     },
     {
@@ -1936,7 +1469,7 @@
       "method": "related-card",
       "selector": "a.pilot-auto-related-card[href=\"/personal-umbrella-insurance/\"], a.pilot-auto-related-card[href=\"/personal-umbrella-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/personal-umbrella-insurance",
+      "finalUrl": "http://localhost:3020/personal-umbrella-insurance/",
       "ok": true
     },
     {
@@ -1949,7 +1482,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/condo-insurance/\"], a.pilot-product-related-card[href=\"/condo-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condo-insurance",
+      "finalUrl": "http://localhost:3020/condo-insurance/",
       "ok": true
     },
     {
@@ -1962,7 +1495,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/personal-umbrella-insurance/\"], a.pilot-product-related-card[href=\"/personal-umbrella-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/personal-umbrella-insurance",
+      "finalUrl": "http://localhost:3020/personal-umbrella-insurance/",
       "ok": true
     },
     {
@@ -1975,7 +1508,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cottage-insurance/\"], a.pilot-product-related-card[href=\"/cottage-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cottage-insurance",
+      "finalUrl": "http://localhost:3020/cottage-insurance/",
       "ok": true
     },
     {
@@ -1988,7 +1521,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/home-insurance/\"], a.pilot-product-related-card[href=\"/home-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -2001,7 +1534,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/tenant-insurance/\"], a.pilot-product-related-card[href=\"/tenant-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/tenant-insurance",
+      "finalUrl": "http://localhost:3020/tenant-insurance/",
       "ok": true
     },
     {
@@ -2014,7 +1547,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/landlord-insurance/\"], a.pilot-product-related-card[href=\"/landlord-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/landlord-insurance",
+      "finalUrl": "http://localhost:3020/landlord-insurance/",
       "ok": true
     },
     {
@@ -2027,7 +1560,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cottage-insurance/\"], a.pilot-product-related-card[href=\"/cottage-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cottage-insurance",
+      "finalUrl": "http://localhost:3020/cottage-insurance/",
       "ok": true
     },
     {
@@ -2040,7 +1573,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/home-insurance/\"], a.pilot-product-related-card[href=\"/home-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -2053,7 +1586,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/condo-insurance/\"], a.pilot-product-related-card[href=\"/condo-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condo-insurance",
+      "finalUrl": "http://localhost:3020/condo-insurance/",
       "ok": true
     },
     {
@@ -2066,7 +1599,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/landlord-insurance/\"], a.pilot-product-related-card[href=\"/landlord-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/landlord-insurance",
+      "finalUrl": "http://localhost:3020/landlord-insurance/",
       "ok": true
     },
     {
@@ -2079,7 +1612,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/home-insurance/\"], a.pilot-product-related-card[href=\"/home-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -2092,7 +1625,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/condo-insurance/\"], a.pilot-product-related-card[href=\"/condo-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condo-insurance",
+      "finalUrl": "http://localhost:3020/condo-insurance/",
       "ok": true
     },
     {
@@ -2105,7 +1638,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/tenant-insurance/\"], a.pilot-product-related-card[href=\"/tenant-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/tenant-insurance",
+      "finalUrl": "http://localhost:3020/tenant-insurance/",
       "ok": true
     },
     {
@@ -2118,7 +1651,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cottage-insurance/\"], a.pilot-product-related-card[href=\"/cottage-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cottage-insurance",
+      "finalUrl": "http://localhost:3020/cottage-insurance/",
       "ok": true
     },
     {
@@ -2131,7 +1664,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/auto-insurance/\"], a.pilot-product-related-card[href=\"/auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/auto-insurance",
+      "finalUrl": "http://localhost:3020/auto-insurance/",
       "ok": true
     },
     {
@@ -2144,7 +1677,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/boat-insurance/\"], a.pilot-product-related-card[href=\"/boat-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/boat-insurance",
+      "finalUrl": "http://localhost:3020/boat-insurance/",
       "ok": true
     },
     {
@@ -2157,7 +1690,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/auto-insurance/\"], a.pilot-product-related-card[href=\"/auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/auto-insurance",
+      "finalUrl": "http://localhost:3020/auto-insurance/",
       "ok": true
     },
     {
@@ -2170,7 +1703,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/motorcycle-insurance/\"], a.pilot-product-related-card[href=\"/motorcycle-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/motorcycle-insurance",
+      "finalUrl": "http://localhost:3020/motorcycle-insurance/",
       "ok": true
     },
     {
@@ -2183,7 +1716,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cottage-insurance/\"], a.pilot-product-related-card[href=\"/cottage-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cottage-insurance",
+      "finalUrl": "http://localhost:3020/cottage-insurance/",
       "ok": true
     },
     {
@@ -2196,7 +1729,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/home-insurance/\"], a.pilot-product-related-card[href=\"/home-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -2209,7 +1742,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/condo-insurance/\"], a.pilot-product-related-card[href=\"/condo-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condo-insurance",
+      "finalUrl": "http://localhost:3020/condo-insurance/",
       "ok": true
     },
     {
@@ -2222,7 +1755,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/boat-insurance/\"], a.pilot-product-related-card[href=\"/boat-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/boat-insurance",
+      "finalUrl": "http://localhost:3020/boat-insurance/",
       "ok": true
     },
     {
@@ -2235,7 +1768,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/landlord-insurance/\"], a.pilot-product-related-card[href=\"/landlord-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/landlord-insurance",
+      "finalUrl": "http://localhost:3020/landlord-insurance/",
       "ok": true
     },
     {
@@ -2248,7 +1781,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/auto-insurance/\"], a.pilot-product-related-card[href=\"/auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/auto-insurance",
+      "finalUrl": "http://localhost:3020/auto-insurance/",
       "ok": true
     },
     {
@@ -2261,7 +1794,150 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/contact/\"], a.pilot-product-related-card[href=\"/contact\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/contact",
+      "finalUrl": "http://localhost:3020/contact/",
+      "ok": true
+    },
+    {
+      "href": "/small-business-insurance/",
+      "label": "Small Business Insurance",
+      "surface": "productRelatedRail",
+      "page": "/commercial-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/small-business-insurance/\"], a.pilot-product-related-card[href=\"/small-business-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/small-business-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/manufacturing-insurance/",
+      "label": "Manufacturing Insurance",
+      "surface": "productRelatedRail",
+      "page": "/commercial-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/manufacturing-insurance/\"], a.pilot-product-related-card[href=\"/manufacturing-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/manufacturing-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/product-recall-insurance/",
+      "label": "Product Recall",
+      "surface": "productRelatedRail",
+      "page": "/commercial-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/product-recall-insurance/\"], a.pilot-product-related-card[href=\"/product-recall-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/product-recall-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/pollution-liability-insurance/",
+      "label": "Pollution Liability",
+      "surface": "productRelatedRail",
+      "page": "/commercial-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/pollution-liability-insurance/\"], a.pilot-product-related-card[href=\"/pollution-liability-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/pollution-liability-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/crime-fidelity-insurance/",
+      "label": "Crime & Fidelity",
+      "surface": "productRelatedRail",
+      "page": "/commercial-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/crime-fidelity-insurance/\"], a.pilot-product-related-card[href=\"/crime-fidelity-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/crime-fidelity-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/directors-officers-insurance/",
+      "label": "Directors & Officers",
+      "surface": "productRelatedRail",
+      "page": "/commercial-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/directors-officers-insurance/\"], a.pilot-product-related-card[href=\"/directors-officers-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/directors-officers-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/cannabis-retail-insurance/",
+      "label": "Cannabis Retail",
+      "surface": "productRelatedRail",
+      "page": "/commercial-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/cannabis-retail-insurance/\"], a.pilot-product-related-card[href=\"/cannabis-retail-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/cannabis-retail-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/cannabis-producer-insurance/",
+      "label": "Cannabis Producer",
+      "surface": "productRelatedRail",
+      "page": "/commercial-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/cannabis-producer-insurance/\"], a.pilot-product-related-card[href=\"/cannabis-producer-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/cannabis-producer-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/contractors-insurance/",
+      "label": "Contractors Insurance",
+      "surface": "productRelatedRail",
+      "page": "/bonding-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/contractors-insurance/\"], a.pilot-product-related-card[href=\"/contractors-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/contractors-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/builders-risk-insurance/",
+      "label": "Builder's Risk",
+      "surface": "productRelatedRail",
+      "page": "/bonding-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/builders-risk-insurance/\"], a.pilot-product-related-card[href=\"/builders-risk-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/builders-risk-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/crime-fidelity-insurance/",
+      "label": "Crime & Fidelity",
+      "surface": "productRelatedRail",
+      "page": "/bonding-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/crime-fidelity-insurance/\"], a.pilot-product-related-card[href=\"/crime-fidelity-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/crime-fidelity-insurance/",
       "ok": true
     },
     {
@@ -2274,7 +1950,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/greenhouse-agribusiness-insurance/\"], a.pilot-product-related-card[href=\"/greenhouse-agribusiness-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/greenhouse-agribusiness-insurance",
+      "finalUrl": "http://localhost:3020/greenhouse-agribusiness-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/commercial-auto-insurance/",
+      "label": "Commercial Auto",
+      "surface": "productRelatedRail",
+      "page": "/farm-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/commercial-auto-insurance/\"], a.pilot-product-related-card[href=\"/commercial-auto-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/commercial-auto-insurance/",
       "ok": true
     },
     {
@@ -2287,7 +1976,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -2300,7 +1989,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/farm-insurance/\"], a.pilot-product-related-card[href=\"/farm-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/farm-insurance",
+      "finalUrl": "http://localhost:3020/farm-insurance/",
       "ok": true
     },
     {
@@ -2313,7 +2002,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/cannabis-producer-insurance/",
+      "label": "Cannabis Producer",
+      "surface": "productRelatedRail",
+      "page": "/greenhouse-agribusiness-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/cannabis-producer-insurance/\"], a.pilot-product-related-card[href=\"/cannabis-producer-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/cannabis-producer-insurance/",
       "ok": true
     },
     {
@@ -2326,7 +2028,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/home-insurance/\"], a.pilot-product-related-card[href=\"/home-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -2339,7 +2041,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/tenant-insurance/\"], a.pilot-product-related-card[href=\"/tenant-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/tenant-insurance",
+      "finalUrl": "http://localhost:3020/tenant-insurance/",
       "ok": true
     },
     {
@@ -2352,7 +2054,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/landlord-insurance/\"], a.pilot-product-related-card[href=\"/landlord-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/landlord-insurance",
+      "finalUrl": "http://localhost:3020/landlord-insurance/",
       "ok": true
     },
     {
@@ -2365,7 +2067,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/home-insurance/\"], a.pilot-product-related-card[href=\"/home-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -2378,7 +2080,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/auto-insurance/\"], a.pilot-product-related-card[href=\"/auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/auto-insurance",
+      "finalUrl": "http://localhost:3020/auto-insurance/",
       "ok": true
     },
     {
@@ -2391,7 +2093,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/landlord-insurance/\"], a.pilot-product-related-card[href=\"/landlord-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/landlord-insurance",
+      "finalUrl": "http://localhost:3020/landlord-insurance/",
       "ok": true
     },
     {
@@ -2404,7 +2106,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/boat-insurance/\"], a.pilot-product-related-card[href=\"/boat-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/boat-insurance",
+      "finalUrl": "http://localhost:3020/boat-insurance/",
       "ok": true
     },
     {
@@ -2417,7 +2119,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/home-insurance/\"], a.pilot-product-related-card[href=\"/home-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -2430,7 +2132,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/landlord-insurance/\"], a.pilot-product-related-card[href=\"/landlord-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/landlord-insurance",
+      "finalUrl": "http://localhost:3020/landlord-insurance/",
       "ok": true
     },
     {
@@ -2443,7 +2145,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/auto-insurance/\"], a.pilot-product-related-card[href=\"/auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/auto-insurance",
+      "finalUrl": "http://localhost:3020/auto-insurance/",
       "ok": true
     },
     {
@@ -2456,7 +2158,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cottage-insurance/\"], a.pilot-product-related-card[href=\"/cottage-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cottage-insurance",
+      "finalUrl": "http://localhost:3020/cottage-insurance/",
       "ok": true
     },
     {
@@ -2469,7 +2171,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/group-home-auto-insurance/\"], a.pilot-product-related-card[href=\"/group-home-auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/group-home-auto-insurance",
+      "finalUrl": "http://localhost:3020/group-home-auto-insurance/",
       "ok": true
     },
     {
@@ -2482,7 +2184,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/home-insurance/\"], a.pilot-product-related-card[href=\"/home-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -2495,7 +2197,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/life-insurance/\"], a.pilot-product-related-card[href=\"/life-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/life-insurance",
+      "finalUrl": "http://localhost:3020/life-insurance/",
       "ok": true
     },
     {
@@ -2508,7 +2210,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/auto-insurance/\"], a.pilot-product-related-card[href=\"/auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/auto-insurance",
+      "finalUrl": "http://localhost:3020/auto-insurance/",
       "ok": true
     },
     {
@@ -2521,7 +2223,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/home-insurance/\"], a.pilot-product-related-card[href=\"/home-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
@@ -2534,20 +2236,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
-      "href": "/professional-liability-insurance/",
-      "label": "Professional Liability",
+      "href": "/commercial-property-insurance/",
+      "label": "Commercial Property",
       "surface": "productRelatedRail",
       "page": "/small-business-insurance/",
       "categoryId": null,
       "clicked": true,
       "method": "related-card",
-      "selector": "a.pilot-product-related-card[href=\"/professional-liability-insurance/\"], a.pilot-product-related-card[href=\"/professional-liability-insurance\"]",
+      "selector": "a.pilot-product-related-card[href=\"/commercial-property-insurance/\"], a.pilot-product-related-card[href=\"/commercial-property-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-liability-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
       "ok": true
     },
     {
@@ -2560,7 +2262,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cyber-insurance/\"], a.pilot-product-related-card[href=\"/cyber-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cyber-insurance",
+      "finalUrl": "http://localhost:3020/cyber-insurance/",
       "ok": true
     },
     {
@@ -2573,7 +2275,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/contractors-insurance/\"], a.pilot-product-related-card[href=\"/contractors-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/contractors-insurance",
+      "finalUrl": "http://localhost:3020/contractors-insurance/",
       "ok": true
     },
     {
@@ -2586,7 +2288,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-auto-insurance/\"], a.pilot-product-related-card[href=\"/commercial-auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-auto-insurance",
+      "finalUrl": "http://localhost:3020/commercial-auto-insurance/",
       "ok": true
     },
     {
@@ -2599,7 +2301,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/small-business-insurance/\"], a.pilot-product-related-card[href=\"/small-business-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/small-business-insurance",
+      "finalUrl": "http://localhost:3020/small-business-insurance/",
       "ok": true
     },
     {
@@ -2612,7 +2314,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/professional-offices-insurance/\"], a.pilot-product-related-card[href=\"/professional-offices-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-offices-insurance",
+      "finalUrl": "http://localhost:3020/professional-offices-insurance/",
       "ok": true
     },
     {
@@ -2625,7 +2327,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/professional-liability-insurance/\"], a.pilot-product-related-card[href=\"/professional-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-liability-insurance",
+      "finalUrl": "http://localhost:3020/professional-liability-insurance/",
       "ok": true
     },
     {
@@ -2638,7 +2340,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/crime-fidelity-insurance/\"], a.pilot-product-related-card[href=\"/crime-fidelity-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/crime-fidelity-insurance",
+      "finalUrl": "http://localhost:3020/crime-fidelity-insurance/",
       "ok": true
     },
     {
@@ -2651,7 +2353,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/employment-practices-liability-insurance/\"], a.pilot-product-related-card[href=\"/employment-practices-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/employment-practices-liability-insurance",
+      "finalUrl": "http://localhost:3020/employment-practices-liability-insurance/",
       "ok": true
     },
     {
@@ -2664,7 +2366,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/non-profit-insurance/\"], a.pilot-product-related-card[href=\"/non-profit-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/non-profit-insurance",
+      "finalUrl": "http://localhost:3020/non-profit-insurance/",
       "ok": true
     },
     {
@@ -2677,7 +2379,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/professional-liability-insurance/\"], a.pilot-product-related-card[href=\"/professional-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-liability-insurance",
+      "finalUrl": "http://localhost:3020/professional-liability-insurance/",
       "ok": true
     },
     {
@@ -2690,7 +2392,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-property-insurance/\"], a.pilot-product-related-card[href=\"/commercial-property-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
       "ok": true
     },
     {
@@ -2703,7 +2405,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/small-business-insurance/\"], a.pilot-product-related-card[href=\"/small-business-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/small-business-insurance",
+      "finalUrl": "http://localhost:3020/small-business-insurance/",
       "ok": true
     },
     {
@@ -2716,7 +2418,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/manufacturing-insurance/\"], a.pilot-product-related-card[href=\"/manufacturing-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/manufacturing-insurance",
+      "finalUrl": "http://localhost:3020/manufacturing-insurance/",
       "ok": true
     },
     {
@@ -2729,7 +2431,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/professional-offices-insurance/\"], a.pilot-product-related-card[href=\"/professional-offices-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-offices-insurance",
+      "finalUrl": "http://localhost:3020/professional-offices-insurance/",
       "ok": true
     },
     {
@@ -2742,7 +2444,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cyber-insurance/\"], a.pilot-product-related-card[href=\"/cyber-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cyber-insurance",
+      "finalUrl": "http://localhost:3020/cyber-insurance/",
       "ok": true
     },
     {
@@ -2755,7 +2457,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/directors-officers-insurance/\"], a.pilot-product-related-card[href=\"/directors-officers-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/directors-officers-insurance",
+      "finalUrl": "http://localhost:3020/directors-officers-insurance/",
       "ok": true
     },
     {
@@ -2768,7 +2470,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/restaurant-insurance/\"], a.pilot-product-related-card[href=\"/restaurant-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/restaurant-insurance",
+      "finalUrl": "http://localhost:3020/restaurant-insurance/",
       "ok": true
     },
     {
@@ -2781,7 +2483,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/liquor-liability-insurance/\"], a.pilot-product-related-card[href=\"/liquor-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/liquor-liability-insurance",
+      "finalUrl": "http://localhost:3020/liquor-liability-insurance/",
       "ok": true
     },
     {
@@ -2794,7 +2496,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/business-interruption-insurance/\"], a.pilot-product-related-card[href=\"/business-interruption-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/business-interruption-insurance",
+      "finalUrl": "http://localhost:3020/business-interruption-insurance/",
       "ok": true
     },
     {
@@ -2807,7 +2509,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/retail-insurance/\"], a.pilot-product-related-card[href=\"/retail-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/retail-insurance",
+      "finalUrl": "http://localhost:3020/retail-insurance/",
       "ok": true
     },
     {
@@ -2820,7 +2522,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/pollution-liability-insurance/\"], a.pilot-product-related-card[href=\"/pollution-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/pollution-liability-insurance",
+      "finalUrl": "http://localhost:3020/pollution-liability-insurance/",
       "ok": true
     },
     {
@@ -2833,7 +2535,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/crime-fidelity-insurance/\"], a.pilot-product-related-card[href=\"/crime-fidelity-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/crime-fidelity-insurance",
+      "finalUrl": "http://localhost:3020/crime-fidelity-insurance/",
       "ok": true
     },
     {
@@ -2846,7 +2548,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/retail-insurance/\"], a.pilot-product-related-card[href=\"/retail-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/retail-insurance",
+      "finalUrl": "http://localhost:3020/retail-insurance/",
       "ok": true
     },
     {
@@ -2859,7 +2561,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/product-recall-insurance/\"], a.pilot-product-related-card[href=\"/product-recall-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/product-recall-insurance",
+      "finalUrl": "http://localhost:3020/product-recall-insurance/",
       "ok": true
     },
     {
@@ -2872,7 +2574,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/restaurant-insurance/\"], a.pilot-product-related-card[href=\"/restaurant-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/restaurant-insurance",
+      "finalUrl": "http://localhost:3020/restaurant-insurance/",
       "ok": true
     },
     {
@@ -2885,7 +2587,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/professional-liability-insurance/\"], a.pilot-product-related-card[href=\"/professional-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-liability-insurance",
+      "finalUrl": "http://localhost:3020/professional-liability-insurance/",
       "ok": true
     },
     {
@@ -2898,7 +2600,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cyber-insurance/\"], a.pilot-product-related-card[href=\"/cyber-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cyber-insurance",
+      "finalUrl": "http://localhost:3020/cyber-insurance/",
       "ok": true
     },
     {
@@ -2911,7 +2613,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/pharmacy-insurance/\"], a.pilot-product-related-card[href=\"/pharmacy-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/pharmacy-insurance",
+      "finalUrl": "http://localhost:3020/pharmacy-insurance/",
       "ok": true
     },
     {
@@ -2924,7 +2626,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/medical-dental-insurance/\"], a.pilot-product-related-card[href=\"/medical-dental-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/medical-dental-insurance",
+      "finalUrl": "http://localhost:3020/medical-dental-insurance/",
       "ok": true
     },
     {
@@ -2937,7 +2639,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cyber-insurance/\"], a.pilot-product-related-card[href=\"/cyber-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cyber-insurance",
+      "finalUrl": "http://localhost:3020/cyber-insurance/",
       "ok": true
     },
     {
@@ -2950,20 +2652,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/retail-insurance/\"], a.pilot-product-related-card[href=\"/retail-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/retail-insurance",
+      "finalUrl": "http://localhost:3020/retail-insurance/",
       "ok": true
     },
     {
-      "href": "/salon-barber-insurance/",
-      "label": "Salon / Barber",
+      "href": "/professional-liability-insurance/",
+      "label": "Professional Liability",
       "surface": "productRelatedRail",
       "page": "/fitness-gym-insurance/",
       "categoryId": null,
       "clicked": true,
       "method": "related-card",
-      "selector": "a.pilot-product-related-card[href=\"/salon-barber-insurance/\"], a.pilot-product-related-card[href=\"/salon-barber-insurance\"]",
+      "selector": "a.pilot-product-related-card[href=\"/professional-liability-insurance/\"], a.pilot-product-related-card[href=\"/professional-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/salon-barber-insurance",
+      "finalUrl": "http://localhost:3020/professional-liability-insurance/",
       "ok": true
     },
     {
@@ -2976,7 +2678,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/event-liability-insurance/\"], a.pilot-product-related-card[href=\"/event-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/event-liability-insurance",
+      "finalUrl": "http://localhost:3020/event-liability-insurance/",
       "ok": true
     },
     {
@@ -2989,7 +2691,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/small-business-insurance/\"], a.pilot-product-related-card[href=\"/small-business-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/small-business-insurance",
+      "finalUrl": "http://localhost:3020/small-business-insurance/",
       "ok": true
     },
     {
@@ -3002,7 +2704,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/fitness-gym-insurance/\"], a.pilot-product-related-card[href=\"/fitness-gym-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/fitness-gym-insurance",
+      "finalUrl": "http://localhost:3020/fitness-gym-insurance/",
       "ok": true
     },
     {
@@ -3015,7 +2717,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/retail-insurance/\"], a.pilot-product-related-card[href=\"/retail-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/retail-insurance",
+      "finalUrl": "http://localhost:3020/retail-insurance/",
       "ok": true
     },
     {
@@ -3028,7 +2730,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/small-business-insurance/\"], a.pilot-product-related-card[href=\"/small-business-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/small-business-insurance",
+      "finalUrl": "http://localhost:3020/small-business-insurance/",
       "ok": true
     },
     {
@@ -3041,7 +2743,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/directors-officers-insurance/\"], a.pilot-product-related-card[href=\"/directors-officers-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/directors-officers-insurance",
+      "finalUrl": "http://localhost:3020/directors-officers-insurance/",
       "ok": true
     },
     {
@@ -3054,7 +2756,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/event-liability-insurance/\"], a.pilot-product-related-card[href=\"/event-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/event-liability-insurance",
+      "finalUrl": "http://localhost:3020/event-liability-insurance/",
       "ok": true
     },
     {
@@ -3067,7 +2769,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/religious-organizations-insurance/\"], a.pilot-product-related-card[href=\"/religious-organizations-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/religious-organizations-insurance",
+      "finalUrl": "http://localhost:3020/religious-organizations-insurance/",
       "ok": true
     },
     {
@@ -3080,20 +2782,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/non-profit-insurance/\"], a.pilot-product-related-card[href=\"/non-profit-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/non-profit-insurance",
+      "finalUrl": "http://localhost:3020/non-profit-insurance/",
       "ok": true
     },
     {
-      "href": "/daycare-private-school-insurance/",
-      "label": "Daycare / Private School",
+      "href": "/directors-officers-insurance/",
+      "label": "Directors & Officers",
       "surface": "productRelatedRail",
       "page": "/religious-organizations-insurance/",
       "categoryId": null,
       "clicked": true,
       "method": "related-card",
-      "selector": "a.pilot-product-related-card[href=\"/daycare-private-school-insurance/\"], a.pilot-product-related-card[href=\"/daycare-private-school-insurance\"]",
+      "selector": "a.pilot-product-related-card[href=\"/directors-officers-insurance/\"], a.pilot-product-related-card[href=\"/directors-officers-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/daycare-private-school-insurance",
+      "finalUrl": "http://localhost:3020/directors-officers-insurance/",
       "ok": true
     },
     {
@@ -3106,7 +2808,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/event-liability-insurance/\"], a.pilot-product-related-card[href=\"/event-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/event-liability-insurance",
+      "finalUrl": "http://localhost:3020/event-liability-insurance/",
       "ok": true
     },
     {
@@ -3119,7 +2821,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/non-profit-insurance/\"], a.pilot-product-related-card[href=\"/non-profit-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/non-profit-insurance",
+      "finalUrl": "http://localhost:3020/non-profit-insurance/",
       "ok": true
     },
     {
@@ -3132,7 +2834,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/event-liability-insurance/\"], a.pilot-product-related-card[href=\"/event-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/event-liability-insurance",
+      "finalUrl": "http://localhost:3020/event-liability-insurance/",
       "ok": true
     },
     {
@@ -3145,7 +2847,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/employment-practices-liability-insurance/\"], a.pilot-product-related-card[href=\"/employment-practices-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/employment-practices-liability-insurance",
+      "finalUrl": "http://localhost:3020/employment-practices-liability-insurance/",
       "ok": true
     },
     {
@@ -3158,7 +2860,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/liquor-liability-insurance/\"], a.pilot-product-related-card[href=\"/liquor-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/liquor-liability-insurance",
+      "finalUrl": "http://localhost:3020/liquor-liability-insurance/",
       "ok": true
     },
     {
@@ -3171,7 +2873,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/non-profit-insurance/\"], a.pilot-product-related-card[href=\"/non-profit-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/non-profit-insurance",
+      "finalUrl": "http://localhost:3020/non-profit-insurance/",
       "ok": true
     },
     {
@@ -3184,7 +2886,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/restaurant-insurance/\"], a.pilot-product-related-card[href=\"/restaurant-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/restaurant-insurance",
+      "finalUrl": "http://localhost:3020/restaurant-insurance/",
       "ok": true
     },
     {
@@ -3197,7 +2899,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/restaurant-insurance/\"], a.pilot-product-related-card[href=\"/restaurant-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/restaurant-insurance",
+      "finalUrl": "http://localhost:3020/restaurant-insurance/",
       "ok": true
     },
     {
@@ -3210,7 +2912,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/event-liability-insurance/\"], a.pilot-product-related-card[href=\"/event-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/event-liability-insurance",
+      "finalUrl": "http://localhost:3020/event-liability-insurance/",
       "ok": true
     },
     {
@@ -3223,7 +2925,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/hotel-motel-insurance/\"], a.pilot-product-related-card[href=\"/hotel-motel-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/hotel-motel-insurance",
+      "finalUrl": "http://localhost:3020/hotel-motel-insurance/",
       "ok": true
     },
     {
@@ -3236,12 +2938,12 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cyber-insurance/\"], a.pilot-product-related-card[href=\"/cyber-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cyber-insurance",
+      "finalUrl": "http://localhost:3020/cyber-insurance/",
       "ok": true
     },
     {
       "href": "/bonding-insurance/",
-      "label": "Bonding Insurance",
+      "label": "Surety Bonds",
       "surface": "productRelatedRail",
       "page": "/crime-fidelity-insurance/",
       "categoryId": null,
@@ -3249,7 +2951,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/bonding-insurance/\"], a.pilot-product-related-card[href=\"/bonding-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/bonding-insurance",
+      "finalUrl": "http://localhost:3020/bonding-insurance/",
       "ok": true
     },
     {
@@ -3262,7 +2964,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/retail-insurance/\"], a.pilot-product-related-card[href=\"/retail-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/retail-insurance",
+      "finalUrl": "http://localhost:3020/retail-insurance/",
       "ok": true
     },
     {
@@ -3275,7 +2977,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/directors-officers-insurance/\"], a.pilot-product-related-card[href=\"/directors-officers-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/directors-officers-insurance",
+      "finalUrl": "http://localhost:3020/directors-officers-insurance/",
       "ok": true
     },
     {
@@ -3288,7 +2990,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/small-business-insurance/\"], a.pilot-product-related-card[href=\"/small-business-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/small-business-insurance",
+      "finalUrl": "http://localhost:3020/small-business-insurance/",
       "ok": true
     },
     {
@@ -3301,7 +3003,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/professional-liability-insurance/\"], a.pilot-product-related-card[href=\"/professional-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-liability-insurance",
+      "finalUrl": "http://localhost:3020/professional-liability-insurance/",
       "ok": true
     },
     {
@@ -3314,7 +3016,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/trucking-insurance/\"], a.pilot-product-related-card[href=\"/trucking-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/trucking-insurance",
+      "finalUrl": "http://localhost:3020/trucking-insurance/",
       "ok": true
     },
     {
@@ -3327,7 +3029,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-auto-insurance/\"], a.pilot-product-related-card[href=\"/commercial-auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-auto-insurance",
+      "finalUrl": "http://localhost:3020/commercial-auto-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/warehousing-insurance/",
+      "label": "Warehousing Insurance",
+      "surface": "productRelatedRail",
+      "page": "/cargo-freight-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/warehousing-insurance/\"], a.pilot-product-related-card[href=\"/warehousing-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/warehousing-insurance/",
       "ok": true
     },
     {
@@ -3340,20 +3055,33 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-auto-insurance/\"], a.pilot-product-related-card[href=\"/commercial-auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-auto-insurance",
+      "finalUrl": "http://localhost:3020/commercial-auto-insurance/",
       "ok": true
     },
     {
-      "href": "/cargo-freight-insurance/",
-      "label": "Cargo & Freight",
+      "href": "/commercial-property-insurance/",
+      "label": "Commercial Property",
       "surface": "productRelatedRail",
       "page": "/garage-dealership-insurance/",
       "categoryId": null,
       "clicked": true,
       "method": "related-card",
-      "selector": "a.pilot-product-related-card[href=\"/cargo-freight-insurance/\"], a.pilot-product-related-card[href=\"/cargo-freight-insurance\"]",
+      "selector": "a.pilot-product-related-card[href=\"/commercial-property-insurance/\"], a.pilot-product-related-card[href=\"/commercial-property-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cargo-freight-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/pollution-liability-insurance/",
+      "label": "Pollution Liability",
+      "surface": "productRelatedRail",
+      "page": "/garage-dealership-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/pollution-liability-insurance/\"], a.pilot-product-related-card[href=\"/pollution-liability-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/pollution-liability-insurance/",
       "ok": true
     },
     {
@@ -3366,7 +3094,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/contractors-insurance/\"], a.pilot-product-related-card[href=\"/contractors-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/contractors-insurance",
+      "finalUrl": "http://localhost:3020/contractors-insurance/",
       "ok": true
     },
     {
@@ -3379,7 +3107,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/builders-developers-insurance/\"], a.pilot-product-related-card[href=\"/builders-developers-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/builders-developers-insurance",
+      "finalUrl": "http://localhost:3020/builders-developers-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/bonding-insurance/",
+      "label": "Surety Bonds",
+      "surface": "productRelatedRail",
+      "page": "/builders-risk-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/bonding-insurance/\"], a.pilot-product-related-card[href=\"/bonding-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/bonding-insurance/",
       "ok": true
     },
     {
@@ -3392,7 +3133,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-property-insurance/\"], a.pilot-product-related-card[href=\"/commercial-property-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
       "ok": true
     },
     {
@@ -3405,7 +3146,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cargo-freight-insurance/\"], a.pilot-product-related-card[href=\"/cargo-freight-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cargo-freight-insurance",
+      "finalUrl": "http://localhost:3020/cargo-freight-insurance/",
       "ok": true
     },
     {
@@ -3418,7 +3159,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/real-estate-insurance/\"], a.pilot-product-related-card[href=\"/real-estate-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/real-estate-insurance",
+      "finalUrl": "http://localhost:3020/real-estate-insurance/",
       "ok": true
     },
     {
@@ -3431,7 +3172,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/condominium-corporation-insurance/\"], a.pilot-product-related-card[href=\"/condominium-corporation-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condominium-corporation-insurance",
+      "finalUrl": "http://localhost:3020/condominium-corporation-insurance/",
       "ok": true
     },
     {
@@ -3444,7 +3185,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-property-insurance/\"], a.pilot-product-related-card[href=\"/commercial-property-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
       "ok": true
     },
     {
@@ -3457,7 +3198,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/property-management-insurance/\"], a.pilot-product-related-card[href=\"/property-management-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/property-management-insurance",
+      "finalUrl": "http://localhost:3020/property-management-insurance/",
       "ok": true
     },
     {
@@ -3470,7 +3211,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-property-insurance/\"], a.pilot-product-related-card[href=\"/commercial-property-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
       "ok": true
     },
     {
@@ -3483,7 +3224,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/condo-insurance/\"], a.pilot-product-related-card[href=\"/condo-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condo-insurance",
+      "finalUrl": "http://localhost:3020/condo-insurance/",
       "ok": true
     },
     {
@@ -3496,7 +3237,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/contractors-insurance/\"], a.pilot-product-related-card[href=\"/contractors-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/contractors-insurance",
+      "finalUrl": "http://localhost:3020/contractors-insurance/",
       "ok": true
     },
     {
@@ -3509,20 +3250,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/manufacturing-insurance/\"], a.pilot-product-related-card[href=\"/manufacturing-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/manufacturing-insurance",
+      "finalUrl": "http://localhost:3020/manufacturing-insurance/",
       "ok": true
     },
     {
-      "href": "/convenience-store-insurance/",
-      "label": "Convenience Store Insurance",
+      "href": "/commercial-property-insurance/",
+      "label": "Commercial Property",
       "surface": "productRelatedRail",
       "page": "/pollution-liability-insurance/",
       "categoryId": null,
       "clicked": true,
       "method": "related-card",
-      "selector": "a.pilot-product-related-card[href=\"/convenience-store-insurance/\"], a.pilot-product-related-card[href=\"/convenience-store-insurance\"]",
+      "selector": "a.pilot-product-related-card[href=\"/commercial-property-insurance/\"], a.pilot-product-related-card[href=\"/commercial-property-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/convenience-store-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
       "ok": true
     },
     {
@@ -3535,12 +3276,12 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/manufacturing-insurance/\"], a.pilot-product-related-card[href=\"/manufacturing-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/manufacturing-insurance",
+      "finalUrl": "http://localhost:3020/manufacturing-insurance/",
       "ok": true
     },
     {
       "href": "/retail-insurance/",
-      "label": "Product Liability (Retail)",
+      "label": "Retail Insurance",
       "surface": "productRelatedRail",
       "page": "/product-recall-insurance/",
       "categoryId": null,
@@ -3548,7 +3289,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/retail-insurance/\"], a.pilot-product-related-card[href=\"/retail-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/retail-insurance",
+      "finalUrl": "http://localhost:3020/retail-insurance/",
       "ok": true
     },
     {
@@ -3561,7 +3302,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/grocery-specialty-food-insurance/\"], a.pilot-product-related-card[href=\"/grocery-specialty-food-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/grocery-specialty-food-insurance",
+      "finalUrl": "http://localhost:3020/grocery-specialty-food-insurance/",
       "ok": true
     },
     {
@@ -3574,12 +3315,12 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
       "href": "/bonding-insurance/",
-      "label": "Bond Insurance",
+      "label": "Surety Bonds",
       "surface": "productRelatedRail",
       "page": "/contractors-insurance/",
       "categoryId": null,
@@ -3587,7 +3328,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/bonding-insurance/\"], a.pilot-product-related-card[href=\"/bonding-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/bonding-insurance",
+      "finalUrl": "http://localhost:3020/bonding-insurance/",
       "ok": true
     },
     {
@@ -3600,7 +3341,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/builders-risk-insurance/\"], a.pilot-product-related-card[href=\"/builders-risk-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/builders-risk-insurance",
+      "finalUrl": "http://localhost:3020/builders-risk-insurance/",
       "ok": true
     },
     {
@@ -3613,7 +3354,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -3626,7 +3367,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-property-insurance/\"], a.pilot-product-related-card[href=\"/commercial-property-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/business-interruption-insurance/",
+      "label": "Business Interruption",
+      "surface": "productRelatedRail",
+      "page": "/manufacturing-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/business-interruption-insurance/\"], a.pilot-product-related-card[href=\"/business-interruption-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/business-interruption-insurance/",
       "ok": true
     },
     {
@@ -3639,7 +3393,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/product-recall-insurance/\"], a.pilot-product-related-card[href=\"/product-recall-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/product-recall-insurance",
+      "finalUrl": "http://localhost:3020/product-recall-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/cannabis-producer-insurance/",
+      "label": "Cannabis Producer",
+      "surface": "productRelatedRail",
+      "page": "/manufacturing-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/cannabis-producer-insurance/\"], a.pilot-product-related-card[href=\"/cannabis-producer-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/cannabis-producer-insurance/",
       "ok": true
     },
     {
@@ -3652,7 +3419,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -3665,7 +3432,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/business-interruption-insurance/\"], a.pilot-product-related-card[href=\"/business-interruption-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/business-interruption-insurance",
+      "finalUrl": "http://localhost:3020/business-interruption-insurance/",
       "ok": true
     },
     {
@@ -3678,7 +3445,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/small-business-insurance/\"], a.pilot-product-related-card[href=\"/small-business-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/small-business-insurance",
+      "finalUrl": "http://localhost:3020/small-business-insurance/",
       "ok": true
     },
     {
@@ -3691,7 +3458,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -3704,7 +3471,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/liquor-liability-insurance/\"], a.pilot-product-related-card[href=\"/liquor-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/liquor-liability-insurance",
+      "finalUrl": "http://localhost:3020/liquor-liability-insurance/",
       "ok": true
     },
     {
@@ -3717,7 +3484,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/business-interruption-insurance/\"], a.pilot-product-related-card[href=\"/business-interruption-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/business-interruption-insurance",
+      "finalUrl": "http://localhost:3020/business-interruption-insurance/",
       "ok": true
     },
     {
@@ -3730,7 +3497,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -3743,7 +3510,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/professional-liability-insurance/\"], a.pilot-product-related-card[href=\"/professional-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-liability-insurance",
+      "finalUrl": "http://localhost:3020/professional-liability-insurance/",
       "ok": true
     },
     {
@@ -3756,7 +3523,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cyber-insurance/\"], a.pilot-product-related-card[href=\"/cyber-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cyber-insurance",
+      "finalUrl": "http://localhost:3020/cyber-insurance/",
       "ok": true
     },
     {
@@ -3769,7 +3536,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -3782,20 +3549,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/property-management-insurance/\"], a.pilot-product-related-card[href=\"/property-management-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/property-management-insurance",
+      "finalUrl": "http://localhost:3020/property-management-insurance/",
       "ok": true
     },
     {
-      "href": "/condominium-corporation-insurance/",
-      "label": "Condominium Corporation",
+      "href": "/landlord-insurance/",
+      "label": "Landlord Insurance",
       "surface": "productRelatedRail",
       "page": "/real-estate-insurance/",
       "categoryId": null,
       "clicked": true,
       "method": "related-card",
-      "selector": "a.pilot-product-related-card[href=\"/condominium-corporation-insurance/\"], a.pilot-product-related-card[href=\"/condominium-corporation-insurance\"]",
+      "selector": "a.pilot-product-related-card[href=\"/landlord-insurance/\"], a.pilot-product-related-card[href=\"/landlord-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condominium-corporation-insurance",
+      "finalUrl": "http://localhost:3020/landlord-insurance/",
       "ok": true
     },
     {
@@ -3808,7 +3575,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -3821,7 +3588,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/contractors-insurance/\"], a.pilot-product-related-card[href=\"/contractors-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/contractors-insurance",
+      "finalUrl": "http://localhost:3020/contractors-insurance/",
       "ok": true
     },
     {
@@ -3834,20 +3601,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/builders-risk-insurance/\"], a.pilot-product-related-card[href=\"/builders-risk-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/builders-risk-insurance",
+      "finalUrl": "http://localhost:3020/builders-risk-insurance/",
       "ok": true
     },
     {
-      "href": "/commercial-insurance/",
-      "label": "Commercial Insurance Hub",
+      "href": "/small-business-insurance/",
+      "label": "Small Business",
       "surface": "productRelatedRail",
       "page": "/retail-insurance/",
       "categoryId": null,
       "clicked": true,
       "method": "related-card",
-      "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
+      "selector": "a.pilot-product-related-card[href=\"/small-business-insurance/\"], a.pilot-product-related-card[href=\"/small-business-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/small-business-insurance/",
       "ok": true
     },
     {
@@ -3860,20 +3627,59 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-property-insurance/\"], a.pilot-product-related-card[href=\"/commercial-property-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
       "ok": true
     },
     {
-      "href": "/crime-fidelity-insurance/",
-      "label": "Crime & Fidelity",
+      "href": "/grocery-specialty-food-insurance/",
+      "label": "Grocery & Specialty Food",
       "surface": "productRelatedRail",
       "page": "/retail-insurance/",
       "categoryId": null,
       "clicked": true,
       "method": "related-card",
-      "selector": "a.pilot-product-related-card[href=\"/crime-fidelity-insurance/\"], a.pilot-product-related-card[href=\"/crime-fidelity-insurance\"]",
+      "selector": "a.pilot-product-related-card[href=\"/grocery-specialty-food-insurance/\"], a.pilot-product-related-card[href=\"/grocery-specialty-food-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/crime-fidelity-insurance",
+      "finalUrl": "http://localhost:3020/grocery-specialty-food-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/convenience-store-insurance/",
+      "label": "Convenience Store",
+      "surface": "productRelatedRail",
+      "page": "/retail-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/convenience-store-insurance/\"], a.pilot-product-related-card[href=\"/convenience-store-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/convenience-store-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/pharmacy-insurance/",
+      "label": "Pharmacy",
+      "surface": "productRelatedRail",
+      "page": "/retail-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/pharmacy-insurance/\"], a.pilot-product-related-card[href=\"/pharmacy-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/pharmacy-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/cannabis-retail-insurance/",
+      "label": "Cannabis Retail",
+      "surface": "productRelatedRail",
+      "page": "/retail-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/cannabis-retail-insurance/\"], a.pilot-product-related-card[href=\"/cannabis-retail-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/cannabis-retail-insurance/",
       "ok": true
     },
     {
@@ -3886,7 +3692,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -3899,7 +3705,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/restaurant-insurance/\"], a.pilot-product-related-card[href=\"/restaurant-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/restaurant-insurance",
+      "finalUrl": "http://localhost:3020/restaurant-insurance/",
       "ok": true
     },
     {
@@ -3912,7 +3718,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/liquor-liability-insurance/\"], a.pilot-product-related-card[href=\"/liquor-liability-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/liquor-liability-insurance",
+      "finalUrl": "http://localhost:3020/liquor-liability-insurance/",
       "ok": true
     },
     {
@@ -3925,7 +3731,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-auto-insurance/\"], a.pilot-product-related-card[href=\"/commercial-auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-auto-insurance",
+      "finalUrl": "http://localhost:3020/commercial-auto-insurance/",
       "ok": true
     },
     {
@@ -3938,7 +3744,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/dump-truck-insurance/\"], a.pilot-product-related-card[href=\"/dump-truck-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/dump-truck-insurance",
+      "finalUrl": "http://localhost:3020/dump-truck-insurance/",
       "ok": true
     },
     {
@@ -3951,7 +3757,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/cargo-freight-insurance/\"], a.pilot-product-related-card[href=\"/cargo-freight-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cargo-freight-insurance",
+      "finalUrl": "http://localhost:3020/cargo-freight-insurance/",
       "ok": true
     },
     {
@@ -3964,7 +3770,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -3977,12 +3783,12 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/trucking-insurance/\"], a.pilot-product-related-card[href=\"/trucking-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/trucking-insurance",
+      "finalUrl": "http://localhost:3020/trucking-insurance/",
       "ok": true
     },
     {
       "href": "/dump-truck-insurance/",
-      "label": "Dump Trucks",
+      "label": "Dump Truck",
       "surface": "productRelatedRail",
       "page": "/commercial-auto-insurance/",
       "categoryId": null,
@@ -3990,7 +3796,20 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/dump-truck-insurance/\"], a.pilot-product-related-card[href=\"/dump-truck-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/dump-truck-insurance",
+      "finalUrl": "http://localhost:3020/dump-truck-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/cargo-freight-insurance/",
+      "label": "Cargo & Freight",
+      "surface": "productRelatedRail",
+      "page": "/commercial-auto-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/cargo-freight-insurance/\"], a.pilot-product-related-card[href=\"/cargo-freight-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/cargo-freight-insurance/",
       "ok": true
     },
     {
@@ -4003,7 +3822,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-insurance/\"], a.pilot-product-related-card[href=\"/commercial-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
@@ -4016,7 +3835,7 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/trucking-insurance/\"], a.pilot-product-related-card[href=\"/trucking-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/trucking-insurance",
+      "finalUrl": "http://localhost:3020/trucking-insurance/",
       "ok": true
     },
     {
@@ -4029,7 +3848,137 @@
       "method": "related-card",
       "selector": "a.pilot-product-related-card[href=\"/commercial-auto-insurance/\"], a.pilot-product-related-card[href=\"/commercial-auto-insurance\"]",
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-auto-insurance",
+      "finalUrl": "http://localhost:3020/commercial-auto-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/retail-insurance/",
+      "label": "Retail Insurance",
+      "surface": "productRelatedRail",
+      "page": "/cannabis-retail-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/retail-insurance/\"], a.pilot-product-related-card[href=\"/retail-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/retail-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/commercial-property-insurance/",
+      "label": "Commercial Property",
+      "surface": "productRelatedRail",
+      "page": "/cannabis-retail-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/commercial-property-insurance/\"], a.pilot-product-related-card[href=\"/commercial-property-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/crime-fidelity-insurance/",
+      "label": "Crime / Fidelity",
+      "surface": "productRelatedRail",
+      "page": "/cannabis-retail-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/crime-fidelity-insurance/\"], a.pilot-product-related-card[href=\"/crime-fidelity-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/crime-fidelity-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/product-recall-insurance/",
+      "label": "Product Recall",
+      "surface": "productRelatedRail",
+      "page": "/cannabis-retail-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/product-recall-insurance/\"], a.pilot-product-related-card[href=\"/product-recall-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/product-recall-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/business-interruption-insurance/",
+      "label": "Business Interruption",
+      "surface": "productRelatedRail",
+      "page": "/cannabis-retail-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/business-interruption-insurance/\"], a.pilot-product-related-card[href=\"/business-interruption-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/business-interruption-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/manufacturing-insurance/",
+      "label": "Manufacturing",
+      "surface": "productRelatedRail",
+      "page": "/cannabis-producer-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/manufacturing-insurance/\"], a.pilot-product-related-card[href=\"/manufacturing-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/manufacturing-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/greenhouse-agribusiness-insurance/",
+      "label": "Greenhouse & Agribusiness",
+      "surface": "productRelatedRail",
+      "page": "/cannabis-producer-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/greenhouse-agribusiness-insurance/\"], a.pilot-product-related-card[href=\"/greenhouse-agribusiness-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/greenhouse-agribusiness-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/product-recall-insurance/",
+      "label": "Product Recall",
+      "surface": "productRelatedRail",
+      "page": "/cannabis-producer-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/product-recall-insurance/\"], a.pilot-product-related-card[href=\"/product-recall-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/product-recall-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/pollution-liability-insurance/",
+      "label": "Pollution Liability",
+      "surface": "productRelatedRail",
+      "page": "/cannabis-producer-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/pollution-liability-insurance/\"], a.pilot-product-related-card[href=\"/pollution-liability-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/pollution-liability-insurance/",
+      "ok": true
+    },
+    {
+      "href": "/business-interruption-insurance/",
+      "label": "Business Interruption",
+      "surface": "productRelatedRail",
+      "page": "/cannabis-producer-insurance/",
+      "categoryId": null,
+      "clicked": true,
+      "method": "related-card",
+      "selector": "a.pilot-product-related-card[href=\"/business-interruption-insurance/\"], a.pilot-product-related-card[href=\"/business-interruption-insurance\"]",
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/business-interruption-insurance/",
       "ok": true
     }
   ],
@@ -4038,510 +3987,580 @@
       "family": "personal-inline",
       "from": "/home-insurance/",
       "label": "Condo",
-      "href": "/condo-insurance",
+      "href": "/condo-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condo-insurance",
+      "finalUrl": "http://localhost:3020/condo-insurance/",
       "ok": true
     },
     {
       "family": "personal-inline",
       "from": "/home-insurance/",
       "label": "Personal Umbrella",
-      "href": "/personal-umbrella-insurance",
+      "href": "/personal-umbrella-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/personal-umbrella-insurance",
+      "finalUrl": "http://localhost:3020/personal-umbrella-insurance/",
       "ok": true
     },
     {
       "family": "personal-inline",
       "from": "/home-insurance/",
       "label": "Cottage",
-      "href": "/cottage-insurance",
+      "href": "/cottage-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cottage-insurance",
+      "finalUrl": "http://localhost:3020/cottage-insurance/",
       "ok": true
     },
     {
       "family": "personal-specialty",
       "from": "/personal-umbrella-insurance/",
       "label": "Home",
-      "href": "/home-insurance",
+      "href": "/home-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
       "family": "personal-specialty",
       "from": "/personal-umbrella-insurance/",
       "label": "Auto",
-      "href": "/auto-insurance",
+      "href": "/auto-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/auto-insurance",
+      "finalUrl": "http://localhost:3020/auto-insurance/",
       "ok": true
     },
     {
       "family": "personal-specialty",
       "from": "/personal-umbrella-insurance/",
       "label": "Landlord",
-      "href": "/landlord-insurance",
+      "href": "/landlord-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/landlord-insurance",
+      "finalUrl": "http://localhost:3020/landlord-insurance/",
       "ok": true
     },
     {
       "family": "personal-specialty",
       "from": "/personal-umbrella-insurance/",
       "label": "Boat",
-      "href": "/boat-insurance",
+      "href": "/boat-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/boat-insurance",
+      "finalUrl": "http://localhost:3020/boat-insurance/",
       "ok": true
     },
     {
       "family": "auto-related",
       "from": "/auto-insurance/",
       "label": "Home",
-      "href": "/home-insurance",
+      "href": "/home-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/home-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "ok": true
     },
     {
       "family": "auto-related",
       "from": "/auto-insurance/",
       "label": "Condo",
-      "href": "/condo-insurance",
+      "href": "/condo-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condo-insurance",
+      "finalUrl": "http://localhost:3020/condo-insurance/",
       "ok": true
     },
     {
       "family": "auto-related",
       "from": "/auto-insurance/",
       "label": "Tenant",
-      "href": "/tenant-insurance",
+      "href": "/tenant-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/tenant-insurance",
+      "finalUrl": "http://localhost:3020/tenant-insurance/",
       "ok": true
     },
     {
       "family": "auto-related",
       "from": "/auto-insurance/",
       "label": "Motorcycle",
-      "href": "/motorcycle-insurance",
+      "href": "/motorcycle-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/motorcycle-insurance",
+      "finalUrl": "http://localhost:3020/motorcycle-insurance/",
       "ok": true
     },
     {
       "family": "auto-related",
       "from": "/auto-insurance/",
       "label": "Boat",
-      "href": "/boat-insurance",
+      "href": "/boat-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/boat-insurance",
+      "finalUrl": "http://localhost:3020/boat-insurance/",
       "ok": true
     },
     {
       "family": "auto-related",
       "from": "/auto-insurance/",
       "label": "Cottage",
-      "href": "/cottage-insurance",
+      "href": "/cottage-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cottage-insurance",
+      "finalUrl": "http://localhost:3020/cottage-insurance/",
       "ok": true
     },
     {
       "family": "auto-related",
       "from": "/auto-insurance/",
       "label": "Personal Umbrella",
-      "href": "/personal-umbrella-insurance",
+      "href": "/personal-umbrella-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/personal-umbrella-insurance",
+      "finalUrl": "http://localhost:3020/personal-umbrella-insurance/",
       "ok": true
     },
     {
       "family": "commercial-property",
       "from": "/commercial-property-insurance/",
       "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "href": "/commercial-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
       "family": "commercial-property",
       "from": "/commercial-property-insurance/",
       "label": "Business Interruption",
-      "href": "/business-interruption-insurance",
+      "href": "/business-interruption-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/business-interruption-insurance",
+      "finalUrl": "http://localhost:3020/business-interruption-insurance/",
       "ok": true
     },
     {
       "family": "commercial-property",
       "from": "/commercial-property-insurance/",
       "label": "Small Business",
-      "href": "/small-business-insurance",
+      "href": "/small-business-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/small-business-insurance",
+      "finalUrl": "http://localhost:3020/small-business-insurance/",
       "ok": true
     },
     {
       "family": "commercial-transportation",
       "from": "/trucking-insurance/",
       "label": "Commercial Auto",
-      "href": "/commercial-auto-insurance",
+      "href": "/commercial-auto-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-auto-insurance",
+      "finalUrl": "http://localhost:3020/commercial-auto-insurance/",
       "ok": true
     },
     {
       "family": "commercial-transportation",
       "from": "/trucking-insurance/",
       "label": "Dump Trucks",
-      "href": "/dump-truck-insurance",
+      "href": "/dump-truck-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/dump-truck-insurance",
+      "finalUrl": "http://localhost:3020/dump-truck-insurance/",
       "ok": true
     },
     {
       "family": "commercial-transportation",
       "from": "/trucking-insurance/",
       "label": "Cargo & Freight",
-      "href": "/cargo-freight-insurance",
+      "href": "/cargo-freight-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cargo-freight-insurance",
+      "finalUrl": "http://localhost:3020/cargo-freight-insurance/",
       "ok": true
     },
     {
       "family": "commercial-agriculture",
       "from": "/farm-insurance/",
       "label": "Greenhouse & Agribusiness",
-      "href": "/greenhouse-agribusiness-insurance",
+      "href": "/greenhouse-agribusiness-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/greenhouse-agribusiness-insurance",
+      "finalUrl": "http://localhost:3020/greenhouse-agribusiness-insurance/",
+      "ok": true
+    },
+    {
+      "family": "commercial-agriculture",
+      "from": "/farm-insurance/",
+      "label": "Commercial Auto",
+      "href": "/commercial-auto-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/commercial-auto-insurance/",
       "ok": true
     },
     {
       "family": "commercial-agriculture",
       "from": "/farm-insurance/",
       "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "href": "/commercial-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
       "family": "commercial-greenhouse",
       "from": "/greenhouse-agribusiness-insurance/",
       "label": "Farm",
-      "href": "/farm-insurance",
+      "href": "/farm-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/farm-insurance",
+      "finalUrl": "http://localhost:3020/farm-insurance/",
       "ok": true
     },
     {
       "family": "commercial-greenhouse",
       "from": "/greenhouse-agribusiness-insurance/",
       "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "href": "/commercial-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
+      "ok": true
+    },
+    {
+      "family": "commercial-greenhouse",
+      "from": "/greenhouse-agribusiness-insurance/",
+      "label": "Cannabis Producer",
+      "href": "/cannabis-producer-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/cannabis-producer-insurance/",
       "ok": true
     },
     {
       "family": "commercial-construction",
       "from": "/contractors-insurance/",
       "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "href": "/commercial-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
       "family": "commercial-construction",
       "from": "/contractors-insurance/",
-      "label": "Bond",
-      "href": "/bonding-insurance",
+      "label": "Surety Bonds",
+      "href": "/bonding-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/bonding-insurance",
+      "finalUrl": "http://localhost:3020/bonding-insurance/",
       "ok": true
     },
     {
       "family": "commercial-construction",
       "from": "/contractors-insurance/",
       "label": "Builder's Risk",
-      "href": "/builders-risk-insurance",
+      "href": "/builders-risk-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/builders-risk-insurance",
+      "finalUrl": "http://localhost:3020/builders-risk-insurance/",
       "ok": true
     },
     {
       "family": "commercial-hospitality",
       "from": "/restaurant-insurance/",
       "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "href": "/commercial-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
       "family": "commercial-hospitality",
       "from": "/restaurant-insurance/",
       "label": "Liquor Liability",
-      "href": "/liquor-liability-insurance",
+      "href": "/liquor-liability-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/liquor-liability-insurance",
+      "finalUrl": "http://localhost:3020/liquor-liability-insurance/",
       "ok": true
     },
     {
       "family": "commercial-hospitality",
       "from": "/restaurant-insurance/",
       "label": "Business Interruption",
-      "href": "/business-interruption-insurance",
+      "href": "/business-interruption-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/business-interruption-insurance",
+      "finalUrl": "http://localhost:3020/business-interruption-insurance/",
       "ok": true
     },
     {
       "family": "commercial-food-truck",
       "from": "/food-truck-insurance/",
       "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "href": "/commercial-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
       "family": "commercial-food-truck",
       "from": "/food-truck-insurance/",
       "label": "Restaurant",
-      "href": "/restaurant-insurance",
+      "href": "/restaurant-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/restaurant-insurance",
+      "finalUrl": "http://localhost:3020/restaurant-insurance/",
       "ok": true
     },
     {
       "family": "commercial-food-truck",
       "from": "/food-truck-insurance/",
       "label": "Liquor Liability",
-      "href": "/liquor-liability-insurance",
+      "href": "/liquor-liability-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/liquor-liability-insurance",
+      "finalUrl": "http://localhost:3020/liquor-liability-insurance/",
       "ok": true
     },
     {
       "family": "commercial-professional",
       "from": "/professional-offices-insurance/",
       "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "href": "/commercial-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
       "family": "commercial-professional",
       "from": "/professional-offices-insurance/",
       "label": "Professional Liability",
-      "href": "/professional-liability-insurance",
+      "href": "/professional-liability-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-liability-insurance",
+      "finalUrl": "http://localhost:3020/professional-liability-insurance/",
       "ok": true
     },
     {
       "family": "commercial-professional",
       "from": "/professional-offices-insurance/",
       "label": "Cyber",
-      "href": "/cyber-insurance",
+      "href": "/cyber-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cyber-insurance",
+      "finalUrl": "http://localhost:3020/cyber-insurance/",
       "ok": true
     },
     {
       "family": "commercial-retail",
       "from": "/retail-insurance/",
-      "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "label": "Small Business",
+      "href": "/small-business-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/small-business-insurance/",
       "ok": true
     },
     {
       "family": "commercial-retail",
       "from": "/retail-insurance/",
       "label": "Commercial Property",
-      "href": "/commercial-property-insurance",
+      "href": "/commercial-property-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
       "ok": true
     },
     {
       "family": "commercial-retail",
       "from": "/retail-insurance/",
-      "label": "Crime & Fidelity",
-      "href": "/crime-fidelity-insurance",
+      "label": "Grocery & Specialty Food",
+      "href": "/grocery-specialty-food-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/crime-fidelity-insurance",
+      "finalUrl": "http://localhost:3020/grocery-specialty-food-insurance/",
+      "ok": true
+    },
+    {
+      "family": "commercial-retail",
+      "from": "/retail-insurance/",
+      "label": "Convenience Store",
+      "href": "/convenience-store-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/convenience-store-insurance/",
+      "ok": true
+    },
+    {
+      "family": "commercial-retail",
+      "from": "/retail-insurance/",
+      "label": "Pharmacy",
+      "href": "/pharmacy-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/pharmacy-insurance/",
+      "ok": true
+    },
+    {
+      "family": "commercial-retail",
+      "from": "/retail-insurance/",
+      "label": "Cannabis Retail",
+      "href": "/cannabis-retail-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/cannabis-retail-insurance/",
       "ok": true
     },
     {
       "family": "commercial-manufacturing",
       "from": "/manufacturing-insurance/",
       "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "href": "/commercial-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
       "family": "commercial-manufacturing",
       "from": "/manufacturing-insurance/",
       "label": "Commercial Property",
-      "href": "/commercial-property-insurance",
+      "href": "/commercial-property-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
+      "ok": true
+    },
+    {
+      "family": "commercial-manufacturing",
+      "from": "/manufacturing-insurance/",
+      "label": "Business Interruption",
+      "href": "/business-interruption-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/business-interruption-insurance/",
       "ok": true
     },
     {
       "family": "commercial-manufacturing",
       "from": "/manufacturing-insurance/",
       "label": "Product Recall",
-      "href": "/product-recall-insurance",
+      "href": "/product-recall-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/product-recall-insurance",
+      "finalUrl": "http://localhost:3020/product-recall-insurance/",
+      "ok": true
+    },
+    {
+      "family": "commercial-manufacturing",
+      "from": "/manufacturing-insurance/",
+      "label": "Cannabis Producer",
+      "href": "/cannabis-producer-insurance/",
+      "clicked": true,
+      "navigated": true,
+      "finalUrl": "http://localhost:3020/cannabis-producer-insurance/",
       "ok": true
     },
     {
       "family": "commercial-real-estate",
       "from": "/real-estate-insurance/",
       "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "href": "/commercial-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
       "family": "commercial-real-estate",
       "from": "/real-estate-insurance/",
       "label": "Property Management",
-      "href": "/property-management-insurance",
+      "href": "/property-management-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/property-management-insurance",
+      "finalUrl": "http://localhost:3020/property-management-insurance/",
       "ok": true
     },
     {
       "family": "commercial-real-estate",
       "from": "/real-estate-insurance/",
-      "label": "Condominium Corporation",
-      "href": "/condominium-corporation-insurance",
+      "label": "Landlord",
+      "href": "/landlord-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/condominium-corporation-insurance",
+      "finalUrl": "http://localhost:3020/landlord-insurance/",
       "ok": true
     },
     {
       "family": "commercial-product-batch-b",
       "from": "/small-business-insurance/",
       "label": "Commercial Insurance Hub",
-      "href": "/commercial-insurance",
+      "href": "/commercial-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "ok": true
     },
     {
       "family": "commercial-product-batch-b",
       "from": "/small-business-insurance/",
-      "label": "Professional Liability",
-      "href": "/professional-liability-insurance",
+      "label": "Commercial Property",
+      "href": "/commercial-property-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-liability-insurance",
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/",
       "ok": true
     },
     {
       "family": "commercial-product-batch-b",
       "from": "/small-business-insurance/",
       "label": "Cyber",
-      "href": "/cyber-insurance",
+      "href": "/cyber-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/cyber-insurance",
+      "finalUrl": "http://localhost:3020/cyber-insurance/",
       "ok": true
     },
     {
       "family": "commercial-cyber",
       "from": "/cyber-insurance/",
       "label": "Professional Offices",
-      "href": "/professional-offices-insurance",
+      "href": "/professional-offices-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-offices-insurance",
+      "finalUrl": "http://localhost:3020/professional-offices-insurance/",
       "ok": true
     },
     {
       "family": "commercial-cyber",
       "from": "/cyber-insurance/",
       "label": "Professional Liability",
-      "href": "/professional-liability-insurance",
+      "href": "/professional-liability-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/professional-liability-insurance",
+      "finalUrl": "http://localhost:3020/professional-liability-insurance/",
       "ok": true
     },
     {
       "family": "commercial-cyber",
       "from": "/cyber-insurance/",
       "label": "Crime / Fidelity",
-      "href": "/crime-fidelity-insurance",
+      "href": "/crime-fidelity-insurance/",
       "clicked": true,
       "navigated": true,
-      "finalUrl": "http://localhost:3018/crime-fidelity-insurance",
+      "finalUrl": "http://localhost:3020/crime-fidelity-insurance/",
       "ok": true
     }
   ],
@@ -4554,16 +4573,18 @@
       "stayed": true,
       "railAdvanced": true,
       "beforeRail": {
-        "progress": "25%",
-        "transform": "translate3d(-674.5px, 0px, 0px)"
+        "progress": null,
+        "transform": null,
+        "scrollLeft": 0
       },
       "afterRail": {
-        "progress": "37.5%",
-        "transform": "translate3d(-584.5px, 0px, 0px)"
+        "progress": null,
+        "transform": null,
+        "scrollLeft": 374
       },
       "action": "drag-left-120px",
       "distancePx": 120,
-      "finalUrl": "http://localhost:3018/"
+      "finalUrl": "http://localhost:3020/"
     },
     {
       "page": "/commercial-property-insurance/",
@@ -4576,7 +4597,7 @@
       "afterRail": null,
       "action": "drag-left-150px",
       "distancePx": 150,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance"
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/"
     },
     {
       "page": "/auto-insurance/",
@@ -4589,7 +4610,7 @@
       "afterRail": null,
       "action": "drag-left-150px",
       "distancePx": 150,
-      "finalUrl": "http://localhost:3018/auto-insurance"
+      "finalUrl": "http://localhost:3020/auto-insurance/"
     }
   ],
   "mobileTests": [
@@ -4597,12 +4618,12 @@
       "page": "/",
       "surface": "homepage-personal-filmstrip",
       "test": "tap",
-      "ok": false,
-      "expected": "/auto-insurance",
-      "label": "Auto",
-      "finalUrl": "http://localhost:3018/",
-      "tapX": 53,
-      "tapY": 12
+      "ok": true,
+      "expected": "/auto-insurance/",
+      "label": "Personal",
+      "finalUrl": "http://localhost:3020/auto-insurance/",
+      "tapX": 164,
+      "tapY": 399.90625
     },
     {
       "page": "/",
@@ -4612,27 +4633,29 @@
       "stayed": true,
       "railAdvanced": true,
       "beforeRail": {
-        "progress": "25%",
-        "transform": "translate3d(-163.5px, 0px, 0px)"
+        "progress": null,
+        "transform": null,
+        "scrollLeft": 0
       },
       "afterRail": {
-        "progress": "37.5%",
-        "transform": "translate3d(-138.5px, 0px, 0px)"
+        "progress": null,
+        "transform": null,
+        "scrollLeft": 561
       },
       "distancePx": 150,
       "thresholdPx": 8,
-      "finalUrl": "http://localhost:3018/"
+      "finalUrl": "http://localhost:3020/"
     },
     {
       "page": "/commercial-property-insurance/",
       "surface": "product-related-rail",
       "test": "tap",
       "ok": true,
-      "expected": "/commercial-insurance",
+      "expected": "/commercial-insurance/",
       "label": "Commercial Insurance Hub",
-      "finalUrl": "http://localhost:3018/commercial-insurance",
+      "finalUrl": "http://localhost:3020/commercial-insurance/",
       "tapX": 126,
-      "tapY": 283.375
+      "tapY": 490.765625
     },
     {
       "page": "/commercial-property-insurance/",
@@ -4645,18 +4668,18 @@
       "afterRail": null,
       "distancePx": 150,
       "thresholdPx": 8,
-      "finalUrl": "http://localhost:3018/commercial-property-insurance"
+      "finalUrl": "http://localhost:3020/commercial-property-insurance/"
     },
     {
       "page": "/auto-insurance/",
       "surface": "auto-related-rail",
       "test": "tap",
-      "ok": false,
-      "expected": "/home-insurance",
+      "ok": true,
+      "expected": "/home-insurance/",
       "label": "Home",
-      "finalUrl": "http://localhost:3018/auto-insurance",
+      "finalUrl": "http://localhost:3020/home-insurance/",
       "tapX": 126,
-      "tapY": 12
+      "tapY": 490.859375
     },
     {
       "page": "/auto-insurance/",
@@ -4669,35 +4692,12 @@
       "afterRail": null,
       "distancePx": 150,
       "thresholdPx": 8,
-      "finalUrl": "http://localhost:3018/auto-insurance"
+      "finalUrl": "http://localhost:3020/auto-insurance/"
     }
   ],
   "brokenHrefs": [],
   "failedClickTests": [],
   "failedHrefResults": [],
   "failedFamilyTests": [],
-  "failedMobile": [
-    {
-      "page": "/",
-      "surface": "homepage-personal-filmstrip",
-      "test": "tap",
-      "ok": false,
-      "expected": "/auto-insurance",
-      "label": "Auto",
-      "finalUrl": "http://localhost:3018/",
-      "tapX": 53,
-      "tapY": 12
-    },
-    {
-      "page": "/auto-insurance/",
-      "surface": "auto-related-rail",
-      "test": "tap",
-      "ok": false,
-      "expected": "/home-insurance",
-      "label": "Home",
-      "finalUrl": "http://localhost:3018/auto-insurance",
-      "tapX": 126,
-      "tapY": 12
-    }
-  ]
+  "failedMobile": []
 }

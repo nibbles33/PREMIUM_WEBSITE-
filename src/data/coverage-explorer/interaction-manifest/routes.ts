@@ -31,10 +31,12 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
   "condo-insurance": {
     archetype: "condo-cutaway",
     coverageZones: {
-      "unit-contents-improvements": ["interior-living", "unit-shell"],
+      "contents-personal-property": ["interior-living", "unit-shell"],
+      "unit-improvements-betterments": ["interior-living", "unit-shell"],
       "personal-liability": ["exterior-commons", "balcony-edge", "shared-hall"],
       "loss-assessment-coverage": ["unit-shell", "shared-hall", "parking-level"],
       "additional-living-expenses": ["interior-living", "exterior-commons"],
+      "condo-corporation-deductible": ["parking-level", "shared-hall", "unit-shell"],
     },
   },
   "tenant-insurance": {
@@ -43,33 +45,36 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
       "contents-coverage": ["interior-contents", "dwelling-structure"],
       "personal-liability": ["exterior-liability", "walkway-porch", "driveway"],
       "additional-living-expenses": ["temporary-accommodation", "interior-contents"],
-      "no-building-coverage": ["interior-contents", "exterior-liability"],
+      "tenant-improvements": ["interior-contents", "dwelling-structure"],
     },
   },
   "landlord-insurance": {
     archetype: "landlord-duplex",
     coverageZones: {
       "rental-dwelling-coverage": ["upper-unit", "lower-unit", "landlord-structures"],
-      "landlord-liability": ["rental-yard", "tenant-entry", "shared-wall"],
+      "landlord-owned-contents": ["upper-unit", "lower-unit"],
       "loss-of-rental-income": ["upper-unit", "lower-unit", "tenant-entry"],
-      "tenant-caused-damage": ["lower-unit", "rental-yard", "shared-wall"],
+      "landlord-liability": ["rental-yard", "tenant-entry", "shared-wall"],
+      "water-additional-endorsements": ["lower-unit", "rental-yard", "shared-wall"],
     },
   },
   "cottage-insurance": {
     archetype: "cottage-compound",
     coverageZones: {
       "seasonal-dwelling-coverage": ["main-cabin", "outbuilding"],
+      "detached-structures": ["outbuilding", "main-cabin"],
       "contents-personal-property": ["main-cabin", "outbuilding"],
       "liability-protection": ["lakeshore", "access-drive", "wooded-buffer"],
-      "additional-living-expenses": ["main-cabin", "access-drive"],
+      "seasonal-occupancy": ["access-drive", "main-cabin", "wooded-buffer"],
     },
   },
   "motorcycle-insurance": {
     archetype: "motorcycle-plinth",
     coverageZones: {
       "third-party-liability": ["road-edge", "bike-plinth", "parking-pad"],
-      "collision-comprehensive": ["bike-plinth", "rider-zone", "accessory-rack"],
       "accident-benefits": ["rider-zone", "bike-plinth"],
+      "collision-upset": ["bike-plinth", "rider-zone", "road-edge"],
+      "comprehensive": ["bike-plinth", "parking-pad", "accessory-rack"],
       "accessories-gear": ["accessory-rack", "bike-plinth"],
     },
   },
@@ -79,16 +84,18 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
       "hull-machinery": ["hull-body", "marina-dock"],
       "liability-coverage": ["water-surface", "shoreline", "marina-dock"],
       "equipment-trailers": ["trailer-zone", "hull-body"],
-      "navigation-use-territory": ["water-surface", "shoreline", "hull-body"],
+      "personal-effects": ["hull-body", "marina-dock"],
+      "emergency-assistance": ["water-surface", "shoreline", "marina-dock"],
     },
   },
   "travel-insurance": {
     archetype: "travel-airport",
     coverageZones: {
       "emergency-medical": ["terminal-hall", "gate-area"],
-      "trip-cancellation-interruption": ["gate-area", "travel-path", "runway-edge"],
+      "trip-cancellation": ["gate-area", "travel-path"],
+      "trip-interruption": ["travel-path", "runway-edge", "gate-area"],
       "baggage-personal-effects": ["baggage-claim", "terminal-hall"],
-      "travel-liability": ["travel-path", "terminal-hall", "gate-area"],
+      "travel-assistance": ["terminal-hall", "gate-area", "travel-path"],
     },
   },
   "mobile-home-insurance": {
@@ -96,8 +103,9 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
     coverageZones: {
       "dwelling-coverage": ["dwelling-shell", "roof-and-walls", "garage-wing"],
       "contents-belongings": ["dwelling-shell", "porch-entry"],
-      "personal-liability": ["exterior-yard", "driveway", "porch-entry"],
       "additional-structures": ["garage-wing", "dwelling-shell", "exterior-yard"],
+      "personal-liability": ["exterior-yard", "driveway", "porch-entry"],
+      "additional-living-expenses": ["porch-entry", "dwelling-shell", "driveway"],
     },
   },
   "personal-umbrella-insurance": {
@@ -123,8 +131,8 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
     coverageZones: {
       "term-life": ["hub-plaza", "welcome-desk", "skyline-backdrop"],
       "permanent-life": ["hub-plaza", "connector-walk", "industry-pod-east"],
+      "family-income-protection": ["welcome-desk", "hub-plaza", "pathway-ring"],
       "mortgage-debt-protection": ["welcome-desk", "hub-plaza"],
-      "business-key-person": ["industry-pod-west", "industry-pod-east", "hub-plaza"],
     },
   },
   "group-home-auto-insurance": {

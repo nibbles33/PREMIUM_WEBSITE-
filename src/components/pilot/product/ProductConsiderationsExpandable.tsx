@@ -31,22 +31,22 @@ export default function ProductConsiderationsExpandable({
 
   return (
     <section
-      className="border-b border-border bg-white py-14 sm:py-16 lg:py-20"
+      className="border-b border-border bg-white py-12 sm:py-14 lg:py-[4.25rem]"
       aria-labelledby="pilot-product-considerations-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <h2
               id="pilot-product-considerations-heading"
-              className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+              className="text-[1.65rem] font-medium tracking-[-0.025em] text-charcoal sm:text-[1.9rem] lg:text-[2.15rem]"
             >
               Practical considerations
             </h2>
           </div>
         </RevealOnScroll>
 
-        <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
+        <ul className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5">
           {items.map((item, index) => {
             const isOpen = openIndex === index;
             const panelId = `${baseId}-panel-${index}`;

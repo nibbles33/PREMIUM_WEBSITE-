@@ -88,10 +88,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 0 1.5rem;
+  min-height: 52px;
+  padding: 0 1.6rem;
   border-radius: 0.375rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: var(--pilot-charcoal);
   background: transparent;
@@ -99,7 +99,8 @@
   transition:
     transform 100ms ease-out,
     border-color 180ms ease-out,
-    color 180ms ease-out;
+    color 180ms ease-out,
+    background-color 180ms ease-out;
 }
 
 .pilot-btn-secondary:hover {
@@ -551,6 +552,17 @@
 
 .pilot-yep-tile {
   min-width: clamp(196px, 22vw, 248px);
+  max-width: min(248px, 85vw);
+}
+
+/* Contain infinite rails so they never expand document scroll width */
+.pilot-yep-rail,
+.pilot-section-yep .pilot-infinite-rail,
+.pilot-section-personal .pilot-infinite-rail,
+.pilot-section-awards .pilot-infinite-rail {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* —— Moving awards —— */
@@ -1900,25 +1912,28 @@
   overflow: hidden;
   transition:
     border-color 200ms ease-out,
-    box-shadow 220ms ease-out;
+    box-shadow 220ms ease-out,
+    background-color 200ms ease-out;
 }
 
 .pilot-auto-faq-item.is-open {
   border-color: color-mix(in srgb, var(--pilot-gold) 45%, var(--pilot-border));
+  background: #fffef9;
   box-shadow: 0 8px 24px rgba(208, 173, 38, 0.08);
 }
 
 .pilot-auto-faq-trigger {
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 1.125rem;
+  min-height: 3.25rem;
+  padding: 1.05rem 1.2rem;
   text-align: left;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.35;
+  line-height: 1.4;
   color: var(--pilot-charcoal);
   transition: color 180ms ease-out;
 }
@@ -1928,12 +1943,18 @@
   color: var(--pilot-gold-dark);
 }
 
+.pilot-auto-faq-trigger:focus-visible {
+  outline: 2px solid var(--pilot-gold-dark);
+  outline-offset: 2px;
+}
+
 .pilot-auto-faq-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-top: 0.1rem;
   border-radius: 9999px;
   background: rgba(208, 173, 38, 0.12);
   color: var(--pilot-gold-dark);
@@ -1941,13 +1962,14 @@
 }
 
 .pilot-auto-faq-panel {
-  padding: 0 1.125rem 1rem;
+  padding: 0 1.2rem 1.15rem;
 }
 
 .pilot-auto-faq-panel p {
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.65;
+  max-width: 42rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
   color: var(--pilot-secondary);
 }
 
@@ -3512,5 +3534,106 @@
 
   .pilot-auto-scene-ring {
     animation: none;
+  }
+}
+
+/* ============================================================
+   Concept F Rev 2/3 — editorial Personal discovery (no autoplay)
+   Rev 3: denser desktop cards (~4–5 visible @1440), capped ultrawide.
+   ============================================================ */
+.pilot-personal-editorial-scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: max(1rem, calc((100vw - 80rem) / 2 + 1rem));
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  scrollbar-width: none;
+  touch-action: pan-x;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pilot-personal-editorial-scroller .pilot-filmstrip-frame,
+.pilot-personal-editorial-scroller img {
+  -webkit-user-drag: none;
+}
+
+.pilot-personal-editorial-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.pilot-personal-editorial-scroller.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+.pilot-personal-editorial-track {
+  display: flex;
+  gap: 0.875rem;
+  width: max-content;
+  padding-inline: max(1rem, calc((100vw - 80rem) / 2 + 1rem));
+  padding-block: 0.25rem 0.5rem;
+}
+
+.pilot-personal-editorial-card {
+  scroll-snap-align: center;
+  flex: 0 0 min(78vw, 260px);
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 320ms ease;
+  opacity: 0.72;
+  transform: scale(0.96);
+}
+
+.pilot-personal-editorial-card.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (min-width: 640px) {
+  .pilot-personal-editorial-card {
+    flex-basis: min(42vw, 280px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pilot-personal-editorial-track {
+    gap: 1rem;
+  }
+
+  .pilot-personal-editorial-card {
+    /* ~3.5–4 cards with next-card peek */
+    flex-basis: min(24vw, 300px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .pilot-personal-editorial-card {
+    /* Target ~4–5 visible cards; next card may peek at right edge */
+    flex-basis: min(19.5vw, 292px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .pilot-personal-editorial-card {
+    /* Cap growth — density over enormous cards on ultrawide */
+    flex-basis: min(16vw, 300px);
+  }
+}
+
+@media (min-width: 2560px) {
+  .pilot-personal-editorial-card {
+    flex-basis: 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pilot-personal-editorial-card {
+    transition: none;
+  }
+
+  .pilot-personal-editorial-scroller {
+    scroll-behavior: auto;
   }
 }

@@ -3,179 +3,354 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type KeyboardEvent,
+} from "react";
 import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import { useTransformInfiniteRail } from "@/hooks/useTransformInfiniteRail";
 import {
   getFilmstripPhoto,
   personalFilmstripItems,
 } from "@/data/pilot-home";
-import { PILOT_PERSONAL_RAIL_SPEED } from "@/data/pilot-rail-durations";
 import { PILOT_FILMSTRIP_IMAGE } from "@/data/photography";
+import {
+  activatePointerDragIfNeeded,
+  createPointerDragSession,
+  idlePointerDragSession,
+  suppressClickAfterDrag,
+  type PointerDragSession,
+} from "@/lib/pointerDragGuard";
 
-const ITEM_COUNT = personalFilmstripItems.length;
+const ITEMS = personalFilmstripItems;
+const ITEM_COUNT = ITEMS.length;
 
+/**
+ * Concept F — editorial Personal discovery (Rev 2/3).
+ * Intentional navigation only (arrows / drag / swipe / keyboard).
+ * NO autoplay conveyor. All 14 products remain discoverable.
+ * Rev 3: denser desktop cards; single Explore CTA.
+ */
 export default function PilotPersonalFilmstrip() {
-  const [reduceMotion, setReduceMotion] = useState(false);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const dragSession = useRef<PointerDragSession & { scrollLeft: number }>({
+    ...idlePointerDragSession(),
+    scrollLeft: 0,
+  });
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const activeIndexRef = useRef(0);
+  activeIndexRef.current = activeIndex;
 
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setReduceMotion(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
+  const updateActiveFromScroll = useCallback(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const cards = el.querySelectorAll<HTMLElement>("[data-personal-card]");
+    if (!cards.length) return;
+    const mid = el.scrollLeft + el.clientWidth / 2;
+    let best = 0;
+    let bestDist = Number.POSITIVE_INFINITY;
+    cards.forEach((card, index) => {
+      const center = card.offsetLeft + card.offsetWidth / 2;
+      const dist = Math.abs(center - mid);
+      if (dist < bestDist) {
+        bestDist = dist;
+        best = index;
+      }
+    });
+    setActiveIndex(best);
   }, []);
 
-  const {
-    viewportRef,
-    innerRef,
-    isDragging,
-    activeIndex,
-    progress,
-    loopCopies,
-    nudge,
-    pauseAuto,
-    viewportHandlers,
-  } = useTransformInfiniteRail({
-    itemCount: ITEM_COUNT,
-    speed: PILOT_PERSONAL_RAIL_SPEED,
-    enableMomentum: !reduceMotion,
-    disableAutoplay: reduceMotion,
-  });
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    updateActiveFromScroll();
+    el.addEventListener("scroll", updateActiveFromScroll, { passive: true });
+    window.addEventListener("resize", updateActiveFromScroll);
+    return () => {
+      el.removeEventListener("scroll", updateActiveFromScroll);
+      window.removeEventListener("resize", updateActiveFromScroll);
+    };
+  }, [updateActiveFromScroll]);
 
-  const loopItems = Array.from({ length: loopCopies }, () =>
-    personalFilmstripItems,
-  ).flat();
+  const scrollToIndex = useCallback((index: number, behavior: ScrollBehavior = "smooth") => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const cards = el.querySelectorAll<HTMLElement>("[data-personal-card]");
+    const target = cards[Math.max(0, Math.min(ITEM_COUNT - 1, index))];
+    if (!target) return;
+    target.scrollIntoView({
+      behavior,
+      inline: "center",
+      block: "nearest",
+    });
+  }, []);
 
-  const renderFrame = (
-    item: (typeof personalFilmstripItems)[number],
-    index: number,
-    interactive: boolean,
-  ) => {
-    const photo = getFilmstripPhoto(item.slug);
-    const logicalIndex = index % ITEM_COUNT;
-    const isActive = logicalIndex === activeIndex;
-    const isClone = index >= ITEM_COUNT;
+  const nudge = useCallback(
+    (dir: -1 | 1) => {
+      scrollToIndex(activeIndex + dir);
+    },
+    [activeIndex, scrollToIndex],
+  );
 
-    return (
-      <Link
-        key={`${item.slug}-${index}`}
-        href={item.href}
-        data-frame
-        tabIndex={interactive && !isClone ? 0 : -1}
-        aria-hidden={isClone || undefined}
-        className={`pilot-filmstrip-frame pilot-filmstrip-frame-dense group block overflow-hidden rounded-xl border border-border/80 bg-white shadow-[0_6px_20px_rgba(32,39,40,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
-          isActive ? "is-active" : ""
-        }`}
-        aria-label={isClone ? undefined : `${item.label} insurance`}
-        onFocus={interactive ? pauseAuto : undefined}
-      >
-        <div className="relative aspect-[5/4] w-full overflow-hidden">
-          {photo ? (
-            <Image
-              src={photo.src}
-              alt=""
-              fill
-              sizes={PILOT_FILMSTRIP_IMAGE.sizes}
-              quality={PILOT_FILMSTRIP_IMAGE.quality}
-              loading={logicalIndex < 4 ? "eager" : "lazy"}
-              className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.05]"
-              draggable={false}
-            />
-          ) : null}
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-charcoal/5 to-transparent" />
-          <p className="absolute bottom-2.5 left-3 text-lg font-medium tracking-tight text-white">
-            {item.label}
-          </p>
-        </div>
-      </Link>
-    );
+  // Capture-phase listeners so drag works over nested <a>/images.
+  // HTML5 dragstart otherwise steals mouse moves after a few pixels.
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+
+    const onPointerDown = (event: PointerEvent) => {
+      if (event.button !== 0) return;
+      dragSession.current = {
+        ...createPointerDragSession(event.pointerId, event.clientX, event.clientY),
+        scrollLeft: el.scrollLeft,
+      };
+    };
+
+    const onPointerMove = (event: PointerEvent) => {
+      const session = dragSession.current;
+      if (!session.pending && !session.active) return;
+      if (session.pointerId !== event.pointerId) return;
+
+      if (
+        activatePointerDragIfNeeded(session, event.clientX, event.clientY) &&
+        !el.hasPointerCapture(event.pointerId)
+      ) {
+        setIsDragging(true);
+        try {
+          el.setPointerCapture(event.pointerId);
+        } catch {
+          /* ignore */
+        }
+      }
+
+      if (!session.active) return;
+      event.preventDefault();
+      const dx = event.clientX - session.startX;
+      el.scrollLeft = session.scrollLeft - dx;
+    };
+
+    const endDrag = (event: PointerEvent) => {
+      const session = dragSession.current;
+      if (!session.pending && !session.active) return;
+      if (session.pointerId !== -1 && session.pointerId !== event.pointerId) return;
+
+      const wasDragging = session.active;
+      const dragDistance = wasDragging ? event.clientX - session.startX : 0;
+
+      if (wasDragging && el.hasPointerCapture(event.pointerId)) {
+        try {
+          el.releasePointerCapture(event.pointerId);
+        } catch {
+          /* already released */
+        }
+      }
+
+      if (session.suppressClick) {
+        suppressClickAfterDrag(el);
+      }
+
+      dragSession.current = { ...idlePointerDragSession(), scrollLeft: 0 };
+      setIsDragging(false);
+
+      if (wasDragging) {
+        // Commit past CSS scroll-snap reset so desktop drag lands on a new card.
+        const cards = el.querySelectorAll<HTMLElement>("[data-personal-card]");
+        const cardWidth = cards[0]?.offsetWidth ?? 280;
+        const commitPx = Math.max(48, cardWidth * 0.18);
+        const current = activeIndexRef.current;
+        let next = current;
+        if (dragDistance <= -commitPx) next = current + 1;
+        else if (dragDistance >= commitPx) next = current - 1;
+        next = Math.max(0, Math.min(ITEM_COUNT - 1, next));
+        scrollToIndex(next, "auto");
+        setActiveIndex(next);
+      }
+    };
+
+    const onDragStart = (event: DragEvent) => {
+      event.preventDefault();
+    };
+
+    el.addEventListener("pointerdown", onPointerDown, { capture: true });
+    el.addEventListener("pointermove", onPointerMove, {
+      capture: true,
+      passive: false,
+    });
+    el.addEventListener("pointerup", endDrag, { capture: true });
+    el.addEventListener("pointercancel", endDrag, { capture: true });
+    el.addEventListener("dragstart", onDragStart, true);
+
+    return () => {
+      el.removeEventListener("pointerdown", onPointerDown, true);
+      el.removeEventListener("pointermove", onPointerMove, true);
+      el.removeEventListener("pointerup", endDrag, true);
+      el.removeEventListener("pointercancel", endDrag, true);
+      el.removeEventListener("dragstart", onDragStart, true);
+    };
+  }, [scrollToIndex]);
+
+  const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      nudge(-1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      nudge(1);
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      scrollToIndex(0);
+    } else if (event.key === "End") {
+      event.preventDefault();
+      scrollToIndex(ITEM_COUNT - 1);
+    }
   };
 
   return (
     <section
-      className="pilot-section-personal relative overflow-hidden border-t border-border bg-[#F3EBD4] py-10 sm:py-12 lg:py-14"
+      className="pilot-section-personal relative overflow-hidden border-t border-border bg-[#F3EBD4] py-12 sm:py-14 lg:py-[4.25rem]"
       aria-labelledby="pilot-personal-filmstrip-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div className="max-w-xl">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-8">
+            <div className="max-w-2xl">
+              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark">
+                Personal coverage
+              </p>
               <h2
                 id="pilot-personal-filmstrip-heading"
-                className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-[1.65rem]"
+                className="mt-3 text-[2.15rem] font-medium tracking-[-0.035em] text-charcoal sm:text-[2.55rem] lg:text-[3.05rem]"
               >
-                Personal insurance
+                Coverage for the life you actually live.
               </h2>
-              <p className="mt-1.5 text-[14px] leading-relaxed text-secondary">
-                A lot to protect? Good thing we have options.
+              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:text-[17px]">
+                Home, auto, condo, tenant, travel and specialty personal lines —
+                presented clearly, with a broker who can explain what matters.
               </p>
             </div>
-            <PremiumPilotButton
-              href="/personal/"
-              variant="secondary"
-              showArrow={false}
-              className="shrink-0 self-start text-[13px] sm:self-auto"
-            >
-              Explore all Personal →
-            </PremiumPilotButton>
+            <div className="flex flex-wrap items-center gap-3">
+              <p className="text-[13px] font-medium tabular-nums text-secondary">
+                {activeIndex + 1} / {ITEM_COUNT}
+              </p>
+              <button
+                type="button"
+                onClick={() => nudge(-1)}
+                className="pilot-btn-discover"
+                aria-label="Previous personal insurance product"
+              >
+                <ChevronLeft className="h-5 w-5" aria-hidden />
+              </button>
+              <button
+                type="button"
+                onClick={() => nudge(1)}
+                className="pilot-btn-discover"
+                aria-label="Next personal insurance product"
+              >
+                <ChevronRight className="h-5 w-5" aria-hidden />
+              </button>
+              {/* Single Personal exploration CTA (Rev 3) */}
+              <PremiumPilotButton
+                href="/personal/"
+                variant="secondary"
+                showArrow={false}
+                className="text-[13px]"
+              >
+                Explore Personal →
+              </PremiumPilotButton>
+            </div>
           </div>
         </RevealOnScroll>
       </div>
 
-      <RevealOnScroll className="mt-6 sm:mt-7">
-        <div className="pilot-filmstrip pilot-filmstrip-dense">
-          <div className="mx-auto mb-2 flex max-w-6xl justify-end gap-2 px-4 sm:px-6 lg:px-8">
-            <button
-              type="button"
-              onClick={() => nudge(-1)}
-              className="pilot-btn-discover"
-              aria-label="Previous personal insurance product"
-            >
-              <ChevronLeft className="h-5 w-5" aria-hidden />
-            </button>
-            <button
-              type="button"
-              onClick={() => nudge(1)}
-              className="pilot-btn-discover"
-              aria-label="Next personal insurance product"
-            >
-              <ChevronRight className="h-5 w-5" aria-hidden />
-            </button>
-          </div>
+      <RevealOnScroll className="mt-6 sm:mt-7 lg:mt-8">
+        <div
+          ref={scrollerRef}
+          className={`pilot-filmstrip-viewport pilot-personal-editorial-scroller ${isDragging ? "is-dragging" : ""}`}
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Personal insurance products — swipe, drag, or use arrows"
+          tabIndex={0}
+          onKeyDown={onKeyDown}
+        >
+          <ul className="pilot-personal-editorial-track">
+            {ITEMS.map((item, index) => {
+              const photo = getFilmstripPhoto(item.slug);
+              const isActive = index === activeIndex;
+              return (
+                <li
+                  key={item.slug}
+                  data-personal-card
+                  className={`pilot-personal-editorial-card ${isActive ? "is-active" : ""}`}
+                >
+                  <Link
+                    href={item.href}
+                    draggable={false}
+                    onDragStart={(event) => event.preventDefault()}
+                    data-track="personal_product_select"
+                    data-track-product-slug={item.slug}
+                    data-track-surface="filmstrip"
+                    className="pilot-filmstrip-frame group relative block h-full overflow-hidden rounded-[16px] border border-border/70 bg-charcoal shadow-[0_12px_36px_rgba(32,39,40,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                    aria-label={`${item.label} insurance`}
+                    aria-current={isActive ? "true" : undefined}
+                  >
+                    <div className="relative aspect-[4/5] w-full sm:aspect-[5/6] lg:aspect-[4/5]">
+                      {photo ? (
+                        <Image
+                          src={photo.src}
+                          alt=""
+                          fill
+                          sizes={PILOT_FILMSTRIP_IMAGE.sizes}
+                          quality={PILOT_FILMSTRIP_IMAGE.quality}
+                          loading={index < 5 ? "eager" : "lazy"}
+                          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                          draggable={false}
+                        />
+                      ) : null}
+                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent" />
+                      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                        <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-gold">
+                          Personal
+                        </p>
+                        <p className="mt-1.5 text-[1.25rem] font-medium tracking-[-0.02em] text-white sm:text-[1.4rem]">
+                          {item.label}
+                        </p>
+                        <p className="mt-1.5 text-[13px] text-white/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          View coverage →
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
+        <div className="mx-auto mt-5 flex max-w-6xl items-center px-4 sm:px-6 lg:px-8">
           <div
-            ref={viewportRef}
-            className={`pilot-filmstrip-viewport ${isDragging ? "is-dragging" : ""}`}
-            role="region"
-            aria-roledescription="carousel"
-            aria-label="Personal insurance products — swipe or drag to browse"
-            tabIndex={0}
-            {...viewportHandlers}
+            className="flex flex-wrap gap-1.5"
+            role="tablist"
+            aria-label="Personal product positions"
           >
-            <div
-              ref={innerRef}
-              className="pilot-filmstrip-inner pilot-filmstrip-track-dense"
-            >
-              {loopItems.map((item, index) =>
-                renderFrame(item, index, true),
-              )}
-            </div>
-          </div>
-
-          <div
-            className="pilot-filmstrip-progress mx-auto mt-3 max-w-xs"
-            role="progressbar"
-            aria-valuenow={activeIndex + 1}
-            aria-valuemin={1}
-            aria-valuemax={ITEM_COUNT}
-            aria-label="Filmstrip progress"
-          >
-            <div
-              className="pilot-filmstrip-progress-fill"
-              style={{ width: `${progress}%` }}
-            />
+            {ITEMS.map((item, index) => (
+              <button
+                key={item.slug}
+                type="button"
+                role="tab"
+                aria-selected={index === activeIndex}
+                aria-label={`Show ${item.label}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  index === activeIndex
+                    ? "w-7 bg-charcoal"
+                    : "w-1.5 bg-charcoal/25 hover:bg-charcoal/45"
+                }`}
+                onClick={() => scrollToIndex(index)}
+              />
+            ))}
           </div>
         </div>
       </RevealOnScroll>

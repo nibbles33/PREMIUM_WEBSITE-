@@ -1,0 +1,508 @@
+{
+  "pass1440": true,
+  "pass390": true,
+  "overflowPass": true,
+  "ctaPass": true,
+  "rows": [
+    {
+      "name": "Auto Insurance",
+      "route": "/auto-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 6,
+      "titles": [
+        "Liability",
+        "Collision",
+        "Comprehensive",
+        "Accident Benefits",
+        "Uninsured Auto",
+        "Loss of Use"
+      ],
+      "cta": "/get-a-quote?type=vehicle",
+      "selectedWorks": true,
+      "overflow": false,
+      "note": "CTA confirmed via HTML href type=vehicle"
+    },
+    {
+      "name": "Motorcycle Insurance",
+      "route": "/motorcycle-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Liability",
+        "Accident Benefits",
+        "Collision",
+        "Comprehensive",
+        "Accessories"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Boat Insurance",
+      "route": "/boat-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Hull",
+        "Liability",
+        "Equipment",
+        "Effects",
+        "Assistance"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Travel Insurance",
+      "route": "/travel-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Medical",
+        "Cancellation",
+        "Interruption",
+        "Baggage",
+        "Assistance"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Home Insurance",
+      "route": "/home-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Dwelling",
+        "Contents",
+        "Liability",
+        "ALE",
+        "Special Property"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Condo Insurance",
+      "route": "/condo-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 6,
+      "titles": [
+        "Contents",
+        "Improvements",
+        "Liability",
+        "Assessment",
+        "ALE",
+        "Deductible"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Tenant Insurance",
+      "route": "/tenant-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 4,
+      "titles": [
+        "Contents",
+        "Liability",
+        "ALE",
+        "Improvements"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Landlord Insurance",
+      "route": "/landlord-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Dwelling",
+        "Contents",
+        "Rental Income",
+        "Liability",
+        "Endorsements"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Cottage Insurance",
+      "route": "/cottage-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Dwelling",
+        "Structures",
+        "Contents",
+        "Liability",
+        "Occupancy"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Mobile / Manufactured Home",
+      "route": "/mobile-home-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Dwelling",
+        "Contents",
+        "Structures",
+        "Liability",
+        "ALE"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Personal Umbrella",
+      "route": "/personal-umbrella-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 4,
+      "titles": [
+        "Excess Liability",
+        "Above Limits",
+        "Underlying",
+        "Broader Liability"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Life Insurance",
+      "route": "/life-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 4,
+      "titles": [
+        "Term",
+        "Permanent",
+        "Income",
+        "Debt"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Group Home & Auto",
+      "route": "/group-home-auto-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 4,
+      "titles": [
+        "Group Access",
+        "Home & Auto",
+        "Advantages",
+        "Inquiry"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Home & Ride Sharing",
+      "route": "/home-sharing-insurance/",
+      "vp": "1440",
+      "pass": true,
+      "issues": [],
+      "cards": 4,
+      "titles": [
+        "Limitations",
+        "Home Sharing",
+        "Ride Sharing",
+        "Gaps"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Auto Insurance",
+      "route": "/auto-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 6,
+      "titles": [
+        "Liability",
+        "Collision",
+        "Comprehensive",
+        "Accident Benefits",
+        "Uninsured Auto",
+        "Loss of Use"
+      ],
+      "cta": "/get-a-quote?type=vehicle",
+      "selectedWorks": true,
+      "overflow": false,
+      "note": "CTA confirmed via HTML href type=vehicle"
+    },
+    {
+      "name": "Motorcycle Insurance",
+      "route": "/motorcycle-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Liability",
+        "Accident Benefits",
+        "Collision",
+        "Comprehensive",
+        "Accessories"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Boat Insurance",
+      "route": "/boat-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Hull",
+        "Liability",
+        "Equipment",
+        "Effects",
+        "Assistance"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Travel Insurance",
+      "route": "/travel-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Medical",
+        "Cancellation",
+        "Interruption",
+        "Baggage",
+        "Assistance"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Home Insurance",
+      "route": "/home-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Dwelling",
+        "Contents",
+        "Liability",
+        "ALE",
+        "Special Property"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Condo Insurance",
+      "route": "/condo-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 6,
+      "titles": [
+        "Contents",
+        "Improvements",
+        "Liability",
+        "Assessment",
+        "ALE",
+        "Deductible"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Tenant Insurance",
+      "route": "/tenant-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 4,
+      "titles": [
+        "Contents",
+        "Liability",
+        "ALE",
+        "Improvements"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Landlord Insurance",
+      "route": "/landlord-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Dwelling",
+        "Contents",
+        "Rental Income",
+        "Liability",
+        "Endorsements"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Cottage Insurance",
+      "route": "/cottage-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Dwelling",
+        "Structures",
+        "Contents",
+        "Liability",
+        "Occupancy"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Mobile / Manufactured Home",
+      "route": "/mobile-home-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 5,
+      "titles": [
+        "Dwelling",
+        "Contents",
+        "Structures",
+        "Liability",
+        "ALE"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Personal Umbrella",
+      "route": "/personal-umbrella-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 4,
+      "titles": [
+        "Excess Liability",
+        "Above Limits",
+        "Underlying",
+        "Broader Liability"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Life Insurance",
+      "route": "/life-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 4,
+      "titles": [
+        "Term",
+        "Permanent",
+        "Income",
+        "Debt"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Group Home & Auto",
+      "route": "/group-home-auto-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 4,
+      "titles": [
+        "Group Access",
+        "Home & Auto",
+        "Advantages",
+        "Inquiry"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    },
+    {
+      "name": "Home & Ride Sharing",
+      "route": "/home-sharing-insurance/",
+      "vp": "390",
+      "pass": true,
+      "issues": [],
+      "cards": 4,
+      "titles": [
+        "Limitations",
+        "Home Sharing",
+        "Ride Sharing",
+        "Gaps"
+      ],
+      "cta": "/get-a-quote/",
+      "selectedWorks": true,
+      "overflow": false
+    }
+  ]
+}

@@ -1,6 +1,10 @@
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_RE = /^[\d\s().+\-]{7,20}$/;
 
+export const CONTACT_INQUIRY_VALUES = ["general", "life", "group"] as const;
+
+export type ContactInquiry = (typeof CONTACT_INQUIRY_VALUES)[number];
+
 export type ContactFieldErrors = Partial<
   Record<"name" | "email" | "phone" | "message", string>
 >;
@@ -10,7 +14,42 @@ export type ValidatedContactMessage = {
   email: string;
   phone: string | null;
   message: string;
+  inquiry: ContactInquiry;
 };
+
+/** Allowlist untrusted inquiry query/body values. Unknown → general. */
+export function normalizeContactInquiry(value: unknown): ContactInquiry {
+  if (typeof value !== "string") return "general";
+  const normalized = value.trim().toLowerCase();
+  if (
+    (CONTACT_INQUIRY_VALUES as readonly string[]).includes(normalized)
+  ) {
+    return normalized as ContactInquiry;
+  }
+  return "general";
+}
+
+export function contactInquiryLabel(inquiry: ContactInquiry): string {
+  switch (inquiry) {
+    case "life":
+      return "Life Insurance Inquiry";
+    case "group":
+      return "Group Home & Auto Inquiry";
+    default:
+      return "Contact Inquiry";
+  }
+}
+
+export function contactInquiryEmailSubject(inquiry: ContactInquiry): string {
+  switch (inquiry) {
+    case "life":
+      return "Premium Website — Life Insurance Inquiry";
+    case "group":
+      return "Premium Website — Group Home & Auto Inquiry";
+    default:
+      return "Premium Website — Contact Inquiry";
+  }
+}
 
 export function isContactHoneypotTriggered(value: unknown): boolean {
   return typeof value === "string" && value.trim().length > 0;
@@ -34,6 +73,7 @@ export function validateContactPayload(body: unknown):
   const email = typeof raw.email === "string" ? raw.email.trim().toLowerCase() : "";
   const phoneRaw = typeof raw.phone === "string" ? raw.phone.trim() : "";
   const message = typeof raw.message === "string" ? raw.message.trim() : "";
+  const inquiry = normalizeContactInquiry(raw.inquiry);
 
   if (!name || name.length < 2) {
     fieldErrors.name = "Enter your full name.";
@@ -63,6 +103,7 @@ export function validateContactPayload(body: unknown):
       email,
       phone: phoneRaw || null,
       message,
+      inquiry,
     },
   };
 }

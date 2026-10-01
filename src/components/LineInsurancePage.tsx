@@ -19,6 +19,8 @@ export type CoverageCard = {
   id?: string;
   /** Optional compact label for Coverage Explorer selector tabs. */
   shortLabel?: string;
+  /** Optional longer explanation used as the explorer detail panel body. */
+  detail?: string;
   /** Optional richer title for Coverage Explorer detail panel (left under image). */
   detailTitle?: string;
   /** Optional richer description for Coverage Explorer detail panel (left under image). */
