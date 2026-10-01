@@ -10,7 +10,7 @@ type CountUpStatProps = {
   /** Optional accessible label describing the metric. */
   ariaLabel?: string;
   className?: string;
-  /** Duration in ms. Default 3000 for a deliberate, watchable count. */
+  /** Duration in ms. Default 10000 for diagnostic A/B test. */
   durationMs?: number;
 };
 
@@ -58,7 +58,7 @@ export default function CountUpStat({
   suffix = "",
   ariaLabel,
   className,
-  durationMs = 3000,
+  durationMs = 10000,
 }: CountUpStatProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const completedRef = useRef(false);
