@@ -23,10 +23,27 @@ export async function ensureContactSchema(): Promise<void> {
           email TEXT NOT NULL,
           phone TEXT,
           message TEXT NOT NULL,
+          inquiry TEXT,
           email_sent BOOLEAN NOT NULL DEFAULT FALSE,
           created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
         )
       `;
+      // Additive migration for existing deployments created before inquiry existed.
+      await sql`
+        ALTER TABLE contact_messages
+        ADD COLUMN IF NOT EXISTS inquiry TEXT
+      `;
+      // Restrict non-null values to the validated allowlist. NULL preserved for history.
+      await sql.unsafe(`
+        DO $$
+        BEGIN
+          ALTER TABLE contact_messages
+            ADD CONSTRAINT contact_messages_inquiry_check
+            CHECK (inquiry IS NULL OR inquiry IN ('general', 'life', 'group'));
+        EXCEPTION
+          WHEN duplicate_object THEN NULL;
+        END $$;
+      `);
       await sql`
         CREATE TABLE IF NOT EXISTS contact_rate_limits (
           id BIGSERIAL PRIMARY KEY,
@@ -55,7 +72,7 @@ export async function saveContactMessage(
 
   await sql`
     INSERT INTO contact_messages (
-      id, name, email, phone, message, email_sent
+      id, name, email, phone, message, inquiry, email_sent
     )
     VALUES (
       ${id},
@@ -63,6 +80,7 @@ export async function saveContactMessage(
       ${data.email},
       ${data.phone},
       ${data.message},
+      ${data.inquiry},
       FALSE
     )
   `;
