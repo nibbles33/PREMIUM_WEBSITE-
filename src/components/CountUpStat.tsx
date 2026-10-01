@@ -10,7 +10,7 @@ type CountUpStatProps = {
   /** Optional accessible label describing the metric. */
   ariaLabel?: string;
   className?: string;
-  /** Duration in ms. Default 1800 for a clearly visible count. */
+  /** Duration in ms. Default 3000 for a deliberate, watchable count. */
   durationMs?: number;
 };
 
@@ -18,8 +18,30 @@ function formatNumber(n: number): string {
   return Math.round(n).toLocaleString("en-CA");
 }
 
-function easeOutCubic(t: number): number {
-  return 1 - (1 - t) ** 3;
+/**
+ * Soft ease-in-out (sine). Progress stays near-linear through the middle
+ * so the count does not race through the first 70–80%, then settles gently.
+ */
+function easeInOutSine(t: number): number {
+  return -(Math.cos(Math.PI * t) - 1) / 2;
+}
+
+/**
+ * Map eased 0–1 progress to a display integer.
+ * Small targets step through every integer (0→1→…→9 / 0→…→31).
+ * Large targets use rounded continuous progress for a smooth climb.
+ */
+function displayAtProgress(progress: number, target: number): number {
+  if (progress <= 0) return 0;
+  if (progress >= 1) return target;
+
+  if (target <= 40) {
+    // Step through every integer; +1 spread keeps the final digit on-screen
+    // for a readable share of the timeline (not only the last frame).
+    return Math.min(target, Math.floor(progress * (target + 1)));
+  }
+
+  return Math.min(target, Math.round(progress * target));
 }
 
 /**
@@ -36,7 +58,7 @@ export default function CountUpStat({
   suffix = "",
   ariaLabel,
   className,
-  durationMs = 1800,
+  durationMs = 3000,
 }: CountUpStatProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const completedRef = useRef(false);
@@ -65,9 +87,10 @@ export default function CountUpStat({
       setDisplay(0);
 
       const tick = (now: number) => {
-        const t = Math.min(1, (now - start) / durationMs);
-        setDisplay(value * easeOutCubic(t));
-        if (t < 1) {
+        const raw = Math.min(1, (now - start) / durationMs);
+        const eased = easeInOutSine(raw);
+        setDisplay(displayAtProgress(eased, value));
+        if (raw < 1) {
           frame = requestAnimationFrame(tick);
         } else {
           setDisplay(value);
