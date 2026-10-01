@@ -329,6 +329,7 @@ Screenshots: `docs/qa-screenshots/rc-image-authority-patch-2026-10-01/`
 ### Patch commit / Preview
 
 - **Patch commit:** `11073e9` — polish: sharpen imagery and animate authority metrics  
+- **Count-up viewport fix:** see follow-up commit (start at 0; trigger only when strip is meaningfully in view; owner-protocol QA PASS)  
 - **Authoritative Preview (branch):** https://premium-website-git-cursor-homepage-a-6b58b4-nabil-g-s-projects.vercel.app  
 - Vercel deployment for `11073e9`: SUCCESS
 
