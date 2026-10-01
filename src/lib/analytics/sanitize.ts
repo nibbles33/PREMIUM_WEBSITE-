@@ -121,3 +121,23 @@ export function sanitizeAnalyticsPayload(
   }
   return clean;
 }
+
+/**
+ * Build a flat dataLayer push object that clears unused allowlisted keys.
+ * GTM Data Layer Variables retain prior values when a key is omitted; setting
+ * unused keys to null prevents stale carry-over (e.g. menu from nav_open
+ * appearing on a later get_quote_click).
+ */
+export function buildDataLayerEvent(
+  event: string,
+  payload: AnalyticsPayload = {},
+): Record<string, string | number | boolean | null> {
+  const clean = sanitizeAnalyticsPayload(payload);
+  const push: Record<string, string | number | boolean | null> = { event };
+  for (const key of ALLOWED_KEYS) {
+    push[key] = Object.prototype.hasOwnProperty.call(clean, key)
+      ? clean[key]!
+      : null;
+  }
+  return push;
+}

@@ -1,13 +1,13 @@
 {
-  "ok": true,
+  "ok": false,
   "revision": 3,
   "base": "http://127.0.0.1:3020",
-  "generatedAt": "2026-09-30T02:23:17.762Z",
+  "generatedAt": "2026-10-01T00:48:37.985Z",
   "audits": [
     {
       "viewport": "390",
-      "overflowX": false,
-      "scrollWidth": 390,
+      "overflowX": true,
+      "scrollWidth": 909,
       "clientWidth": 390,
       "hasTeamSection": false,
       "hasHomesPill": false,
@@ -16,24 +16,24 @@
       "authorityShowsBaselineAsLive": false,
       "personalUniqueHrefs": 14,
       "personalExploreCtaCount": 1,
-      "personalVisibleCards": 2,
-      "personalPartialPeek": true,
+      "personalVisibleCards": 14,
+      "personalPartialPeek": false,
       "personalAutoplayAnimation": "none",
       "commercialTabs": 10,
       "headingSizes": {
-        "personal": 34,
-        "carriers": 25,
-        "why": 34,
-        "google": 34,
-        "awards": 34,
-        "windsor": 34,
-        "finalCta": 35
+        "personal": 24,
+        "carriers": 24,
+        "why": 24,
+        "google": 24,
+        "awards": 24,
+        "windsor": 24,
+        "finalCta": 24
       }
     },
     {
       "viewport": "430",
-      "overflowX": false,
-      "scrollWidth": 430,
+      "overflowX": true,
+      "scrollWidth": 909,
       "clientWidth": 430,
       "hasTeamSection": false,
       "hasHomesPill": false,
@@ -42,24 +42,24 @@
       "authorityShowsBaselineAsLive": false,
       "personalUniqueHrefs": 14,
       "personalExploreCtaCount": 1,
-      "personalVisibleCards": 2,
-      "personalPartialPeek": true,
+      "personalVisibleCards": 14,
+      "personalPartialPeek": false,
       "personalAutoplayAnimation": "none",
       "commercialTabs": 10,
       "headingSizes": {
-        "personal": 34,
-        "carriers": 25,
-        "why": 34,
-        "google": 34,
-        "awards": 34,
-        "windsor": 34,
-        "finalCta": 35
+        "personal": 24,
+        "carriers": 24,
+        "why": 24,
+        "google": 24,
+        "awards": 24,
+        "windsor": 24,
+        "finalCta": 24
       }
     },
     {
       "viewport": "768",
-      "overflowX": false,
-      "scrollWidth": 768,
+      "overflowX": true,
+      "scrollWidth": 909,
       "clientWidth": 768,
       "hasTeamSection": false,
       "hasHomesPill": false,
@@ -68,18 +68,18 @@
       "authorityShowsBaselineAsLive": false,
       "personalUniqueHrefs": 14,
       "personalExploreCtaCount": 1,
-      "personalVisibleCards": 3,
-      "personalPartialPeek": true,
+      "personalVisibleCards": 14,
+      "personalPartialPeek": false,
       "personalAutoplayAnimation": "none",
       "commercialTabs": 10,
       "headingSizes": {
-        "personal": 41,
-        "carriers": 30,
-        "why": 42,
-        "google": 43,
-        "awards": 42,
-        "windsor": 43,
-        "finalCta": 44
+        "personal": 24,
+        "carriers": 24,
+        "why": 24,
+        "google": 24,
+        "awards": 24,
+        "windsor": 24,
+        "finalCta": 24
       }
     },
     {
@@ -94,18 +94,18 @@
       "authorityShowsBaselineAsLive": false,
       "personalUniqueHrefs": 14,
       "personalExploreCtaCount": 1,
-      "personalVisibleCards": 4,
-      "personalPartialPeek": true,
+      "personalVisibleCards": 14,
+      "personalPartialPeek": false,
       "personalAutoplayAnimation": "none",
       "commercialTabs": 10,
       "headingSizes": {
-        "personal": 49,
-        "carriers": 34,
-        "why": 49,
-        "google": 51,
-        "awards": 49,
-        "windsor": 51,
-        "finalCta": 54
+        "personal": 24,
+        "carriers": 24,
+        "why": 24,
+        "google": 24,
+        "awards": 24,
+        "windsor": 24,
+        "finalCta": 24
       }
     },
     {
@@ -120,18 +120,18 @@
       "authorityShowsBaselineAsLive": false,
       "personalUniqueHrefs": 14,
       "personalExploreCtaCount": 1,
-      "personalVisibleCards": 5,
-      "personalPartialPeek": true,
+      "personalVisibleCards": 14,
+      "personalPartialPeek": false,
       "personalAutoplayAnimation": "none",
       "commercialTabs": 10,
       "headingSizes": {
-        "personal": 49,
-        "carriers": 34,
-        "why": 49,
-        "google": 51,
-        "awards": 49,
-        "windsor": 51,
-        "finalCta": 54
+        "personal": 24,
+        "carriers": 24,
+        "why": 24,
+        "google": 24,
+        "awards": 24,
+        "windsor": 24,
+        "finalCta": 24
       }
     },
     {
@@ -146,18 +146,18 @@
       "authorityShowsBaselineAsLive": false,
       "personalUniqueHrefs": 14,
       "personalExploreCtaCount": 1,
-      "personalVisibleCards": 5,
+      "personalVisibleCards": 14,
       "personalPartialPeek": false,
       "personalAutoplayAnimation": "none",
       "commercialTabs": 10,
       "headingSizes": {
-        "personal": 49,
-        "carriers": 34,
-        "why": 49,
-        "google": 51,
-        "awards": 49,
-        "windsor": 51,
-        "finalCta": 54
+        "personal": 24,
+        "carriers": 24,
+        "why": 24,
+        "google": 24,
+        "awards": 24,
+        "windsor": 24,
+        "finalCta": 24
       }
     },
     {
@@ -172,18 +172,18 @@
       "authorityShowsBaselineAsLive": false,
       "personalUniqueHrefs": 14,
       "personalExploreCtaCount": 1,
-      "personalVisibleCards": 6,
+      "personalVisibleCards": 14,
       "personalPartialPeek": false,
       "personalAutoplayAnimation": "none",
       "commercialTabs": 10,
       "headingSizes": {
-        "personal": 49,
-        "carriers": 34,
-        "why": 49,
-        "google": 51,
-        "awards": 49,
-        "windsor": 51,
-        "finalCta": 54
+        "personal": 24,
+        "carriers": 24,
+        "why": 24,
+        "google": 24,
+        "awards": 24,
+        "windsor": 24,
+        "finalCta": 24
       }
     },
     {
@@ -198,18 +198,18 @@
       "authorityShowsBaselineAsLive": false,
       "personalUniqueHrefs": 14,
       "personalExploreCtaCount": 1,
-      "personalVisibleCards": 8,
-      "personalPartialPeek": true,
+      "personalVisibleCards": 14,
+      "personalPartialPeek": false,
       "personalAutoplayAnimation": "none",
       "commercialTabs": 10,
       "headingSizes": {
-        "personal": 49,
-        "carriers": 34,
-        "why": 49,
-        "google": 51,
-        "awards": 49,
-        "windsor": 51,
-        "finalCta": 54
+        "personal": 24,
+        "carriers": 24,
+        "why": 24,
+        "google": 24,
+        "awards": 24,
+        "windsor": 24,
+        "finalCta": 24
       }
     },
     {
@@ -224,24 +224,31 @@
       "authorityShowsBaselineAsLive": false,
       "personalUniqueHrefs": 14,
       "personalExploreCtaCount": 1,
-      "personalVisibleCards": 8,
+      "personalVisibleCards": 14,
       "personalPartialPeek": false,
       "personalAutoplayAnimation": "none",
       "commercialTabs": 10,
       "headingSizes": {
-        "personal": 49,
-        "carriers": 34,
-        "why": 49,
-        "google": 51,
-        "awards": 49,
-        "windsor": 51,
-        "finalCta": 54
+        "personal": 24,
+        "carriers": 24,
+        "why": 24,
+        "google": 24,
+        "awards": 24,
+        "windsor": 24,
+        "finalCta": 24
       }
     }
   ],
   "personalCloseup": {
     "ok": true,
-    "bytes": 575701
+    "bytes": 68722
   },
-  "errors": []
+  "errors": [
+    "390: horizontal overflow 909>390",
+    "430: horizontal overflow 909>430",
+    "768: horizontal overflow 909>768",
+    "1440: visible personal cards 14 (want ~4–5)",
+    "1440: personal heading 24px too small",
+    "1440: carriers heading 24px too small"
+  ]
 }

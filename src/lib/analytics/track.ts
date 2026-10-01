@@ -6,7 +6,7 @@
 
 import { readConsentCookie } from "@/lib/consent/storage";
 import {
-  sanitizeAnalyticsPayload,
+  buildDataLayerEvent,
   type AnalyticsPayload,
 } from "./sanitize";
 
@@ -54,16 +54,16 @@ export function track(event: string, payload: AnalyticsPayload = {}): void {
     return;
   }
 
-  const clean = sanitizeAnalyticsPayload(payload);
+  const push = buildDataLayerEvent(event, payload);
 
   try {
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event, ...clean });
+    window.dataLayer.push(push);
   } catch {
     /* ignore */
   }
 
   if (process.env.NODE_ENV === "development") {
-    console.info("[analytics]", event, clean);
+    console.info("[analytics]", event, push);
   }
 }
