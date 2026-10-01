@@ -1,6 +1,10 @@
 import { Resend } from "resend";
 import { getResendFrom } from "@/lib/email/resendConfig";
-import type { ValidatedContactMessage } from "./validate";
+import {
+  contactInquiryEmailSubject,
+  contactInquiryLabel,
+  type ValidatedContactMessage,
+} from "./validate";
 
 const DEFAULT_NOTIFY_TO = "info@premiumib.com";
 
@@ -18,10 +22,13 @@ export async function sendContactNotification(
   }
 
   const notifyTo = process.env.CONTACT_NOTIFY_TO ?? DEFAULT_NOTIFY_TO;
-  const subject = `Contact form — ${message.name}`;
+  const inquiryLabel = contactInquiryLabel(message.inquiry);
+  const subject = `${contactInquiryEmailSubject(message.inquiry)} — ${message.name}`;
   const text = [
     "New contact form message",
     "",
+    `Inquiry type: ${inquiryLabel}`,
+    `Inquiry code: ${message.inquiry}`,
     `Message ID: ${messageId}`,
     `Name: ${message.name}`,
     `Email: ${message.email}`,

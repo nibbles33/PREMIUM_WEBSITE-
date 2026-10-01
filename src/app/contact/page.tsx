@@ -7,6 +7,10 @@ import Header from "@/components/Header";
 import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { getPageHeroPhotography } from "@/data/photography";
+import {
+  normalizeContactInquiry,
+  type ContactInquiry,
+} from "@/lib/contact/validate";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Contact Us | Premium Insurance Brokers",
@@ -21,7 +25,7 @@ type ContactPageProps = {
   searchParams: Promise<{ intent?: string; inquiry?: string }>;
 };
 
-function resolveContactHero(intent?: string, inquiry?: string) {
+function resolveContactHero(intent?: string, inquiry: ContactInquiry = "general") {
   if (inquiry === "life") {
     return {
       title: "Start a Life Inquiry",
@@ -67,7 +71,8 @@ function resolveContactHero(intent?: string, inquiry?: string) {
 }
 
 export default async function ContactPage({ searchParams }: ContactPageProps) {
-  const { intent, inquiry } = await searchParams;
+  const { intent, inquiry: rawInquiry } = await searchParams;
+  const inquiry = normalizeContactInquiry(rawInquiry);
   const hero = resolveContactHero(intent, inquiry);
   const heroPhoto = getPageHeroPhotography("contact");
 
@@ -175,7 +180,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                 <h2 className="mb-5 text-xl font-medium tracking-tight text-charcoal sm:text-2xl">
                   {hero.formHeading}
                 </h2>
-                <ContactForm />
+                <ContactForm inquiry={inquiry} />
               </div>
             </RevealOnScroll>
           </div>

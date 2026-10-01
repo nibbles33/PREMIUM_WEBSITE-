@@ -2,6 +2,10 @@
 
 import { useId, useRef, useState, type FormEvent } from "react";
 import { track } from "@/lib/analytics";
+import {
+  normalizeContactInquiry,
+  type ContactInquiry,
+} from "@/lib/contact/validate";
 
 type FormState = {
   name: string;
@@ -19,7 +23,13 @@ const INITIAL: FormState = {
   message: "",
 };
 
-export default function ContactForm() {
+type ContactFormProps = {
+  /** Pre-normalized inquiry context from the contact page URL. */
+  inquiry?: ContactInquiry;
+};
+
+export default function ContactForm({ inquiry = "general" }: ContactFormProps) {
+  const inquiryContext = normalizeContactInquiry(inquiry);
   const [form, setForm] = useState<FormState>(INITIAL);
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
@@ -60,6 +70,7 @@ export default function ContactForm() {
           phone: fd.get("phone"),
           message: fd.get("message"),
           website: fd.get("website"),
+          inquiry: inquiryContext,
         }),
       });
 
@@ -89,7 +100,7 @@ export default function ContactForm() {
         return;
       }
 
-      track("contact_submit_success", { intent: "general" });
+      track("contact_submit_success", { intent: inquiryContext });
       setStatus("success");
       setForm(INITIAL);
     } catch {
