@@ -119,7 +119,7 @@ export function useQuoteFlow({
       .length > 0;
     if (!startedRef.current) {
       startedRef.current = true;
-      track("quote_flow_start", { category, prefilled });
+      track("quote_start", { category, prefilled });
     }
   }, [initialized, visibleSteps, answers, allSteps, urlParams, category]);
 
@@ -128,7 +128,7 @@ export function useQuoteFlow({
     if (!initialized || !currentStep) return;
     if (viewedStepRef.current === currentStep.id) return;
     viewedStepRef.current = currentStep.id;
-    track("quote_step_view", { category, stepId: currentStep.id });
+    track("quote_step_view", { category, step_id: currentStep.id });
   }, [initialized, currentStep, category]);
 
   // If visible steps shrink (skipIf), clamp index
@@ -153,7 +153,7 @@ export function useQuoteFlow({
   const goBack = useCallback(() => {
     if (stepIndex <= 0 || !currentStep) return;
     setTransitionDir("back");
-    track("quote_step_back", { category, stepId: currentStep.id });
+    track("quote_step_back", { category, step_id: currentStep.id });
     setStepIndex((i) => Math.max(0, i - 1));
   }, [stepIndex, currentStep, category]);
 
@@ -237,6 +237,7 @@ export function useQuoteFlow({
 
     setSubmitting(true);
     setSubmitError(null);
+    track("quote_submit", { category });
     try {
       const result = await onSubmit({
         category,
@@ -245,26 +246,22 @@ export function useQuoteFlow({
       });
       if (result.ok) {
         clearSession(category);
-        const nonPii: Record<string, string> = {};
-        for (const [k, v] of Object.entries(answers)) {
-          if (
-            k === "name" ||
-            k === "phone" ||
-            k === "email" ||
-            k === "notes" ||
-            k === "preferredContactMethod"
-          ) {
-            continue;
-          }
-          nonPii[k] = v;
-        }
-        track("quote_flow_complete", { category, ...nonPii });
+        // Success only — category slug only; never answer maps / PII.
+        track("quote_submit_success", { category });
         setCompleted(true);
       } else {
+        track("quote_submit_error", {
+          category,
+          error_code: "submit_rejected",
+        });
         setSubmitError(result.error);
         if (result.fieldErrors) setFieldErrors(result.fieldErrors);
       }
     } catch {
+      track("quote_submit_error", {
+        category,
+        error_code: "network_error",
+      });
       setSubmitError("Something went wrong. Please try again.");
     } finally {
       setSubmitting(false);

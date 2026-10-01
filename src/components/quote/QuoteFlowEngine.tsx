@@ -129,7 +129,10 @@ export default function QuoteFlowEngine({
     step.type === "freetext";
 
   return (
-    <div className="relative rounded-[18px] border border-border bg-white/95 p-5 shadow-[0_12px_40px_rgba(32,39,40,0.08)] sm:p-8">
+    <div
+      className="relative rounded-[18px] border border-border bg-white/95 p-5 shadow-[0_12px_40px_rgba(32,39,40,0.08)] pib-clarity-mask sm:p-8"
+      data-clarity-mask="true"
+    >
       <QuoteProgress
         total={flow.visibleSteps.length}
         current={flow.stepIndex}

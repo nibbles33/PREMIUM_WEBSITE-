@@ -1,3 +1,5 @@
+import AnalyticsProviders from "@/components/analytics/AnalyticsProviders";
+import ConsentBootstrapScript from "@/components/consent/ConsentBootstrapScript";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
@@ -6,7 +8,9 @@ import {
   SITE_NAME,
   SITE_ORIGIN,
 } from "@/lib/seo";
+import { getGtmId } from "@/lib/analytics/config";
 import "@/styles/pilot.css";
+import "@/styles/consent.css";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -40,11 +44,27 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  const gtmId = getGtmId();
+
   return (
     <html lang="en" className={`${archivo.variable} h-full antialiased`}>
+      <head>
+        <ConsentBootstrapScript />
+      </head>
       <body className="flex min-h-full flex-col bg-offwhite font-sans text-charcoal">
-        {children}
-        <Footer />
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+        <AnalyticsProviders>
+          {children}
+          <Footer />
+        </AnalyticsProviders>
       </body>
     </html>
   );

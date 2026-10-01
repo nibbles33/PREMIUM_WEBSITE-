@@ -1,5 +1,10 @@
-import { put } from "@vercel/blob";
 import { NextResponse } from "next/server";
+import {
+  createStaffResumeAccessUrl,
+  deletePrivateResume,
+  isBlobUploadConfigured,
+  uploadPrivateResume,
+} from "@/lib/jobs/blob";
 import { sendJobApplicationNotification } from "@/lib/jobs/notify";
 import {
   checkAndRecordJobApplyRateLimit,
@@ -81,8 +86,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const blobToken = process.env.BLOB_READ_WRITE_TOKEN;
-  if (!blobToken) {
+  if (!isBlobUploadConfigured()) {
     return NextResponse.json(
       {
         ok: false,
@@ -119,18 +123,14 @@ export async function POST(request: Request) {
   }
 
   let resumeUrl: string;
+  let resumePathname: string;
   try {
-    const safeName = resumeFile!.name.replace(/[^a-zA-Z0-9._-]/g, "_");
-    const blob = await put(
-      `careers/${validated.data.position}/${Date.now()}-${safeName}`,
+    const uploaded = await uploadPrivateResume(
+      validated.data.position,
       resumeFile!,
-      {
-        access: "public",
-        token: blobToken,
-        contentType: resumeFile!.type,
-      },
     );
-    resumeUrl = blob.url;
+    resumeUrl = uploaded.url;
+    resumePathname = uploaded.pathname;
   } catch (err) {
     console.error("[job-apply] Resume upload failed", err);
     return NextResponse.json(
@@ -147,11 +147,20 @@ export async function POST(request: Request) {
   try {
     const saved = await saveJobApplication({
       ...validated.data,
+      // Private Blob URL/reference — not anonymously accessible.
       resumeUrl,
     });
     applicationId = saved.id;
   } catch (err) {
     console.error("[job-apply] Failed to save application", err);
+    try {
+      await deletePrivateResume(resumeUrl);
+    } catch (cleanupErr) {
+      console.error(
+        "[job-apply] Failed to clean up orphaned private resume after DB error",
+        cleanupErr,
+      );
+    }
     return NextResponse.json(
       {
         ok: false,
@@ -162,11 +171,35 @@ export async function POST(request: Request) {
     );
   }
 
+  let staffResumeUrl: string | null = null;
+  let staffResumeExpiresAt: string | null = null;
+  try {
+    const staffAccess = await createStaffResumeAccessUrl(resumePathname);
+    if (staffAccess) {
+      staffResumeUrl = staffAccess.url;
+      staffResumeExpiresAt = staffAccess.expiresAt.toISOString();
+    } else {
+      console.warn(
+        "[job-apply] Staff resume access URL unavailable — email will include private pathname only",
+        { applicationId, resumePathname },
+      );
+    }
+  } catch (err) {
+    console.error("[job-apply] Staff resume access URL error", {
+      applicationId,
+      err,
+    });
+  }
+
   try {
     const emailed = await sendJobApplicationNotification(
       validated.data,
       applicationId,
-      resumeUrl,
+      {
+        resumePathname,
+        staffResumeUrl,
+        staffResumeExpiresAt,
+      },
     );
     if (emailed) {
       try {

@@ -5,10 +5,19 @@ import { getJobBySlug } from "@/data/jobs";
 
 const DEFAULT_NOTIFY_TO = "info@premiumib.com";
 
+export type JobApplicationResumeNotifyInfo = {
+  /** Private Blob pathname (server reference; not a public URL). */
+  resumePathname: string;
+  /** Short-lived authenticated staff GET URL, if issuance succeeded. */
+  staffResumeUrl: string | null;
+  /** ISO expiry for staffResumeUrl when present. */
+  staffResumeExpiresAt: string | null;
+};
+
 export async function sendJobApplicationNotification(
   application: ValidatedJobApplication,
   applicationId: string,
-  resumeUrl: string | null,
+  resume: JobApplicationResumeNotifyInfo | null,
 ): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -26,6 +35,26 @@ export async function sendJobApplicationNotification(
       ? "NEW GENERAL CAREER APPLICATION"
       : `NEW CAREER APPLICATION — ${job?.title ?? application.position}`;
 
+  const resumeLines: string[] = [];
+  if (!resume) {
+    resumeLines.push("Resume: not attached");
+  } else if (resume.staffResumeUrl) {
+    resumeLines.push(
+      "Resume access (private, time-limited staff link — do not forward publicly):",
+      resume.staffResumeUrl,
+    );
+    if (resume.staffResumeExpiresAt) {
+      resumeLines.push(`Link expires: ${resume.staffResumeExpiresAt}`);
+    }
+    resumeLines.push(`Private Blob pathname: ${resume.resumePathname}`);
+  } else {
+    resumeLines.push(
+      "Resume: stored privately in Vercel Blob (no public URL).",
+      `Private Blob pathname: ${resume.resumePathname}`,
+      "Retrieve via Vercel Blob dashboard (premium-website-blob) or re-issue a signed GET from the server using this pathname.",
+    );
+  }
+
   const text = [
     subject,
     "",
@@ -37,7 +66,7 @@ export async function sendJobApplicationNotification(
     "",
     application.message ? `Message:\n${application.message}` : "Message: (none)",
     "",
-    resumeUrl ? `Resume: ${resumeUrl}` : "Resume: not attached",
+    ...resumeLines,
     "",
     `Submitted: ${new Date().toISOString()}`,
   ].join("\n");

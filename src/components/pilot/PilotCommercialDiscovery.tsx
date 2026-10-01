@@ -18,6 +18,11 @@ import {
   PILOT_COMMERCIAL_PANEL_IMAGE,
 } from "@/data/photography";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
+import { track } from "@/lib/analytics";
+
+function productSlugFromHref(href: string): string {
+  return href.replace(/^\/|\/$/g, "") || "unknown";
+}
 
 export default function PilotCommercialDiscovery() {
   const reduceMotion = usePrefersReducedMotion();
@@ -34,6 +39,10 @@ export default function PilotCommercialDiscovery() {
   const selectCategory = useCallback(
     (id: string) => {
       if (id === activeId) return;
+      track("commercial_category_select", {
+        category_id: id,
+        surface: "homepage",
+      });
       if (reduceMotion) {
         setActiveId(id);
         setPanelVisible(true);
@@ -87,20 +96,26 @@ export default function PilotCommercialDiscovery() {
 
   return (
     <section
-      className="bg-charcoal py-12 sm:py-14 lg:py-16"
+      className="bg-charcoal py-14 sm:py-[4.5rem] lg:py-[5.25rem]"
       aria-labelledby={`${baseId}-heading`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold">
+              Commercial capability
+            </p>
             <h2
               id={`${baseId}-heading`}
-              className="text-[1.75rem] font-medium tracking-[-0.02em] text-white sm:text-3xl lg:text-4xl"
+              className="mt-4 text-[2.2rem] font-medium tracking-[-0.035em] text-white sm:text-[2.75rem] lg:text-[3.35rem]"
             >
-              Whatever kind of business you run
+              Serious insurance for serious businesses.
             </h2>
-            <p className="mt-4 text-[15px] leading-relaxed text-white/65 sm:text-base">
-              Business gets complicated. Insurance doesn&apos;t have to.
+            <p className="mt-5 text-[15px] leading-relaxed text-white/65 sm:text-[18px]">
+              From contractors and manufacturers to transportation, hospitality,
+              real estate, healthcare and specialty risks, Premium helps
+              businesses understand their exposures and build coverage around how
+              they actually operate.
             </p>
           </div>
         </RevealOnScroll>
@@ -127,10 +142,10 @@ export default function PilotCommercialDiscovery() {
                   tabIndex={isActive ? 0 : -1}
                   onClick={() => selectCategory(cat.id)}
                   onKeyDown={(e) => onKeyDown(e, index)}
-                  className={`pilot-commercial-cat shrink-0 rounded-full border px-4 py-2.5 text-[13px] font-medium sm:text-sm ${
+                  className={`pilot-commercial-cat shrink-0 rounded-full border px-4 py-2.5 text-[13px] font-medium transition-colors sm:text-sm ${
                     isActive
-                      ? "is-active border-gold bg-[#2a3132] text-white"
-                      : "border-white/15 bg-[#252b2c] text-white/70 hover:border-white/30"
+                      ? "is-active border-gold bg-[#2a3132] text-white shadow-[0_0_0_1px_rgba(208,173,38,0.35)]"
+                      : "border-white/15 bg-[#252b2c] text-white/70 hover:border-white/35 hover:text-white/90"
                   }`}
                 >
                   {cat.label}
@@ -183,6 +198,10 @@ export default function PilotCommercialDiscovery() {
                     <li key={product.href} className="min-w-0">
                       <Link
                         href={product.href}
+                        data-track="commercial_product_select"
+                        data-track-product-slug={productSlugFromHref(product.href)}
+                        data-track-category-id={active.id}
+                        data-track-surface="homepage"
                         className="group flex h-full min-h-[44px] items-center justify-between rounded-lg border border-white/10 bg-charcoal/60 px-4 py-3 text-[14px] font-medium text-white transition-colors hover:border-gold/45 hover:bg-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-[15px]"
                       >
                         <span className="min-w-0 pr-3">{product.label}</span>

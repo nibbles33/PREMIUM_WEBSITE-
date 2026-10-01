@@ -1,0 +1,110 @@
+{
+  "viewports": {
+    "390": {
+      "overflow": false,
+      "vals": [
+        "2,700+",
+        "31+",
+        "9"
+      ],
+      "pass": true
+    },
+    "430": {
+      "overflow": false,
+      "vals": [
+        "2,700+",
+        "31+",
+        "9"
+      ],
+      "pass": true
+    },
+    "768": {
+      "overflow": false,
+      "vals": [
+        "2,700+",
+        "31+",
+        "9"
+      ],
+      "pass": true
+    },
+    "1024": {
+      "overflow": false,
+      "vals": [
+        "2,700+",
+        "31+",
+        "9"
+      ],
+      "pass": true
+    },
+    "1440": {
+      "overflow": false,
+      "vals": [
+        "2,700+",
+        "31+",
+        "9"
+      ],
+      "pass": true
+    },
+    "1920": {
+      "overflow": false,
+      "vals": [
+        "2,700+",
+        "31+",
+        "9"
+      ],
+      "pass": true
+    }
+  },
+  "images": {
+    "hero": {
+      "src": "http://127.0.0.1:3470/_next/image/?url=%2Fimages%2Fphotography%2Fspecial%2Fhomepage-hero.webp&w=1440&q=92",
+      "naturalWidth": 1440,
+      "naturalHeight": 810,
+      "displayW": 1440,
+      "displayH": 774
+    },
+    "why": {
+      "src": "http://127.0.0.1:3470/_next/image/?url=%2Fimages%2Fphotography%2Fspecial%2Fteam.webp&w=1920&q=92",
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "displayW": 534
+    },
+    "windsor": {
+      "src": "http://127.0.0.1:3470/_next/image/?url=%2Fimages%2Fphotography%2Fspecial%2Fabout.webp&w=1920&q=92",
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "displayW": 580
+    },
+    "noOffice1": true,
+    "noOffice2": true,
+    "officeRefs": []
+  },
+  "countUp": {
+    "texts": [
+      {
+        "value": "2,700+",
+        "label": "Clients"
+      },
+      {
+        "value": "31+",
+        "label": "Years combined experience"
+      },
+      {
+        "value": "9",
+        "label": "Awards & recognition"
+      }
+    ],
+    "has2700": true,
+    "has31": true,
+    "has9": true,
+    "has50": false
+  },
+  "reducedMotion": {
+    "texts": [
+      "2,700+",
+      "31+",
+      "9"
+    ],
+    "pass": true
+  }
+}

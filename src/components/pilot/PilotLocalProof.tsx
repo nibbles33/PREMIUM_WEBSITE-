@@ -17,8 +17,10 @@ function AwardCard({ badge }: { badge: AwardBadge }) {
         <Image
           src={badge.src}
           alt={badge.alt}
-          width={100}
-          height={100}
+          width={200}
+          height={200}
+          sizes="100px"
+          quality={90}
           className="h-full w-full object-contain opacity-95 transition-[filter,transform] duration-300 group-hover:scale-105 group-hover:grayscale-0 grayscale-[20%]"
           draggable={false}
         />
@@ -66,21 +68,25 @@ export default function PilotLocalProof() {
 
   return (
     <section
-      className="pilot-section-awards relative overflow-hidden border-t border-border bg-[#FBF5E5] py-10 sm:py-12"
+      id="awards-heading"
+      className="pilot-section-awards relative overflow-hidden border-t border-border bg-[#FBF5E5] py-12 sm:py-14 lg:py-[4.25rem]"
       aria-labelledby="pilot-local-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <RevealOnScroll>
           <div className="mx-auto max-w-2xl text-center">
+            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark">
+              Awards &amp; recognition
+            </p>
             <h2
               id="pilot-local-heading"
-              className="text-2xl font-medium tracking-[-0.02em] text-charcoal sm:text-3xl"
+              className="mt-3 text-[2.15rem] font-medium tracking-[-0.035em] text-charcoal sm:text-[2.65rem] lg:text-[3.05rem]"
             >
-              Built here. Recognized here.
+              Recognized locally. Recognized nationally.
             </h2>
-            <p className="mt-2 text-[14px] leading-relaxed text-secondary sm:text-[15px]">
-              Windsor-Essex since 2019 — community and industry recognition that
-              speaks for itself.
+            <p className="mt-4 text-[15px] leading-relaxed text-secondary sm:text-[17px]">
+              Recognition from our community and the Canadian insurance industry.
+              Layout reserved for a ninth award asset pending owner delivery.
             </p>
           </div>
         </RevealOnScroll>

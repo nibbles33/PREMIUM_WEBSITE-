@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useRef, useState } from "react";
+import { track } from "@/lib/analytics";
 
 type JobApplicationFormProps = {
   position: string;
@@ -55,6 +56,7 @@ export default function JobApplicationForm({
       });
       const data = (await res.json()) as { ok?: boolean; error?: string };
       if (!res.ok || !data.ok) {
+        track("careers_submit_error", { error_code: "submit_rejected" });
         setStatus("error");
         setError(
           data.error ??
@@ -62,10 +64,15 @@ export default function JobApplicationForm({
         );
         return;
       }
+      // Position slug only — never applicant PII or resume metadata.
+      track("careers_submit_success", {
+        position_slug: position.slice(0, 64).replace(/[^a-zA-Z0-9_-]/g, "-"),
+      });
       setStatus("success");
       setForm(INITIAL);
       setResume(null);
     } catch {
+      track("careers_submit_error", { error_code: "network_error" });
       setStatus("error");
       setError(
         "Network error. Your information was not saved. Please try again or call 226-782-6000.",
@@ -91,7 +98,12 @@ export default function JobApplicationForm({
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-5" noValidate>
+    <form
+      onSubmit={onSubmit}
+      className="space-y-5 pib-clarity-mask"
+      data-clarity-mask="true"
+      noValidate
+    >
       <input
         id={honeypotId}
         name="website"
