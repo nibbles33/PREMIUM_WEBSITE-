@@ -227,11 +227,13 @@ Owner live verification of Careers private Blob remains authoritative (**YES**).
 
 ## 19. Final commit SHA
 
-See tip after push (release-candidate commit message below). Feature analytics hygiene fix + report/screenshots included.
+`c8bb52c` — chore: reconcile final website and analytics release candidate
 
 ## 20. Final Vercel Preview URL
 
-See status block after deployment (authoritative RC Preview only).
+https://premium-website-git-cursor-homepage-a-6b58b4-nabil-g-s-projects.vercel.app
+
+(Vercel SSO may be required. This branch Preview now serves the RC commit above — do not use older analytics-only Preview notes as the website baseline.)
 
 ## 21. Screenshot paths
 
