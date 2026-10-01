@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CountUpStat from "@/components/CountUpStat";
 import { HOMEPAGE_AUTHORITY } from "@/data/homepage-authority";
 import type { GooglePlaceRatingResult } from "@/lib/google/places";
 
@@ -18,6 +19,9 @@ const LABEL_CLASS =
  *
  * Live Google rating uses the same typographic prominence as 2,700+ / 31+ / 9.
  * Fallback never presents baseline 4.7 / 82 as live data.
+ *
+ * Note: "50+ Insurance Carriers" is intentionally NOT shown until owner confirms
+ * the claim (repo currently lists 44 unique partners in allPartners).
  */
 export default function PilotAuthorityStrip({ googleRating }: Props) {
   const { clients, combinedExperience, awards, google } = HOMEPAGE_AUTHORITY;
@@ -31,17 +35,31 @@ export default function PilotAuthorityStrip({ googleRating }: Props) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
         <ul className="grid grid-cols-2 lg:grid-cols-4">
           <li className="flex min-h-[118px] flex-col justify-center px-3 py-5 sm:min-h-[136px] sm:px-5 sm:py-7 lg:min-h-[148px] lg:px-7">
-            <p className={VALUE_CLASS}>{clients.value}</p>
+            <CountUpStat
+              value={2700}
+              suffix="+"
+              ariaLabel={`${clients.value} ${clients.label}`}
+              className={VALUE_CLASS}
+            />
             <p className={LABEL_CLASS}>{clients.label}</p>
           </li>
 
           <li className="flex min-h-[118px] flex-col justify-center border-l border-border/70 px-3 py-5 sm:min-h-[136px] sm:px-5 sm:py-7 lg:min-h-[148px] lg:px-7">
-            <p className={VALUE_CLASS}>{combinedExperience.value}</p>
+            <CountUpStat
+              value={31}
+              suffix="+"
+              ariaLabel="31+ years combined experience"
+              className={VALUE_CLASS}
+            />
             <p className={LABEL_CLASS}>Years combined experience</p>
           </li>
 
           <li className="flex min-h-[118px] flex-col justify-center border-t border-border/70 px-3 py-5 sm:min-h-[136px] sm:px-5 sm:py-7 lg:min-h-[148px] lg:border-l lg:border-t-0 lg:px-7">
-            <p className={VALUE_CLASS}>{awards.value}</p>
+            <CountUpStat
+              value={9}
+              ariaLabel="9 awards and recognition"
+              className={VALUE_CLASS}
+            />
             <p className={LABEL_CLASS}>Awards &amp; recognition</p>
           </li>
 

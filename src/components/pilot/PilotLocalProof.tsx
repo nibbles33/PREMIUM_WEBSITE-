@@ -17,8 +17,10 @@ function AwardCard({ badge }: { badge: AwardBadge }) {
         <Image
           src={badge.src}
           alt={badge.alt}
-          width={100}
-          height={100}
+          width={200}
+          height={200}
+          sizes="100px"
+          quality={90}
           className="h-full w-full object-contain opacity-95 transition-[filter,transform] duration-300 group-hover:scale-105 group-hover:grayscale-0 grayscale-[20%]"
           draggable={false}
         />

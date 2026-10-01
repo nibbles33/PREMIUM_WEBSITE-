@@ -64,11 +64,12 @@ export default function PilotWindsorOracle() {
           <RevealOnScroll>
             <div className="relative min-h-[300px] overflow-hidden rounded-[20px] sm:min-h-[420px]">
               <Image
-                src="/images/office-2.jpg"
-                alt="Premium Insurance Brokers office serving Windsor-Essex"
+                src="/images/photography/special/about.webp"
+                alt="Premium Insurance Brokers — serving Windsor-Essex"
                 fill
-                sizes="(max-width: 1024px) 100vw, 48vw"
-                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 720px"
+                quality={92}
+                className="object-cover object-center"
               />
               <div
                 className="absolute inset-0"

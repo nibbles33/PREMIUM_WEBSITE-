@@ -17,7 +17,8 @@ export default function PageHeroPhoto({
         alt={placement.alt}
         fill
         priority={priority}
-        sizes="(max-width: 1024px) 100vw, 540px"
+        sizes="(max-width: 1024px) 100vw, 960px"
+        quality={92}
         className="object-cover"
       />
     </div>

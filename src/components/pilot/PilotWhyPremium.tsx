@@ -1,10 +1,14 @@
 import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { WHY_PREMIUM_POINTS } from "@/data/homepage-authority";
+import { PILOT_EDITORIAL_PANEL_IMAGE } from "@/data/photography";
 
 /**
  * Concept F Revision 2 — Why Premium as an architectural editorial block.
  * Photography + lined proof. No icon grids / SaaS cards.
+ *
+ * Uses production photography master (1672×941) — never the legacy
+ * 255×325 office-1.jpg thumbnail which upscaled soft in this panel.
  */
 export default function PilotWhyPremium() {
   return (
@@ -17,10 +21,11 @@ export default function PilotWhyPremium() {
           <RevealOnScroll>
             <div className="relative min-h-[320px] overflow-hidden rounded-[20px] bg-charcoal sm:min-h-[420px] lg:min-h-full lg:min-h-[520px]">
               <Image
-                src="/images/office-1.jpg"
-                alt="Premium Insurance Brokers office in Windsor-Essex"
+                src="/images/photography/special/team.webp"
+                alt="Premium Insurance Brokers team — independent Windsor-Essex brokers"
                 fill
-                sizes="(max-width: 1024px) 100vw, 44vw"
+                sizes={PILOT_EDITORIAL_PANEL_IMAGE.sizes}
+                quality={PILOT_EDITORIAL_PANEL_IMAGE.quality}
                 className="object-cover object-center"
               />
               <div
