@@ -47,7 +47,7 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     slug: "commercial-insurance",
     metaTitle: "Commercial Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Commercial insurance hub for Windsor-Essex — discover industry routes, core coverage categories, and specialty lines through an independent broker.",
+      "Commercial insurance for Windsor-Essex businesses — manufacturers, trucking, contractors, restaurants, and more through an independent broker.",
     eyebrow: "Commercial Insurance",
     headline: "Commercial insurance, built for your industry",
     heroLead:
@@ -106,6 +106,7 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ctaSubhead:
       "Tell us about your operations — we will compare commercial markets and explain what may fit, subject to policy terms.",
     serviceName: "Commercial Insurance",
+  schemaKind: "commercial",
   }),
   "bonding-insurance": buildPilotProductConfig({
     slug: "bonding-insurance",
@@ -249,12 +250,13 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ctaSubhead:
       "Share the tender or contract documents, bond amounts, and your company financials — we will help arrange the right surety instruments.",
     serviceName: "Surety Bonds",
+  schemaKind: "commercial",
   }),
   "farm-insurance": buildPilotProductConfig({
     slug: "farm-insurance",
     metaTitle: "Farm Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Farm insurance through an independent Windsor-Essex broker — farm property, machinery, farm liability, and livestock coverage for working Essex County farms, distinct from greenhouse agribusiness and government crop programs.",
+      "Farm insurance for Windsor-Essex and Essex County operations — farm property, machinery, liability, and livestock through an independent broker.",
     eyebrow: "Farm Insurance",
     headline: "Farm Insurance",
     heroLead:
@@ -397,6 +399,7 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ctaSubhead:
       "Tell us about your buildings, equipment, livestock, and sales activities — we'll compare farm programs and explain what fits.",
     serviceName: "Farm Insurance",
+  schemaKind: "commercial",
   }),
   "greenhouse-agribusiness-insurance": buildPilotProductConfig({
     slug: "greenhouse-agribusiness-insurance",
@@ -551,5 +554,6 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ctaSubhead:
       "Tell us about your operation — a broker will compare options and explain what fits.",
     serviceName: "Greenhouse & Agribusiness Insurance",
+  schemaKind: "commercial",
   }),
 };

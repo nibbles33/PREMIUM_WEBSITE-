@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo";
 const hubMetadata: Metadata = buildPageMetadata({
   title: "Commercial Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
-    "Commercial insurance for Windsor-Essex manufacturers, trucking fleets, contractors, restaurants, and more — industry-specific coverage through an independent broker.",
+    "Commercial insurance for Windsor-Essex businesses — manufacturers, trucking, contractors, restaurants, and more through an independent broker.",
   path: "/commercial-insurance/",
 });
 
@@ -21,7 +21,7 @@ const bondingMetadata: Metadata = buildPageMetadata({
 const farmMetadata: Metadata = buildPageMetadata({
   title: "Farm Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
-    "Farm insurance through an independent Windsor-Essex broker — farm property, machinery, farm liability, and livestock coverage for working Essex County farms, distinct from greenhouse agribusiness and government crop programs.",
+    "Farm insurance for Windsor-Essex and Essex County operations — farm property, machinery, liability, and livestock through an independent broker.",
   path: "/farm-insurance/",
 });
 

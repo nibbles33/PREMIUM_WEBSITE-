@@ -3,6 +3,8 @@ import { buildPageMetadata } from "@/lib/seo";
 import Header from "@/components/Header";
 import JobApplicationForm from "@/components/careers/JobApplicationForm";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import JsonLd from "@/components/seo/JsonLd";
+import { webPageStructuredData } from "@/lib/seo/structured-data";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "General Application | Careers | Premium Insurance Brokers",
@@ -11,9 +13,22 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/careers/general-application/",
 });
 
+const generalAppJsonLd = webPageStructuredData({
+  name: "General Application | Careers | Premium Insurance Brokers",
+  description:
+    "Submit a general employment application to Premium Insurance Brokers in Windsor, Ontario.",
+  path: "/careers/general-application/",
+  crumbs: [
+    { name: "Home", path: "/" },
+    { name: "Careers", path: "/careers/" },
+    { name: "General Application", path: "/careers/general-application/" },
+  ],
+});
+
 export default function GeneralApplicationPage() {
   return (
     <>
+      <JsonLd data={generalAppJsonLd} />
       <Header />
       <main>
         <section className="border-b border-border bg-offwhite py-14 sm:py-16">

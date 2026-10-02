@@ -15,7 +15,7 @@ const OUT_DIR = path.join(
 );
 const OUT_JSON = path.join(OUT_DIR, "seo-verifier.json");
 const BASE = process.env.BASE_URL || "";
-const SITE_ORIGIN = "https://premiumib.com";
+const SITE_ORIGIN = "https://www.premiumib.com";
 
 function read(rel) {
   return fs.readFileSync(path.join(ROOT, rel), "utf8");

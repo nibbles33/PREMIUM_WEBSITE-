@@ -404,23 +404,6 @@ export default function LineInsurancePage({
 export const sharedBrokerCopy =
   "Independent advice means we compare multiple carriers — not just one company's products. You get clear explanations of what's covered, and real support if you ever need to file a claim.";
 
-export function insuranceAgencyProvider() {
-  return {
-    "@type": "InsuranceAgency",
-    name: "Premium Insurance Brokers",
-    telephone: "+1-226-782-6000",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "3063 Dougall Ave",
-      addressLocality: "Windsor",
-      addressRegion: "ON",
-      postalCode: "N9E 1S7",
-      addressCountry: "CA",
-    },
-    url: "https://premiumib.com/",
-    parentOrganization: {
-      "@type": "Organization",
-      name: "Oracle RMS",
-    },
-  };
-}
+/** @deprecated Use brokerageProvider from @/lib/seo/structured-data */
+export { brokerageProvider as insuranceAgencyProvider } from "@/lib/seo/structured-data";
+export { brokerageProvider } from "@/lib/seo/structured-data";

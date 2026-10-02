@@ -161,6 +161,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     ctaSubhead:
       "Tell us about your property — we'll compare options and explain what actually fits.",
     serviceName: "Home Insurance",
+  schemaKind: "personal",
   }),
 
   "condo-insurance": buildPilotProductConfig({
@@ -292,6 +293,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     ctaSubhead:
       "Tell us about your unit — we will compare options and explain how your policy fits with the corporation's master coverage.",
     serviceName: "Condo Insurance",
+  schemaKind: "personal",
   }),
 
   "tenant-insurance": buildPilotProductConfig({
@@ -402,13 +404,14 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     ctaSubhead:
       "Tell us about your rental — we will compare tenant options and explain what is covered.",
     serviceName: "Tenant Insurance",
+  schemaKind: "personal",
   }),
 
   "landlord-insurance": buildPilotProductConfig({
     slug: "landlord-insurance",
     metaTitle: "Landlord Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Landlord insurance for Windsor-Essex rental property owners — dwelling, liability, loss of rental income, and tenant-related risks explained by an independent broker.",
+      "Landlord insurance for Windsor-Essex rental owners — dwelling, liability, loss of rents, and tenant-related exposures through a broker.",
     headline: "Landlord Insurance",
     heroLead:
       "Coverage built for rental property owners — protect the dwelling, manage liability, and plan for income interruption after a covered loss.",
@@ -523,6 +526,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     ctaSubhead:
       "Tell us about your rental units — we will compare landlord options and explain the coverage gaps to watch for.",
     serviceName: "Landlord Insurance",
+  schemaKind: "personal",
   }),
 
   "motorcycle-insurance": buildPilotProductConfig({
@@ -647,6 +651,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     ctaSubhead:
       "Tell us about your motorcycle — we will compare options and explain seasonal coverage choices.",
     serviceName: "Motorcycle Insurance",
+  schemaKind: "personal",
   }),
 
   "boat-insurance": buildPilotProductConfig({
@@ -772,13 +777,14 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     ctaSubhead:
       "Tell us about your watercraft — we will compare hull and liability options for how you actually boat.",
     serviceName: "Boat Insurance",
+  schemaKind: "personal",
   }),
 
   "cottage-insurance": buildPilotProductConfig({
     slug: "cottage-insurance",
     metaTitle: "Cottage Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Cottage and seasonal property insurance for Windsor-Essex — secondary homes, vacancy, water proximity, and winterization considerations explained by an independent broker.",
+      "Cottage and seasonal property insurance for Windsor-Essex — secondary homes, vacancy, water proximity, and winterization through a broker.",
     headline: "Cottage Insurance",
     heroLead:
       "Coverage for seasonal and secondary properties — built around part-year occupancy, waterfront risks, and the realities of closing up for winter.",
@@ -898,6 +904,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     ctaSubhead:
       "Tell us about your seasonal property — we will compare options and explain occupancy and winterization requirements.",
     serviceName: "Cottage Insurance",
+  schemaKind: "personal",
   }),
 
   "travel-insurance": buildPilotProductConfig({
@@ -1024,5 +1031,6 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
       "Speak with a broker about medical limits, pre-existing conditions, and trip cancellation options for your specific travel plans.",
     ctaQuoteLabel: "Talk to a Broker",
     serviceName: "Travel Insurance",
+  schemaKind: "personal",
   }),
 };

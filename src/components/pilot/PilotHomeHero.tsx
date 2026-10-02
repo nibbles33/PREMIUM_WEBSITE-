@@ -124,7 +124,7 @@ export default function PilotHomeHero() {
       >
         <Image
           src={heroPhoto.src}
-          alt=""
+          alt={heroPhoto.alt}
           fill
           priority
           fetchPriority="high"
@@ -163,9 +163,9 @@ export default function PilotHomeHero() {
             id="pilot-hero-heading"
             className="mt-4 text-[2.55rem] font-medium leading-[1.04] tracking-[-0.03em] text-white sm:mt-5 sm:text-5xl lg:text-[3.75rem]"
           >
-            One place.
+            Insurance brokers.
             <br />
-            A lot of insurance.
+            For Windsor-Essex.
             <br />
             <span className="text-gold">Surprisingly easy.</span>
           </h1>

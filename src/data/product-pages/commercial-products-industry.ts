@@ -28,7 +28,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Cargo & Freight Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Cargo and freight insurance through an independent Windsor-Essex broker — motor truck cargo, carrier legal liability, refrigerated freight, and contingent cargo for carriers and brokers.",
+      "Cargo and freight insurance for Windsor-Essex carriers — motor truck cargo and carrier legal liability reviewed through an independent broker.",
     headline: "Cargo & Freight Insurance",
     subhead:
       "Cargo and freight insurance is about goods in transit — the customer's freight, not the truck itself. When you carry property belonging to others, loss or damage can generate claims evaluated under motor truck cargo forms, carrier legal liability wording, or contractual bailment terms — depending on policy structure, cause of loss, and who bears legal responsibility. That is separate from Ontario commercial automobile liability for the vehicle on the road and separate from warehouse legal liability for stored goods. Coverage depends on commodities hauled, valuation methods, limits, exclusions, and territorial scope — not every lost or damaged shipment is insured automatically. Premium Insurance Brokers can help align cargo limits with shipper contracts and how your operation actually moves freight.",
@@ -161,7 +161,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Garage & Dealership Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Garage and dealership insurance through an independent Windsor-Essex broker — Ontario OAP 4 garage automobile, customer-vehicle legal liability, dealer inventory, operations liability, and property for repair shops and dealers.",
+      "Garage and dealership insurance in Windsor-Essex — Ontario garage auto, customer vehicles, premises liability, and inventory through an independent broker.",
     headline: "Garage & Dealership Insurance",
     subhead:
       "Garage and dealership insurance in Ontario usually layers the regulated Ontario Garage Automobile Policy (OAP 4) with commercial property and commercial general liability — because repair garages and vehicle dealers face different automobile, inventory, and premises exposures. OAP 4 addresses third-party automobile liability, statutory accident benefits, uninsured automobile, DCPD, optional physical damage on owned units, and legal liability for customer vehicles in your care, custody, or control — subject to sections purchased and policy wording. That is not interchangeable with a standard CGL policy alone or with ordinary commercial auto for a contractor's pickup. Dealers add open-lot inventory values, test drives, and floorplan interests; repair shops emphasize hoists, customer vehicles during service, and completed-operations liability. Licensed garage operations in Ontario typically must evidence a standard garage automobile policy as part of MTO licensing — separate from OMVIC's broader expectation that dealers maintain appropriate insurance without prescribing a specific limit in every case. Premium Insurance Brokers can help Windsor–Essex shops and dealers align OAP 4, property, and liability for how you actually operate.",
@@ -303,7 +303,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Builder's Risk Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Builder's risk and course-of-construction insurance for Windsor-Essex projects — work in progress, materials, renovations, and project property during the build.",
+      "Builder's risk insurance for Windsor-Essex projects — work in progress, materials, and renovations through an independent broker.",
     headline: "Builder's Risk Insurance",
     subhead:
       "Builder's risk — also called course-of-construction insurance — addresses physical loss or damage to a project while it is being built or renovated. It is project-specific property coverage for the structure and work in progress, not the contractor's everyday commercial general liability policy, not a surety bond, and not a developer's full enterprise insurance program. Policies are typically arranged for a defined construction period and completed value. What responds after fire, theft, vandalism, wind, water damage, or collapse depends on the policy form, causes of loss, deductibles, exclusions, and any endorsements purchased. Soft costs, delay-in-completion, flood, earthquake, materials in transit, off-site storage, and existing structures are not automatic — each must be reviewed against wording and underwriting. Premium Insurance Brokers can help align project value, timeline, and contract or lender requirements for Windsor-Essex builds.",
@@ -441,7 +441,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Warehousing & Logistics Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Warehousing and logistics insurance through an independent Windsor-Essex broker — commercial property, warehouse legal liability, general liability, and business interruption.",
+      "Warehousing and logistics insurance in Windsor-Essex — commercial property and warehouse legal liability through an independent broker.",
     headline: "Warehousing & Logistics Insurance",
     subhead:
       "Warehouse and storage operations combine three exposures that standard business insurance often treats separately: your building and handling equipment, third-party injury on your premises, and — when you store goods for others — your legal responsibility for customers' property. Commercial property may cover the structure, racking, and forklifts you own; warehouse legal liability may address certain loss or damage to customers' goods when you are legally responsible under your storage contract — subject to policy terms and limits. Not every warehouse stores the same commodities, accepts hazardous materials, or operates cold storage. Premium Insurance Brokers can help map property, bailee, and liability coverage to your contracts, sprinkler protection, and commodity mix.",
@@ -568,7 +568,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Property Management Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Property management insurance through an independent Windsor-Essex broker — general liability, property management E&O, office property, and hired/non-owned auto.",
+      "Property management insurance in Windsor-Essex — general liability and property management E&O through an independent broker.",
     headline: "Property Management Insurance",
     subhead:
       "Property management firms face liability and professional exposure for the services they perform — coordinating maintenance, handling tenant relations, and managing portfolios on behalf of owners — not insurance on the buildings themselves. A property manager's general liability may address certain premises and operations claims; property management errors and omissions may address certain claims alleging negligent management decisions — each subject to policy terms. The landlord's property policy, a condominium corporation's master policy, or a commercial owner's building insurance protects the property owner's interest in the structure — separate from the management company's own coverage. Premium Insurance Brokers can help align GL, E&O, and operational coverage to your portfolio, contract requirements, and whether you manage residential rentals, commercial properties, or condominium corporations.",
@@ -696,7 +696,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Condominium Corporation Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Condominium corporation insurance for Ontario boards — master property under the Condominium Act, common-element liability, optional equipment breakdown, and directors and officers insurance if reasonably available.",
+      "Condominium corporation insurance for Ontario boards — master property, common-element liability, and directors coverage through a Windsor-Essex broker.",
     headline: "Condominium Corporation Insurance",
     subhead:
       "This page is for Ontario condominium corporations — the corporation's master insurance program — not for individual unit owners (see Condo Insurance for unit-owner coverage). Under the Condominium Act, 1998, corporations must obtain and maintain property insurance for damage to units and common elements caused by major perils and other perils specified in the declaration or by-laws, to replacement cost subject to a reasonable deductible — excluding improvements to units above the standard unit definition. Corporations must also maintain liability insurance for common-element occupier exposure and certain machinery and motor vehicle liabilities under s.102, and must purchase and maintain directors' and officers' insurance for board members if reasonably available under s.39. Master policy deductibles are treated as common expenses, and chargeback rules may apply to owners under s.105 — subject to corporation by-laws. Equipment breakdown is not statutory; it may be added where appropriate. Premium Insurance Brokers can help Windsor–Essex boards and property managers review corporation programs alongside unit-owner coordination.",
@@ -838,7 +838,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Pollution Liability Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Pollution liability insurance through an independent Windsor-Essex broker — contractors pollution, site and premises environmental impairment, transportation releases, and cleanup/defence costs subject to policy triggers and wording.",
+      "Pollution liability for Windsor-Essex contractors and sites — contractors pollution and premises environmental coverage through a broker.",
     headline: "Pollution Liability Insurance",
     subhead:
       "Pollution liability insurance addresses environmental contamination exposures that commercial general liability and property policies may exclude or restrict — sudden spills, gradual leaks, cleanup costs, third-party injury or property damage, and defence expenses — where purchased and subject to claims-made or occurrence triggers, retroactive dates, known-condition exclusions, and policy limits. Contractors pollution liability (CPL), site or premises environmental impairment, transportation pollution extensions, and emergency response coverage are separate insuring agreements on many programs — not one universal pollution product. Ontario law can require spill reporting, mitigation, and remediation regardless of insurance; regulatory fines and penalties are generally not insurable. Premium Insurance Brokers can help Windsor–Essex contractors, manufacturers, property owners, fuel and storage operations, waste handlers, and other businesses compare pollution forms against site history and operations.",
@@ -980,7 +980,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Product Recall Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Product recall insurance for Windsor-Essex manufacturers and distributors — recall and withdrawal expense coverage distinct from product liability, subject to policy triggers.",
+      "Product recall insurance for Windsor-Essex manufacturers and distributors — recall expense coverage distinct from product liability.",
     headline: "Product Recall Insurance",
     subhead:
       "Product recall insurance addresses specified first-party recall or withdrawal costs — and other scheduled expenses — only where the policy trigger and selected coverage apply. It is not the same product as product liability insurance. Product liability generally addresses certain third-party bodily-injury or property-damage claims arising from products, subject to policy wording. Product recall insurance may address specified withdrawal or recall expenses when the policy’s covered trigger and selected coverage apply — such as notification, transportation, storage, disposal, and — only where included — replacement, consultant or lab fees, crisis management, brand rehabilitation, or limited business interruption. Whether a voluntary or government-directed recall is insured depends on the policy’s covered trigger, definitions, exclusions, and selected coverage — a voluntary withdrawal, regulator-involved recall, or customer demand does not automatically trigger coverage. In Canada, most food recalls are company-led actions with Canadian Food Inspection Agency oversight, and the Minister of Health may order a mandatory food recall in defined circumstances; consumer products may involve Health Canada authorities under the Canada Consumer Product Safety Act — regulatory involvement alone does not mean the insurance will respond. Premium Insurance Brokers can help Windsor–Essex manufacturers, importers, and distributors compare recall expense forms against product type, traceability, and supply-chain role.",

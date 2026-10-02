@@ -5,7 +5,7 @@ import PilotPersonalPage from "@/components/pilot/product/PilotPersonalPage";
 export const metadata: Metadata = buildPageMetadata({
   title: "Group Home & Auto Insurance Programs | Premium Insurance Brokers",
   description:
-    "Group home and auto program inquiry coordination for Windsor-Essex — Premium connects employers and associations with specialist access through Oracle/head office.",
+    "Group home and auto program inquiries for Windsor-Essex employers and associations — Premium coordinates specialist access through Oracle.",
   path: "/group-home-auto-insurance/",
 });
 

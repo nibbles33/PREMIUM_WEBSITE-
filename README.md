@@ -1,6 +1,6 @@
 # PremiumIB Website
 
-Marketing site for [Premium Insurance Brokers](https://premiumib.com/) (Windsor-Essex) — a division of Oracle RMS.
+Marketing site for [Premium Insurance Brokers](https://www.premiumib.com/) (Windsor-Essex) — a division of Oracle RMS.
 
 ## Stack
 

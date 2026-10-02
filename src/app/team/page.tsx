@@ -6,8 +6,10 @@ import { Mail, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import JsonLd from "@/components/seo/JsonLd";
 import { getPageHeroPhotography } from "@/data/photography";
 import { teamMembers } from "@/data/team";
+import { webPageStructuredData } from "@/lib/seo/structured-data";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Meet the Team | Premium Insurance Brokers",
@@ -21,11 +23,23 @@ const BROKER_HREF = "/contact/?intent=broker";
 const TEAM_EMAIL = "mailto:info@premiumib.com";
 const TEAM_PHONE = "tel:+12267826000";
 
+const teamJsonLd = webPageStructuredData({
+  name: "Meet the Team | Premium Insurance Brokers",
+  description:
+    "Meet the licensed brokers and staff behind Premium Insurance Brokers in Windsor-Essex.",
+  path: "/team/",
+  crumbs: [
+    { name: "Home", path: "/" },
+    { name: "Team", path: "/team/" },
+  ],
+});
+
 export default function TeamPage() {
   const heroPhoto = getPageHeroPhotography("team");
 
   return (
     <>
+      <JsonLd data={teamJsonLd} />
       <Header />
       <main>
         <section
