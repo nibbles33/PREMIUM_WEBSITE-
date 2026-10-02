@@ -44,7 +44,7 @@ export const cannabisIndustryPages: CannabisIndustryPage[] = [
     metaTitle:
       "Cannabis Retail Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Cannabis retail insurance for Ontario authorized cannabis stores — premises liability, property and cannabis stock, product liability, crime, and business interruption through an independent Windsor-Essex broker.",
+      "Cannabis retail insurance for Ontario authorized stores — premises liability, stock, product liability, and crime coverage through a Windsor-Essex broker.",
     headline: "Cannabis Retail Insurance",
     subhead:
       "Ontario authorized cannabis retail stores combine storefront liability, high-value packaged inventory, landlord and Ontario Cannabis Store (OCS) contract requirements, and theft exposure in a way that differs from ordinary retail. Coverage is organized around how your store actually operates — premises and general liability, property and cannabis stock, product liability, crime, and business interruption where purchased — each subject to the policies and wording you buy. AGCO licensing regulates the store; it is not the same thing as an insurance policy. Premium Insurance Brokers can help Windsor–Essex cannabis retailers review programs against lease, security, and wholesale-contract expectations.",
@@ -191,7 +191,7 @@ export const cannabisIndustryPages: CannabisIndustryPage[] = [
     metaTitle:
       "Cannabis Producer Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Cannabis producer insurance for Health Canada–licensed cultivation, nursery, and processing operations — property, living plants and stock, equipment breakdown, product liability, recall expense, and business interruption through an independent Windsor-Essex broker.",
+      "Cannabis producer insurance for licensed cultivation and processing — property, living plants, equipment, and liability through a Windsor-Essex broker.",
     headline: "Cannabis Producer Insurance",
     subhead:
       "Federally licensed cannabis cultivation, nursery, and processing operations combine production infrastructure, living plant and stock values, environmental controls, product liability, and recall-ready quality systems in a risk profile that differs from retail stores and from ordinary manufacturing. Depending on your licence class — including standard or micro cultivation, nursery, and standard or micro processing — that can mean commercial property for buildings and grow infrastructure, specialized treatment of living plants and cannabis stock, equipment breakdown where purchased, products liability, product recall expense coverage, and business interruption after a covered physical loss. Health Canada licensing and Good Production Practices set compliance duties; they do not replace insurance wording. Premium Insurance Brokers can help licensed operators in and around Windsor–Essex review programs against how you actually cultivate, process, and ship.",

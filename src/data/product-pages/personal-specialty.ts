@@ -503,7 +503,7 @@ export const personalSpecialtyPages: ProductPageContent[] = [
     metaTitle:
       "Group Home & Auto Insurance Programs | Premium Insurance Brokers",
     metaDescription:
-      "Group home and auto program inquiry coordination for Windsor-Essex — Premium connects employers and associations with specialist access through Oracle/head office.",
+      "Group home and auto program inquiries for Windsor-Essex employers and associations — Premium coordinates specialist access through Oracle.",
     eyebrow: "Group Programs",
     headline: "Group Home & Auto Insurance",
     subhead:

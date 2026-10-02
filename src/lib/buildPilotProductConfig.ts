@@ -4,7 +4,6 @@ import type {
   RelatedLink,
 } from "@/components/LineInsurancePage";
 import type { FaqItem } from "@/components/FaqAccordion";
-import { insuranceAgencyProvider } from "@/components/LineInsurancePage";
 import type { ProductPageContent } from "@/data/product-pages/types";
 import type { IndustryPageContent } from "@/data/commercial-industries";
 import { COMMERCIAL_ACCENT } from "@/data/commercial-industries";
@@ -22,6 +21,7 @@ import {
   personalBrokerSteps,
 } from "@/data/pilot-product-shared";
 import { getCoverageExplorerConfig } from "@/data/coverage-explorer/registry";
+import { serviceStructuredData } from "@/lib/seo/structured-data";
 import type {
   PilotProductPageConfig,
   ProductCoverageItem,
@@ -75,6 +75,8 @@ type BuildPilotProductConfigInput = {
   ctaSubhead: string;
   ctaQuoteLabel?: string;
   serviceName: string;
+  /** Drives BreadcrumbList IA — personal hub vs commercial hub. */
+  schemaKind?: "personal" | "commercial" | "other";
 };
 
 function slugify(value: string): string {
@@ -176,18 +178,13 @@ export function buildPilotProductConfig(
     ctaHeading: input.ctaHeading,
     ctaSubhead: input.ctaSubhead,
     ctaQuoteLabel: input.ctaQuoteLabel ?? input.quoteLabel,
-    jsonLd: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      name: input.serviceName,
+    jsonLd: serviceStructuredData({
+      serviceName: input.serviceName,
       description: input.metaDescription,
-      provider: insuranceAgencyProvider(),
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Windsor-Essex",
-      },
-      serviceType: input.serviceName,
-    },
+      slug: input.slug,
+      kind: input.schemaKind ?? "other",
+      faqItems: input.faqItems,
+    }),
   };
 }
 
@@ -227,6 +224,7 @@ export function adaptCommercialProductContent(
     ctaSubhead: content.ctaSubhead,
     ctaQuoteLabel: content.ctaButtonLabel ?? content.quoteLabel,
     serviceName: content.serviceName,
+    schemaKind: "commercial",
     considerationsPresentation:
       content.slug === "liquor-liability-insurance" ||
       content.slug === "hotel-motel-insurance" ||
@@ -421,6 +419,7 @@ export function adaptCommercialIndustryContent(
     ctaHeading: content.ctaHeading,
     ctaSubhead: content.ctaSubhead,
     serviceName: content.serviceName,
+    schemaKind: "commercial",
   });
 }
 
@@ -455,5 +454,6 @@ export function adaptProductPageContent(content: ProductPageContent): PilotProdu
     ctaSubhead: content.ctaSubhead,
     ctaQuoteLabel: content.ctaButtonLabel ?? content.quoteLabel,
     serviceName: content.serviceName,
+    schemaKind: content.category === "commercial" ? "commercial" : "personal",
   });
 }

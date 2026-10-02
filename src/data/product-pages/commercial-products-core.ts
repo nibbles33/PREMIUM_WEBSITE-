@@ -22,7 +22,7 @@ export const commercialProductPages: ProductPageContent[] = [
     metaTitle:
       "Small Business Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Small business insurance for Windsor-Essex — how liability, property, commercial auto, and business interruption may be assembled through package policies, endorsements, or separate coverages.",
+      "Small business insurance in Windsor-Essex — liability, property, commercial auto, and interruption options explained by an independent broker.",
     headline: "Small Business Insurance",
     subhead:
       "There is no single universal small-business insurance policy. Windsor–Essex owner-operators, storefronts, home-based businesses, and growing teams typically assemble coverage through a business owners policy, commercial package policy, or separate policies and endorsements — depending on industry, revenue, premises, vehicles, and contract requirements. General liability may address certain third-party injury and property-damage claims; commercial property may cover contents, inventory, and tenant improvements; commercial auto applies when you own, lease, or regularly use vehicles for operations; business interruption — where purchased with property — may help with income after a covered physical loss. Cyber, crime, professional liability, and product liability are often added when operations warrant them — not every small business needs every coverage on day one. Premium Insurance Brokers can help map a practical program to how you actually operate rather than selling a one-size-fits-all bundle.",
@@ -348,7 +348,7 @@ export const commercialProductPages: ProductPageContent[] = [
     metaTitle:
       "Directors & Officers (D&O) Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Directors and officers liability insurance for Windsor-Essex — management liability for directors, officers, and boards subject to policy wording and Side A/B/C structure.",
+      "Directors and officers liability insurance for Windsor-Essex boards — management liability for directors, officers, and entities.",
     headline: "Directors & Officers (D&O) Insurance",
     subhead:
       "Directors and officers liability insurance may help respond to certain claims alleging wrongful acts by directors, officers, or other insured persons in their management or governance capacities — subject to policy definitions, exclusions, claims-made conditions, and reporting requirements. It is not a guarantee against every personal liability, not a replacement for professional liability when you render professional services, and not a substitute for employment practices liability when the dispute is primarily an employment claim. Typical programs use Side A (individual), Side B (corporate reimbursement), and — where included — Side C (entity) coverage, but not every form uses an identical ABC structure, and entity coverage varies materially by organization type. Defence costs are often a major part of the product and may erode available limits depending on the form. Premium Insurance Brokers can help Windsor–Essex corporations, nonprofits, and private companies compare D&O structure against board composition, funding stage, and related management-liability needs.",
@@ -486,7 +486,7 @@ export const commercialProductPages: ProductPageContent[] = [
     metaTitle:
       "Business Interruption Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Business interruption insurance for Windsor-Essex — income, continuing expenses, and extra expense coverage when covered physical loss or damage interrupts operations, subject to policy form.",
+      "Business interruption insurance for Windsor-Essex — income, continuing expenses, and extra expense when a covered loss stops operations.",
     headline: "Business Interruption Insurance",
     subhead:
       "Business interruption coverage — also called business income coverage on many forms — commonly responds when a covered cause of physical loss or damage affects insured property and results in a qualifying interruption, subject to the policy form. It may help replace lost net income or gross earnings, pay certain continuing expenses, and fund extra costs to resume operations faster — but it is not protection against every shutdown, market downturn, or supply-chain delay. Waiting periods, indemnity or restoration periods, limits, and how payroll and dependent properties are treated all vary by insurer and wording. Ontario courts have emphasized that standard property-linked business interruption typically requires direct physical loss or damage — not mere loss of use without damage. Premium Insurance Brokers can help Windsor–Essex businesses align BI limits, periods, and property values with realistic recovery timelines.",
@@ -628,7 +628,7 @@ export const commercialProductPages: ProductPageContent[] = [
     metaTitle:
       "Professional Liability (E&O) Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Professional liability and E&O insurance for Windsor-Essex businesses and professionals — most commercial E&O is claims-made, so retroactive dates, reporting, and contract coordination matter.",
+      "Professional liability and E&O insurance for Windsor-Essex businesses — claims-made coverage for advice and service errors through an independent broker.",
     headline: "Professional Liability (E&O) Insurance",
     subhead:
       "When a client alleges your professional advice, design, analysis, or service caused them a financial loss, professional liability — also called errors and omissions (E&O) — may help with defence costs and certain settlements or judgments, subject to the policy you purchase. That is a different risk from slip-and-fall general liability, office property, cyber breach response, or directors and officers coverage. Most commercial E&O forms are claims-made, meaning when and how a claim is reported, your retroactive date, and any extended reporting period matter as much as the limit on the declarations page. Premium Insurance Brokers can help Windsor–Essex professionals compare markets for how you actually practise — including contract requirements, subcontractor use, and any regulator or association standards that apply to your occupation.",

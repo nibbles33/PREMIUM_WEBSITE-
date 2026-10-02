@@ -6,6 +6,7 @@ import CarrierClaimsDirectory from "@/components/claims/CarrierClaimsDirectory";
 import ClaimsScenarioCards from "@/components/claims/ClaimsScenarioCards";
 import FaqAccordion from "@/components/FaqAccordion";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import JsonLd from "@/components/seo/JsonLd";
 import {
   BROKER_CLAIMS_PHONE,
   BROKER_CLAIMS_PHONE_HREF,
@@ -14,17 +15,32 @@ import {
   claimsFaqs,
   claimsPreparednessItems,
 } from "@/data/claimsContent";
+import { webPageStructuredData } from "@/lib/seo/structured-data";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Claims Guidance | Premium Insurance Brokers",
   description:
-    "Need to report a claim? Premium Insurance Brokers helps Windsor-Essex clients understand first steps, connect with carrier claims contacts, and navigate the process.",
+    "Report a claim with help from Premium Insurance Brokers — first steps, carrier contacts, and guidance for Windsor-Essex clients.",
   path: "/claims/",
+});
+
+const claimsJsonLd = webPageStructuredData({
+  name: "Claims Guidance | Premium Insurance Brokers",
+  description:
+    "Report a claim with help from Premium Insurance Brokers — first steps, carrier contacts, and guidance for Windsor-Essex clients.",
+  path: "/claims/",
+  crumbs: [
+    { name: "Home", path: "/" },
+    { name: "Resources", path: "/resources/" },
+    { name: "Claims", path: "/claims/" },
+  ],
+  faqItems: claimsFaqs,
 });
 
 export default function ClaimsPage() {
   return (
     <>
+      <JsonLd data={claimsJsonLd} />
       <Header />
       <main>
         <section

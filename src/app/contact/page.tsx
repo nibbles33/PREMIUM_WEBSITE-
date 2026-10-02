@@ -6,11 +6,13 @@ import ContactForm from "@/components/ContactForm";
 import Header from "@/components/Header";
 import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import JsonLd from "@/components/seo/JsonLd";
 import { getPageHeroPhotography } from "@/data/photography";
 import {
   normalizeContactInquiry,
   type ContactInquiry,
 } from "@/lib/contact/validate";
+import { contactPageStructuredData } from "@/lib/seo/structured-data";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Contact Us | Premium Insurance Brokers",
@@ -78,6 +80,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
 
   return (
     <>
+      <JsonLd data={contactPageStructuredData()} />
       <Header />
       <main>
         <section

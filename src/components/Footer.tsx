@@ -9,6 +9,8 @@ const personalLinks = [
   { label: "Home Insurance", href: "/home-insurance/" },
   { label: "Condo Insurance", href: "/condo-insurance/" },
   { label: "Tenant Insurance", href: "/tenant-insurance/" },
+  { label: "Life Insurance", href: "/life-insurance/" },
+  { label: "Personal Umbrella", href: "/personal-umbrella-insurance/" },
 ] as const;
 
 const businessLinks = [

@@ -236,7 +236,7 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Commercial Auto & Fleet Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Commercial auto insurance through an independent Windsor-Essex broker — Ontario third-party liability, accident benefits, uninsured automobile, DCPD, optional physical damage, and hired & non-owned auto for business fleets and company vehicles.",
+      "Commercial auto insurance for Windsor-Essex fleets and business vehicles — Ontario liability, physical damage, and accident benefits via a broker.",
     headline: "Commercial Auto & Fleet Insurance",
     subhead:
       "Commercial auto insurance addresses Ontario-regulated automobile coverage for vehicles your business owns, leases, or puts on the road for work — service vans, contractor pickups, delivery units, sales fleets, and other ordinary commercial automobile risks. That is different from for-hire motor carrier programs on our trucking page or cargo-only coverage for freight in transit. Ontario automobile policies must include third-party liability of at least $200,000 per accident, uninsured automobile coverage, and — unless the named insured opts out using OPCF 49 — Direct Compensation Property Damage (DCPD). As of July 1, 2026, standard medical, rehabilitation, and attendant care accident benefits remain mandatory; other statutory accident benefits may be optional where your policy form allows. Collision, comprehensive, and hired/non-owned auto are not automatic on every commercial policy — each must be confirmed with your broker. Premium Insurance Brokers can help Windsor–Essex businesses compare automobile programs for how your team actually uses vehicles.",
@@ -371,7 +371,7 @@ export const industryPages: IndustryPageContent[] = [
     slug: "trucking-insurance",
     metaTitle: "Trucking Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Trucking insurance through an independent Windsor-Essex broker — commercial automobile liability, physical damage, motor truck cargo, and U.S. territory coordination for fleets and owner-operators.",
+      "Trucking insurance for Windsor-Essex motor carriers — commercial auto liability, physical damage, and cargo coordination through an independent broker.",
     headline: "Trucking Insurance",
     subhead:
       "Motor carriers and for-hire trucking operations face a layered insurance picture — Ontario-regulated commercial automobile liability and physical damage for tractors and trailers on the highway, separate motor truck cargo coverage for freight you haul for others, and additional underwriting when your lanes cross into the United States. That is different from a single light commercial auto policy or from cargo-only coverage for goods in transit. Ontario operators of qualifying commercial motor vehicles must also hold a valid Commercial Vehicle Operator's Registration (CVOR) certificate from the Ministry of Transportation — a regulatory safety-registration program separate from purchasing insurance. Premium Insurance Brokers can help align automobile, cargo, and contract requirements to how your fleet actually runs.",
@@ -496,7 +496,7 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Contractors Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Contractors insurance through an independent Windsor-Essex broker — commercial general liability, tools and equipment, project participation, and wrap-up enrollment for trades.",
+      "Contractors insurance for Windsor-Essex trades — commercial general liability, tools, and project participation through an independent broker.",
     headline: "Contractors Insurance",
     subhead:
       "Contractors insurance is about the operating contracting business — the trade or general contractor that bids work, manages crews and subcontractors, and moves between job sites. Commercial general liability addresses certain third-party injury and property-damage claims arising from your operations. Tools and contractors equipment coverage, where purchased, addresses owned tools and mobile equipment. Project property (builder's risk) and wrap-up or OCIP programs are usually project-specific overlays — not substitutes for ongoing business coverage. Needs differ across general contractors, electricians, plumbers and HVAC, roofers, excavation and concrete trades, renovators, and landscapers. Premium Insurance Brokers can help Windsor-Essex contractors align certificates, additional-insured requests, and trade exposures with how you actually work.",
@@ -626,7 +626,7 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Manufacturing Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Manufacturing insurance for Windsor-Essex — commercial property, product liability, business interruption, equipment breakdown, and job-shop coverage through an independent broker.",
+      "Manufacturing insurance for Windsor-Essex shops and plants — property, product liability, interruption, and equipment breakdown through a broker.",
     headline: "Manufacturing Insurance",
     subhead:
       "Ordinary manufacturing and light industrial operations in Windsor–Essex — fabrication, machining, metalworking, plastics, assembly, and job-shop production — combine property values, production equipment, products liability, and income interruption risks that differ from retail, contracting, or warehouse-only businesses. Depending on your plant, that can mean commercial property for buildings, machinery, raw materials, work-in-progress, and finished goods; commercial general liability for certain third-party injury and property-damage claims tied to products you make; optional business interruption after a covered direct physical loss; and equipment breakdown coverage where purchased for internal mechanical or electrical failures not handled like fire or theft on a standard property form. Pollution, product recall expense, crime, and cyber may need separate review when exposures are material — not every manufacturer needs every specialty line on day one. Premium Insurance Brokers can help align limits to how you actually produce, stock, and ship.",
@@ -773,7 +773,7 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Commercial Property Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Commercial property insurance through an independent Windsor-Essex broker — building, contents, tenant improvements, and optional endorsements coordinated with business interruption where needed.",
+      "Commercial property insurance in Windsor-Essex — buildings, contents, tenant improvements, and business interruption through an independent broker.",
     headline: "Commercial Property Insurance",
     subhead:
       "Commercial property insurance addresses direct physical loss or damage to the building, contents, stock, and equipment your business owns or is required to insure — subject to the causes of loss, limits, deductibles, and endorsements on your policy. Whether you own the premises, lease space, or rent out a commercial building, the insurable interests differ: landlords typically insure the shell; tenants often insure contents, inventory, and leasehold improvements; owner-occupiers may need both. Valuation basis (replacement cost versus actual cash value), coinsurance, vacancy conditions, and optional extensions for water damage, sewer backup, earthquake, or overland flood are policy-dependent — not automatic in every form. Business interruption is a separate coverage that may coordinate with property after a covered loss. Premium Insurance Brokers can help Windsor–Essex businesses compare property programs for how you actually occupy and use your premises.",
@@ -1050,7 +1050,7 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Professional Offices Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Professional offices insurance through an independent Windsor-Essex broker — general liability, commercial property, professional liability where applicable, and cyber/privacy for client-facing offices.",
+      "Professional office insurance in Windsor-Essex — general liability, commercial property, professional liability, and cyber through an independent broker.",
     headline: "Professional Offices Insurance",
     subhead:
       "Professional offices combine premises where clients visit, equipment and records that keep the practice running, and — for many firms — advice or design services that create a separate professional liability exposure. Depending on your operation, that can mean commercial general liability for visitor injury, commercial property for contents and leasehold improvements, professional liability or E&O where you deliver professional services to clients, and cyber or privacy coverage where you store sensitive data — each subject to the policies you purchase. This page focuses on coordinating the office's commercial program; deep E&O mechanics for standalone professional liability are covered on our Professional Liability page.",
@@ -1179,7 +1179,7 @@ export const industryPages: IndustryPageContent[] = [
     slug: "real-estate-insurance",
     metaTitle: "Real Estate Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Real estate brokerage insurance through an independent Windsor-Essex broker — RECO registrant program coordination, office general liability, commercial property, and cyber/privacy for brokerage operations.",
+      "Real estate brokerage insurance in Windsor-Essex — office liability, property, and cyber coverage coordinated alongside RECO registrant needs.",
     headline: "Real Estate Insurance",
     subhead:
       "Ontario real estate brokerages and office operations face a layered insurance picture: registrants must participate in RECO's mandatory professional liability insurance program under the Trust in Real Estate Services Act, 2002, which includes errors and omissions, commission protection, and consumer deposit coverage on defined terms — separate from the brokerage's own commercial general liability, office property, and cyber exposures. Premium Insurance Brokers helps Windsor–Essex brokerages coordinate commercial lines for the office entity — premises liability, contents, and data — without replacing or administering RECO's registrant program. If you own rental properties or manage portfolios for others, those are different insurance conversations — see our Landlord Insurance and Property Management pages.",
@@ -1311,7 +1311,7 @@ export const industryPages: IndustryPageContent[] = [
     metaTitle:
       "Builders & Developers Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Builders and developers insurance through an independent Windsor-Essex broker — project builder's risk, development liability, wrap-up programs, and completed operations coordination.",
+      "Builders and developers insurance in Windsor-Essex — builder's risk, development liability, and project coverage through an independent broker.",
     headline: "Builders & Developers Insurance",
     subhead:
       "Builders and developers insurance focuses on the ownership or development entity that acquires sites, finances projects, and coordinates multiple trades across one project or a pipeline. It is not a second copy of a single builder's risk page and not the same as an operating trade contractor's tools-and-GL program. Developers typically coordinate project-specific course-of-construction (builder's risk) policies, entity-level commercial general liability, and — on larger jobs — wrap-up or OCIP liability programs, then transition to permanent property or inventory coverage at occupancy. Lenders, joint-venture partners, and construction contracts drive named-insured, loss-payee, and certificate requirements. Premium Insurance Brokers can help Windsor-Essex developers structure coverage across projects without treating every optional product as mandatory.",
@@ -1440,7 +1440,7 @@ export const industryPages: IndustryPageContent[] = [
     slug: "retail-insurance",
     metaTitle: "Retail Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Retail insurance through an independent Windsor-Essex broker — general liability, property and inventory, business interruption, product liability, and optional crime or cyber coverage for Windsor-Essex storefront retailers.",
+      "Retail insurance for Windsor-Essex storefronts — general liability, property and inventory, and business interruption through an independent broker.",
     headline: "Retail Insurance",
     subhead:
       "Ordinary storefront retail — clothing boutiques, gift shops, electronics stores, furniture and home-goods shops, and specialty retailers — combines premises liability, stock and fixture values, and product-related claims in a package that differs from food retail, pharmacy, convenience, or fuel operations. Depending on your store, that can mean commercial general liability for customer incidents on the sales floor, commercial property for fixtures, equipment, and inventory, optional business interruption after a covered physical loss, and products liability for goods you sell or distribute — each subject to the policies you purchase. Not every shop sells online, carries high-theft inventory, or needs the same crime or cyber endorsements. Premium Insurance Brokers can help Windsor–Essex retailers align coverage to your actual merchandise, lease, and sales channels.",
@@ -1705,7 +1705,7 @@ export const industryPages: IndustryPageContent[] = [
     slug: "dump-truck-insurance",
     metaTitle: "Dump Truck Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Dump truck insurance through an independent Windsor-Essex broker — commercial auto liability, physical damage, load and debris exposure, and non-trucking liability for construction and aggregate hauling.",
+      "Dump truck insurance for Windsor-Essex operators — commercial auto liability, physical damage, and hauling exposures through an independent broker.",
     headline: "Dump Truck Insurance",
     subhead:
       "Dump truck operations combine heavy commercial automobile exposure on public roads with construction-site and material-handling risks that ordinary fleet policies do not fully describe — tipping, loading, aggregate or excavation work, and jobsite access differ from long-haul freight hauling. Depending on your operation, that can mean Ontario-regulated commercial automobile liability and physical damage for the unit, separate coverage for certain load or debris exposures where purchased, and non-trucking liability when a leased unit operates outside dispatch — each subject to policy terms. Whether you haul your own material, haul for hire, or operate as a contractor's dedicated truck changes underwriting and contract requirements. Premium Insurance Brokers can align coverage to how your dump trucks actually work.",

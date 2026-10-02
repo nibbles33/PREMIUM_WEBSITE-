@@ -1,3 +1,5 @@
+import { SITE_ORIGIN } from "@/lib/seo";
+
 export type JobPosting = {
   slug: string;
   title: string;
@@ -68,4 +70,4 @@ export function getJobsByDepartment(): Map<string, JobPosting[]> {
 }
 
 export const ORGANIZATION_NAME = "Premium Insurance Brokers";
-export const ORGANIZATION_URL = "https://premiumib.com";
+export const ORGANIZATION_URL = SITE_ORIGIN;

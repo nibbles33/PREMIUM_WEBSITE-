@@ -1,29 +1,23 @@
-import LineInsurancePage, {
-  insuranceAgencyProvider,
-} from "@/components/LineInsurancePage";
+import LineInsurancePage from "@/components/LineInsurancePage";
 import {
   COMMERCIAL_ACCENT,
   commercialBrokerCopy,
   type IndustryPageContent,
 } from "@/data/commercial-industries";
+import { serviceStructuredData } from "@/lib/seo/structured-data";
 
 export default function CommercialIndustryPage({
   content,
 }: {
   content: IndustryPageContent;
 }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: content.serviceName,
+  const jsonLd = serviceStructuredData({
+    serviceName: content.serviceName,
     description: content.metaDescription,
-    provider: insuranceAgencyProvider(),
-    areaServed: {
-      "@type": "AdministrativeArea",
-      name: "Windsor-Essex",
-    },
-    serviceType: content.serviceName,
-  };
+    slug: content.slug,
+    kind: "commercial",
+    faqItems: content.faqItems,
+  });
 
   return (
     <LineInsurancePage

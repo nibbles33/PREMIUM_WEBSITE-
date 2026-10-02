@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-/** Intended production origin for rebuild metadata (cutover not yet live). */
-export const SITE_ORIGIN = "https://premiumib.com";
+/** Official canonical production origin (www). Apex redirects here via Vercel/DNS. */
+export const SITE_ORIGIN = "https://www.premiumib.com";
 
 /** Default social share image — existing homepage hero photography. */
 export const DEFAULT_OG_IMAGE_PATH =

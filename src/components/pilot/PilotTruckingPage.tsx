@@ -7,30 +7,25 @@ import Header from "@/components/Header";
 import MiniatureObject from "@/components/pilot/MiniatureObject";
 import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import { insuranceAgencyProvider } from "@/components/LineInsurancePage";
 import {
   commercialBrokerCopy,
   industryPages,
 } from "@/data/commercial-industries";
 import { getPageHeroPhotography } from "@/data/photography";
+import { serviceStructuredData } from "@/lib/seo/structured-data";
 
 const BROKER_HREF = "/contact/?intent=broker";
 const TRUCKING_ACCENT = "#5A8A73";
 
 const content = industryPages.find((page) => page.slug === "trucking-insurance")!;
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: content.serviceName,
+const jsonLd = serviceStructuredData({
+  serviceName: content.serviceName,
   description: content.metaDescription,
-  provider: insuranceAgencyProvider(),
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Windsor-Essex",
-  },
-  serviceType: content.serviceName,
-};
+  slug: content.slug,
+  kind: "commercial",
+  faqItems: content.faqItems,
+});
 
 const relatedCommercial = [
   { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
@@ -58,7 +53,7 @@ export default function PilotTruckingPage() {
             {heroPhoto ? (
               <Image
                 src={heroPhoto.src}
-                alt=""
+                alt={heroPhoto.alt}
                 fill
                 priority
                 sizes="100vw"

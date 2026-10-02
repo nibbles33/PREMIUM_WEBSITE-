@@ -3,7 +3,9 @@ import Header from "@/components/Header";
 import PersonalInsurance from "@/components/PersonalInsurance";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import TrustBar from "@/components/TrustBar";
+import JsonLd from "@/components/seo/JsonLd";
 import { buildPageMetadata } from "@/lib/seo";
+import { webPageStructuredData } from "@/lib/seo/structured-data";
 import Link from "next/link";
 import { PILOT_BROKER_HREF } from "@/data/pilot-product-shared";
 
@@ -14,9 +16,21 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/personal/",
 });
 
+const personalHubJsonLd = webPageStructuredData({
+  name: "Personal Insurance | Premium Insurance Brokers",
+  description:
+    "Explore personal insurance options in Windsor-Essex — auto, home, condo, tenant, specialty, and more through an independent local broker.",
+  path: "/personal/",
+  crumbs: [
+    { name: "Home", path: "/" },
+    { name: "Personal", path: "/personal/" },
+  ],
+});
+
 export default function PersonalHubPage() {
   return (
     <>
+      <JsonLd data={personalHubJsonLd} />
       <Header />
       <main>
         <section

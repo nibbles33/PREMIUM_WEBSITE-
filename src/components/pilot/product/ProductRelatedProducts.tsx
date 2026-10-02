@@ -62,7 +62,7 @@ export default function ProductRelatedProducts({
                       {photo ? (
                         <Image
                           src={photo.src}
-                          alt=""
+                          alt={photo.alt}
                           fill
                           sizes={PILOT_AUTO_RELATED_IMAGE.sizes}
                           quality={PILOT_AUTO_RELATED_IMAGE.quality}

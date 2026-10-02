@@ -1,5 +1,4 @@
 import LineInsurancePage, {
-  insuranceAgencyProvider,
   sharedBrokerCopy,
 } from "@/components/LineInsurancePage";
 import {
@@ -7,24 +6,20 @@ import {
   commercialBrokerCopy,
 } from "@/data/commercial-industries";
 import type { ProductPageContent } from "@/data/product-pages/types";
+import { serviceStructuredData } from "@/lib/seo/structured-data";
 
 export default function ProductLinePage({
   content,
 }: {
   content: ProductPageContent;
 }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: content.serviceName,
+  const jsonLd = serviceStructuredData({
+    serviceName: content.serviceName,
     description: content.metaDescription,
-    provider: insuranceAgencyProvider(),
-    areaServed: {
-      "@type": "AdministrativeArea",
-      name: "Windsor-Essex",
-    },
-    serviceType: content.serviceName,
-  };
+    slug: content.slug,
+    kind: content.category === "commercial" ? "commercial" : "personal",
+    faqItems: content.faqItems,
+  });
 
   const isCommercial = content.category === "commercial";
 

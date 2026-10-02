@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { getOpenJobs } from "@/data/jobs";
 import { getAllProductPageSlugs } from "@/data/product-pages";
+import { SITE_ORIGIN } from "@/lib/seo";
 
-const BASE_URL = "https://premiumib.com";
+const BASE_URL = SITE_ORIGIN;
 
 const staticRoutes = [
   "/",

@@ -26,7 +26,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     metaTitle:
       "Hotel & Motel Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Hotel and motel insurance through an independent Windsor-Essex broker — commercial property, general liability, business interruption, and licensed alcohol coverage where applicable.",
+      "Hotel and motel insurance in Windsor-Essex — commercial property, guest liability, and business interruption through an independent broker.",
     headline: "Hotel & Motel Insurance",
     subhead:
       "Hotels and motels combine guest rooms, common areas, and amenities into overlapping property, liability, and income exposures. Depending on your operation, that can mean commercial property for the building and furnishings, general liability for guest injuries in lobbies, pools, or parking areas, business interruption when a covered loss closes rooms, and — where you operate a licensed bar or restaurant — liquor liability separate from standard commercial general liability. Ontario's Innkeepers Act can limit an innkeeper's statutory liability for guest goods in specified circumstances — separate from what your commercial property policy covers for your own assets. Premium Insurance Brokers can help align coverage to your room count, amenities, and seasonality.",
@@ -154,7 +154,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     metaTitle:
       "Convenience Store & Gas Station Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Convenience store and gas station insurance through an independent Windsor-Essex broker — commercial property, general liability, pollution, and crime coverage for retail fuel operators.",
+      "Convenience store and gas station insurance in Windsor-Essex — property, liability, and fuel-related exposures through an independent broker.",
     headline: "Convenience Store & Gas Station Insurance",
     subhead:
       "Convenience stores and gas bars combine high-traffic retail, cash handling, and — at many locations — fuel dispensing, refrigerated inventory, and optional product lines such as lottery, tobacco, prepared food, or AGCO-authorized retail alcohol. Insurance needs reflect that mix: commercial property for the building and stock, general liability for customer incidents, pollution coverage where underground storage tanks create environmental exposure, and crime coverage where robbery and theft are material risks — each subject to the policies you purchase. Not every c-store sells alcohol, operates fuel pumps, or carries the same inventory profile. Premium Insurance Brokers can help map coverage to your hours, security practices, and actual product mix.",
@@ -287,7 +287,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     metaTitle:
       "Grocery, Specialty Food & Bakery Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Grocery, specialty food, and bakery insurance through an independent Windsor-Essex broker — commercial property, spoilage and refrigeration endorsements, product liability, and premises liability for food retailers with limited preparation.",
+      "Grocery, specialty food, and bakery insurance in Windsor-Essex — property, spoilage, liability, and business interruption through an independent broker.",
     headline: "Grocery, Specialty Food & Bakery Insurance",
     subhead:
       "Grocery stores, specialty food markets, butcher shops, bakeries, and delis with limited in-store preparation face perishable inventory, refrigeration equipment, and food-product liability exposures that differ from full-service restaurants, convenience stores with fuel, or general merchandise retail. Depending on your operation, that can mean commercial property for stock and fixtures, optional spoilage or equipment-breakdown endorsements for refrigerated loss, products liability for illness or allergen allegations, and general liability for customer incidents on premises — each subject to the policies you purchase. Spoilage does not automatically respond because food became unusable; equipment breakdown, utility interruption, and off-premises power failure follow different triggers. Primarily prepared-food and table-service operations belong on our restaurant page. Premium Insurance Brokers can help Windsor–Essex food retailers align coverage to your refrigeration, preparation level, and product mix.",
@@ -429,7 +429,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     metaTitle:
       "Medical & Dental Office Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Medical and dental office insurance for Windsor-Essex clinics — commercial general liability, property, cyber/privacy, and coordination with physician and dentist professional protection requirements.",
+      "Medical and dental office insurance for Windsor-Essex clinics — liability, property, cyber/privacy, and practice exposures through an independent broker.",
     headline: "Medical & Dental Office Insurance",
     subhead:
       "Medical and dental clinics carry two distinct insurance layers: commercial coverage for the office entity — premises, property, equipment, and patient-data incidents — and separate professional liability or malpractice protection for regulated practitioners who provide treatment. A clinic commercial package may help with certain slip-and-fall, property, and cyber-related costs subject to policy terms, but it does not replace a physician's CPSO-required professional liability arrangement (typically through CMPA membership) or a dentist's RCDSO-required professional liability coverage. CMPA is a mutual medical defence organization — not an insurance company — and its assistance to clinics is discretionary and conditional. Premium Insurance Brokers helps Windsor–Essex clinics coordinate commercial lines while keeping entity coverage and individual professional protection clearly separated.",
@@ -569,7 +569,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     metaTitle:
       "Pharmacy Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Pharmacy insurance through an independent Windsor-Essex broker — commercial property, general liability, professional dispensing coverage, and cyber/privacy for retail and compounding pharmacies.",
+      "Pharmacy insurance in Windsor-Essex — commercial property, general liability, and professional exposures reviewed through an independent broker.",
     headline: "Pharmacy Insurance",
     subhead:
       "Pharmacies combine professional dispensing exposure, high-value prescription inventory, refrigerated stock, and sensitive patient health information — a different risk profile from ordinary retail. Depending on your operation, that can mean commercial property for fixtures, equipment, and stock; general liability for customer incidents on your premises; professional liability or errors and omissions for certain dispensing and counselling-related claims at the business level; and cyber or privacy coverage where purchased for data-breach response — each subject to the policies you purchase. Ontario pharmacists must maintain personal professional liability insurance under OCP requirements separately from the pharmacy's business insurance program. Premium Insurance Brokers can help align coverage to your dispensing model, cold-chain setup, services, and security practices.",
@@ -702,7 +702,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     metaTitle:
       "Fitness & Gym Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Fitness and gym insurance through an independent Windsor-Essex broker — general liability, professional liability for trainers, commercial property, and abuse coverage where available for gyms, studios, and fitness operators.",
+      "Fitness and gym insurance in Windsor-Essex — general liability, trainer professional liability, and equipment coverage through an independent broker.",
     headline: "Fitness & Gym Insurance",
     subhead:
       "Gyms, fitness centres, boutique studios, yoga and pilates spaces, personal-training operations, and martial arts schools combine premises injury exposure, instruction-related professional claims, equipment values, and — where youth or vulnerable-person programs exist — specialized abuse coverage reviewed separately from general liability. Depending on your facility, that can mean commercial general liability for certain premises and operations claims, professional or fitness liability for negligent instruction allegations, commercial property for equipment and leasehold improvements, and abuse or misconduct coverage where purchased — each subject to policy terms. Participant injury during activity is not automatically a general liability claim when the allegation centres on programming or coaching advice. Waivers may be part of risk management, but waivers do not replace insurance, do not prevent lawsuits, and do not guarantee enforceability under Ontario law — including principles under the Occupiers' Liability Act. Premium Insurance Brokers can help Windsor–Essex fitness operators align coverage to your trainers, activities, and member profile.",
@@ -844,7 +844,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     metaTitle:
       "Salon & Barber Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Salon and barber shop insurance through an independent Windsor-Essex broker — general liability, professional treatment liability, property, and product exposure.",
+      "Salon and barber shop insurance in Windsor-Essex — general liability and professional treatment coverage through an independent broker.",
     headline: "Salon & Barber Insurance",
     subhead:
       "Hair salons and barbershops combine two different exposure types: premises liability for customers in your reception and service areas, and professional treatment liability for cuts, colour, chemical services, and other hands-on work. Depending on what you offer, that can mean general liability for slip-and-fall incidents, treatment or professional liability for service-related injury or reaction claims, property coverage for stations and equipment, and product liability where you retail hair or skin products — each subject to the policies you purchase. Not every salon provides nails, waxing, laser, medical aesthetics, or mobile services, and higher-risk treatments must be disclosed rather than assumed to be included. Premium Insurance Brokers can help align coverage to your actual service menu and staffing model.",
@@ -975,7 +975,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     metaTitle:
       "Non-Profit Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Non-profit and charity insurance through an independent Windsor-Essex broker — general liability, D&O, property, and volunteer coverage for community organizations.",
+      "Non-profit and charity insurance in Windsor-Essex — general liability, D&O, property, and volunteer exposures through an independent broker.",
     headline: "Non-Profit Insurance",
     subhead:
       "Charities and non-profits combine program delivery, volunteer involvement, and board governance into exposures that differ from a typical small business — even when the day-to-day work looks similar. Depending on your organization, that can mean general liability for events and program locations, directors and officers coverage for governance claims, property coverage for office contents and donated goods, volunteer accident coverage where purchased, and — for programs serving children or vulnerable persons — abuse or misconduct coverage reviewed separately. Not every non-profit needs the same coverage stack; a community sports league, a social service agency, and a grant-making foundation face different profiles. Premium Insurance Brokers can help align insurance to your programs, funding requirements, and governance structure.",
@@ -1103,7 +1103,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     metaTitle:
       "Religious Organization Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Church and religious organization insurance through an independent Windsor-Essex broker — worship property, congregation liability, pastoral counselling, and abuse coverage where available for faith communities.",
+      "Church and religious organization insurance in Windsor-Essex — worship property, liability, and volunteer exposures through an independent broker.",
     headline: "Religious Organization Insurance",
     subhead:
       "Churches, mosques, synagogues, temples, and faith-based community centres combine worship premises, congregation activities, hall rentals, pastoral counselling, and — where youth or vulnerable-person programs exist — abuse coverage reviewed separately from general liability. This route focuses on houses of worship and faith-community operations — distinct from broader charitable governance on our non-profit page. Depending on your organization, that can mean commercial property for sanctuaries, halls, and contents, general liability for visitor and event exposure, pastoral counselling liability where included, and abuse or molestation coverage where purchased — each subject to policy terms. Volunteers are not automatically covered under general liability or WSIB. Abuse coverage is not automatic on CGL and is not a statutory insurance requirement for every faith community. Premium Insurance Brokers can help Windsor–Essex faith communities align coverage to your facilities, programs, and governance structure.",
@@ -1402,7 +1402,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     metaTitle:
       "Event Liability Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Event liability insurance through an independent Windsor-Essex broker — short-term third-party liability for festivals, weddings, fundraisers, and vendor markets.",
+      "Event liability insurance in Windsor-Essex — short-term third-party liability for festivals, meetings, and private events through a broker.",
     headline: "Event Liability Insurance",
     subhead:
       "Event liability insurance addresses third-party injury and property-damage claims arising from a specific event you host — weddings, festivals, fundraisers, corporate functions, or vendor markets — on defined dates and at stated locations. It is not a substitute for a venue owner's policy, your own property coverage for equipment, or cancellation insurance for weather or low attendance. Venues, municipalities, and rental contracts often require proof of liability insurance with minimum limits or additional-insured wording — those are contractual requirements, not a single provincial event-insurance mandate. Where alcohol is served under a Special Occasion Permit or host-liquor arrangement, liquor-related liability may need separate review. Premium Insurance Brokers can help structure coverage to match your event type, attendance, activities, and certificate requirements.",
@@ -1673,7 +1673,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     metaTitle:
       "Crime & Fidelity Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Crime and fidelity insurance for Windsor-Essex businesses — employee dishonesty, forgery, money and securities, and computer fraud through an independent broker.",
+      "Crime and fidelity insurance for Windsor-Essex businesses — employee dishonesty, forgery, and money/securities coverage through a broker.",
     headline: "Crime & Fidelity Insurance",
     subhead:
       "Crime & Fidelity Insurance can address specified first-party losses involving employee dishonesty, theft, forgery, fraud, money and securities, or related crime events — depending on the policy form and the insuring agreements you purchase. It is not a surety bond, not cyber insurance for privacy or ransomware response, and not a substitute for ordinary commercial property coverage on stock and buildings. Many commercial property forms exclude or restrict theft by employees; business crime coverage may address specified employee dishonesty losses subject to the crime policy’s insuring agreement, definitions, conditions, limits, exclusions, and proof requirements. Computer fraud and social-engineering / fraudulent-instruction losses are not necessarily treated the same way — many forms require separate or specific wording, endorsements, limits, or sublimits for voluntary payment schemes. Premium Insurance Brokers can help Windsor–Essex businesses compare crime agreements against cash handling, payroll, client funds, and payment controls.",
@@ -1811,7 +1811,7 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
     metaTitle:
       "Employment Practices Liability (EPL) in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Employment practices liability insurance for Windsor-Essex employers — wrongful termination allegations, harassment, discrimination, and retaliation claims subject to policy wording.",
+      "Employment practices liability insurance for Windsor-Essex employers — wrongful termination, harassment, and discrimination allegation coverage.",
     headline: "Employment Practices Liability (EPL)",
     subhead:
       "Employment practices liability insurance may respond to certain employment-related claims or allegations — such as wrongful dismissal, discrimination, harassment, or retaliation — subject to policy definitions, exclusions, claims-made conditions, and reporting requirements. It is liability insurance for defined employment claims, not a fund that automatically pays Employment Standards Act termination pay, severance pay, unpaid wages, vacation pay, or benefits. It also does not replace human-resources advice, legal counsel on how to terminate, or Workplace Safety and Insurance Board coverage for workplace injury. Ontario employers operate under statutes such as the Employment Standards Act, 2000, the Human Rights Code, and OHSA workplace-harassment duties — those create employment and compliance obligations; insurance response still depends on the form. Premium Insurance Brokers can help Windsor–Essex employers compare EPL alongside directors and officers coverage where both management and workforce exposures exist.",

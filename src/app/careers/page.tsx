@@ -3,7 +3,13 @@ import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import Header from "@/components/Header";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import { getJobsByDepartment, ORGANIZATION_NAME } from "@/data/jobs";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  getJobsByDepartment,
+  getOpenJobs,
+  ORGANIZATION_NAME,
+} from "@/data/jobs";
+import { collectionPageStructuredData } from "@/lib/seo/structured-data";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Careers | Premium Insurance Brokers",
@@ -15,9 +21,25 @@ export const metadata: Metadata = buildPageMetadata({
 export default function CareersPage() {
   const byDepartment = getJobsByDepartment();
   const departments = [...byDepartment.entries()];
+  const openJobs = getOpenJobs();
+  const careersJsonLd = collectionPageStructuredData({
+    name: "Careers | Premium Insurance Brokers",
+    description:
+      "Join Premium Insurance Brokers in Windsor, Ontario. View open positions and apply to grow your insurance career with a RIBO-licensed brokerage.",
+    path: "/careers/",
+    crumbs: [
+      { name: "Home", path: "/" },
+      { name: "Careers", path: "/careers/" },
+    ],
+    itemListElement: openJobs.map((job) => ({
+      name: job.title,
+      path: `/careers/${job.slug}/`,
+    })),
+  });
 
   return (
     <>
+      <JsonLd data={careersJsonLd} />
       <Header />
       <main>
         <section

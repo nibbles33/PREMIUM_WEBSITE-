@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import PilotHomePage from "@/components/pilot/PilotHomePage";
+import JsonLd from "@/components/seo/JsonLd";
 import { buildPageMetadata } from "@/lib/seo";
+import { homepageStructuredData } from "@/lib/seo/structured-data";
 
 export const metadata: Metadata = buildPageMetadata({
   title:
@@ -14,5 +16,10 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function Home() {
-  return <PilotHomePage />;
+  return (
+    <>
+      <JsonLd data={homepageStructuredData()} />
+      <PilotHomePage />
+    </>
+  );
 }

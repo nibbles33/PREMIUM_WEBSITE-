@@ -66,6 +66,7 @@ export function createPersonalPilotPageExports(input: PersonalPilotPageInput) {
     ctaHeading: input.ctaHeading,
     ctaSubhead: input.ctaSubhead,
     ctaQuoteLabel: input.ctaButtonLabel,
+    schemaKind: "personal",
     serviceName: input.serviceName,
   });
 

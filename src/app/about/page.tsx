@@ -3,9 +3,13 @@ import Header from "@/components/Header";
 import PageHeroPhoto from "@/components/PageHeroPhoto";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import TrustBar from "@/components/TrustBar";
-import { insuranceAgencyProvider } from "@/components/LineInsurancePage";
 import { getPageHeroPhotography } from "@/data/photography";
 import { buildPageMetadata } from "@/lib/seo";
+import {
+  breadcrumbList,
+  brokerageLocalBusiness,
+} from "@/lib/seo/structured-data";
+import JsonLd from "@/components/seo/JsonLd";
 import Link from "next/link";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -20,14 +24,16 @@ const BROKER_HREF = "/contact/?intent=broker";
 
 const jsonLd = {
   "@context": "https://schema.org",
-  ...insuranceAgencyProvider(),
-  foundingDate: "2019-07",
-  description:
-    "Independent insurance brokerage serving Windsor-Essex County since July 2019. A division of Oracle RMS.",
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Windsor-Essex",
-  },
+  "@graph": [
+    {
+      ...brokerageLocalBusiness(),
+      foundingDate: "2019-07",
+    },
+    breadcrumbList([
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about/" },
+    ]),
+  ],
 };
 
 export default function AboutPage() {
@@ -35,10 +41,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={jsonLd} />
       <Header />
       <main>
         <section

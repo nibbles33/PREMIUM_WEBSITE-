@@ -8,17 +8,17 @@ import AutoProductHero from "@/components/pilot/auto/AutoProductHero";
 import AutoRelatedProducts from "@/components/pilot/auto/AutoRelatedProducts";
 import PremiumProductFAQ from "@/components/pilot/auto/PremiumProductFAQ";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import { insuranceAgencyProvider } from "@/components/LineInsurancePage";
-import { autoFaqItems, autoJsonLd } from "@/data/pilot-auto";
+import { autoFaqItems } from "@/data/pilot-auto";
+import { serviceStructuredData } from "@/lib/seo/structured-data";
 
-const jsonLd = {
-  ...autoJsonLd,
-  provider: insuranceAgencyProvider(),
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Windsor-Essex",
-  },
-};
+const jsonLd = serviceStructuredData({
+  serviceName: "Auto Insurance",
+  description:
+    "Ontario auto insurance through an independent Windsor-Essex broker — liability, collision, comprehensive, and accident benefits.",
+  slug: "auto-insurance",
+  kind: "personal",
+  faqItems: autoFaqItems,
+});
 
 export default function PilotAutoPage() {
   return (

@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import JsonLd from "@/components/seo/JsonLd";
+import { collectionPageStructuredData } from "@/lib/seo/structured-data";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Resources | Premium Insurance Brokers",
@@ -72,9 +74,29 @@ const resourceCards = [
   },
 ] as const;
 
+const resourcesJsonLd = collectionPageStructuredData({
+  name: "Resources | Premium Insurance Brokers",
+  description:
+    "Insurance resources for Premium Insurance Brokers clients — claims guidance, payments, compliance, privacy, newsletter, and broker contact.",
+  path: "/resources/",
+  crumbs: [
+    { name: "Home", path: "/" },
+    { name: "Resources", path: "/resources/" },
+  ],
+  itemListElement: [
+    { name: "Claims", path: "/claims/" },
+    { name: "Make a Payment", path: "/payment/" },
+    { name: "Compliance", path: "/compliance/" },
+    { name: "Privacy Policy", path: "/privacy-policy/" },
+    { name: "Newsletter", path: "/newsletter/" },
+    { name: "Contact Us", path: "/contact/" },
+  ],
+});
+
 export default function ResourcesPage() {
   return (
     <>
+      <JsonLd data={resourcesJsonLd} />
       <Header />
       <main>
         <section

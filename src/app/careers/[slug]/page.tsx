@@ -36,7 +36,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
   return buildPageMetadata({
     title: `${job.title} | Careers | Premium Insurance Brokers`,
-    description: job.summary,
+    description:
+      job.slug === "licensed-customer-service-representative"
+        ? "Licensed CSR role at Premium Insurance Brokers in Windsor — client service, renewals, and policy support at a RIBO-licensed brokerage."
+        : job.summary,
     path: `/careers/${job.slug}/`,
   });
 }
