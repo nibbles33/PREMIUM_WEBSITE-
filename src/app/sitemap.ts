@@ -93,7 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const entries: MetadataRoute.Sitemap = allRoutes.map((path) => ({
-    url: `${BASE_URL}${path === "/" ? "" : path}`,
+    url: `${BASE_URL}${path === "/" ? "/" : path}`,
     lastModified: now,
     changeFrequency: path === "/" ? "weekly" : "monthly",
     priority: path === "/" ? 1 : 0.7,
