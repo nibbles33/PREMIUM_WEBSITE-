@@ -3,9 +3,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import PilotPersonalPage from "@/components/pilot/product/PilotPersonalPage";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Home Insurance in Windsor-Essex | Premium Insurance Brokers",
+  title: "Home Insurance in Windsor | Premium Insurance Brokers",
   description:
-    "Home insurance through an independent Windsor-Essex broker — dwelling, contents, liability, and additional living expenses explained in plain language.",
+    "Home and house insurance in Windsor-Essex through an independent broker. Dwelling, contents, liability, and living expenses explained — serving homeowners across Ontario.",
   path: "/home-insurance/",
 });
 

@@ -5,14 +5,13 @@ import { buildPageMetadata } from "@/lib/seo";
 import { homepageStructuredData } from "@/lib/seo/structured-data";
 
 export const metadata: Metadata = buildPageMetadata({
-  title:
-    "Premium Insurance Brokers | Personal & Business Insurance in Windsor-Essex",
+  title: "Insurance Brokers in Windsor, Ontario | Premium Insurance Brokers",
   description:
-    "Independent insurance brokerage in Windsor-Essex. Personal auto, home, and commercial coverage through a licensed local broker — not a call centre.",
+    "Independent insurance brokers in Windsor-Essex for personal and business coverage across Ontario. Compare options with a licensed local brokerage — not a call centre.",
   path: "/",
-  ogTitle: "Premium Insurance Brokers | Windsor-Essex",
+  ogTitle: "Insurance Brokers in Windsor, Ontario | Premium Insurance Brokers",
   ogDescription:
-    "Personal and business insurance advice from an independent Windsor-Essex brokerage.",
+    "Independent Windsor-Essex brokerage for personal and business insurance — serving clients throughout Ontario.",
 });
 
 export default function Home() {
