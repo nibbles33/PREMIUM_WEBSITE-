@@ -5,7 +5,7 @@ import PilotPersonalPage from "@/components/pilot/product/PilotPersonalPage";
 export const metadata: Metadata = buildPageMetadata({
   title: "Landlord Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
-    "Landlord insurance for Windsor-Essex rental owners — dwelling, liability, loss of rents, and tenant-related exposures through a broker.",
+    "Landlord and rental property insurance for Windsor-Essex owners — dwelling, liability, and loss of rents through an independent brokerage serving Ontario.",
   path: "/landlord-insurance/",
 });
 
