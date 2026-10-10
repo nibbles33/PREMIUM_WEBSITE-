@@ -137,5 +137,44 @@ export async function POST(request: Request) {
     );
   }
 
+  // Push lead to Premium CRM (non-blocking — never fail the website submission).
+  try {
+    const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
+    if (!supabaseAnonKey) {
+      console.warn(
+        "[quote-submit] SUPABASE_ANON_KEY is not set — skipping CRM push. Lead was saved.",
+        { leadId },
+      );
+    } else {
+      const crmResponse = await fetch(
+        "https://ecoravqvdqtzzdmukweh.supabase.co/functions/v1/website-lead",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${supabaseAnonKey}`,
+          },
+          body: JSON.stringify({
+            name: validated.data.name,
+            email: validated.data.email,
+            phone: validated.data.phone,
+            // Quote flow uses `category` (auto/home/business/…); map to CRM lead_type.
+            lead_type: validated.data.category,
+            source: "Website",
+            notes: JSON.stringify(validated.data.answers ?? {}),
+          }),
+        },
+      );
+      if (!crmResponse.ok) {
+        console.error("[quote-submit] CRM push returned non-OK status", {
+          leadId,
+          status: crmResponse.status,
+        });
+      }
+    }
+  } catch (err) {
+    console.error("[quote-submit] CRM push failed (non-blocking)", err);
+  }
+
   return NextResponse.json({ ok: true, id: leadId, notified });
 }
