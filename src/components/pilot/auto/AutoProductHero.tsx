@@ -104,15 +104,18 @@ export default function AutoProductHero() {
                 id="pilot-auto-hero-heading"
                 className="mt-3 text-[2.4rem] font-medium leading-[1.05] tracking-[-0.032em] text-charcoal sm:text-[3rem] lg:text-[3.5rem]"
               >
-                Auto Insurance
+                Car & Auto Insurance
               </h1>
               <p className="mt-4 max-w-prose text-[15px] leading-relaxed text-secondary sm:text-base lg:text-[1.125rem] lg:leading-[1.65]">
-                Your car gets you everywhere. Let&apos;s make sure it&apos;s
-                properly protected — without the runaround.
+                Whether you call it car insurance or auto insurance, Ontario
+                coverage is mandatory — and the details matter. Your car gets you
+                everywhere; let&apos;s make sure it&apos;s properly protected
+                without the runaround.
               </p>
               <p className="mt-3 max-w-prose text-[14px] leading-relaxed text-secondary/90 sm:text-[15px]">
-                Compare Ontario auto options through an independent broker who
-                explains what you&apos;re actually buying.
+                As a car insurance broker in Windsor-Essex, Premium helps you
+                compare Ontario auto options across markets and explains what
+                you&apos;re actually buying.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <PremiumGoldCTA href={AUTO_QUOTE_HREF}>

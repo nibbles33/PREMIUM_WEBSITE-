@@ -173,6 +173,10 @@ export default function PilotHomeHero() {
             Personal, commercial, and specialty coverage through real Windsor-Essex
             brokers — not a call centre.
           </p>
+          <p className="mt-3 max-w-lg text-base leading-relaxed text-white/75 sm:text-[1.05rem]">
+            Based in Windsor, our independent brokerage serves clients throughout
+            Ontario.
+          </p>
           <p className="mt-4 text-[13px] font-medium tracking-[0.04em] text-white/55">
             Real brokers. Real advice.
           </p>

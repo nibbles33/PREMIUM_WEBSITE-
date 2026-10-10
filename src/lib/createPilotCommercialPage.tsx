@@ -5,9 +5,9 @@ import { getProductPage } from "@/data/product-pages";
 import { buildPageMetadata } from "@/lib/seo";
 
 const hubMetadata: Metadata = buildPageMetadata({
-  title: "Commercial Insurance in Windsor-Essex | Premium Insurance Brokers",
+  title: "Commercial Insurance in Windsor | Premium Insurance Brokers",
   description:
-    "Commercial insurance for Windsor-Essex businesses — manufacturers, trucking, contractors, restaurants, and more through an independent broker.",
+    "Commercial and business insurance for Windsor-Essex and Ontario operators. Explore industry coverage with an independent brokerage — then talk to a licensed broker.",
   path: "/commercial-insurance/",
 });
 

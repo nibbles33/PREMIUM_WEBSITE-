@@ -45,15 +45,15 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
   "commercial-insurance": buildPilotProductConfig({
     layout: "commercial-hub",
     slug: "commercial-insurance",
-    metaTitle: "Commercial Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaTitle: "Commercial Insurance in Windsor | Premium Insurance Brokers",
     metaDescription:
-      "Commercial insurance for Windsor-Essex businesses — manufacturers, trucking, contractors, restaurants, and more through an independent broker.",
+      "Commercial and business insurance for Windsor-Essex and Ontario operators. Explore industry coverage with an independent brokerage — then talk to a licensed broker.",
     eyebrow: "Commercial Insurance",
     headline: "Commercial insurance, built for your industry",
     heroLead:
-      "Your Windsor–Essex commercial insurance starting point — not a single bundled policy. Use the categories and industry links below to find routes that match how you operate, then talk to a broker about coverages your business may need.",
+      "Your Windsor–Essex commercial insurance starting point for businesses here and across Ontario — not a single bundled policy. Use the categories and industry links below to find routes that match how you operate, then talk to a broker about coverages your business may need.",
     heroSupporting:
-      "Need help assembling a smaller program? Our small business insurance page goes deeper. Start here for orientation across the full commercial site.",
+      "Need a tighter small-business package first? Our small business insurance page goes deeper. Start here for orientation across the full commercial site — whether you operate in Windsor-Essex or elsewhere in Ontario.",
     photographySlug: "commercial-insurance",
     accentColor: COMMERCIAL_ACCENT,
     quoteHref: QUOTE_BUSINESS,

@@ -34,12 +34,12 @@ import type { PilotProductPageConfig } from "@/types/pilot-product";
 export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> = {
   "home-insurance": buildPilotProductConfig({
     slug: "home-insurance",
-    metaTitle: "Home Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaTitle: "Home Insurance in Windsor | Premium Insurance Brokers",
     metaDescription:
-      "Home insurance through an independent Windsor-Essex broker — dwelling, contents, liability, and additional living expenses explained in plain language.",
-    headline: "Home Insurance",
+      "Home and house insurance in Windsor-Essex through an independent broker. Dwelling, contents, liability, and living expenses explained — serving homeowners across Ontario.",
+    headline: "Home insurance in Windsor-Essex",
     heroLead:
-      "Protection for your property, belongings, and liability — whether you own, rent, or somewhere in between.",
+      "Looking for home or house insurance in Windsor, Essex County, or elsewhere in Ontario? We help homeowners compare dwelling, contents, liability, and additional living expenses through an independent brokerage.",
     photographySlug: "home-insurance",
     accentColor: "#B37A5A",
     quoteHref: "/get-a-quote?type=home",
