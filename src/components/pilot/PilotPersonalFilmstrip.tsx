@@ -43,7 +43,10 @@ export default function PilotPersonalFilmstrip() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const activeIndexRef = useRef(0);
-  activeIndexRef.current = activeIndex;
+
+  useEffect(() => {
+    activeIndexRef.current = activeIndex;
+  }, [activeIndex]);
 
   const updateActiveFromScroll = useCallback(() => {
     const el = scrollerRef.current;
@@ -211,6 +214,7 @@ export default function PilotPersonalFilmstrip() {
 
   return (
     <section
+      id="pilot-personal-filmstrip"
       className="pilot-section-personal relative overflow-hidden border-t border-border bg-[#F3EBD4] py-12 sm:py-14 lg:py-[4.25rem]"
       aria-labelledby="pilot-personal-filmstrip-heading"
     >

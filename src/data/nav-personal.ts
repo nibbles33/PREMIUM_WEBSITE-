@@ -5,6 +5,7 @@ export type NavLink = {
 };
 
 export type NavGroup = {
+  id: string;
   title: string;
   links: NavLink[];
 };
@@ -16,6 +17,7 @@ export const personalNavHub = {
 
 export const personalNavGroups: NavGroup[] = [
   {
+    id: "auto-mobility",
     title: "Auto / Mobility",
     links: [
       { label: "Auto Insurance", href: "/auto-insurance/" },
@@ -29,6 +31,7 @@ export const personalNavGroups: NavGroup[] = [
     ],
   },
   {
+    id: "property",
     title: "Property",
     links: [
       { label: "Home Insurance", href: "/home-insurance/" },
@@ -48,6 +51,7 @@ export const personalNavGroups: NavGroup[] = [
     ],
   },
   {
+    id: "specialty",
     title: "Specialty",
     links: [
       {

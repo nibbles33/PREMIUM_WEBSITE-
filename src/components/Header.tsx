@@ -6,16 +6,16 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
   BusinessNavDropdown,
-  MobileNavClusterSection,
-  MobileNavGroupSection,
+  CascadingNavDropdown,
+  MobileCascadingNavSection,
   MobileNavSection,
   PersonalNavDropdown,
   SimpleNavDropdown,
 } from "@/components/nav/NavDropdowns";
 import { agricultureNavLinks } from "@/data/nav-agriculture";
-import { businessNavClusters } from "@/data/nav-business";
+import { businessNavCategories } from "@/data/nav-business";
 import { personalNavGroups } from "@/data/nav-personal";
-import { resourcesNavLinks } from "@/data/nav-resources";
+import { resourcesNavGroups } from "@/data/nav-resources";
 import { navItems } from "@/data/nav";
 
 const QUOTE_HREF = "/get-a-quote/";
@@ -67,10 +67,16 @@ function DesktopNavItem({
       );
     case "resources":
       return (
-        <SimpleNavDropdown
+        <CascadingNavDropdown
           label={label}
+          menu="resources"
+          categories={resourcesNavGroups.map((g) => ({
+            id: g.id,
+            title: g.title,
+            links: g.links,
+          }))}
           hubHref={href}
-          links={resourcesNavLinks}
+          hubLabel="View all resources →"
           onNavigate={onNavigate}
         />
       );
@@ -167,6 +173,7 @@ export default function Header() {
               </Link>
               <Link
                 href={QUOTE_HREF}
+                data-track-location="header"
                 className="btn-primary group inline-flex h-10 items-center justify-center rounded-md bg-gold px-4 text-sm font-medium text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark xl:px-5"
               >
                 Get a Quote
@@ -182,6 +189,7 @@ export default function Header() {
             <div className="ml-auto flex shrink-0 items-center gap-2 lg:hidden">
               <Link
                 href={QUOTE_HREF}
+                data-track-location="header"
                 className="btn-primary inline-flex h-9 items-center justify-center rounded-md bg-gold px-3 text-xs font-medium text-charcoal"
               >
                 Get a Quote →
@@ -215,15 +223,30 @@ export default function Header() {
         >
           <div className="flex min-h-full flex-col px-4 pb-8 pt-20 sm:px-6">
             <nav className="flex flex-1 flex-col" aria-label="Mobile">
-              <MobileNavGroupSection
+              <MobileCascadingNavSection
                 title="Personal"
-                groups={personalNavGroups}
+                categories={personalNavGroups.map((g) => ({
+                  id: g.id,
+                  title: g.title,
+                  links: g.links,
+                }))}
                 onNavigate={closeMenu}
+                showQuoteCta
+                hubHref="/personal/"
+                hubLabel="View personal insurance hub →"
               />
-              <MobileNavClusterSection
+              <MobileCascadingNavSection
                 title="Business"
-                clusters={businessNavClusters}
+                categories={businessNavCategories.map((c) => ({
+                  id: c.id,
+                  title: c.title,
+                  links: c.links,
+                  role: c.role,
+                }))}
                 onNavigate={closeMenu}
+                showQuoteCta
+                hubHref="/commercial-insurance/"
+                hubLabel="View commercial insurance hub →"
               />
               <MobileNavSection
                 title="Agriculture"
@@ -232,15 +255,21 @@ export default function Header() {
               />
               <Link
                 href="/about/"
-                className="border-b border-border py-4 text-lg font-medium text-charcoal"
+                className="flex min-h-14 items-center border-b border-border py-4 text-lg font-medium text-charcoal"
                 onClick={closeMenu}
               >
                 About
               </Link>
-              <MobileNavSection
+              <MobileCascadingNavSection
                 title="Resources"
-                links={resourcesNavLinks}
+                categories={resourcesNavGroups.map((g) => ({
+                  id: g.id,
+                  title: g.title,
+                  links: g.links,
+                }))}
                 onNavigate={closeMenu}
+                hubHref="/resources/"
+                hubLabel="View all resources →"
               />
             </nav>
             <div className="mt-6 flex flex-col gap-3">
@@ -253,6 +282,7 @@ export default function Header() {
               </Link>
               <Link
                 href={QUOTE_HREF}
+                data-track-location="header"
                 className="btn-primary inline-flex h-12 items-center justify-center rounded-md bg-gold text-sm font-medium text-charcoal"
                 onClick={closeMenu}
               >
