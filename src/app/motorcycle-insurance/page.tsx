@@ -5,7 +5,7 @@ import PilotPersonalPage from "@/components/pilot/product/PilotPersonalPage";
 export const metadata: Metadata = buildPageMetadata({
   title: "Motorcycle Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
-    "Motorcycle insurance for Windsor-Essex riders — liability, physical damage, seasonal use, and gear considerations explained by an independent broker.",
+    "Motorcycle insurance for Windsor-Essex riders — Ontario liability, physical damage, and seasonal use, explained by an independent brokerage.",
   path: "/motorcycle-insurance/",
 });
 

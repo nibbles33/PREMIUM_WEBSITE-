@@ -5,7 +5,7 @@ import PilotPersonalPage from "@/components/pilot/product/PilotPersonalPage";
 export const metadata: Metadata = buildPageMetadata({
   title: "Condo Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
-    "Condo insurance for Windsor-Essex unit owners — contents, improvements, liability, and loss assessment coverage explained by an independent broker.",
+    "Condo insurance for Windsor-Essex unit owners — contents, improvements, liability, and loss assessment. Get a quote from a local independent brokerage.",
   path: "/condo-insurance/",
 });
 
