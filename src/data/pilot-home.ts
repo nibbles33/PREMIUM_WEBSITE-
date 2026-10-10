@@ -225,6 +225,8 @@ export const yepLaneCommercial: CoverageStreamItem[] = [
   { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
   { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "warehousing-insurance" },
   { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
+  { label: "Greenhouse", href: "/greenhouse-agribusiness-insurance/", photoSlug: "greenhouse" },
+  { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },
 ];
 
 /** Single-lane Yep carousel — personal + commercial breadth */
@@ -245,6 +247,8 @@ export const yepCarouselItems: CoverageStreamItem[] = [
   { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
   { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "warehousing-insurance" },
   { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
+  { label: "Greenhouse", href: "/greenhouse-agribusiness-insurance/", photoSlug: "greenhouse" },
+  { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },
 ];
 
 export type AwardBadge = {

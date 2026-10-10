@@ -10,7 +10,7 @@ export const BROKERAGE_PHONE_DISPLAY = "226-782-6000";
 export const BROKERAGE_STREET = "3063 Dougall Ave";
 export const BROKERAGE_LOCALITY = "Windsor";
 export const BROKERAGE_REGION = "ON";
-export const BROKERAGE_POSTAL = "N9E 1S7";
+export const BROKERAGE_POSTAL = "N9E 1S3";
 export const BROKERAGE_COUNTRY = "CA";
 export const PARENT_ORG_NAME = "Oracle RMS";
 

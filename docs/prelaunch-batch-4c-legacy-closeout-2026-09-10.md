@@ -149,7 +149,7 @@
 | Phone | 226 780 6000 | 226-782-6000 | **MISMATCH** | **High** | Corrected PDF source |
 | Email | info@premiumib.com | info@premiumib.com | MATCH | — | — |
 | Website | www.premiumib.com | premiumib.com | MATCH (host) | Low | — |
-| Address | not on PDF contact line | 3063 Dougall Ave, Windsor, ON N9E 1S7 | N/A (absent, not wrong) | Low | Optional add on next revision |
+| Address | not on PDF contact line | 3063 Dougall Ave, Windsor, ON N9E 1S3 | N/A (absent, not wrong) | Low | Optional add on next revision |
 | Date | May 8, 2025 | — | Current enough | Low | Refresh when correcting phone |
 
 ---

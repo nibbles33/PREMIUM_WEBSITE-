@@ -183,7 +183,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-[12px] leading-relaxed text-white/50 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6 lg:px-8 xl:max-w-7xl">
           <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>3063 Dougall Ave, Windsor, ON N9E 1S7</span>
+            <span>3063 Dougall Ave, Windsor, ON N9E 1S3</span>
             <span className="hidden text-white/25 sm:inline" aria-hidden>
               |
             </span>
