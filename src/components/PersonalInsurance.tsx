@@ -276,6 +276,17 @@ export default function PersonalInsurance() {
             </div>
           </div>
         </RevealOnScroll>
+
+        {/* Always-rendered crawlable link — rental tab products are client-selected */}
+        <p className="mt-8 text-center text-[14px] leading-relaxed text-secondary">
+          Renting out a property?{" "}
+          <Link
+            href="/landlord-insurance/"
+            className="font-medium text-charcoal underline-offset-4 transition-colors hover:text-gold-dark hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+          >
+            Landlord Insurance
+          </Link>
+        </p>
       </div>
     </section>
   );

@@ -104,7 +104,7 @@ export default function PrivacyPolicyPage() {
                       (referred to as either &quot;the Company&quot;,
                       &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this
                       Agreement) refers to Premium Insurance Brokers 3063 Dougall
-                      Ave. Windsor, Ontario N9E 1S7.
+                      Ave. Windsor, Ontario N9E 1S3.
                     </li>
                     <li>
                       <strong className="font-medium text-charcoal">

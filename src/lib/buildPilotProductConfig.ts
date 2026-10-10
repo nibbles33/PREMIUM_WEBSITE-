@@ -261,6 +261,7 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     { label: "Surety Bonds", href: "/bonding-insurance/" },
     { label: "Builder's Risk", href: "/builders-risk-insurance/" },
+    { label: "Small Business", href: "/small-business-insurance/" },
   ],
   "manufacturing-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
@@ -364,11 +365,13 @@ export function adaptCommercialIndustryContent(
       content.slug === "food-truck-insurance"
         ? "For Windsor–Essex food trucks, mobile trailers, and event vendors — reviewed through an independent broker who can coordinate commercial auto, liability, and equipment coverage for how you actually operate."
         : content.slug === "trucking-insurance"
-          ? "For Windsor–Essex motor carriers, owner-operators, and fleet operators — reviewed through an independent broker who can coordinate commercial automobile, cargo, and contract requirements for how you actually haul."
+          ? (content.whoItIsFor ??
+            "For Ontario motor carriers, owner-operators, and fleets — including Windsor-Essex operators — reviewed through an independent brokerage that can coordinate commercial automobile, cargo, and contract requirements for how you actually haul.")
           : content.slug === "dump-truck-insurance"
             ? "For Windsor–Essex dump truck operators and small fleets — reviewed through an independent broker who can coordinate commercial automobile, load exposure, and jobsite hauling for how you actually work."
             : content.slug === "contractors-insurance"
-              ? "For Windsor–Essex general contractors and trade contractors — reviewed through an independent broker who can align liability, tools, certificates, and project participation with how you actually build."
+              ? (content.whoItIsFor ??
+                "For Windsor–Essex general contractors and trade contractors — including those bidding jobs across Ontario — reviewed through an independent broker who can align liability, tools, certificates, additional-insured requests, and project participation with how you actually build.")
               : content.slug === "builders-developers-insurance"
                 ? "For Windsor–Essex builders and developers coordinating projects and ownership entities — reviewed through an independent broker who can structure project property, liability, and wrap-up strategy across your pipeline."
                 : content.slug === "professional-offices-insurance"

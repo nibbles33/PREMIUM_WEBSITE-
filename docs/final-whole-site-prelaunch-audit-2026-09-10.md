@@ -295,7 +295,7 @@ Full 12-route × 4-viewport matrix attempted via `final-prelaunch-audit.cjs`; ru
 
 - Name: Premium Insurance Brokers  
 - Phone: +1-226-782-6000  
-- Address: 3063 Dougall Ave, Windsor, ON N9E 1S7  
+- Address: 3063 Dougall Ave, Windsor, ON N9E 1S3  
 - URL: https://premiumib.com/
 
 **Gaps:**
@@ -446,7 +446,7 @@ No redesign recommendations. Do not change approved sections in this phase.
 | Premium Insurance Brokers | ✅ | ✅ | ✅ | ✅ | ✅ |
 | A Division of Oracle RMS | — | ✅ | ✅ | — (visible copy) | — |
 | 226-782-6000 | ✅ | ✅ | ✅ | ✅ (+1-226-782-6000) | ✅ |
-| 3063 Dougall Ave, Windsor, ON N9E 1S7 | — | ✅ | ✅ | ✅ | — |
+| 3063 Dougall Ave, Windsor, ON N9E 1S3 | — | ✅ | ✅ | ✅ | — |
 | info@premiumib.com | — | — | ✅ | — | ✅ (fallback) |
 
 **CONTACT CONSISTENCY:** **READY** — minor schema omission of division name only.

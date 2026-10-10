@@ -426,7 +426,7 @@ Cannabis Retail Insurance
       "streetAddress": "3063 Dougall Ave",
       "addressLocality": "Windsor",
       "addressRegion": "ON",
-      "postalCode": "N9E 1S7",
+      "postalCode": "N9E 1S3",
       "addressCountry": "CA"
     },
     "url": "https://premiumib.com/"
@@ -910,7 +910,7 @@ Cannabis Producer Insurance
       "streetAddress": "3063 Dougall Ave",
       "addressLocality": "Windsor",
       "addressRegion": "ON",
-      "postalCode": "N9E 1S7",
+      "postalCode": "N9E 1S3",
       "addressCountry": "CA"
     },
     "url": "https://premiumib.com/"

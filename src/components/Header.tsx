@@ -131,7 +131,7 @@ export default function Header() {
                 |
               </span>
               <span className="text-right">
-                3063 Dougall Ave, Windsor, ON N9E 1S7
+                3063 Dougall Ave, Windsor, ON N9E 1S3
               </span>
             </div>
           </div>

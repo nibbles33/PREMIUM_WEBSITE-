@@ -134,7 +134,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                       <p className="mt-1 text-[15px] leading-relaxed text-charcoal">
                         3063 Dougall Ave
                         <br />
-                        Windsor, ON N9E 1S7
+                        Windsor, ON N9E 1S3
                       </p>
                     </div>
                   </li>

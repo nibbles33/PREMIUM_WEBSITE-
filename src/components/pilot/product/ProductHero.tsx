@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import HeroPhoneLink from "@/components/pilot/HeroPhoneLink";
 import PremiumGoldCTA from "@/components/pilot/PremiumGoldCTA";
 import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 import ProtectionArc from "@/components/pilot/ProtectionArc";
@@ -106,7 +107,7 @@ export default function ProductHero({ config }: ProductHeroProps) {
                   {config.heroSupporting}
                 </p>
               ) : null}
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <PremiumGoldCTA href={config.quoteHref}>
                   {config.quoteLabel}
                 </PremiumGoldCTA>
@@ -117,6 +118,9 @@ export default function ProductHero({ config }: ProductHeroProps) {
                 >
                   {config.secondaryCta?.label ?? "Talk to a Broker"}
                 </PremiumPilotButton>
+              </div>
+              <div className="mt-3">
+                <HeroPhoneLink tone="light" />
               </div>
             </div>
           </RevealOnScroll>
