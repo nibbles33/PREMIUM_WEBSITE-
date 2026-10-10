@@ -200,6 +200,17 @@ export function breadcrumbsForProductSlug(
   return null;
 }
 
+/** Dual service area for commercial pages that serve Windsor-Essex and Ontario. */
+export const AREA_SERVED_WINDSOR_ESSEX_AND_ONTARIO = [
+  { "@type": "AdministrativeArea", name: "Windsor-Essex" },
+  { "@type": "AdministrativeArea", name: "Ontario" },
+] as const;
+
+export const AREA_SERVED_WINDSOR_ESSEX = {
+  "@type": "AdministrativeArea",
+  name: "Windsor-Essex",
+} as const;
+
 export function serviceStructuredData(input: {
   serviceName: string;
   description: string;
@@ -207,16 +218,18 @@ export function serviceStructuredData(input: {
   kind: NavKind;
   faqItems?: FaqItem[];
 }) {
+  const areaServed =
+    input.kind === "commercial"
+      ? [...AREA_SERVED_WINDSOR_ESSEX_AND_ONTARIO]
+      : AREA_SERVED_WINDSOR_ESSEX;
+
   const graph: Record<string, unknown>[] = [
     {
       "@type": "Service",
       name: input.serviceName,
       description: input.description,
       provider: brokerageProvider(),
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Windsor-Essex",
-      },
+      areaServed,
       serviceType: input.serviceName,
       url: absoluteUrl(`/${input.slug}/`),
     },

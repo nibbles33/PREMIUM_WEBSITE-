@@ -55,6 +55,7 @@ export const HOMEPAGE_PRODUCT_LABELS: Record<string, string> = {
   "/salon-barber-insurance/": "Salon / Barber",
   "/professional-offices-insurance/": "Professional Offices",
   "/professional-liability-insurance/": "Professional Liability",
+  "/small-business-insurance/": "Small Business",
   "/directors-officers-insurance/": "Directors & Officers",
   "/cyber-insurance/": "Cyber",
   "/medical-dental-insurance/": "Medical & Dental",
@@ -120,6 +121,7 @@ export const HOMEPAGE_CATEGORY_ASSIGNMENTS: Record<
     "/cyber-insurance/",
   ],
   retail: [
+    "/small-business-insurance/",
     "/retail-insurance/",
     "/convenience-store-insurance/",
     "/grocery-specialty-food-insurance/",

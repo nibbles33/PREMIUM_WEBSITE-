@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import HeroPhoneLink from "@/components/pilot/HeroPhoneLink";
 import PremiumGoldCTA from "@/components/pilot/PremiumGoldCTA";
 import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 import ProtectionArc from "@/components/pilot/ProtectionArc";
@@ -117,13 +118,16 @@ export default function AutoProductHero() {
                 compare Ontario auto options across markets and explains what
                 you&apos;re actually buying.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <PremiumGoldCTA href={AUTO_QUOTE_HREF}>
                   Get an Auto Quote
                 </PremiumGoldCTA>
                 <PremiumPilotButton href={AUTO_BROKER_HREF} variant="secondary">
                   Talk to a Broker
                 </PremiumPilotButton>
+              </div>
+              <div className="mt-3">
+                <HeroPhoneLink tone="light" />
               </div>
             </div>
           </RevealOnScroll>

@@ -22,10 +22,10 @@ export const commercialProductPages: ProductPageContent[] = [
     metaTitle:
       "Small Business Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Small business insurance in Windsor-Essex — liability, property, commercial auto, and interruption options explained by an independent broker.",
-    headline: "Small Business Insurance",
+      "Small business insurance for Windsor-Essex owners — liability, property, commercial auto, and interruption options from an independent Ontario brokerage.",
+    headline: "Small Business Insurance in Windsor-Essex",
     subhead:
-      "There is no single universal small-business insurance policy. Windsor–Essex owner-operators, storefronts, home-based businesses, and growing teams typically assemble coverage through a business owners policy, commercial package policy, or separate policies and endorsements — depending on industry, revenue, premises, vehicles, and contract requirements. General liability may address certain third-party injury and property-damage claims; commercial property may cover contents, inventory, and tenant improvements; commercial auto applies when you own, lease, or regularly use vehicles for operations; business interruption — where purchased with property — may help with income after a covered physical loss. Cyber, crime, professional liability, and product liability are often added when operations warrant them — not every small business needs every coverage on day one. Premium Insurance Brokers can help map a practical program to how you actually operate rather than selling a one-size-fits-all bundle.",
+      "There is no single universal small-business insurance policy. Windsor–Essex owner-operators, storefronts, home-based businesses, and growing teams typically assemble coverage through a business owners policy, commercial package policy, or separate policies and endorsements — depending on industry, revenue, premises, vehicles, and contract requirements. General liability may address certain third-party injury and property-damage claims; commercial property may cover contents, inventory, and tenant improvements; commercial auto applies when you own, lease, or regularly use vehicles for operations; business interruption — where purchased with property — may help with income after a covered physical loss. Cyber, crime, professional liability, and product liability are often added when operations warrant them — not every small business needs every coverage on day one. From our Windsor office, Premium Insurance Brokers also helps Ontario-based small businesses map a practical program to how they actually operate rather than selling a one-size-fits-all bundle. Trade contractors and advice-driven professions often need dedicated contractors or professional liability programs beyond a general small-business package.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Business Quote",
     coverageIntro:
@@ -77,7 +77,7 @@ export const commercialProductPages: ProductPageContent[] = [
       },
     ],
     whoItIsFor:
-      "For Windsor–Essex owner-operators, storefronts, home-based businesses, and growing teams assembling their first commercial program — reviewed through an independent broker who can compare package policies, endorsements, and separate coverages for how you actually operate.",
+      "For Windsor–Essex owner-operators, storefronts, home-based businesses, and growing teams assembling their first commercial program — and Ontario small businesses seeking an independent brokerage review — compared across package policies, endorsements, and separate coverages for how you actually operate.",
     considerations: [
       {
         title: "Operations and industry classification",
@@ -123,6 +123,8 @@ export const commercialProductPages: ProductPageContent[] = [
     relatedLinks: [
       { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
       { label: "Commercial Property", href: "/commercial-property-insurance/" },
+      { label: "Contractors Insurance", href: "/contractors-insurance/" },
+      { label: "Professional Liability", href: "/professional-liability-insurance/" },
       { label: "Cyber Insurance", href: "/cyber-insurance/" },
     ],
     faqTitle: "Small business insurance FAQ",
@@ -626,12 +628,12 @@ export const commercialProductPages: ProductPageContent[] = [
     slug: "professional-liability-insurance",
     category: "commercial",
     metaTitle:
-      "Professional Liability (E&O) Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "Professional Liability & E&O Insurance | Windsor & Ontario",
     metaDescription:
-      "Professional liability and E&O insurance for Windsor-Essex businesses — claims-made coverage for advice and service errors through an independent broker.",
+      "E&O and professional liability for Windsor-Essex and Ontario professionals — claims-made coverage for advice and service errors through an independent brokerage.",
     headline: "Professional Liability (E&O) Insurance",
     subhead:
-      "When a client alleges your professional advice, design, analysis, or service caused them a financial loss, professional liability — also called errors and omissions (E&O) — may help with defence costs and certain settlements or judgments, subject to the policy you purchase. That is a different risk from slip-and-fall general liability, office property, cyber breach response, or directors and officers coverage. Most commercial E&O forms are claims-made, meaning when and how a claim is reported, your retroactive date, and any extended reporting period matter as much as the limit on the declarations page. Premium Insurance Brokers can help Windsor–Essex professionals compare markets for how you actually practise — including contract requirements, subcontractor use, and any regulator or association standards that apply to your occupation.",
+      "When a client alleges your professional advice, design, analysis, or service caused them a financial loss, professional liability — also called errors and omissions (E&O) — may help with defence costs and certain settlements or judgments, subject to the policy you purchase. That is a different risk from slip-and-fall general liability, office property, cyber breach response, or directors and officers coverage. Most commercial E&O forms are claims-made, meaning when and how a claim is reported, your retroactive date, and any extended reporting period matter as much as the limit on the declarations page. Premium Insurance Brokers helps Windsor–Essex and Ontario professionals compare markets for how you actually practise — including contract requirements, subcontractor use, and any regulator or association standards that apply to your occupation.",
     quoteHref: `${QUOTE_BUSINESS}&businessType=professional`,
     quoteLabel: "Get an E&O Quote",
     coverageIntro:
@@ -679,7 +681,7 @@ export const commercialProductPages: ProductPageContent[] = [
       },
     ],
     whoItIsFor:
-      "For Windsor–Essex professionals and firms that charge for advice, design, analysis, or specialized services — including accountants, consultants, engineers, architects, financial advisors, IT consultants, and other regulated or credentialed occupations — reviewed through an independent broker who can compare claims-made E&O markets, retroactive dates, and contract certificate requirements for how you actually work.",
+      "For Windsor–Essex and Ontario professionals and firms that charge for advice, design, analysis, or specialized services — including accountants, consultants, engineers, architects, financial advisors, IT consultants, and other regulated or credentialed occupations — reviewed through an independent brokerage that can compare claims-made E&O markets, retroactive dates, and contract certificate requirements for how you actually work.",
     considerations: [
       {
         title: "Professional services definition and scope of practice",
@@ -724,6 +726,7 @@ export const commercialProductPages: ProductPageContent[] = [
     ],
     relatedLinks: [
       { label: "Professional Offices", href: "/professional-offices-insurance/" },
+      { label: "Small Business Insurance", href: "/small-business-insurance/" },
       { label: "Cyber Insurance", href: "/cyber-insurance/" },
       { label: "Directors & Officers", href: "/directors-officers-insurance/" },
     ],

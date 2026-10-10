@@ -219,12 +219,12 @@ export const yepLanePersonal: CoverageStreamItem[] = [
 export const yepLaneCommercial: CoverageStreamItem[] = [
   { label: "Trucking", href: "/trucking-insurance/", photoSlug: "trucking-insurance" },
   { label: "Contractors", href: "/contractors-insurance/", photoSlug: "contractors-insurance" },
+  { label: "Small Business", href: "/small-business-insurance/", photoSlug: "small-business-insurance" },
+  { label: "Professional Liability", href: "/professional-liability-insurance/", photoSlug: "professional-liability-insurance" },
   { label: "Restaurant", href: "/restaurant-insurance/", photoSlug: "restaurant-insurance" },
   { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
   { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "warehousing-insurance" },
   { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
-  { label: "Greenhouse", href: "/greenhouse-agribusiness-insurance/", photoSlug: "greenhouse" },
-  { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },
 ];
 
 /** Single-lane Yep carousel — personal + commercial breadth */
@@ -239,12 +239,12 @@ export const yepCarouselItems: CoverageStreamItem[] = [
   { label: "Personal Umbrella", href: "/personal-umbrella-insurance/", photoSlug: "personal-umbrella-insurance" },
   { label: "Trucking", href: "/trucking-insurance/", photoSlug: "trucking-insurance" },
   { label: "Contractors", href: "/contractors-insurance/", photoSlug: "contractors-insurance" },
+  { label: "Small Business", href: "/small-business-insurance/", photoSlug: "small-business-insurance" },
+  { label: "Professional Liability", href: "/professional-liability-insurance/", photoSlug: "professional-liability-insurance" },
   { label: "Restaurant", href: "/restaurant-insurance/", photoSlug: "restaurant-insurance" },
   { label: "Manufacturing", href: "/manufacturing-insurance/", photoSlug: "manufacturing-insurance" },
   { label: "Warehouse", href: "/warehousing-insurance/", photoSlug: "warehousing-insurance" },
   { label: "Farm", href: "/farm-insurance/", photoSlug: "farm-insurance" },
-  { label: "Greenhouse", href: "/greenhouse-agribusiness-insurance/", photoSlug: "greenhouse" },
-  { label: "Retail", href: "/retail-insurance/", photoSlug: "retail-insurance" },
 ];
 
 export type AwardBadge = {

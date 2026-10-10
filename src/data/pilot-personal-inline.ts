@@ -119,6 +119,8 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     ],
     relatedProducts: relatedLinksToProducts([
       { label: "Condo Insurance", href: "/condo-insurance/" },
+      { label: "Landlord Insurance", href: "/landlord-insurance/" },
+      { label: "Tenant Insurance", href: "/tenant-insurance/" },
       { label: "Personal Umbrella", href: "/personal-umbrella-insurance/" },
       { label: "Cottage Insurance", href: "/cottage-insurance/" },
     ]),
@@ -168,16 +170,16 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     slug: "condo-insurance",
     metaTitle: "Condo Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Condo insurance for Windsor-Essex unit owners — contents, improvements, liability, and loss assessment coverage explained by an independent broker.",
-    headline: "Condo Insurance",
+      "Condo insurance for Windsor-Essex unit owners — contents, improvements, liability, and loss assessment. Get a quote from a local independent brokerage.",
+    headline: "Condo Insurance in Windsor-Essex",
     heroLead:
-      "Coverage for what your corporation's master policy does not — your unit, your belongings, and your liability as an owner.",
+      "Condo insurance for Windsor-Essex unit owners covers what your corporation's master policy does not — your unit interest, your belongings, and your liability as an owner.",
     photographySlug: "condo",
     accentColor: "#6B7A8A",
     quoteHref: "/get-a-quote?type=home&homeType=condo",
     quoteLabel: "Get a Condo Quote",
     trustStatement:
-      "Condo insurance is for unit owners in Windsor-Essex — whether you live in the unit full time, use it as a secondary residence, or own it as an investment. It is designed around the split between the corporation's master policy and your personal interest in the unit.",
+      "Condo insurance is for unit owners in Windsor-Essex — whether you live in the unit full time, use it as a secondary residence, or own it as an investment. It is designed around the split between the corporation's master policy and your personal interest in the unit. Boards seeking master-policy coverage should review condominium corporation insurance instead.",
     coverageIntro:
       "Condo unit-owner insurance fills gaps the corporation's master policy does not — your belongings, unit improvements, liability, and certain assessment exposures. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
@@ -263,6 +265,10 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
       { label: "Home Insurance", href: "/home-insurance/" },
       { label: "Tenant Insurance", href: "/tenant-insurance/" },
       { label: "Landlord Insurance", href: "/landlord-insurance/" },
+      {
+        label: "Condominium Corporation Insurance",
+        href: "/condominium-corporation-insurance/",
+      },
       { label: "Cottage Insurance", href: "/cottage-insurance/" },
     ]),
     faqTitle: "Condo insurance FAQ",
@@ -298,18 +304,19 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
 
   "tenant-insurance": buildPilotProductConfig({
     slug: "tenant-insurance",
-    metaTitle: "Tenant Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaTitle:
+      "Tenant & Renters Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Tenant insurance for Windsor-Essex renters — contents, personal liability, and additional living expenses explained by an independent broker.",
-    headline: "Tenant Insurance",
+      "Tenant and renters insurance in Windsor-Essex — contents, liability, and living expenses. Get a quote from an independent local brokerage.",
+    headline: "Tenant Insurance in Windsor-Essex",
     heroLead:
-      "Protection for renters — your belongings, your liability, and help with living expenses if a covered loss displaces you.",
+      "Tenant and renters insurance in Windsor-Essex protects what you own in a rental — your belongings, your personal liability, and help with living expenses if a covered loss displaces you.",
     photographySlug: "tenant",
     accentColor: "#7A6B5A",
     quoteHref: "/get-a-quote?type=home&homeType=tenant",
     quoteLabel: "Get a Tenant Quote",
     trustStatement:
-      "Tenant insurance is for anyone renting an apartment, house, condo unit, or basement suite in Windsor-Essex. Whether you are a student, a young professional, or a long-term renter, a tenant policy protects your personal property and liability exposure.",
+      "Tenant insurance — often called renters insurance — is for anyone renting an apartment, house, condo unit, or basement suite in Windsor-Essex. Whether you are a student, a young professional, or a long-term renter, a tenant policy protects your personal property and liability exposure.",
     coverageIntro:
       "Tenant insurance focuses on what you own and your personal liability — the landlord's building policy generally does not replace either. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
@@ -411,16 +418,16 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     slug: "landlord-insurance",
     metaTitle: "Landlord Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Landlord insurance for Windsor-Essex rental owners — dwelling, liability, loss of rents, and tenant-related exposures through a broker.",
-    headline: "Landlord Insurance",
+      "Landlord and rental property insurance for Windsor-Essex owners — dwelling, liability, and loss of rents through an independent brokerage serving Ontario.",
+    headline: "Landlord Insurance in Windsor-Essex",
     heroLead:
-      "Coverage built for rental property owners — protect the dwelling, manage liability, and plan for income interruption after a covered loss.",
+      "Landlord and rental property insurance for Windsor-Essex owners — protect the dwelling, manage liability, and plan for income interruption after a covered loss.",
     photographySlug: "landlord",
     accentColor: "#8A7A6A",
     quoteHref: "/get-a-quote?type=home&homeType=landlord",
     quoteLabel: "Get a Landlord Quote",
     trustStatement:
-      "Landlord insurance is for Windsor-Essex property owners who rent out houses, duplexes, condo units, or other residential dwellings. Whether you have one rental or several, the right policy reflects how each property is occupied and maintained.",
+      "Landlord insurance is for Windsor-Essex property owners who rent out houses, duplexes, condo units, or other residential dwellings. Whether you have one rental or several, the right policy reflects how each property is occupied and maintained. Our Windsor brokerage also helps Ontario landlords review rental-dwelling coverage when owner-occupied home insurance is not the right fit.",
     coverageIntro:
       "Landlord policies address risks that come with owning property someone else lives in — different from an owner-occupied home policy. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
@@ -533,16 +540,16 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     slug: "motorcycle-insurance",
     metaTitle: "Motorcycle Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Motorcycle insurance for Windsor-Essex riders — liability, physical damage, seasonal use, and gear considerations explained by an independent broker.",
-    headline: "Motorcycle Insurance",
+      "Motorcycle insurance for Windsor-Essex riders — Ontario liability, physical damage, and seasonal use, explained by an independent brokerage.",
+    headline: "Motorcycle Insurance in Windsor-Essex",
     heroLead:
-      "Coverage built for how you ride — on-road liability, physical damage for your bike, and options that reflect Ontario's riding season.",
+      "Motorcycle insurance in Windsor-Essex built for how you ride — on-road liability, physical damage for your bike, and options that reflect Ontario's riding season.",
     photographySlug: "motorcycle",
     accentColor: "#5B7A99",
     quoteHref: "/get-a-quote?type=vehicle&vehicleType=motorcycle",
     quoteLabel: "Get a Motorcycle Quote",
     trustStatement:
-      "Motorcycle insurance is for Windsor-Essex riders with street bikes, cruisers, touring motorcycles, and other on-road machines — whether you commute occasionally or ride primarily on weekends during the season.",
+      "Motorcycle insurance is for Windsor-Essex riders with street bikes, cruisers, touring motorcycles, and other on-road machines — whether you commute occasionally or ride primarily on weekends during the season. Coverage follows Ontario motorcycle rules, not a car policy with the word motorcycle swapped in.",
     coverageIntro:
       "Motorcycle coverage is built around how you ride — on-road liability, accident benefits, physical damage for the bike, and gear — not a car policy with the word motorcycle swapped in. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [

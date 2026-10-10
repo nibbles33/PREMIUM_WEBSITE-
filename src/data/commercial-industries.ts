@@ -369,12 +369,12 @@ export const industryPages: IndustryPageContent[] = [
   },
   {
     slug: "trucking-insurance",
-    metaTitle: "Trucking Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaTitle: "Ontario Trucking Insurance | Windsor-Essex Brokers",
     metaDescription:
-      "Trucking insurance for Windsor-Essex motor carriers — commercial auto liability, physical damage, and cargo coordination through an independent broker.",
-    headline: "Trucking Insurance",
+      "Trucking insurance for Ontario motor carriers — commercial auto, cargo, and U.S. lane coordination from Premium Insurance Brokers in Windsor-Essex.",
+    headline: "Trucking Insurance for Ontario Motor Carriers",
     subhead:
-      "Motor carriers and for-hire trucking operations face a layered insurance picture — Ontario-regulated commercial automobile liability and physical damage for tractors and trailers on the highway, separate motor truck cargo coverage for freight you haul for others, and additional underwriting when your lanes cross into the United States. That is different from a single light commercial auto policy or from cargo-only coverage for goods in transit. Ontario operators of qualifying commercial motor vehicles must also hold a valid Commercial Vehicle Operator's Registration (CVOR) certificate from the Ministry of Transportation — a regulatory safety-registration program separate from purchasing insurance. Premium Insurance Brokers can help align automobile, cargo, and contract requirements to how your fleet actually runs.",
+      "Ontario motor carriers and for-hire trucking operations face a layered insurance picture — Ontario-regulated commercial automobile liability and physical damage for tractors and trailers on the highway, separate motor truck cargo coverage for freight you haul for others, and additional underwriting when your lanes cross into the United States. That is different from light commercial auto, cargo-only transit cover, or dump-truck jobsite hauling. Ontario operators of qualifying commercial motor vehicles must also hold a valid Commercial Vehicle Operator's Registration (CVOR) certificate from the Ministry of Transportation — a regulatory safety-registration program separate from purchasing insurance. From our Windsor-Essex office, Premium Insurance Brokers helps carriers across Ontario align automobile, cargo, and contract requirements to how the fleet actually runs.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
     quoteLabel: "Get a Trucking Quote",
     coverageIntro:
@@ -488,18 +488,20 @@ export const industryPages: IndustryPageContent[] = [
     ],
     ctaHeading: "Ready to cover your trucking operation?",
     ctaSubhead:
-      "Share your fleet list, lanes, commodities, and contract requirements — we will compare trucking automobile and cargo options.",
+      "Share your fleet list, lanes, commodities, and contract requirements — we will compare trucking automobile and cargo options for Ontario operators.",
     serviceName: "Trucking Insurance",
+    whoItIsFor:
+      "For Ontario motor carriers, owner-operators, and fleets — including Windsor-Essex operators — reviewed through an independent brokerage that can coordinate commercial automobile, cargo, and contract requirements for how you actually haul.",
   },
   {
     slug: "contractors-insurance",
     metaTitle:
       "Contractors Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Contractors insurance for Windsor-Essex trades — commercial general liability, tools, and project participation through an independent broker.",
-    headline: "Contractors Insurance",
+      "Contractors insurance for Windsor-Essex trades — CGL, tools, certificates, and project participation through a licensed Ontario brokerage.",
+    headline: "Contractors Insurance for Windsor-Essex Trades",
     subhead:
-      "Contractors insurance is about the operating contracting business — the trade or general contractor that bids work, manages crews and subcontractors, and moves between job sites. Commercial general liability addresses certain third-party injury and property-damage claims arising from your operations. Tools and contractors equipment coverage, where purchased, addresses owned tools and mobile equipment. Project property (builder's risk) and wrap-up or OCIP programs are usually project-specific overlays — not substitutes for ongoing business coverage. Needs differ across general contractors, electricians, plumbers and HVAC, roofers, excavation and concrete trades, renovators, and landscapers. Premium Insurance Brokers can help Windsor-Essex contractors align certificates, additional-insured requests, and trade exposures with how you actually work.",
+      "Contractors insurance is about the operating contracting business — the trade or general contractor that bids work, manages crews and subcontractors, and moves between job sites in Windsor-Essex and across Ontario. Commercial general liability addresses certain third-party injury and property-damage claims arising from your operations. Tools and contractors equipment coverage, where purchased, addresses owned tools and mobile equipment. Project property (builder's risk) and wrap-up or OCIP programs are usually project-specific overlays — not substitutes for ongoing business coverage. Owners and general contractors often require certificates of insurance, additional-insured status, and related wording before mobilization — those contractual asks must match what your policy can actually support. Needs differ across general contractors, electricians, plumbers and HVAC, roofers, excavation and concrete trades, renovators, and landscapers. Premium Insurance Brokers can help align certificates, additional-insured requests, and trade exposures with how you actually work.",
     quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Contractors Quote",
     coverageIntro:
@@ -618,8 +620,10 @@ export const industryPages: IndustryPageContent[] = [
     ],
     ctaHeading: "Ready to cover your contracting business?",
     ctaSubhead:
-      "Share your trade, revenue, equipment, and contract requirements — we will compare liability, tools, and project participation options.",
+      "Share your trade, revenue, equipment, and contract requirements — we will compare liability, tools, and project participation options for Windsor-Essex and Ontario work.",
     serviceName: "Contractors Insurance",
+    whoItIsFor:
+      "For Windsor–Essex general contractors and trade contractors — including those bidding jobs across Ontario — reviewed through an independent broker who can align liability, tools, certificates, additional-insured requests, and project participation with how you actually build. Ongoing contractor operations stay separate from project-specific builder's risk.",
   },
   {
     slug: "manufacturing-insurance",
