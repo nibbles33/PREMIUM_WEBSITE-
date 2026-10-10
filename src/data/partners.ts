@@ -191,11 +191,6 @@ export const allPartners: PartnerLogo[] = [
     alt: "Facility Association logo",
   },
   {
-    name: "The Guarantee",
-    src: "/images/partners/partner-the-guarantee.jpg",
-    alt: "The Guarantee logo",
-  },
-  {
     name: "Premier",
     src: "/images/partners/partner-premier.jpg",
     alt: "Premier logo",

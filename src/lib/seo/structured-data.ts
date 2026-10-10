@@ -1,5 +1,5 @@
 import { SITE_ORIGIN } from "@/lib/seo";
-import { businessNavClusters } from "@/data/nav-business";
+import { businessNavCategories } from "@/data/nav-business";
 import { personalNavGroups } from "@/data/nav-personal";
 import type { FaqItem } from "@/components/FaqAccordion";
 
@@ -149,7 +149,7 @@ function findPersonalLabel(slugPath: string): string | null {
 function findCommercialCluster(
   slugPath: string,
 ): { clusterTitle: string; label: string } | null {
-  for (const cluster of businessNavClusters) {
+  for (const cluster of businessNavCategories) {
     for (const link of cluster.links) {
       if (link.href === slugPath) {
         return { clusterTitle: cluster.title, label: link.label };

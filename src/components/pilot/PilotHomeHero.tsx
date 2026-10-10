@@ -9,9 +9,11 @@ import {
   PILOT_HERO_IMAGE,
 } from "@/data/photography";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
+import { track } from "@/lib/analytics";
 
 const QUOTE_HREF = "/get-a-quote/";
 const BROKER_HREF = "/contact/?intent=broker";
+const PERSONAL_FILMSTRIP_ID = "pilot-personal-filmstrip";
 
 type CarPhase = "idle" | "entering" | "settling" | "parked";
 
@@ -204,12 +206,31 @@ export default function PilotHomeHero() {
       </div>
 
       <div className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 text-center">
-        <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-white/50">
-          Explore coverage
-        </p>
-        <span className="mt-1 block text-gold" aria-hidden>
-          ↓
-        </span>
+        <button
+          type="button"
+          onClick={() => {
+            const target = document.getElementById(PERSONAL_FILMSTRIP_ID);
+            if (!target) return;
+            track("hero_explore_click", {
+              cta_id: "explore_coverage",
+              surface: "homepage",
+              destination_id: PERSONAL_FILMSTRIP_ID,
+            });
+            target.scrollIntoView({
+              behavior: reduceMotion ? "auto" : "smooth",
+              block: "start",
+            });
+          }}
+          className="group inline-flex flex-col items-center rounded-md px-3 py-2 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+          aria-label="Explore coverage — scroll to personal insurance products"
+        >
+          <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-white/50 transition-colors group-hover:text-white/70">
+            Explore coverage
+          </span>
+          <span className="mt-1 block text-gold" aria-hidden>
+            ↓
+          </span>
+        </button>
       </div>
     </section>
   );

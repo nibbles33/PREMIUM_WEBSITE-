@@ -21,7 +21,7 @@ const LABEL_CLASS =
  * Fallback never presents baseline 4.7 / 82 as live data.
  *
  * Note: "50+ Insurance Carriers" is intentionally NOT shown until owner confirms
- * the claim (repo currently lists 44 unique partners in allPartners).
+ * the claim (repo currently lists 43 unique partners in allPartners).
  */
 export default function PilotAuthorityStrip({ googleRating }: Props) {
   const { clients, combinedExperience, awards, google } = HOMEPAGE_AUTHORITY;
