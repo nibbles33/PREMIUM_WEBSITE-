@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import {
+  Fragment,
   useCallback,
   useEffect,
   useId,
@@ -156,6 +157,23 @@ function CascadingDesktopPanel({
   const [activeId, setActiveId] = useState(categories[0]?.id ?? "");
   const [panelVisible, setPanelVisible] = useState(true);
   const catRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const transitionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null,
+  );
+  const pendingIdRef = useRef<string | null>(null);
+  const activeIdRef = useRef(activeId);
+  /**
+   * Blocks hover-select briefly after mount so a remount under a stationary
+   * cursor (close/reopen) cannot auto-select a non-default category.
+   */
+  const hoverEnabledRef = useRef(false);
+  const hoverArmTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    activeIdRef.current = activeId;
+  }, [activeId]);
+
+  const productsPanelId = `${panelId}-products`;
   const active =
     categories.find((c) => c.id === activeId) ?? categories[0];
 
@@ -165,27 +183,79 @@ function CascadingDesktopPanel({
     ? [...industries, ...specialty]
     : categories;
 
+  const clearTransition = useCallback(() => {
+    if (transitionTimerRef.current !== null) {
+      clearTimeout(transitionTimerRef.current);
+      transitionTimerRef.current = null;
+    }
+    pendingIdRef.current = null;
+  }, []);
+
+  useEffect(() => {
+    hoverEnabledRef.current = false;
+    hoverArmTimerRef.current = setTimeout(() => {
+      hoverArmTimerRef.current = null;
+      hoverEnabledRef.current = true;
+    }, 50);
+    return () => {
+      clearTransition();
+      if (hoverArmTimerRef.current !== null) {
+        clearTimeout(hoverArmTimerRef.current);
+        hoverArmTimerRef.current = null;
+      }
+    };
+  }, [clearTransition]);
+
   const selectCategory = useCallback(
     (id: string, source: "hover" | "click" | "keyboard") => {
-      if (!id || id === activeId) return;
+      if (!id) return;
+
+      // Stationary cursor over a remounted panel must not auto-change category.
+      if (source === "hover" && !hoverEnabledRef.current) return;
+
+      // Re-hovering the already-visible category cancels any in-flight change.
+      if (id === activeIdRef.current) {
+        clearTransition();
+        setPanelVisible(true);
+        return;
+      }
+
+      // Ignore duplicate hover toward the same pending target.
+      if (
+        source === "hover" &&
+        pendingIdRef.current === id &&
+        transitionTimerRef.current !== null
+      ) {
+        return;
+      }
+
+      clearTransition();
+
       track("nav_category_select", {
         menu,
         category_id: id,
         surface: source === "hover" ? "nav_hover" : "nav_desktop",
       });
-      // Keyboard changes update immediately so aria-selected stays in sync.
-      if (reduceMotion || source === "keyboard") {
+
+      // Keyboard/click and reduced-motion apply immediately so a pending hover
+      // timeout can never overwrite a later intentional selection.
+      if (reduceMotion || source === "keyboard" || source === "click") {
         setActiveId(id);
         setPanelVisible(true);
         return;
       }
+
+      pendingIdRef.current = id;
       setPanelVisible(false);
-      window.setTimeout(() => {
+      transitionTimerRef.current = setTimeout(() => {
+        transitionTimerRef.current = null;
+        if (pendingIdRef.current !== id) return;
+        pendingIdRef.current = null;
         setActiveId(id);
         setPanelVisible(true);
       }, PANEL_TRANSITION_MS);
     },
-    [activeId, menu, reduceMotion],
+    [clearTransition, menu, reduceMotion],
   );
 
   const onCategoryKeyDown = (
@@ -225,20 +295,18 @@ function CascadingDesktopPanel({
   return (
     <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,2fr)_minmax(0,3fr)] overflow-hidden">
-        <div
-          className="nav-dropdown-panel-scroll min-h-0 overflow-y-auto overscroll-contain border-r border-border/80 bg-[#FAFAF8] p-3"
-          role="listbox"
-          aria-label={`${menu} categories`}
-          aria-activedescendant={
-            active ? `${panelId}-cat-${active.id}` : undefined
-          }
-        >
+        <div className="nav-dropdown-panel-scroll min-h-0 overflow-y-auto overscroll-contain border-r border-border/80 bg-[#FAFAF8] p-3">
           {industries.length && specialty.length ? (
             <p className="px-3 pb-1.5 pt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-dark">
               Industries
             </p>
           ) : null}
-          <ul className="space-y-0.5">
+          <div
+            role="tablist"
+            aria-label={`${menu} categories`}
+            aria-orientation="vertical"
+            className="space-y-0.5"
+          >
             {ordered.map((category, index) => {
               const isSpecialty = category.role === "specialty_group";
               const isFirstSpecialty =
@@ -247,7 +315,7 @@ function CascadingDesktopPanel({
                   index;
               const isActive = category.id === active?.id;
               return (
-                <li key={category.id}>
+                <Fragment key={category.id}>
                   {isFirstSpecialty ? (
                     <div
                       className="my-2 border-t border-border/80 pt-2"
@@ -261,8 +329,9 @@ function CascadingDesktopPanel({
                     }}
                     id={`${panelId}-cat-${category.id}`}
                     type="button"
-                    role="option"
+                    role="tab"
                     aria-selected={isActive}
+                    aria-controls={productsPanelId}
                     tabIndex={isActive ? 0 : -1}
                     className={`flex w-full min-h-11 items-center justify-between rounded-md px-3 py-2.5 text-left text-[13px] font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
                       isSpecialty
@@ -298,16 +367,16 @@ function CascadingDesktopPanel({
                       aria-hidden
                     />
                   </button>
-                </li>
+                </Fragment>
               );
             })}
-          </ul>
+          </div>
         </div>
 
         <div
-          id={`${panelId}-products`}
+          id={productsPanelId}
           className="nav-dropdown-panel-scroll min-h-0 overflow-y-auto overscroll-contain p-3 sm:p-4"
-          role="region"
+          role="tabpanel"
           aria-labelledby={
             active ? `${panelId}-cat-${active.id}` : undefined
           }
