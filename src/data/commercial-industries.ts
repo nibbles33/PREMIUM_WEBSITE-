@@ -502,7 +502,7 @@ export const industryPages: IndustryPageContent[] = [
     headline: "Contractors Insurance for Windsor-Essex Trades",
     subhead:
       "Contractors insurance is about the operating contracting business — the trade or general contractor that bids work, manages crews and subcontractors, and moves between job sites in Windsor-Essex and across Ontario. Commercial general liability addresses certain third-party injury and property-damage claims arising from your operations. Tools and contractors equipment coverage, where purchased, addresses owned tools and mobile equipment. Project property (builder's risk) and wrap-up or OCIP programs are usually project-specific overlays — not substitutes for ongoing business coverage. Owners and general contractors often require certificates of insurance, additional-insured status, and related wording before mobilization — those contractual asks must match what your policy can actually support. Needs differ across general contractors, electricians, plumbers and HVAC, roofers, excavation and concrete trades, renovators, and landscapers. Premium Insurance Brokers can help align certificates, additional-insured requests, and trade exposures with how you actually work.",
-    quoteHref: QUOTE_BUSINESS,
+    quoteHref: `${QUOTE_BUSINESS}&businessType=contractor`,
     quoteLabel: "Get a Contractors Quote",
     coverageIntro:
       "Core coverages for the operating contractor — liability and tools for ongoing work, plus project property and wrap-up participation when a specific job requires them.",
@@ -634,7 +634,7 @@ export const industryPages: IndustryPageContent[] = [
     headline: "Manufacturing Insurance",
     subhead:
       "Ordinary manufacturing and light industrial operations in Windsor–Essex — fabrication, machining, metalworking, plastics, assembly, and job-shop production — combine property values, production equipment, products liability, and income interruption risks that differ from retail, contracting, or warehouse-only businesses. Depending on your plant, that can mean commercial property for buildings, machinery, raw materials, work-in-progress, and finished goods; commercial general liability for certain third-party injury and property-damage claims tied to products you make; optional business interruption after a covered direct physical loss; and equipment breakdown coverage where purchased for internal mechanical or electrical failures not handled like fire or theft on a standard property form. Pollution, product recall expense, crime, and cyber may need separate review when exposures are material — not every manufacturer needs every specialty line on day one. Premium Insurance Brokers can help align limits to how you actually produce, stock, and ship.",
-    quoteHref: QUOTE_BUSINESS,
+    quoteHref: `${QUOTE_BUSINESS}&businessType=manufacturing`,
     quoteLabel: "Get a Manufacturing Quote",
     coverageIntro:
       "Manufacturing insurance is organized here around five exposures most Windsor–Essex plants and job shops review first — product liability, property and stock, income after a covered physical loss, equipment breakdown where purchased, and job-shop-specific values — because each insuring agreement has different triggers, limits, and endorsements.",
@@ -917,7 +917,7 @@ export const industryPages: IndustryPageContent[] = [
     headline: "Restaurant Insurance",
     subhead:
       "Restaurants in Windsor–Essex combine busy dining rooms, commercial kitchens, and — for many operators — AGCO-licensed alcohol service. Insurance needs to reflect those overlapping exposures: guest injury on your premises, property loss affecting kitchen equipment and inventory, food-related illness claims, and (where you serve alcohol) liability that standard general liability often excludes or limits. Ontario food service premises must also meet public health rules under O. Reg. 493/17, including having a certified food handler on site during operating hours — a regulatory requirement separate from what your insurance policy covers. A broker can help align property, liability, and optional endorsements to how your restaurant actually operates.",
-    quoteHref: QUOTE_BUSINESS,
+    quoteHref: `${QUOTE_BUSINESS}&businessType=restaurant`,
     quoteLabel: "Get a Restaurant Quote",
     coverageIntro:
       "Coverage options commonly reviewed for restaurants — from premises liability and property to liquor liability and spoilage — depend on your licence status, kitchen equipment, delivery model, and lease requirements.",

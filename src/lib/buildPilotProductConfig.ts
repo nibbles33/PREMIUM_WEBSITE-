@@ -144,6 +144,8 @@ export function buildPilotProductConfig(
     headline: input.headline,
     heroLead: input.heroLead,
     heroSupporting: input.heroSupporting,
+    heroCtasAfterHeadline:
+      input.schemaKind === "commercial" && input.layout !== "commercial-hub",
     photographySlug: input.photographySlug,
     accentColor: input.accentColor,
     quoteHref: input.quoteHref,
