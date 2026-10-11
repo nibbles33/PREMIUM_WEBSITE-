@@ -21,6 +21,7 @@ type ProductHeroProps = {
     | "headline"
     | "heroLead"
     | "heroSupporting"
+    | "heroCtasAfterHeadline"
     | "photographySlug"
     | "accentColor"
     | "quoteHref"
@@ -31,6 +32,41 @@ type ProductHeroProps = {
   >;
 };
 
+function HeroCtaCluster({
+  config,
+  className = "",
+}: {
+  config: Pick<
+    PilotProductPageConfig,
+    "quoteHref" | "quoteLabel" | "brokerHref" | "secondaryCta"
+  >;
+  className?: string;
+}) {
+  return (
+    <div className={className}>
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+        <PremiumGoldCTA href={config.quoteHref}>
+          {config.quoteLabel}
+        </PremiumGoldCTA>
+        <PremiumPilotButton
+          href={
+            config.secondaryCta?.href ??
+            config.brokerHref ??
+            "/contact/?intent=broker"
+          }
+          variant="secondary"
+          showArrow={false}
+        >
+          {config.secondaryCta?.label ?? "Talk to a Broker"}
+        </PremiumPilotButton>
+      </div>
+      <div className="mt-3">
+        <HeroPhoneLink tone="light" />
+      </div>
+    </div>
+  );
+}
+
 export default function ProductHero({ config }: ProductHeroProps) {
   const heroPhoto = config.photographySlug
     ? getPageHeroPhotography(config.photographySlug)
@@ -40,6 +76,7 @@ export default function ProductHero({ config }: ProductHeroProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [pointer, setPointer] = useState({ x: 0, y: 0 });
   const rafRef = useRef<number | null>(null);
+  const elevateCtas = config.heroCtasAfterHeadline === true;
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 767px)");
@@ -99,7 +136,12 @@ export default function ProductHero({ config }: ProductHeroProps) {
               >
                 {config.headline}
               </h1>
-              <p className="mt-4 max-w-prose text-[15px] leading-relaxed text-secondary sm:text-base lg:text-[1.125rem] lg:leading-[1.65]">
+              {elevateCtas ? (
+                <HeroCtaCluster config={config} className="mt-6 sm:mt-7" />
+              ) : null}
+              <p
+                className={`${elevateCtas ? "mt-6" : "mt-4"} max-w-prose text-[15px] leading-relaxed text-secondary sm:text-base lg:text-[1.125rem] lg:leading-[1.65]`}
+              >
                 {config.heroLead}
               </p>
               {config.heroSupporting ? (
@@ -107,21 +149,9 @@ export default function ProductHero({ config }: ProductHeroProps) {
                   {config.heroSupporting}
                 </p>
               ) : null}
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                <PremiumGoldCTA href={config.quoteHref}>
-                  {config.quoteLabel}
-                </PremiumGoldCTA>
-                <PremiumPilotButton
-                  href={config.secondaryCta?.href ?? config.brokerHref ?? "/contact/?intent=broker"}
-                  variant="secondary"
-                  showArrow={false}
-                >
-                  {config.secondaryCta?.label ?? "Talk to a Broker"}
-                </PremiumPilotButton>
-              </div>
-              <div className="mt-3">
-                <HeroPhoneLink tone="light" />
-              </div>
+              {!elevateCtas ? (
+                <HeroCtaCluster config={config} className="mt-8" />
+              ) : null}
             </div>
           </RevealOnScroll>
 
