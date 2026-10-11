@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
   BusinessNavDropdown,
@@ -17,9 +17,11 @@ import { businessNavCategories } from "@/data/nav-business";
 import { personalNavGroups } from "@/data/nav-personal";
 import { resourcesNavGroups } from "@/data/nav-resources";
 import { navItems } from "@/data/nav";
+import { BROKERAGE_PHONE_DISPLAY } from "@/lib/seo/structured-data";
 
 const QUOTE_HREF = "/get-a-quote/";
 const BROKER_HREF = "/contact/?intent=broker";
+const PHONE_HREF = "tel:+12267826000";
 
 function LogoMark({ className = "" }: { className?: string }) {
   return (
@@ -34,7 +36,7 @@ function LogoMark({ className = "" }: { className?: string }) {
         width={198}
         height={52}
         priority
-        className="h-[42px] w-auto sm:h-[47px] lg:h-[52px]"
+        className="h-[34px] w-auto max-w-[92px] object-contain object-left min-[380px]:h-[40px] min-[380px]:max-w-[130px] sm:h-[47px] sm:max-w-none lg:h-[52px]"
       />
     </Link>
   );
@@ -128,10 +130,11 @@ export default function Header() {
             </p>
             <div className="flex flex-wrap items-center justify-end gap-x-3 gap-y-0.5 text-[10px] font-medium text-[#D0AD26] sm:gap-x-4 sm:text-[11px]">
               <a
-                href="tel:+12267826000"
+                href={PHONE_HREF}
+                data-track-location="header"
                 className="transition-colors hover:text-[#E4C558]"
               >
-                226-782-6000
+                {BROKERAGE_PHONE_DISPLAY}
               </a>
               <span className="text-[#D0AD26]/40" aria-hidden>
                 |
@@ -147,8 +150,8 @@ export default function Header() {
           className="border-b border-border"
           style={{ backgroundColor: "#FAFAF8", borderBottomColor: "#E5E3DC" }}
         >
-          <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4 sm:gap-4 sm:px-6 lg:h-[4.5rem] lg:gap-5 lg:px-8 xl:max-w-7xl xl:gap-8">
-            <LogoMark className="relative z-10" />
+          <div className="mx-auto flex h-16 max-w-6xl items-center gap-2 px-3 min-[380px]:gap-3 min-[380px]:px-4 sm:gap-4 sm:px-6 lg:h-[4.5rem] lg:gap-5 lg:px-8 xl:max-w-7xl xl:gap-8">
+            <LogoMark className="relative z-10 min-w-0 shrink" />
 
             <nav
               className="ml-2 hidden min-w-0 flex-1 items-center justify-center gap-3 lg:flex xl:ml-4 xl:gap-5"
@@ -186,17 +189,26 @@ export default function Header() {
               </Link>
             </div>
 
-            <div className="ml-auto flex shrink-0 items-center gap-2 lg:hidden">
+            <div className="ml-auto flex min-w-0 shrink-0 items-center gap-1.5 sm:gap-2 lg:hidden">
+              <a
+                href={PHONE_HREF}
+                data-track-location="header"
+                aria-label={`Call Premium Insurance Brokers at ${BROKERAGE_PHONE_DISPLAY}`}
+                className="inline-flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-1 rounded-md border border-charcoal/15 bg-white px-2 text-xs font-medium text-charcoal transition-colors hover:border-gold/50 hover:bg-offwhite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[380px]:px-2.5 sm:px-3 sm:text-[13px]"
+              >
+                <Phone className="h-4 w-4 shrink-0 text-gold-dark" aria-hidden />
+                <span className="max-[379px]:sr-only">Call</span>
+              </a>
               <Link
                 href={QUOTE_HREF}
                 data-track-location="header"
-                className="btn-primary inline-flex h-9 items-center justify-center rounded-md bg-gold px-3 text-xs font-medium text-charcoal"
+                className="btn-primary inline-flex min-h-11 min-w-0 items-center justify-center whitespace-nowrap rounded-md bg-gold px-2 text-[11px] font-medium text-charcoal min-[380px]:px-2.5 min-[380px]:text-xs sm:px-3"
               >
                 Get a Quote →
               </Link>
               <button
                 type="button"
-                className="interactive-press inline-flex h-10 w-10 items-center justify-center text-charcoal"
+                className="interactive-press inline-flex h-11 w-11 shrink-0 items-center justify-center text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
                 aria-expanded={menuOpen}
                 aria-controls="mobile-nav"
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -273,6 +285,16 @@ export default function Header() {
               />
             </nav>
             <div className="mt-6 flex flex-col gap-3">
+              <a
+                href={PHONE_HREF}
+                data-track-location="header"
+                aria-label={`Call Premium Insurance Brokers at ${BROKERAGE_PHONE_DISPLAY}`}
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-charcoal/15 bg-white text-sm font-medium text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                onClick={closeMenu}
+              >
+                <Phone className="h-4 w-4 text-gold-dark" aria-hidden />
+                Call {BROKERAGE_PHONE_DISPLAY}
+              </a>
               <Link
                 href={BROKER_HREF}
                 className="btn-secondary inline-flex h-12 items-center justify-center rounded-md border border-border text-sm font-medium text-gold-dark"

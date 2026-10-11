@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import HeroPhoneLink from "@/components/pilot/HeroPhoneLink";
 import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 import ProtectionArc from "@/components/pilot/ProtectionArc";
 import {
@@ -192,6 +193,9 @@ export default function PilotHomeHero() {
             >
               Talk to a Broker
             </PremiumPilotButton>
+          </div>
+          <div className="mt-4">
+            <HeroPhoneLink tone="dark" />
           </div>
         </div>
       </div>
