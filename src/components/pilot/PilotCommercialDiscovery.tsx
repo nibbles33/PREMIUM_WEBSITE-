@@ -22,6 +22,7 @@ import {
 } from "@/data/photography";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { track } from "@/lib/analytics";
+import { contextualQuoteCtaForDiscoveryCategory } from "@/lib/quote/contextualQuoteHref";
 
 function productSlugFromHref(href: string): string {
   return href.replace(/^\/|\/$/g, "") || "unknown";
@@ -110,6 +111,8 @@ export default function PilotCommercialDiscovery() {
     active.role === "specialty_group"
       ? "Explore Specialty & Community"
       : `Explore ${active.label}`;
+
+  const discoveryQuote = contextualQuoteCtaForDiscoveryCategory(active.id);
 
   return (
     <section
@@ -275,7 +278,7 @@ export default function PilotCommercialDiscovery() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 flex shrink-0 flex-col gap-3 sm:flex-row">
+                <div className="mt-6 flex shrink-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <PremiumPilotButton
                     href={active.href}
                     className="w-full sm:w-auto"
@@ -290,6 +293,17 @@ export default function PilotCommercialDiscovery() {
                   >
                     All Commercial
                   </PremiumPilotButton>
+                  {discoveryQuote ? (
+                    <PremiumPilotButton
+                      href={discoveryQuote.href}
+                      variant="secondary"
+                      showArrow={false}
+                      data-track-location="discovery"
+                      className="pilot-charcoal-secondary-btn w-full sm:w-auto"
+                    >
+                      {discoveryQuote.label}
+                    </PremiumPilotButton>
+                  ) : null}
                 </div>
               </div>
             </div>

@@ -1448,7 +1448,7 @@ export const industryPages: IndustryPageContent[] = [
     headline: "Retail Insurance",
     subhead:
       "Ordinary storefront retail — clothing boutiques, gift shops, electronics stores, furniture and home-goods shops, and specialty retailers — combines premises liability, stock and fixture values, and product-related claims in a package that differs from food retail, pharmacy, convenience, or fuel operations. Depending on your store, that can mean commercial general liability for customer incidents on the sales floor, commercial property for fixtures, equipment, and inventory, optional business interruption after a covered physical loss, and products liability for goods you sell or distribute — each subject to the policies you purchase. Not every shop sells online, carries high-theft inventory, or needs the same crime or cyber endorsements. Premium Insurance Brokers can help Windsor–Essex retailers align coverage to your actual merchandise, lease, and sales channels.",
-    quoteHref: QUOTE_BUSINESS,
+    quoteHref: `${QUOTE_BUSINESS}&businessType=retail`,
     quoteLabel: "Get a Retail Quote",
     coverageIntro:
       "Retail insurance is usually organized around four exposures most storefront operators share — customer liability, property and stock, income after a covered loss, and products you sell — with optional crime, cyber, and delivery coverage reviewed separately where your operation needs them.",
