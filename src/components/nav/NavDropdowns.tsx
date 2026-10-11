@@ -122,13 +122,15 @@ function NavDropdownLink({
 function QuoteCtaLink({
   menu,
   onNavigate,
+  href = QUOTE_HREF,
 }: {
   menu: string;
   onNavigate?: () => void;
+  href?: string;
 }) {
   return (
     <Link
-      href={QUOTE_HREF}
+      href={href}
       data-track-location={`nav_${menu}`}
       data-track-menu={menu}
       className="btn-primary inline-flex min-h-11 flex-1 items-center justify-center rounded-md bg-gold px-4 text-[13px] font-medium text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark sm:flex-none"
@@ -704,6 +706,7 @@ export function MobileCascadingNavSection({
   categories,
   onNavigate,
   showQuoteCta = false,
+  quoteHref = QUOTE_HREF,
   hubHref,
   hubLabel,
 }: {
@@ -711,6 +714,8 @@ export function MobileCascadingNavSection({
   categories: CascadingCategory[];
   onNavigate: () => void;
   showQuoteCta?: boolean;
+  /** Contextual Get a Quote href for the current page (defaults to generic). */
+  quoteHref?: string;
   hubHref?: string;
   hubLabel?: string;
 }) {
@@ -831,6 +836,7 @@ export function MobileCascadingNavSection({
                     <QuoteCtaLink
                       menu={`mobile_${menuId}`}
                       onNavigate={onNavigate}
+                      href={quoteHref}
                     />
                   ) : null}
                   {hubHref ? (

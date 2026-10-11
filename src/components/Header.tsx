@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
@@ -17,9 +18,9 @@ import { businessNavCategories } from "@/data/nav-business";
 import { personalNavGroups } from "@/data/nav-personal";
 import { resourcesNavGroups } from "@/data/nav-resources";
 import { navItems } from "@/data/nav";
+import { contextualQuoteHrefFromPathname } from "@/lib/quote/contextualQuoteHref";
 import { BROKERAGE_PHONE_DISPLAY } from "@/lib/seo/structured-data";
 
-const QUOTE_HREF = "/get-a-quote/";
 const BROKER_HREF = "/contact/?intent=broker";
 const PHONE_HREF = "tel:+12267826000";
 
@@ -96,6 +97,8 @@ function DesktopNavItem({
 }
 
 export default function Header() {
+  const pathname = usePathname();
+  const quoteHref = contextualQuoteHrefFromPathname(pathname);
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
 
@@ -175,7 +178,7 @@ export default function Header() {
                 Talk to a Broker
               </Link>
               <Link
-                href={QUOTE_HREF}
+                href={quoteHref}
                 data-track-location="header"
                 className="btn-primary group inline-flex h-10 items-center justify-center rounded-md bg-gold px-4 text-sm font-medium text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark xl:px-5"
               >
@@ -200,7 +203,7 @@ export default function Header() {
                 <span className="max-[379px]:sr-only">Call</span>
               </a>
               <Link
-                href={QUOTE_HREF}
+                href={quoteHref}
                 data-track-location="header"
                 className="btn-primary inline-flex min-h-11 min-w-0 items-center justify-center whitespace-nowrap rounded-md bg-gold px-2 text-[11px] font-medium text-charcoal min-[380px]:px-2.5 min-[380px]:text-xs sm:px-3"
               >
@@ -244,6 +247,7 @@ export default function Header() {
                 }))}
                 onNavigate={closeMenu}
                 showQuoteCta
+                quoteHref={quoteHref}
                 hubHref="/personal/"
                 hubLabel="View personal insurance hub →"
               />
@@ -257,6 +261,7 @@ export default function Header() {
                 }))}
                 onNavigate={closeMenu}
                 showQuoteCta
+                quoteHref={quoteHref}
                 hubHref="/commercial-insurance/"
                 hubLabel="View commercial insurance hub →"
               />
@@ -303,7 +308,7 @@ export default function Header() {
                 Talk to a Broker
               </Link>
               <Link
-                href={QUOTE_HREF}
+                href={quoteHref}
                 data-track-location="header"
                 className="btn-primary inline-flex h-12 items-center justify-center rounded-md bg-gold text-sm font-medium text-charcoal"
                 onClick={closeMenu}
