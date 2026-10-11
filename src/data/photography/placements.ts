@@ -16,6 +16,12 @@ export type PhotographyPlacement = {
   /** Temporary AI-generated image — replace with authentic photography later. */
   isTemporary?: boolean;
   temporaryNote?: string;
+  /**
+   * Slot reserved for an approved asset that is not yet in the repo.
+   * When true, heroes/related cards must not render this placement.
+   */
+  awaitingAsset?: boolean;
+  awaitingNote?: string;
 };
 
 const TEMPORARY_NOTE =
@@ -262,6 +268,47 @@ export const photographyPlacements: PhotographyPlacement[] = [
     src: "/images/photography/commercial/farm-insurance.webp",
     alt: "Tractor cultivating a field with farm buildings and silos",
     confidence: "HIGH",
+  },
+  // Agriculture expansion heroes (PR #46 sources) — distinct from farm-insurance.webp.
+  {
+    slug: "agriculture",
+    category: "commercial",
+    route: "/agriculture/",
+    src: "/images/photography/commercial/agriculture.webp",
+    alt: "Cornfield, red barn with grain silos, and tractor working a field at golden hour",
+    confidence: "HIGH",
+    // Keep barn/silos and working tractor together in the taller hero crop.
+    objectPosition: "46% 42%",
+  },
+  {
+    slug: "crop-insurance",
+    category: "commercial",
+    route: "/crop-insurance/",
+    src: "/images/photography/commercial/crop-insurance.webp",
+    alt: "Rows of healthy soybean plants stretching toward a treeline at golden hour",
+    confidence: "HIGH",
+    // Bias slightly down so crop foliage stays dominant under cover crop.
+    objectPosition: "50% 58%",
+  },
+  {
+    slug: "livestock-insurance",
+    category: "commercial",
+    route: "/livestock-insurance/",
+    src: "/images/photography/commercial/livestock-insurance.webp",
+    alt: "Holstein dairy cows in a modern open barn at golden hour",
+    confidence: "HIGH",
+    // Keep the forward-facing cow and herd heads in frame.
+    objectPosition: "58% 42%",
+  },
+  {
+    slug: "farm-equipment-insurance",
+    category: "commercial",
+    route: "/farm-equipment-insurance/",
+    src: "/images/photography/commercial/farm-equipment-insurance.webp",
+    alt: "Combine harvester cutting a golden wheat field at sunset",
+    confidence: "HIGH",
+    // Keep the combine body and header visible in the taller hero crop.
+    objectPosition: "62% 48%",
   },
   {
     slug: "dump-truck-insurance",
@@ -558,7 +605,10 @@ function normalizePhotographyRoute(href: string): string {
 export function getPhotographySlugFromHref(href: string): string {
   const route = normalizePhotographyRoute(href);
   const placement = photographyPlacements.find(
-    (p) => p.route === route && p.confidence !== "LOW",
+    (p) =>
+      p.route === route &&
+      p.confidence !== "LOW" &&
+      !p.awaitingAsset,
   );
   if (placement) return placement.slug;
   return "commercial-insurance";
@@ -570,12 +620,19 @@ export function getPhotographyBySlug(
   return photographyPlacements.find((placement) => placement.slug === slug);
 }
 
-/** Returns wired photography for page routes (HIGH confidence only). */
+/**
+ * Returns wired photography for page routes.
+ * Skips LOW-confidence placements and slots still awaiting an approved asset.
+ */
 export function getPageHeroPhotography(
   slug: string,
 ): PhotographyPlacement | undefined {
   const placement = getPhotographyBySlug(slug);
-  if (!placement || placement.confidence === "LOW") {
+  if (
+    !placement ||
+    placement.confidence === "LOW" ||
+    placement.awaitingAsset
+  ) {
     return undefined;
   }
   return placement;

@@ -75,8 +75,8 @@ type BuildPilotProductConfigInput = {
   ctaSubhead: string;
   ctaQuoteLabel?: string;
   serviceName: string;
-  /** Drives BreadcrumbList IA — personal hub vs commercial hub. */
-  schemaKind?: "personal" | "commercial" | "other";
+  /** Drives BreadcrumbList IA — personal, commercial, or agriculture hub. */
+  schemaKind?: "personal" | "commercial" | "agriculture" | "other";
 };
 
 function slugify(value: string): string {
@@ -145,7 +145,9 @@ export function buildPilotProductConfig(
     heroLead: input.heroLead,
     heroSupporting: input.heroSupporting,
     heroCtasAfterHeadline:
-      input.schemaKind === "commercial" && input.layout !== "commercial-hub",
+      (input.schemaKind === "commercial" ||
+        input.schemaKind === "agriculture") &&
+      input.layout !== "commercial-hub",
     photographySlug: input.photographySlug,
     accentColor: input.accentColor,
     quoteHref: input.quoteHref,

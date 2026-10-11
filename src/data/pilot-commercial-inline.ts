@@ -7,14 +7,22 @@ import {
   Building2,
   FileCheck,
   Gavel,
+  Leaf,
   Package,
   ScrollText,
   Shield,
+  Sprout,
   Tractor,
   Warehouse,
   Wrench,
   Zap,
 } from "lucide-react";
+import {
+  AGRICORP_PRODUCTION_INSURANCE_URL,
+  AGRICULTURE_ACCENT,
+  QUOTE_FARM,
+  agricultureRelatedExcept,
+} from "@/data/agriculture";
 import {
   COMMERCIAL_ACCENT,
   QUOTE_BUSINESS,
@@ -262,8 +270,8 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     heroLead:
       "Farm insurance packages address working agricultural property in Essex County — barns, machinery, farm liability, and livestock — where purchased and subject to causes of loss, limits, and endorsements on your policy. That is different from a standard homeowner policy for a rural residence, from greenhouse and controlled-environment agribusiness on a separate route, and from Agricorp Production Insurance or other government AgriInsurance programs for crop yield loss. Licensed trucks and passenger vehicles used on public roads still require Ontario automobile insurance. Premium Insurance Brokers can help family and commercial farms compare private farm property and liability programs for how you actually farm.",
     photographySlug: "farm-insurance",
-    accentColor: "#7A8B5C",
-    quoteHref: "/get-a-quote?type=farm",
+    accentColor: AGRICULTURE_ACCENT,
+    quoteHref: QUOTE_FARM,
     quoteLabel: "Get a Farm Quote",
     trustStatement:
       "For Windsor–Essex working farms — family, mixed, crop, and livestock operations — reviewed through an independent broker who can coordinate farm property, liability, machinery, and livestock coverage without duplicating greenhouse agribusiness or government crop programs.",
@@ -360,12 +368,11 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ],
     brokerSteps: commercialBrokerSteps,
     relatedProducts: relatedLinksToProducts([
-      { label: "Greenhouse & Agribusiness", href: "/greenhouse-agribusiness-insurance/" },
+      ...agricultureRelatedExcept("farm-insurance"),
       { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
-      { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     ]),
     relatedIntro:
-      "Greenhouse operations, farm trucks, and broader commercial coverage may need separate routes — explore related products from Premium.",
+      "Crop programs, livestock, greenhouse or nursery operations, and equipment scheduling often need their own review — explore related Agriculture pages from Premium.",
     faqTitle: "Farm insurance FAQ",
     faqIntro: "Straight answers to common farm insurance questions.",
     faqItems: [
@@ -382,7 +389,7 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
       {
         question: "What about livestock — is mortality covered?",
         answer:
-          "Livestock is often insured against specified perils such as fire, lightning, windstorm, or collision on a scheduled basis. Separate mortality or disease programs may be available in some markets with different exclusions — government programs for disease control are not the same as private livestock insurance. Confirm perils, valuation, and epidemic exclusions with your broker.",
+          "Livestock is often insured against specified perils such as fire, lightning, windstorm, or collision on a scheduled basis. Separate mortality or disease programs may be available in some markets with different exclusions — government programs for disease control are not the same as private livestock insurance. Confirm perils, valuation, and epidemic exclusions with your broker. See our Livestock Insurance page for a deeper overview.",
       },
       {
         question: "Are farm vehicles included in a farm policy?",
@@ -392,105 +399,105 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
       {
         question: "What information do I need for a farm quote?",
         answer:
-          "Expect questions about farm type and acreage, building descriptions and values, equipment lists, livestock counts and values, farming and side-income activities (including farm stands or agritourism), custom farming, fuel storage, prior claims, and current coverage. If you participate in Agricorp Production Insurance or other programs, note those separately — they are government crop programs, not substitutes for private farm property insurance.",
+          "Expect questions about farm type and acreage, building descriptions and values, equipment lists, livestock counts and values, farming and side-income activities (including farm stands or agritourism), custom farming, fuel storage, prior claims, and current coverage. If you participate in Agricorp Production Insurance or other programs, note those separately — they are government crop programs administered by Agricorp, not products Premium sells or processes.",
       },
     ],
     ctaHeading: "Ready to cover your farm?",
     ctaSubhead:
       "Tell us about your buildings, equipment, livestock, and sales activities — we'll compare farm programs and explain what fits.",
     serviceName: "Farm Insurance",
-  schemaKind: "commercial",
+    schemaKind: "agriculture",
   }),
   "greenhouse-agribusiness-insurance": buildPilotProductConfig({
     slug: "greenhouse-agribusiness-insurance",
     metaTitle:
-      "Greenhouse & Agribusiness Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "Greenhouse & Nursery Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Greenhouse and agribusiness operations in Leamington, Essex County, and Windsor-Essex — reviewed through an independent broker.",
-    eyebrow: "Greenhouse & Agribusiness",
-    headline: "Greenhouse & Agribusiness Insurance",
+      "Greenhouse and nursery insurance for Leamington, Essex County, and Windsor-Essex operations — structures, equipment, stock treatment, and liability through an independent broker.",
+    eyebrow: "Greenhouse & Nursery",
+    headline: "Greenhouse & Nursery Insurance",
     heroLead:
-      "Greenhouse and agribusiness operations in Leamington, Essex County, and Windsor-Essex.",
+      "Greenhouse and nursery operations in Leamington, Essex County, and Windsor-Essex rely on specialized structures, climate systems, and growing stock that standard commercial packages may not describe the same way as a retail shop or office. Premium Insurance Brokers helps review property, equipment, liability, and related coverages for how your controlled-environment or nursery operation actually runs — without treating Health Canada–licensed cannabis cultivation as the same product route.",
     photographySlug: "greenhouse",
     accentColor: "#6B8F71",
-    quoteHref: "/get-a-quote?type=business&industry=greenhouse",
+    quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a Greenhouse Quote",
     trustStatement:
-      "Greenhouse and agribusiness operations in Leamington, Essex County, and Windsor-Essex — reviewed through an independent broker.",
+      "For greenhouse and nursery operators in Leamington, Essex County, and Windsor-Essex — reviewed through an independent broker who can coordinate structures, equipment, stock treatment, and liability without assuming every plant or crop exposure is automatic.",
     coverageIntro:
-      "Coverage areas commonly reviewed for greenhouse and agribusiness operations — what applies depends on your policy, insurer, and operation.",
+      "Coverage areas commonly reviewed for greenhouse and nursery operations — what applies depends on your policy, insurer, scheduled property, and how growing stock is defined.",
     coverageItems: [
       {
-        title: "Greenhouse Buildings & Structures",
-        shortLabel: "Greenhouse Property",
+        title: "Greenhouse & Nursery Structures",
+        shortLabel: "Structures",
         description:
-          "Greenhouse structures and other insured buildings/property can represent a significant part of the operation's exposure. Coverage depends on the property insured, policy terms and selected coverages.",
-        detailTitle: "Why greenhouse structures drive insurable values",
+          "Greenhouse structures, nursery buildings, and other insured property can represent a significant part of the operation's exposure. Coverage depends on the property insured, policy terms, and selected coverages.",
+        detailTitle: "Why structures drive insurable values",
         detailDescription:
-          "Glass bays, poly tunnels, and climate-controlled structures in Leamington and Essex County often represent a large share of total property values alongside tenant improvements and attached packing areas. Building types, construction, and total property values should be reviewed with your broker so limits and descriptions reflect the operation accurately — coverage depends on what is scheduled and how the policy defines insured property.",
+          "Glass bays, poly tunnels, climate-controlled houses, and nursery buildings in Leamington and Essex County often represent a large share of total property values alongside tenant improvements and packing areas. Building types, construction, and total property values should be reviewed with your broker so limits and descriptions reflect the operation accurately.",
         icon: Building2,
       },
       {
         title: "Equipment & Machinery",
         shortLabel: "Equipment",
         description:
-          "Greenhouse operations may rely on heating, ventilation, irrigation and other specialized operational equipment. Coverage for equipment and machinery depends on the policy and coverages purchased.",
-        detailTitle: "When heating and irrigation systems keep the operation running",
+          "Heating, ventilation, irrigation, and other specialized operational equipment may be central to greenhouse and nursery production. Coverage depends on the policy and coverages purchased.",
+        detailTitle: "When climate and irrigation systems keep production running",
         detailDescription:
-          "Greenhouse operations depend heavily on heating, ventilation, and irrigation — systems that are often central to daily production and may sit outside a basic property form's treatment of contents. Your broker should review how these assets are described and insured, especially where equipment values or specialized machinery endorsements apply.",
+          "Greenhouse and nursery operations often depend on heating, ventilation, and irrigation — systems that may sit outside a basic property form's treatment of contents. Your broker should review how these assets are described and insured, especially where equipment values or specialized machinery endorsements apply.",
         icon: Wrench,
       },
       {
-        title: "Business Property & Stock",
+        title: "Business Property & Growing Stock",
         shortLabel: "Stock & Property",
         description:
-          "Consider business contents, supplies and eligible stock or property used in the operation. How particular property is insured varies by policy and insurer.",
-        detailTitle: "How plants, supplies, and stock are treated on the policy",
+          "Business contents, supplies, and eligible stock or growing property should be reviewed carefully. How plants, nursery stock, and seasonal inventory are insured varies by policy and insurer — and should not be assumed automatic.",
+        detailTitle: "How plants, nursery stock, and supplies are treated",
         detailDescription:
-          "Growing stock, plants, and seasonal inventory can be treated very differently from fixed equipment or building coverage — and should not be assumed to be included automatically. How particular property is insured varies by policy and insurer; this warrants a focused review rather than a generic contents limit.",
+          "Growing stock, plants, and seasonal inventory can be treated very differently from fixed equipment or building coverage. How particular property is insured varies by market; this warrants a focused review rather than a generic contents limit.",
         icon: Package,
       },
       {
         title: "Business Interruption",
         shortLabel: "Interruption",
         description:
-          "A covered property loss can also interrupt operations and affect business income. Business interruption coverage may respond to covered loss of income following an insured loss, subject to the policy terms, limits and coverage purchased.",
+          "A covered property loss can interrupt operations and affect business income. Business interruption coverage may respond to covered loss of income following an insured loss, subject to policy terms, limits, and coverage purchased.",
         detailTitle: "When a covered loss forces a shutdown",
         detailDescription:
-          "A covered fire, equipment failure, or property loss can halt production during peak growing or shipping periods — when payroll, utilities, and lease costs may continue. Business interruption coverage may help with covered loss of income following an insured loss, subject to waiting periods, limits, and the policy terms purchased. Seasonal revenue patterns in Windsor–Essex operations can affect what limits make sense.",
+          "A covered fire, equipment failure, or property loss can halt production during peak growing or shipping periods — when payroll, utilities, and lease costs may continue. Waiting periods, limits, and seasonal revenue patterns in Windsor–Essex operations affect what makes sense.",
         icon: Briefcase,
       },
       {
         title: "Commercial Liability",
         shortLabel: "Liability",
         description:
-          "Greenhouse and agribusiness operations can have liability exposures arising from their premises and business activities. The appropriate liability protection depends on the nature and scale of the operation.",
+          "Greenhouse and nursery operations can have liability exposures from premises, visitors, contractors, and business activities. Appropriate protection depends on the nature and scale of the operation.",
         detailTitle: "Liability from premises, visitors, and daily operations",
         detailDescription:
-          "Loading bays, customer pickup areas, contractor visits, and on-site activity create third-party injury or property-damage exposure distinct from crop or equipment losses. The appropriate liability protection depends on the nature and scale of the operation — limits and endorsements should reflect how the greenhouse actually interacts with staff, suppliers, and the public.",
+          "Loading bays, customer pickup, contractor visits, and on-site activity create third-party injury or property-damage exposure distinct from stock or equipment losses. Limits and endorsements should reflect how the operation interacts with staff, suppliers, and the public.",
         icon: Shield,
       },
       {
         title: "Equipment Breakdown",
         shortLabel: "Breakdown",
         description:
-          "Heating, electrical, ventilation, irrigation and other critical systems can create significant equipment-breakdown exposure. Equipment breakdown coverage may be available where purchased and remains subject to policy terms and exclusions.",
+          "Heating, electrical, ventilation, irrigation, and other critical systems can create equipment-breakdown exposure. Coverage may be available where purchased and remains subject to policy terms and exclusions.",
         detailTitle: "Critical system failure during peak season",
         detailDescription:
-          "A compressor, boiler, or irrigation controller failure can disrupt climate control and threaten crop viability — losses that base property coverage may treat differently from sudden mechanical or electrical breakdown. Equipment breakdown coverage may be available where purchased; triggers, sublimits, and exclusions require careful review because coverage depends on the policy, cause of loss, and endorsements in place.",
+          "A compressor, boiler, or irrigation controller failure can disrupt climate control and threaten plant viability — losses that base property coverage may treat differently from sudden mechanical or electrical breakdown. Triggers, sublimits, and exclusions require careful review.",
         icon: Zap,
       },
     ],
     considerations: [
       {
-        title: "Greenhouse construction and total property values",
+        title: "Construction and total property values",
         description:
-          "Building types, construction, and total property values should be reviewed with your broker so limits and descriptions reflect the operation accurately.",
+          "Building types, construction, and total property values should be reviewed with your broker so limits and descriptions reflect the greenhouse or nursery accurately.",
       },
       {
         title: "Heating, ventilation, and irrigation systems",
         description:
-          "Heating, ventilation, and irrigation systems are often central to greenhouse operations — your broker should review how these are described and insured.",
+          "Climate and irrigation systems are often central to these operations — your broker should review how they are described and insured.",
       },
       {
         title: "Dependence on utilities and critical equipment",
@@ -503,9 +510,9 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
           "The financial impact of a shutdown can vary by season and operation — business interruption limits and terms warrant a focused broker review.",
       },
       {
-        title: "Treatment of plants, crops, and growing stock",
+        title: "Treatment of plants, nursery stock, and growing inventory",
         description:
-          "How plants, crops, and growing stock are treated can vary significantly by policy and insurer — this should be reviewed rather than assumed.",
+          "How plants, nursery stock, and growing inventory are treated can vary significantly by policy and insurer — this should be reviewed rather than assumed.",
       },
       {
         title: "Seasonal changes in values or operations",
@@ -515,45 +522,424 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ],
     brokerSteps: commercialBrokerSteps,
     relatedProducts: relatedLinksToProducts([
-      { label: "Farm Insurance", href: "/farm-insurance/" },
-      { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+      ...agricultureRelatedExcept("greenhouse-agribusiness-insurance"),
       { label: "Cannabis Producer", href: "/cannabis-producer-insurance/" },
     ]),
     relatedIntro:
-      "One policy is rarely the whole picture. Explore other coverage from Premium.",
-    faqTitle: "Greenhouse & agribusiness FAQ",
+      "Open-field farms, crop programs, livestock, and equipment scheduling are separate Agriculture routes — cannabis cultivation stays on its own commercial product page.",
+    faqTitle: "Greenhouse & nursery FAQ",
     faqIntro: "Straight answers to common questions.",
     faqItems: [
       {
-        question: "What insurance does a greenhouse business need?",
+        question: "What insurance does a greenhouse or nursery need?",
         answer:
-          "It depends on the operation. A greenhouse may have exposures involving buildings, specialized equipment, business property, liability, business interruption and other risks. Premium can review the operation and help identify the coverages that should be considered.",
+          "It depends on the operation. Structures, specialized equipment, business property, growing stock treatment, liability, business interruption, and equipment breakdown are commonly reviewed. Premium can help identify coverages that should be considered for how you operate — without promising that any specific item or peril is automatic.",
       },
       {
-        question: "Does greenhouse insurance cover plants or crops?",
+        question: "Does greenhouse or nursery insurance cover plants or stock?",
         answer:
-          "Coverage for plants, crops and growing stock can vary significantly by policy and insurer. It should not be assumed to be included automatically. We can review how your inventory is treated and identify available coverage options.",
+          "Coverage for plants, nursery stock, and growing inventory can vary significantly by policy and insurer. It should not be assumed to be included automatically. We can review how your inventory is treated and identify options available in the markets we access.",
       },
       {
         question: "What happens if heating or other critical equipment breaks down?",
         answer:
-          "Greenhouses can depend heavily on heating, ventilation, irrigation and other systems. Equipment breakdown and resulting losses require careful review because coverage depends on the policy, cause of loss and endorsements purchased.",
+          "Greenhouses and nurseries can depend heavily on heating, ventilation, irrigation, and related systems. Equipment breakdown and resulting losses require careful review because coverage depends on the policy, cause of loss, and endorsements purchased.",
       },
       {
         question: "Can business interruption coverage protect a greenhouse?",
         answer:
-          "Business interruption coverage may help with covered loss of income following an insured loss, subject to the policy's terms, limits, waiting periods and coverage purchased. The appropriate limits should reflect the operation's actual financial exposure.",
+          "Business interruption coverage may help with covered loss of income following an insured loss, subject to the policy's terms, limits, waiting periods, and coverage purchased. Appropriate limits should reflect the operation's actual financial exposure.",
       },
       {
-        question: "Do you insure greenhouse operations in Leamington and Essex County?",
+        question: "Do you insure greenhouse and nursery operations in Leamington and Essex County?",
         answer:
-          "Premium Insurance Brokers serves businesses throughout Windsor-Essex and can assist greenhouse and agribusiness operations with reviewing their commercial insurance needs.",
+          "Premium Insurance Brokers serves operators throughout Windsor-Essex and can assist greenhouse and nursery businesses with reviewing their commercial insurance needs. Licensed cannabis cultivation is a separate product conversation.",
       },
     ],
-    ctaHeading: "Ready to discuss your greenhouse operation?",
+    ctaHeading: "Ready to discuss your greenhouse or nursery?",
     ctaSubhead:
-      "Tell us about your operation — a broker will compare options and explain what fits.",
-    serviceName: "Greenhouse & Agribusiness Insurance",
-  schemaKind: "commercial",
+      "Tell us about your structures, systems, and stock — a broker will compare options and explain what may fit.",
+    serviceName: "Greenhouse & Nursery Insurance",
+    schemaKind: "agriculture",
+  }),
+  "crop-insurance": buildPilotProductConfig({
+    slug: "crop-insurance",
+    metaTitle:
+      "Crop Insurance & Agricorp Referral | Premium Insurance Brokers",
+    metaDescription:
+      "Ontario Production Insurance is administered by Agricorp. Premium Insurance Brokers points you there for crop programs and can help with separate private farm insurance needs.",
+    eyebrow: "Crop Insurance",
+    headline: "Crop Insurance",
+    heroLead:
+      "Looking for crop Production Insurance in Ontario? That program is administered by Agricorp — the agency that handles enrolment, premiums, and claims for Production Insurance. Premium Insurance Brokers does not sell or administer Agricorp programs; we send you to their official resources so you can review details and apply directly.",
+    heroSupporting:
+      "If you also need private farm insurance — buildings, machinery, liability, livestock, and related coverages we can place — start a farm quote with us. We’re here for the parts of your farm program that go through private insurance markets.",
+    photographySlug: "crop-insurance",
+    accentColor: AGRICULTURE_ACCENT,
+    quoteHref: AGRICORP_PRODUCTION_INSURANCE_URL,
+    quoteLabel: "Visit Agricorp",
+    secondaryCta: {
+      label: "Get a Farm Quote",
+      href: QUOTE_FARM,
+    },
+    trustStatement:
+      "Agricorp administers Ontario Production Insurance. Premium can assist with separate private farm and agriculture coverages available through the markets we access.",
+    coverageHeading: "How crop protection usually splits",
+    coverageIntro:
+      "Use this page to see where Agricorp fits — and where a private farm insurance conversation with Premium may still help.",
+    coverageItems: [
+      {
+        id: "agricorp-production-insurance",
+        title: "Agricorp Production Insurance",
+        shortLabel: "Agricorp",
+        description:
+          "Ontario Production Insurance is a government program administered by Agricorp. It addresses certain production and yield risks defined in Agricorp contracts — enrolment, premiums, and claims run through Agricorp, not through this brokerage.",
+        detailTitle: "Go to Agricorp for program details and applications",
+        detailDescription:
+          "Commodity eligibility, coverage levels, deadlines, and claim rules are set by Agricorp and the applicable program wording. Premium Insurance Brokers does not process Agricorp applications or represent Agricorp. Visit Agricorp’s Production Insurance pages for authoritative information and to enrol or manage a policy.",
+        icon: Sprout,
+      },
+      {
+        id: "private-farm-package",
+        title: "Private Farm Package Coverages",
+        shortLabel: "Farm Package",
+        description:
+          "Barns, outbuildings, scheduled machinery, farm liability, and related private farm coverages are typically placed through insurance markets — separate from Agricorp yield programs.",
+        detailTitle: "What brokers can help quote",
+        detailDescription:
+          "If your question is about buildings, equipment, liability, or other private farm exposures, a farm insurance review with Premium is the right starting point. Those policies do not replace Agricorp Production Insurance for insured yield loss.",
+        icon: Warehouse,
+      },
+      {
+        id: "field-vs-structure",
+        title: "Standing Crop vs Structures & Equipment",
+        shortLabel: "Boundaries",
+        description:
+          "Yield loss on standing crops under a government program is a different risk than fire or storm damage to a barn, bin, or tractor. Confirm which agreement responds before assuming one policy covers both.",
+        detailTitle: "Do not assume one policy covers every farm loss",
+        detailDescription:
+          "A production shortfall after drought or disease may belong under Agricorp wording where you are enrolled. Damage to buildings or scheduled equipment is usually a private property question. Mixing the two without checking often creates false comfort.",
+        icon: Leaf,
+      },
+      {
+        id: "greenhouse-nursery-path",
+        title: "Greenhouse & Nursery Operations",
+        shortLabel: "Greenhouse",
+        description:
+          "Controlled-environment and nursery operations often need a different commercial review than open-field crop programs. See our Greenhouse & Nursery page for that path.",
+        detailTitle: "Different structures, different underwriting",
+        detailDescription:
+          "Glasshouses, poly tunnels, and nursery stock treatment are reviewed under greenhouse or nursery commercial programs — not as a substitute for Agricorp field-crop Production Insurance.",
+        icon: Building2,
+      },
+    ],
+    considerations: [
+      {
+        title: "Start with Agricorp for Production Insurance",
+        description:
+          "Enrolment, deadlines, and commodity rules for Ontario Production Insurance are published by Agricorp. Use their site for authoritative program details and applications.",
+      },
+      {
+        title: "Private farm insurance is a separate conversation",
+        description:
+          "Buildings, machinery, liability, and related farm coverages are quoted through private markets when available — they are not a substitute for Agricorp Production Insurance.",
+      },
+      {
+        title: "Ask about any specialty crop products before assuming coverage",
+        description:
+          "If you are interested in private specialty crop options, availability depends on markets and underwriting at the time of quote. A broker can tell you what can actually be placed.",
+      },
+      {
+        title: "Greenhouse and nursery follow a different path",
+        description:
+          "Controlled-environment and nursery operations are reviewed on our Greenhouse & Nursery page rather than as open-field Production Insurance.",
+      },
+    ],
+    considerationsPresentation: "expandable",
+    brokerSteps: commercialBrokerSteps,
+    relatedProducts: relatedLinksToProducts(
+      agricultureRelatedExcept("crop-insurance"),
+    ),
+    relatedIntro:
+      "When you need private farm, livestock, greenhouse, or equipment coverage — explore the Agriculture pages Premium can help quote.",
+    faqTitle: "Crop insurance FAQ",
+    faqIntro: "Clear answers about Agricorp and private farm coverage.",
+    faqItems: [
+      {
+        question: "Does Premium Insurance Brokers sell Agricorp Production Insurance?",
+        answer:
+          "No. Agricorp administers Ontario Production Insurance and related government crop programs. We refer you to Agricorp for those products and help separately with private farm insurance we can place.",
+      },
+      {
+        question: "Where do I apply for Production Insurance?",
+        answer:
+          "Apply and manage Production Insurance through Agricorp using their official website and processes. Start at Agricorp’s Production Insurance program pages for current enrolment information.",
+      },
+      {
+        question: "What can Premium help with instead?",
+        answer:
+          "We can help review private farm property, buildings, machinery, farm liability, livestock scheduling, greenhouse or nursery commercial coverages, and related placements available in the markets we access — subject to underwriting and policy terms.",
+      },
+      {
+        question: "If I have Agricorp coverage, do I still need farm insurance?",
+        answer:
+          "Often yes for buildings, equipment, liability, and other private exposures that Production Insurance is not designed to replace. The right mix depends on your operation — a broker can help separate government crop programs from private farm package needs.",
+      },
+    ],
+    ctaHeading: "Ready for Agricorp — or a private farm review?",
+    ctaSubhead:
+      "Visit Agricorp for Production Insurance, or start a farm quote with Premium for private coverages we can place.",
+    ctaQuoteLabel: "Visit Agricorp",
+    serviceName: "Crop Insurance Information",
+    schemaKind: "agriculture",
+  }),
+  "livestock-insurance": buildPilotProductConfig({
+    slug: "livestock-insurance",
+    metaTitle:
+      "Livestock & Animal Insurance in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Livestock and animal insurance questions for Windsor-Essex farms — named perils, scheduling, mortality limitations, and how animals fit a farm package review.",
+    eyebrow: "Livestock Insurance",
+    headline: "Livestock / Animal Insurance",
+    heroLead:
+      "Dairy, beef, swine, poultry, and other animal operations often schedule livestock separately from barns and machinery. Private farm programs may offer named-peril livestock coverage, and some markets offer optional mortality products — each with its own valuation rules and exclusions. Disease, epidemic, and government disease-management programs are not the same as a private livestock schedule. Premium Insurance Brokers helps Windsor–Essex producers review how animals are described and insured alongside the rest of the farm package.",
+    photographySlug: "livestock-insurance",
+    accentColor: AGRICULTURE_ACCENT,
+    quoteHref: QUOTE_FARM,
+    quoteLabel: "Get a Farm Quote",
+    trustStatement:
+      "For Windsor–Essex livestock and mixed farms — reviewed through an independent broker who can discuss scheduling, valuation, and common limitations without promising mortality, disease, or epidemic coverage that a given market does not offer.",
+    coverageHeading: "What we typically review",
+    coverageIntro:
+      "Livestock conversations usually cover how animals are scheduled, which perils may apply, and where private coverage stops — actual terms depend on the insurer and form.",
+    coverageItems: [
+      {
+        id: "named-peril-livestock",
+        title: "Named-Peril Livestock Scheduling",
+        shortLabel: "Named Perils",
+        description:
+          "Many farm packages can schedule livestock against specified perils such as fire, lightning, windstorm, or collision — subject to scheduling, valuation methods, limits, and policy exclusions.",
+        detailTitle: "A schedule is not a blanket guarantee",
+        detailDescription:
+          "Animals usually need to be described by type and value. Perils are defined in the form; losses outside those perils are not assumed covered. Update schedules after purchases or sales so limits reflect current herd or flock values.",
+        icon: Beef,
+      },
+      {
+        id: "mortality-programs",
+        title: "Mortality Programs (Where Available)",
+        shortLabel: "Mortality",
+        description:
+          "Optional livestock mortality coverage may be available in some markets with different underwriting and exclusions than a basic named-peril schedule. Availability is not guaranteed for every species or operation.",
+        detailTitle: "Ask what can actually be quoted",
+        detailDescription:
+          "Mortality products, when offered, often exclude disease, epidemic, or other causes unless specifically endorsed. Premium will only present options available for your animals and location at the time of quote.",
+        icon: Shield,
+      },
+      {
+        id: "barns-and-confinement",
+        title: "Barns, Confinement & Related Property",
+        shortLabel: "Buildings",
+        description:
+          "Livestock housing, milking parlours, and related structures are usually property coverages — distinct from the animal schedule itself.",
+        detailTitle: "Buildings and animals are often separate insuring agreements",
+        detailDescription:
+          "A barn fire may involve both building and livestock claims under different sections. Construction, heating, and vacancy affect property underwriting separately from herd valuation.",
+        icon: Warehouse,
+      },
+      {
+        id: "liability-and-escape",
+        title: "Liability & Escape Exposures",
+        shortLabel: "Liability",
+        description:
+          "Animals escaping onto roads or injuring visitors can create liability questions under farm liability forms — subject to definitions, exclusions, and endorsements.",
+        detailTitle: "Operations and public interaction change the exposure",
+        detailDescription:
+          "Farm liability is not a substitute for every animal-related claim. Direct sales, agritourism, and custom work may need additional review beyond a base farm liability limit.",
+        icon: FileCheck,
+      },
+    ],
+    considerations: [
+      {
+        title: "Species, counts, and valuation basis",
+        description:
+          "Insurers review animal types, counts, and whether values use actual cash value, agreed value, or another basis. Keep schedules current after purchases or sales.",
+      },
+      {
+        title: "Disease and epidemic exclusions are common",
+        description:
+          "Do not assume private livestock coverage responds to disease or epidemic loss. Confirm exclusions and any available buy-backs before a loss occurs.",
+      },
+      {
+        title: "Government disease programs are separate",
+        description:
+          "Veterinary disease management and government response programs are not the same as private livestock insurance. Ask which agreement would actually respond.",
+      },
+      {
+        title: "Mixed farms need a whole-package view",
+        description:
+          "Livestock rarely sits alone — buildings, feed, equipment, and liability belong in the same review as the animal schedule.",
+      },
+    ],
+    considerationsPresentation: "expandable",
+    brokerSteps: commercialBrokerSteps,
+    relatedProducts: relatedLinksToProducts(
+      agricultureRelatedExcept("livestock-insurance"),
+    ),
+    relatedIntro:
+      "Livestock is usually one part of a wider Agriculture review — farm packages, crop programs, greenhouse routes, and equipment scheduling.",
+    faqTitle: "Livestock insurance FAQ",
+    faqIntro: "Straight answers about animals on farm insurance programs.",
+    faqItems: [
+      {
+        question: "Does farm insurance automatically cover livestock?",
+        answer:
+          "Not automatically. Livestock is often scheduled separately against specified perils, with its own limits and valuation rules. Confirm what is listed on your policy rather than assuming animals are included with the barn.",
+      },
+      {
+        question: "Is livestock mortality covered?",
+        answer:
+          "Basic named-peril livestock sections differ from optional mortality programs. Mortality coverage, where available, commonly excludes disease or epidemic causes unless specifically addressed. We will only describe options that can be quoted for your operation.",
+      },
+      {
+        question: "What information do you need for a livestock quote?",
+        answer:
+          "Expect questions about species and counts, values, housing, related farm property, prior losses, and whether you also need buildings, equipment, or liability reviewed as part of a farm package.",
+      },
+      {
+        question: "Do you cover hobby farms and commercial herds the same way?",
+        answer:
+          "Scale and purpose affect underwriting. Hobby, part-time, and commercial operations may land in different markets or forms. Accurate descriptions help us find an appropriate path.",
+      },
+    ],
+    ctaHeading: "Ready to review livestock with your farm package?",
+    ctaSubhead:
+      "Tell us about your animals, housing, and related farm exposures — we will explain what markets may allow.",
+    serviceName: "Livestock Insurance",
+    schemaKind: "agriculture",
+  }),
+  "farm-equipment-insurance": buildPilotProductConfig({
+    slug: "farm-equipment-insurance",
+    metaTitle:
+      "Farm Equipment Coverage in Windsor-Essex | Premium Insurance Brokers",
+    metaDescription:
+      "Farm equipment and machinery coverage for Windsor-Essex operations — scheduled implements, transit considerations, and the line between field equipment and licensed road vehicles.",
+    eyebrow: "Farm Equipment",
+    headline: "Farm Equipment Coverage",
+    heroLead:
+      "Tractors, combines, implements, and portable farm equipment are usually scheduled on a farm property program — not treated like a personal auto policy. Licensed trucks and other road vehicles still need Ontario automobile insurance. Premium Insurance Brokers helps Essex County and Windsor–Essex producers review equipment lists, values, off-farm use, and how machinery fits alongside buildings and liability.",
+    photographySlug: "farm-equipment-insurance",
+    accentColor: AGRICULTURE_ACCENT,
+    quoteHref: QUOTE_FARM,
+    quoteLabel: "Get a Farm Quote",
+    trustStatement:
+      "For Windsor–Essex farms that depend on machinery — reviewed through an independent broker who separates field equipment scheduling from compulsory automobile insurance for licensed road vehicles.",
+    coverageHeading: "Equipment topics we review",
+    coverageIntro:
+      "Equipment coverage is organized around scheduling, location, use, and the hard split between unlicensed field machinery and licensed vehicles.",
+    coverageItems: [
+      {
+        id: "scheduled-machinery",
+        title: "Scheduled Machinery & Implements",
+        shortLabel: "Machinery",
+        description:
+          "Tractors, combines, implements, and portable farm equipment — where scheduled — may be insured against covered perils subject to location limits, deductibles, and policy terms.",
+        detailTitle: "Lists and values matter",
+        detailDescription:
+          "Underinsurance after upgrades or new purchases is a common gap. Peak-season equipment in use should match what the schedule actually describes.",
+        icon: Tractor,
+      },
+      {
+        id: "transit-and-off-farm",
+        title: "Transit & Off-Farm Use",
+        shortLabel: "Transit",
+        description:
+          "Custom farming, equipment loaned to neighbours, and movement between locations may need transit or off-farm extensions — disclose how machinery is actually used.",
+        detailTitle: "Own-farm assumptions break down quickly",
+        detailDescription:
+          "If equipment regularly leaves the premises for custom work or shared use, say so at quote time. Silent assumptions about location limits create claim disputes later.",
+        icon: Wrench,
+      },
+      {
+        id: "road-vs-field",
+        title: "Licensed Road Vehicles vs Field Equipment",
+        shortLabel: "Auto Boundary",
+        description:
+          "Pickup trucks, grain trucks, and other licensed vehicles on public roads require Ontario automobile insurance. Unlicensed field machinery is typically a farm property scheduling question.",
+        detailTitle: "One farm policy does not replace auto insurance",
+        detailDescription:
+          "Coordinate commercial or personal auto policies for farm trucks with your farm package. Do not assume implements coverage extends to licensed road use.",
+        icon: Shield,
+      },
+      {
+        id: "breakdown-and-attachments",
+        title: "Breakdown & High-Value Attachments",
+        shortLabel: "Breakdown",
+        description:
+          "Equipment breakdown and high-value attachments may be treated differently from basic scheduled property. Availability depends on the market and endorsements purchased.",
+        detailTitle: "Ask before assuming mechanical breakdown is included",
+        detailDescription:
+          "Sudden mechanical or electrical breakdown is not the same as a fire or collision peril on a property form. Review whether breakdown coverage is available and appropriate for critical machines.",
+        icon: Zap,
+      },
+    ],
+    considerations: [
+      {
+        title: "Keep the equipment schedule current",
+        description:
+          "New tractors, headers, and implements should be added promptly. Values should reflect what it would cost to replace scheduled items under the policy’s valuation basis.",
+      },
+      {
+        title: "Custom farming and shared equipment",
+        description:
+          "Off-farm use and equipment shared with neighbours change exposure. Disclose custom-work revenue and borrowing arrangements when quoting.",
+      },
+      {
+        title: "Seasonal peaks and storage",
+        description:
+          "Harvest and planting concentrate values and use. Storage locations and unattended equipment can affect underwriting questions.",
+      },
+      {
+        title: "Separate auto policies for road vehicles",
+        description:
+          "Licensed vehicles need automobile insurance under Ontario’s compulsory framework. Align those policies with your farm package rather than assuming overlap.",
+      },
+    ],
+    considerationsPresentation: "expandable",
+    brokerSteps: commercialBrokerSteps,
+    relatedProducts: relatedLinksToProducts([
+      ...agricultureRelatedExcept("farm-equipment-insurance"),
+      { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
+    ]),
+    relatedIntro:
+      "Equipment sits beside farm property, livestock, greenhouse operations, and — for licensed trucks — commercial auto.",
+    faqTitle: "Farm equipment FAQ",
+    faqIntro: "Straight answers about machinery on farm programs.",
+    faqItems: [
+      {
+        question: "Is farm equipment covered automatically?",
+        answer:
+          "Equipment is typically scheduled with its own limits and terms. Do not assume every tractor or implement is included without checking the schedule and peril structure.",
+      },
+      {
+        question: "Does farm equipment coverage include my farm truck?",
+        answer:
+          "Licensed trucks used on public roads generally need Ontario automobile insurance. Unlicensed field machinery is usually handled on the farm property schedule. Confirm both sides rather than relying on one policy.",
+      },
+      {
+        question: "What if I do custom farming for neighbours?",
+        answer:
+          "Custom work can extend equipment and liability beyond own-farm use. Disclose that activity so transit, location, and liability questions can be reviewed accurately.",
+      },
+      {
+        question: "Can I insure leased or financed equipment?",
+        answer:
+          "Leased or financed machinery often needs to be scheduled and may involve loss-payee interests. Bring finance documents to the quote so interests and values can be reflected correctly.",
+      },
+    ],
+    ctaHeading: "Ready to review your farm equipment schedule?",
+    ctaSubhead:
+      "Share your machinery list, values, and how equipment is used — we will compare farm program options that may fit.",
+    serviceName: "Farm Equipment Coverage",
+    schemaKind: "agriculture",
   }),
 };

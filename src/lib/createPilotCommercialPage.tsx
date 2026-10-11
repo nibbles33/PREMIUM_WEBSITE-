@@ -27,10 +27,33 @@ const farmMetadata: Metadata = buildPageMetadata({
 
 const greenhouseMetadata: Metadata = buildPageMetadata({
   title:
-    "Greenhouse & Agribusiness Insurance in Windsor-Essex | Premium Insurance Brokers",
+    "Greenhouse & Nursery Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
-    "Greenhouse and agribusiness operations in Leamington, Essex County, and Windsor-Essex — reviewed through an independent broker.",
+    "Greenhouse and nursery insurance for Leamington, Essex County, and Windsor-Essex operations — structures, equipment, stock treatment, and liability through an independent broker.",
   path: "/greenhouse-agribusiness-insurance/",
+});
+
+const cropMetadata: Metadata = buildPageMetadata({
+  title: "Crop Insurance & Agricorp Referral | Premium Insurance Brokers",
+  description:
+    "Ontario crop Production Insurance is delivered by Agricorp. Premium Insurance Brokers explains the distinction and helps with private farm package coverages we can place.",
+  path: "/crop-insurance/",
+});
+
+const livestockMetadata: Metadata = buildPageMetadata({
+  title:
+    "Livestock & Animal Insurance in Windsor-Essex | Premium Insurance Brokers",
+  description:
+    "Livestock and animal insurance questions for Windsor-Essex farms — named perils, scheduling, mortality limitations, and how animals fit a farm package review.",
+  path: "/livestock-insurance/",
+});
+
+const farmEquipmentMetadata: Metadata = buildPageMetadata({
+  title:
+    "Farm Equipment Coverage in Windsor-Essex | Premium Insurance Brokers",
+  description:
+    "Farm equipment and machinery coverage for Windsor-Essex operations — scheduled implements, transit considerations, and the line between field equipment and licensed road vehicles.",
+  path: "/farm-equipment-insurance/",
 });
 
 function metadataForSlug(slug: string): Metadata {
@@ -38,6 +61,9 @@ function metadataForSlug(slug: string): Metadata {
   if (slug === "bonding-insurance") return bondingMetadata;
   if (slug === "farm-insurance") return farmMetadata;
   if (slug === "greenhouse-agribusiness-insurance") return greenhouseMetadata;
+  if (slug === "crop-insurance") return cropMetadata;
+  if (slug === "livestock-insurance") return livestockMetadata;
+  if (slug === "farm-equipment-insurance") return farmEquipmentMetadata;
 
   const industry = industryPages.find((page) => page.slug === slug);
   if (industry) {

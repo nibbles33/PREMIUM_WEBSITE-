@@ -270,13 +270,6 @@ export default function Header() {
                 links={agricultureNavLinks}
                 onNavigate={closeMenu}
               />
-              <Link
-                href="/about/"
-                className="flex min-h-14 items-center border-b border-border py-4 text-lg font-medium text-charcoal"
-                onClick={closeMenu}
-              >
-                About
-              </Link>
               <MobileCascadingNavSection
                 title="Resources"
                 categories={resourcesNavGroups.map((g) => ({
@@ -288,6 +281,13 @@ export default function Header() {
                 hubHref="/resources/"
                 hubLabel="View all resources →"
               />
+              <Link
+                href="/about/"
+                className="flex min-h-14 items-center border-b border-border py-4 text-lg font-medium text-charcoal"
+                onClick={closeMenu}
+              >
+                About
+              </Link>
             </nav>
             <div className="mt-6 flex flex-col gap-3">
               <a

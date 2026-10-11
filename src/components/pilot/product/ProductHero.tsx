@@ -32,6 +32,13 @@ type ProductHeroProps = {
   >;
 };
 
+function externalLinkProps(href: string) {
+  if (/^https?:\/\//i.test(href)) {
+    return { target: "_blank" as const, rel: "noopener noreferrer" };
+  }
+  return {};
+}
+
 function HeroCtaCluster({
   config,
   className = "",
@@ -42,20 +49,25 @@ function HeroCtaCluster({
   >;
   className?: string;
 }) {
+  const secondaryHref =
+    config.secondaryCta?.href ??
+    config.brokerHref ??
+    "/contact/?intent=broker";
+
   return (
     <div className={className}>
       <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-        <PremiumGoldCTA href={config.quoteHref}>
+        <PremiumGoldCTA
+          href={config.quoteHref}
+          {...externalLinkProps(config.quoteHref)}
+        >
           {config.quoteLabel}
         </PremiumGoldCTA>
         <PremiumPilotButton
-          href={
-            config.secondaryCta?.href ??
-            config.brokerHref ??
-            "/contact/?intent=broker"
-          }
+          href={secondaryHref}
           variant="secondary"
           showArrow={false}
+          {...externalLinkProps(secondaryHref)}
         >
           {config.secondaryCta?.label ?? "Talk to a Broker"}
         </PremiumPilotButton>
