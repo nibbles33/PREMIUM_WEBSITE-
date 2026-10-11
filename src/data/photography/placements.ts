@@ -7,6 +7,12 @@ export type PhotographyPlacement = {
   src: string;
   alt: string;
   confidence: PhotographyConfidence;
+  /**
+   * Optional CSS object-position for product heroes that need a non-center
+   * focal point under object-fit: cover (e.g. subjects on the far right).
+   * Omit to keep the default center crop used sitewide.
+   */
+  objectPosition?: string;
   /** Temporary AI-generated image — replace with authentic photography later. */
   isTemporary?: boolean;
   temporaryNote?: string;
@@ -317,9 +323,11 @@ export const photographyPlacements: PhotographyPlacement[] = [
     slug: "property-management-insurance",
     category: "commercial",
     route: "/property-management-insurance/",
-    src: "/images/photography/commercial/real-estate-insurance.webp",
-    alt: "Property professional reviewing plans and portfolio documentation",
+    src: "/images/photography/commercial/property-management-insurance.webp",
+    alt: "Property manager with tablet and keys meeting a client at a building entrance",
     confidence: "HIGH",
+    // Keep manager, client, and entrance in the taller hero crop.
+    objectPosition: "72% 48%",
   },
   {
     slug: "convenience-store-insurance",
@@ -421,9 +429,11 @@ export const photographyPlacements: PhotographyPlacement[] = [
     slug: "employment-practices-liability-insurance",
     category: "commercial",
     route: "/employment-practices-liability-insurance/",
-    src: "/images/photography/commercial/executive-leadership.webp",
-    alt: "Senior leadership collaborating on business strategy in a modern office",
+    src: "/images/photography/commercial/employment-practices-liability-insurance.webp",
+    alt: "Professionals discussing workplace matters in a modern conference room",
     confidence: "HIGH",
+    // Preserve the speaker on the right within the taller hero crop.
+    objectPosition: "86% 42%",
   },
   {
     slug: "cyber-insurance",
@@ -461,9 +471,11 @@ export const photographyPlacements: PhotographyPlacement[] = [
     slug: "liquor-liability-insurance",
     category: "commercial",
     route: "/liquor-liability-insurance/",
-    src: "/images/photography/commercial/restaurant-insurance.webp",
-    alt: "Chefs preparing food in a busy commercial kitchen",
+    src: "/images/photography/commercial/liquor-liability-insurance.webp",
+    alt: "Bartender serving a cocktail to guests at an upscale bar",
     confidence: "HIGH",
+    // Preserve bartender on the far right within the taller hero crop.
+    objectPosition: "92% 42%",
   },
   {
     slug: "business-interruption-insurance",
@@ -485,9 +497,11 @@ export const photographyPlacements: PhotographyPlacement[] = [
     slug: "professional-liability-insurance",
     category: "commercial",
     route: "/professional-liability-insurance/",
-    src: "/images/photography/commercial/professional-offices-insurance.webp",
-    alt: "Business professionals collaborating in a modern conference room",
+    src: "/images/photography/commercial/professional-liability-insurance.webp",
+    alt: "Advisor and client reviewing work together on a laptop in a modern office",
     confidence: "HIGH",
+    // Keep both consulting subjects in frame under the taller hero crop.
+    objectPosition: "68% 40%",
   },
   {
     slug: "pollution-liability-insurance",

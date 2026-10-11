@@ -174,7 +174,16 @@ export default function ProductHero({ config }: ProductHeroProps) {
                     priority
                     sizes={PILOT_AUTO_HERO_IMAGE.sizes}
                     quality={PILOT_AUTO_HERO_IMAGE.quality}
-                    className="object-cover object-center"
+                    className={
+                      heroPhoto.objectPosition
+                        ? "object-cover"
+                        : "object-cover object-center"
+                    }
+                    style={
+                      heroPhoto.objectPosition
+                        ? { objectPosition: heroPhoto.objectPosition }
+                        : undefined
+                    }
                   />
                   <div
                     className="pointer-events-none absolute inset-0"
