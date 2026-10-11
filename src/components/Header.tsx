@@ -9,9 +9,12 @@ import {
   BusinessNavDropdown,
   CascadingNavDropdown,
   MobileCascadingNavSection,
+  MobileNavSection,
   PersonalNavDropdown,
+  SimpleNavDropdown,
 } from "@/components/nav/NavDropdowns";
 import { businessNavCategories } from "@/data/nav-business";
+import { lifeInsuranceNavLinks } from "@/data/nav-life";
 import { personalNavGroups } from "@/data/nav-personal";
 import { resourcesNavGroups } from "@/data/nav-resources";
 import { navItems } from "@/data/nav";
@@ -56,6 +59,16 @@ function DesktopNavItem({
       return <PersonalNavDropdown onNavigate={onNavigate} />;
     case "business":
       return <BusinessNavDropdown onNavigate={onNavigate} />;
+    case "life-insurance":
+      return (
+        <SimpleNavDropdown
+          label={label}
+          hubHref={href}
+          hubLabel="View life insurance hub →"
+          links={lifeInsuranceNavLinks}
+          onNavigate={onNavigate}
+        />
+      );
     case "resources":
       return (
         <CascadingNavDropdown
@@ -253,6 +266,15 @@ export default function Header() {
                 hubHref="/commercial-insurance/"
                 hubLabel="View commercial insurance hub →"
                 leftRailLabel="Industries"
+              />
+              <MobileNavSection
+                title="Life Insurance"
+                links={lifeInsuranceNavLinks}
+                onNavigate={closeMenu}
+                showQuoteCta
+                quoteHref={quoteHref}
+                hubHref="/life-insurance/"
+                hubLabel="View life insurance hub →"
               />
               <MobileCascadingNavSection
                 title="Resources"

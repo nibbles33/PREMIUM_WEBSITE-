@@ -623,12 +623,16 @@ export function BusinessNavDropdown({ onNavigate }: { onNavigate?: () => void })
 export function SimpleNavDropdown({
   label,
   hubHref,
+  hubLabel,
   links,
+  showQuoteCta = true,
   onNavigate,
 }: {
   label: string;
   hubHref: string;
+  hubLabel?: string;
   links: SimpleLink[];
+  showQuoteCta?: boolean;
   onNavigate?: () => void;
 }) {
   const buttonId = useId();
@@ -691,19 +695,25 @@ export function SimpleNavDropdown({
               </li>
             ))}
           </ul>
-          <div className="mt-3 flex flex-wrap items-center gap-3 border-t border-border pt-3">
-            <QuoteCtaLink menu={menuId} onNavigate={onNavigate} />
-            <Link
-              href={hubHref}
-              data-track="nav_link_click"
-              data-track-menu={menuId}
-              data-track-link-slug={slugFromHref(hubHref)}
-              className="inline-flex min-h-11 items-center px-1 text-[13px] font-medium text-gold-dark hover:text-charcoal"
-              onClick={onNavigate}
-            >
-              View all {label.toLowerCase()} →
-            </Link>
-          </div>
+          {(showQuoteCta || hubHref) && (
+            <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-3">
+              {showQuoteCta ? (
+                <QuoteCtaLink menu={menuId} onNavigate={onNavigate} />
+              ) : (
+                <span className="min-h-11" aria-hidden />
+              )}
+              <Link
+                href={hubHref}
+                data-track="nav_link_click"
+                data-track-menu={menuId}
+                data-track-link-slug={slugFromHref(hubHref)}
+                className="inline-flex min-h-11 items-center px-1 text-[13px] font-medium text-gold-dark hover:text-charcoal"
+                onClick={onNavigate}
+              >
+                {hubLabel ?? `View all ${label.toLowerCase()} →`}
+              </Link>
+            </div>
+          )}
         </div>
       ) : null}
     </div>
@@ -914,11 +924,19 @@ export function MobileNavSection({
   links,
   onNavigate,
   defaultOpen = false,
+  showQuoteCta = false,
+  quoteHref = QUOTE_HREF,
+  hubHref,
+  hubLabel,
 }: {
   title: string;
   links: SimpleLink[];
   onNavigate: () => void;
   defaultOpen?: boolean;
+  showQuoteCta?: boolean;
+  quoteHref?: string;
+  hubHref?: string;
+  hubLabel?: string;
 }) {
   const [open, setOpen] = useState(defaultOpen);
   const panelId = useId();
@@ -971,6 +989,29 @@ export function MobileNavSection({
               );
             })}
           </ul>
+          {(showQuoteCta || hubHref) && (
+            <div className="mt-3 flex flex-col gap-2 border-t border-border pt-3">
+              {showQuoteCta ? (
+                <QuoteCtaLink
+                  menu={`mobile_${menuId}`}
+                  href={quoteHref}
+                  onNavigate={onNavigate}
+                />
+              ) : null}
+              {hubHref ? (
+                <Link
+                  href={hubHref}
+                  data-track="nav_link_click"
+                  data-track-menu={`mobile_${menuId}`}
+                  data-track-link-slug={slugFromHref(hubHref)}
+                  className="inline-flex min-h-11 items-center px-1 text-[14px] font-medium text-gold-dark"
+                  onClick={onNavigate}
+                >
+                  {hubLabel ?? `View all ${title.toLowerCase()} →`}
+                </Link>
+              ) : null}
+            </div>
+          )}
         </div>
       ) : null}
     </div>

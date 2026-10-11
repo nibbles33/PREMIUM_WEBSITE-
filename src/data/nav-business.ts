@@ -60,7 +60,6 @@ export const businessNavCategories: BusinessNavCategory[] = [
       { label: "Food Truck / Trailer", href: "/food-truck-insurance/" },
       { label: "Hotel / Motel", href: "/hotel-motel-insurance/" },
       { label: "Liquor Liability", href: "/liquor-liability-insurance/" },
-      { label: "Event Liability", href: "/event-liability-insurance/" },
     ],
   },
   {
@@ -130,6 +129,7 @@ export const businessNavCategories: BusinessNavCategory[] = [
       { label: "Non-Profit", href: "/non-profit-insurance/" },
       { label: "Religious Organizations", href: "/religious-organizations-insurance/" },
       { label: "Daycare / School", href: "/daycare-private-school-insurance/" },
+      { label: "Event Liability", href: "/event-liability-insurance/" },
     ],
   },
   {
