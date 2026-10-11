@@ -98,17 +98,23 @@ function NavDropdownLink({
       {...(categoryId
         ? { "data-track-category-id": categoryId }
         : {})}
-      className="block min-h-11 rounded-md px-3 py-2.5 transition-colors hover:bg-offwhite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+      className="group flex min-h-11 items-center gap-2 rounded-md px-3 py-2 transition-[background-color,opacity] duration-200 ease-out hover:bg-offwhite focus-visible:bg-offwhite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold motion-reduce:transition-none"
       onClick={onNavigate}
     >
-      <span className="block text-[13px] font-medium leading-snug text-charcoal xl:text-[13.5px]">
-        {link.label}
-      </span>
-      {link.description ? (
-        <span className="mt-0.5 block text-[12px] leading-snug text-secondary">
-          {link.description}
+      <span className="min-w-0 flex-1">
+        <span className="block text-[13px] font-medium leading-snug text-charcoal xl:text-[13.5px]">
+          {link.label}
         </span>
-      ) : null}
+        {link.description ? (
+          <span className="mt-0.5 block text-[12px] leading-snug text-secondary">
+            {link.description}
+          </span>
+        ) : null}
+      </span>
+      <ChevronRight
+        className="h-3.5 w-3.5 shrink-0 text-gold-dark opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none"
+        aria-hidden
+      />
     </Link>
   );
 }
@@ -294,7 +300,7 @@ function CascadingDesktopPanel({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
-      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,2fr)_minmax(0,3fr)] overflow-hidden">
+      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-stretch overflow-hidden">
         <div className="nav-dropdown-panel-scroll min-h-0 overflow-y-auto overscroll-contain border-r border-border/80 bg-[#FAFAF8] p-3">
           {industries.length && specialty.length ? (
             <p className="px-3 pb-1.5 pt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-dark">
@@ -305,7 +311,7 @@ function CascadingDesktopPanel({
             role="tablist"
             aria-label={`${menu} categories`}
             aria-orientation="vertical"
-            className="space-y-0.5"
+            className="flex flex-col gap-2.5"
           >
             {ordered.map((category, index) => {
               const isSpecialty = category.role === "specialty_group";
@@ -318,7 +324,7 @@ function CascadingDesktopPanel({
                 <Fragment key={category.id}>
                   {isFirstSpecialty ? (
                     <div
-                      className="my-2 border-t border-border/80 pt-2"
+                      className="my-1 border-t border-border/80 pt-2"
                       role="presentation"
                       aria-hidden
                     />
@@ -333,7 +339,7 @@ function CascadingDesktopPanel({
                     aria-selected={isActive}
                     aria-controls={productsPanelId}
                     tabIndex={isActive ? 0 : -1}
-                    className={`flex w-full min-h-11 items-center justify-between rounded-md px-3 py-2.5 text-left text-[13px] font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+                    className={`flex w-full min-h-11 items-center justify-between rounded-md px-3 py-2 text-left text-[13px] font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
                       isSpecialty
                         ? isActive
                           ? "bg-white text-charcoal shadow-[0_1px_0_rgba(32,39,40,0.06)] ring-1 ring-gold/40"
@@ -375,18 +381,18 @@ function CascadingDesktopPanel({
 
         <div
           id={productsPanelId}
-          className="nav-dropdown-panel-scroll min-h-0 overflow-y-auto overscroll-contain p-3 sm:p-4"
+          className="nav-dropdown-panel-scroll flex min-h-0 flex-col overflow-y-auto overscroll-contain p-3 sm:p-4"
           role="tabpanel"
           aria-labelledby={
             active ? `${panelId}-cat-${active.id}` : undefined
           }
         >
           <div
-            className={
+            className={`min-h-full ${
               panelVisible
                 ? "translate-x-0 opacity-100"
                 : "translate-x-2 opacity-0"
-            }
+            }`}
             style={panelStyle}
           >
             {active ? (
@@ -394,7 +400,7 @@ function CascadingDesktopPanel({
                 <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-dark">
                   {active.title}
                 </p>
-                <ul className="mt-1 space-y-0.5 border-t border-border/70 pt-2">
+                <ul className="mt-1 flex flex-col gap-2 border-t border-border/70 pt-2">
                   {active.links.map((link) => (
                     <li key={link.href + link.label}>
                       <NavDropdownLink
@@ -413,7 +419,7 @@ function CascadingDesktopPanel({
       </div>
 
       {(showQuoteCta || hubHref) && (
-        <div className="flex flex-wrap items-center gap-3 border-t border-border bg-white px-4 py-3">
+        <div className="flex shrink-0 flex-wrap items-center gap-3 border-t border-border bg-white px-4 py-3">
           {showQuoteCta ? (
             <QuoteCtaLink menu={menu} onNavigate={onNavigate} />
           ) : null}
@@ -663,7 +669,7 @@ export function SimpleNavDropdown({
           aria-labelledby={buttonId}
           className="absolute left-1/2 top-full z-50 mt-2 w-[min(92vw,420px)] -translate-x-1/2 rounded-xl border border-border bg-white p-4 shadow-[0_16px_40px_rgba(32,39,40,0.12)]"
         >
-          <ul className="space-y-0.5">
+          <ul className="flex flex-col gap-2">
             {links.map((link) => (
               <li key={link.href + link.label}>
                 <NavDropdownLink
