@@ -62,6 +62,10 @@ export const ROUTE_TO_INTERACTIVE_MASTER_FILE: Record<string, string> = {
     "professional-offices-insurance-interactive-master.png",
   "real-estate-insurance": "real-estate-insurance-interactive-master.png",
   "farm-insurance": "farm-insurance-interactive-master.png",
+  "crop-insurance": "crop-insurance-interactive-master.png",
+  "livestock-insurance": "livestock-insurance-interactive-master.png",
+  "farm-equipment-insurance":
+    "farm-equipment-insurance-interactive-master.png",
   "dump-truck-insurance": "dump-truck-insurance-interactive-master.png",
   "bonding-insurance": "bonding-surety-interactive-master.png",
   "greenhouse-agribusiness-insurance":

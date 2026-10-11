@@ -279,6 +279,69 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
       "livestock-coverage": ["livestock-pen", "barn-structure", "field-acreage"],
     },
   },
+  "crop-insurance": {
+    archetype: "farm-compound",
+    coverageZones: {
+      "agricorp-production-insurance": [
+        "field-acreage",
+        "grain-storage",
+        "farm-road",
+      ],
+      "private-farm-package": [
+        "barn-structure",
+        "equipment-shed",
+        "grain-storage",
+      ],
+      "field-vs-structure": [
+        "field-acreage",
+        "barn-structure",
+        "equipment-shed",
+      ],
+      "greenhouse-nursery-path": [
+        "field-acreage",
+        "barn-structure",
+        "grain-storage",
+      ],
+    },
+  },
+  "livestock-insurance": {
+    archetype: "farm-compound",
+    coverageZones: {
+      "named-peril-livestock": [
+        "livestock-pen",
+        "barn-structure",
+        "field-acreage",
+      ],
+      "mortality-programs": ["livestock-pen", "field-acreage", "barn-structure"],
+      "barns-and-confinement": [
+        "barn-structure",
+        "livestock-pen",
+        "equipment-shed",
+      ],
+      "liability-and-escape": [
+        "farm-road",
+        "field-acreage",
+        "livestock-pen",
+      ],
+    },
+  },
+  "farm-equipment-insurance": {
+    archetype: "farm-compound",
+    coverageZones: {
+      "scheduled-machinery": [
+        "equipment-shed",
+        "farm-road",
+        "barn-structure",
+      ],
+      "transit-and-off-farm": ["farm-road", "field-acreage", "equipment-shed"],
+      "road-vs-field": ["farm-road", "equipment-shed", "field-acreage"],
+      "breakdown-and-attachments": [
+        "equipment-shed",
+        "barn-structure",
+        "farm-road",
+      ],
+    },
+  },
   "dump-truck-insurance": {
     archetype: "truck-semi",
     coverageZones: {
