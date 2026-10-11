@@ -6,14 +6,13 @@ import { usePathname } from "next/navigation";
 import { Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
+  AgricultureNavDropdown,
   BusinessNavDropdown,
   CascadingNavDropdown,
   MobileCascadingNavSection,
-  MobileNavSection,
   PersonalNavDropdown,
-  SimpleNavDropdown,
 } from "@/components/nav/NavDropdowns";
-import { agricultureNavLinks } from "@/data/nav-agriculture";
+import { agricultureNavCategories } from "@/data/nav-agriculture";
 import { businessNavCategories } from "@/data/nav-business";
 import { personalNavGroups } from "@/data/nav-personal";
 import { resourcesNavGroups } from "@/data/nav-resources";
@@ -60,14 +59,7 @@ function DesktopNavItem({
     case "business":
       return <BusinessNavDropdown onNavigate={onNavigate} />;
     case "agriculture":
-      return (
-        <SimpleNavDropdown
-          label={label}
-          hubHref={href}
-          links={agricultureNavLinks}
-          onNavigate={onNavigate}
-        />
-      );
+      return <AgricultureNavDropdown onNavigate={onNavigate} />;
     case "resources":
       return (
         <CascadingNavDropdown
@@ -79,7 +71,7 @@ function DesktopNavItem({
             links: g.links,
           }))}
           hubHref={href}
-          hubLabel="View all resources →"
+          hubLabel="Explore Resources →"
           onNavigate={onNavigate}
         />
       );
@@ -265,10 +257,19 @@ export default function Header() {
                 hubHref="/commercial-insurance/"
                 hubLabel="View commercial insurance hub →"
               />
-              <MobileNavSection
+              <MobileCascadingNavSection
                 title="Agriculture"
-                links={agricultureNavLinks}
+                categories={agricultureNavCategories.map((c) => ({
+                  id: c.id,
+                  title: c.title,
+                  links: c.links,
+                  role: c.role,
+                }))}
                 onNavigate={closeMenu}
+                showQuoteCta
+                quoteHref={quoteHref}
+                hubHref="/agriculture/"
+                hubLabel="Explore Agriculture →"
               />
               <MobileCascadingNavSection
                 title="Resources"
@@ -279,7 +280,7 @@ export default function Header() {
                 }))}
                 onNavigate={closeMenu}
                 hubHref="/resources/"
-                hubLabel="View all resources →"
+                hubLabel="Explore Resources →"
               />
               <Link
                 href="/about/"

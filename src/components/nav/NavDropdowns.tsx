@@ -14,6 +14,9 @@ import {
   type ReactNode,
 } from "react";
 import {
+  agricultureNavCategories,
+} from "@/data/nav-agriculture";
+import {
   businessNavCategories,
   type BusinessNavCategory,
 } from "@/data/nav-business";
@@ -28,6 +31,8 @@ type CascadingCategory = {
   title: string;
   links: SimpleLink[];
   role?: "industry" | "specialty_group";
+  /** Optional right-panel summary (Agriculture product categories). */
+  description?: string;
 };
 
 const QUOTE_HREF = "/get-a-quote/";
@@ -152,6 +157,7 @@ function CascadingDesktopPanel({
   showQuoteCta,
   onNavigate,
   panelId,
+  leftRailLabel,
 }: {
   categories: CascadingCategory[];
   menu: string;
@@ -160,6 +166,8 @@ function CascadingDesktopPanel({
   showQuoteCta?: boolean;
   onNavigate?: () => void;
   panelId: string;
+  /** Optional left-rail heading (e.g. "Industries"). */
+  leftRailLabel?: string;
 }) {
   const reduceMotion = usePrefersReducedMotion();
   const [activeId, setActiveId] = useState(categories[0]?.id ?? "");
@@ -304,9 +312,9 @@ function CascadingDesktopPanel({
     <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
       <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,2fr)_minmax(0,3fr)] items-stretch overflow-hidden">
         <div className="nav-dropdown-panel-scroll min-h-0 overflow-y-auto overscroll-contain border-r border-border/80 bg-[#FAFAF8] p-3">
-          {industries.length && specialty.length ? (
+          {leftRailLabel || (industries.length && specialty.length) ? (
             <p className="px-3 pb-1.5 pt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-dark">
-              Industries
+              {leftRailLabel ?? "Industries"}
             </p>
           ) : null}
           <div
@@ -402,6 +410,11 @@ function CascadingDesktopPanel({
                 <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-dark">
                   {active.title}
                 </p>
+                {active.description ? (
+                  <p className="px-3 pb-3 text-[13px] leading-relaxed text-secondary">
+                    {active.description}
+                  </p>
+                ) : null}
                 <ul className="mt-1 flex flex-col gap-2 border-t border-border/70 pt-2">
                   {active.links.map((link) => (
                     <li key={link.href + link.label}>
@@ -421,10 +434,12 @@ function CascadingDesktopPanel({
       </div>
 
       {(showQuoteCta || hubHref) && (
-        <div className="flex shrink-0 flex-wrap items-center gap-3 border-t border-border bg-white px-4 py-3">
+        <div className="flex shrink-0 flex-wrap items-center justify-between gap-3 border-t border-border bg-white px-4 py-3">
           {showQuoteCta ? (
             <QuoteCtaLink menu={menu} onNavigate={onNavigate} />
-          ) : null}
+          ) : (
+            <span className="min-h-11" aria-hidden />
+          )}
           {hubHref ? (
             <Link
               href={hubHref}
@@ -502,6 +517,7 @@ export function CascadingNavDropdown({
   hubLabel,
   showQuoteCta = false,
   wide = false,
+  leftRailLabel,
   onNavigate,
 }: {
   label: string;
@@ -511,6 +527,7 @@ export function CascadingNavDropdown({
   hubLabel?: string;
   showQuoteCta?: boolean;
   wide?: boolean;
+  leftRailLabel?: string;
   onNavigate?: () => void;
 }) {
   const buttonId = useId();
@@ -564,6 +581,7 @@ export function CascadingNavDropdown({
             showQuoteCta={showQuoteCta}
             onNavigate={onNavigate}
             panelId={panelId}
+            leftRailLabel={leftRailLabel}
           />
         </DropdownShell>
       ) : null}
@@ -606,6 +624,33 @@ export function BusinessNavDropdown({ onNavigate }: { onNavigate?: () => void })
       hubLabel="View commercial insurance hub →"
       showQuoteCta
       wide
+      onNavigate={onNavigate}
+    />
+  );
+}
+
+export function AgricultureNavDropdown({
+  onNavigate,
+}: {
+  onNavigate?: () => void;
+}) {
+  const categories: CascadingCategory[] = agricultureNavCategories.map((c) => ({
+    id: c.id,
+    title: c.title,
+    links: c.links,
+    role: c.role,
+    description: c.description,
+  }));
+  return (
+    <CascadingNavDropdown
+      label="Agriculture"
+      menu="agriculture"
+      categories={categories}
+      hubHref="/agriculture/"
+      hubLabel="Explore Agriculture →"
+      showQuoteCta
+      wide
+      leftRailLabel="Industries"
       onNavigate={onNavigate}
     />
   );
@@ -682,7 +727,7 @@ export function SimpleNavDropdown({
               </li>
             ))}
           </ul>
-          <div className="mt-3 flex flex-wrap items-center gap-3 border-t border-border pt-3">
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-3">
             <QuoteCtaLink menu={menuId} onNavigate={onNavigate} />
             <Link
               href={hubHref}
@@ -692,7 +737,7 @@ export function SimpleNavDropdown({
               className="inline-flex min-h-11 items-center px-1 text-[13px] font-medium text-gold-dark hover:text-charcoal"
               onClick={onNavigate}
             >
-              View all {label.toLowerCase()} →
+              Explore {label} →
             </Link>
           </div>
         </div>
