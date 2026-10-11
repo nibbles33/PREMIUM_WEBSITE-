@@ -23,7 +23,7 @@ export type NavItem = {
 export const navItems: NavItem[] = [
   { kind: "personal", label: "Personal", href: "/personal/" },
   { kind: "business", label: "Business", href: "/commercial-insurance/" },
-  { kind: "agriculture", label: "Agriculture", href: "/farm-insurance/" },
-  { kind: "link", label: "About", href: "/about/" },
+  { kind: "agriculture", label: "Agriculture", href: "/agriculture/" },
   { kind: "resources", label: "Resources", href: "/resources/" },
+  { kind: "link", label: "About", href: "/about/" },
 ];

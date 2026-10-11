@@ -1,5 +1,6 @@
 import { SITE_ORIGIN } from "@/lib/seo";
 import { businessNavCategories } from "@/data/nav-business";
+import { agricultureNavLinks } from "@/data/nav-agriculture";
 import { personalNavGroups } from "@/data/nav-personal";
 import type { FaqItem } from "@/components/FaqAccordion";
 
@@ -135,7 +136,7 @@ export function faqPageSchema(items: FaqItem[]) {
   };
 }
 
-type NavKind = "personal" | "commercial" | "other";
+type NavKind = "personal" | "commercial" | "agriculture" | "other";
 
 function findPersonalLabel(slugPath: string): string | null {
   for (const group of personalNavGroups) {
@@ -155,6 +156,13 @@ function findCommercialCluster(
         return { clusterTitle: cluster.title, label: link.label };
       }
     }
+  }
+  return null;
+}
+
+function findAgricultureLabel(slugPath: string): string | null {
+  for (const link of agricultureNavLinks) {
+    if (link.href === slugPath) return link.label;
   }
   return null;
 }
@@ -197,6 +205,22 @@ export function breadcrumbsForProductSlug(
     ];
   }
 
+  if (kind === "agriculture") {
+    if (slug === "agriculture") {
+      return [
+        { name: "Home", path: "/" },
+        { name: "Agriculture", path: "/agriculture/" },
+      ];
+    }
+
+    const label = findAgricultureLabel(path) ?? serviceName;
+    return [
+      { name: "Home", path: "/" },
+      { name: "Agriculture", path: "/agriculture/" },
+      { name: label, path },
+    ];
+  }
+
   return null;
 }
 
@@ -221,7 +245,9 @@ export function serviceStructuredData(input: {
   const areaServed =
     input.kind === "commercial"
       ? [...AREA_SERVED_WINDSOR_ESSEX_AND_ONTARIO]
-      : AREA_SERVED_WINDSOR_ESSEX;
+      : input.kind === "agriculture"
+        ? [...AREA_SERVED_WINDSOR_ESSEX_AND_ONTARIO]
+        : AREA_SERVED_WINDSOR_ESSEX;
 
   const graph: Record<string, unknown>[] = [
     {

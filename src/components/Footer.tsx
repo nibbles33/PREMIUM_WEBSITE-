@@ -19,8 +19,16 @@ const businessLinks = [
   { label: "Commercial Insurance", href: "/commercial-insurance/" },
   { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
   { label: "Contractors", href: "/contractors-insurance/" },
-  { label: "Farm Insurance", href: "/farm-insurance/" },
   { label: "Surety Bonds", href: "/bonding-insurance/" },
+] as const;
+
+const agricultureLinks = [
+  { label: "Agriculture Overview", href: "/agriculture/" },
+  { label: "Farm Insurance", href: "/farm-insurance/" },
+  { label: "Crop Insurance", href: "/crop-insurance/" },
+  { label: "Livestock Insurance", href: "/livestock-insurance/" },
+  { label: "Greenhouse & Nursery", href: "/greenhouse-agribusiness-insurance/" },
+  { label: "Farm Equipment", href: "/farm-equipment-insurance/" },
 ] as const;
 
 const resourceLinks = [
@@ -126,7 +134,7 @@ export default function Footer() {
   return (
     <footer className="mt-auto bg-charcoal text-white" role="contentinfo">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-[4.25rem] xl:max-w-7xl">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link
               href="/"
@@ -172,6 +180,7 @@ export default function Footer() {
 
           <FooterNavColumn title="Personal" links={personalLinks} />
           <FooterNavColumn title="Business" links={businessLinks} />
+          <FooterNavColumn title="Agriculture" links={agricultureLinks} />
           <FooterNavColumn title="Resources" links={resourceLinks} />
           <FooterNavColumn
             title="Company"

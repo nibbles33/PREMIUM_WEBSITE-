@@ -53,12 +53,22 @@ export default function ProductFinalCta({
             {subhead}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <PremiumGoldCTA href={quoteHref}>{quoteLabel}</PremiumGoldCTA>
+            <PremiumGoldCTA
+              href={quoteHref}
+              {...(/^https?:\/\//i.test(quoteHref)
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+            >
+              {quoteLabel}
+            </PremiumGoldCTA>
             <PremiumPilotButton
               href={secondaryCta?.href ?? brokerHref}
               variant="secondary"
               showArrow={false}
               className="pilot-charcoal-secondary-btn"
+              {...(/^https?:\/\//i.test(secondaryCta?.href ?? brokerHref)
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
             >
               {secondaryCta?.label ?? "Talk to a Broker"}
             </PremiumPilotButton>

@@ -17,10 +17,14 @@ const QUOTE_COMMERCIAL_VEHICLES = "/get-a-quote?type=commercial-vehicles";
  *
  * Excludes:
  * - commercial-insurance (hub — keep generic)
- * - farm-insurance / greenhouse-agribusiness-insurance (agriculture — keep generic;
- *   greenhouse also carries an unsupported `industry` query param on its page CTA)
+ * - agriculture hub / crop-insurance (Agricorp referral — keep generic)
  */
 const PATH_QUOTE_ALLOWLIST: Readonly<Record<string, string>> = {
+  // Agriculture product pages (supported quote params only)
+  "farm-insurance": "/get-a-quote?type=farm",
+  "livestock-insurance": "/get-a-quote?type=farm",
+  "farm-equipment-insurance": "/get-a-quote?type=farm",
+  "greenhouse-agribusiness-insurance": QUOTE_BUSINESS,
   // Focus + typed peers (match existing product quoteHref)
   "contractors-insurance": `${QUOTE_BUSINESS}&businessType=contractor`,
   "landscaping-snow-removal-insurance": `${QUOTE_BUSINESS}&businessType=contractor`,
