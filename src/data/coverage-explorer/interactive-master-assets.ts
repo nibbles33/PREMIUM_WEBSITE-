@@ -28,7 +28,7 @@ export const INTERACTIVE_MASTER_FILE_ALIASES: Record<string, string> = {
     "professional-liability-eo-interactive-master.png",
 };
 
-/** All 58 live product routes → interactive master filename. */
+/** Live product routes → interactive master filename. */
 export const ROUTE_TO_INTERACTIVE_MASTER_FILE: Record<string, string> = {
   "auto-insurance": "auto-insurance-interactive-master.png",
   "home-insurance": "home-insurance-interactive-master.png",
@@ -44,6 +44,11 @@ export const ROUTE_TO_INTERACTIVE_MASTER_FILE: Record<string, string> = {
     "personal-umbrella-insurance-interactive-master.png",
   "home-sharing-insurance": "home-sharing-insurance-interactive-master.png",
   "life-insurance": "life-insurance-interactive-master.png",
+  "term-life-insurance": "term-life-insurance-interactive-master.png",
+  "whole-life-insurance": "whole-life-insurance-interactive-master.png",
+  "universal-life-insurance": "universal-life-insurance-interactive-master.png",
+  "disability-insurance": "disability-insurance-interactive-master.png",
+  "group-benefits": "group-benefits-interactive-master.png",
   "group-home-auto-insurance":
     "group-home-auto-insurance-interactive-master.png",
   "commercial-insurance": "commercial-insurance-hub-interactive-master.png",

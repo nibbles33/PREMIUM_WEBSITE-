@@ -89,7 +89,7 @@ export function getCoverageExplorerConfig(
   return buildRouteExplorerConfig(slug, coverageIds);
 }
 
-/** All 58 live routes with interactive master assets. */
+/** Live routes with interactive master assets. */
 export const INTERACTIVE_MASTER_ROUTE_SLUGS = Object.keys(
   ROUTE_TO_INTERACTIVE_MASTER_FILE,
 );

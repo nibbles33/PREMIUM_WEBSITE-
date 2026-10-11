@@ -135,6 +135,62 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
       "mortgage-debt-protection": ["welcome-desk", "hub-plaza"],
     },
   },
+  "term-life-insurance": {
+    archetype: "hub-campus",
+    coverageZones: {
+      "term-length-options": ["hub-plaza", "welcome-desk", "skyline-backdrop"],
+      "family-income-protection": [
+        "welcome-desk",
+        "hub-plaza",
+        "pathway-ring",
+      ],
+      "renewal-conversion": ["connector-walk", "industry-pod-east", "hub-plaza"],
+    },
+  },
+  "whole-life-insurance": {
+    archetype: "hub-campus",
+    coverageZones: {
+      "lifetime-protection": ["hub-plaza", "skyline-backdrop", "welcome-desk"],
+      "cash-value-growth": ["industry-pod-east", "connector-walk", "hub-plaza"],
+      "long-term-planning": ["pathway-ring", "welcome-desk", "hub-plaza"],
+    },
+  },
+  "universal-life-insurance": {
+    archetype: "hub-campus",
+    coverageZones: {
+      "flexible-premiums": ["connector-walk", "hub-plaza", "welcome-desk"],
+      "adjustable-benefits": [
+        "industry-pod-west",
+        "industry-pod-east",
+        "hub-plaza",
+      ],
+      "cash-value-control": ["skyline-backdrop", "connector-walk", "hub-plaza"],
+    },
+  },
+  "disability-insurance": {
+    archetype: "hub-campus",
+    coverageZones: {
+      "income-replacement": ["welcome-desk", "hub-plaza", "pathway-ring"],
+      "benefit-periods": ["connector-walk", "hub-plaza", "skyline-backdrop"],
+      "occupation-definitions": [
+        "industry-pod-west",
+        "welcome-desk",
+        "hub-plaza",
+      ],
+    },
+  },
+  "group-benefits": {
+    archetype: "hub-campus",
+    coverageZones: {
+      "group-life-disability": [
+        "hub-plaza",
+        "industry-pod-west",
+        "industry-pod-east",
+      ],
+      "health-dental-vision": ["welcome-desk", "pathway-ring", "hub-plaza"],
+      "employer-talent": ["connector-walk", "skyline-backdrop", "hub-plaza"],
+    },
+  },
   "group-home-auto-insurance": {
     archetype: "hub-campus",
     coverageZones: {
