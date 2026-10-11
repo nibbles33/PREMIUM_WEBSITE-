@@ -13,8 +13,14 @@ import {
   type BusinessNavCategory,
 } from "@/data/nav-business";
 
-/** Canonical homepage discovery category IDs (nav-business). */
-export type HomepageCategoryId = BusinessNavCategory["id"];
+/**
+ * Canonical homepage discovery category IDs (nav-business).
+ * Agriculture is Business-nav only for now — excluded from homepage discovery.
+ */
+export type HomepageCategoryId = Exclude<
+  BusinessNavCategory["id"],
+  "agriculture"
+>;
 
 /**
  * Analytics ID migration — old homepage tab IDs → canonical nav IDs.
@@ -142,15 +148,20 @@ export const HOMEPAGE_CATEGORY_IDS: HomepageCategoryId[] = [
 /**
  * Assignment map derived from nav-business for completeness tooling.
  * Not an independent product source — mirrors canonical nav links.
+ * Excludes Agriculture (Business mega-menu only until homepage expands).
  */
 export const HOMEPAGE_CATEGORY_ASSIGNMENTS: Record<
   HomepageCategoryId,
   readonly string[]
 > = Object.fromEntries(
-  businessNavCategories.map((category) => [
-    category.id,
-    category.links.map((link) => link.href),
-  ]),
+  businessNavCategories
+    .filter((category): category is BusinessNavCategory & { id: HomepageCategoryId } =>
+      category.id !== "agriculture",
+    )
+    .map((category) => [
+      category.id,
+      category.links.map((link) => link.href),
+    ]),
 ) as Record<HomepageCategoryId, readonly string[]>;
 
 /** Union of every href currently offered in homepage discovery. */

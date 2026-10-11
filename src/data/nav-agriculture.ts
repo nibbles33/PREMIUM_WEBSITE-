@@ -4,9 +4,16 @@ export type NavLink = {
   description?: string;
 };
 
+/**
+ * Agriculture product links — retained for SEO breadcrumbs, footer, and
+ * related-product helpers. Top-level Agriculture nav is retired; products
+ * live under Business → Agriculture in the mega-menu (`nav-business.ts`).
+ */
 export const agricultureNavHub = {
   label: "Agriculture",
   href: "/agriculture/",
+  /** Business mega-menu industry that now owns these products. */
+  businessCategoryId: "agriculture",
 };
 
 export const agricultureNavLinks: NavLink[] = [
