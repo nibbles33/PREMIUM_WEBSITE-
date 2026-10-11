@@ -108,7 +108,7 @@ export default function PilotCommercialDiscovery() {
       : "grid grid-cols-1 gap-3";
 
   const exploreLabel =
-    active.role === "specialty_group"
+    active.id === "specialty-community"
       ? "Explore Specialty & Community"
       : `Explore ${active.label}`;
 
