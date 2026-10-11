@@ -6,7 +6,6 @@ import {
   PiggyBank,
   RefreshCw,
   Shield,
-  Users,
   BriefcaseMedical,
   Building2,
   Wallet,
