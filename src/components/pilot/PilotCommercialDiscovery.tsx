@@ -12,7 +12,10 @@ import {
 } from "react";
 import PremiumPilotButton from "@/components/pilot/PremiumPilotButton";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import { commercialCategories } from "@/data/pilot-home";
+import {
+  commercialIndustryCategories,
+  commercialSpecialtyCategory,
+} from "@/data/pilot-home";
 import {
   getPageHeroPhotography,
   PILOT_COMMERCIAL_PANEL_IMAGE,
@@ -28,12 +31,15 @@ export default function PilotCommercialDiscovery() {
   const reduceMotion = usePrefersReducedMotion();
   const baseId = useId();
   const catRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  const [activeId, setActiveId] = useState(commercialCategories[0].id);
+  const specialtyRef = useRef<HTMLButtonElement | null>(null);
+  const [activeId, setActiveId] = useState(commercialIndustryCategories[0].id);
   const [panelVisible, setPanelVisible] = useState(true);
 
-  const active =
-    commercialCategories.find((c) => c.id === activeId) ??
-    commercialCategories[0];
+  const specialtyActive = activeId === commercialSpecialtyCategory.id;
+  const active = specialtyActive
+    ? commercialSpecialtyCategory
+    : (commercialIndustryCategories.find((c) => c.id === activeId) ??
+      commercialIndustryCategories[0]);
   const photo = getPageHeroPhotography(active.photoSlug);
 
   const selectCategory = useCallback(
@@ -57,42 +63,53 @@ export default function PilotCommercialDiscovery() {
     [activeId, reduceMotion],
   );
 
-  const onKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+  const onIndustryKeyDown = (
+    event: KeyboardEvent<HTMLButtonElement>,
+    index: number,
+  ) => {
+    const count = commercialIndustryCategories.length;
     let next = index;
     if (event.key === "ArrowRight" || event.key === "ArrowDown") {
       event.preventDefault();
-      next = (index + 1) % commercialCategories.length;
+      next = (index + 1) % count;
     } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
       event.preventDefault();
-      next =
-        (index - 1 + commercialCategories.length) %
-        commercialCategories.length;
+      next = (index - 1 + count) % count;
     } else if (event.key === "Home") {
       event.preventDefault();
       next = 0;
     } else if (event.key === "End") {
       event.preventDefault();
-      next = commercialCategories.length - 1;
+      next = count - 1;
     } else if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      selectCategory(commercialCategories[index].id);
+      selectCategory(commercialIndustryCategories[index].id);
       return;
     } else {
       return;
     }
     catRefs.current[next]?.focus();
+    // Roving tabindex: move selection focus; activate on Enter/Space or click.
+    // Arrow keys also select to match prior homepage behaviour.
+    selectCategory(commercialIndustryCategories[next].id);
   };
 
   const panelStyle: CSSProperties = reduceMotion
     ? {}
     : {
-        transition: "opacity 280ms ease-out, transform 280ms cubic-bezier(0.22, 1, 0.36, 1)",
+        transition:
+          "opacity 280ms ease-out, transform 280ms cubic-bezier(0.22, 1, 0.36, 1)",
       };
 
   const productGridClass =
     active.products.length > 4
       ? "grid grid-cols-1 gap-3 lg:grid-cols-2"
       : "grid grid-cols-1 gap-3";
+
+  const exploreLabel =
+    active.role === "specialty_group"
+      ? "Explore Specialty & Community"
+      : `Explore ${active.label}`;
 
   return (
     <section
@@ -113,7 +130,7 @@ export default function PilotCommercialDiscovery() {
             </h2>
             <p className="mt-5 text-[15px] leading-relaxed text-white/65 sm:text-[18px]">
               From contractors and manufacturers to transportation, hospitality,
-              real estate, healthcare and specialty risks, Premium helps
+              real estate, healthcare and community organizations, Premium helps
               businesses understand their exposures and build coverage around how
               they actually operate.
             </p>
@@ -124,10 +141,14 @@ export default function PilotCommercialDiscovery() {
           <div
             className="flex gap-2 overflow-x-auto pb-2 scrollbar-none sm:flex-wrap sm:justify-center sm:overflow-visible"
             role="tablist"
-            aria-label="Commercial insurance categories"
+            aria-label="Commercial insurance industries"
           >
-            {commercialCategories.map((cat, index) => {
-              const isActive = cat.id === activeId;
+            {commercialIndustryCategories.map((cat, index) => {
+              const isActive = !specialtyActive && cat.id === activeId;
+              // When Specialty is selected, keep the first industry tab in the
+              // tab order so the tablist remains keyboard-reachable.
+              const tabStop =
+                isActive || (specialtyActive && index === 0) ? 0 : -1;
               return (
                 <button
                   key={cat.id}
@@ -137,21 +158,58 @@ export default function PilotCommercialDiscovery() {
                   type="button"
                   role="tab"
                   id={`${baseId}-cat-${cat.id}`}
+                  aria-label={cat.label}
                   aria-selected={isActive}
                   aria-controls={`${baseId}-panel`}
-                  tabIndex={isActive ? 0 : -1}
+                  tabIndex={tabStop}
                   onClick={() => selectCategory(cat.id)}
-                  onKeyDown={(e) => onKeyDown(e, index)}
-                  className={`pilot-commercial-cat shrink-0 rounded-full border px-4 py-2.5 text-[13px] font-medium transition-colors sm:text-sm ${
+                  onKeyDown={(e) => onIndustryKeyDown(e, index)}
+                  className={`pilot-commercial-cat inline-flex min-h-11 shrink-0 items-center rounded-full border px-4 py-2.5 text-[13px] font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-sm ${
                     isActive
                       ? "is-active border-gold bg-[#2a3132] text-white shadow-[0_0_0_1px_rgba(208,173,38,0.35)]"
                       : "border-white/15 bg-[#252b2c] text-white/70 hover:border-white/35 hover:text-white/90"
                   }`}
                 >
-                  {cat.label}
+                  {cat.shortLabel ? (
+                    <>
+                      <span className="sm:hidden" aria-hidden="true">
+                        {cat.shortLabel}
+                      </span>
+                      <span className="hidden sm:inline" aria-hidden="true">
+                        {cat.label}
+                      </span>
+                    </>
+                  ) : (
+                    cat.label
+                  )}
                 </button>
               );
             })}
+          </div>
+
+          <div className="mt-3 flex justify-center">
+            <button
+              ref={specialtyRef}
+              type="button"
+              id={`${baseId}-cat-${commercialSpecialtyCategory.id}`}
+              aria-label="Also available: Specialty and Community"
+              aria-pressed={specialtyActive}
+              aria-controls={`${baseId}-panel`}
+              onClick={() => selectCategory(commercialSpecialtyCategory.id)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  selectCategory(commercialSpecialtyCategory.id);
+                }
+              }}
+              className={`min-h-11 rounded-full border px-4 py-2 text-[12px] font-medium tracking-[0.02em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-[13px] ${
+                specialtyActive
+                  ? "border-gold/70 bg-[#2a3132] text-gold shadow-[0_0_0_1px_rgba(208,173,38,0.28)]"
+                  : "border-white/10 bg-transparent text-white/55 hover:border-white/25 hover:text-white/80"
+              }`}
+            >
+              Also Available: Specialty & Community
+            </button>
           </div>
         </RevealOnScroll>
 
@@ -159,7 +217,7 @@ export default function PilotCommercialDiscovery() {
           <div
             id={`${baseId}-panel`}
             role="tabpanel"
-            aria-labelledby={`${baseId}-cat-${activeId}`}
+            aria-labelledby={`${baseId}-cat-${active.id}`}
             className="pilot-commercial-panel overflow-hidden rounded-2xl border border-white/10 bg-[#2a3132]"
           >
             <div
@@ -199,7 +257,9 @@ export default function PilotCommercialDiscovery() {
                       <Link
                         href={product.href}
                         data-track="commercial_product_select"
-                        data-track-product-slug={productSlugFromHref(product.href)}
+                        data-track-product-slug={productSlugFromHref(
+                          product.href,
+                        )}
                         data-track-category-id={active.id}
                         data-track-surface="homepage"
                         className="group flex h-full min-h-[44px] items-center justify-between rounded-lg border border-white/10 bg-charcoal/60 px-4 py-3 text-[14px] font-medium text-white transition-colors hover:border-gold/45 hover:bg-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-[15px]"
@@ -207,7 +267,7 @@ export default function PilotCommercialDiscovery() {
                         <span className="min-w-0 pr-3">{product.label}</span>
                         <span
                           aria-hidden
-                          className="shrink-0 text-gold transition-transform duration-200 group-hover:translate-x-1"
+                          className="shrink-0 text-gold transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transition-none"
                         >
                           →
                         </span>
@@ -220,7 +280,7 @@ export default function PilotCommercialDiscovery() {
                     href={active.href}
                     className="w-full sm:w-auto"
                   >
-                    Explore {active.label}
+                    {exploreLabel}
                   </PremiumPilotButton>
                   <PremiumPilotButton
                     href="/commercial-insurance/"

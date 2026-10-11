@@ -1,7 +1,13 @@
 import {
   getHomepageCategoryProducts,
+  HOMEPAGE_SPECIALTY_ID,
   type HomepageCategoryId,
 } from "@/data/homepage-category-taxonomy";
+import {
+  businessNavIndustries,
+  businessNavSpecialtyGroup,
+  type BusinessNavCategory,
+} from "@/data/nav-business";
 import { getPageHeroPhotography } from "@/data/photography";
 
 export type FilmstripItem = {
@@ -49,103 +55,129 @@ export function getFilmstripPhoto(slug: string) {
 }
 
 export type CommercialCategory = {
-  id: string;
+  id: HomepageCategoryId;
   label: string;
+  /** Optional shorter label for narrow mobile pill buttons. */
+  shortLabel?: string;
   description: string;
   photoSlug: string;
   href: string;
+  role: "industry" | "specialty_group";
   products: { label: string; href: string }[];
 };
 
-const commercialCategoryMeta: Omit<CommercialCategory, "products">[] = [
-  {
-    id: "transportation",
-    label: "Transportation",
+/**
+ * Homepage-only presentation for each canonical nav-business category.
+ * Product lists are never duplicated here — they come from nav-business.
+ */
+type CommercialPresentation = {
+  description: string;
+  photoSlug: string;
+  href: string;
+  shortLabel?: string;
+};
+
+const commercialPresentationById: Record<
+  HomepageCategoryId,
+  CommercialPresentation
+> = {
+  "construction-contractors": {
     description:
-      "Trucking, commercial auto, cargo, and garage coverage for Windsor-Essex operators.",
-    photoSlug: "trucking-insurance",
-    href: "/commercial-auto-insurance/",
-  },
-  {
-    id: "construction",
-    label: "Construction",
-    description:
-      "General liability, tools, and project coverage for contractors and trades.",
+      "General liability, tools, bonds, and project coverage for contractors and trades.",
     photoSlug: "contractors-insurance",
     href: "/contractors-insurance/",
+    shortLabel: "Construction",
   },
-  {
-    id: "property",
-    label: "Property",
+  manufacturing: {
     description:
-      "Buildings, contents, and income protection for business property.",
-    photoSlug: "commercial-property-insurance",
-    href: "/commercial-property-insurance/",
-  },
-  {
-    id: "manufacturing",
-    label: "Manufacturing",
-    description:
-      "Production facilities, licensed cannabis production, and industrial specialty coverage.",
+      "Production facilities, warehousing, licensed cannabis production, and industrial coverage.",
     photoSlug: "manufacturing-insurance",
     href: "/manufacturing-insurance/",
   },
-  {
-    id: "hospitality",
-    label: "Hospitality",
+  "hospitality-restaurants": {
     description:
-      "Restaurants, hotels, food trucks, and food service operations.",
+      "Restaurants, hotels, food trucks, liquor liability, and hospitality events.",
     photoSlug: "restaurant-insurance",
     href: "/restaurant-insurance/",
+    shortLabel: "Hospitality",
   },
-  {
-    id: "professional",
-    label: "Professional",
-    description:
-      "Offices, real estate, directors & officers, and professional liability coverage.",
-    photoSlug: "professional-offices-insurance",
-    href: "/professional-offices-insurance/",
-  },
-  {
-    id: "retail",
-    label: "Retail",
+  "retail-grocery": {
     description:
       "Storefronts, grocery, convenience, and licensed cannabis retail operations.",
     photoSlug: "retail-insurance",
     href: "/retail-insurance/",
+    shortLabel: "Retail",
   },
-  {
-    id: "health",
-    label: "Health & Wellness",
+  "transportation-trucking": {
+    description:
+      "Trucking, commercial auto, cargo, and garage coverage for Windsor-Essex operators.",
+    photoSlug: "trucking-insurance",
+    href: "/commercial-auto-insurance/",
+    shortLabel: "Transportation",
+  },
+  "professional-services": {
+    description:
+      "Offices, professional liability, cyber, crime, and employment practices coverage.",
+    photoSlug: "professional-offices-insurance",
+    href: "/professional-offices-insurance/",
+    shortLabel: "Professional",
+  },
+  "real-estate": {
+    description:
+      "Real estate operations, commercial property, property management, and condo corporations.",
+    photoSlug: "real-estate-insurance",
+    href: "/real-estate-insurance/",
+  },
+  "healthcare-wellness": {
     description:
       "Medical, dental, pharmacy, fitness, and salon operations.",
-    photoSlug: "professional-offices-insurance",
+    photoSlug: "medical-dental-insurance",
     href: "/medical-dental-insurance/",
+    shortLabel: "Healthcare",
   },
-  {
-    id: "community",
-    label: "Community",
+  "specialty-community": {
     description:
-      "Non-profits, religious organizations, and community groups.",
-    photoSlug: "commercial-insurance",
+      "Non-profits, religious organizations, daycares, and private schools.",
+    photoSlug: "non-profit-insurance",
     href: "/non-profit-insurance/",
+    shortLabel: "Specialty",
   },
-  {
-    id: "specialty",
-    label: "Specialty Risks",
-    description:
-      "Cyber, crime, surety, and licensed cannabis specialty coverage.",
-    photoSlug: "bonding-insurance",
-    href: "/cyber-insurance/",
-  },
+};
+
+function buildCommercialCategory(
+  category: BusinessNavCategory,
+): CommercialCategory {
+  const presentation = commercialPresentationById[category.id];
+  if (!presentation) {
+    throw new Error(`Missing homepage presentation for ${category.id}`);
+  }
+  return {
+    id: category.id,
+    label: category.title,
+    shortLabel: presentation.shortLabel,
+    description: presentation.description,
+    photoSlug: presentation.photoSlug,
+    href: presentation.href,
+    role: category.role,
+    products: getHomepageCategoryProducts(category.id),
+  };
+}
+
+/** Eight primary industries in approved Business-nav order. */
+export const commercialIndustryCategories: CommercialCategory[] =
+  businessNavIndustries.map(buildCommercialCategory);
+
+/** Specialty & Community — secondary discovery control, not a primary industry. */
+export const commercialSpecialtyCategory: CommercialCategory =
+  buildCommercialCategory(businessNavSpecialtyGroup);
+
+/** All discovery categories (industries first, specialty last). */
+export const commercialCategories: CommercialCategory[] = [
+  ...commercialIndustryCategories,
+  commercialSpecialtyCategory,
 ];
 
-export const commercialCategories: CommercialCategory[] = commercialCategoryMeta.map(
-  (category) => ({
-    ...category,
-    products: getHomepageCategoryProducts(category.id as HomepageCategoryId),
-  }),
-);
+export { HOMEPAGE_SPECIALTY_ID };
 
 export type BreadthItem = {
   slot: import("@/components/pilot/MiniatureObject").MiniatureSlot;

@@ -1,191 +1,168 @@
 /**
- * Approved homepage commercial category → product assignments.
+ * Homepage commercial discovery taxonomy helpers.
  *
- * Source of truth: docs/master-product-inventory-navigation-audit-2026-09-10.md
- * Section X (canonical taxonomy) + reconciliation owner decisions (4e68fc4).
- *
- * Includes PRIMARY and approved SECONDARY assignments. Overlap across tabs is
- * intentional (e.g. Cannabis Retail → Retail + Specialty). Duplicates within a
- * single tab are prevented at build time.
+ * Canonical industry IDs, titles, product labels, and URLs live in
+ * `src/data/nav-business.ts`. This module documents analytics ID migration
+ * and exposes helpers that read product lists from that single source.
  */
 
-export type HomepageCategoryId =
-  | "transportation"
-  | "construction"
-  | "property"
-  | "manufacturing"
-  | "hospitality"
-  | "professional"
-  | "retail"
-  | "health"
-  | "community"
-  | "specialty";
+import {
+  businessNavCategories,
+  businessNavIndustries,
+  businessNavSpecialtyGroup,
+  type BusinessNavCategory,
+} from "@/data/nav-business";
 
-/** Short visitor-facing labels for homepage product links. */
-export const HOMEPAGE_PRODUCT_LABELS: Record<string, string> = {
-  "/commercial-auto-insurance/": "Commercial Auto",
-  "/trucking-insurance/": "Trucking",
-  "/dump-truck-insurance/": "Dump Truck",
-  "/cargo-freight-insurance/": "Cargo / Freight",
-  "/garage-dealership-insurance/": "Garage / Dealership",
-  "/contractors-insurance/": "Contractors",
-  "/builders-developers-insurance/": "Builders & Developers",
-  "/builders-risk-insurance/": "Builder's Risk",
-  "/bonding-insurance/": "Surety Bonds",
-  "/landscaping-snow-removal-insurance/": "Landscaping & Snow Removal",
-  "/pollution-liability-insurance/": "Pollution Liability",
-  "/commercial-property-insurance/": "Commercial Property",
-  "/property-management-insurance/": "Property Management",
-  "/condominium-corporation-insurance/": "Condo Corporation",
-  "/warehousing-insurance/": "Warehousing",
-  "/business-interruption-insurance/": "Business Interruption",
-  "/real-estate-insurance/": "Real Estate",
-  "/manufacturing-insurance/": "Manufacturing",
-  "/cannabis-producer-insurance/": "Cannabis Producer",
-  "/product-recall-insurance/": "Product Recall",
-  "/restaurant-insurance/": "Restaurants",
-  "/food-truck-insurance/": "Food Truck / Trailer",
-  "/hotel-motel-insurance/": "Hotel / Motel",
-  "/liquor-liability-insurance/": "Liquor Liability",
-  "/grocery-specialty-food-insurance/": "Grocery / Bakery",
-  "/retail-insurance/": "Retail",
-  "/convenience-store-insurance/": "Convenience / Gas",
-  "/cannabis-retail-insurance/": "Cannabis Retail",
-  "/pharmacy-insurance/": "Pharmacy",
-  "/salon-barber-insurance/": "Salon / Barber",
-  "/professional-offices-insurance/": "Professional Offices",
-  "/professional-liability-insurance/": "Professional Liability",
-  "/small-business-insurance/": "Small Business",
-  "/directors-officers-insurance/": "Directors & Officers",
-  "/cyber-insurance/": "Cyber",
-  "/medical-dental-insurance/": "Medical & Dental",
-  "/fitness-gym-insurance/": "Fitness / Gym",
-  "/non-profit-insurance/": "Non-Profit",
-  "/religious-organizations-insurance/": "Religious Organizations",
-  "/daycare-private-school-insurance/": "Daycare / School",
-  "/event-liability-insurance/": "Event Liability",
-  "/employment-practices-liability-insurance/": "Employment Practices Liability",
-  "/crime-fidelity-insurance/": "Crime & Fidelity",
-};
+/** Canonical homepage discovery category IDs (nav-business). */
+export type HomepageCategoryId = BusinessNavCategory["id"];
 
 /**
- * Approved product hrefs per homepage category (primary + secondary).
- * Order: primary industry products first, then secondary / cross-discovery.
+ * Analytics ID migration — old homepage tab IDs → canonical nav IDs.
+ * Use when interpreting historical `commercial_category_select` /
+ * `commercial_product_select` events that still carry pre-alignment IDs.
+ *
+ * Old ID              → New ID
+ * -------------------   -------------------------
+ * transportation      → transportation-trucking
+ * construction        → construction-contractors
+ * property            → real-estate
+ * manufacturing       → manufacturing
+ * hospitality         → hospitality-restaurants
+ * professional        → professional-services
+ * retail              → retail-grocery
+ * health              → healthcare-wellness
+ * community           → specialty-community
+ * specialty           → specialty-community
+ *                     (former Specialty Risks products now live under their
+ *                      industry tabs; the secondary Specialty & Community
+ *                      control only surfaces Non-Profit / Religious / Daycare)
  */
-export const HOMEPAGE_CATEGORY_ASSIGNMENTS: Record<
-  HomepageCategoryId,
-  readonly string[]
-> = {
-  transportation: [
-    "/commercial-auto-insurance/",
-    "/trucking-insurance/",
-    "/dump-truck-insurance/",
-    "/cargo-freight-insurance/",
-    "/garage-dealership-insurance/",
-  ],
-  construction: [
-    "/contractors-insurance/",
-    "/builders-developers-insurance/",
-    "/builders-risk-insurance/",
-    "/landscaping-snow-removal-insurance/",
-    "/dump-truck-insurance/",
-    "/bonding-insurance/",
-    "/pollution-liability-insurance/",
-  ],
-  property: [
-    "/commercial-property-insurance/",
-    "/property-management-insurance/",
-    "/condominium-corporation-insurance/",
-    "/warehousing-insurance/",
-    "/business-interruption-insurance/",
-    "/real-estate-insurance/",
-  ],
-  manufacturing: [
-    "/manufacturing-insurance/",
-    "/cannabis-producer-insurance/",
-    "/product-recall-insurance/",
-    "/pollution-liability-insurance/",
-  ],
-  hospitality: [
-    "/restaurant-insurance/",
-    "/food-truck-insurance/",
-    "/hotel-motel-insurance/",
-    "/liquor-liability-insurance/",
-    "/grocery-specialty-food-insurance/",
-  ],
-  professional: [
-    "/professional-offices-insurance/",
-    "/real-estate-insurance/",
-    "/professional-liability-insurance/",
-    "/directors-officers-insurance/",
-    "/cyber-insurance/",
-  ],
-  retail: [
-    "/small-business-insurance/",
-    "/retail-insurance/",
-    "/convenience-store-insurance/",
-    "/grocery-specialty-food-insurance/",
-    "/cannabis-retail-insurance/",
-    "/pharmacy-insurance/",
-    "/salon-barber-insurance/",
-  ],
-  health: [
-    "/medical-dental-insurance/",
-    "/pharmacy-insurance/",
-    "/fitness-gym-insurance/",
-    "/salon-barber-insurance/",
-  ],
-  community: [
-    "/non-profit-insurance/",
-    "/religious-organizations-insurance/",
-    "/daycare-private-school-insurance/",
-    "/event-liability-insurance/",
-    "/directors-officers-insurance/",
-    "/employment-practices-liability-insurance/",
-  ],
-  // Specialty PRIMARY only (Section X). Secondary specialties remain housed
-  // on their industry tabs — do not dump them here as homepage fixtures.
-  specialty: [
-    "/cyber-insurance/",
-    "/crime-fidelity-insurance/",
-    "/bonding-insurance/",
-    "/cannabis-retail-insurance/",
-    "/cannabis-producer-insurance/",
-    "/employment-practices-liability-insurance/",
-  ],
-};
+export const HOMEPAGE_ANALYTICS_ID_MIGRATION: Record<string, HomepageCategoryId> =
+  {
+    transportation: "transportation-trucking",
+    construction: "construction-contractors",
+    property: "real-estate",
+    manufacturing: "manufacturing",
+    hospitality: "hospitality-restaurants",
+    professional: "professional-services",
+    retail: "retail-grocery",
+    health: "healthcare-wellness",
+    community: "specialty-community",
+    specialty: "specialty-community",
+  };
+
+/**
+ * Every product URL previously shown on any homepage commercial tab.
+ * Alignment must keep each href discoverable via an industry tab or
+ * Specialty & Community (verified at build time by the completeness script).
+ */
+export const LEGACY_HOMEPAGE_PRODUCT_URLS: readonly string[] = [
+  "/commercial-auto-insurance/",
+  "/trucking-insurance/",
+  "/dump-truck-insurance/",
+  "/cargo-freight-insurance/",
+  "/garage-dealership-insurance/",
+  "/contractors-insurance/",
+  "/builders-developers-insurance/",
+  "/builders-risk-insurance/",
+  "/bonding-insurance/",
+  "/landscaping-snow-removal-insurance/",
+  "/pollution-liability-insurance/",
+  "/commercial-property-insurance/",
+  "/property-management-insurance/",
+  "/condominium-corporation-insurance/",
+  "/warehousing-insurance/",
+  "/business-interruption-insurance/",
+  "/real-estate-insurance/",
+  "/manufacturing-insurance/",
+  "/cannabis-producer-insurance/",
+  "/product-recall-insurance/",
+  "/restaurant-insurance/",
+  "/food-truck-insurance/",
+  "/hotel-motel-insurance/",
+  "/liquor-liability-insurance/",
+  "/grocery-specialty-food-insurance/",
+  "/retail-insurance/",
+  "/convenience-store-insurance/",
+  "/cannabis-retail-insurance/",
+  "/pharmacy-insurance/",
+  "/salon-barber-insurance/",
+  "/professional-offices-insurance/",
+  "/professional-liability-insurance/",
+  "/small-business-insurance/",
+  "/directors-officers-insurance/",
+  "/cyber-insurance/",
+  "/medical-dental-insurance/",
+  "/fitness-gym-insurance/",
+  "/non-profit-insurance/",
+  "/religious-organizations-insurance/",
+  "/daycare-private-school-insurance/",
+  "/event-liability-insurance/",
+  "/employment-practices-liability-insurance/",
+  "/crime-fidelity-insurance/",
+];
 
 export type HomepageCategoryProduct = {
   label: string;
   href: string;
 };
 
-function dedupeHrefs(hrefs: readonly string[]): string[] {
-  const seen = new Set<string>();
-  const out: string[] = [];
-  for (const href of hrefs) {
-    if (seen.has(href)) continue;
-    seen.add(href);
-    out.push(href);
+function categoryById(categoryId: HomepageCategoryId): BusinessNavCategory {
+  const category = businessNavCategories.find((c) => c.id === categoryId);
+  if (!category) {
+    throw new Error(`Unknown homepage/nav category id: ${categoryId}`);
   }
-  return out;
+  return category;
 }
 
+/** Product list for a category — delegated to nav-business (no duplicate lists). */
 export function getHomepageCategoryProducts(
   categoryId: HomepageCategoryId,
 ): HomepageCategoryProduct[] {
-  const hrefs = dedupeHrefs(HOMEPAGE_CATEGORY_ASSIGNMENTS[categoryId]);
-  return hrefs.map((href) => {
-    const label = HOMEPAGE_PRODUCT_LABELS[href];
-    if (!label) {
-      throw new Error(
-        `Missing HOMEPAGE_PRODUCT_LABELS entry for ${href} (${categoryId})`,
-      );
-    }
-    return { label, href };
-  });
+  return categoryById(categoryId).links.map((link) => ({
+    label: link.label,
+    href: link.href,
+  }));
 }
 
-export const HOMEPAGE_CATEGORY_IDS = Object.keys(
-  HOMEPAGE_CATEGORY_ASSIGNMENTS,
-) as HomepageCategoryId[];
+/** Primary industry IDs in approved display order (excludes Specialty & Community). */
+export const HOMEPAGE_INDUSTRY_IDS: HomepageCategoryId[] =
+  businessNavIndustries.map((c) => c.id);
+
+/** Specialty & Community group id. */
+export const HOMEPAGE_SPECIALTY_ID: HomepageCategoryId =
+  businessNavSpecialtyGroup.id;
+
+/** All discovery category IDs (8 industries + specialty group). */
+export const HOMEPAGE_CATEGORY_IDS: HomepageCategoryId[] = [
+  ...HOMEPAGE_INDUSTRY_IDS,
+  HOMEPAGE_SPECIALTY_ID,
+];
+
+/**
+ * Assignment map derived from nav-business for completeness tooling.
+ * Not an independent product source — mirrors canonical nav links.
+ */
+export const HOMEPAGE_CATEGORY_ASSIGNMENTS: Record<
+  HomepageCategoryId,
+  readonly string[]
+> = Object.fromEntries(
+  businessNavCategories.map((category) => [
+    category.id,
+    category.links.map((link) => link.href),
+  ]),
+) as Record<HomepageCategoryId, readonly string[]>;
+
+/** Union of every href currently offered in homepage discovery. */
+export function getAllHomepageDiscoveryHrefs(): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const category of businessNavCategories) {
+    for (const link of category.links) {
+      if (seen.has(link.href)) continue;
+      seen.add(link.href);
+      out.push(link.href);
+    }
+  }
+  return out;
+}
