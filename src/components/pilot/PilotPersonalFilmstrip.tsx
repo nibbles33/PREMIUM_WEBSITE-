@@ -354,7 +354,7 @@ export default function PilotPersonalFilmstrip() {
 
         <div className="mx-auto mt-5 flex max-w-6xl items-center px-4 sm:px-6 lg:px-8">
           <div
-            className="flex flex-wrap gap-1.5"
+            className="flex flex-wrap gap-3"
             role="tablist"
             aria-label="Personal product positions"
           >
@@ -365,10 +365,10 @@ export default function PilotPersonalFilmstrip() {
                 role="tab"
                 aria-selected={index === activeIndex}
                 aria-label={`Show ${item.label}`}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
+                className={`min-h-[11px] min-w-[11px] rounded-full transition-all duration-300 ${
                   index === activeIndex
-                    ? "w-7 bg-charcoal"
-                    : "w-1.5 bg-charcoal/25 hover:bg-charcoal/45"
+                    ? "h-[11px] w-7 bg-charcoal"
+                    : "h-[11px] w-[11px] bg-charcoal/25 hover:bg-charcoal/45"
                 }`}
                 onClick={() => scrollToIndex(index)}
               />

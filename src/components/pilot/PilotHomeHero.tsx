@@ -180,7 +180,7 @@ export default function PilotHomeHero() {
             Based in Windsor, our independent brokerage serves clients throughout
             Ontario.
           </p>
-          <p className="mt-4 text-[13px] font-medium tracking-[0.04em] text-white/55">
+          <p className="mt-4 text-[13px] font-medium tracking-[0.04em] text-white/70">
             Real brokers. Real advice.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
@@ -228,7 +228,7 @@ export default function PilotHomeHero() {
           className="group inline-flex flex-col items-center rounded-md px-3 py-2 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
           aria-label="Explore coverage — scroll to personal insurance products"
         >
-          <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-white/50 transition-colors group-hover:text-white/70">
+          <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-white/65 transition-colors group-hover:text-white/70">
             Explore coverage
           </span>
           <span className="mt-1 block text-gold" aria-hidden>

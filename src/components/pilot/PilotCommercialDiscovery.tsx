@@ -131,7 +131,7 @@ export default function PilotCommercialDiscovery() {
             >
               Serious insurance for serious businesses.
             </h2>
-            <p className="mt-5 text-[15px] leading-relaxed text-white/65 sm:text-[18px]">
+            <p className="mt-5 text-[15px] leading-relaxed text-white/75 sm:text-[18px]">
               From contractors and manufacturers to transportation, hospitality,
               real estate, healthcare and community organizations, Premium helps
               businesses understand their exposures and build coverage around how
@@ -175,10 +175,10 @@ export default function PilotCommercialDiscovery() {
                 >
                   {cat.shortLabel ? (
                     <>
-                      <span className="sm:hidden" aria-hidden="true">
+                      <span className="sm:hidden">
                         {cat.shortLabel}
                       </span>
-                      <span className="hidden sm:inline" aria-hidden="true">
+                      <span className="hidden sm:inline">
                         {cat.label}
                       </span>
                     </>
@@ -208,7 +208,7 @@ export default function PilotCommercialDiscovery() {
               className={`min-h-11 rounded-full border px-4 py-2 text-[12px] font-medium tracking-[0.02em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-[13px] ${
                 specialtyActive
                   ? "border-gold/70 bg-[#2a3132] text-gold shadow-[0_0_0_1px_rgba(208,173,38,0.28)]"
-                  : "border-white/10 bg-transparent text-white/55 hover:border-white/25 hover:text-white/80"
+                  : "border-white/10 bg-transparent text-white/65 hover:border-white/25 hover:text-white/80"
               }`}
             >
               Also Available: Specialty & Community
