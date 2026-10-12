@@ -129,7 +129,7 @@ export default function CountUpStat({
   const text = `${formatNumber(display)}${suffix}`;
 
   return (
-    <span
+    <div
       ref={ref}
       className={className}
       aria-label={ariaLabel ?? finalText}
@@ -146,6 +146,6 @@ export default function CountUpStat({
           {text}
         </span>
       </span>
-    </span>
+    </div>
   );
 }

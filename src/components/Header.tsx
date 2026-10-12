@@ -174,7 +174,7 @@ export default function Header() {
             <div className="ml-auto hidden shrink-0 items-center gap-4 lg:flex xl:gap-5">
               <Link
                 href={BROKER_HREF}
-                className="nav-link-animated whitespace-nowrap text-[13px] font-medium text-gold-dark hover:text-charcoal xl:text-sm"
+                className="nav-link-animated whitespace-nowrap text-[13px] font-medium text-charcoal hover:text-gold-dark xl:text-sm"
               >
                 Talk to a Broker
               </Link>
