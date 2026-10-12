@@ -60,7 +60,7 @@ export default function CountUpStat({
   className,
   durationMs = 3000,
 }: CountUpStatProps) {
-  const ref = useRef<HTMLSpanElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const completedRef = useRef(false);
   const startedRef = useRef(false);
   // Always start at 0 so the section does not show finished totals before trigger.
