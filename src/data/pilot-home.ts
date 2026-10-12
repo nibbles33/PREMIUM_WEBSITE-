@@ -167,9 +167,14 @@ function buildCommercialCategory(
 export const commercialIndustryCategories: CommercialCategory[] =
   businessNavIndustries.map(buildCommercialCategory);
 
-/** Specialty & Community — secondary discovery control, not a primary industry. */
-export const commercialSpecialtyCategory: CommercialCategory =
-  buildCommercialCategory(businessNavSpecialtyGroup);
+/**
+ * Specialty & Community — secondary homepage discovery control.
+ * In the Business mega-menu it is a full industry; homepage keeps it separate.
+ */
+export const commercialSpecialtyCategory: CommercialCategory = {
+  ...buildCommercialCategory(businessNavSpecialtyGroup),
+  role: "specialty_group",
+};
 
 /** All discovery categories (industries first, specialty last). */
 export const commercialCategories: CommercialCategory[] = [

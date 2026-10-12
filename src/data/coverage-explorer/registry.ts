@@ -37,6 +37,9 @@ export const SLUG_TO_VISUAL_FAMILY: Record<string, CoverageVisualFamily> = {
   "dump-truck-insurance": "fleet-commercial-vehicle",
   "greenhouse-agribusiness-insurance": "greenhouse",
   "farm-insurance": "farm",
+  "crop-insurance": "farm",
+  "livestock-insurance": "farm",
+  "farm-equipment-insurance": "farm",
   "commercial-property-insurance": "commercial-building",
   "business-interruption-insurance": "commercial-building",
   "property-management-insurance": "commercial-building",
@@ -86,7 +89,7 @@ export function getCoverageExplorerConfig(
   return buildRouteExplorerConfig(slug, coverageIds);
 }
 
-/** All 58 live routes with interactive master assets. */
+/** Live routes with interactive master assets. */
 export const INTERACTIVE_MASTER_ROUTE_SLUGS = Object.keys(
   ROUTE_TO_INTERACTIVE_MASTER_FILE,
 );

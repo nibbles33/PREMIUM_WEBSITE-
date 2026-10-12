@@ -5,8 +5,8 @@ export type NavLink = {
 
 /**
  * Business mega-menu category.
- * `role: "industry"` — one of the eight approved primary industries.
- * `role: "specialty_group"` — Specialty & Community (not a ninth industry).
+ * All ten entries are primary industries in the Business dropdown
+ * (Specialty & Community and Agriculture included in the main list).
  */
 export type BusinessNavCategory = {
   id: string;
@@ -21,7 +21,7 @@ export const businessNavHub = {
 };
 
 /**
- * Eight approved industries + Specialty & Community group.
+ * Ten Business industries in approved mega-menu order.
  * Every product href from the prior flat mega-menu is preserved at least once.
  * Workplace-injury statutory products are intentionally omitted from menus.
  */
@@ -60,7 +60,6 @@ export const businessNavCategories: BusinessNavCategory[] = [
       { label: "Food Truck / Trailer", href: "/food-truck-insurance/" },
       { label: "Hotel / Motel", href: "/hotel-motel-insurance/" },
       { label: "Liquor Liability", href: "/liquor-liability-insurance/" },
-      { label: "Event Liability", href: "/event-liability-insurance/" },
     ],
   },
   {
@@ -125,21 +124,42 @@ export const businessNavCategories: BusinessNavCategory[] = [
   {
     id: "specialty-community",
     title: "Specialty & Community",
-    role: "specialty_group",
+    role: "industry",
     links: [
       { label: "Non-Profit", href: "/non-profit-insurance/" },
       { label: "Religious Organizations", href: "/religious-organizations-insurance/" },
       { label: "Daycare / School", href: "/daycare-private-school-insurance/" },
+      { label: "Event Liability", href: "/event-liability-insurance/" },
+    ],
+  },
+  {
+    id: "agriculture",
+    title: "Agriculture",
+    role: "industry",
+    links: [
+      { label: "Farm Insurance", href: "/farm-insurance/" },
+      { label: "Crop Insurance", href: "/crop-insurance/" },
+      { label: "Livestock / Animal Insurance", href: "/livestock-insurance/" },
+      { label: "Greenhouse & Nursery", href: "/greenhouse-agribusiness-insurance/" },
+      { label: "Farm Equipment Coverage", href: "/farm-equipment-insurance/" },
     ],
   },
 ];
 
-/** Primary industries only (excludes Specialty & Community). */
+/**
+ * Homepage commercial discovery still uses the original eight industries
+ * plus Specialty & Community as a secondary control — Agriculture remains
+ * nav-only under Business until homepage discovery is expanded separately.
+ */
+const HOMEPAGE_DISCOVERY_EXCLUDE = new Set(["agriculture"]);
+
+/** Eight classic industries for homepage discovery (excludes Agriculture). */
 export const businessNavIndustries = businessNavCategories.filter(
-  (c) => c.role === "industry",
+  (c) =>
+    c.id !== "specialty-community" && !HOMEPAGE_DISCOVERY_EXCLUDE.has(c.id),
 );
 
-/** Specialty & Community group — not a ninth primary industry. */
+/** Specialty & Community — still a secondary homepage discovery control. */
 export const businessNavSpecialtyGroup = businessNavCategories.find(
-  (c) => c.role === "specialty_group",
+  (c) => c.id === "specialty-community",
 )!;

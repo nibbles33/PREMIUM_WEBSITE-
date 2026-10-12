@@ -60,11 +60,6 @@ export const personalNavGroups: NavGroup[] = [
         description: "Extra liability limits above your home and auto policies.",
       },
       {
-        label: "Life Insurance",
-        href: "/life-insurance/",
-        description: "Life insurance inquiry coordination through licensed specialists.",
-      },
-      {
         label: "Group Home & Auto",
         href: "/group-home-auto-insurance/",
         description: "Employer and association group program inquiries.",
@@ -77,3 +72,4 @@ export const personalNavGroups: NavGroup[] = [
     ],
   },
 ];
+
