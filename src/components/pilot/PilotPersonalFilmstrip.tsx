@@ -327,7 +327,7 @@ export default function PilotPersonalFilmstrip() {
                           fill
                           sizes={PILOT_FILMSTRIP_IMAGE.sizes}
                           quality={PILOT_FILMSTRIP_IMAGE.quality}
-                          loading={index < 5 ? "eager" : "lazy"}
+                          loading="lazy"
                           className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                           draggable={false}
                         />

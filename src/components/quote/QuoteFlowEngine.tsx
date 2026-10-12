@@ -112,9 +112,27 @@ export default function QuoteFlowEngine({
 
   const step = flow.currentStep;
   if (!flow.initialized || !step) {
+    // Height-stable shell while the flow initializes (prefills / first paint).
     return (
-      <div className="rounded-[18px] border border-border bg-white/95 p-8 text-center text-secondary">
-        Loading…
+      <div
+        className="rounded-[18px] border border-border bg-white/95 p-5 shadow-[0_12px_40px_rgba(32,39,40,0.08)] sm:p-8"
+        aria-busy="true"
+        aria-live="polite"
+      >
+        <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark">
+          {CATEGORY_LABELS[category]}
+        </p>
+        <h1 className="mt-3 text-[1.5rem] font-medium leading-[1.15] tracking-[-0.02em] text-charcoal sm:text-[1.75rem]">
+          Preparing your quote questions…
+        </h1>
+        <p className="mt-2 text-[15px] leading-relaxed text-secondary">
+          Just a moment while we load the next step.
+        </p>
+        <div className="mt-8 space-y-2.5" aria-hidden>
+          <div className="min-h-[52px] rounded-xl border border-border bg-offwhite" />
+          <div className="min-h-[52px] rounded-xl border border-border bg-offwhite" />
+          <div className="min-h-[52px] rounded-xl border border-border bg-offwhite" />
+        </div>
       </div>
     );
   }

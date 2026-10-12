@@ -6,21 +6,26 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 type RevealOnScrollProps = {
   children: ReactNode;
   className?: string;
+  /**
+   * When true, content is visible immediately (no opacity-0 phase).
+   * Use for above-the-fold hero headings/photos so LCP is measurable.
+   */
+  eager?: boolean;
 };
 
 export default function RevealOnScroll({
   children,
   className = "",
+  eager = false,
 }: RevealOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
   const reduceMotion = usePrefersReducedMotion();
-  const [visible, setVisible] = useState(reduceMotion);
+  const [visible, setVisible] = useState(eager || reduceMotion);
 
   useEffect(() => {
-    if (reduceMotion) {
-      setVisible(true);
-      return;
-    }
+    // Eager / reduced-motion start visible via useState — no effect setState.
+    if (eager || reduceMotion) return;
+
     const el = ref.current;
     if (!el) return;
 
@@ -35,7 +40,7 @@ export default function RevealOnScroll({
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [reduceMotion]);
+  }, [eager, reduceMotion]);
 
   return (
     <div
