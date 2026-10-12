@@ -28,7 +28,7 @@ function YepMediaTile({ item }: { item: CoverageStreamItem }) {
         {photo ? (
           <Image
             src={photo.src}
-            alt=""
+            alt={`${item.label} insurance coverage icon`}
             fill
             sizes={PILOT_YEP_TILE_IMAGE.sizes}
             quality={PILOT_YEP_TILE_IMAGE.quality}

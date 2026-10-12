@@ -35,7 +35,7 @@ export default function PilotFinalCta() {
               Talk to a Broker
             </PremiumPilotButton>
           </div>
-          <p className="mt-6 text-[12px] font-medium uppercase tracking-[0.14em] text-white/45">
+          <p className="mt-6 text-[12px] font-medium uppercase tracking-[0.14em] text-white/65">
             Home · Auto · Business · Specialty
           </p>
         </RevealOnScroll>

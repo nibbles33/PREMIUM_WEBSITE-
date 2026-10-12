@@ -28,6 +28,24 @@ import {
 const ITEMS = personalFilmstripItems;
 const ITEM_COUNT = ITEMS.length;
 
+/** Alt text for personal insurance product images */
+const PRODUCT_IMAGE_ALT: Record<string, string> = {
+  "home-insurance": "Couple reviewing home insurance coverage and policy details",
+  "auto-insurance": "Driver checking auto insurance documents on mobile device",
+  "condo-insurance": "Condo owner reviewing condo insurance policy",
+  "tenant-insurance": "Tenant reading renter's insurance information",
+  "travel-insurance": "Traveler planning trip with travel insurance coverage",
+  "life-insurance": "Family discussing life insurance protection options",
+  "business-insurance": "Business owner consulting about commercial coverage",
+  "commercial-insurance": "Business professional reviewing commercial insurance documents",
+  "umbrella-insurance": "Family protected by umbrella coverage concept",
+  "mortgage-insurance": "Homebuyer reviewing mortgage protection insurance",
+  "disability-insurance": "Professional planning for income protection",
+  "critical-illness-insurance": "Person reviewing critical illness coverage options",
+  "group-insurance": "Team of employees reviewing group benefits",
+  "specialty-insurance": "Specialist reviewing specialized insurance coverage options",
+};
+
 /**
  * Concept F — editorial Personal discovery (Rev 2/3).
  * Intentional navigation only (arrows / drag / swipe / keyboard).
@@ -305,7 +323,7 @@ export default function PilotPersonalFilmstrip() {
                       {photo ? (
                         <Image
                           src={photo.src}
-                          alt=""
+                          alt={PRODUCT_IMAGE_ALT[item.slug] || `${item.label} insurance coverage`}
                           fill
                           sizes={PILOT_FILMSTRIP_IMAGE.sizes}
                           quality={PILOT_FILMSTRIP_IMAGE.quality}
@@ -336,7 +354,7 @@ export default function PilotPersonalFilmstrip() {
 
         <div className="mx-auto mt-5 flex max-w-6xl items-center px-4 sm:px-6 lg:px-8">
           <div
-            className="flex flex-wrap gap-1.5"
+            className="flex flex-wrap gap-3"
             role="tablist"
             aria-label="Personal product positions"
           >
@@ -347,10 +365,10 @@ export default function PilotPersonalFilmstrip() {
                 role="tab"
                 aria-selected={index === activeIndex}
                 aria-label={`Show ${item.label}`}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
+                className={`min-h-[11px] min-w-[11px] rounded-full transition-all duration-300 ${
                   index === activeIndex
-                    ? "w-7 bg-charcoal"
-                    : "w-1.5 bg-charcoal/25 hover:bg-charcoal/45"
+                    ? "h-[11px] w-7 bg-charcoal"
+                    : "h-[11px] w-[11px] bg-charcoal/25 hover:bg-charcoal/45"
                 }`}
                 onClick={() => scrollToIndex(index)}
               />

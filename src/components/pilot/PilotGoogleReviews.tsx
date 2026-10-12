@@ -84,7 +84,7 @@ export default function PilotGoogleReviews({ ratingResult }: Props) {
                 </div>
               )}
 
-              <p className="mt-6 max-w-md text-[14px] leading-relaxed text-white/55">
+              <p className="mt-6 max-w-md text-[14px] leading-relaxed text-white/70">
                 Reviews for {google.businessName}. Ratings provided by Google.
               </p>
 
@@ -115,7 +115,7 @@ export default function PilotGoogleReviews({ ratingResult }: Props) {
                       <Stars rating={review.rating} />
                     </div>
                     {review.relativeTime ? (
-                      <p className="mt-1 text-[12px] text-white/45">
+                      <p className="mt-1 text-[12px] text-white/60">
                         {review.relativeTime}
                       </p>
                     ) : null}
@@ -135,7 +135,7 @@ export default function PilotGoogleReviews({ ratingResult }: Props) {
                   <p className="mt-3 text-[14px] leading-relaxed text-white/60">
                     {google.address}
                   </p>
-                  <p className="mt-8 max-w-md text-[14px] leading-relaxed text-white/55">
+                  <p className="mt-8 max-w-md text-[14px] leading-relaxed text-white/70">
                     Authentic client reviews from Google appear here when
                     available. We never invent testimonials.
                   </p>
