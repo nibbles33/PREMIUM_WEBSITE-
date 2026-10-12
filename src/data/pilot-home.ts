@@ -111,7 +111,7 @@ const commercialPresentationById: Record<
   "transportation-trucking": {
     description:
       "Trucking, commercial auto, cargo, and garage coverage for Windsor-Essex operators.",
-    photoSlug: "trucking-insurance",
+    photoSlug: "commercial-auto-insurance",
     href: "/commercial-auto-insurance/",
     shortLabel: "Transportation",
   },
