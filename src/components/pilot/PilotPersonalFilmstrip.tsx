@@ -28,6 +28,24 @@ import {
 const ITEMS = personalFilmstripItems;
 const ITEM_COUNT = ITEMS.length;
 
+/** Alt text for personal insurance product images */
+const PRODUCT_IMAGE_ALT: Record<string, string> = {
+  "home-insurance": "Couple reviewing home insurance coverage and policy details",
+  "auto-insurance": "Driver checking auto insurance documents on mobile device",
+  "condo-insurance": "Condo owner reviewing condo insurance policy",
+  "tenant-insurance": "Tenant reading renter's insurance information",
+  "travel-insurance": "Traveler planning trip with travel insurance coverage",
+  "life-insurance": "Family discussing life insurance protection options",
+  "business-insurance": "Business owner consulting about commercial coverage",
+  "commercial-insurance": "Business professional reviewing commercial insurance documents",
+  "umbrella-insurance": "Family protected by umbrella coverage concept",
+  "mortgage-insurance": "Homebuyer reviewing mortgage protection insurance",
+  "disability-insurance": "Professional planning for income protection",
+  "critical-illness-insurance": "Person reviewing critical illness coverage options",
+  "group-insurance": "Team of employees reviewing group benefits",
+  "specialty-insurance": "Specialist reviewing specialized insurance coverage options",
+};
+
 /**
  * Concept F — editorial Personal discovery (Rev 2/3).
  * Intentional navigation only (arrows / drag / swipe / keyboard).
@@ -305,7 +323,7 @@ export default function PilotPersonalFilmstrip() {
                       {photo ? (
                         <Image
                           src={photo.src}
-                          alt=""
+                          alt={PRODUCT_IMAGE_ALT[item.slug] || `${item.label} insurance coverage`}
                           fill
                           sizes={PILOT_FILMSTRIP_IMAGE.sizes}
                           quality={PILOT_FILMSTRIP_IMAGE.quality}

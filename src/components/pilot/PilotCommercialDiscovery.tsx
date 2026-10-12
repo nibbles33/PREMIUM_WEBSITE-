@@ -235,7 +235,7 @@ export default function PilotCommercialDiscovery() {
                 {photo ? (
                   <Image
                     src={photo.src}
-                    alt=""
+                    alt={`${active.label} insurance industry coverage`}
                     fill
                     sizes={PILOT_COMMERCIAL_PANEL_IMAGE.sizes}
                     quality={PILOT_COMMERCIAL_PANEL_IMAGE.quality}
