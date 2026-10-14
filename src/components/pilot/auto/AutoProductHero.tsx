@@ -91,7 +91,7 @@ export default function AutoProductHero() {
 
       <div className="relative mx-auto max-w-6xl px-4 py-11 sm:px-6 sm:py-14 lg:px-8 lg:py-[4.25rem] xl:max-w-7xl">
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-14">
-          <RevealOnScroll>
+          <RevealOnScroll eager>
             <div
               className="max-w-xl lg:max-w-[34rem]"
               style={{
@@ -132,7 +132,7 @@ export default function AutoProductHero() {
             </div>
           </RevealOnScroll>
 
-          <RevealOnScroll className="relative">
+          <RevealOnScroll eager className="relative">
             <div className="pilot-auto-hero-visual relative">
               <div className="pilot-auto-hero-arc pointer-events-none">
                 <ProtectionArc active breathe={!reduceMotion} />
