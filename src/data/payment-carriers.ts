@@ -82,4 +82,12 @@ export const paymentCarriers: PaymentCarrier[] = [
     logo: "/images/carriers/carrier-unica.png",
     logoAlt: "Unica Insurance logo",
   },
+  {
+    // Definity rebranded from Economical; payment portal remains on economical.com.
+    // Economical was not previously listed on this page — single card avoids duplicates.
+    name: "Definity Insurance (formerly Economical Insurance)",
+    href: "https://www.economical.com/en/make-a-payment",
+    logo: "/images/carriers/carrier-definity.png",
+    logoAlt: "Definity Insurance logo",
+  },
 ];
