@@ -44,12 +44,6 @@ export const teamMembers: TeamMember[] = [
     photoAlt: "Lyndsey Becze, Customer Service Representative",
   },
   {
-    name: "Danny Tesfamariam",
-    title: "Customer Service Representative",
-    photo: "/images/team/team-danny-tesfamariam.jpg",
-    photoAlt: "Danny Tesfamariam, Customer Service Representative",
-  },
-  {
     name: "Judy Gu",
     title: "Sales Producer",
     photo: "/images/team/team-judy-gu.jpg",
