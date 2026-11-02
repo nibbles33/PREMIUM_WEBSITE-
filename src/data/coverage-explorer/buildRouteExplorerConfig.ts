@@ -168,5 +168,11 @@ export function buildRouteExplorerConfig(
       ...state,
       ambient: { dimOpacity: 0.12 },
     })),
+    ...(slug === "tow-truck-insurance"
+      ? {
+          sceneNote:
+            "Illustration shows a general commercial fleet setting. It is not a depiction of tow-boom or on-hook operations.",
+        }
+      : {}),
   };
 }

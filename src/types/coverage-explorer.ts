@@ -133,4 +133,9 @@ export type CoverageExplorerVisualConfig = {
   highlightRenderer?: "dim-only" | "masked-illumination";
   /** Whether family uses built-in CSS scene geometry */
   cssSceneClass?: string;
+  /**
+   * Optional static disclosure under the interactive visual
+   * (e.g. reused artwork that is not a literal depiction of the product).
+   */
+  sceneNote?: string;
 };

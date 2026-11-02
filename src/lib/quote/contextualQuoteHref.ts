@@ -71,6 +71,18 @@ const PATH_QUOTE_ALLOWLIST: Readonly<Record<string, string>> = {
   "retail-insurance": `${QUOTE_BUSINESS}&businessType=retail`,
   "salon-barber-insurance": QUOTE_BUSINESS,
   "warehousing-insurance": QUOTE_BUSINESS,
+
+  // Batch A commercial expansion
+  "roofing-contractors-insurance": `${QUOTE_BUSINESS}&businessType=contractor`,
+  "electrical-contractors-insurance": `${QUOTE_BUSINESS}&businessType=contractor`,
+  "plumbing-hvac-insurance": `${QUOTE_BUSINESS}&businessType=contractor`,
+  "excavation-contractors-insurance": `${QUOTE_BUSINESS}&businessType=contractor`,
+  "commercial-landlord-insurance": QUOTE_BUSINESS,
+  "apartment-building-insurance": QUOTE_BUSINESS,
+  "mixed-use-property-insurance": QUOTE_BUSINESS,
+  "tow-truck-insurance": QUOTE_COMMERCIAL_VEHICLES,
+  "commercial-umbrella-insurance": QUOTE_BUSINESS,
+  "equipment-breakdown-insurance": QUOTE_BUSINESS,
 };
 
 export type DiscoveryQuoteCta = {

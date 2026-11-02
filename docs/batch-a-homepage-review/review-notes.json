@@ -1,0 +1,240 @@
+[
+  {
+    "label": "construction-desktop",
+    "linkCount": 12,
+    "linkLabels": [
+      "Contractors→",
+      "Roofing Contractors→",
+      "Electrical Contractors→",
+      "Plumbing & HVAC→",
+      "Excavation & Concrete→",
+      "Builders & Developers→",
+      "Builder's Risk→",
+      "Landscaping & Snow Removal→",
+      "Surety Bonds→",
+      "Pollution Liability→",
+      "Explore Construction & Contractors→",
+      "All Commercial"
+    ],
+    "linkIssues": [],
+    "tablistNotes": [
+      {
+        "overflowX": false,
+        "flexWrap": "wrap",
+        "scrollWidth": 1216,
+        "clientWidth": 1216
+      }
+    ],
+    "panelHeight": 519,
+    "panelWidth": 1216,
+    "file": "/workspace/docs/batch-a-homepage-review/homepage-construction-desktop.png"
+  },
+  {
+    "label": "real-estate-desktop",
+    "linkCount": 10,
+    "linkLabels": [
+      "Real Estate→",
+      "Commercial Property→",
+      "Commercial Landlord→",
+      "Apartment Buildings→",
+      "Mixed-Use Property→",
+      "Property Management→",
+      "Condo Corporation→",
+      "Equipment Breakdown→",
+      "Explore Real Estate→",
+      "All Commercial"
+    ],
+    "linkIssues": [],
+    "tablistNotes": [
+      {
+        "overflowX": false,
+        "flexWrap": "wrap",
+        "scrollWidth": 1216,
+        "clientWidth": 1216
+      }
+    ],
+    "panelHeight": 436,
+    "panelWidth": 1216,
+    "file": "/workspace/docs/batch-a-homepage-review/homepage-real-estate-desktop.png"
+  },
+  {
+    "label": "transportation-desktop",
+    "linkCount": 8,
+    "linkLabels": [
+      "Commercial Auto / Fleet→",
+      "Trucking→",
+      "Dump Truck→",
+      "Tow Truck Operators→",
+      "Cargo / Freight→",
+      "Garage / Dealership→",
+      "Explore Transportation & Trucking→",
+      "All Commercial"
+    ],
+    "linkIssues": [],
+    "tablistNotes": [
+      {
+        "overflowX": false,
+        "flexWrap": "wrap",
+        "scrollWidth": 1216,
+        "clientWidth": 1216
+      }
+    ],
+    "panelHeight": 376,
+    "panelWidth": 1216,
+    "file": "/workspace/docs/batch-a-homepage-review/homepage-transportation-desktop.png"
+  },
+  {
+    "label": "specialty-desktop",
+    "linkCount": 7,
+    "linkLabels": [
+      "Non-Profit→",
+      "Religious Organizations→",
+      "Daycare / School→",
+      "Event Liability→",
+      "Commercial Umbrella→",
+      "Explore Specialty & Community→",
+      "All Commercial"
+    ],
+    "linkIssues": [],
+    "tablistNotes": [
+      {
+        "overflowX": false,
+        "flexWrap": "wrap",
+        "scrollWidth": 1216,
+        "clientWidth": 1216
+      }
+    ],
+    "panelHeight": 312,
+    "panelWidth": 1216,
+    "file": "/workspace/docs/batch-a-homepage-review/homepage-specialty-desktop.png"
+  },
+  {
+    "label": "construction-mobile",
+    "linkCount": 12,
+    "linkLabels": [
+      "Contractors→",
+      "Roofing Contractors→",
+      "Electrical Contractors→",
+      "Plumbing & HVAC→",
+      "Excavation & Concrete→",
+      "Builders & Developers→",
+      "Builder's Risk→",
+      "Landscaping & Snow Removal→",
+      "Surety Bonds→",
+      "Pollution Liability→",
+      "Explore Construction & Contractors→",
+      "All Commercial"
+    ],
+    "linkIssues": [],
+    "tablistNotes": [
+      {
+        "overflowX": true,
+        "flexWrap": "nowrap",
+        "scrollWidth": 876,
+        "clientWidth": 358
+      }
+    ],
+    "panelHeight": 1055,
+    "panelWidth": 358,
+    "file": "/workspace/docs/batch-a-homepage-review/homepage-construction-mobile.png"
+  },
+  {
+    "label": "real-estate-mobile",
+    "linkCount": 10,
+    "linkLabels": [
+      "Real Estate→",
+      "Commercial Property→",
+      "Commercial Landlord→",
+      "Apartment Buildings→",
+      "Mixed-Use Property→",
+      "Property Management→",
+      "Condo Corporation→",
+      "Equipment Breakdown→",
+      "Explore Real Estate→",
+      "All Commercial"
+    ],
+    "linkIssues": [],
+    "tablistNotes": [
+      {
+        "overflowX": true,
+        "flexWrap": "nowrap",
+        "scrollWidth": 876,
+        "clientWidth": 358
+      }
+    ],
+    "panelHeight": 937,
+    "panelWidth": 358,
+    "file": "/workspace/docs/batch-a-homepage-review/homepage-real-estate-mobile.png"
+  },
+  {
+    "label": "transportation-mobile",
+    "linkCount": 8,
+    "linkLabels": [
+      "Commercial Auto / Fleet→",
+      "Trucking→",
+      "Dump Truck→",
+      "Tow Truck Operators→",
+      "Cargo / Freight→",
+      "Garage / Dealership→",
+      "Explore Transportation & Trucking→",
+      "All Commercial"
+    ],
+    "linkIssues": [],
+    "tablistNotes": [
+      {
+        "overflowX": true,
+        "flexWrap": "nowrap",
+        "scrollWidth": 876,
+        "clientWidth": 358
+      }
+    ],
+    "panelHeight": 819,
+    "panelWidth": 358,
+    "file": "/workspace/docs/batch-a-homepage-review/homepage-transportation-mobile.png"
+  },
+  {
+    "label": "specialty-mobile",
+    "linkCount": 7,
+    "linkLabels": [
+      "Non-Profit→",
+      "Religious Organizations→",
+      "Daycare / School→",
+      "Event Liability→",
+      "Commercial Umbrella→",
+      "Explore Specialty & Community→",
+      "All Commercial"
+    ],
+    "linkIssues": [],
+    "tablistNotes": [
+      {
+        "overflowX": true,
+        "flexWrap": "nowrap",
+        "scrollWidth": 876,
+        "clientWidth": 358
+      }
+    ],
+    "panelHeight": 696,
+    "panelWidth": 358,
+    "file": "/workspace/docs/batch-a-homepage-review/homepage-specialty-mobile.png"
+  },
+  {
+    "label": "tow-caption-desktop",
+    "file": "/workspace/docs/batch-a-homepage-review/tow-explorer-caption-desktop.png",
+    "found": true,
+    "text": "Illustration shows a general commercial fleet setting. It is not a depiction of tow-boom or on-hook operations.",
+    "visible": true,
+    "top": 518,
+    "width": 502,
+    "height": 36
+  },
+  {
+    "label": "tow-caption-mobile",
+    "file": "/workspace/docs/batch-a-homepage-review/tow-explorer-caption-mobile.png",
+    "found": true,
+    "text": "Illustration shows a general commercial fleet setting. It is not a depiction of tow-boom or on-hook operations.",
+    "visible": true,
+    "top": 391,
+    "width": 316,
+    "height": 33
+  }
+]

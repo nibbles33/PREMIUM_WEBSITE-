@@ -164,10 +164,10 @@ export const commercialHubCategories: CommercialHubCategory[] = [
     icon: HardHat,
   },
   {
-    label: "Equipment on Commercial Property",
-    href: "/commercial-property-insurance/",
+    label: "Equipment Breakdown",
+    href: "/equipment-breakdown-insurance/",
     description:
-      "Equipment breakdown is reviewed on the Commercial Property page — there is no separate equipment-breakdown product route.",
+      "Dedicated equipment breakdown (boiler and machinery) coverage — mechanical and electrical breakdown distinct from named-peril commercial property.",
     icon: Wrench,
   },
   {

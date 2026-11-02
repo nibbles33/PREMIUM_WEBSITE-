@@ -126,6 +126,11 @@ export default function ProductCoverageExplorer({ config }: ProductCoverageExplo
                 explorer={config.coverageExplorer}
                 hasImageInteracted={hasImageInteracted}
               />
+              {config.coverageExplorer?.sceneNote ? (
+                <p className="pilot-product-explorer-scene-note mt-3 text-center text-[12px] leading-snug text-secondary sm:text-[13px]">
+                  {config.coverageExplorer.sceneNote}
+                </p>
+              ) : null}
               <div className="mt-6 rounded-xl border border-gold/25 bg-[#FBF5E5]/70 px-4 py-4 lg:mt-7 lg:px-5 lg:py-[1.125rem]">
                 <div className="flex items-start gap-3">
                   <span

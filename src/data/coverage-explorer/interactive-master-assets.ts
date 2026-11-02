@@ -72,6 +72,16 @@ export const ROUTE_TO_INTERACTIVE_MASTER_FILE: Record<string, string> = {
   "farm-equipment-insurance":
     "farm-equipment-insurance-interactive-master.png",
   "dump-truck-insurance": "dump-truck-insurance-interactive-master.png",
+  // Batch A — reuse existing masters (no new interactive art)
+  "tow-truck-insurance": "commercial-auto-fleet-interactive-master.png",
+  "commercial-landlord-insurance":
+    "commercial-property-insurance-interactive-master.png",
+  "apartment-building-insurance":
+    "commercial-property-insurance-interactive-master.png",
+  "mixed-use-property-insurance":
+    "commercial-property-insurance-interactive-master.png",
+  "equipment-breakdown-insurance":
+    "commercial-property-insurance-interactive-master.png",
   "bonding-insurance": "bonding-surety-interactive-master.png",
   "greenhouse-agribusiness-insurance":
     "greenhouse-insurance-interactive-master.png",

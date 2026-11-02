@@ -1,3 +1,4 @@
+import { commercialProductBatchAPages } from "@/data/product-pages/commercial-products-batch-a";
 import { commercialProductPages } from "@/data/product-pages/commercial-products-core";
 import { commercialProductIndustryPages } from "@/data/product-pages/commercial-products-industry";
 import {
@@ -13,6 +14,7 @@ export const allProductPages: ProductPageContent[] = [
   ...commercialProductIndustryPages,
   ...commercialProductHospitalityPages,
   ...commercialProductSpecialtyPages,
+  ...commercialProductBatchAPages,
 ];
 
 const productPageBySlug = new Map(
