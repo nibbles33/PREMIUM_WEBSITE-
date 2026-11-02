@@ -916,12 +916,12 @@ export const commercialProductBatchAPages: ProductPageContent[] = [
       "Tow truck operators insurance for Windsor-Essex and Ontario — on-hook, storage-lot, and roadside liability exposures reviewed through an independent broker. Not guaranteed.",
     headline: "Tow Truck Operators Insurance",
     subhead:
-      "Tow truck operators insurance is for towing and recovery businesses in Windsor-Essex and across Ontario — light-duty, heavy-duty, and roadside assistance fleets. On-hook liability for customer vehicles in tow, storage-lot bailee exposures, and roadside operations differ from ordinary commercial auto or garage programs. The Coverage Explorer on this page uses a commercial fleet orientation scene; it does not depict a tow boom or on-hook hookup — use the coverage tabs for towing-specific detail. Terms depend on equipment, radius, and insurer appetite; coverage is not guaranteed.",
+      "Tow truck operators insurance is for towing and recovery businesses in Windsor-Essex and across Ontario — light-duty, heavy-duty, and roadside assistance fleets. On-hook liability for customer vehicles in tow, storage-lot bailee exposures, and roadside operations differ from ordinary commercial auto or garage programs. Terms depend on equipment, radius, and insurer appetite; coverage is not guaranteed.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
     quoteLabel: "Get a Tow Truck Quote",
     photographySlug: "tow-truck-insurance",
     coverageIntro:
-      "Coverages commonly reviewed for towing operators — on-hook, auto liability, physical damage, and storage-lot exposures. The explorer graphic is a generic commercial fleet scene for orientation only; it does not illustrate a tow truck performing an on-hook recovery.",
+      "Coverages commonly reviewed for towing operators — on-hook exposure for customer vehicles, commercial auto liability, physical damage on tow units, and storage-lot or roadside liability.",
     coverageTypes: [
       {
         id: "liability-coverage",
@@ -986,11 +986,6 @@ export const commercialProductBatchAPages: ProductPageContent[] = [
         description:
           "Contractual insurance requirements from municipalities, police boards, or motor clubs must match what your program can support.",
       },
-      {
-        title: "Explorer graphic limitation",
-        description:
-          "The interactive visual reuses a commercial fleet orientation scene. It does not show tow-specific equipment; rely on the coverage copy for on-hook and storage detail.",
-      },
     ],
     relatedLinks: [
       { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
@@ -1016,9 +1011,9 @@ export const commercialProductBatchAPages: ProductPageContent[] = [
           "Only where bailee or storage-lot wording and limits apply, subject to security conditions and exclusions. Confirm separately from auto liability.",
       },
       {
-        question: "Why does the explorer show a generic fleet scene?",
+        question: "Do roadside and heavy-recovery jobs need special disclosure?",
         answer:
-          "We reuse the commercial fleet visual family for orientation. It does not depict tow booms or on-hook hookups. Towing-specific detail lives in the coverage tabs and copy.",
+          "Yes. Long-haul recovery, heavy rotators, and work near live traffic can change underwriting. Disclose equipment types, radius, and contract work so markets can be approached accurately.",
       },
       {
         question: "Can every tow operator be placed?",
