@@ -407,6 +407,52 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
       "non-trucking-liability": ["highway-lane", "tractor-cab", "yard-staging"],
     },
   },
+  /** Tow uses fleet scene for orientation only — zones map loosely; copy discloses limitation. */
+  "tow-truck-insurance": {
+    archetype: "fleet-vehicles",
+    coverageZones: {
+      "liability-coverage": ["highway-lane", "lead-truck", "yard-staging"],
+      "physical-damage-coverage": ["lead-truck", "trailing-unit", "cargo-trailer"],
+      "on-hook-bailee": ["cargo-trailer", "yard-staging", "lead-truck"],
+      "storage-lot-roadside": ["yard-staging", "highway-lane", "lead-truck"],
+    },
+  },
+  "commercial-landlord-insurance": {
+    archetype: "commercial-building",
+    coverageZones: {
+      "building-coverage": ["tower-shell", "office-floors", "rooftop-mechanical"],
+      "general-liability": ["ground-perimeter", "lobby-atrium", "parking-garage"],
+      "loss-of-rents": ["tower-shell", "office-floors", "lobby-atrium"],
+      "equipment-breakdown": ["rooftop-mechanical", "office-floors"],
+    },
+  },
+  "apartment-building-insurance": {
+    archetype: "commercial-building",
+    coverageZones: {
+      "building-coverage": ["tower-shell", "office-floors", "lobby-atrium"],
+      "general-liability": ["ground-perimeter", "lobby-atrium", "parking-garage"],
+      "loss-of-rents": ["tower-shell", "office-floors"],
+      "equipment-breakdown": ["rooftop-mechanical", "office-floors"],
+    },
+  },
+  "mixed-use-property-insurance": {
+    archetype: "commercial-building",
+    coverageZones: {
+      "building-coverage": ["tower-shell", "office-floors", "lobby-atrium"],
+      "general-liability": ["ground-perimeter", "lobby-atrium", "parking-garage"],
+      "loss-of-rents": ["tower-shell", "office-floors", "lobby-atrium"],
+      "equipment-breakdown": ["rooftop-mechanical", "office-floors"],
+    },
+  },
+  "equipment-breakdown-insurance": {
+    archetype: "commercial-building",
+    coverageZones: {
+      "equipment-breakdown": ["rooftop-mechanical", "office-floors"],
+      "spoilage-and-interruption": ["office-floors", "rooftop-mechanical"],
+      "building-systems": ["rooftop-mechanical", "tower-shell", "office-floors"],
+      "production-equipment": ["office-floors", "rooftop-mechanical"],
+    },
+  },
   "bonding-insurance": {
     archetype: "construction-site",
     coverageZones: {

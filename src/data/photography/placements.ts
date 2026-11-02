@@ -606,6 +606,117 @@ export const photographyPlacements: PhotographyPlacement[] = [
     alt: "Workers inspecting packaged products on a warehouse production line",
     confidence: "HIGH",
   },
+  // Batch A — temporary placeholders reusing existing commercial assets (do not overwrite files)
+  {
+    slug: "roofing-contractors-insurance",
+    category: "commercial",
+    route: "/roofing-contractors-insurance/",
+    src: "/images/photography/commercial/contractors-insurance.webp",
+    alt: "Temporary placeholder: construction worker framing a building (awaiting dedicated roofing photography)",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "Batch A temporary placeholder — reuse of contractors-insurance.webp until dedicated roofing photography is approved.",
+  },
+  {
+    slug: "electrical-contractors-insurance",
+    category: "commercial",
+    route: "/electrical-contractors-insurance/",
+    src: "/images/photography/commercial/contractors-insurance.webp",
+    alt: "Temporary placeholder: construction framing scene (awaiting dedicated electrical trade photography)",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "Batch A temporary placeholder — reuse of contractors-insurance.webp until dedicated electrical photography is approved.",
+  },
+  {
+    slug: "plumbing-hvac-insurance",
+    category: "commercial",
+    route: "/plumbing-hvac-insurance/",
+    src: "/images/photography/commercial/contractors-insurance.webp",
+    alt: "Temporary placeholder: construction framing scene (awaiting dedicated plumbing/HVAC photography)",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "Batch A temporary placeholder — reuse of contractors-insurance.webp until dedicated plumbing/HVAC photography is approved.",
+  },
+  {
+    slug: "excavation-contractors-insurance",
+    category: "commercial",
+    route: "/excavation-contractors-insurance/",
+    src: "/images/photography/commercial/dump-truck-insurance.webp",
+    alt: "Temporary placeholder: dump truck at a gravel site (awaiting dedicated excavation photography)",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "Batch A temporary placeholder — reuse of dump-truck-insurance.webp until dedicated excavation/concrete photography is approved.",
+  },
+  {
+    slug: "commercial-landlord-insurance",
+    category: "commercial",
+    route: "/commercial-landlord-insurance/",
+    src: "/images/photography/commercial/commercial-property-insurance.webp",
+    alt: "Temporary placeholder: commercial warehouse exterior (awaiting dedicated commercial landlord photography)",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "Batch A temporary placeholder — reuse of commercial-property-insurance.webp until dedicated commercial landlord photography is approved.",
+  },
+  {
+    slug: "apartment-building-insurance",
+    category: "commercial",
+    route: "/apartment-building-insurance/",
+    src: "/images/photography/commercial/property-management-insurance.webp",
+    alt: "Temporary placeholder: property management scene (awaiting dedicated apartment building photography)",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "Batch A temporary placeholder — reuse of property-management-insurance.webp until dedicated apartment photography is approved.",
+  },
+  {
+    slug: "mixed-use-property-insurance",
+    category: "commercial",
+    route: "/mixed-use-property-insurance/",
+    src: "/images/photography/commercial/retail-insurance.webp",
+    alt: "Temporary placeholder: retail storefront (awaiting dedicated mixed-use building photography)",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "Batch A temporary placeholder — reuse of retail-insurance.webp until dedicated mixed-use photography is approved.",
+  },
+  {
+    slug: "tow-truck-insurance",
+    category: "commercial",
+    route: "/tow-truck-insurance/",
+    src: "/images/photography/commercial/commercial-auto-insurance.webp",
+    alt: "Temporary placeholder: commercial fleet vehicles (awaiting dedicated tow truck photography)",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "Batch A temporary placeholder — reuse of commercial-auto-insurance.webp until dedicated tow truck photography is approved.",
+  },
+  {
+    slug: "commercial-umbrella-insurance",
+    category: "commercial",
+    route: "/commercial-umbrella-insurance/",
+    src: "/images/photography/commercial/professional-offices-insurance.webp",
+    alt: "Temporary placeholder: professional office scene (awaiting optional commercial umbrella photography)",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "Batch A temporary placeholder — reuse of professional-offices-insurance.webp (optional dedicated asset).",
+  },
+  {
+    slug: "equipment-breakdown-insurance",
+    category: "commercial",
+    route: "/equipment-breakdown-insurance/",
+    src: "/images/photography/commercial/manufacturing-insurance.webp",
+    alt: "Temporary placeholder: manufacturing equipment (awaiting dedicated equipment breakdown / mechanical room photography)",
+    confidence: "MEDIUM",
+    isTemporary: true,
+    temporaryNote:
+      "Batch A temporary placeholder — reuse of manufacturing-insurance.webp until dedicated equipment-breakdown photography is approved.",
+  },
   {
     slug: "about",
     category: "special",

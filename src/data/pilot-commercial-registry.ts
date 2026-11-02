@@ -49,6 +49,17 @@ export const BATCH_B_PRODUCT_SLUGS = [
   "liquor-liability-insurance",
   "crime-fidelity-insurance",
   "employment-practices-liability-insurance",
+  // Batch A commercial expansion
+  "roofing-contractors-insurance",
+  "electrical-contractors-insurance",
+  "plumbing-hvac-insurance",
+  "excavation-contractors-insurance",
+  "commercial-landlord-insurance",
+  "apartment-building-insurance",
+  "mixed-use-property-insurance",
+  "tow-truck-insurance",
+  "commercial-umbrella-insurance",
+  "equipment-breakdown-insurance",
 ] as const;
 
 /** Batch C — specialty / agriculture */
