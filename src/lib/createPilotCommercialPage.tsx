@@ -12,9 +12,9 @@ const hubMetadata: Metadata = buildPageMetadata({
 });
 
 const bondingMetadata: Metadata = buildPageMetadata({
-  title: "Surety Bonds in Windsor-Essex | Premium Insurance Brokers",
+  title: "Surety & Bonding Insurance in Windsor-Essex | Premium Insurance Brokers",
   description:
-    "Surety bonds through an independent Windsor-Essex broker — bid bonds, performance bonds, labour and material payment bonds, and licence and permit bonds.",
+    "Bid, performance, and payment bonds for Windsor-Essex contractors, plus licence and permit bonds. Learn how surety bonds work with a local broker.",
   path: "/bonding-insurance/",
 });
 

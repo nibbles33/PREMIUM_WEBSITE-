@@ -36,7 +36,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     slug: "home-insurance",
     metaTitle: "Home Insurance in Windsor | Premium Insurance Brokers",
     metaDescription:
-      "Home and house insurance in Windsor-Essex through an independent broker. Dwelling, contents, liability, and living expenses explained — serving homeowners across Ontario.",
+      "Home and house insurance in Windsor-Essex. Dwelling, contents, liability, and living expenses for Ontario homeowners, through an independent broker.",
     headline: "Home insurance in Windsor-Essex",
     heroLead:
       "Looking for home or house insurance in Windsor, Essex County, or elsewhere in Ontario? We help homeowners compare dwelling, contents, liability, and additional living expenses through an independent brokerage.",
