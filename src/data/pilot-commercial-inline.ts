@@ -95,6 +95,10 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     considerationsPresentation: "expandable",
     brokerSteps: commercialBrokerSteps,
     relatedProducts: relatedLinksToProducts([
+      { label: "Trucking Insurance", href: "/trucking-insurance/" },
+      { label: "Cargo & Freight Insurance", href: "/cargo-freight-insurance/" },
+      { label: "Contractors Insurance", href: "/contractors-insurance/" },
+      { label: "Surety & Bonding", href: "/bonding-insurance/" },
       { label: "Small Business Insurance", href: "/small-business-insurance/" },
       { label: "Manufacturing Insurance", href: "/manufacturing-insurance/" },
       { label: "Product Recall", href: "/product-recall-insurance/" },
@@ -104,9 +108,9 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
       { label: "Cannabis Retail", href: "/cannabis-retail-insurance/" },
       { label: "Cannabis Producer", href: "/cannabis-producer-insurance/" },
     ]),
-    relatedHeading: "Specialty & program routes",
+    relatedHeading: "Industry & specialty routes",
     relatedIntro:
-      "Explore specialty and program pages when core categories are not enough — without assuming one quote covers everything.",
+      "Explore transportation, contracting, surety, and specialty program pages when the category cards above are not enough — without assuming one quote covers everything.",
     faqTitle: "Commercial insurance FAQ",
     faqIntro: "Short answers for Windsor–Essex business owners starting commercial coverage.",
     faqItems: commercialHubFaqs,
@@ -118,11 +122,12 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
   }),
   "bonding-insurance": buildPilotProductConfig({
     slug: "bonding-insurance",
-    metaTitle: "Surety Bonds in Windsor-Essex | Premium Insurance Brokers",
+    metaTitle:
+      "Surety & Bonding Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Surety bonds through an independent Windsor-Essex broker — bid bonds, performance bonds, labour and material payment bonds, and licence and permit bonds.",
+      "Bid, performance, and payment bonds for Windsor-Essex contractors, plus licence and permit bonds. Learn how surety bonds work with a local broker.",
     eyebrow: "Surety Bonds",
-    headline: "Surety Bonds",
+    headline: "Surety Bonds and Contractor Bonding",
     heroLead:
       "Surety bonding is structurally different from conventional insurance. A surety bond is a three-party obligation among the principal (usually the contractor), the obligee (the project owner or authority that requires the bond), and the surety. The bond backs the principal's contractual or licence obligation to the obligee — it does not primarily protect the contractor the way a liability policy protects an insured. If the surety pays or arranges completion after a default, the principal typically remains responsible under an indemnity agreement. Common construction instruments include bid bonds, performance bonds, and labour and material payment bonds; licence and permit bonds serve separate regulatory purposes. Employee dishonesty or crime coverage is insurance — not a construction surety bond — and is addressed on a separate product page. Premium Insurance Brokers can help Windsor-Essex contractors navigate prequalification, capacity, and tender timelines.",
     photographySlug: "bonding-insurance",

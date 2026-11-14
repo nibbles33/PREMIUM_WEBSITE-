@@ -125,7 +125,7 @@ export const commercialHubCategories: CommercialHubCategory[] = [
     label: "Commercial Auto & Fleet",
     href: "/commercial-auto-insurance/",
     description:
-      "For company vehicles used in deliveries, service calls, or sales work — reviewed separately from premises liability.",
+      "For company vehicles used in deliveries, service calls, or sales work — reviewed separately from premises liability. For-hire motor carriers should start on our Trucking Insurance page.",
     icon: Truck,
   },
   {
