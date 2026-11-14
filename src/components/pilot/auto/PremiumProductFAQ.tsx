@@ -1,9 +1,38 @@
 "use client";
 
 import { Plus } from "lucide-react";
+import Link from "next/link";
 import { useId, useState } from "react";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-import type { FaqItem } from "@/components/FaqAccordion";
+import type { FaqItem, FaqLink } from "@/components/FaqAccordion";
+
+/** Site paths only. Rejects protocol-relative and scheme-bearing hrefs. */
+function isSafeInternalHref(href: string): boolean {
+  return href.startsWith("/") && !href.startsWith("//") && !href.includes(":");
+}
+
+function FaqContextualLinks({ links }: { links: readonly FaqLink[] }) {
+  const safe = links.filter(
+    (link) => link.label.trim().length > 0 && isSafeInternalHref(link.href),
+  );
+  if (safe.length === 0) return null;
+
+  return (
+    <p className="mt-3 text-[14px] leading-relaxed text-secondary sm:text-[15px]">
+      {safe.map((link, index) => (
+        <span key={link.href}>
+          {index > 0 ? <span aria-hidden="true"> · </span> : null}
+          <Link
+            href={link.href}
+            className="font-medium text-gold-dark underline decoration-gold/40 underline-offset-2 hover:decoration-gold-dark"
+          >
+            {link.label}
+          </Link>
+        </span>
+      ))}
+    </p>
+  );
+}
 
 type PremiumProductFAQProps = {
   title: string;
@@ -44,6 +73,12 @@ export default function PremiumProductFAQ({
             const panelId = `${baseId}-panel-${index}`;
             const buttonId = `${baseId}-button-${index}`;
 
+            const hasLinks = Boolean(item.links?.length);
+            // Answers with contextual links stay in the document when collapsed
+            // (`hidden`) so the anchors are crawlable. Other answers keep the
+            // existing mount-on-open behaviour.
+            const showAnswer = isOpen || hasLinks;
+
             return (
               <li key={item.question}>
                 <div
@@ -77,14 +112,21 @@ export default function PremiumProductFAQ({
                     hidden={!isOpen}
                     className="pilot-auto-faq-panel"
                   >
-                    {isOpen ? (
-                      <p
-                        className={
-                          reduceMotion ? "" : "pilot-auto-faq-panel-enter"
-                        }
-                      >
-                        {item.answer}
-                      </p>
+                    {showAnswer ? (
+                      <>
+                        <p
+                          className={
+                            isOpen && !reduceMotion
+                              ? "pilot-auto-faq-panel-enter"
+                              : ""
+                          }
+                        >
+                          {item.answer}
+                        </p>
+                        {hasLinks ? (
+                          <FaqContextualLinks links={item.links ?? []} />
+                        ) : null}
+                      </>
                     ) : null}
                   </div>
                 </div>

@@ -258,6 +258,14 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
         answer:
           "Common construction surety instruments include bid bonds, performance bonds, and labour and material payment bonds. Licence and permit bonds address separate regulatory requirements. Bid bonds are typically required by tender documents where the owner wants tender security — they are not the same as the Construction Act's statutory performance-and-payment bond rule for applicable public contracts.",
       },
+      {
+        question: "How is a surety bond different from contractor liability insurance?",
+        answer:
+          "A surety bond is not contractor liability insurance. Liability insurance, where purchased, may respond to certain third-party injury or property-damage claims against the contractor, subject to policy terms, exclusions, and limits. A surety bond is a three-party obligation among the principal, the obligee, and the surety. It backs the principal's contractual or licence obligation to the obligee. If the surety pays or arranges completion, the principal typically remains responsible under an indemnity agreement. Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require both a performance bond and a labour and material payment bond. The general regulatory minimum coverage for each is 50 per cent of the contract price. That rule does not apply to every private Ontario project, and it is not a Canada-wide bid-bond requirement. Private bond requirements follow the contract and tender. Bonds depend on surety underwriting and are not guaranteed. Contractor liability remains a separate policy.",
+        links: [
+          { label: "Contractors insurance", href: "/contractors-insurance/" },
+        ],
+      },
     ],
     ctaHeading: "Need surety for a tender or contract?",
     ctaSubhead:

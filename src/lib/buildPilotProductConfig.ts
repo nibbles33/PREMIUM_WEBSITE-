@@ -265,6 +265,7 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     { label: "Surety Bonds", href: "/bonding-insurance/" },
     { label: "Builder's Risk", href: "/builders-risk-insurance/" },
+    { label: "Commercial auto for job sites", href: "/commercial-auto-insurance/" },
     { label: "Small Business", href: "/small-business-insurance/" },
   ],
   "manufacturing-insurance": [
@@ -315,11 +316,11 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
   "trucking-insurance": [
     { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
     { label: "Dump Trucks", href: "/dump-truck-insurance/" },
-    { label: "Cargo & Freight", href: "/cargo-freight-insurance/" },
+    { label: "Cargo insurance in Ontario", href: "/cargo-freight-insurance/" },
   ],
   "commercial-auto-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
-    { label: "Trucking", href: "/trucking-insurance/" },
+    { label: "For-hire trucking", href: "/trucking-insurance/" },
     { label: "Dump Truck", href: "/dump-truck-insurance/" },
     { label: "Cargo & Freight", href: "/cargo-freight-insurance/" },
   ],

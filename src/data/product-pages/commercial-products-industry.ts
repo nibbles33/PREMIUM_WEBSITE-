@@ -28,7 +28,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
     metaTitle:
       "Cargo & Freight Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Cargo and freight insurance for Windsor-Essex carriers — motor truck cargo and carrier legal liability reviewed through an independent broker.",
+      "Cargo and freight insurance in Ontario for motor carriers and freight brokers. Explore motor truck cargo and contingent cargo, subject to policy terms and underwriting.",
     headline: "Cargo & Freight Insurance",
     subhead:
       "Cargo and freight insurance is about goods in transit — the customer's freight, not the truck itself. When you carry property belonging to others, loss or damage can generate claims evaluated under motor truck cargo forms, carrier legal liability wording, or contractual bailment terms — depending on policy structure, cause of loss, and who bears legal responsibility. That is separate from Ontario commercial automobile liability for the vehicle on the road and separate from warehouse legal liability for stored goods. Coverage depends on commodities hauled, valuation methods, limits, exclusions, and territorial scope — not every lost or damaged shipment is insured automatically. Premium Insurance Brokers can help align cargo limits with shipper contracts and how your operation actually moves freight.",
@@ -71,15 +71,15 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
         title: "Contingent Cargo",
         shortLabel: "Contingent",
         description:
-          "For freight brokers and intermediaries — may provide certain coverage when a contracted carrier's cargo policy fails to respond on a load you arranged, subject to policy terms and secondary-position wording.",
-        detailTitle: "Brokers need a backup layer — not a substitute for carrier coverage",
+          "For freight brokers and other intermediaries who arrange transportation rather than haul the goods. Where purchased, contingent cargo may address certain loss on a brokered load, subject to the policy wording, limits, and conditions actually issued.",
+        detailTitle: "Arranging freight is a different exposure from hauling it",
         detailDescription:
-          "Freight brokers who arrange transportation but do not physically haul goods may purchase contingent cargo to address gaps when a motor carrier's insurance does not respond on a brokered load — subject to policy conditions and limits. This is secondary coverage, not a replacement for proper carrier cargo insurance or broker contractual liability programs. Broker operations should verify carrier certificates and limits before dispatch.",
+          "A motor carrier that transports goods reviews motor truck cargo or carrier legal liability for freight in its care. A freight broker that arranges transportation and does not haul the freight has a different exposure. Contingent cargo, where offered, may respond to certain losses on a brokered load. Whether it applies, and how it interacts with a motor carrier’s cargo policy, depends on the wording purchased. It does not replace the carrier’s own cargo coverage. Availability depends on underwriting. Broker operations should still verify carrier certificates and limits before dispatch.",
         icon: Route,
       },
     ],
     whoItIsFor:
-      "For Windsor–Essex motor carriers, owner-operators, and freight brokers who move general freight, specialized commodities, or temperature-controlled loads — reviewed through an independent broker who can align cargo limits, valuation, and territorial scope with shipper and broker contracts.",
+      "For Windsor–Essex motor carriers and owner-operators who transport goods, and for freight brokers who arrange transportation rather than haul it. Motor truck cargo and contingent cargo are different forms. Each depends on the policy wording, limits, and underwriting, and on the shipper or broker contract.",
     considerations: [
       {
         title: "Cargo in transit vs. warehousing — different products",
@@ -118,7 +118,7 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
       },
     ],
     relatedLinks: [
-      { label: "Trucking Insurance", href: "/trucking-insurance/" },
+      { label: "For-hire trucking program", href: "/trucking-insurance/" },
       { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
       { label: "Warehousing Insurance", href: "/warehousing-insurance/" },
     ],
@@ -148,6 +148,19 @@ export const commercialProductIndustryPages: ProductPageContent[] = [
         question: "Is cargo insurance the same as warehouse legal liability?",
         answer:
           "No. Cargo insurance addresses goods in transit under a carrier's care. Warehouse legal liability addresses customers' goods stored under a warehouse contract — the product remediated on the warehousing page. Cross-dock or brief staging may raise overlap questions, but the coverages serve different operations and policy forms.",
+      },
+      {
+        question:
+          "Do motor carriers and freight brokers need the same cargo coverage?",
+        answer:
+          "No. A motor carrier that transports goods reviews motor truck cargo or carrier legal liability for freight in its care during transit. A freight broker that arranges transportation, and does not haul the goods, has a different exposure. Contingent cargo, where offered, may address certain losses on a brokered load. Whether it responds, and how it interacts with a motor carrier’s policy, depends on the wording that is issued. It does not replace the motor carrier’s own cargo coverage, and it does not insure the truck. The tractor and trailer are automobile exposures: for-hire carriers review trucking coverage, and businesses using cars, vans, or service vehicles in their own operations review commercial auto.",
+        links: [
+          { label: "For-hire trucking program", href: "/trucking-insurance/" },
+          {
+            label: "Commercial auto insurance",
+            href: "/commercial-auto-insurance/",
+          },
+        ],
       },
     ],
     ctaHeading: "Haul freight for hire?",
