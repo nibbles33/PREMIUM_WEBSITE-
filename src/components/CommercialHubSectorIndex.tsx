@@ -17,42 +17,42 @@ import {
 } from "@/data/commercial-hub-sectors";
 
 const SECTOR_ICONS: Record<CommercialHubSectorId, LucideIcon> = {
-  construction: Hammer,
-  "manufacturing-logistics": Warehouse,
-  hospitality: Hotel,
-  retail: Store,
-  transportation: Truck,
+  "construction-contractors": Hammer,
+  manufacturing: Warehouse,
+  "hospitality-restaurants": Hotel,
+  "retail-grocery": Store,
+  "transportation-trucking": Truck,
   "professional-services": Briefcase,
   "real-estate": Building2,
-  "healthcare-personal-services": Stethoscope,
-  "specialty-organizations": Users,
+  "healthcare-wellness": Stethoscope,
+  "specialty-community": Users,
 };
 
 const SECTOR_ACCENTS: Record<
   CommercialHubSectorId,
   { bar: string; chip: string; icon: string }
 > = {
-  construction: {
+  "construction-contractors": {
     bar: "border-l-[#5A8A73]",
     chip: "bg-[color-mix(in_srgb,#5A8A73_16%,white)]",
     icon: "text-[#3E6B56]",
   },
-  "manufacturing-logistics": {
+  manufacturing: {
     bar: "border-l-gold",
     chip: "bg-[color-mix(in_srgb,#D0AD26_18%,white)]",
     icon: "text-gold-dark",
   },
-  hospitality: {
+  "hospitality-restaurants": {
     bar: "border-l-charcoal",
     chip: "bg-[color-mix(in_srgb,#202728_8%,white)]",
     icon: "text-charcoal",
   },
-  retail: {
+  "retail-grocery": {
     bar: "border-l-[#5A8A73]",
     chip: "bg-[color-mix(in_srgb,#5A8A73_16%,white)]",
     icon: "text-[#3E6B56]",
   },
-  transportation: {
+  "transportation-trucking": {
     bar: "border-l-gold",
     chip: "bg-[color-mix(in_srgb,#D0AD26_18%,white)]",
     icon: "text-gold-dark",
@@ -67,12 +67,12 @@ const SECTOR_ACCENTS: Record<
     chip: "bg-[color-mix(in_srgb,#5A8A73_16%,white)]",
     icon: "text-[#3E6B56]",
   },
-  "healthcare-personal-services": {
+  "healthcare-wellness": {
     bar: "border-l-gold",
     chip: "bg-[color-mix(in_srgb,#D0AD26_18%,white)]",
     icon: "text-gold-dark",
   },
-  "specialty-organizations": {
+  "specialty-community": {
     bar: "border-l-charcoal",
     chip: "bg-[color-mix(in_srgb,#202728_8%,white)]",
     icon: "text-charcoal",
@@ -93,11 +93,11 @@ export default function CommercialHubSectorIndex() {
           id="commercial-hub-sector-index-heading"
           className="text-xl font-medium tracking-[-0.02em] text-charcoal sm:text-2xl"
         >
-          More products by sector
+          All commercial insurance
         </h2>
         <p className="mt-1.5 max-w-2xl text-[14px] leading-relaxed text-secondary sm:text-[15px]">
-          Live product pages that are not already in the category cards or
-          industry tiles above.
+          Every commercial product page, grouped by industry. Open a page
+          directly, or use the explorer above to browse by operation.
         </p>
 
         <ul className="mt-4 rounded-xl border border-border bg-white">
@@ -109,7 +109,7 @@ export default function CommercialHubSectorIndex() {
                 key={sector.id}
                 className={`border-l-4 border-b border-border last:border-b-0 ${accent.bar} px-3 py-2.5 sm:px-4`}
               >
-                <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-[15.5rem_minmax(0,1fr)] sm:items-center sm:gap-4">
+                <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-[13.5rem_minmax(0,1fr)] sm:items-start sm:gap-4 lg:grid-cols-[17.5rem_minmax(0,1fr)] lg:items-center">
                   <h3 className="flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.06em] text-charcoal">
                     <span
                       className={`inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md ${accent.chip}`}
