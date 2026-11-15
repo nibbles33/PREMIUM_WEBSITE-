@@ -3,9 +3,9 @@ import { buildPageMetadata } from "@/lib/seo";
 import PilotPersonalPage from "@/components/pilot/product/PilotPersonalPage";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Condo Insurance in Windsor-Essex | Premium Insurance Brokers",
+  title: "Condo Insurance Windsor, ON | Compare Quotes | Premium",
   description:
-    "Condo insurance for Windsor-Essex unit owners — contents, improvements, liability, and loss assessment. Get a quote from a local independent brokerage.",
+    "Compare condo insurance options in Windsor with Premium Insurance Brokers. Protect your belongings, improvements and liability. Request a quote today.",
   path: "/condo-insurance/",
 });
 
