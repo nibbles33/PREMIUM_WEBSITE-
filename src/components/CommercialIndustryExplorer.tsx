@@ -266,7 +266,14 @@ function productSlugFromHref(href: string): string {
   return href.replace(/^\/|\/$/g, "") || "unknown";
 }
 
-export default function CommercialIndustryExplorer() {
+type CommercialIndustryExplorerProps = {
+  /** Where category and product selections are recorded. Hub stays the default. */
+  surface?: "homepage" | "hub";
+};
+
+export default function CommercialIndustryExplorer({
+  surface = "hub",
+}: CommercialIndustryExplorerProps) {
   const reduceMotion = usePrefersReducedMotion();
   const baseId = useId();
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -290,7 +297,7 @@ export default function CommercialIndustryExplorer() {
       activeIdRef.current = id;
       track("commercial_category_select", {
         category_id: id,
-        surface: "hub",
+        surface,
       });
       if (timerRef.current !== null) {
         window.clearTimeout(timerRef.current);
@@ -308,7 +315,7 @@ export default function CommercialIndustryExplorer() {
         timerRef.current = null;
       }, 160);
     },
-    [reduceMotion],
+    [reduceMotion, surface],
   );
 
   const onTabKeyDown = (
@@ -488,7 +495,7 @@ export default function CommercialIndustryExplorer() {
                           product.href,
                         )}
                         data-track-category-id={active.id}
-                        data-track-surface="hub"
+                        data-track-surface={surface}
                         className="group flex h-full min-h-11 items-center gap-2.5 rounded-xl border border-white/18 bg-[#536377] px-3 py-2.5 text-left transition-[border-color,background-color,box-shadow] duration-200 hover:border-[#e4c558]/80 hover:bg-[#5d6f84] hover:shadow-[0_8px_18px_rgba(0,0,0,0.18)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e4c558] motion-reduce:transition-none"
                       >
                         <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#45566a] text-[#e4c558]">

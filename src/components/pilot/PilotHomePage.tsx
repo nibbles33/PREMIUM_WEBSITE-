@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import PilotAuthorityStrip from "@/components/pilot/PilotAuthorityStrip";
 import PilotBreadthUniverse from "@/components/pilot/PilotBreadthUniverse";
 import PilotCarrierMarquee from "@/components/pilot/PilotCarrierMarquee";
-import PilotCommercialDiscovery from "@/components/pilot/PilotCommercialDiscovery";
+import CommercialIndustryExplorer from "@/components/CommercialIndustryExplorer";
 import PilotFinalCta from "@/components/pilot/PilotFinalCta";
 import PilotGoogleReviews from "@/components/pilot/PilotGoogleReviews";
 import PilotHomeHero from "@/components/pilot/PilotHomeHero";
@@ -28,7 +28,7 @@ export default async function PilotHomePage() {
         <PilotAuthorityStrip googleRating={googleRating} />
         <PilotCarrierMarquee />
         <PilotPersonalFilmstrip />
-        <PilotCommercialDiscovery />
+        <CommercialIndustryExplorer surface="homepage" />
         <PilotWhyPremium />
         <PilotBreadthUniverse />
         <PilotGoogleReviews ratingResult={googleRating} />
