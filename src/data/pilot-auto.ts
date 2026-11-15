@@ -176,6 +176,26 @@ export const autoFaqItems = [
     answer:
       "Not always. If your vehicle is financed or leased, your lender usually requires both. For an owned vehicle, it depends on the car's value and how much risk you're comfortable carrying. A broker can help you weigh the trade-offs.",
   },
+  {
+    question: "Is car insurance the same as auto insurance in Windsor?",
+    answer:
+      "Yes. Both names refer to Ontario automobile insurance. Premium uses one Windsor page and one quote for that policy.",
+  },
+  {
+    question: "What is Direct Compensation – Property Damage?",
+    answer:
+      "Direct Compensation – Property Damage, or DCPD, is part of a standard Ontario automobile policy unless the named insured elects not to claim it using OPCF 49. When you keep DCPD, your own insurer may cover damage to your vehicle, its contents, or its loss of use for an accident in Ontario when another insured driver is at fault, subject to the policy and the fault rules. Opting out may not be the right choice. Speak with your broker before signing OPCF 49.",
+  },
+  {
+    question: "What affects a Windsor car insurance quote?",
+    answer:
+      "Insurers rate the drivers, licence history, the vehicle, annual kilometres, primary use, parking, coverages, and deductibles. Postal code can change the premium. An independent broker can compare markets. A lower premium is not guaranteed, and a published city average is not a quote.",
+  },
+  {
+    question: "Does Ontario auto insurance cover driving in the United States?",
+    answer:
+      "Many Ontario policies provide coverage in Canada and the United States, but territory, limits, and rental conditions vary. Tell your broker if you regularly cross into Detroit or drive farther into the United States so the policy you compare matches that use.",
+  },
 ];
 
 export const autoRelatedProducts = [
@@ -197,6 +217,6 @@ export const autoJsonLd = {
   "@type": "Service",
   name: "Auto Insurance",
   description:
-    "Ontario auto insurance through an independent Windsor-Essex broker — liability, collision, comprehensive, and accident benefits.",
+    "Windsor car and auto insurance from an independent Ontario broker. Liability, DCPD, accident benefits, and optional collision and comprehensive.",
   serviceType: "Auto Insurance",
 };

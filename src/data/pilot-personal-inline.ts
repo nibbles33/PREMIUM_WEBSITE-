@@ -45,7 +45,7 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
     quoteHref: "/get-a-quote?type=home",
     quoteLabel: "Get a Home Quote",
     trustStatement:
-      "Home insurance is for Windsor-Essex homeowners, including those with custom or high-value properties where standard dwelling and contents defaults may not reflect true replacement costs for finishes, collections, or outbuildings.",
+      "Home insurance, sometimes called house insurance, is for owner-occupied homes in Windsor, Essex County, and elsewhere in Ontario. A typical policy is built from dwelling, contents, personal liability, and additional living expenses. Water endorsements are reviewed separately, because sewer backup and overland flood are often limited or excluded unless they are added. Homes with custom construction or high-value belongings may need limits beyond a standard default.",
     coverageIntro:
       "Home insurance building blocks explained in plain language — what each part is meant to protect, and why it matters. Coverage, limits, and eligibility vary by insurer and policy.",
     coverageItems: [
@@ -116,14 +116,27 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
         description:
           "Properties with pools, trampolines, or frequent entertaining may warrant higher personal liability limits or an umbrella policy.",
       },
+      {
+        title: "Water, sewer backup, and overland flood",
+        description:
+          "These are different events. Sudden escape of water from plumbing, backup of sewers or drains, and overland water that enters from outside are often treated under different wording. Sewer backup and overland flood are frequently optional, sub-limited, or unavailable, depending on the insurer and the property. A finished basement, sump pump, or prior water loss should be disclosed. No home policy here promises flood or sewer-backup coverage.",
+      },
+      {
+        title: "What underwriters ask about the house",
+        description:
+          "Insurers commonly ask the year built, roof age, heating, electrical and plumbing updates, claims history, occupancy, and whether the home is owner-occupied. Those facts decide which markets will quote and on what terms. Not every insurer offers the same endorsements, limits, or deductibles.",
+      },
     ],
     relatedProducts: relatedLinksToProducts([
+      { label: "Auto Insurance", href: "/auto-insurance/" },
       { label: "Condo Insurance", href: "/condo-insurance/" },
       { label: "Landlord Insurance", href: "/landlord-insurance/" },
       { label: "Tenant Insurance", href: "/tenant-insurance/" },
       { label: "Personal Umbrella", href: "/personal-umbrella-insurance/" },
       { label: "Cottage Insurance", href: "/cottage-insurance/" },
     ]),
+    relatedIntro:
+      "Own a condominium, rent, or insure a rental property? Those policies are separate. If you are also insuring a car, auto insurance is quoted on its own.",
     faqTitle: "Home insurance FAQ",
     faqIntro: "Straight answers to common home insurance questions.",
     faqItems: [
@@ -136,6 +149,16 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
         question: "Does home insurance cover flooding?",
         answer:
           "Standard home policies often exclude overland flooding (water that enters from outside, such as heavy rain or overflow). Optional flood coverage may be available depending on your property and carrier — worth discussing with a broker so you know what's included and what isn't.",
+      },
+      {
+        question: "Is house insurance the same as home insurance?",
+        answer:
+          "Yes. House insurance and home insurance refer to the same owner-occupied policy. Condo, tenant, and landlord policies are different products.",
+      },
+      {
+        question: "Does home insurance cover sewer backup?",
+        answer:
+          "Not automatically. Many Ontario home policies limit or exclude backup of sewers and drains unless an endorsement is purchased, and some insurers restrict that endorsement by property or loss history. Overland flood is a separate question. Ask your broker to confirm both before you assume either is included.",
       },
       {
         question:
@@ -271,6 +294,8 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
       },
       { label: "Cottage Insurance", href: "/cottage-insurance/" },
     ]),
+    relatedIntro:
+      "If you own and live in a house, start with home insurance. This page is for a condominium unit or a rental.",
     faqTitle: "Condo insurance FAQ",
     faqIntro: "Common questions about condo coverage in Ontario.",
     faqItems: [
@@ -383,6 +408,8 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
       { label: "Condo Insurance", href: "/condo-insurance/" },
       { label: "Landlord Insurance", href: "/landlord-insurance/" },
     ]),
+    relatedIntro:
+      "If you own and live in a house, start with home insurance. This page is for a condominium unit or a rental.",
     faqTitle: "Tenant insurance FAQ",
     faqIntro: "Straight answers for Ontario renters.",
     faqItems: [
@@ -505,6 +532,8 @@ export const pilotPersonalInlineConfigs: Record<string, PilotProductPageConfig> 
       { label: "Tenant Insurance", href: "/tenant-insurance/" },
       { label: "Cottage Insurance", href: "/cottage-insurance/" },
     ]),
+    relatedIntro:
+      "Owner-occupied houses are quoted as home insurance. This page is for rental dwellings.",
     faqTitle: "Landlord insurance FAQ",
     faqIntro: "Questions rental property owners ask most often.",
     faqItems: [
