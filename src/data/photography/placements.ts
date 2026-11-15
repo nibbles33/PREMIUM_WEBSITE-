@@ -623,7 +623,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
     src: "/images/photography/batch-a/heroes/electrical-contractors-insurance.webp",
     alt: "Electrician in a hard hat, safety glasses, and gloves installing conduit beside a closed panel, with the disconnect locked out",
     confidence: "HIGH",
-    objectPosition: "62% 42%",
+    objectPosition: "12% 46%",
   },
   {
     slug: "plumbing-hvac-insurance",
