@@ -72,6 +72,27 @@ export const ROUTE_TO_INTERACTIVE_MASTER_FILE: Record<string, string> = {
   "farm-equipment-insurance":
     "farm-equipment-insurance-interactive-master.png",
   "dump-truck-insurance": "dump-truck-insurance-interactive-master.png",
+  // Batch A — dedicated 1448×1086 explorer illustrations (not the shared masters).
+  "roofing-contractors-insurance":
+    "photography/batch-a/explorers/roofing-contractors-insurance-explorer.png",
+  "electrical-contractors-insurance":
+    "photography/batch-a/explorers/electrical-contractors-insurance-explorer.png",
+  "plumbing-hvac-insurance":
+    "photography/batch-a/explorers/plumbing-hvac-insurance-explorer.png",
+  "excavation-contractors-insurance":
+    "photography/batch-a/explorers/excavation-contractors-insurance-explorer.png",
+  "tow-truck-insurance":
+    "photography/batch-a/explorers/tow-truck-insurance-explorer.png",
+  "commercial-landlord-insurance":
+    "photography/batch-a/explorers/commercial-landlord-insurance-explorer.png",
+  "apartment-building-insurance":
+    "photography/batch-a/explorers/apartment-building-insurance-explorer.png",
+  "mixed-use-property-insurance":
+    "photography/batch-a/explorers/mixed-use-property-insurance-explorer.png",
+  "commercial-umbrella-insurance":
+    "photography/batch-a/explorers/commercial-umbrella-insurance-explorer.png",
+  "equipment-breakdown-insurance":
+    "photography/batch-a/explorers/equipment-breakdown-insurance-explorer.png",
   "bonding-insurance": "bonding-surety-interactive-master.png",
   "greenhouse-agribusiness-insurance":
     "greenhouse-insurance-interactive-master.png",

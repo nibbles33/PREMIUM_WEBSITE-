@@ -3132,6 +3132,10 @@
   z-index: 2;
 }
 
+.pilot-ce-svg-overlay--hotspots {
+  z-index: 4;
+}
+
 @keyframes pilot-ce-masked-pulse {
   0%,
   100% {

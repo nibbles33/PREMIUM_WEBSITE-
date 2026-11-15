@@ -256,7 +256,17 @@ export function adaptCommercialProductContent(
       content.slug === "pollution-liability-insurance" ||
       content.slug === "grocery-specialty-food-insurance" ||
       content.slug === "fitness-gym-insurance" ||
-      content.slug === "religious-organizations-insurance"
+      content.slug === "religious-organizations-insurance" ||
+      content.slug === "roofing-contractors-insurance" ||
+      content.slug === "electrical-contractors-insurance" ||
+      content.slug === "plumbing-hvac-insurance" ||
+      content.slug === "excavation-contractors-insurance" ||
+      content.slug === "commercial-landlord-insurance" ||
+      content.slug === "apartment-building-insurance" ||
+      content.slug === "mixed-use-property-insurance" ||
+      content.slug === "tow-truck-insurance" ||
+      content.slug === "commercial-umbrella-insurance" ||
+      content.slug === "equipment-breakdown-insurance"
         ? "expandable"
         : "grid",
   });
@@ -265,6 +275,10 @@ export function adaptCommercialProductContent(
 const industryRelatedLinks: Record<string, RelatedLink[]> = {
   "contractors-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Roofing Contractors", href: "/roofing-contractors-insurance/" },
+    { label: "Electrical Contractors", href: "/electrical-contractors-insurance/" },
+    { label: "Plumbing & HVAC", href: "/plumbing-hvac-insurance/" },
+    { label: "Excavation & Concrete", href: "/excavation-contractors-insurance/" },
     { label: "Surety Bonds", href: "/bonding-insurance/" },
     { label: "Builder's Risk", href: "/builders-risk-insurance/" },
     { label: "Commercial auto for job sites", href: "/commercial-auto-insurance/" },
@@ -284,6 +298,7 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
   "commercial-property-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     { label: "Business Interruption", href: "/business-interruption-insurance/" },
+    { label: "Equipment Breakdown", href: "/equipment-breakdown-insurance/" },
     { label: "Small Business", href: "/small-business-insurance/" },
   ],
   "restaurant-insurance": [
@@ -298,6 +313,7 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
   ],
   "real-estate-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
+    { label: "Commercial Landlord", href: "/commercial-landlord-insurance/" },
     { label: "Property Management", href: "/property-management-insurance/" },
     { label: "Landlord Insurance", href: "/landlord-insurance/" },
   ],
@@ -305,6 +321,8 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     { label: "Contractors Insurance", href: "/contractors-insurance/" },
     { label: "Builder's Risk", href: "/builders-risk-insurance/" },
+    { label: "Roofing Contractors", href: "/roofing-contractors-insurance/" },
+    { label: "Excavation & Concrete", href: "/excavation-contractors-insurance/" },
   ],
   "retail-insurance": [
     { label: "Small Business", href: "/small-business-insurance/" },
@@ -430,7 +448,14 @@ export function adaptCommercialIndustryContent(
     considerations: content.considerations,
     brokerSteps: commercialBrokerSteps,
     relatedProducts: related,
-    relatedIntro: DEFAULT_COMMERCIAL_RELATED_INTRO,
+    relatedIntro:
+      content.slug === "contractors-insurance"
+        ? "Explore by trade — or review bonding and project property that often sit beside a contracting program."
+        : DEFAULT_COMMERCIAL_RELATED_INTRO,
+    relatedHeading:
+      content.slug === "contractors-insurance"
+        ? "Explore by trade"
+        : undefined,
     faqTitle: content.faqTitle,
     faqIntro: "Straight answers to common questions for this industry.",
     faqItems: content.faqItems,

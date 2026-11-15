@@ -278,6 +278,27 @@ export default function CoverageVisualStage({
               );
             })}
 
+            {explorer.hotspotOverlay && explorer.svgZones?.length ? (
+              <svg
+                className="pilot-ce-svg-overlay pilot-ce-svg-overlay--hotspots"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                aria-hidden
+              >
+                {explorer.svgZones.map((svgZone) => {
+                  const isActive = activeZoneIds.has(svgZone.id);
+                  const styleClass = svgZone.style ?? "glow";
+                  return (
+                    <path
+                      key={svgZone.id}
+                      d={svgZone.path}
+                      className={`pilot-ce-svg-zone pilot-ce-svg-zone--${styleClass}${isActive ? " is-active" : ""}`}
+                    />
+                  );
+                })}
+              </svg>
+            ) : null}
+
             {activeState?.callouts?.map((callout) => (
               <span
                 key={callout.id}

@@ -21,6 +21,10 @@ import type {
   CoverageVisualFamily,
 } from "@/types/coverage-explorer";
 import { getVisualFamilyForSlug } from "@/data/coverage-explorer/registry";
+import {
+  BATCH_A_EXPLORER_DIMENSIONS,
+  getBatchAExplorerScene,
+} from "@/data/coverage-explorer/batch-a-scenes";
 
 const COMPACT_MASTER_FILES = new Set([
   "auto-insurance-interactive-master.png",
@@ -112,6 +116,31 @@ export function buildRouteExplorerConfig(
 
   if (slug === "contractors-insurance") {
     return buildContractorsStateImageConfig(coverageIds);
+  }
+
+  const batchAScene = getBatchAExplorerScene(slug);
+  if (batchAScene) {
+    const family: CoverageVisualFamily =
+      getVisualFamilyForSlug(slug) ?? batchAScene.visualFamily;
+
+    return {
+      visualFamily: family,
+      sceneMode: "interactive-master",
+      highlightRenderer: "dim-only",
+      hotspotOverlay: true,
+      sceneSrc: batchAScene.src,
+      sceneDimensions: BATCH_A_EXPLORER_DIMENSIONS,
+      cssSceneClass: slug,
+      zones: [],
+      svgZones: batchAScene.zones,
+      coverageStates: coverageIds.map((coverageId) => ({
+        coverageId,
+        activeZoneIds: batchAScene.coverageZones[coverageId] ?? [],
+        sceneModifier: coverageId,
+        ambient: { dimOpacity: 0.12 },
+      })),
+      ...(batchAScene.sceneNote ? { sceneNote: batchAScene.sceneNote } : {}),
+    };
   }
 
   const manifest = ROUTE_MANIFEST[slug];

@@ -32,6 +32,10 @@ export const businessNavCategories: BusinessNavCategory[] = [
     role: "industry",
     links: [
       { label: "Contractors", href: "/contractors-insurance/" },
+      { label: "Roofing Contractors", href: "/roofing-contractors-insurance/" },
+      { label: "Electrical Contractors", href: "/electrical-contractors-insurance/" },
+      { label: "Plumbing & HVAC", href: "/plumbing-hvac-insurance/" },
+      { label: "Excavation & Concrete", href: "/excavation-contractors-insurance/" },
       { label: "Builders & Developers", href: "/builders-developers-insurance/" },
       { label: "Builder's Risk", href: "/builders-risk-insurance/" },
       { label: "Landscaping & Snow Removal", href: "/landscaping-snow-removal-insurance/" },
@@ -82,6 +86,7 @@ export const businessNavCategories: BusinessNavCategory[] = [
       { label: "Commercial Auto / Fleet", href: "/commercial-auto-insurance/" },
       { label: "Trucking", href: "/trucking-insurance/" },
       { label: "Dump Truck", href: "/dump-truck-insurance/" },
+      { label: "Tow Truck Operators", href: "/tow-truck-insurance/" },
       { label: "Cargo / Freight", href: "/cargo-freight-insurance/" },
       { label: "Garage / Dealership", href: "/garage-dealership-insurance/" },
     ],
@@ -106,8 +111,12 @@ export const businessNavCategories: BusinessNavCategory[] = [
     links: [
       { label: "Real Estate", href: "/real-estate-insurance/" },
       { label: "Commercial Property", href: "/commercial-property-insurance/" },
+      { label: "Commercial Landlord", href: "/commercial-landlord-insurance/" },
+      { label: "Apartment Buildings", href: "/apartment-building-insurance/" },
+      { label: "Mixed-Use Property", href: "/mixed-use-property-insurance/" },
       { label: "Property Management", href: "/property-management-insurance/" },
       { label: "Condo Corporation", href: "/condominium-corporation-insurance/" },
+      { label: "Equipment Breakdown", href: "/equipment-breakdown-insurance/" },
     ],
   },
   {
@@ -130,6 +139,7 @@ export const businessNavCategories: BusinessNavCategory[] = [
       { label: "Religious Organizations", href: "/religious-organizations-insurance/" },
       { label: "Daycare / School", href: "/daycare-private-school-insurance/" },
       { label: "Event Liability", href: "/event-liability-insurance/" },
+      { label: "Commercial Umbrella", href: "/commercial-umbrella-insurance/" },
     ],
   },
   {
