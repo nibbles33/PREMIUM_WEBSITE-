@@ -118,7 +118,7 @@ export const commercialHubCategories: CommercialHubCategory[] = [
     label: "Small Business",
     href: "/small-business-insurance/",
     description:
-      "A starting point for assembling everyday commercial coverage — including liability, property, and other lines that fit how the business actually operates.",
+      "For owner-operated shops and offices assembling liability, property, and auto coverage where the operation needs them.",
     icon: Briefcase,
   },
   {
@@ -167,7 +167,7 @@ export const commercialHubCategories: CommercialHubCategory[] = [
     label: "Equipment on Commercial Property",
     href: "/commercial-property-insurance/",
     description:
-      "Equipment breakdown is reviewed on the Commercial Property page — there is no separate equipment-breakdown product route.",
+      "Equipment breakdown can be reviewed as part of commercial property insurance until a dedicated Equipment Breakdown page is published.",
     icon: Wrench,
   },
   {

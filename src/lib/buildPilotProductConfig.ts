@@ -46,6 +46,7 @@ type BuildPilotProductConfigInput = {
   headline: string;
   heroLead: string;
   heroSupporting?: string;
+  heroSupportingLink?: PilotProductPageConfig["heroSupportingLink"];
   photographySlug?: string;
   accentColor: string;
   quoteHref: string;
@@ -144,6 +145,7 @@ export function buildPilotProductConfig(
     headline: input.headline,
     heroLead: input.heroLead,
     heroSupporting: input.heroSupporting,
+    heroSupportingLink: input.heroSupportingLink,
     heroCtasAfterHeadline:
       (input.schemaKind === "commercial" ||
         input.schemaKind === "agriculture") &&
@@ -267,6 +269,10 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "Builder's Risk", href: "/builders-risk-insurance/" },
     { label: "Commercial auto for job sites", href: "/commercial-auto-insurance/" },
     { label: "Small Business", href: "/small-business-insurance/" },
+    {
+      label: "Landscaping & Snow Removal Insurance",
+      href: "/landscaping-snow-removal-insurance/",
+    },
   ],
   "manufacturing-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
@@ -323,6 +329,10 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "For-hire trucking", href: "/trucking-insurance/" },
     { label: "Dump Truck", href: "/dump-truck-insurance/" },
     { label: "Cargo & Freight", href: "/cargo-freight-insurance/" },
+    {
+      label: "Garage & Dealership Insurance",
+      href: "/garage-dealership-insurance/",
+    },
   ],
   "dump-truck-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },

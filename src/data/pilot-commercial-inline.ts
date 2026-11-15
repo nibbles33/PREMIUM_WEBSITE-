@@ -30,6 +30,7 @@ import {
   commercialHubCategories,
   commercialHubFaqs,
 } from "@/data/commercial-industries";
+import { commercialHubRelatedLinks } from "@/data/commercial-hub-related";
 import {
   buildPilotProductConfig,
   relatedLinksToProducts,
@@ -62,6 +63,10 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
       "Your Windsor–Essex commercial insurance starting point for businesses here and across Ontario — not a single bundled policy. Use the categories and industry links below to find routes that match how you operate, then talk to a broker about coverages your business may need.",
     heroSupporting:
       "Need a tighter small-business package first? Our small business insurance page goes deeper. Start here for orientation across the full commercial site — whether you operate in Windsor-Essex or elsewhere in Ontario.",
+    heroSupportingLink: {
+      phrase: "small business insurance page",
+      href: "/small-business-insurance/",
+    },
     photographySlug: "commercial-insurance",
     accentColor: COMMERCIAL_ACCENT,
     quoteHref: QUOTE_BUSINESS,
@@ -94,20 +99,7 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ],
     considerationsPresentation: "expandable",
     brokerSteps: commercialBrokerSteps,
-    relatedProducts: relatedLinksToProducts([
-      { label: "Trucking Insurance", href: "/trucking-insurance/" },
-      { label: "Cargo & Freight Insurance", href: "/cargo-freight-insurance/" },
-      { label: "Contractors Insurance", href: "/contractors-insurance/" },
-      { label: "Surety & Bonding", href: "/bonding-insurance/" },
-      { label: "Small Business Insurance", href: "/small-business-insurance/" },
-      { label: "Manufacturing Insurance", href: "/manufacturing-insurance/" },
-      { label: "Product Recall", href: "/product-recall-insurance/" },
-      { label: "Pollution Liability", href: "/pollution-liability-insurance/" },
-      { label: "Crime & Fidelity", href: "/crime-fidelity-insurance/" },
-      { label: "Directors & Officers", href: "/directors-officers-insurance/" },
-      { label: "Cannabis Retail", href: "/cannabis-retail-insurance/" },
-      { label: "Cannabis Producer", href: "/cannabis-producer-insurance/" },
-    ]),
+    relatedProducts: relatedLinksToProducts([...commercialHubRelatedLinks]),
     relatedHeading: "Industry & specialty routes",
     relatedIntro:
       "Explore transportation, contracting, surety, and specialty program pages when the category cards above are not enough — without assuming one quote covers everything.",
