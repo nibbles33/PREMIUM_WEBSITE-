@@ -79,6 +79,12 @@ export default function PilotAuthorityStrip({ googleRating }: Props) {
                   {googleRating.reviewCount.toLocaleString("en-CA")} Google
                   reviews
                 </p>
+                <p
+                  translate="no"
+                  className="mt-1 whitespace-nowrap font-sans text-[12px] font-normal normal-case leading-none tracking-normal text-[#1F1F1F]"
+                >
+                  Google Maps
+                </p>
               </>
             ) : (
               <>

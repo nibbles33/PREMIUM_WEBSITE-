@@ -1,7 +1,10 @@
 import Link from "next/link";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { HOMEPAGE_AUTHORITY } from "@/data/homepage-authority";
-import type { GooglePlaceRatingResult } from "@/lib/google/places";
+import type {
+  GooglePlaceRatingResult,
+  GooglePlaceReview,
+} from "@/lib/google/places";
 
 function Stars({ rating, size = "md" }: { rating: number; size?: "md" | "lg" }) {
   const full = Math.floor(rating);
@@ -29,6 +32,68 @@ function Stars({ rating, size = "md" }: { rating: number; size?: "md" | "lg" }) 
 type Props = {
   ratingResult: GooglePlaceRatingResult;
 };
+
+function relevanceNotice(count: number): string {
+  if (count === 1) {
+    return "Google selects reviews by relevance. This page shows one.";
+  }
+  if (count === 3) {
+    return "Google selects reviews by relevance. This page shows three.";
+  }
+  return `Google selects reviews by relevance. This page shows ${count}.`;
+}
+
+function ReviewerIdentity({ review }: { review: GooglePlaceReview }) {
+  const photo = review.authorPhotoUri ? (
+    // Google hosts the avatar. next/image would cache that file on our side.
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={review.authorPhotoUri}
+      alt=""
+      width={40}
+      height={40}
+      className="h-10 w-10 shrink-0 rounded-full object-cover"
+    />
+  ) : null;
+
+  const name = review.authorName ? (
+    <span className="block truncate text-[14px] font-medium text-white">
+      {review.authorName}
+    </span>
+  ) : null;
+  const person = review.authorUri ? (
+    <a
+      href={review.authorUri}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={
+        review.authorName ? undefined : "Reviewer profile on Google Maps"
+      }
+      className="flex min-w-0 items-center gap-3 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+    >
+      {photo}
+      {name}
+    </a>
+  ) : (
+    <div className="flex min-w-0 items-center gap-3">
+      {photo}
+      {name}
+    </div>
+  );
+
+  return (
+    <div className="min-w-0">
+      {person}
+      {review.relativeTime ? (
+        <p
+          className={`text-[12px] font-normal text-white/60 ${review.authorPhotoUri ? "mt-1 pl-[52px]" : "mt-1"}`}
+        >
+          {review.relativeTime}
+        </p>
+      ) : null}
+    </div>
+  );
+}
 
 /**
  * Concept F — major Google social-proof section.
@@ -85,8 +150,22 @@ export default function PilotGoogleReviews({ ratingResult }: Props) {
               )}
 
               <p className="mt-6 max-w-md text-[14px] leading-relaxed text-white/70">
-                Reviews for {google.businessName}. Ratings provided by Google.
+                Reviews for {google.businessName}.
+                {isLive ? null : " Ratings provided by Google."}
               </p>
+              {isLive && reviews.length > 0 ? (
+                <p className="mt-3 max-w-md text-[14px] leading-relaxed text-white/70">
+                  {relevanceNotice(reviews.length)}
+                </p>
+              ) : null}
+              {isLive ? (
+                <p
+                  translate="no"
+                  className="mt-4 whitespace-nowrap font-sans text-[14px] font-normal leading-none tracking-normal text-white"
+                >
+                  Google Maps
+                </p>
+              ) : null}
 
               <div className="mt-8">
                 <Link
@@ -108,20 +187,39 @@ export default function PilotGoogleReviews({ ratingResult }: Props) {
                     key={`${review.authorName}-${index}`}
                     className="rounded-[16px] border border-white/10 bg-white/[0.05] px-5 py-5 backdrop-blur-sm sm:px-6"
                   >
-                    <div className="flex items-center justify-between gap-3">
-                      <p className="text-[14px] font-medium text-white">
-                        {review.authorName}
-                      </p>
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <ReviewerIdentity review={review} />
+                      </div>
                       <Stars rating={review.rating} />
                     </div>
-                    {review.relativeTime ? (
-                      <p className="mt-1 text-[12px] text-white/60">
-                        {review.relativeTime}
-                      </p>
-                    ) : null}
-                    <p className="mt-3 text-[14px] leading-relaxed text-white/75 sm:text-[15px]">
+                    <p className="mt-3 whitespace-pre-line break-words text-[14px] leading-relaxed text-white/75 sm:text-[15px]">
                       “{review.text}”
                     </p>
+                    {review.googleMapsUri || review.flagContentUri ? (
+                      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1">
+                        {review.googleMapsUri ? (
+                          <a
+                            href={review.googleMapsUri}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[13px] font-medium text-gold underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                          >
+                            View on Google Maps
+                          </a>
+                        ) : null}
+                        {review.flagContentUri ? (
+                          <a
+                            href={review.flagContentUri}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[13px] font-normal text-white/60 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                          >
+                            Report
+                          </a>
+                        ) : null}
+                      </div>
+                    ) : null}
                   </article>
                 ))
               ) : (
