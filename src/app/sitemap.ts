@@ -97,7 +97,6 @@ const staticRoutes = [
   "/privacy-policy/",
   "/claims/",
   "/careers/",
-  "/careers/general-application/",
   "/resources/",
   "/newsletter/",
 ];
