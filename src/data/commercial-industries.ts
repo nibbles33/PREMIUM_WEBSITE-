@@ -118,14 +118,14 @@ export const commercialHubCategories: CommercialHubCategory[] = [
     label: "Small Business",
     href: "/small-business-insurance/",
     description:
-      "A starting point for assembling everyday commercial coverage — including liability, property, and other lines that fit how the business actually operates.",
+      "For owner-operated shops and offices assembling liability, property, and auto coverage where the operation needs them.",
     icon: Briefcase,
   },
   {
     label: "Commercial Auto & Fleet",
     href: "/commercial-auto-insurance/",
     description:
-      "For company vehicles used in deliveries, service calls, or sales work — reviewed separately from premises liability.",
+      "For company cars, vans, pickups, service trucks, and fleets used in the business — reviewed separately from premises liability. For-hire motor carriers are a different program.",
     icon: Truck,
   },
   {
@@ -234,14 +234,14 @@ export const industryPages: IndustryPageContent[] = [
   {
     slug: "commercial-auto-insurance",
     metaTitle:
-      "Commercial Auto & Fleet Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "Commercial Auto Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
       "Commercial auto insurance for Windsor-Essex fleets and business vehicles — Ontario liability, physical damage, and accident benefits via a broker.",
     headline: "Commercial Auto & Fleet Insurance",
     subhead:
       "Commercial auto insurance addresses Ontario-regulated automobile coverage for vehicles your business owns, leases, or puts on the road for work — service vans, contractor pickups, delivery units, sales fleets, and other ordinary commercial automobile risks. That is different from for-hire motor carrier programs on our trucking page or cargo-only coverage for freight in transit. Ontario automobile policies must include third-party liability of at least $200,000 per accident, uninsured automobile coverage, and — unless the named insured opts out using OPCF 49 — Direct Compensation Property Damage (DCPD). As of July 1, 2026, standard medical, rehabilitation, and attendant care accident benefits remain mandatory; other statutory accident benefits may be optional where your policy form allows. Collision, comprehensive, and hired/non-owned auto are not automatic on every commercial policy — each must be confirmed with your broker. Premium Insurance Brokers can help Windsor–Essex businesses compare automobile programs for how your team actually uses vehicles.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
-    quoteLabel: "Get a Fleet Quote",
+    quoteLabel: "Get a Commercial Auto Quote",
     coverageIntro:
       "Ontario business automobile coverage is organized here by regulated liability and accident benefits, optional physical damage, hired and non-owned exposure, and multi-vehicle fleet structure — because mandatory coverages, endorsements, and underwriting differ from personal auto and from for-hire trucking programs.",
     coverageTypes: [
@@ -361,6 +361,15 @@ export const industryPages: IndustryPageContent[] = [
         answer:
           "Expect to provide vehicle details (year, make, model, VIN), ownership or lease status, how each unit is used, annual distance or radius, driver information with licence class and abstracts, desired liability limits, and current policy or claims history. If any vehicles cross into the U.S. or operate outside Ontario regularly, disclose that territory up front so filings and extensions can be quoted accurately.",
       },
+      {
+        question: "Is commercial auto insurance the same as for-hire trucking insurance?",
+        answer:
+          "Commercial auto insurance is for vehicles a business uses in its own operations — company cars, vans, pickups, service trucks, and fleets of those vehicles. For-hire trucking insurance is for motor carriers, owner-operators, and trucking fleets that haul for others. A dump truck used for aggregate, excavation, or jobsite hauling is reviewed on its own page. Commercial automobile coverage does not include motor truck cargo. Collision, comprehensive, and hired or non-owned auto apply only where the policy provides them, subject to limits, exclusions, and Ontario’s statutory automobile requirements.",
+        links: [
+          { label: "For-hire trucking insurance", href: "/trucking-insurance/" },
+          { label: "Dump truck insurance", href: "/dump-truck-insurance/" },
+        ],
+      },
     ],
     ctaHeading: "Ready to cover your fleet?",
     ctaSubhead:
@@ -369,18 +378,19 @@ export const industryPages: IndustryPageContent[] = [
   },
   {
     slug: "trucking-insurance",
-    metaTitle: "Ontario Trucking Insurance | Windsor-Essex Brokers",
+    metaTitle: "Trucking Insurance Broker in Ontario | Premium Insurance Brokers",
     metaDescription:
-      "Trucking insurance for Ontario motor carriers — commercial auto, cargo, and U.S. lane coordination from Premium Insurance Brokers in Windsor-Essex.",
+      "Ontario trucking insurance for motor carriers, owner-operators, and fleets. Vehicle and cargo coverage are separate, arranged with a Windsor-Essex broker.",
     headline: "Trucking Insurance for Ontario Motor Carriers",
     subhead:
-      "Ontario motor carriers and for-hire trucking operations face a layered insurance picture — Ontario-regulated commercial automobile liability and physical damage for tractors and trailers on the highway, separate motor truck cargo coverage for freight you haul for others, and additional underwriting when your lanes cross into the United States. That is different from light commercial auto, cargo-only transit cover, or dump-truck jobsite hauling. Ontario operators of qualifying commercial motor vehicles must also hold a valid Commercial Vehicle Operator's Registration (CVOR) certificate from the Ministry of Transportation — a regulatory safety-registration program separate from purchasing insurance. From our Windsor-Essex office, Premium Insurance Brokers helps carriers across Ontario align automobile, cargo, and contract requirements to how the fleet actually runs.",
+      "Ontario motor carriers and for-hire trucking operations face a layered insurance picture — Ontario-regulated commercial automobile liability and physical damage for tractors and trailers on the highway, and additional underwriting when lanes cross into the United States. Motor truck cargo for freight hauled for others is a separate coverage: it requires its own underwriting, limits, and terms, and it is not included automatically with the automobile policy. That is different from light commercial auto, cargo-only transit cover, or dump-truck jobsite hauling. Ontario operators of qualifying commercial motor vehicles must also hold a valid Commercial Vehicle Operator's Registration (CVOR) certificate from the Ministry of Transportation — a regulatory safety-registration program separate from purchasing insurance. From our Windsor-Essex office, Premium Insurance Brokers helps carriers across Ontario align automobile, cargo, and contract requirements to how the fleet actually runs.",
     quoteHref: QUOTE_COMMERCIAL_VEHICLES,
     quoteLabel: "Get a Trucking Quote",
     coverageIntro:
       "Trucking insurance usually separates regulated automobile coverage for your power units and trailers from cargo coverage for customers' freight — depending on fleet size, radius, commodities, owner-operator contracts, and whether you haul into the U.S.",
     coverageTypes: [
       {
+        id: "cargo-insurance",
         title: "Cargo Insurance",
         shortLabel: "Cargo",
         description:
@@ -484,6 +494,17 @@ export const industryPages: IndustryPageContent[] = [
         question: "What information affects a trucking insurance quote?",
         answer:
           "Expect questions about fleet and trailer lists, stated values, driver rosters and abstracts, radius and territories hauled, commodities, annual distance, CVOR certificate holder, loss history, owner-operator versus employee drivers, and contract insurance requirements from shippers or brokers. Insurers do not all use identical forms — accurate disclosure helps match markets to your operation.",
+      },
+      {
+        question: "Does trucking insurance automatically include cargo insurance?",
+        answer:
+          "No. Automobile liability and physical damage address the insured tractor, trailer, and certain third-party road claims, subject to statutory minimums, limits, and exclusions. Motor truck cargo is a separate coverage for customers’ freight. It requires its own underwriting, limits, and terms, and it responds only to the causes of loss the cargo form actually insures. A trucking policy does not automatically include cargo, every trailer, or every fleet exposure. Shipper or broker contracts may require cargo limits an automobile policy does not provide.",
+        links: [
+          {
+            label: "Cargo insurance in Ontario",
+            href: "/cargo-freight-insurance/",
+          },
+        ],
       },
     ],
     ctaHeading: "Ready to cover your trucking operation?",
@@ -616,6 +637,15 @@ export const industryPages: IndustryPageContent[] = [
         question: "What information is needed to quote contractors insurance?",
         answer:
           "Expect questions about your trade and operations, revenue and payroll, subcontracting percentage, tools and equipment values, vehicles, typical jobsite types (new build, renovation, occupied premises), contract insurance requirements, claims history, and whether you participate in wrap-up or OCIP projects. Trade-specific details matter — roofing is not underwritten like landscaping.",
+      },
+      {
+        question:
+          "Does contractor liability insurance include bid, performance, or payment bonds?",
+        answer:
+          "No. Commercial general liability may respond to certain third-party injury or property-damage claims from contracting operations, subject to policy terms, exclusions, and limits. It does not automatically include bid bonds, performance bonds, or labour and material payment bonds. Those are surety instruments. They back an obligation to a project owner or, on a payment bond, to certain subcontractors and suppliers. They are not issued with a liability policy, and availability depends on surety underwriting.",
+        links: [
+          { label: "Surety and bonding", href: "/bonding-insurance/" },
+        ],
       },
     ],
     ctaHeading: "Ready to cover your contracting business?",

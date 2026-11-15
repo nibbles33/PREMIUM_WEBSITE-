@@ -46,6 +46,7 @@ type BuildPilotProductConfigInput = {
   headline: string;
   heroLead: string;
   heroSupporting?: string;
+  heroSupportingLink?: PilotProductPageConfig["heroSupportingLink"];
   photographySlug?: string;
   accentColor: string;
   quoteHref: string;
@@ -144,6 +145,7 @@ export function buildPilotProductConfig(
     headline: input.headline,
     heroLead: input.heroLead,
     heroSupporting: input.heroSupporting,
+    heroSupportingLink: input.heroSupportingLink,
     heroCtasAfterHeadline:
       (input.schemaKind === "commercial" ||
         input.schemaKind === "agriculture") &&
@@ -272,12 +274,19 @@ export function adaptCommercialProductContent(
 
 const industryRelatedLinks: Record<string, RelatedLink[]> = {
   "contractors-insurance": [
+    { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     { label: "Roofing Contractors", href: "/roofing-contractors-insurance/" },
     { label: "Electrical Contractors", href: "/electrical-contractors-insurance/" },
     { label: "Plumbing & HVAC", href: "/plumbing-hvac-insurance/" },
     { label: "Excavation & Concrete", href: "/excavation-contractors-insurance/" },
     { label: "Surety Bonds", href: "/bonding-insurance/" },
     { label: "Builder's Risk", href: "/builders-risk-insurance/" },
+    { label: "Commercial auto for job sites", href: "/commercial-auto-insurance/" },
+    { label: "Small Business", href: "/small-business-insurance/" },
+    {
+      label: "Landscaping & Snow Removal Insurance",
+      href: "/landscaping-snow-removal-insurance/",
+    },
   ],
   "manufacturing-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
@@ -306,7 +315,7 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
     { label: "Commercial Landlord", href: "/commercial-landlord-insurance/" },
     { label: "Property Management", href: "/property-management-insurance/" },
-    { label: "Residential Landlord", href: "/landlord-insurance/" },
+    { label: "Landlord Insurance", href: "/landlord-insurance/" },
   ],
   "builders-developers-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
@@ -331,13 +340,17 @@ const industryRelatedLinks: Record<string, RelatedLink[]> = {
   "trucking-insurance": [
     { label: "Commercial Auto", href: "/commercial-auto-insurance/" },
     { label: "Dump Trucks", href: "/dump-truck-insurance/" },
-    { label: "Cargo & Freight", href: "/cargo-freight-insurance/" },
+    { label: "Cargo insurance in Ontario", href: "/cargo-freight-insurance/" },
   ],
   "commercial-auto-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },
-    { label: "Trucking", href: "/trucking-insurance/" },
+    { label: "For-hire trucking", href: "/trucking-insurance/" },
     { label: "Dump Truck", href: "/dump-truck-insurance/" },
     { label: "Cargo & Freight", href: "/cargo-freight-insurance/" },
+    {
+      label: "Garage & Dealership Insurance",
+      href: "/garage-dealership-insurance/",
+    },
   ],
   "dump-truck-insurance": [
     { label: "Commercial Insurance Hub", href: "/commercial-insurance/" },

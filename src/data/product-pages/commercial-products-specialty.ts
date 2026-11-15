@@ -285,13 +285,13 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
     slug: "grocery-specialty-food-insurance",
     category: "commercial",
     metaTitle:
-      "Grocery, Specialty Food & Bakery Insurance in Windsor-Essex | Premium Insurance Brokers",
+      "Grocery & Bakery Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
       "Grocery, specialty food, and bakery insurance in Windsor-Essex — property, spoilage, liability, and business interruption through an independent broker.",
     headline: "Grocery, Specialty Food & Bakery Insurance",
     subhead:
       "Grocery stores, specialty food markets, butcher shops, bakeries, and delis with limited in-store preparation face perishable inventory, refrigeration equipment, and food-product liability exposures that differ from full-service restaurants, convenience stores with fuel, or general merchandise retail. Depending on your operation, that can mean commercial property for stock and fixtures, optional spoilage or equipment-breakdown endorsements for refrigerated loss, products liability for illness or allergen allegations, and general liability for customer incidents on premises — each subject to the policies you purchase. Spoilage does not automatically respond because food became unusable; equipment breakdown, utility interruption, and off-premises power failure follow different triggers. Primarily prepared-food and table-service operations belong on our restaurant page. Premium Insurance Brokers can help Windsor–Essex food retailers align coverage to your refrigeration, preparation level, and product mix.",
-    quoteHref: QUOTE_BUSINESS,
+    quoteHref: `${QUOTE_BUSINESS}&businessType=retail`,
     quoteLabel: "Get a Food Retail Quote",
     coverageIntro:
       "Food retail insurance is organized around property and stock, optional spoilage and refrigeration endorsements, food products liability, and customer premises liability — because each coverage responds to different triggers and is purchased separately on most programs.",
@@ -804,6 +804,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       { label: "Professional Liability", href: "/professional-liability-insurance/" },
       { label: "Event Liability", href: "/event-liability-insurance/" },
       { label: "Small Business Insurance", href: "/small-business-insurance/" },
+      { label: "Salon & Barber Insurance", href: "/salon-barber-insurance/" },
     ],
     faqTitle: "Fitness & gym FAQ",
     faqItems: [
@@ -1063,6 +1064,10 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       { label: "Directors & Officers", href: "/directors-officers-insurance/" },
       { label: "Event Liability", href: "/event-liability-insurance/" },
       { label: "Religious Organizations", href: "/religious-organizations-insurance/" },
+      {
+        label: "Daycare & Private School Insurance",
+        href: "/daycare-private-school-insurance/",
+      },
     ],
     faqTitle: "Non-profit FAQ",
     faqItems: [

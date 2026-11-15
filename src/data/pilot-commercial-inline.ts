@@ -30,6 +30,7 @@ import {
   commercialHubCategories,
   commercialHubFaqs,
 } from "@/data/commercial-industries";
+import { commercialHubRelatedLinks } from "@/data/commercial-hub-related";
 import {
   buildPilotProductConfig,
   relatedLinksToProducts,
@@ -62,6 +63,10 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
       "Your Windsor–Essex commercial insurance starting point for businesses here and across Ontario — not a single bundled policy. Use the categories and industry links below to find routes that match how you operate, then talk to a broker about coverages your business may need.",
     heroSupporting:
       "Need a tighter small-business package first? Our small business insurance page goes deeper. Start here for orientation across the full commercial site — whether you operate in Windsor-Essex or elsewhere in Ontario.",
+    heroSupportingLink: {
+      phrase: "small business insurance page",
+      href: "/small-business-insurance/",
+    },
     photographySlug: "commercial-insurance",
     accentColor: COMMERCIAL_ACCENT,
     quoteHref: QUOTE_BUSINESS,
@@ -94,19 +99,10 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
     ],
     considerationsPresentation: "expandable",
     brokerSteps: commercialBrokerSteps,
-    relatedProducts: relatedLinksToProducts([
-      { label: "Small Business Insurance", href: "/small-business-insurance/" },
-      { label: "Manufacturing Insurance", href: "/manufacturing-insurance/" },
-      { label: "Product Recall", href: "/product-recall-insurance/" },
-      { label: "Pollution Liability", href: "/pollution-liability-insurance/" },
-      { label: "Crime & Fidelity", href: "/crime-fidelity-insurance/" },
-      { label: "Directors & Officers", href: "/directors-officers-insurance/" },
-      { label: "Cannabis Retail", href: "/cannabis-retail-insurance/" },
-      { label: "Cannabis Producer", href: "/cannabis-producer-insurance/" },
-    ]),
-    relatedHeading: "Specialty & program routes",
+    relatedProducts: relatedLinksToProducts([...commercialHubRelatedLinks]),
+    relatedHeading: "Industry & specialty routes",
     relatedIntro:
-      "Explore specialty and program pages when core categories are not enough — without assuming one quote covers everything.",
+      "Explore transportation, contracting, surety, and specialty program pages when the category cards above are not enough — without assuming one quote covers everything.",
     faqTitle: "Commercial insurance FAQ",
     faqIntro: "Short answers for Windsor–Essex business owners starting commercial coverage.",
     faqItems: commercialHubFaqs,
@@ -118,11 +114,12 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
   }),
   "bonding-insurance": buildPilotProductConfig({
     slug: "bonding-insurance",
-    metaTitle: "Surety Bonds in Windsor-Essex | Premium Insurance Brokers",
+    metaTitle:
+      "Surety & Bonding Insurance in Windsor-Essex | Premium Insurance Brokers",
     metaDescription:
-      "Surety bonds through an independent Windsor-Essex broker — bid bonds, performance bonds, labour and material payment bonds, and licence and permit bonds.",
+      "Bid, performance, and payment bonds for Windsor-Essex contractors, plus licence and permit bonds. Learn how surety bonds work with a local broker.",
     eyebrow: "Surety Bonds",
-    headline: "Surety Bonds",
+    headline: "Surety Bonds and Contractor Bonding",
     heroLead:
       "Surety bonding is structurally different from conventional insurance. A surety bond is a three-party obligation among the principal (usually the contractor), the obligee (the project owner or authority that requires the bond), and the surety. The bond backs the principal's contractual or licence obligation to the obligee — it does not primarily protect the contractor the way a liability policy protects an insured. If the surety pays or arranges completion after a default, the principal typically remains responsible under an indemnity agreement. Common construction instruments include bid bonds, performance bonds, and labour and material payment bonds; licence and permit bonds serve separate regulatory purposes. Employee dishonesty or crime coverage is insurance — not a construction surety bond — and is addressed on a separate product page. Premium Insurance Brokers can help Windsor-Essex contractors navigate prequalification, capacity, and tender timelines.",
     photographySlug: "bonding-insurance",
@@ -252,6 +249,14 @@ export const pilotCommercialInlineConfigs: Record<string, PilotProductPageConfig
         question: "What are common construction bonds, and is a bid bond always required?",
         answer:
           "Common construction surety instruments include bid bonds, performance bonds, and labour and material payment bonds. Licence and permit bonds address separate regulatory requirements. Bid bonds are typically required by tender documents where the owner wants tender security — they are not the same as the Construction Act's statutory performance-and-payment bond rule for applicable public contracts.",
+      },
+      {
+        question: "How is a surety bond different from contractor liability insurance?",
+        answer:
+          "A surety bond is not contractor liability insurance. Liability insurance, where purchased, may respond to certain third-party injury or property-damage claims against the contractor, subject to policy terms, exclusions, and limits. A surety bond is a three-party obligation among the principal, the obligee, and the surety. It backs the principal's contractual or licence obligation to the obligee. If the surety pays or arranges completion, the principal typically remains responsible under an indemnity agreement. Under Ontario's Construction Act, certain public contracts with a contract price of $500,000 or more require both a performance bond and a labour and material payment bond. The general regulatory minimum coverage for each is 50 per cent of the contract price. That rule does not apply to every private Ontario project, and it is not a Canada-wide bid-bond requirement. Private bond requirements follow the contract and tender. Bonds depend on surety underwriting and are not guaranteed. Contractor liability remains a separate policy.",
+        links: [
+          { label: "Contractors insurance", href: "/contractors-insurance/" },
+        ],
       },
     ],
     ctaHeading: "Need surety for a tender or contract?",

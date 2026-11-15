@@ -354,7 +354,7 @@ export const commercialProductPages: ProductPageContent[] = [
     headline: "Directors & Officers (D&O) Insurance",
     subhead:
       "Directors and officers liability insurance may help respond to certain claims alleging wrongful acts by directors, officers, or other insured persons in their management or governance capacities — subject to policy definitions, exclusions, claims-made conditions, and reporting requirements. It is not a guarantee against every personal liability, not a replacement for professional liability when you render professional services, and not a substitute for employment practices liability when the dispute is primarily an employment claim. Typical programs use Side A (individual), Side B (corporate reimbursement), and — where included — Side C (entity) coverage, but not every form uses an identical ABC structure, and entity coverage varies materially by organization type. Defence costs are often a major part of the product and may erode available limits depending on the form. Premium Insurance Brokers can help Windsor–Essex corporations, nonprofits, and private companies compare D&O structure against board composition, funding stage, and related management-liability needs.",
-    quoteHref: `${QUOTE_BUSINESS}&businessType=professional`,
+    quoteHref: QUOTE_BUSINESS,
     quoteLabel: "Get a D&O Quote",
     coverageIntro:
       "D&O is management liability insurance for certain alleged wrongful acts in governance or executive roles. Side A, Side B, and Side C address different payees and claim paths — subject to the form — and defence costs often sit inside shared limits unless wording provides otherwise.",

@@ -54,6 +54,11 @@ export type PilotProductPageConfig = {
   headline: string;
   heroLead: string;
   heroSupporting?: string;
+  /** Wraps one exact phrase inside `heroSupporting` in a crawlable internal link. */
+  heroSupportingLink?: {
+    phrase: string;
+    href: string;
+  };
   /**
    * When true, quote / broker / phone CTAs render directly under the H1
    * with heroLead preserved below. Used for commercial product heroes only.

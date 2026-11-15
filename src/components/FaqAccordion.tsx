@@ -4,9 +4,20 @@ import { ChevronDown } from "lucide-react";
 import { useId, useState } from "react";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
+/** Internal link rendered after an FAQ answer. Omitted from FAQ JSON-LD. */
+export type FaqLink = {
+  label: string;
+  href: string;
+};
+
 export type FaqItem = {
   question: string;
   answer: string;
+  /**
+   * Optional crawlable links shown after the plain-text answer.
+   * Renderers must emit real anchors and must not interpolate this into JSON-LD.
+   */
+  links?: readonly FaqLink[];
 };
 
 type FaqAccordionProps = {
