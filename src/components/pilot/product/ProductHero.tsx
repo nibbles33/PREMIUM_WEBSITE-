@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import HeroPhoneLink from "@/components/pilot/HeroPhoneLink";
 import PremiumGoldCTA from "@/components/pilot/PremiumGoldCTA";
@@ -21,6 +22,7 @@ type ProductHeroProps = {
     | "headline"
     | "heroLead"
     | "heroSupporting"
+    | "heroSupportingLink"
     | "heroCtasAfterHeadline"
     | "photographySlug"
     | "accentColor"
@@ -31,6 +33,30 @@ type ProductHeroProps = {
     | "slug"
   >;
 };
+
+function HeroSupportingCopy({
+  text,
+  link,
+}: {
+  text: string;
+  link?: { phrase: string; href: string };
+}) {
+  if (!link) return text;
+  const index = text.indexOf(link.phrase);
+  if (index === -1) return text;
+  return (
+    <>
+      {text.slice(0, index)}
+      <Link
+        href={link.href}
+        className="font-medium text-charcoal underline decoration-gold/50 underline-offset-2 hover:text-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+      >
+        {link.phrase}
+      </Link>
+      {text.slice(index + link.phrase.length)}
+    </>
+  );
+}
 
 function externalLinkProps(href: string) {
   if (/^https?:\/\//i.test(href)) {
@@ -158,7 +184,10 @@ export default function ProductHero({ config }: ProductHeroProps) {
               </p>
               {config.heroSupporting ? (
                 <p className="mt-3 max-w-prose text-[14px] leading-relaxed text-secondary/90 sm:text-[15px]">
-                  {config.heroSupporting}
+                  <HeroSupportingCopy
+                    text={config.heroSupporting}
+                    link={config.heroSupportingLink}
+                  />
                 </p>
               ) : null}
               {!elevateCtas ? (

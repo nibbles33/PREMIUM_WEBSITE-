@@ -1,6 +1,7 @@
 "use client";
 
 import CommercialHubCategorySection from "@/components/CommercialHubCategorySection";
+import CommercialHubSectorIndex from "@/components/CommercialHubSectorIndex";
 import CommercialIndustryGrid from "@/components/CommercialIndustryGrid";
 import Header from "@/components/Header";
 import ProductBrokerStory from "@/components/pilot/product/ProductBrokerStory";
@@ -55,6 +56,7 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
               />
             ) : null}
             <CommercialIndustryGrid />
+            <CommercialHubSectorIndex />
           </>
         ) : null}
         {!isCommercialHub && hasCoverage ? (

@@ -804,6 +804,7 @@ export const commercialProductHospitalityPages: ProductPageContent[] = [
       { label: "Professional Liability", href: "/professional-liability-insurance/" },
       { label: "Event Liability", href: "/event-liability-insurance/" },
       { label: "Small Business Insurance", href: "/small-business-insurance/" },
+      { label: "Salon & Barber Insurance", href: "/salon-barber-insurance/" },
     ],
     faqTitle: "Fitness & gym FAQ",
     faqItems: [
@@ -1063,6 +1064,10 @@ export const commercialProductSpecialtyPages: ProductPageContent[] = [
       { label: "Directors & Officers", href: "/directors-officers-insurance/" },
       { label: "Event Liability", href: "/event-liability-insurance/" },
       { label: "Religious Organizations", href: "/religious-organizations-insurance/" },
+      {
+        label: "Daycare & Private School Insurance",
+        href: "/daycare-private-school-insurance/",
+      },
     ],
     faqTitle: "Non-profit FAQ",
     faqItems: [
