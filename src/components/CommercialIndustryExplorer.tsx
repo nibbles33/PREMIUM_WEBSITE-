@@ -439,7 +439,7 @@ export default function CommercialIndustryExplorer() {
           id={`${baseId}-panel`}
           role="tabpanel"
           aria-labelledby={`${baseId}-tab-${active.id}`}
-          className={`mt-4 overflow-hidden rounded-2xl border-t-[3px] border-gold bg-white shadow-[0_18px_48px_rgba(0,0,0,0.28)] ${
+          className={`mt-4 overflow-hidden rounded-2xl border-t-[3px] border-gold bg-[#405164] shadow-[0_18px_48px_rgba(0,0,0,0.28)] ${
             panelVisible ? "opacity-100" : "opacity-0"
           }`}
           style={panelStyle}
@@ -465,14 +465,14 @@ export default function CommercialIndustryExplorer() {
               )}
             </div>
 
-            <div className="flex min-w-0 flex-col p-5 sm:p-7 lg:p-8">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-gold-dark">
+            <div className="flex min-w-0 flex-col bg-[linear-gradient(165deg,#425468_0%,#3a4b5d_100%)] p-5 sm:p-7 lg:p-8">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#e4c558]">
                 Industry
               </p>
-              <h3 className="mt-2 text-[1.7rem] font-medium tracking-[-0.03em] text-charcoal sm:text-[2rem]">
+              <h3 className="mt-2 text-[1.7rem] font-medium tracking-[-0.03em] text-white sm:text-[2rem]">
                 {active.label}
               </h3>
-              <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-secondary">
+              <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-white/85">
                 {active.description}
               </p>
 
@@ -489,20 +489,20 @@ export default function CommercialIndustryExplorer() {
                         )}
                         data-track-category-id={active.id}
                         data-track-surface="hub"
-                        className="group flex h-full min-h-11 items-center gap-2.5 rounded-xl border border-border bg-offwhite px-3 py-2.5 text-left transition-[border-color,background-color,box-shadow] duration-200 hover:border-gold hover:bg-white hover:shadow-[0_8px_20px_rgba(32,39,40,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold motion-reduce:transition-none"
+                        className="group flex h-full min-h-11 items-center gap-2.5 rounded-xl border border-white/18 bg-[#536377] px-3 py-2.5 text-left transition-[border-color,background-color,box-shadow] duration-200 hover:border-[#e4c558]/80 hover:bg-[#5d6f84] hover:shadow-[0_8px_18px_rgba(0,0,0,0.18)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e4c558] motion-reduce:transition-none"
                       >
-                        <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-charcoal shadow-[0_1px_2px_rgba(32,39,40,0.06)] group-hover:text-gold-dark">
+                        <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#45566a] text-[#e4c558]">
                           <Icon
                             className="h-4 w-4"
                             strokeWidth={1.75}
                             aria-hidden
                           />
                         </span>
-                        <span className="min-w-0 flex-1 text-[14px] font-medium leading-snug text-charcoal">
+                        <span className="min-w-0 flex-1 text-[14px] font-medium leading-snug text-white">
                           {product.label}
                         </span>
                         <ArrowRight
-                          className="h-4 w-4 shrink-0 text-gold transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none"
+                          className="h-4 w-4 shrink-0 text-[#e4c558] transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transition-none"
                           aria-hidden
                         />
                       </Link>
@@ -520,7 +520,7 @@ export default function CommercialIndustryExplorer() {
                   variant="secondary"
                   showArrow={false}
                   data-track-location="discovery"
-                  className="w-full sm:w-auto"
+                  className="pilot-slate-quote-btn w-full sm:w-auto"
                 >
                   {active.quoteLabel}
                 </PremiumPilotButton>
