@@ -105,7 +105,7 @@ export default function AutoProductHero() {
                 id="pilot-auto-hero-heading"
                 className="mt-3 text-[2.4rem] font-medium leading-[1.05] tracking-[-0.032em] text-charcoal sm:text-[3rem] lg:text-[3.5rem]"
               >
-                Car & Auto Insurance
+                Car & Auto Insurance in Windsor
               </h1>
               <p className="mt-4 max-w-prose text-[15px] leading-relaxed text-secondary sm:text-base lg:text-[1.125rem] lg:leading-[1.65]">
                 Whether you call it car insurance or auto insurance, Ontario

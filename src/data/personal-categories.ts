@@ -58,7 +58,7 @@ export const personalCategories: PersonalCategory[] = [
       {
         label: "Auto Insurance",
         description:
-          "Liability, collision, and comprehensive coverage for your car or truck.",
+          "Ontario car and auto insurance for Windsor-Essex drivers — liability, accident benefits, and optional physical damage.",
         href: "/auto-insurance/",
         cta: "Learn more",
         icon: Car,
@@ -90,7 +90,7 @@ export const personalCategories: PersonalCategory[] = [
       {
         label: "Home Insurance",
         description:
-          "Protection for your property, belongings, and liability.",
+          "Owner-occupied house insurance in Windsor-Essex — dwelling, contents, liability, and living expenses.",
         href: "/home-insurance/",
         cta: "Learn more",
         icon: Home,
