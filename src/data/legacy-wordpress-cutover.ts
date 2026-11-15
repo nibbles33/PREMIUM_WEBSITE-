@@ -29,6 +29,10 @@ export const LEGACY_GONE_PATHS: ReadonlySet<string> = new Set([
   "/pool-and-spa/", // title Pool & Spa; body is mismatched auto content
   "/faqs/", // generic theme insurance-101 FAQ filler (not Premium-specific)
 
+  // WordPress archives with no current equivalent
+  "/author/admin/",
+  "/uncategorized/",
+
   // Theme layout / demo pages
   "/2-columns/",
   "/3-columns/",

@@ -11,6 +11,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Submit a general employment application to Premium Insurance Brokers in Windsor, Ontario.",
   path: "/careers/general-application/",
+  noIndex: true,
 });
 
 const generalAppJsonLd = webPageStructuredData({
