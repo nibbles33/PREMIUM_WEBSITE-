@@ -153,7 +153,7 @@ export const autoFaqItems = [
   {
     question: "Is auto insurance mandatory in Ontario?",
     answer:
-      "Yes. Ontario law requires you to carry automobile insurance before driving on public roads. A standard policy includes minimum third-party liability coverage of $200,000, uninsured automobile coverage, and direct compensation–property damage coverage (with limited opt-out rights), along with statutory accident benefits. For policies entered into on or after July 1, 2026, only medical, rehabilitation, and attendant care benefits are mandatory within accident benefits — other accident benefits such as income replacement are optional. Physical damage coverages like collision and comprehensive are also optional.",
+      "Yes. Ontario law requires you to carry automobile insurance before driving on public roads. A standard policy includes third-party liability, uninsured automobile coverage, and direct compensation–property damage coverage (unless you elect to opt out using OPCF 49), along with statutory accident benefits. For policies entered into on or after July 1, 2026, only medical, rehabilitation, and attendant care benefits are mandatory within accident benefits — other accident benefits such as income replacement are optional. Physical damage coverages like collision and comprehensive are also optional. Your broker can help you review a liability limit that fits how you drive.",
   },
   {
     question:

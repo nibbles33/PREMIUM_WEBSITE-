@@ -45,15 +45,20 @@ export default function PilotAutoPage() {
                   markets for drivers in Windsor and Essex County.
                 </p>
                 <p>
-                  A standard Ontario policy includes third-party liability of
-                  at least $200,000, uninsured automobile coverage, Direct
-                  Compensation – Property Damage unless you sign OPCF 49 to opt
-                  out, and statutory accident benefits. For policies entered
-                  into on or after July 1, 2026, medical, rehabilitation, and
-                  attendant care benefits are the mandatory accident benefits.
-                  Income replacement and other accident benefits are optional.
-                  Collision and comprehensive are optional too, though a lender
+                  A standard Ontario automobile insurance policy includes
+                  third-party liability, uninsured automobile coverage, Direct
+                  Compensation – Property Damage (DCPD), unless you elect to
+                  opt out using OPCF 49, and statutory accident benefits. For
+                  policies entered into on or after July 1, 2026, medical,
+                  rehabilitation, and attendant care benefits are mandatory,
+                  while other accident benefits are optional. Collision and
+                  comprehensive coverage are also optional, although lenders
                   may require them.
+                </p>
+                <p>
+                  At Premium Insurance Brokers, we help Windsor–Essex drivers
+                  review appropriate liability limits and coverage options
+                  based on their individual needs.
                 </p>
                 <p>
                   What you pay depends on the drivers, the vehicle, where it is
