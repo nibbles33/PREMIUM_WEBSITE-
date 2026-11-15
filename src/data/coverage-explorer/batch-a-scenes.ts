@@ -61,7 +61,7 @@ export const BATCH_A_EXPLORER_SCENES: Record<string, BatchAExplorerScene> = {
     src: explorerSrc("electrical-contractors-insurance-explorer.png"),
     visualFamily: "construction",
     zones: [
-      zone("panel-work", "63,28 79,27 80,51 64,52", "glow", "Electrician at panel"),
+      zone("panel-work", "56,26 80,25 81,56 56,56", "glow", "Locked panel"),
       zone("conduit-runs", "48,8 86,10 84,27 50,24", "outline", "Conduit and cable runs"),
       zone("test-tools", "51,47 71,46 73,70 52,71", "glow", "Meters and tool cart"),
       zone("cable-reels", "17,41 31,40 32,63 17,64", "fill", "Cable reels"),
@@ -75,6 +75,8 @@ export const BATCH_A_EXPLORER_SCENES: Record<string, BatchAExplorerScene> = {
       "design-assist-eo": ["drawings"],
       "certificates-additional-insured": [],
     },
+    sceneNote:
+      "The panel door is closed and locked. The scene does not show energized testing or live work.",
   },
   "plumbing-hvac-insurance": {
     src: explorerSrc("plumbing-hvac-insurance-explorer.png"),
@@ -182,6 +184,8 @@ export const BATCH_A_EXPLORER_SCENES: Record<string, BatchAExplorerScene> = {
       "on-hook-bailee": ["customer-suv"],
       "storage-lot-roadside": ["storage-lot"],
     },
+    sceneNote:
+      "The customer SUV is on the wrecker's wheel-lift, with its rear tires on the pavement. The flatbed in the fenced lot is parked and is not carrying that vehicle.",
   },
   "commercial-umbrella-insurance": {
     src: explorerSrc("commercial-umbrella-insurance-explorer.png"),

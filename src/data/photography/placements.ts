@@ -621,7 +621,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
     category: "commercial",
     route: "/electrical-contractors-insurance/",
     src: "/images/photography/batch-a/heroes/electrical-contractors-insurance.webp",
-    alt: "Electrician in a hard hat, safety glasses, gloves, and high-visibility vest working inside an open electrical panel",
+    alt: "Electrician in a hard hat, safety glasses, and gloves installing conduit beside a closed panel, with the disconnect locked out",
     confidence: "HIGH",
     objectPosition: "62% 42%",
   },
@@ -639,7 +639,7 @@ export const photographyPlacements: PhotographyPlacement[] = [
     category: "commercial",
     route: "/excavation-contractors-insurance/",
     src: "/images/photography/batch-a/heroes/excavation-contractors-insurance.webp",
-    alt: "Worker in a hard hat and high-visibility vest tightening a valve on a pipe in an open trench, with an excavator behind",
+    alt: "Two workers in hard hats and high-visibility vests stand behind safety fencing beside a trench box, with the excavator clear of the crew",
     confidence: "HIGH",
   },
   {
