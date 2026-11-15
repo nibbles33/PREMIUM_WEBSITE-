@@ -131,6 +131,13 @@ export type CoverageExplorerVisualConfig = {
   motionRecipesByCoverageId?: CoverageMotionRecipesByCoverageId;
   /** Highlight rendering strategy — defaults to dim-only for interactive-master */
   highlightRenderer?: "dim-only" | "masked-illumination";
+  /**
+   * Draw the active svgZones on top of the scene.
+   * Used when a route has artwork-specific hotspots. Other interactive
+   * masters stay dim-only so shared archetype polygons are not painted
+   * onto unrelated dioramas.
+   */
+  hotspotOverlay?: boolean;
   /** Whether family uses built-in CSS scene geometry */
   cssSceneClass?: string;
   /**

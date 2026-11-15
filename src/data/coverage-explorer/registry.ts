@@ -50,6 +50,7 @@ export const SLUG_TO_VISUAL_FAMILY: Record<string, CoverageVisualFamily> = {
   "apartment-building-insurance": "commercial-building",
   "mixed-use-property-insurance": "commercial-building",
   "equipment-breakdown-insurance": "commercial-building",
+  "commercial-umbrella-insurance": "commercial-building",
   "contractors-insurance": "construction",
   "builders-risk-insurance": "construction",
   "builders-developers-insurance": "construction",

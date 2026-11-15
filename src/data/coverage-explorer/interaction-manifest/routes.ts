@@ -1,5 +1,7 @@
 /** Route → archetype + coverage zone wiring for interactive master dioramas. */
 
+import { BATCH_A_ROUTE_COVERAGE_ZONES } from "@/data/coverage-explorer/batch-a-scenes";
+
 export type RouteManifestEntry = {
   archetype: string;
   coverageZones: Record<string, string[]>;
@@ -407,51 +409,46 @@ export const ROUTE_MANIFEST: Record<string, RouteManifestEntry> = {
       "non-trucking-liability": ["highway-lane", "tractor-cab", "yard-staging"],
     },
   },
-  /** Tow uses fleet scene for orientation only — zones map loosely; copy discloses limitation. */
+  /** Dedicated tow illustration — zones name objects in that file, not the shared fleet master. */
   "tow-truck-insurance": {
     archetype: "fleet-vehicles",
-    coverageZones: {
-      "liability-coverage": ["highway-lane", "lead-truck", "yard-staging"],
-      "physical-damage-coverage": ["lead-truck", "trailing-unit", "cargo-trailer"],
-      "on-hook-bailee": ["cargo-trailer", "yard-staging", "lead-truck"],
-      "storage-lot-roadside": ["yard-staging", "highway-lane", "lead-truck"],
-    },
+    coverageZones: BATCH_A_ROUTE_COVERAGE_ZONES["tow-truck-insurance"],
   },
   "commercial-landlord-insurance": {
     archetype: "commercial-building",
-    coverageZones: {
-      "building-coverage": ["tower-shell", "office-floors", "rooftop-mechanical"],
-      "general-liability": ["ground-perimeter", "lobby-atrium", "parking-garage"],
-      "loss-of-rents": ["tower-shell", "office-floors", "lobby-atrium"],
-      "equipment-breakdown": ["rooftop-mechanical", "office-floors"],
-    },
+    coverageZones: BATCH_A_ROUTE_COVERAGE_ZONES["commercial-landlord-insurance"],
   },
   "apartment-building-insurance": {
     archetype: "commercial-building",
-    coverageZones: {
-      "building-coverage": ["tower-shell", "office-floors", "lobby-atrium"],
-      "general-liability": ["ground-perimeter", "lobby-atrium", "parking-garage"],
-      "loss-of-rents": ["tower-shell", "office-floors"],
-      "equipment-breakdown": ["rooftop-mechanical", "office-floors"],
-    },
+    coverageZones: BATCH_A_ROUTE_COVERAGE_ZONES["apartment-building-insurance"],
   },
   "mixed-use-property-insurance": {
     archetype: "commercial-building",
-    coverageZones: {
-      "building-coverage": ["tower-shell", "office-floors", "lobby-atrium"],
-      "general-liability": ["ground-perimeter", "lobby-atrium", "parking-garage"],
-      "loss-of-rents": ["tower-shell", "office-floors", "lobby-atrium"],
-      "equipment-breakdown": ["rooftop-mechanical", "office-floors"],
-    },
+    coverageZones: BATCH_A_ROUTE_COVERAGE_ZONES["mixed-use-property-insurance"],
   },
   "equipment-breakdown-insurance": {
     archetype: "commercial-building",
-    coverageZones: {
-      "equipment-breakdown": ["rooftop-mechanical", "office-floors"],
-      "spoilage-and-interruption": ["office-floors", "rooftop-mechanical"],
-      "building-systems": ["rooftop-mechanical", "tower-shell", "office-floors"],
-      "production-equipment": ["office-floors", "rooftop-mechanical"],
-    },
+    coverageZones: BATCH_A_ROUTE_COVERAGE_ZONES["equipment-breakdown-insurance"],
+  },
+  "roofing-contractors-insurance": {
+    archetype: "construction-site",
+    coverageZones: BATCH_A_ROUTE_COVERAGE_ZONES["roofing-contractors-insurance"],
+  },
+  "electrical-contractors-insurance": {
+    archetype: "construction-site",
+    coverageZones: BATCH_A_ROUTE_COVERAGE_ZONES["electrical-contractors-insurance"],
+  },
+  "plumbing-hvac-insurance": {
+    archetype: "construction-site",
+    coverageZones: BATCH_A_ROUTE_COVERAGE_ZONES["plumbing-hvac-insurance"],
+  },
+  "excavation-contractors-insurance": {
+    archetype: "construction-site",
+    coverageZones: BATCH_A_ROUTE_COVERAGE_ZONES["excavation-contractors-insurance"],
+  },
+  "commercial-umbrella-insurance": {
+    archetype: "commercial-building",
+    coverageZones: BATCH_A_ROUTE_COVERAGE_ZONES["commercial-umbrella-insurance"],
   },
   "bonding-insurance": {
     archetype: "construction-site",

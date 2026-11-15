@@ -1108,9 +1108,9 @@ export const commercialProductBatchAPages: ProductPageContent[] = [
           "Umbrellas usually will not replace professional liability, pollution, or cyber when those are excluded or never written underlying.",
       },
       {
-        title: "Static coverage section",
+        title: "Illustration is not the policy form",
         description:
-          "This page uses a structured coverage section without an interactive diorama — umbrella products are limit-layer concepts that do not map cleanly to a building or fleet scene.",
+          "The scene shows premises and vehicles that can sit under a commercial umbrella. It does not depict wording, follow-form terms, or an additional limit. The issued form still controls.",
       },
     ],
     relatedLinks: [

@@ -58,6 +58,9 @@ const NO_EXPLORER_ROUTES = [
 const STATE_IMAGE_ROUTES = ["contractors-insurance", "restaurant-insurance"];
 
 function expectedDims(filename) {
+  if (filename.includes("batch-a/explorers/")) {
+    return { width: 1448, height: 1086 };
+  }
   return COMPACT_FILES.has(filename)
     ? { width: 1312, height: 1199 }
     : { width: 1672, height: 941 };

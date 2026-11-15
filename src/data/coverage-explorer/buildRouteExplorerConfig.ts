@@ -21,6 +21,10 @@ import type {
   CoverageVisualFamily,
 } from "@/types/coverage-explorer";
 import { getVisualFamilyForSlug } from "@/data/coverage-explorer/registry";
+import {
+  BATCH_A_EXPLORER_DIMENSIONS,
+  getBatchAExplorerScene,
+} from "@/data/coverage-explorer/batch-a-scenes";
 
 const COMPACT_MASTER_FILES = new Set([
   "auto-insurance-interactive-master.png",
@@ -114,6 +118,31 @@ export function buildRouteExplorerConfig(
     return buildContractorsStateImageConfig(coverageIds);
   }
 
+  const batchAScene = getBatchAExplorerScene(slug);
+  if (batchAScene) {
+    const family: CoverageVisualFamily =
+      getVisualFamilyForSlug(slug) ?? batchAScene.visualFamily;
+
+    return {
+      visualFamily: family,
+      sceneMode: "interactive-master",
+      highlightRenderer: "dim-only",
+      hotspotOverlay: true,
+      sceneSrc: batchAScene.src,
+      sceneDimensions: BATCH_A_EXPLORER_DIMENSIONS,
+      cssSceneClass: slug,
+      zones: [],
+      svgZones: batchAScene.zones,
+      coverageStates: coverageIds.map((coverageId) => ({
+        coverageId,
+        activeZoneIds: batchAScene.coverageZones[coverageId] ?? [],
+        sceneModifier: coverageId,
+        ambient: { dimOpacity: 0.12 },
+      })),
+      ...(batchAScene.sceneNote ? { sceneNote: batchAScene.sceneNote } : {}),
+    };
+  }
+
   const manifest = ROUTE_MANIFEST[slug];
   const sceneSrc = getInteractiveMasterSrc(slug);
   if (!manifest || !sceneSrc) return null;
@@ -168,11 +197,5 @@ export function buildRouteExplorerConfig(
       ...state,
       ambient: { dimOpacity: 0.12 },
     })),
-    ...(slug === "tow-truck-insurance"
-      ? {
-          sceneNote:
-            "Illustration shows a general commercial fleet setting. It is not a depiction of tow-boom or on-hook operations.",
-        }
-      : {}),
   };
 }
