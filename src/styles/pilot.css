@@ -1105,6 +1105,26 @@
   outline-offset: 3px;
 }
 
+/* Outlined quote button on the slate commercial explorer panel */
+.pilot-slate-quote-btn.pilot-btn-secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.78);
+  background: transparent;
+}
+
+.pilot-slate-quote-btn.pilot-btn-secondary:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.pilot-slate-quote-btn.pilot-btn-secondary:focus-visible {
+  color: #fff;
+  border-color: #fff;
+  outline: 2px solid #e4c558;
+  outline-offset: 3px;
+}
+
 /* —— Auto product page —— */
 
 .pilot-auto-hero-visual {

@@ -2,7 +2,7 @@
 
 import CommercialHubCategorySection from "@/components/CommercialHubCategorySection";
 import CommercialHubSectorIndex from "@/components/CommercialHubSectorIndex";
-import CommercialIndustryGrid from "@/components/CommercialIndustryGrid";
+import CommercialIndustryExplorer from "@/components/CommercialIndustryExplorer";
 import Header from "@/components/Header";
 import ProductBrokerStory from "@/components/pilot/product/ProductBrokerStory";
 import ProductConsiderations from "@/components/pilot/product/ProductConsiderations";
@@ -55,7 +55,7 @@ export default function PilotProductPage({ config }: PilotProductPageProps) {
                 categories={config.coverageItems}
               />
             ) : null}
-            <CommercialIndustryGrid />
+            <CommercialIndustryExplorer />
             <CommercialHubSectorIndex />
           </>
         ) : null}
