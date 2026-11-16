@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronLeft } from "lucide-react";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { useQuoteFlow, type SubmitResult } from "@/hooks/useQuoteFlow";
@@ -122,9 +123,9 @@ export default function QuoteFlowEngine({
         <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark">
           {CATEGORY_LABELS[category]}
         </p>
-        <h1 className="mt-3 text-[1.5rem] font-medium leading-[1.15] tracking-[-0.02em] text-charcoal sm:text-[1.75rem]">
+        <h2 className="mt-3 text-[1.5rem] font-medium leading-[1.15] tracking-[-0.02em] text-charcoal sm:text-[1.75rem]">
           Preparing your quote questions…
-        </h1>
+        </h2>
         <p className="mt-2 text-[15px] leading-relaxed text-secondary">
           Just a moment while we load the next step.
         </p>
@@ -158,9 +159,9 @@ export default function QuoteFlowEngine({
       />
 
       <div className="mt-8" style={panelStyle} key={step.id}>
-        <h1 className="text-[1.5rem] font-medium leading-[1.15] tracking-[-0.02em] text-charcoal sm:text-[1.75rem]">
+        <h2 className="text-[1.5rem] font-medium leading-[1.15] tracking-[-0.02em] text-charcoal sm:text-[1.75rem]">
           {step.question}
-        </h1>
+        </h2>
         {!step.mandatory ? (
           <p className="mt-1.5 text-[13px] text-secondary">Optional</p>
         ) : null}
@@ -244,7 +245,22 @@ export default function QuoteFlowEngine({
           />
         </div>
 
-        <div className="mt-8 flex items-center justify-between gap-3">
+        {step.id === "name" ||
+        step.id === "phone" ||
+        step.id === "email" ||
+        step.id === "preferredContactMethod" ? (
+          <p className="mt-5 text-[12px] leading-relaxed text-secondary">
+            Used to prepare your quote and follow up.{" "}
+            <Link
+              href="/privacy-policy/"
+              className="font-medium text-gold-dark underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+            >
+              Privacy policy
+            </Link>
+          </p>
+        ) : null}
+
+        <div className="mt-4 flex items-center justify-between gap-3">
           <button
             type="button"
             onClick={flow.goBack}

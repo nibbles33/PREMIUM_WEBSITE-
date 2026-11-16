@@ -1,9 +1,10 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState, type ReactNode } from "react";
 import { useSearchParams } from "next/navigation";
 import QuoteCategoryPicker from "@/components/quote/QuoteCategoryPicker";
 import QuoteFlowEngine from "@/components/quote/QuoteFlowEngine";
+import QuoteLineSwitcher from "@/components/quote/QuoteLineSwitcher";
 import {
   CATEGORY_FROM_TYPE,
   TYPE_FROM_CATEGORY,
@@ -28,7 +29,11 @@ function parseParams(searchParams: URLSearchParams): {
   return { category, urlParams };
 }
 
-export default function QuoteFlowClient() {
+type QuoteFlowClientProps = {
+  trust: ReactNode;
+};
+
+export default function QuoteFlowClient({ trust }: QuoteFlowClientProps) {
   const searchParams = useSearchParams();
   const parsed = useMemo(() => parseParams(searchParams), [searchParams]);
   const [picked, setPicked] = useState<QuoteCategory | null>(null);
@@ -40,27 +45,40 @@ export default function QuoteFlowClient() {
     const type = TYPE_FROM_CATEGORY[cat];
     const url = new URL(window.location.href);
     url.searchParams.set("type", type);
+    if (cat !== "home") url.searchParams.delete("homeType");
+    if (cat !== "business") {
+      url.searchParams.delete("businessType");
+      url.searchParams.delete("size");
+    }
+    if (cat !== "auto") {
+      url.searchParams.delete("vehicleType");
+      url.searchParams.delete("vehicleBodyType");
+    }
     window.history.replaceState({}, "", url.toString());
   }, []);
 
-  if (!category) {
-    return (
-      <div
-        className="rounded-[18px] border border-border bg-white/95 p-5 shadow-[0_12px_40px_rgba(32,39,40,0.08)] pib-clarity-mask sm:p-8"
-        data-clarity-mask="true"
-      >
-        <QuoteCategoryPicker onSelect={onPick} />
-      </div>
-    );
-  }
-
   return (
-    <div className="pib-clarity-mask" data-clarity-mask="true">
-      <QuoteFlowEngine
-        key={category}
-        category={category}
-        urlParams={parsed.urlParams}
-      />
+    <div className="grid items-start gap-5 lg:grid-cols-[minmax(220px,280px)_minmax(0,1fr)] lg:gap-8">
+      <div className="order-1 min-w-0 lg:order-2">
+        {category ? (
+          <>
+            <QuoteLineSwitcher category={category} onSelect={onPick} />
+            <QuoteFlowEngine
+              key={category}
+              category={category}
+              urlParams={parsed.urlParams}
+            />
+          </>
+        ) : (
+          <div
+            className="rounded-[18px] border border-border bg-white p-4 pib-clarity-mask sm:p-5"
+            data-clarity-mask="true"
+          >
+            <QuoteCategoryPicker onSelect={onPick} />
+          </div>
+        )}
+      </div>
+      <div className="order-2 lg:order-1">{trust}</div>
     </div>
   );
 }
