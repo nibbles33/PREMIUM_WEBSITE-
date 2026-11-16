@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import OfficeMap from "@/components/contact/OfficeMap";
 import Header from "@/components/Header";
 import JsonLd from "@/components/seo/JsonLd";
 import {
@@ -76,34 +76,11 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
       <Header />
       <main>
         <section
-          className="flex flex-col border-b border-border bg-[#E7E0D2]"
+          className="border-b border-border bg-[#E7E0D2]"
           aria-labelledby="contact-hero-heading"
         >
-          <figure className="relative order-3 h-64 sm:h-72 lg:order-1 lg:h-80">
-                <Image
-                  src="/images/contact/dougall-office-map.svg"
-                  alt="Map of the streets around 3063 Dougall Ave, Windsor. The office is marked on Dougall Avenue."
-                  fill
-                  priority
-                  unoptimized
-                  sizes="100vw"
-                  className="object-cover object-center"
-                />
-            <figcaption className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-[11px] text-charcoal/80">
-              Map data{" "}
-              <a
-                href="https://www.openstreetmap.org/copyright"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2 hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
-              >
-                © OpenStreetMap
-              </a>
-            </figcaption>
-          </figure>
-
-          <div className="order-2 mx-auto grid w-full max-w-6xl gap-4 px-4 py-5 sm:px-6 lg:-mt-16 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-start lg:gap-5 lg:px-8 lg:pb-8 xl:max-w-7xl">
-              <article>
+          <div className="mx-auto grid w-full max-w-6xl gap-4 px-4 py-4 sm:px-6 lg:grid-cols-2 lg:items-stretch lg:gap-5 lg:px-8 lg:py-6 xl:max-w-7xl">
+              <article className="order-1">
                 <div className="rounded-[18px] border border-border bg-white px-5 py-5 shadow-[0_16px_40px_rgba(32,39,40,0.14)] sm:px-6">
                   <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark">
                     Windsor-Essex office
@@ -118,7 +95,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     {hero.lead}
                   </p>
 
-                  <ul className="mt-4 space-y-3 border-t border-border/80 pt-4">
+                  <ul className="mt-3 space-y-2 border-t border-border/80 pt-3">
                     <li className="flex gap-3">
                       <MapPin
                         className="mt-0.5 h-5 w-5 shrink-0 text-gold-dark"
@@ -174,13 +151,13 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     </li>
                   </ul>
 
-                  <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                  <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
                     <a
                       href={DIRECTIONS_HREF}
                       target="_blank"
                       rel="noopener noreferrer"
                       data-track-location="contact"
-                      className="btn-primary btn-primary-gradient inline-flex h-12 min-h-11 items-center justify-center rounded-md px-5 text-[15px] font-medium text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+                      className="btn-primary btn-primary-gradient inline-flex h-12 min-h-11 scroll-mb-72 items-center justify-center rounded-md px-5 text-[15px] font-medium text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal lg:scroll-mb-32"
                     >
                       Get directions to 3063 Dougall Ave
                       <span aria-hidden className="ml-2">
@@ -199,7 +176,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                 </div>
               </article>
 
-            <div>
+            <OfficeMap />
+
+            <div className="order-2 lg:order-3 lg:col-span-2">
               <h2 className="mb-3 text-xl font-medium tracking-tight text-charcoal sm:text-[1.35rem]">
                 {hero.formHeading}
               </h2>
