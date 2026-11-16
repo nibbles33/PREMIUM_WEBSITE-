@@ -160,6 +160,8 @@ export default function AnalyticsRoot() {
 
       if (
         href.includes("share.google") ||
+        href.includes("google.com/maps") ||
+        href.includes("maps.google.com") ||
         href.includes("facebook.com") ||
         href.includes("instagram.com")
       ) {
@@ -167,8 +169,10 @@ export default function AnalyticsRoot() {
           ? "facebook"
           : href.includes("instagram.com")
             ? "instagram"
-            : "google_business";
-        track("external_profile_click", { destination });
+            : href.includes("google.com/maps") || href.includes("maps.google.com")
+              ? "google_maps"
+              : "google_business";
+        track("external_profile_click", { destination, location });
       }
 
       if (
