@@ -1,10 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import { HOMEPAGE_AUTHORITY } from "@/data/homepage-authority";
-import type {
-  GooglePlaceRatingResult,
-  GooglePlaceReview,
-} from "@/lib/google/places";
+import { useGooglePlaceRating } from "@/components/pilot/GooglePlaceRatingProvider";
+import type { GooglePlaceReview } from "@/lib/google/place-reviews";
 
 function Stars({ rating, size = "md" }: { rating: number; size?: "md" | "lg" }) {
   const full = Math.floor(rating);
@@ -28,10 +28,6 @@ function Stars({ rating, size = "md" }: { rating: number; size?: "md" | "lg" }) 
     </span>
   );
 }
-
-type Props = {
-  ratingResult: GooglePlaceRatingResult;
-};
 
 function relevanceNotice(count: number): string {
   if (count === 1) {
@@ -100,7 +96,8 @@ function ReviewerIdentity({ review }: { review: GooglePlaceReview }) {
  * Live rating/reviews when Places succeeds; polished customer fallback otherwise.
  * Never fabricates rating, count, or review text. Never exposes API/dev messaging.
  */
-export default function PilotGoogleReviews({ ratingResult }: Props) {
+export default function PilotGoogleReviews() {
+  const ratingResult = useGooglePlaceRating();
   const { google } = HOMEPAGE_AUTHORITY;
   const isLive = ratingResult.status === "live";
   const reviews = isLive ? ratingResult.reviews : [];

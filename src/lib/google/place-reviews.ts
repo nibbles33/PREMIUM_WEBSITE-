@@ -19,7 +19,6 @@ export type GooglePlaceRatingLive = {
   rating: number;
   reviewCount: number;
   reviews: GooglePlaceReview[];
-  fetchedAt: string;
 };
 
 export type GooglePlaceRatingUnavailable = {
@@ -157,15 +156,9 @@ export function parseGooglePlaceDetails(data: unknown): ParsedPlaceDetails {
 }
 
 /**
- * A production refresh must throw so ISR can keep the last good prerender.
- * The production build and local dev have no prior page to preserve, so they
- * use the no-number fallback and the build can finish while Places is down.
+ * A failed Places request always uses the no-number fallback.
+ * Review content from an earlier response is not kept.
  */
-export function shouldUsePlacesFallback(env: {
-  NEXT_PHASE?: string;
-  NODE_ENV?: string;
-}): boolean {
-  return (
-    env.NEXT_PHASE === "phase-production-build" || env.NODE_ENV !== "production"
-  );
+export function shouldUsePlacesFallback(): boolean {
+  return true;
 }

@@ -1,5 +1,10 @@
 import assert from "node:assert/strict";
 import {
+  isSameOriginPlaceRatingRequest,
+  resetPlaceRatingSlots,
+  takePlaceRatingSlot,
+} from "../src/lib/google/place-rating-guard.ts";
+import {
   httpsGoogleUrl,
   parseGooglePlaceDetails,
   shouldUsePlacesFallback,
@@ -103,14 +108,22 @@ assert.equal(
 );
 assert.equal(httpsGoogleUrl("https://user:pass@www.google.com/maps"), undefined);
 
+assert.equal(shouldUsePlacesFallback(), true);
+
+resetPlaceRatingSlots();
+for (let i = 0; i < 12; i += 1) {
+  assert.equal(takePlaceRatingSlot("203.0.113.10", 1_700_000_000_000), true);
+}
+assert.equal(takePlaceRatingSlot("203.0.113.10", 1_700_000_000_000), false);
+assert.equal(takePlaceRatingSlot("203.0.113.11", 1_700_000_000_000), true);
 assert.equal(
-  shouldUsePlacesFallback({
-    NEXT_PHASE: "phase-production-build",
-    NODE_ENV: "production",
-  }),
+  isSameOriginPlaceRatingRequest(new Headers({ "sec-fetch-site": "same-origin" })),
   true,
 );
-assert.equal(shouldUsePlacesFallback({ NODE_ENV: "development" }), true);
-assert.equal(shouldUsePlacesFallback({ NODE_ENV: "production" }), false);
+assert.equal(
+  isSameOriginPlaceRatingRequest(new Headers({ "sec-fetch-site": "cross-site" })),
+  false,
+);
+assert.equal(isSameOriginPlaceRatingRequest(new Headers()), false);
 
 console.log("google place review parser: ok");

@@ -1,11 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import CountUpStat from "@/components/CountUpStat";
 import { HOMEPAGE_AUTHORITY } from "@/data/homepage-authority";
-import type { GooglePlaceRatingResult } from "@/lib/google/places";
-
-type Props = {
-  googleRating: GooglePlaceRatingResult;
-};
+import { useGooglePlaceRating } from "@/components/pilot/GooglePlaceRatingProvider";
 
 const VALUE_CLASS =
   "text-[1.95rem] font-medium leading-none tracking-[-0.03em] text-charcoal sm:text-[2.25rem] lg:text-[2.5rem]";
@@ -23,7 +21,8 @@ const LABEL_CLASS =
  * Note: "50+ Insurance Carriers" is intentionally NOT shown until owner confirms
  * the claim (repo currently lists 43 unique partners in allPartners).
  */
-export default function PilotAuthorityStrip({ googleRating }: Props) {
+export default function PilotAuthorityStrip() {
+  const googleRating = useGooglePlaceRating();
   const { clients, combinedExperience, awards, google } = HOMEPAGE_AUTHORITY;
   const isLive = googleRating.status === "live";
 

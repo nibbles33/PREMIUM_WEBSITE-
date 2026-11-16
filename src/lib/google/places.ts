@@ -1,19 +1,16 @@
 /**
- * Server-side Google Places (New) fetch for homepage social proof.
+ * Server-side Google Places (New) request for homepage social proof.
  * The API key stays on the server and is never sent to the browser.
  *
- * Places terms do not permit a second stored copy of review content.
- * The homepage segment prerender (six hours) is the only stored copy.
- * This request uses Node's HTTP client so Next does not also write the
- * JSON body into the Data Cache. A failed production refresh throws so
- * that prerender stays in place.
+ * Places terms do not permit storing review content. This request is made
+ * when a visitor loads the homepage and the result is not written to a
+ * cache, database, or log. A failure returns the no-number fallback.
  */
 
 import https from "node:https";
 import { HOMEPAGE_AUTHORITY } from "@/data/homepage-authority";
 import {
   parseGooglePlaceDetails,
-  shouldUsePlacesFallback,
   type GooglePlaceRatingLive,
   type GooglePlaceRatingResult,
 } from "@/lib/google/place-reviews";
@@ -26,8 +23,10 @@ export type {
 } from "@/lib/google/place-reviews";
 
 const PLACE_ID = HOMEPAGE_AUTHORITY.google.placeId;
-/** rating + count always; reviews only when API returns authentic text */
+/** rating + count, plus reviews when the API returns them. */
 const FIELD_MASK = "rating,userRatingCount,reviews";
+const REQUEST_TIMEOUT_MS = 8_000;
+const MAX_RESPONSE_CHARS = 200_000;
 
 class PlacesRefreshError extends Error {
   constructor() {
@@ -41,6 +40,12 @@ function requestPlaceDetails(
   apiKey: string,
 ): Promise<{ status: number; body: string }> {
   return new Promise((resolve, reject) => {
+    let settled = false;
+    const fail = (error: Error) => {
+      if (settled) return;
+      settled = true;
+      reject(error);
+    };
     const req = https.get(
       url,
       {
@@ -51,8 +56,18 @@ function requestPlaceDetails(
       },
       (res) => {
         const chunks: Buffer[] = [];
-        res.on("data", (chunk: Buffer) => chunks.push(chunk));
+        let size = 0;
+        res.on("data", (chunk: Buffer) => {
+          size += chunk.length;
+          if (size > MAX_RESPONSE_CHARS) {
+            req.destroy(new Error("response_too_large"));
+            return;
+          }
+          chunks.push(chunk);
+        });
         res.on("end", () => {
+          if (settled) return;
+          settled = true;
           resolve({
             status: res.statusCode ?? 0,
             body: Buffer.concat(chunks).toString("utf8"),
@@ -60,10 +75,10 @@ function requestPlaceDetails(
         });
       },
     );
-    req.setTimeout(15_000, () => {
+    req.setTimeout(REQUEST_TIMEOUT_MS, () => {
       req.destroy(new Error("timeout"));
     });
-    req.on("error", reject);
+    req.on("error", fail);
   });
 }
 
@@ -104,13 +119,12 @@ async function loadGooglePlaceDetails(
     rating: parsed.rating,
     reviewCount: parsed.reviewCount,
     reviews: parsed.reviews,
-    fetchedAt: new Date().toISOString(),
   };
 }
 
 /**
- * Missing key and a failed first build return the non-numeric fallback.
- * A production refresh failure throws so the last prerender stays up.
+ * Missing key and any failed request return the non-numeric fallback.
+ * The payload is not retained after this function returns.
  */
 export async function fetchGooglePlaceRating(): Promise<GooglePlaceRatingResult> {
   const apiKey = process.env.GOOGLE_PLACES_API_KEY?.trim();
@@ -125,14 +139,6 @@ export async function fetchGooglePlaceRating(): Promise<GooglePlaceRatingResult>
       "[google-places] Fetch failed",
       err instanceof Error ? err.name : "Error",
     );
-    if (
-      shouldUsePlacesFallback({
-        NEXT_PHASE: process.env.NEXT_PHASE,
-        NODE_ENV: process.env.NODE_ENV,
-      })
-    ) {
-      return { status: "unavailable", reason: "request_failed" };
-    }
-    throw new PlacesRefreshError();
+    return { status: "unavailable", reason: "request_failed" };
   }
 }

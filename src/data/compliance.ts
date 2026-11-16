@@ -170,6 +170,11 @@ export const complianceLinks = [
     href: "/privacy-policy/",
     internal: true,
   },
+  {
+    label: "Terms of Use",
+    href: "/terms-of-use/",
+    internal: true,
+  },
 ] as const;
 
 /** Broker Compensation explanatory copy transcribed from premiumib.com/compliance/. */

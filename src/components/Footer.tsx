@@ -38,6 +38,7 @@ const resourceLinks = [
   { label: "Newsletter", href: "/newsletter/" },
   { label: "Compliance", href: "/compliance/" },
   { label: "Privacy Policy", href: "/privacy-policy/" },
+  { label: "Terms of Use", href: "/terms-of-use/" },
 ] as const;
 
 const companyLinks = [
@@ -221,6 +222,15 @@ export default function Footer() {
               className="transition-colors hover:text-gold"
             >
               Privacy Policy
+            </Link>
+            <span className="hidden text-white/25 sm:inline" aria-hidden>
+              |
+            </span>
+            <Link
+              href="/terms-of-use/"
+              className="transition-colors hover:text-gold"
+            >
+              Terms of Use
             </Link>
           </p>
           <p className="sm:text-right">

@@ -4,9 +4,6 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildPageMetadata } from "@/lib/seo";
 import { homepageStructuredData } from "@/lib/seo/structured-data";
 
-/** Six-hour homepage prerender. Must be a literal for the segment config. */
-export const revalidate = 21600;
-
 export const metadata: Metadata = buildPageMetadata({
   title: "Insurance Brokers in Windsor, Ontario | Premium Insurance Brokers",
   description:
