@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Header from "@/components/Header";
-import PageHeroPhoto from "@/components/PageHeroPhoto";
-import RevealOnScroll from "@/components/RevealOnScroll";
 import JsonLd from "@/components/seo/JsonLd";
-import { getPageHeroPhotography } from "@/data/photography";
 import {
   normalizeContactInquiry,
   type ContactInquiry,
@@ -22,6 +20,9 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const QUOTE_HREF = "/get-a-quote/";
+/** Outbound Google Maps link. Not a billed Maps API request. */
+const DIRECTIONS_HREF =
+  "https://www.google.com/maps/dir/?api=1&destination=3063+Dougall+Ave,+Windsor,+ON+N9E+1S3";
 
 type ContactPageProps = {
   searchParams: Promise<{ intent?: string; inquiry?: string }>;
@@ -34,8 +35,6 @@ function resolveContactHero(intent?: string, inquiry: ContactInquiry = "general"
       lead:
         "Tell us a bit about what you are exploring — Premium will coordinate your connection with a licensed life-insurance professional through Oracle/head office.",
       formHeading: "Life insurance inquiry",
-      ctaHeading: "Prefer to speak with someone first?",
-      ctaLead: "Call our Windsor-Essex office and we will help start the life inquiry process.",
       hideQuoteCta: true,
     };
   }
@@ -45,8 +44,6 @@ function resolveContactHero(intent?: string, inquiry: ContactInquiry = "general"
       lead:
         "Tell us whether you represent an employer, association, or member — Premium will coordinate specialist access through Oracle/head office.",
       formHeading: "Group home & auto inquiry",
-      ctaHeading: "Prefer to speak with someone first?",
-      ctaLead: "Call our Windsor-Essex office and we will help start the group program conversation.",
       hideQuoteCta: true,
     };
   }
@@ -54,20 +51,16 @@ function resolveContactHero(intent?: string, inquiry: ContactInquiry = "general"
     return {
       title: "Talk to a Broker",
       lead:
-        "Reach a licensed broker in Windsor-Essex — by phone, email, or the form below.",
+        "Reach a licensed broker in Windsor-Essex — by phone, email, or the form.",
       formHeading: "Send a message to our team",
-      ctaHeading: "Need a quote instead?",
-      ctaLead: "Start a quote online or call us during business hours.",
       hideQuoteCta: false,
     };
   }
   return {
     title: "Contact Us",
     lead:
-      "Reach a real broker in Windsor-Essex — by phone, email, or the form below.",
+      "Reach a real broker in Windsor-Essex — by phone, email, or the form.",
     formHeading: "Send a message",
-    ctaHeading: "Prefer to talk it through?",
-    ctaLead: "Get a quote online or speak with a broker who knows Windsor-Essex.",
     hideQuoteCta: false,
   };
 }
@@ -76,7 +69,6 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
   const { intent, inquiry: rawInquiry } = await searchParams;
   const inquiry = normalizeContactInquiry(rawInquiry);
   const hero = resolveContactHero(intent, inquiry);
-  const heroPhoto = getPageHeroPhotography("contact");
 
   return (
     <>
@@ -84,175 +76,135 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
       <Header />
       <main>
         <section
-          className="border-b border-border bg-offwhite"
+          className="flex flex-col border-b border-border bg-[#E7E0D2]"
           aria-labelledby="contact-hero-heading"
         >
-          <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20 xl:max-w-7xl">
-            <RevealOnScroll>
-              <div
-                className={
-                  heroPhoto
-                    ? "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12"
-                    : undefined
-                }
+          <figure className="relative order-3 h-64 sm:h-72 lg:order-1 lg:h-80">
+                <Image
+                  src="/images/contact/dougall-office-map.svg"
+                  alt="Map of the streets around 3063 Dougall Ave, Windsor. The office is marked on Dougall Avenue."
+                  fill
+                  priority
+                  unoptimized
+                  sizes="100vw"
+                  className="object-cover object-center"
+                />
+            <figcaption className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-[11px] text-charcoal/80">
+              Map data{" "}
+              <a
+                href="https://www.openstreetmap.org/copyright"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               >
-                <div className="max-w-2xl">
+                © OpenStreetMap
+              </a>
+            </figcaption>
+          </figure>
+
+          <div className="order-2 mx-auto grid w-full max-w-6xl gap-4 px-4 py-5 sm:px-6 lg:-mt-16 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-start lg:gap-5 lg:px-8 lg:pb-8 xl:max-w-7xl">
+              <article>
+                <div className="rounded-[18px] border border-border bg-white px-5 py-5 shadow-[0_16px_40px_rgba(32,39,40,0.14)] sm:px-6">
+                  <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-dark">
+                    Windsor-Essex office
+                  </p>
                   <h1
                     id="contact-hero-heading"
-                    className="text-[2.25rem] font-medium leading-[1.08] tracking-[-0.02em] text-charcoal sm:text-5xl sm:leading-[1.06]"
+                    className="mt-2 text-[1.85rem] font-medium leading-[1.08] tracking-[-0.03em] text-charcoal sm:text-[2.15rem]"
                   >
                     {hero.title}
                   </h1>
-                  <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-secondary sm:mt-5 sm:text-base">
+                  <p className="mt-2 max-w-md text-[14px] leading-relaxed text-secondary sm:text-[15px]">
                     {hero.lead}
                   </p>
-                </div>
-                {heroPhoto ? <PageHeroPhoto placement={heroPhoto} priority /> : null}
-              </div>
-            </RevealOnScroll>
-          </div>
-        </section>
 
-        <section className="border-b border-border bg-white py-14 sm:py-16 lg:py-20">
-          <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12 lg:px-8 xl:max-w-7xl">
-            <RevealOnScroll>
-              <div>
-                <h2 className="text-xl font-medium tracking-tight text-charcoal sm:text-2xl">
-                  Our office
-                </h2>
-                <ul className="mt-6 space-y-5">
-                  <li className="flex gap-3">
-                    <MapPin
-                      className="mt-0.5 h-5 w-5 shrink-0 text-gold-dark"
-                      strokeWidth={1.5}
-                      aria-hidden
-                    />
-                    <div>
-                      <p className="text-[13px] font-medium uppercase tracking-[0.08em] text-secondary">
-                        Address
-                      </p>
-                      <p className="mt-1 text-[15px] leading-relaxed text-charcoal">
-                        3063 Dougall Ave
-                        <br />
-                        Windsor, ON N9E 1S3
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <Phone
-                      className="mt-0.5 h-5 w-5 shrink-0 text-gold-dark"
-                      strokeWidth={1.5}
-                      aria-hidden
-                    />
-                    <div>
-                      <p className="text-[13px] font-medium uppercase tracking-[0.08em] text-secondary">
-                        Phone
-                      </p>
-                      <a
-                        href="tel:+12267826000"
-                        className="mt-1 inline-block text-[15px] font-medium text-charcoal transition-colors hover:text-gold-dark"
-                      >
-                        226-782-6000
-                      </a>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <Mail
-                      className="mt-0.5 h-5 w-5 shrink-0 text-gold-dark"
-                      strokeWidth={1.5}
-                      aria-hidden
-                    />
-                    <div>
-                      <p className="text-[13px] font-medium uppercase tracking-[0.08em] text-secondary">
-                        Email
-                      </p>
-                      <a
-                        href="mailto:info@premiumib.com"
-                        className="mt-1 inline-block text-[15px] font-medium text-charcoal transition-colors hover:text-gold-dark"
-                      >
-                        info@premiumib.com
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </RevealOnScroll>
-
-            <RevealOnScroll>
-              <div>
-                <h2 className="mb-5 text-xl font-medium tracking-tight text-charcoal sm:text-2xl">
-                  {hero.formHeading}
-                </h2>
-                <ContactForm inquiry={inquiry} />
-              </div>
-            </RevealOnScroll>
-          </div>
-        </section>
-
-        <section
-          className="bg-charcoal py-14 sm:py-16 lg:py-20"
-          aria-labelledby="contact-cta-heading"
-        >
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
-            <RevealOnScroll>
-              <div className="mx-auto max-w-2xl text-center">
-                <h2
-                  id="contact-cta-heading"
-                  className="text-2xl font-medium tracking-[-0.02em] text-white sm:text-3xl"
-                >
-                  {hero.ctaHeading}
-                </h2>
-                <p className="mt-3 text-[15px] leading-relaxed text-white/65 sm:text-base">
-                  {hero.ctaLead}
-                </p>
-                <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
-                  {hero.hideQuoteCta ? (
-                    <a
-                      href="tel:+12267826000"
-                      className="btn-primary btn-primary-gradient group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:min-w-[200px]"
-                    >
-                      Call 226-782-6000
-                      <span
+                  <ul className="mt-4 space-y-3 border-t border-border/80 pt-4">
+                    <li className="flex gap-3">
+                      <MapPin
+                        className="mt-0.5 h-5 w-5 shrink-0 text-gold-dark"
+                        strokeWidth={1.5}
                         aria-hidden
-                        className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
-                      >
+                      />
+                      <div>
+                        <p className="text-[12px] font-medium uppercase tracking-[0.08em] text-secondary">
+                          Address
+                        </p>
+                        <p className="mt-0.5 text-[15px] leading-snug text-charcoal">
+                          3063 Dougall Ave
+                          <br />
+                          Windsor, ON N9E 1S3
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex gap-3">
+                      <Phone
+                        className="mt-0.5 h-5 w-5 shrink-0 text-gold-dark"
+                        strokeWidth={1.5}
+                        aria-hidden
+                      />
+                      <div>
+                        <p className="text-[12px] font-medium uppercase tracking-[0.08em] text-secondary">
+                          Phone
+                        </p>
+                        <a
+                          href="tel:+12267826000"
+                          className="mt-0.5 inline-flex min-h-11 items-center text-[15px] font-medium text-charcoal hover:text-gold-dark"
+                        >
+                          226-782-6000
+                        </a>
+                      </div>
+                    </li>
+                    <li className="flex gap-3">
+                      <Mail
+                        className="mt-0.5 h-5 w-5 shrink-0 text-gold-dark"
+                        strokeWidth={1.5}
+                        aria-hidden
+                      />
+                      <div>
+                        <p className="text-[12px] font-medium uppercase tracking-[0.08em] text-secondary">
+                          Email
+                        </p>
+                        <a
+                          href="mailto:info@premiumib.com"
+                          className="mt-0.5 inline-flex min-h-11 items-center text-[15px] font-medium text-charcoal hover:text-gold-dark"
+                        >
+                          info@premiumib.com
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                    <a
+                      href={DIRECTIONS_HREF}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-track-location="contact"
+                      className="btn-primary btn-primary-gradient inline-flex h-12 min-h-11 items-center justify-center rounded-md px-5 text-[15px] font-medium text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+                    >
+                      Get directions to 3063 Dougall Ave
+                      <span aria-hidden className="ml-2">
                         →
                       </span>
                     </a>
-                  ) : (
-                    <>
+                    {hero.hideQuoteCta ? null : (
                       <Link
                         href={QUOTE_HREF}
-                        className="btn-primary btn-primary-gradient group inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md px-8 text-[15px] font-medium text-charcoal sm:w-auto sm:min-w-[200px]"
+                        className="inline-flex h-12 min-h-11 items-center justify-center rounded-md border border-border px-5 text-[15px] font-medium text-charcoal transition-colors hover:border-gold-dark hover:text-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
                       >
-                        Get a Quote
-                        <span
-                          aria-hidden
-                          className="ml-2 inline-block transition-transform duration-200 ease-out group-hover:translate-x-[3px]"
-                        >
-                          →
-                        </span>
+                        Get a quote
                       </Link>
-                      {intent === "broker" ? (
-                        <a
-                          href="tel:+12267826000"
-                          className="inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md border border-white/25 bg-transparent px-6 text-[15px] font-medium text-white transition-colors hover:border-gold hover:text-gold sm:w-auto sm:min-w-[200px]"
-                        >
-                          Call 226-782-6000
-                        </a>
-                      ) : (
-                        <Link
-                          href="/contact/?intent=broker"
-                          className="inline-flex h-[52px] w-full min-w-[44px] items-center justify-center rounded-md border border-white/25 bg-transparent px-6 text-[15px] font-medium text-white transition-colors hover:border-gold hover:text-gold sm:w-auto sm:min-w-[200px]"
-                        >
-                          Talk to a Broker
-                        </Link>
-                      )}
-                    </>
-                  )}
+                    )}
+                  </div>
                 </div>
-              </div>
-            </RevealOnScroll>
+              </article>
+
+            <div>
+              <h2 className="mb-3 text-xl font-medium tracking-tight text-charcoal sm:text-[1.35rem]">
+                {hero.formHeading}
+              </h2>
+              <ContactForm inquiry={inquiry} />
+            </div>
           </div>
         </section>
       </main>
