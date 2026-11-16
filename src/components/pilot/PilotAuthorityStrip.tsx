@@ -1,11 +1,6 @@
 import Link from "next/link";
 import CountUpStat from "@/components/CountUpStat";
 import { HOMEPAGE_AUTHORITY } from "@/data/homepage-authority";
-import type { GooglePlaceRatingResult } from "@/lib/google/places";
-
-type Props = {
-  googleRating: GooglePlaceRatingResult;
-};
 
 const VALUE_CLASS =
   "text-[1.95rem] font-medium leading-none tracking-[-0.03em] text-charcoal sm:text-[2.25rem] lg:text-[2.5rem]";
@@ -14,18 +9,14 @@ const LABEL_CLASS =
 
 /**
  * Editorial authority band under the hero.
- * Continuous proof strip — Google live proof replaces the oversized Oracle cell.
- * Oracle RMS remains in hero / Windsor story / company identity.
+ * The Google cell links to the Business Profile. It does not show a rating
+ * or review count. Oracle RMS remains in the hero, Windsor story, and
+ * company identity.
  *
- * Live Google rating uses the same typographic prominence as 2,700+ / 31+ / 9.
- * Fallback never presents baseline 4.7 / 82 as live data.
- *
- * Note: "50+ Insurance Carriers" is intentionally NOT shown until owner confirms
- * the claim (repo currently lists 43 unique partners in allPartners).
+ * Note: a carrier count is intentionally not shown.
  */
-export default function PilotAuthorityStrip({ googleRating }: Props) {
-  const { clients, combinedExperience, awards, google } = HOMEPAGE_AUTHORITY;
-  const isLive = googleRating.status === "live";
+export default function PilotAuthorityStrip() {
+  const { clients, google } = HOMEPAGE_AUTHORITY;
 
   return (
     <section
@@ -64,37 +55,16 @@ export default function PilotAuthorityStrip({ googleRating }: Props) {
           </li>
 
           <li className="flex min-h-[118px] flex-col justify-center border-l border-t border-border/70 px-3 py-5 sm:min-h-[136px] sm:px-5 sm:py-7 lg:min-h-[148px] lg:border-t-0 lg:px-7">
-            {isLive ? (
-              <>
-                <p className={`flex items-baseline gap-2 ${VALUE_CLASS}`}>
-                  <span>{googleRating.rating.toFixed(1)}</span>
-                  <span
-                    className="text-[1.15rem] leading-none text-[#E2A800] sm:text-[1.35rem] lg:text-[1.5rem]"
-                    aria-hidden
-                  >
-                    ★
-                  </span>
-                </p>
-                <p className={LABEL_CLASS}>
-                  {googleRating.reviewCount.toLocaleString("en-CA")} Google
-                  reviews
-                </p>
-              </>
-            ) : (
-              <>
-                {/* Graceful fallback — never show baseline 4.7 / 82 as live */}
-                <p className={VALUE_CLASS}>Google</p>
-                <p className={LABEL_CLASS}>Client reviews</p>
-                <Link
-                  href={google.shareUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 text-[12px] font-medium text-gold-dark underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-[13px]"
-                >
-                  Read on Google →
-                </Link>
-              </>
-            )}
+            <p className={VALUE_CLASS}>Google</p>
+            <p className={LABEL_CLASS}>Client reviews</p>
+            <Link
+              href={google.shareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 text-[12px] font-medium text-gold-dark underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:text-[13px]"
+            >
+              Read on Google →
+            </Link>
           </li>
         </ul>
       </div>

@@ -28,12 +28,9 @@ export const HOMEPAGE_AUTHORITY = {
   google: {
     businessName:
       "Premium Insurance Brokers a division of ORACLE RMS",
-    placeId: "ChIJaVZQQZ0tO4gRXgDIvYqSQYs",
     address: "3063 Dougall Ave, Windsor, ON N9E 1S3, Canada",
+    /** Verified Google Business Profile. Reviews are read on Google, not embedded. */
     shareUrl: "https://share.google/TOTb2uanZ8DS8NMRQ",
-    /** Owner-observed baseline for validation only — never display as live when API fails */
-    baselineRating: 4.7,
-    baselineReviewCount: 82,
   },
 } as const;
 
