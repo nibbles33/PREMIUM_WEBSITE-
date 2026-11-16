@@ -33,6 +33,7 @@ export const resourcesNavGroups: NavGroup[] = [
     links: [
       { label: "Compliance", href: "/compliance/" },
       { label: "Privacy Policy", href: "/privacy-policy/" },
+      { label: "Terms of Use", href: "/terms-of-use/" },
     ],
   },
   {

@@ -19,7 +19,7 @@ import { collectionPageStructuredData } from "@/lib/seo/structured-data";
 export const metadata: Metadata = buildPageMetadata({
   title: "Resources | Premium Insurance Brokers",
   description:
-    "Insurance resources for Premium Insurance Brokers clients — claims guidance, payments, compliance, privacy, newsletter, and broker contact.",
+    "Insurance resources for Premium Insurance Brokers clients — claims guidance, payments, compliance, privacy, terms of use, newsletter, and broker contact.",
   path: "/resources/",
 });
 
@@ -46,6 +46,12 @@ const resourceCards = [
     title: "Privacy Policy",
     description: "How Premium Insurance Brokers collects, uses, and protects your information.",
     href: "/privacy-policy/",
+    icon: FileText,
+  },
+  {
+    title: "Terms of Use",
+    description: "Google Maps features on this website, pending professional legal review.",
+    href: "/terms-of-use/",
     icon: FileText,
   },
   {
@@ -77,7 +83,7 @@ const resourceCards = [
 const resourcesJsonLd = collectionPageStructuredData({
   name: "Resources | Premium Insurance Brokers",
   description:
-    "Insurance resources for Premium Insurance Brokers clients — claims guidance, payments, compliance, privacy, newsletter, and broker contact.",
+    "Insurance resources for Premium Insurance Brokers clients — claims guidance, payments, compliance, privacy, terms of use, newsletter, and broker contact.",
   path: "/resources/",
   crumbs: [
     { name: "Home", path: "/" },
@@ -88,6 +94,7 @@ const resourcesJsonLd = collectionPageStructuredData({
     { name: "Make a Payment", path: "/payment/" },
     { name: "Compliance", path: "/compliance/" },
     { name: "Privacy Policy", path: "/privacy-policy/" },
+    { name: "Terms of Use", path: "/terms-of-use/" },
     { name: "Newsletter", path: "/newsletter/" },
     { name: "Contact Us", path: "/contact/" },
   ],

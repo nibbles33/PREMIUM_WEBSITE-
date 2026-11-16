@@ -32,7 +32,7 @@ export default function PrivacyPolicyPage() {
                   Privacy Policy
                 </h1>
                 <p className="mt-4 text-[15px] text-secondary sm:text-base">
-                  Last updated: September 30, 2026
+                  Last updated: November 15, 2026
                 </p>
               </div>
             </RevealOnScroll>
@@ -228,6 +228,44 @@ export default function PrivacyPolicyPage() {
                     however, no website can guarantee that every third-party
                     vendor behaviour is error-free, so You should not enter
                     sensitive information outside the intended form fields.
+                  </p>
+
+                  <h4
+                    id="google-maps-platform"
+                    className="mt-6 text-base font-medium text-charcoal"
+                  >
+                    Google Maps Platform
+                  </h4>
+                  <p className="mt-3">
+                    This website displays Google Maps Platform content,
+                    including the Google rating and reviews for our business,
+                    using the Places API. The rating and review text are
+                    requested from our servers with a fixed place identifier. We
+                    do not send your name, email address, phone number, or form
+                    contents with that request.
+                  </p>
+                  <p className="mt-3">
+                    When reviews are shown, your browser loads reviewer profile
+                    photos from Google (such as googleusercontent.com). It also
+                    opens Google when you follow a reviewer profile, “View on
+                    Google Maps”, “Report”, or our Google Business Profile
+                    link. Google then receives the technical information that
+                    accompanies those requests, such as your IP address.
+                    Google’s handling of that information is described in the{" "}
+                    <a
+                      href="https://policies.google.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-charcoal underline decoration-gold/60 underline-offset-4 hover:decoration-gold"
+                    >
+                      Google Privacy Policy
+                    </a>
+                    , which is incorporated into this Privacy Policy by
+                    reference.
+                  </p>
+                  <p className="mt-3">
+                    This Google Maps Platform disclosure is pending professional
+                    legal review.
                   </p>
 
                   <h4

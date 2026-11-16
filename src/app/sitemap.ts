@@ -95,6 +95,7 @@ const staticRoutes = [
   "/payment/",
   "/compliance/",
   "/privacy-policy/",
+  "/terms-of-use/",
   "/claims/",
   "/careers/",
   "/resources/",
